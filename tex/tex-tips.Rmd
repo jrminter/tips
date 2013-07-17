@@ -1,0 +1,220 @@
+TeXlive Hints
+========================================================
+
+[Back to Index](../README.html)
+
+These are John Minter's tips for a workflow using TeXlive.
+They were compiled from several web sources.
+
+# HTML Colors
+These are frequently used in themes.
+[ColorPicker](http://www.w3schools.com/tags/ref_colorpicker.asp)
+
+# Simple tricks
+
+## Hide the page number on first page of a chapter
+
+```
+\thispagestyle{empty}
+my text
+\newpage
+\pagenumbering{arabic}
+
+```
+
+## Multiple files
+
+There are three ways to put subfile.tex file into main.tex:
+
+```
+\include{"filename"}
+\input{"filename"}
+\import{"path"}{"filename"}
+```
+
+* ``\import`` needs ``\usepackage{import}``.
+* ``\include`` is only used in the main.tex and cannot be used in subfile.tex
+* ``\input`` can be used in main.tex or subfile.tex
+
+use ``\import`` for absolute paths or ``\subimport`` relative paths
+if you want to nest imports, and want the imported file (first level)
+to use its own path as the base for further imports (second level). 
+see [stackexchange](http://tex.stackexchange.com/a/58485/14697)
+
+
+# Beamer
+## some references
+[WikiBooks](http://en.wikibooks.org/wiki/LaTeX/Presentations)   
+[Beamer Poster](http://www-i6.informatik.rwth-aachen.de/~dreuw/latexbeamerposter.php)
+
+## some snippets
+
+### my color definitions from beamerthemeEK.sty
+```
+\selectcolormodel{cmyk}
+
+\definecolor{ekyellow}{HTML}{FFB700}   % EK dress yellow
+\definecolor{ltyellow}{rgb}{1.0, 0.9717647, 0.9} 
+\definecolor{ekred}{HTML}{ED0000}      % EK dress red
+\definecolor{gray20}{cmyk}{0,0,0,0.20} % 20% gray
+\definecolor{gray40}{cmyk}{0,0,0,0.40} % 40% gray
+\definecolor{gray80}{cmyk}{0,0,0,0.80} % 80% gray
+
+\setbeamercolor{itemize item}{fg=ekred}
+
+```
+
+### Useful snippets from stack exchage
+
+#### Left margins inside a block environment
+
+```
+\documentclass{beamer}
+\usetheme{Frankfurt}
+
+\newenvironment<>{myblock}[1]{%
+ \begin{actionenv}#2%
+ \def\insertblocktitle{\leftskip=10pt\rightskip=10pt\vspace{10pt} #1\vspace{10pt}}%
+ \par%
+ \usebeamertemplate{block begin}\leftskip=10pt\rightskip=10pt\vspace{10pt}}
+ {\par\vspace{10pt}\usebeamertemplate{block end}
+ \end{actionenv}}
+
+
+\begin{document}
+\begin{frame}
+
+\begin{myblock}{example title to show 10pt up, down, left and right margins}
+ example text to show 10pt up, down, left and right margins
+\end{myblock}
+
+\begin{block}{example title to show standard margins}
+ example text to show standard margins
+\end{block}
+
+\end{frame}
+\end{document}
+
+```
+
+
+# System Administration
+
+## Spaces in file names
+
+Some packages have problems with paths with spaces on Windoze
+
+Typical culprits are ("Program Files", "Documents and Settings")
+so I like a non-standard install. I do this for R as well...
+
+```
+C:/Apps/texlive/
+C:/Apps/texlive/2012
+C:/Apps/texlive/texmf-local
+
+C:/Apps/R/R-2.15.3
+C:/Apps/R/R-3.0.1
+C:/Apps/R/Rtools
+
+```
+
+## Compressing pdflatex output with ghostscript
+
+```
+gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=compressed.pdf orig.pdf
+
+```
+
+## Regenerating config files
+
+```
+tlmgr generate language
+fmtutil-sys --byhyphen C:/apps/texlive/2012/texmf-var/tex/generic/config/language.dat.lua
+fmtutil-sys --byhyphen C:/apps/texlive/2012/texmf-var/tex/generic/config/language.dat
+fmtutil-sys --byhyphen C:/apps/texlive/2012/texmf-var/tex/generic/config/language.def
+tlmgr generate fmtutil
+fmtutil-sys --all
+tlmgr generate updmap
+updmap-sys
+```
+
+## finding locations
+**Q:** does anyone know how to ask an existing TL installation
+where it has placed the equivalents of texmf-var and
+texmf-config?? i.e. if the users has used the advanced
+installer to place things in alternative locations?
+
+**A:** from Norbert Preining (preining@logic.at).
+
+```
+kpsewhich -var-value TEXMFVAR
+kpsewhich -var-value TEXMFCONFIG
+```
+
+The -var-value was introduced to make lookups easier
+on Windows, which has horrible quoting rules.
+
+```
+tlmgr option location http://mirrors.rit.edu/CTAN/systems/texlive/tlnet/
+```
+
+## Initial Install
+
+```
+install-tl -repository  http://mirrors.rit.edu/CTAN/systems/texlive/tlnet/
+```
+
+### on win7
+```
+install-tl -gui text -repository  http://mirrors.rit.edu/CTAN/systems/texlive/tlnet/
+```
+
+### For win32
+
+at EK set ftp_proxy, http_proxy to http://165.170.128.84:81
+ 
+download http://mirror.ctan.org/systems/texlive/tlnet/install-tl.zip
+unzip the file in a temp directory
+
+```
+install-tl -repository http://mirrors.med.harvard.edu/ctan/systems/texlive/tlnet
+install-tl -repository http://mirrors.rit.edu/CTAN/systems/texlive/tlnet/
+```
+
+## Pretest
+
+### at home
+
+```
+cd /home/shared
+cd /media/JRM-32G/tl-pretest
+rsync -a --delete --exclude="mactex*" rsync://ftp.math.utah.edu/texlive/tlpretest/ tlpretest
+
+install-tl -repository http://ftp.math.utah.edu/pub//texlive/tlpretest/
+install-tl -gui=text -repository http://ftp.math.utah.edu/pub//texlive/tlpretest/
+install-tl -gui=text -repository http://mirrors.rit.edu/CTAN/systems/texlive/tlnet/
+
+
+install-tl-advanced -repository  http://midb.rl.kodak.com/tlpretest/
+```
+
+
+## a libpng issue
+
+During the pretest of TL2013, an issue was noted by
+Werner Lemberg (wl.gnu.org) regarding a bug in some
+recent versions of libpng.
+
+> ...  a serious bug introduced in 1.6.0 (and
+> fixed in 1.6.2) causing the creation of invalid files.
+
+Werner recommends updaing to 1.6.2, but this is causing the
+issues for the TL 2013 developers. Werner did suggest this
+workaround...
+
+> BTW, the libpng issue can be fixed by running the
+> `png-fix-too-far-back' binary (which comes with recent
+> libpng versions) on affected PNG images, and I was able
+> to successfully continue my lilypond build after doing this.
+
+[Back to Index](../README.html)

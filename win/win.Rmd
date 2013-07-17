@@ -1,0 +1,27 @@
+Win32 tips
+========================================================
+
+[Back to Index](../README.html)
+
+Some useful tips for windows
+
+
+# Win32
+
+## Getting short path names
+
+This one had me ripping my hair out. The solution was
+[here](http://answers.google.com/answers/threadview/id/522710.html)
+
+
+There's a simple way to do it:
+
+run ``cmd.exe`` and do the following:
+```
+cd "long path name"
+command
+```
+Then ``command.com`` will come up and display the short path name.
+
+[Back to Index](../README.html)
+

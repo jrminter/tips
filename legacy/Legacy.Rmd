@@ -1,0 +1,17 @@
+Maintaining legacy equipment
+===========================================================
+
+[Back to Index](../README.html)
+
+Upgrading old instrumentation is often prohibitably expensive.
+Keeping these boat anchors working with newer computers is
+frequently a real challenge. These tips can make our lives
+easier.
+
+# USB to RS232 converters
+
+Triplite has the [USA-19HS](http://www.tripplite.com/en/products/model.cfm?txtSeriesID=849&txtModelID=3914)
+Looks like it has good driver support.
+
+
+[Back to Index](../README.html)

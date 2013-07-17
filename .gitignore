@@ -1,0 +1,100 @@
+.DS_Store
+.Rhistory
+.cache/
+.Rproj.user
+*.html
+
+# DiffractionLimit tips directory
+DiffractionLimit/.DS_Store
+DiffractionLimit/DiffractionLimit.md
+DiffractionLimit/DiffractionLimit.html
+DiffractionLimit/figure/
+
+# git tips directory
+git/.DS_Store
+git/git-tips.md
+git/git-tips.html
+git/figure/
+
+# Image-J tips directory
+ImageJ/.DS_Store
+ImageJ/ImageJ.md
+ImageJ/ImageJ.html
+ImageJ/figure/
+
+# legacy directory
+legacy/.DS_Store
+legacy/Legacy.md
+legacy/Legacy.html
+legacy/figure/
+
+# mac directory
+mac/.DS_Store
+mac/mac.md
+mac/mac.html
+mac/figure/
+
+# micro directory
+micro/.DS_Store
+micro/micro.md
+micro/micro.html
+micro/figure/
+
+# mysql directory
+mysql/.DS_Store
+mysql/mysql.md
+mysql/mysql.html
+mysql/figure/
+
+# python directory
+python/.DS_Store
+python/python.md
+python/python.html
+python/figure/
+
+# R tips directory
+R/.DS_Store
+R/R-tips.md
+R/R-tips.html
+R/figure/
+R/*.pdf
+
+# R-Anova directory
+R-Anova/.DS_Store
+R-Anova/R-Anova.md
+R-Anova/R-Anova.html
+
+# Salabim directory
+Salabim/.DS_Store
+Salabim/DE*
+Salabim/Salabim-graphics.md
+Salabim/Salabim-graphics.html
+Salabim/figure/
+Salabim/wc5/
+
+# Slidify directory
+Slidify/.DS_Store
+Slidify/Slidify.md
+Slidify/Slidify.html
+Slidify/figure/
+
+# Sweave directory
+Sweave/.DS_Store
+Sweave/Sweave.md
+Sweave/Sweave.html
+Sweave/figure/
+
+# scripts dir
+scripts/.RData
+
+# tex tips directory
+tex/.DS_Store
+tex/tex-tips.md
+tex/tex-tips.html
+tex/figure/
+
+# win tips directory
+win/.DS_Store
+win/win.md
+win/win.html
+win/figure/

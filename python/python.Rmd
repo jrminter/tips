@@ -1,0 +1,208 @@
+Python tips
+========================================================
+
+[Back to Index](../README.html)
+
+# GUI
+## Eclipse
+### Install from PyDev
+Install from update site ``http://pydev.org/updates``
+### Color themes
+Install from update site ``http://eclipse-color-theme.github.io/update/``
+
+They have a nice Sublime Text 2 theme
+
+# directory operations
+
+## get the current working directory
+```
+import os
+os.getcwd()
+```
+## remove an entire tree
+```
+import shutil
+shutil.rmtree(path, ignore_errors=False, onerror=None)
+```
+
+# ini files
+[StackOverflow](http://stackoverflow.com/questions/8884188/how-to-read-and-write-ini-file-with-python)
+
+```
+import configparser
+
+config = configparser.ConfigParser()
+config.read('FILE.INI')
+print(config['DEFAULT']['path'])     # -> "/path/name/"
+config['DEFAULT']['path'] = '/var/shared/'    # update
+config['DEFAULT']['default_message'] = 'Hey! help me!!'   # create
+
+with open('FILE.INI', 'w') as configfile:    # save
+    config.write(configfile)
+```
+
+Seems to work fine...
+
+# List Comprehensions
+## From [Carl Groner](http://carlgroner.me/Python/2011/11/09/An-Introduction-to-List-Comprehensions-in-Python.html)
+
+### The basics.
+Let’s start with a simple list.
+
+```
+>>> my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+>>> my_list
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+
+Quite often, we’ll need to build a new list from the elements of an existing list. For example, let’s say we want to make a list containing all elements of ``my_list``, each multiplied by 2. 
+
+### Using Python's List Comprehesion
+Now let’s take a look at how to do this using Python’s list comprehension syntax.
+
+```
+>>> new_list = [x * 2 for x in my_list]
+>>> new_list
+[2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+```
+### Syntax
+The syntax for list comprehension is based on set builder notation. Given the form ``[Y for X in LIST]``, ``Y`` is commonly referred to as the ***output function*** , ``X`` is the ***variable***, and ``LIST`` is the ***input set***. This statement says to do ``Y`` on each ``X`` in ``LIST``.
+
+For an example of using a different output function, let’s say say we want a new list that contains each number in ``my_list`` as a string type…
+
+```
+>>> [str(x) for x in my_list]
+['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+```
+
+You may be asking yourself why we wouldn't just use ``map()`` here:
+
+```
+>>> map(str, my_list)
+['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+```
+
+In this example, ``map`` looks like a good alternative. However, for slightly more complicated requirements, list comprehension can be a bit more concise. For example, when we’d like to specify a predicate .
+
+### The predicate
+Consider our previous example, where we want to create a list of string types for each element in ``my_list``, except this time we only want the elements which are even numbers. A typical way to do this would be:
+
+```
+>>> new_list = []
+>>> for x in my_list:
+...   if (x % 2) == 0:
+...     new_list.append(str(x))
+... 
+>>> new_list
+['2', '4', '6', '8', '10']
+```
+
+In order to use map() here we would need to first filter the list to exclude the odd numbers.
+
+Using the list comprehension syntax would look like this:
+
+```
+>>> new_list = [str(x) for x in my_list if (x % 2) == 0]
+>>> new_list
+['2', '4', '6', '8', '10']
+```
+
+This version introduces the predicate, an expression after the list which acts as a filter on which elements get passed to the output function.
+
+Neat, clear and concise.
+
+### Loops of loops.
+Finally, it’s worth mentioning that you can use list comprehensions to iterate on more than one list. For example:
+
+```
+>>> list_a = ['A', 'B']
+>>> list_b = [1, 2]
+>>> [(x, y) for x in list_a for y in list_b]
+[('A', 1), ('A', 2), ('B', 1), ('B', 2)]
+```
+
+Just like you would expect in for loops, the last loop moves the fastest. Also note that this method returns a list of tuples. If you’d like nested lists, you can also nest one list comprehension within another.
+
+```
+>>> list_a = ['A', 'B']
+>>> list_b = ['C', 'D']
+>>> [[x+y for x in list_a] for y in list_b]
+[['AC', 'BC'], ['AD', 'BD']]
+```
+
+### Summary.
+
+List comprehension in Python can often provide a neat, clear, and concise syntax for creating lists from other lists. However, one should always be aware that, particularly for complex transformations or predicates, the concise and terse syntax can quickly become very difficult to read. In these cases, it's often beneficial to revert to traditional looping constructs.
+
+
+# Alchemy...
+## An DM3 image reader in python
+[ImageJ Wiki](http://imagejdocu.tudor.lu/doku.php?id=plugin:utilities:python_dm3_reader:start)
+
+# MySQL
+
+## With Python 3
+
+JRM...
+
+Try
+[mysql-connector-python](http://dev.mysql.com/doc/relnotes/connector-python/en/)
+
+```
+easy_install mysql-connector-python
+```
+
+documentation
+[mysql.com](http://dev.mysql.com/doc/refman/5.6/en/connector-python.html)
+
+
+[stackoverflow](http://stackoverflow.com/questions/15434930/python-3-mysql-and-pymysql-on-a-windows-7-box)
+> I might be asking the impossible. However, I am trying to
+> connect to MySQL on a windows 7 box using Python 3.3.0.
+> I've using PyMySQL as a way to connect, but this appears
+> not to be supported for a Windows box.
+
+offered this answer
+
+> Rather than use any other connector. I found that MySQL
+> have a Python 3.3 MySQL connector which solves this issue.
+> [see](http://dev.mysql.com/doc/refman/5.6/en/myconnpy_example_connecting.html)
+
+
+
+Note that
+[this question](http://stackoverflow.com/questions/4960048/python-3-and-mysql)
+suggested that
+
+> You should probably use pymysql - Pure Python MySQL
+> client instead. It works with Python 3.x, and doesn't
+> have any dependencies.
+> 
+> This pure Python MySQL client provides a DB-API to a
+> MySQL database by talking directly to the server via
+> the binary client/server protocol.
+>
+> Example:
+
+```
+import pymysql
+conn = pymysql.connect(host='127.0.0.1', unix_socket='/tmp/mysql.sock', user='root', passwd=None, db='mysql')
+cur = conn.cursor()
+cur.execute("SELECT Host,User FROM user")
+for r in cur:
+    print(r)
+cur.close()
+conn.close()
+
+```
+
+They offered the link to
+[gohkle's](http://www.lfd.uci.edu/~gohlke/pythonlibs/)
+Win binaries. Currently (2013-06-01), the list doesn't
+list py3.2 binaries. I do note that there are py3.2
+binaries for Oursql that claims to support MySQL
+databases
+see [this example](http://pythonhosted.org/oursql/tutorial.html#establishing-a-connection).
+
+
+[Back to Index](../README.html)

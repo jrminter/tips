@@ -1,0 +1,267 @@
+Git tips
+========================================================
+
+[Back to Index](../README.html)
+
+These are John Minter's tips for a workflow using git. They were
+compiled from several web sources.
+
+# getting github not to ask for a password on windows
+[stackexchange](http://stackoverflow.com/questions/3625148/how-do-i-store-a-password-for-my-key-so-i-can-commit-and-pull-from-repository-wh)
+pointed me to a solution on
+[github](https://help.github.com/articles/working-with-ssh-key-passphrases#platform-windows)
+that **finally** worked for pulls. On win7, I still got
+userid requests. This article on
+[stackexchange](http://stackoverflow.com/questions/8588768/git-push-username-password-how-to-avoid)
+pointed to a solution that worked for pushes:
+edit the url to
+```
+git remote set-url origin https://user:pw@github.com/jrminter/repo.git
+```
+another post suggested using ``git@github.com:org/repo.git``.
+This did not work for me.
+
+
+
+# A better log
+From
+[coderwall](https://coderwall.com/p/euwpig)
+
+So, are you tired of the old and boring git log
+screen? Just type in:
+
+```
+git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+```
+
+I guess that's a bit too long, eh? Let's just make an alias. Copy and paste the line below on your terminal:
+
+```
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+```
+
+And every time you need to see your log, just type in
+
+```
+git lg
+```
+
+Or, if you want to see the lines that changed
+
+```
+git lg -p
+```
+
+
+# Twelve common "verbs" for 99% of the workflow
+
+Scott Chacon notes that 99% of one's daily work can be done
+using twelve common commands
+
+## Init
+
+```
+git init
+```
+This initializes the repository and creates default branch "master"
+
+## Clone
+
+```
+git clone url
+```
+
+This clones a given URL
+
+## Add
+
+```
+git add some-file # adds an individual file to to my staging area
+git add .         # adds all...
+```
+
+## Status
+
+```
+git status # what is staged/unstaged
+```
+
+## Commit
+
+```
+git commit -a -m'Useful message'
+```
+
+This commits whatever you are working on and moves HEAD ptr
+forward. Commits Should be "logical units"
+
+## Branch
+
+Branches are pointers into the graph -- a reference.
+Easy to write... writes 42 bytes to a file
+HEAD is a symbolic branch - a pointer to the current
+branch you're working on and represents the
+last known status of your working directory.
+
+```
+git branch          # lists branches
+git branch foo      # creates branch "foo" to last commit. Do this FREQUENTLY
+git checkout foo    # switches to branch "foo" and has HEAD point there
+git branch -d foo   # delete branch foo (-d is safe, -D removes pointer, will never be pushed)
+git checkout branch # copies the branch into your working directory
+git checkout -b iss53 master # create branch & co branch iss53 and sets the master (default) ptr there
+
+```
+
+## Merging
+
+```
+git checkout target
+git merge    source
+```
+
+When you resolve conflicts, use git add, git commit, and 
+git mergetool
+
+## Push and Pull
+
+All been local up to now.
+Remotes: url to other nodes of this project
+If you did git clone you will have an ORIGIN
+
+Push to master
+
+```
+git commit
+git fetch # (pull?)
+git merge origin/master
+git push  # (to server)
+```
+
+The problem of "Your branch is ahead of 'origin/master' by n commits."
+
+```
+$ git status
+# On branch master
+# Your branch is ahead of 'origin/master' by 1 commit.
+#
+nothing to commit (working directory clean)
+$ git push origin master
+Everything up-to-date
+```
+
+May have to be sure that master isn't checked out on origin...
+
+### Push other branch
+
+```
+git checkout -b iss53 31b8; git commit; git commit
+git push origin iss53 # has a branch on server that points where mine is
+```
+
+```
+git fetch # (will get)
+get co iss53
+git commit
+git push origin iss53
+```
+
+Scott Chacon likes get fetch/merge/push for most people as
+opposed to pull/merge/push
+
+```
+git pull #  a wrapper script tries fetch/merge can blow up with multiple branches
+git push # a wrapper script to push to server
+```
+
+## Logs
+
+```
+git log #  walk your commit history from HEAD down
+```
+
+### Log Subsets
+
+```
+git log branchA ^ branchB #  show commits reachable by branchA not reachable by branchB. see what has NOT been merged in. Quite useful...
+
+git fetch
+git log origin/master ^master	# shows what is on the server master branch not in my local branch equivalent to git incoming
+
+git fetch
+git log master ^origin/master # what is unique that I would be push
+
+git log -p patch
+git log -stat
+```
+
+## Tags
+
+```
+list tags
+git tag
+add a tag
+git tag -a v1.2.500 -m 'version 1.2.500'
+remove a tag
+git tag -d v1.4.400 
+rename a  tag 
+git tag v1.4.400 v1.2.400
+tag -d v1.4.400 
+
+```
+
+## Initial configuration
+
+Here are some useful initial variables to set up for git
+
+```
+git config --global user.email "jrminter@gmail.com"
+
+git config --global user.name "John Minter"
+git config --global user.email "john.r.minter@kodak.com"
+
+# saves multiplatform headaches caused by line endings...
+git config --global core.autocrlf input 
+
+git config --global color.ui true
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
+git config --global alias.st status
+git config --global alias.lol "log --oneline --graph --all --decorate"
+```
+
+# Changing the origin for a repository
+
+[Stack Overflow](http://stackoverflow.com/questions/2432764/how-to-change-a-remote-repository-uri-using-git)
+had a useful tip to change the repository from the command
+line:
+
+```
+git remote set-url origin git://new.url.here
+```
+
+One can just edit .git/config and change the URLs there. You're not
+in any danger of losing history unless you do something very silly
+(and if you're worried, just make a copy of your repo, since your
+repo is your history.
+
+Note that the appropriate section from a .git/config file for a
+github repository looks like
+
+```
+[remote "origin"]
+  url = https://github.com/jtleek/dataanalysis.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+```
+
+Note that the appropriate section from a .git/config file for a
+repository on a network share looks like
+
+```
+[remote "origin"]
+  url = c:/usr/jrminter/doc/work/proj/QM13-06-01A-Sowinski
+	fetch = +refs/heads/*:refs/remotes/origin/*
+```
+
+[Back to Index](../README.html)

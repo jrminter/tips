@@ -1,0 +1,43 @@
+Sweave Tips
+==================================================================
+
+[Back to Index](../README.html)
+
+These are John Minter's tips for a workflow using R/Sweave/LaTeX.
+They were compiled from several web sources.
+
+# xtable tips
+
+A simple wrapper that works... Note the renaming of columns
+and specificing digits. Rememeber there that there need to
+be ``ncol+1`` entries in the digit vector. Still need to
+learn how to put a ``%`` in a label
+
+```
+<<echo=FALSE, results=tex>>=
+o.col.names <- colnames(my.df)
+colnames(my.df) <- c("sample",
+                        "plate (s)",
+                        "pass (s)",
+                        "inc 85",
+                        "mean",
+                        "std err",
+                        "lcl",
+                        "ucl")
+dig <- c(0,0,0,0,0,2,2,2,2)
+print(xtable(my.df, digits = dig,
+             caption = "My Caption.",
+             label = "tab:mine",
+             table.placement = "tbp",
+             caption.placement = "top",
+             size = "small",
+             table.placement="ht"), include.rownames=FALSE)
+colnames(my.df) <- o.col.names
+@
+```
+
+
+
+[Back to Index](../README.html)
+
+

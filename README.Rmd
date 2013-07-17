@@ -1,0 +1,43 @@
+## J. R. Minter's useful tips 
+
+This repository contains the John Minter's useful tips in Rmarkdown
+format.
+
+Topic
+
+[Diffraction Limit](./DiffractionLimit/DiffractionLimit.html)
+
+[git](./git/git-tips.html)
+
+[Image-J](./ImageJ/ImageJ.html)
+
+[mac](./mac/mac.html)
+
+[maintaining legacy equipment](./legacy/Legacy.html)
+
+[microscopy](./micro/micro.html)
+
+[MySQL](./mysql/mysql.html)
+
+[python](./python/python.html)
+
+[R](./R/R-tips.html)
+
+[R-Anova](./R-Anova/R-Anova.html)
+
+[Salabim-Creating publication quality graphs in R](./Salabim/Salabim-graphics.html)
+
+[Slidify](./Slidify/Slidify.html)
+
+[Sweave](./Sweave/Sweave.html)
+
+[TeX](./tex/tex-tips.html)
+
+[Win](./win/win.html)
+
+
+
+
+
+
+ 

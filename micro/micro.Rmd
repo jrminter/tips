@@ -1,0 +1,132 @@
+Microscopy tips
+========================================================
+
+[Back to Index](../README.html)
+
+# Specimen prep
+
+## Cu
+From John Mardinly 2013-06-10
+
+> When Intel first started copper, the TEM labs were borrowing time on
+> FIBs that were used for F/A, all with iodine or xenon difluoride. The
+> samples that came out of these FIBs tended to be covered with "fur"
+> by the time they got to the FIB. What we found was that whenever a
+> FIB had ever been used for enhanced etch, it was never again suitable
+> for use as a TEM prep tool for copper. This required purchasing new
+> FIBs dedicated to TEM prep, something that did not go down well
+> with management! However, it did solve the problem. The other
+> approach that helped a lot was vacuum storage of the specimens.
+> We purchased a Gatan unit, specially designed for specimen storage.
+> It used the vacuum system of the model 655 specimen holder.
+> You can see the design on their web page. This worked well
+> for some time. However, a word of caution: You MUST change the
+> rubber diaphragms annually, without fail. If the diaphragms
+> develop cracks, it will back stream sulphur containing motor
+> oil into the system, contaminating everything and corroding
+> the copper. Our $17,000 system had to be scrapped because
+> the molecular drag pump was contaminated, and it could not
+> be successfully cleaned.
+>
+> My experience with the nightmare of copper returned after
+> Intel closed in Santa Clara, and I moved to Western Digital
+> Media R&D. Some experimental disks contained a layer of
+> copper. Before we had our own FIB, we had all of our samples
+> prepared by a local vendor of TEM services. On a few
+> occasions, their weekend shift used an 855 (with enhanced
+> etch installed but not used) just to do the lift out
+> and glue the 1 micron lamellae to the copper grids. They
+> were then finished in a new Helios. By the time they
+> got to the TEM, they were destroyed. I knew what the
+> problem was right away, but nobody believed me.
+> Eventually, they came to accept the idea that copper
+> could never go into a FIB with enhanced etch installed,
+> whether it was being used or not. Unmeasurable traces
+> of that stuff just destroy copper TEM samples.
+> 
+> One other thought came to mind a and that was how we dealt with
+> wedge or dimpled and ion milled samples. As I recall, and it
+> has been a few years, we typically had corrosion problems if
+> the sample was not ion milled immediately after dimple or
+> wedge polish. This idea popped up after one technician
+> polished a batch of samples on a Friday, cleaned and dried
+> them, but then when they were milled on Monday, they all
+> corroded instantly after milling. One thought was that
+> something in the Syton was diffusing into the samples,
+> perhaps into the epoxy. One suggestion was that it was
+> the phosphoric acid in the Syton. In any event, when we
+> adopted the procedure that ion milling was done immediately
+> after polishing, the problem of copper corrosion on argon
+> milled samples faded into the background...until of course,
+> the rubber  diaphragms on our vacuum storage system
+> cracked. Remember, miniscule amounts of the wrong materials
+> seem to be able to have a catalytic effect on the
+> corrosion rate of copper.
+
+> John Mardinly, ASU
+
+# Service
+
+## Ion getter pumps
+
+Pete Bustanoby wrote (2013-05-24)
+
+> The ion pump was necessary for AMRAY to offer a LaB$_6$ emitter,
+> but since you are using tungsten now, the Ion pump is unnecessary.
+
+> If you just leave the column butterfly hand valve open and
+> unplug the Ion pump HV cable all should be ok.
+
+> I'm not sure what your microscope configuration is but if you
+> do have the butterfly valve connecting the IP to the chamber,
+> this is a very asy fix. The chamber vacuum gauge will read a
+> slightly better vacuum than what is at the emission chamber
+> but if the chamber is in the minus fives you will be good.
+
+> W filaments are cheap compared to your labor rates so even
+> if the filament looses a small percentage of life, Who cares?
+> Tungsten instruments have performed well for years with out
+> the costly use of ion pumps and the added care they require.
+
+> If you need to keep the ion pump on line, send it to
+> [Duniway Stock Room](http://www.duniway.com/) and have it
+> rebuilt. It's a standard Varian 30 L/sec conflat pump and
+> they will probably have one already available for exchange.
+
+> There is no real "on instrument" fix for a old depleted ion
+> pump. Think of them as a fancy atmospheric gas trap made of
+> fly paper. Once a pump is old and depleted every time it is
+> started at crossover it gets warm/hot and will regurgitate
+> some of the gasses that it has marginally trapped and buried,
+> especially hydrogen that has been cracked from water vapor
+> and buried under the titanium deposition. When you tap the
+> tired pump and the pressure jumps up, what you are actually
+> seeing is hydrogen escaping from under the loose titanium
+> flakes.
+
+> Once you have a new pump installed try these suggestions
+> for a quick pump down:
+
+> 1. Have a spare filament gun cartridge Loaded / aligned /
+> desiccated, and ready for insertion.   Have the insides of
+> the chamber and pump exposed to air for as short a time
+> as possible.
+> 2. Take a heat gun and thoroughly heat the emission chamber
+> and ion pump inside and out. This bake out will drive out
+> some of the water and significantly help  the pump down time.
+> 3. When a healthy pump is first started, the pressure will
+> normally drop, but as the pump starts removing the residual
+> air and water vapor it will start warming up and regurgitate
+> some of the loosely trapped hydrogen, the pressure will start
+> to rise, and it will need to cool off and let the turbo or
+> diffusion pump remove some of this released hydrogen.
+> Just turn if off for 10-20 minutes, reapply power and things
+> should be golden. If the pump is middle aged it may require a
+> couple of these on/off cycles but don't let the pump get too
+> old and gassy.
+
+> Pete Bustanoby, SEMS (Specialized Electron Microscope Service.)
+> Serving the greater Puget Sound area since 1975
+> 206-795-1599 (cangrande65@yahoo.com)
+
+[Back to Index](../README.html)

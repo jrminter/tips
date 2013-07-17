@@ -1,0 +1,512 @@
+John Minter's R tips
+========================================================
+```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
+# make this an external chunk that can be included in any file
+options(width = 72)
+opts_chunk$set(message = F, error = F, warning = F, comment = NA, fig.align = 'center', dpi = 100, tidy = F, cache.path = '.cache/', fig.path = 'figure/')
+
+options(xtable.type = 'html')
+knit_hooks$set(inline = function(x) {
+  if(is.numeric(x)) {
+    round(x, getOption('digits'))
+  } else {
+    paste(as.character(x), collapse = ', ')
+  }
+})
+knit_hooks$set(plot = knitr:::hook_plot_html)
+```
+
+
+[Back to Index](../README.html)
+
+Version of 2013-06-19
+
+R can be **really** frustrating at time. These are some
+tips on matters that made me go *hmmm...*
+
+# Hard things to find
+
+## Using custom environment variables
+Custom environment variables are helpful in standardizing relative
+paths across systems. On Linux and MacOSX (using bash,)
+I set these in ``.profile``
+
+```
+GIT_HOME=~/git
+IMG_ROOT=~/dat/images
+export GIT_HOME
+export IMG_ROOT
+```
+In Windows, I set these as user environment variables.
+Running R from the terminal picks these up, but in Linux and MacOSX,
+RStudio doesn't (not sure why it does on Windows). The work-around
+is to use the r-environment file. 
+
+On Linux, the site r-environment file is in:
+```
+$R_HOME/lib/R/etc/Renviron
+```
+On MacOSX with homebrew, this is in:
+```
+/Library/Frameworks/R.framework/Resources/etc/Renviron
+```
+This is a good place to set environment variables...
+
+Then in R, one gets
+
+```{r}
+print(Sys.getenv("GIT_HOME"))
+print(Sys.getenv("IMG_ROOT"))
+
+```
+
+
+
+
+# Mathematical annotation
+
+## Resources
+[Vistat Blog](http://vis.supstat.com/2013/04/mathematical-annotation-in-r/)
+
+## Adding results to plot legends and saving to PDF
+I like to add values to calibration plots where I have
+computed the mean and standard error. Getting the $\pm$
+symbol to work on multiple platforms was fun. Note the
+``legend`` command.
+
+The other issue is to be able to save a given plot in the
+graphics window to a pdf without repeating the plot. The
+``dev.copy2pdf`` command comes to the rescue. Note the code
+following the plot. The grDevices exemplar warns:
+
+> Note that these functions copy the device region and
+> not a plot: the background colour of the device surface
+> is part of what is copied. Most screen devices default
+> to a transparent background, which is probably not what
+> is needed when copying to a device such as png.
+
+```{r}
+cal.mu <- 5.01
+cal.se <- 0.02
+cal.un <- "nm/px"
+x <- 1:10
+y <- 5.01*x
+plot(x,y)
+abline(a=0,b=cal.mu, col='red')
+legend("topleft",legend=bquote("calib:" ~ .(cal.mu) %+-% .(cal.se) ~ .(cal.un)))
+
+str.pdf <-paste0("./figure/foo.pdf")
+pdf.options(useDingbats=TRUE)
+dev.copy2pdf(file="temp.pdf", width=9,
+             height=6, pointsize=12)
+embedFonts("temp.pdf","pdfwrite", str.pdf)
+unlink("temp.pdf")
+```
+Note that I had odd results with this from R-Studio as
+a function of window size. Especially when using Sweave,
+I found it helpful to just write a contolled pdf and
+from an R script and load/plot from Sweave in the report.
+
+### An example from a R Script
+```
+my.plot.wrapper <- function(){
+  #             B    L    T    R
+  std.mar <- c(5.1, 4.1, 4.1, 2.1)
+  plt.mar <- c(5.1, 4.1, 0.1, 0.1)
+  par(mar=plt.mar)
+  x <- 1:10
+  y <- 1.5*x+2
+  plot(x,y,xlab="X", ylab="Y")
+  par(mar=std.mar)
+}
+
+# for the graphics window
+my.plot.wrapper()
+
+# second time for the pdf
+str.pdf <- '../Sweave/inc/foo.pdf'
+pdf.options(useDingbats=TRUE)
+# note control of w and h and point size
+pdf(file="temp.pdf", width=9, height=6, pointsize=14)
+my.plot.wrapper()
+dev.off()
+embedFonts("temp.pdf","pdfwrite", str.pdf)
+unlink("temp.pdf")
+  
+```
+
+Then from LaTeX (e.g. in a beamer template)
+
+```
+\begin{frame}{\normalsize{Title}}
+  \begin{center}
+    \vspace{-0.35in}
+    \includegraphics[width=\textwidth]
+    {./inc/foo.pdf} \\
+    \vspace{0.05in}
+  \end{center}
+  \vspace{-0.25in}
+  \footnotesize{Note how I can control placement better.}
+\end{frame}
+```
+## Nice examples from Vistat
+
+We can get a good list of symbols with
+
+``demo(plotmath)``
+
+```{r}
+par(mar = c(4, 4, 2, 0.1))
+plot(rnorm(100), rnorm(100),
+  xlab = expression(hat(mu)[0]), ylab = expression(alpha^beta),
+  main = expression(paste("Plot of ", alpha^beta, " versus ", hat(mu)[0])))
+
+```
+
+and
+
+```{r}
+par(mar = c(4, 4, 2, 0.1))
+x_mean <- 1.5
+x_sd <- 1.2
+hist(rnorm(100, x_mean, x_sd),
+  main = substitute(
+    paste(X[i], " ~ N(", mu, "=", m, ", ", sigma^2, "=", s2, ")"),
+    list(m = x_mean, s2 = x_sd^2)
+  )
+)
+
+```
+## Polygons
+
+From [Daniel Marcelino](http://danielmarcelino.com/advanced-graphics/)
+```{r}
+# Generate standard normal distribution data for (-5,5)
+x = seq(-5,5, length=250)
+y = dnorm(x)
+# Set up axes with empty plot
+plot(x,y, las=1, ylab='dnorm', type='n', yaxs='i', ylim=c(0, 0.5))
+# Generate data for the right tail
+x2 = seq(qnorm(0.95), 5, length=50)
+y2 = dnorm(x2)
+# Draw the polygon
+polygon(c(x2[1], x2, x2[length(x2)]),  c(0, y2, 0), border=NA, col='grey')
+# For the left tail
+# but for 2-sided, I think we use alpha/2 and 1-alpha/2
+# x3 = seq(-5, qnorm(0.05), length=50)
+# y3 = dnorm(x3)
+# polygon(c(x3[1], x3, x3[length(x3)]),  c(0, y3, 0), border=NA, col='grey')
+lines(x, y)
+
+ 
+lines(c(2.5, 2.1), c(0.1, 0.02))
+text(2.5, 0.115, expression(alpha==0.05))
+# For the left tail
+# lines(c(-2.5, -2.1), c(0.1, 0.02))
+# text(-2.5, 0.115, expression(alpha==-0.05))
+# dev.copy(jpeg, 'polygon.jpeg') # save plot as .jpeg
+#dev.off()
+```
+# LaTeX in R Plots
+
+Arthur Charpentie [provided]
+(http://freakonometrics.hypotheses.org/6290)
+instructions on how to manually install the tikzDevice R
+package. This package is awesome, but since it is no longer
+actively maintained, it has been removed from the CRAN
+website. Couldn't get this to work on R-3.0.0. Perhaps
+R-2.15.3
+
+There is first a dependence on the ``filehash`` package
+
+```
+install.packages("filehash")
+```
+
+Note this was written by Charlie Sharpsteen and one may
+get the latest code from github
+
+```
+> cd ~/bld
+> git clone git://github.com/Sharpie/RTikZDevice.git
+> cd ~/bld/RTikZDevice
+> make
+> brew install ghc
+> tlmgr install ucs
+> tlmgr install etoolbox
+> brew install haskell-platform
+> cabal update
+> cabal install pandoc
+# add to your path "~/.cabal/bin"
+> make deps
+> make docs 
+> make news
+> make vignette
+> make build 
+> make check
+> make install
+> make test   
+
+```
+
+# Confidence levels and intervals.
+
+## Confidence levels and intervals in lm fits
+
+This one bit me recently.... Remember that if we want
+the $\alpha$ confidence interval, R will report the
+values at $(\alpha/2)$ and $(1-\alpha/2)$
+
+Let's do a linear model fit from everybody's favorite
+data set, **cars**
+
+```{r}
+# do the linear model
+fit <- lm(100/mpg ~ disp + hp + wt + am, data=mtcars)
+# look at the default 95% confidence intervals
+confint(fit, level=0.95)
+# and now look at 90% confidence intervals
+confint(fit, level=0.90)
+
+```
+
+# Graphics tips
+
+## A nice example from Jeff Leek:
+
+[A useful reference (www.statmethods.net)](http://www.statmethods.net/advgraphs/axes.html)
+
+```{r fig.width=6, fig.height=6}
+load('./dat/movies.rda')
+# Note the use of jitter on the factor axis...
+# and note that the option axes=FALSE suppresses both x and y axes.
+# xaxt="n" and yaxt="n" suppress the x and y axis respectively.
+plot(movies$score ~ jitter(as.numeric(movies$rating)),
+     col="blue",xaxt="n",pch=19)
+# note how Jeff labeled the factor variables
+axis(side=1,at=unique(as.numeric(movies$rating)),
+     labels=unique(movies$rating))
+# use of tapply to compute the means
+meanRatings <- tapply(movies$score,movies$rating,mean)
+points(1:4,meanRatings,col="red",pch="-",cex=5)
+```
+
+# RMySQL
+
+## Building on Windows
+
+Note: this works on WinXP and Win7 x64.
+
+1. Download the
+   ``mysql-connector-c-6.1.0-win32.msi`` (or ``-win64.msi``)
+   installer.
+2. Install it. Choose a custom install and install it to
+   ``C:\Apps\MySQL\Connector\``. This gets around spaces in
+   file names. There is a good workaround for win32, but it
+   didn't work in Win7 x64...
+3. Pull the RMySL source code from CRAN and unzip it.
+4. Edit the RMySQL/src/Makevars.win32 (and .win64) so that
+   the build process looks for the DLL in
+   ``"${MYSQL_HOME}"/lib/libmySQL.dll``
+5. Clean the cruft out of the source directory: ``*.0``,
+   ``*.so``, ``*.rds``, ``*.rda``, ``*.dll``. 
+6. Zip up the whole source tree with 7-zip so you don't
+   have to do this again... 
+7. set the ``MYSQL_HOME`` variable to
+   ``C:/Apps/MySQL/Connector``
+8. Build RMySQL ``R CMD build RMySQL``
+9. Install ``R CMD INSTALL RMySQL_0.9-3.tar.gz``
+
+Not sure why I get a warning message about the version
+of MySQL. Haven't found it in the code...
+
+An example to query MIDB...
+
+```
+require(RMySQL)
+
+drv <- dbDriver("MySQL") 
+con <- dbConnect(drv, user="myid",
+                 password="mypw",
+                 dbname="midb",
+                 host="midb.rl.kodak.com")
+
+ans <- dbListTables(con)
+
+q1 <- "SELECT * FROM"
+q2 <- "samples"
+q3 <- "WHERE samples.LAB_ID = 'QM-03877' "
+
+res <- dbSendQuery(con, paste(q1,
+                              q2,
+                              q3))
+out <- fetch(res, n = -1)
+
+print(out)
+dbClearResult(res)
+dbDisconnect(con)
+dbUnloadDriver(drv)
+```
+
+# R and C/C++
+
+## Rboolean type and obsolete headers
+
+On 2013-05-24, Jan van der Laan wrote the r-devel mailing
+list noting some problems when trying to pass an an argument
+of type Rboolean to a function. He supplied the following
+reproducible example.
+
+```
+// foo.cpp
+#include <R.h>
+#include <Rdefines.h>
+
+void foo() {
+   Rboolean b = TRUE;
+}
+
+```
+
+Prof Brian Ripley (ripley@stats.ox.ac.uk) replied
+
+> Don't use Rdefines.h: use Rinternals.h.
+
+> Rdefines.h was for compatibility with S code from
+> the 1990s: it is not kept up to date.
+
+# Heat maps
+## Correlation heatmap with ggplot2
+
+from [Martin Johnsson](http://martinsbioblogg.wordpress.com/2013/03/21/using-r-correlation-heatmap-with-ggplot2/)
+
+Just a short post to celebrate that I learned today how incredibly easy
+it is to make a heatmap of correlations with ggplot2 (and reshape2, of
+course).:
+
+```{r fig.width=7, fig.height=6}
+data(attitude)
+require(ggplot2)
+require(reshape2)
+qplot(x=Var1, y=Var2, data=melt(cor(attitude)), fill=value, geom="tile")
+```
+
+# Alchemy
+
+## Compiling an Rmath dynamic library
+[Dirk Eddelbuettel](http://r.789695.n4.nabble.com/R-Rmath-R-libraries-from-C-on-Mac-OS-X-td814726.html) noted
+
+```
+ cd src/nmath/standalone
+ make 
+```
+On Linux/MacOSX sytems these need to be in the
+LD_LIBRARY path. I put sym links into /usr/local/lib
+
+## Using stats::convolve effectively
+[Michael Moers](https://stat.ethz.ch/pipermail/r-devel/attachments/20130623/232921bc/attachment.pl)
+
+The function stats::convolve does not mention efficient usage of the 
+underlying FFT algorithm, such as
+
+1. if type="circular", then length(x)=length(y) should have many factors (e.g. length(x) = length(y) = 2^n)
+2. if type="open" or "filter", then length(x)+length(y)-1 should have many factors (e.g. length(x)+length(y)-1 = 2^n)
+
+In particular the latter may not be obvious to first time users, who may 
+think that stats::convolve is slow, even though it is fast, if applied 
+correctly.
+
+Moreover for zero padding, one may apply stats::nextn to (a) length(x) 
+or (b)  length(x)+length(y)-1.
+
+Examples:
+
+correct usage:
+
+```{r}
+x <- rnorm(514289)
+y <- rnorm(10000)
+#length(x) + length(y) - 1 = 2^19
+system.time(convolve(x, y, type="open"))
+
+#   user  system elapsed
+#   1.17    0.02    1.18
+```
+Incorrect usage:
+
+```
+# not run...
+x <- rnorm(300000)
+y <- rnorm(10000)
+system.time(convolve(x, y, type = "open"))
+#   user  system elapsed
+# 685.31    0.09  691.79
+```
+
+# Parse arguments of an R script
+By [Gregor Gorjanc](http://ggorjan.blogspot.com/2013/07/parse-arguments-of-r-script.html)
+
+R can be used also as a scripting tool. We just need to add shebang in the first line of a file (script):
+
+```
+#!/usr/bin/Rscript
+```
+
+and then the R code should follow.
+
+Often we want to pass arguments to such a script, which can be collected in the script by the commandArgs() function. Then we need to parse the arguments and conditional on them do something. I came with a rather general way of parsing these arguments using simply these few lines:
+
+```
+## Collect arguments
+args <- commandArgs(TRUE)
+ 
+## Default setting when no arguments passed
+if(length(args) < 1) {
+  args <- c("--help")
+}
+ 
+## Help section
+if("--help" %in% args) {
+  cat("
+      The R Script
+ 
+      Arguments:
+      --arg1=someValue   - numeric, blah blah
+      --arg2=someValue   - character, blah blah
+      --arg3=someValue   - logical, blah blah
+      --help              - print this text
+ 
+      Example:
+      ./test.R --arg1=1 --arg2="output.txt" --arg3=TRUE \n\n")
+ 
+  q(save="no")
+}
+ 
+## Parse arguments (we expect the form --arg=value)
+parseArgs <- function(x) strsplit(sub("^--", "", x), "=")
+argsDF <- as.data.frame(do.call("rbind", parseArgs(args)))
+argsL <- as.list(as.character(argsDF$V2))
+names(argsL) <- argsDF$V1
+ 
+## Arg1 default
+if(is.null(args$arg1)) {
+  ## do something
+}
+ 
+## Arg2 default
+if(is.null(args$arg2)) {
+  ## do something
+}
+ 
+## Arg3 default
+if(is.null(args$arg3)) {
+  ## do something
+}
+ 
+## ... your code here ...
+
+```
+
+It is some work, but I find it pretty neat and use it for quite a while now. I do wonder what others have come up for this task. I hope I did not miss some very general solution.
+
+[Back to Index](../README.html)

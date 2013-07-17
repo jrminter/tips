@@ -1,0 +1,46 @@
+ImageJ tips
+========================================================
+
+[Back to Index](../README.html)
+
+# Sources of plugins
+
+[Stowers Research Institute](http://research.stowers.org/imagejplugins/)
+
+
+# Alchemy...
+
+## Edge-preserving averaging (smoothing) algorithms
+
+### Thresholded Blur
+
+[ImageJ Wiki](http://imagejdocu.tudor.lu/doku.php?id=plugin:filter:thresholded_blur:start)
+
+## Plug-ins that don't return an image reference
+
+Wayne Rasband noted (2013-05-22) that some reader plugins,
+including Bio-Formats, open and display the image without
+returning a reference. He offered the following
+work-around in jython scripts:
+
+```
+imp = IJ.openImage(path)
+imp = WindowManager.getCurrentImage()
+
+```
+
+# Using overlays on image channels
+
+Wayne Rasband provided (2013-05-24) this useful snippet
+
+```
+imp.setMode(CompositeImage.GRAYSCALE);
+overlay = new Overlay();
+// add rectangle that will be displayed on channel 1 of all 10 frames
+rect1 = new Roi(100, 100, 100, 100);
+rect1.setPosition(1, 1, 0);
+overlay.add(rect1);
+
+```
+
+[Back to Index](../README.html)

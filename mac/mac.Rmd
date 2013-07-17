@@ -1,0 +1,35 @@
+Mac OSX Tips
+========================================================
+
+[Back to Index](../README.html)
+
+# Startup items
+## global environment variables
+If one has global environment variables to set at
+launch time and be avaible to all applications (that
+might note get them from ``.profile``) one can put
+them in ``/etc/launchd.conf``. An example might be
+
+```
+setenv IMG_ROOT /Users/jrminter/dat/images
+```
+
+Note how this uses ``csh`` syntax...
+
+## Personal environment variables
+These are best set in ``.profile``
+
+
+
+# Hardware tips
+## Eject a stuck CD/DVD
+1. Restart the computer. If necessary, use the reset/interrupt
+button.
+2. Immediately after the system startup tone, press and
+hold the ``CMD-OPT-O-F`` key combination. The computer starts
+up to a text-only screen, indicating that you are in
+Open Firmware.
+3. At the prompt, type ``eject cd`` and return.
+4. At the prompt, type ``mac-boot`` and return.
+
+[Back to Index](../README.html)

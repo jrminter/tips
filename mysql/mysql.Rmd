@@ -1,0 +1,119 @@
+MySQL tips
+========================================================
+
+[Back to Index](../README.html)
+
+These are John Minter's tips for a workflow using MySQL.
+They were compiled from several web sources.
+
+# Basics
+
+## Passwords
+
+### set the mysql root password after installation
+
+```
+mysqladmin -u root password "newpwd"
+```
+
+### set up to permit network connections
+
+I found it easier to set up users from the GUI tool...
+but
+```
+CREATE USER 'jrminter'@'localhost' IDENTIFIED BY 'mypass';
+```
+
+An example command line session ...
+```
+mysql -h localhost -u root -p
+(pw)
+mysql -h localhost -u jrminter -p
+SET PASSWORD FOR 'root'@'localhost' = PASSWORD('my_passwd');
+SET PASSWORD FOR 'root'@'hostname' = PASSWORD('my_passwd');
+GRANT ALL PRIVILEGES ON *.* TO 'jrminter'@'localhost' IDENTIFIED BY 'my_passwd' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON *.* TO 'jrminter'@'%' IDENTIFIED BY 'my_passwd' WITH GRANT OPTION;
+commit;
+exit
+```
+
+## Delete a database
+```
+DROP {DATABASE | SCHEMA} [IF EXISTS] db_name;
+```
+
+## Homebrew
+Set up databases to run AS YOUR USER ACCOUNT with:
+```
+unset TMPDIR
+mysql_install_db --verbose --user=`whoami` --basedir="$(brew --prefix mysql)" --datadir=/usr/local/var/mysql --tmpdir=/tmp
+```
+To set up base tables in another folder, or use a different user to run
+mysqld, view the help for mysqld_install_db:
+```
+mysql_install_db --help
+```
+
+Checkout the
+[MySQL](http://dev.mysql.com/doc/refman/5.7/en/)
+documentation:
+
+To run as, for instance, user "mysql", you may need to ``sudo``:
+```
+    sudo mysql_install_db ...options...
+```
+
+Start mysqld manually with:
+``mysql.server start``
+
+
+# MIDB
+
+Create the midb database
+```
+mysql -h localhost -u root -p
+(pw)
+mysql> create database midb;
+mysql> GRANT ALL ON midb.* TO 'jrminter'@'%';
+mysql> commit;
+mysql> quit;
+```
+Test
+```
+host: mysql -h localhost -u jrminter -p
+(Enter password:)
+
+mysql> SHOW DATABASES;
+mysql> use midb;
+mysql> SHOW TABLES;
+```
+
+can do the rest in python...
+
+
+## backup and restore
+
+### backup entire database
+```
+mysqldump -u root -p  midb > midb.sql
+```
+
+### restore entire database
+
+```
+mysql -u root -p midb < midb.sql
+```
+
+### backup a table 
+
+```
+mysqldump -u jrminter -p --opt midb projects > projects.sql
+```
+
+### restore a table
+
+mysql -u jrminter -p midb < samples.sql
+
+
+
+[Back to Index](../README.html)
