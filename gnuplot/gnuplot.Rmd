@@ -16,6 +16,7 @@ Use something like this
 ```
 # easy to comment out with #
 # set terminal postscript enhanced "Arial" 16
+# set output "200nmNiOnCu15kV.ps"
 # set terminal png
 # set terminal window
 
