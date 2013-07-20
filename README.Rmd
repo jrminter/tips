@@ -9,7 +9,7 @@ Topic
 
 [git](./git/git-tips.html)
 
-[gnuplot](./gnuplot.html)
+[gnuplot](./gnuplot/gnuplot.html)
 
 [Image-J](./ImageJ/ImageJ.html)
 
