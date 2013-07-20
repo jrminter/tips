@@ -1,0 +1,72 @@
+Gnuplot tips
+========================================================
+
+[Back to Index](../README.html)
+
+These are John Minter's tips for using gnuplot. They were
+compiled from several web sources.
+
+# Hacking the .plt file
+
+## Devices
+
+### Postscript
+
+Use something like this
+```
+# easy to comment out with #
+# set terminal postscript enhanced "Arial" 16
+# set terminal png
+# set terminal window
+
+
+```
+
+## Useful DTSA Spectrum Plot hacks
+
+```
+unset logscale x
+set logscale y
+set xrange [0.0:10000.0]
+set yrange [1.0:5700.0]
+set xlabel "Energy eV" font "Arial,16"
+set ylabel "Intensity" font "Arial,16"
+set format x "%g"
+set format y "%g"
+unset label
+```
+
+## HTML Colors
+
+One can define custom palettes using
+[ColorBrewer](http://colorbrewer2.org/)
+
+R makes this easy:
+
+```{r}
+library(RColorBrewer)
+pal <-brewer.pal(8,"Oranges")
+pal
+```
+
+use these in gnuplot like
+```
+1 lt rgb "#FFF5EB"
+2 lt rgb "#FEE6CE"
+3 lt rgb "#FDD0A2"
+4 lt rgb "#FDAE6B"
+5 lt rgb "#FD8D3C"
+6 lt rgb "#F16913"
+7 lt rgb "#D94801"
+8 lt rgb "#8C2D04"
+```
+
+or
+```{r}
+pal <-brewer.pal(8,"Blues")
+pal
+```
+
+
+
+[Back to Index](../README.html)

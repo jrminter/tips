@@ -16,6 +16,12 @@ git/git-tips.md
 git/git-tips.html
 git/figure/
 
+# gnuplot directory
+gnuplot/.DS_Store
+gnuplot/gnuplot.md
+gnuplot/gnuplot.html
+gnuplot/figure/
+
 # Image-J tips directory
 ImageJ/.DS_Store
 ImageJ/ImageJ.md

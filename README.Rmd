@@ -9,6 +9,8 @@ Topic
 
 [git](./git/git-tips.html)
 
+[gnuplot](./gnuplot.html)
+
 [Image-J](./ImageJ/ImageJ.html)
 
 [mac](./mac/mac.html)
