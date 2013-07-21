@@ -10,6 +10,8 @@ compiled from several web sources. Some helpful ones:
 
 [Gnuplot tricks](http://gnuplot-tricks.blogspot.com/2009/05/gnuplot-tricks-many-say-that-it-is.html)
 
+[gnuplotting.org](http://www.gnuplotting.org/)
+
 
 # Hacking the .plt file
 
