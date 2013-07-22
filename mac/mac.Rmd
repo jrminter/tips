@@ -4,6 +4,8 @@ Mac OSX Tips
 [Back to Index](../README.html)
 
 # Startup items
+## color for desktop
+RGB: 67,105.150
 ## global environment variables
 If one has global environment variables to set at
 launch time and be avaible to all applications (that
