@@ -5,6 +5,8 @@ format.
 
 Topic
 
+[Color](./color/color.html)
+
 [Diffraction Limit](./DiffractionLimit/DiffractionLimit.html)
 
 [git](./git/git-tips.html)
