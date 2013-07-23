@@ -67,6 +67,8 @@ use these in gnuplot like
 6 lt rgb "#F16913"
 7 lt rgb "#D94801"
 8 lt rgb "#8C2D04"
+
+plot "-" with lines lt 1 lw 2 lc rgb "#FDD0A2" title "100 nm Cu", ...
 ```
 
 or
