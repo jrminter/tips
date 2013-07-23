@@ -38,6 +38,25 @@ export GIT_HOME
 export IMG_ROOT
 ```
 In Windows, I set these as user environment variables.
+Note that in Windows, I set one more like:
+
+```
+GITHOME C:\Users\jrminter\git
+```
+
+Note the windows path format (I hate backslashes.)
+What were you thinking, Bill Gates??? 
+This lets me use a command file
+to
+```
+cd %GITHOME%
+```
+
+This was useful in the command file
+``__install-all-jrm-r-pkgs.cmd`` that I use to
+install the latest version of my R-packages
+from my git repository.
+
 Running R from the terminal picks these up, but in Linux and MacOSX,
 RStudio doesn't (not sure why it does on Windows). The work-around
 is to use the r-environment file. 
@@ -56,6 +75,7 @@ Then in R, one gets
 
 ```{r}
 print(Sys.getenv("GIT_HOME"))
+print(Sys.getenv("GITHOME"))
 print(Sys.getenv("IMG_ROOT"))
 
 ```
@@ -88,7 +108,7 @@ following the plot. The grDevices exemplar warns:
 > to a transparent background, which is probably not what
 > is needed when copying to a device such as png.
 
-```{r}
+```{r, fig.width=4, fig.height=4}
 cal.mu <- 5.01
 cal.se <- 0.02
 cal.un <- "nm/px"
@@ -212,8 +232,8 @@ text(2.5, 0.115, expression(alpha==0.05))
 ```
 # LaTeX in R Plots
 
-Arthur Charpentie [provided]
-(http://freakonometrics.hypotheses.org/6290)
+Arthur Charpentier
+[provided](http://freakonometrics.hypotheses.org/6290)
 instructions on how to manually install the tikzDevice R
 package. This package is awesome, but since it is no longer
 actively maintained, it has been removed from the CRAN
