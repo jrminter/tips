@@ -61,7 +61,10 @@ print(Sys.getenv("IMG_ROOT"))
 ```
 
 
+## Reading Excel workbooks
 
+[Milano R net](http://www.milanor.net/blog/?p=779)
+has a nice description of the available options.
 
 # Mathematical annotation
 
