@@ -118,11 +118,15 @@ C:/Apps/R/Rtools
 
 ```
 
-## Compressing pdflatex output with ghostscript
+### Compressing pdflatex output with ghostscript
 
 ```
 gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=compressed.pdf orig.pdf
+```
 
+### Crop pdf margina
+```
+pdfcrop --margins 4 orig.pdf cropped.pdf
 ```
 
 ## Regenerating config files
@@ -171,7 +175,13 @@ install-tl -gui text -repository  http://mirrors.rit.edu/CTAN/systems/texlive/tl
 
 ### For win32
 
-at EK set ftp_proxy, http_proxy to http://165.170.128.84:81
+at EK set
+
+```
+ftp_proxy   http://165.170.128.84:81
+http_proxy  http://165.170.128.84:81
+https_proxy http://165.170.128.84:81
+```
  
 download http://mirror.ctan.org/systems/texlive/tlnet/install-tl.zip
 unzip the file in a temp directory
