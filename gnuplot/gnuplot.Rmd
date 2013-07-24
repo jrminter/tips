@@ -26,9 +26,18 @@ Use something like this
 # set output "200nmNiOnCu15kV.ps"
 # set terminal png
 # set terminal window
+```
 
+One then can convert the file to pdf and crop the margins
+like this:
 
 ```
+ps2pdf 200nmNiOnCu15kV.ps temp.pdf
+pdfcrop --margins 4 temp.pdf 200nmNiOnCu15kV.pdf
+rm -rf temp.pdf
+```
+Cropping the margins is especailly helpful for inclusion
+in $\LaTeX$ documents.
 
 ## Useful DTSA Spectrum Plot hacks
 
