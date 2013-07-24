@@ -24,19 +24,44 @@ Color palettes need to be chosen carefully.
 
 Resources
 
+[Zach Holman](http://zachholman.com/posts/slide-design-for-developers/)
 
 [ColorBrewer](http://colorbrewer2.org/)
 
 [colourlovers](http://www.colourlovers.com)
 
+[Kuler](https://kuler.adobe.com/create/color-wheel/)
 
 
-Some Palettes I like
+
+## Some Palettes I like
+
+[Business Casual](https://kuler.adobe.com/Business-Casual-color-theme-5595/)
+
+```{r,fig.height=1}
+pal <- c("#133463","#365FB7", "#5A72A6", "#F4EFDC", "#BA9B65")
+std.mar <- par(mar())
+par(mar = rep(0, 4)) 
+image(matrix(1:5), col = pal, axes = FALSE)
+par(mar=std(mar))
+```
+
+
+[Threadless](http://www.colourlovers.com/palette/27905/threadless)
+
+```{r,fig.height=1}
+pal <- c("#1B325F","#9CC4E4", "#E9F2F9", "#3A89C9", "#F26C4F")
+std.mar <- par(mar())
+par(mar = rep(0, 4)) 
+image(matrix(1:5), col = pal, axes = FALSE)
+par(mar=std(mar))
+```
 
 [Blown Entreprneur](http://www.colourlovers.com/palette/59867/Blown_Entrepreneur)
 
 ```{r,fig.height=1}
 pal <- c("#44749D","#C6D4E1", "#FFFFFF", "#EBE7E0", "#BDB8AD")
+names(pal) <- c("","", "", "", "")
 std.mar <- par(mar())
 par(mar = rep(0, 4)) 
 image(matrix(1:5), col = pal, axes = FALSE)
