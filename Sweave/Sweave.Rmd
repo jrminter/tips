@@ -36,6 +36,42 @@ colnames(my.df) <- o.col.names
 @
 ```
 
+Note: one can avoid Sweave and write the tables as ``.tex`` files
+directly from an R script...
+
+```{r}
+library(xtable)
+df <- data.frame(one=c(1,2,3),
+                 two=c(1,2,3),
+                 three=c(1,2,3),
+                 four=c(1,2,3))
+
+tab.tex  <- './tab.tex'
+o.names <- colnames(df)
+# if one wants clean column names...
+n.names <- c("uno", "dos", "tres", "quatro")
+colnames(df) <- n.names
+# note ncol+1 entries
+dig <- c(0,1,1,1,1)
+xt <- xtable(df, digits = dig,
+             caption = "My table.",
+             label = "tab:myTab",
+             table.placement = "tbp",
+             caption.placement = "top",
+             size = "small",
+             table.placement="ht")
+
+sink(tab.tex)
+# change rownames to TRUE if meaningful
+print(xt, include.rownames=FALSE)
+sink()
+
+# the lets one include the file...
+str.ei <- '\\endinput'
+cat(str.ei, file=tab.tex, sep='\n', append=TRUE)
+
+
+```
 
 
 [Back to Index](../README.html)

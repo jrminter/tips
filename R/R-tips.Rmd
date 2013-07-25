@@ -19,7 +19,7 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 [Back to Index](../README.html)
 
-Version of 2013-06-19
+Version of 2013-07-25
 
 R can be **really** frustrating at time. These are some
 tips on matters that made me go *hmmm...*
@@ -43,9 +43,18 @@ Note that in Windows, I set one more like:
 ```
 GITHOME C:\Users\jrminter\git
 ```
+And on win32, I change
+
+```
+TEMP c:\Temp\tmp
+```
+Because the usual ``Documents and Settings\\username\\...`` path gets too 
+long for building some R packages (like tikzDevice).
 
 Note the windows path format (I hate backslashes.)
-What were you thinking, Bill Gates??? 
+What were you thinking, Bill Gates??? BTW - what is wrong with short
+path names like usr, bin, tmp ???
+
 This lets me use a command file
 to
 ```
