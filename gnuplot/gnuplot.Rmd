@@ -53,6 +53,11 @@ set format y "%g"
 unset label
 ```
 
+## RGB Colors
+
+One can use these names
+[Hamburg-Schneider](http://www.uni-hamburg.de/Wiss/FB/15/Sustainability/schneider/gnuplot/colors.htm)
+
 ## HTML Colors
 
 One can define custom palettes using
