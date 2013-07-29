@@ -71,6 +71,8 @@ pal <-brewer.pal(8,"Oranges")
 pal
 ```
 
+### Plotting lines
+
 use these in gnuplot like
 ```
 1 lt rgb "#FFF5EB"
@@ -90,15 +92,13 @@ or
 pal <-brewer.pal(8,"Blues")
 pal
 ```
-### Controlling borders
 
-The FAQ suggests:
+### Changing label colors
+
+Try
 
 ```
-set lmargin at screen 0.05
-set bmargin at screen 0.05
-set rmargin at screen 0.95
-set tmargin at screen 0.95
+set label 3 "Si (ignored)" at first 1730,90000 center textcolor rgb "skyblue"
 ```
 
 ### Adding symbols
@@ -130,5 +130,18 @@ sin(2*x)/x w l lt 2 lc 3 lw 3 t "sin(2{/Symbol a})/{/Symbol a}", \
 sin(x) w l lt 3 lc 2 lw 3 t "sin{/Symbol a})"
 
 ```
+
+### Controlling borders
+
+The FAQ suggests:
+
+```
+set lmargin at screen 0.05
+set bmargin at screen 0.05
+set rmargin at screen 0.95
+set tmargin at screen 0.95
+```
+
+
 
 [Back to Index](../README.html)
