@@ -34,7 +34,7 @@ There are three ways to put subfile.tex file into main.tex:
 
 * ``\import`` needs ``\usepackage{import}``.
 * ``\include`` is only used in the main.tex and cannot be used in subfile.tex
-* ``\input`` can be used in main.tex or subfile.tex
+* ``\input`` can be used in main.tex or subfile.tex. __Note:__ It took me quie a while to discover that I needed to use ``\input`` instead of ``\include`` in a Sweave file to get references to work properly with a table previously written with ``xtable``.
 
 use ``\import`` for absolute paths or ``\subimport`` relative paths
 if you want to nest imports, and want the imported file (first level)
