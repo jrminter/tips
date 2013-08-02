@@ -34,17 +34,55 @@ There are three ways to put subfile.tex file into main.tex:
 
 * ``\import`` needs ``\usepackage{import}``.
 * ``\include`` is only used in the main.tex and cannot be used in subfile.tex
-* ``\input`` can be used in main.tex or subfile.tex. __Note:__ It took me quie a while to discover that I needed to use ``\input`` instead of ``\include`` in a Sweave file to get references to work properly with a table previously written with ``xtable``.
+* ``\input`` can be used in main.tex or subfile.tex.
+
+__Note:__ It took me quie a while to discover that I needed to use ``\input`` instead of ``\include`` in a Sweave file to get references to work properly with a table previously written with ``xtable``.
 
 use ``\import`` for absolute paths or ``\subimport`` relative paths
 if you want to nest imports, and want the imported file (first level)
 to use its own path as the base for further imports (second level). 
 see [stackexchange](http://tex.stackexchange.com/a/58485/14697)
 
+## Getting figure numbers correct
+Some old but excellent advice from
+[Luke Maciak](http://www.terminally-incoherent.com/blog/2007/04/14/latex-fixing-wrong-figure-numbers/)
+
+What I tell you right now may save you hours of extensive
+debugging, cursing under your breath, commenting out custom
+code dealing with figure layout and much frustration.
+
+Whenever you use figures, always (and I mean ALWAYS EVER
+FOREVER ALWAYS) put ``\caption`` first, and ``\label``
+second like this:
+
+```
+\begin{figure}[htp]
+   \centering
+ 		\includegraphics{image.eps}
+ 	\caption{Some Image} 	% \caption IS ALWAYS FIRST
+ 	\label{fig:some-image} 	% \label IS ALWAYS SECOND
+\end{figure}
+```
+Easy way to remember this -- order your image tags alphabetically.
+C goes before L. Always. No exception.
+
+If you put the ``\label`` above ``\caption`` you will run into
+trouble when referencing figures inside subsections. In my case,
+the caption underneath the figure would say Fig. 4.2 but the
+output of ``\ref`` would be 4.3.10 because somehow it was picking
+up the section numbers wrong. The whole damn chapter 4 had the
+caption/label pairs flipped – but the rest of the document was
+fine. I have no clue what possessed me to write it this way.
+
+Now I know better. This is the 3 hours of my life that I will
+never get back. All because I put label before a caption.
+Do not do that to yourself!
+
 # Avoiding Sweave...
 
-Sometimes it is helpful to write a table from R to be included. Even if
-one uses Sweave for some tasks, this trick can make the file shorter...
+Sometimes it is helpful to write a table from R to be included.
+Even if one uses Sweave for some tasks, this trick can make
+the file shorter...
 
 
 ```{r}
