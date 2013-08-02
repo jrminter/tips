@@ -78,6 +78,62 @@ Now I know better. This is the 3 hours of my life that I will
 never get back. All because I put label before a caption.
 Do not do that to yourself!
 
+## Citations in figures
+
+Another old but useful tip from
+[Luke Maciak](http://www.terminally-incoherent.com/blog/2006/07/26/latex-citations-in-figures/)
+
+For some unknown, mysterious reason you can’t put a ``\cite``
+command as an argument of the ``\caption`` statement. I stumbled
+upon this today when I was trying to attribute an image that I
+shamelessly snurched from the web.
+
+Apparently, the cause is not as mysterious as I thought. If you
+want to know why this happens, do some research on
+``fragile commands and moving arguments``. Do you need to
+understand these things throughly? Probably not. You just
+need to remember that you may sometimes need to protect a
+``\cite`` when it is an attribute of something else:
+
+```
+\caption{Very Stupid Image \protect\cite{source}}
+```
+
+So here is a new rule of thumb: if you nest a command in
+an attribute of another command and latex freaks out, you
+might be dealing with a fragile command inside of a moving
+attribute. Sticking a ``\protect`` in front of the command
+is a good place to start troubleshooting the problem.
+
+### Update 12/15/2006 04:03:46 PM
+
+One caveat here -– if you put citations in image captions, then
+they will show up in your list of figures. This looks a little
+ugly, and it can mess up your citation order. For example,
+if you use IEEEtran.bst for your BibTex formating, then the
+first cited source should be ``[1]``, second source should be
+``[2]`` and etc... Unfortunately if your list of figures is on
+page 3, then the first citation on that page will be counted
+as ``[1]`` even if the actual image does not show up till
+page 64.
+
+So be careful with these.
+
+### Update 01/08/2007 10:05:32 AM
+
+I figured out the caption and the list of figures issue. It
+turns out that ``\caption`` can take an optional parameter
+which is the text for the list like so:
+
+```
+\caption[Stupid Image]{Stupid Image \protect\cite{source}}
+```
+
+If you use it this way the citation only shows up under the
+figure, but not in the LoF and thus the order of references
+is preserved.
+
+
 # Avoiding Sweave...
 
 Sometimes it is helpful to write a table from R to be included.
