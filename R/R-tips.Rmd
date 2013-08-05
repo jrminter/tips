@@ -239,6 +239,96 @@ text(2.5, 0.115, expression(alpha==0.05))
 # dev.copy(jpeg, 'polygon.jpeg') # save plot as .jpeg
 #dev.off()
 ```
+
+# Drawing 95% Confidence intervals
+[Natan Lemoine](http://climateecology.wordpress.com/2013/08/05/drawing-a-95-confidence-interval-in-r/) notes:
+
+I’m writing a post on how to draw a in 95% confidence interval in R by hand. I spent an hour or so trying to figure this out, and most message threads point someone to the ellipse() function. However, I wanted to know how it works.
+
+The basic problem was this. Imagine two random variables with a bivariate normal distribution, called y, which is an n x 2 matrix with n rows and 2 columns. The random variables are described by a mean vector mu and covariance matrix S. The equation for an ellipse is:
+
+$(y – mu) S^1 (y – mu)’ = c^2$
+
+The number $c^2$ controls the radius of the ellipse, which we want to extend to the 95% confidence interval, which is given by a chi-square distribution with 2 degrees of freedom. The ellipse has two axes, one for each variable. The axes have half lengths equal to the square-root of the eigenvalues, with the largest eigenvalue denoting the largest axis. A further description of this can be found in any multivariate statistics book (or online).
+
+To calculate the ellipse, we need to do a few things:
+1. convert the variables to polar coordinates,
+2. extend the new polar variables by the appropriate half lengths (using eigenvalues),
+3. rotate the coordinates based on the variances and covariances, and 
+4. move the location of the new coordinates back to the original means. This will make more sense when we do it by hand.
+
+First, generate some data, plot it, and use the ellipse() function to make the 95% confidence interval. This is the target interval (I use it to check myself. If my calculations match, hooray. If not, I screwed up).
+
+```{r}
+library(mvtnorm) # References rmvnorm()
+library(ellipse) # References ellipse()
+set.seed(17)
+ 
+# Set the covariance matrix
+sigma2 <- matrix(c(5, 2, 2, 5), ncol=2)
+ 
+# Set the means
+mu <- c(5,5)
+ 
+# Get the correlation matrix
+P <- cov2cor(sigma2)
+ 
+# Generate the data
+p <- rmvnorm(n=50, mean=mu, sigma=sqrt(sigma2))
+ 
+# Plot the data
+plot(p)
+ 
+# Plot the ellipse
+lines( ellipse( P, centre = c(5,5)) , col='red')
+```
+
+Second, get the eigenvalues and eigenvectors of the correlation matrix.
+
+```{r}
+evals <- eigen(P)$values
+evecs <- eigen(P)$vectors
+```
+
+Third, make a vector of coordinates for a full circle, from 0 to 2*pi and get the critical value ($c^2$).
+
+```{r}
+# Angles of a circle
+a <- seq(0, 2*pi, len=100)
+ 
+# Get critical value
+c2 <- qchisq(0.95, 2)
+c <- sqrt(c2)
+```
+
+The vector A above are angles that describe a unit circle. The coordinates of a unit circle are found by $x = cos(a)$ and $y = sin(a)$ (use trigonometry of a triangle to get this, where the hypotenuse = 1). We need to extend the unit circle by the appropriate lengths based on the eigenvalues and then even more by the critical value.
+
+```{r}
+# Get the distances
+xT <- c * sqrt(evals[1]) * cos(a)
+yT <- c * sqrt(evals[2]) * sin(a)
+ 
+M <- cbind(xT, yT)
+```
+
+If you plot M, you’ll get an ellipse of the appropriate axes lengths, but centered on 0 and unrotated. Rotate the ellipse using the eigenvectors, which describe the relationships between the variables (more appropriately, they give the directions for the vectors of the major axes of variation). Use the equation u*M’ (write this out to see why this works).
+
+```{r}
+# Covert the coordinates
+transM <- evecs %*% t(M)
+transM <- t(transM)
+```
+
+The final step is to move the rotated ellipse back to the original scale (centered around the original means) and plot the data.
+
+```(r)
+lines(transM + mu)
+```
+
+This gives the following plot, with the red line being the output from the ellipse() function.
+
+And that’s that! Hopefully this helps someone like me who spent hours looking but couldn’t find anything.
+
 # LaTeX in R Plots
 
 Arthur Charpentier
