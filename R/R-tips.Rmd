@@ -336,9 +336,14 @@ Arthur Charpentier
 instructions on how to manually install the tikzDevice R
 package. This package is awesome, but since it is no longer
 actively maintained, it has been removed from the CRAN
-website. Couldn't get this to work on R-3.0.0. Perhaps
-R-2.15.3
-
+website. Took a while to get this to work on R-3.0.1.
+Ended up bulding from source from Charlie Sharpenstein's
+site (minus one vignette). The source package builds on all
+my systems. ___Note that vignettes fail to build on my
+win32 systems if the temp path is long - i.e. buried
+in ``Documents and Settings`` usually set a user environment
+variable for ``TEMP`` to ``C:\Temp\tmp``. I use ``C:\Temp``
+as a convenient directory for quick installs or builds...
 There is first a dependence on the ``filehash`` package
 
 ```
