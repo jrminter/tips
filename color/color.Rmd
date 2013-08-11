@@ -40,10 +40,10 @@ Resources
 
 ```{r,fig.height=1}
 pal <- c("#133463","#365FB7", "#5A72A6", "#F4EFDC", "#BA9B65")
-std.mar <- par(mar())
+std.mar <- par()$mar
 par(mar = rep(0, 4)) 
 image(matrix(1:5), col = pal, axes = FALSE)
-par(mar=std(mar))
+par(mar=std.mar)
 ```
 
 
@@ -51,10 +51,10 @@ par(mar=std(mar))
 
 ```{r,fig.height=1}
 pal <- c("#1B325F","#9CC4E4", "#E9F2F9", "#3A89C9", "#F26C4F")
-std.mar <- par(mar())
+std.mar <- par()$mar
 par(mar = rep(0, 4)) 
 image(matrix(1:5), col = pal, axes = FALSE)
-par(mar=std(mar))
+par(mar=std.mar)
 ```
 
 [Blown Entreprneur](http://www.colourlovers.com/palette/59867/Blown_Entrepreneur)
@@ -62,10 +62,10 @@ par(mar=std(mar))
 ```{r,fig.height=1}
 pal <- c("#44749D","#C6D4E1", "#FFFFFF", "#EBE7E0", "#BDB8AD")
 names(pal) <- c("","", "", "", "")
-std.mar <- par(mar())
+std.mar <- par()$mar
 par(mar = rep(0, 4)) 
 image(matrix(1:5), col = pal, axes = FALSE)
-par(mar=std(mar))
+par(mar=std.mar)
 ```
 
 [Back to Index](../README.html)
