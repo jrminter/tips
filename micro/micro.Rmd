@@ -3,9 +3,11 @@ Microscopy tips
 
 [Back to Index](../README.html)
 
-# Specimen prep
+## Specimen prep
 
-## Cu
+
+
+### Cu
 From John Mardinly 2013-06-10
 
 > When Intel first started copper, the TEM labs were borrowing time on
@@ -65,9 +67,22 @@ From John Mardinly 2013-06-10
 
 > John Mardinly, ASU
 
-# Service
+### Substitutes for Uranyl Acetate
 
-## Ion getter pumps
+From [Nakakoshi et al.](http://jmicro.oxfordjournals.org/content/60/6/401.abstract?etoc)
+
+> Aqueous uranyl acetate has been extensively used as a superb staining reagent for transmission electron microscopy of biological materials. However, recent regulation of nuclear fuel material severely restricts its use even for purely scientific purposes. Since uranyl salts are hazardous due to biological toxicity and remaining radioactivity, development of safe and non-radioactive substitutes is greatly anticipated. We examined two lanthanide salts, samarium triacetate and gadolinium triacetate, and found that 1–10% solution of these reagents was safe but still possess excellent capability for staining thin sections of plastic-embedded materials of animal and plant origin. Although post-fixation with osmium tetroxide was essential for high-contrast staining, post-staining with lead citrate could be eliminated if a slow-scan CCD camera is available for observation. These lanthanide salts can also be utilized as good negative-staining reagents to study supramolecular architecture of biological macromolecules. They were not as effective as a fixative of protein assembly, reflecting the non-hazardous nature of the reagents.
+
+## Service
+
+### LKB Knifemakers
+From [Oldrich Benada](benada@biomed.cas.cz) 2013-08-13
+
+> The old cutting wheel can be replaced by a carbide glass cutting
+> wheel. There are a lot of companies selling it, e.g.
+> [OaklandDiamond](http://oaklanddiamondtools.com/carbide-glass-cutting-wheel.php)
+
+### Ion getter pumps
 
 Pete Bustanoby wrote (2013-05-24)
 
