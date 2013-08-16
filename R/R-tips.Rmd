@@ -181,6 +181,33 @@ Then from LaTeX (e.g. in a beamer template)
   \footnotesize{Note how I can control placement better.}
 \end{frame}
 ```
+
+## Tricks with sapply and friends
+
+### A nice example via RBloggers
+
+From [rforwork.info](http://rforwork.info/2013/08/15/sapply-is-my-new-friend/)
+
+There are a couple of cases so far where I’ve found that sapply really comes in handy for me:
+
+- If I want to quickly see some descriptive stats for multiple columns in my dataframe. For example, the following would show me the medians of columns 10 through 20, displaying the column names above each median value.
+
+```
+sapply(mydf[,10:20], median, na.rm=true)
+```
+
+
+
+- If I want to apply the same function to multiple vectors in my dataframe, modifying them in place. I oftentimes have count variables that have NA values in place of zeros. I made a "zerofy" function to add zeros into a vector that lacks them. So, if I want to use my function to modify these count columns, I can do the following, Which then replaces the original data in columns 30 through 40 with the modified data! Handy! 
+
+```
+mydf[,30:40] = sapply(mydf[,30:40], zerofy)
+```
+
+
+
+
+
 ## Nice examples from Vistat
 
 We can get a good list of symbols with
