@@ -32,6 +32,8 @@ Resources
 
 [Kuler](https://kuler.adobe.com/create/color-wheel/)
 
+[efg's handy R-Color PDF](pdf/RColorChart.pdf)
+
 
 
 ## Some Palettes I like
