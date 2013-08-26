@@ -7,15 +7,18 @@ strGitHome <- Sys.getenv("GIT_HOME")
 strRel     <- '/tips/scripts'
 
 names <- c("color.Rmd", "DiffractionLimit.Rmd", "git-tips.Rmd","gnuplot.Rmd",
-           "ImageJ.Rmd", "Legacy.Rmd", "mac.Rmd", "micro.Rmd", "mysql.Rmd",
-           "python.Rmd","R-tips.Rmd",
-           "R-Anova.Rmd","Salabim-graphics.Rmd", "Slidify.Rmd",
+           "ImageJ.Rmd", "Legacy.Rmd", "mac.Rmd", 
+           "micro.Rmd", "mysql.Rmd",
+           "python.Rmd","R-tips.Rmd", 
+           "R-Anova.Rmd","R-foreach.Rmd",
+           "Salabim-graphics.Rmd", "Slidify.Rmd",
            "Sweave.Rmd", "tex-tips.Rmd",
            "win.Rmd","README.Rmd")
 rPath <- c("../color", "../DiffractionLimit", "../git", "../gnuplot", "../ImageJ",
            "../legacy", "../mac","../micro", "../mysql",
            "../python", "../R",
-           "../R-Anova", "../Salabim", "../Slidify", "../Sweave",
+           "../R-Anova", "../R-foreach", 
+           "../Salabim", "../Slidify", "../Sweave",
            "../tex", "../win", "../")
 
 knitIt <- function(wrkPath, scrPath, theName){

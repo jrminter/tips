@@ -1,0 +1,335 @@
+R-foreach
+========================================================
+```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
+# make this an external chunk that can be included in any file
+options(width = 72)
+opts_chunk$set(message = F, error = F, warning = F, comment = NA, fig.align = 'center', dpi = 100, tidy = F, cache.path = '.cache/', fig.path = 'figure/')
+
+options(xtable.type = 'html')
+knit_hooks$set(inline = function(x) {
+  if(is.numeric(x)) {
+    round(x, getOption('digits'))
+  } else {
+    paste(as.character(x), collapse = ', ')
+  }
+})
+knit_hooks$set(plot = knitr:::hook_plot_html)
+```
+from [exegetic](http://www.exegetic.biz/blog/2013/08/the-wonders-of-foreach/)
+
+[Back to Index](../README.html)
+
+
+Writing code from scratch to do parallel computations can be
+rather tricky. However, the packages providing parallel
+facilities in R make it remarkably easy. One such package
+is foreach. I am going to document my trail of discovery
+with foreach, which began some time ago, but has really
+come into fruition over the last few weeks.
+
+First we need a reproducible example. Preferably something
+which is numerically intensive.
+
+```{r}
+max.eig <- function(N, sigma) {
+  d <- matrix(rnorm(N**2, sd = sigma), nrow = N)
+  E <- eigen(d)$values
+  abs(E)[[1]]
+}
+
+```
+This function generates a square matrix of uniformly distributed 
+random numbers, finds the corresponding (complex) eigenvalues and then 
+selects the eigenvalue with the largest modulus. The dimensions of the 
+matrix and the standard deviation of the random numbers are given as 
+input parameters.
+
+```{r}
+max.eig(5, 1)
+```
+
+```{r}
+max.eig(5, 1)
+```
+
+Since the data are random, each function call yields a different 
+result.
+
+## Vectorised
+
+It would be interesting to look at the distribution of these results. 
+We can produce a multitude of such results using vectorised multiple 
+invocations of the function.
+
+```{r}
+E <- sapply(1:10000, function(n) {max.eig(5, 1)})
+summary(E)
+```
+
+Here eigenvalues are calculated from 10000 function calls, all of 
+which use the same parameters. The distribution of the resulting 
+eigenvalues is plotted in the histogram below. Generating these data 
+took a couple of seconds on my middle-of-the-range laptop. Not a big 
+wait. But it was only using one of the four cores on the machine, so 
+in principle it could have gone faster.
+
+## eigenvalue-histogram
+
+We can make things more interesting by varying the dimensions of the 
+matrix.
+
+```{r}
+sapply(1:5, function(n) {max.eig(n, 1)} )
+
+```
+
+Or changing both the dimensions (taking on integral values between 1 
+and 5) and the standard deviation (running through 1, 2 and 3).
+
+```{r}
+sapply(1:5, function(n) {sapply(1:3, function(m) {max.eig(n, m)})})
+```
+
+
+The results are presented in an intuitive matrix. Everything up to 
+this point is being done serially.
+
+## Enter foreach
+
+At first sight, the foreach library provides a slightly different 
+interface for vectorisation. We’ll start off with simple repetition.
+
+```{r}
+library(foreach)
+times(10) %do% max.eig(5, 1)
+```
+
+That just executes the function with the same arguments 10 times over. 
+If we want to systematically vary the parameters, then instead of 
+times() we use foreach().
+
+```{r}
+foreach(n = 1:5) %do% max.eig(n, 1)
+
+```
+
+The results are returned as a list, which is actually more reminiscent 
+of the behaviour of lapply() than sapply(). But we can get something 
+more compact by using the .combine option.
+
+```{r}
+foreach(n = 1:5, .combine = c) %do% max.eig(n, 1)
+```
+
+
+That’s better. Now, what about varying both the dimensions and 
+standard deviation? We can string together multiple calls to
+``foreach()`` using the ``%:%`` nesting operator.
+
+```
+foreach(n = 1:5) %:% foreach(m = 1:3) %do% max.eig(n, m)
+```
+
+I have omitted the output because it consists of nested lists: it’s 
+long and somewhat ugly. But again we can use the .combine option to 
+make it more compact.
+
+```{r}
+foreach(n = 1:5, .combine = rbind) %:% foreach(m = 1:3) %do% max.eig(n, m)
+```
+
+```{r}
+foreach(n = 1:5, .combine = cbind) %:% foreach(m = 1:3) %do% max.eig(n, m)
+```
+
+You can choose between combining using cbind() or rbind() depending on 
+whether you want the output from the inner loop to form the columns or 
+rows of the output. There’s lots more magic to be done with .combine. 
+You can find the details in the informative article Using The foreach 
+Package by Steve Weston.
+
+You can also use foreach() to loop over multiple variables
+simultaneously.
+
+```{r}
+foreach(n = 1:5, m = 1:5) %do% max.eig(n, m)
+```
+
+But this is still all serial…
+
+## Filtering
+
+One final capability before we move on to parallel execution, is the 
+ability to add in a filter within the foreach() statement.
+
+```{r}
+library(numbers)
+
+foreach(n = 1:100, .combine = c) %:% when (isPrime(n)) %do% n
+
+```
+
+
+Here we identify the prime numbers between 1 and 100 by simply looping 
+through the entire sequence of values and selecting only those that 
+satisfy the condition in the when() clause. Of course, there are more 
+efficient ways to do this, but this notation is rather neat.
+
+## Going Parallel
+
+Making the transition from serial to parallel is as simple as
+changing ``%do%`` to ``%dopar%``.
+
+```{r}
+foreach(n = 1:5) %dopar% max.eig(n, 1)
+```
+
+
+ 
+> Warning message:
+> executing %dopar% sequentially: no parallel backend registered
+
+The warning gives us pause for thought: maybe it was not quite that 
+simple? Yes, indeed, there are additional requirements. You need first 
+to choose a parallel backend. And here, again, there are a few
+options. We will start with the most accessible, which is the 
+multicore backend.
+
+## Multicore
+
+Multicore processing is provided by the doMC library. You need to load 
+the library and tell it how many cores you want to use.
+
+```{r}
+library(doMC)
+# Let’s make a comparison between serial and parallel execution times.
+library(rbenchmark)
+registerDoMC(cores=2)
+```
+
+```{r}
+benchmark(
+  foreach(n = 1:50) %do% max.eig(n, 1),
+  foreach(n = 1:50) %dopar% max.eig(n, 1)
+)
+```
+
+
+The overall execution time is reduced, but not by the factor of
+2 that one might expect. This is due to the additional burden of 
+having to distribute the job over the multiple cores. The tradeoff 
+between communication and computation is one of the major limitations 
+of parallel computing, but if computations are lengthy and there is 
+not too much data to move around then the gains can be excellent.
+
+On a single machine you are limited by the number of cores. But if you 
+have access to a cluster then you can truly take things to another 
+level.
+
+# Cluster
+
+The foreach() functionality can be applied to a cluster using the 
+doSNOW library. We will start by using doSNOW to create a collection 
+of R instances on a single machine using a SOCK cluster.
+
+```{r}
+library(doSNOW)
+cluster = makeCluster(4, type = "SOCK")
+registerDoSNOW(cluster)
+```
+
+```{r}
+benchmark(
+  foreach(n = 1:50) %do% max.eig(n, 1),
+  foreach(n = 1:50) %dopar% max.eig(n, 1)
+)
+```
+
+```{r}
+stopCluster(cluster)
+```
+
+There is an improvement in execution time which is roughly comparable 
+to what we got with the multicore implementation. Note that when you 
+are done, you need to shut down the cluster.
+
+Next we will create an MPI cluster consisting of 20 threads.
+
+```
+cluster = makeCluster(20, type = "MPI")
+#
+registerDoSNOW(cluster)
+#
+benchmark(
+  foreach(n = 1:100) %do% max.eig(n, 1),
+  foreach(n = 1:100) %dopar% max.eig(n, 1)
+)
+```
+
+
+There is an improvement in performance, with the parallel job running 
+roughly 3 times as quickly.
+
+How about a slightly more complicated example? We will try running 
+some bootstrap calculations. We start out with the serial implementati
+on.
+
+```{r}
+random.data <- matrix(rnorm(1000000), ncol = 1000)
+bmed <- function(d, n) median(d[n])
+library(boot)
+#
+sapply(1:100, function(n) {sd(boot(random.data[, n], bmed, R = 10000)$t)})
+```
+
+
+First we generated a big array of normally distributed random numbers. 
+Then we used sapply to calculate bootstrap estimates for the standard 
+deviation of the median for each columns of the matrix.
+
+The parallel implementation requires a little more work: first we need 
+to make the global data (the random matrix and the bootstrap function) 
+available across the cluster.
+
+```
+clusterExport(cluster, c("random.data", "bmed"))
+```
+
+Then we spread the jobs out over the cluster nodes. We will do this 
+first using clusterApply(), which is part of the snow library and is 
+the cluster analogue of sapply(). It returns a list, so to get a nice 
+compact representation we use unlist().
+
+```
+results = clusterApply(cluster, 1:100, function(n) {
+library(boot)
+sd(boot(random.data[, n], bmed, R = 10000)$t)
+})
+
+head(unlist(results))
+```
+
+The foreach implementation is a little neater.
+
+```
+results = foreach(n = 1:100, .combine = c) %dopar% {
+    library(boot); sd(boot(random.data[, n], bmed, R = 10000)$t)
+}
+head(results)
+
+stopCluster(cluster)
+```
+
+ 
+The key in both cases is that the boot library must be loaded on each 
+of the cluster nodes as well so that its functionality is available. 
+Simply loading the library on the root node is not enough!
+
+## Conclusion
+
+Using the parallel computing functionality in R via the foreach 
+package has completely transformed my workflow. Jobs that have 
+previously run for a few days on my desktop machine now complete in a 
+few hours on a 128 node cluster.
+
+[Back to Index](../README.html)

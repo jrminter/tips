@@ -75,8 +75,15 @@ R/*.pdf
 
 # R-Anova directory
 R-Anova/.DS_Store
+R-Anova/figure/
 R-Anova/R-Anova.md
 R-Anova/R-Anova.html
+
+# R-Anova directory
+R-foreach/.DS_Store
+R-foreach/figure/
+R-foreach/R-foreach.md
+R-foreach/R-foreach.html
 
 # Salabim directory
 Salabim/.DS_Store

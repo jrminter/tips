@@ -29,6 +29,8 @@ Topic
 
 [R-Anova](./R-Anova/R-Anova.html)
 
+[R-foreach](./R-Anova/R-foreach.html)
+
 [Salabim-Creating publication quality graphs in R](./Salabim/Salabim-graphics.html)
 
 [Slidify](./Slidify/Slidify.html)
