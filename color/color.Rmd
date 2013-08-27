@@ -35,6 +35,18 @@ Resources
 [efg's handy R-Color PDF](pdf/RColorChart.pdf)
 
 
+## My favorite desktop background
+
+I like ``RGB(0,34,64)`` which is ``#002240``
+
+```{r,fig.height=1, fig.width=1}
+pal <- "#002240"
+std.mar <- par()$mar
+par(mar = rep(0, 4)) 
+image(matrix(1:1), col = pal, axes = FALSE)
+par(mar=std.mar)
+```
+
 
 ## Some Palettes I like
 
