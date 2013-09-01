@@ -341,6 +341,43 @@ install-tl -gui=text -repository http://mirrors.rit.edu/CTAN/systems/texlive/tln
 
 install-tl-advanced -repository  http://midb.rl.kodak.com/tlpretest/
 ```
+## TexWorks autocompletion
+[TexDev](http://www.texdev.net/2013/09/01/customising-texworks-auto-completion/)
+
+[TexWorks wiki](https://code.google.com/p/texworks/wiki/CodeCompletion)
+
+TeXworks uses a simple list of simple completion options.
+The basic format for the auto-complete files is to have a
+first line for the encoding
+
+```
+%% !TEX encoding = UTF-8 Unicode
+```
+
+then one or more lines for each completion. Each line can
+either just have a completion value
+
+```
+\alpha
+```
+
+or have a ***shortcut*** text version
+
+```
+xa:=\alpha
+```
+
+There are then a few bits of 'helper' syntax. You can use
+``#INS#`` to show where the cursor should end up, ``#RET``
+for a return and Unicode character U+2022 (BULLET)
+as a marker you can jump to using 
+``Ctrl-Tab`` (``Option-Tab`` on the Mac). So for example
+the ``\documentclass`` lines read
+
+```
+\documentclass{#INS#}#RET#
+\documentclass[#INS#]{•}#RET#
+```
 
 
 ## a libpng issue
