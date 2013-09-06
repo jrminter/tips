@@ -90,6 +90,23 @@ print(Sys.getenv("IMG_ROOT"))
 ```
 
 
+## Using colClasses when reading data into R
+
+[Mollie's Research Blog](http://www.mollietaylor.com/2013/09/using-colclasses-to-load-data-more.html)
+
+Specifying a colClasses argument to read.table or read.csv can save time
+on importing data, while also saving steps to specify classes for each
+variable later.
+
+```
+largeData <- read.csv("huge-file.csv",
+                      header = TRUE,
+                      colClasses = c("character", "character", "complex",
+                      "factor", "factor", "character", "integer", 
+                      "integer", "numeric", "character", "character",
+                      "Date", "integer", "logical"))
+```
+
 ## Reading Excel workbooks
 
 [Milano R net](http://www.milanor.net/blog/?p=779)
