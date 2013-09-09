@@ -3,6 +3,35 @@ Microscopy tips
 
 [Back to Index](../README.html)
 
+## Microanalysis Simulation
+
+### Casino
+The Monte Carlo program CASINO has been programmed by the research team of Raynald Gauvin (at the Université de
+Sherbrooke, Québec, Canada). Two versions are available
+[here](http://www.gel.usherbrooke.ca/casino/What.html).
+Note that Paula Horny was one of the developers. Her
+Ph. D. thesis is available
+[here](http://oatd.org/oatd/record?record=oai%5C:digitool.library.mcgill.ca%5C:102508).
+
+### DTSA-II
+
+DTSA-II (cross platform Java) was written by Nicholas Ritchie
+to be the successor to the older (Mac Pascal) DTSA package.
+DTSA-II has incorporated (and deprecated)
+[NIST Monte](http://www.cstl.nist.gov/div837/837.02/epq/).
+DTSA-II is available
+[here](http://www.cstl.nist.gov/div837/837.02/epq/dtsa2/).
+The documentation (java doc) is available
+[here](http://www.cstl.nist.gov/div837/837.02/epq/dtsa2/JavaDoc/index.html?overview-summary.html).
+
+### Cameron Davidson
+
+Cameron Davidson is now retired from CSIRO. He has written a nice
+package in C called XMAQNT. The subversion repository is public
+[xmaqnt](https://svnserv.csiro.au/svn/CMSE-Casting/Xray-microanalysis/xmaqnt/).
+He also has some nice simulation examples for Casino and NIST Monte
+[MonteCarlo](https://svnserv.csiro.au/svn/CMSE-Casting/Xray-microanalysis/MonteCarlo/).
+
 ## Specimen prep
 
 
