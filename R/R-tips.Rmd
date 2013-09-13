@@ -19,12 +19,25 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 [Back to Index](../README.html)
 
-Version of 2013-07-25
+Version of 2013-09-13
 
 R can be **really** frustrating at time. These are some
 tips on matters that made me go *hmmm...*
 
 # Hard things to find
+
+## xtable from knitr and Rmarkdown in RStudio
+This worked when using options to the R chunk
+of ` echo=FALSE, results='asis' `
+
+```
+library(xtable)
+slope <- rbind(sum.fit.l$coef,
+               sum.fit.k$coef)
+rownames(slope) <- c("Cu L", "Cu K")
+xt <- xtable(slope)
+print(xt, type='html')
+```
 
 ## Using custom environment variables
 Custom environment variables are helpful in standardizing relative
