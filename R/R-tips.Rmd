@@ -32,10 +32,11 @@ of ` echo=FALSE, results='asis' `
 
 ```
 library(xtable)
-slope <- rbind(sum.fit.l$coef,
-               sum.fit.k$coef)
+slope <- rbind(sum.fit.l$coef, sum.fit.k$coef)
+disp <- c("s","g", "g", "f", "g")
+dig  <- c(0,4,2,2,2)
 rownames(slope) <- c("Cu L", "Cu K")
-xt <- xtable(slope)
+xt <- xtable(slope, digits=dig, display=disp)
 print(xt, type='html')
 ```
 
