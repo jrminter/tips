@@ -162,7 +162,7 @@ But this is still all serial…
 One final capability before we move on to parallel execution, is the 
 ability to add in a filter within the foreach() statement.
 
-```{r}
+```
 library(numbers)
 
 foreach(n = 1:100, .combine = c) %:% when (isPrime(n)) %do% n
