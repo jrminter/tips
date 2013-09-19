@@ -9,7 +9,7 @@ Topic
 
 [Diffraction Limit](./DiffractionLimit/DiffractionLimit.html)
 
-[EDAX](./EDAX.html)
+[EDAX](./EDAX/EDAX.html)
 
 [git](./git/git-tips.html)
 
