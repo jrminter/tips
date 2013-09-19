@@ -18,6 +18,14 @@ DiffractionLimit/DiffractionLimit.md
 DiffractionLimit/DiffractionLimit.html
 DiffractionLimit/figure/
 
+
+# EDAX tips directory
+EDAX/.DS_Store
+EDAX/EDAX.md
+EDAX/EDAX.html
+EDAX/figure/
+
+
 # git tips directory
 git/.DS_Store
 git/git-tips.md
