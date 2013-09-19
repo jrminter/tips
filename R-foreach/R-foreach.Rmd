@@ -200,14 +200,14 @@ multicore backend.
 Multicore processing is provided by the doMC library. You need to load 
 the library and tell it how many cores you want to use.
 
-```{r}
+```
 library(doMC)
 # Let’s make a comparison between serial and parallel execution times.
 library(rbenchmark)
 registerDoMC(cores=2)
 ```
 
-```{r}
+```
 benchmark(
   foreach(n = 1:50) %do% max.eig(n, 1),
   foreach(n = 1:50) %dopar% max.eig(n, 1)
@@ -232,20 +232,20 @@ The foreach() functionality can be applied to a cluster using the
 doSNOW library. We will start by using doSNOW to create a collection 
 of R instances on a single machine using a SOCK cluster.
 
-```{r}
+```
 library(doSNOW)
 cluster = makeCluster(4, type = "SOCK")
 registerDoSNOW(cluster)
 ```
 
-```{r}
+```
 benchmark(
   foreach(n = 1:50) %do% max.eig(n, 1),
   foreach(n = 1:50) %dopar% max.eig(n, 1)
 )
 ```
 
-```{r}
+```
 stopCluster(cluster)
 ```
 
@@ -274,7 +274,7 @@ How about a slightly more complicated example? We will try running
 some bootstrap calculations. We start out with the serial implementati
 on.
 
-```{r}
+```
 random.data <- matrix(rnorm(1000000), ncol = 1000)
 bmed <- function(d, n) median(d[n])
 library(boot)

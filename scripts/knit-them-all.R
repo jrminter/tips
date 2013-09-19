@@ -6,7 +6,8 @@ require(knitr)
 strGitHome <- Sys.getenv("GIT_HOME")
 strRel     <- '/tips/scripts'
 
-names <- c("color.Rmd", "DiffractionLimit.Rmd", "git-tips.Rmd","gnuplot.Rmd",
+names <- c("color.Rmd", "DiffractionLimit.Rmd", "EDAX.Rmd",
+           "git-tips.Rmd","gnuplot.Rmd",
            "ImageJ.Rmd", "Legacy.Rmd", "mac.Rmd", 
            "micro.Rmd", "mysql.Rmd",
            "python.Rmd","R-tips.Rmd", 
@@ -14,7 +15,8 @@ names <- c("color.Rmd", "DiffractionLimit.Rmd", "git-tips.Rmd","gnuplot.Rmd",
            "Salabim-graphics.Rmd", "Slidify.Rmd",
            "Sweave.Rmd", "tex-tips.Rmd",
            "win.Rmd","README.Rmd")
-rPath <- c("../color", "../DiffractionLimit", "../git", "../gnuplot", "../ImageJ",
+rPath <- c("../color", "../DiffractionLimit", "../EDAX",
+           "../git", "../gnuplot", "../ImageJ",
            "../legacy", "../mac","../micro", "../mysql",
            "../python", "../R",
            "../R-Anova", "../R-foreach", 

@@ -9,6 +9,8 @@ Topic
 
 [Diffraction Limit](./DiffractionLimit/DiffractionLimit.html)
 
+[EDAX](./EDAX.html)
+
 [git](./git/git-tips.html)
 
 [gnuplot](./gnuplot/gnuplot.html)
