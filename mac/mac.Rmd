@@ -3,6 +3,10 @@ Mac OSX Tips
 
 [Back to Index](../README.html)
 
+# Quick
+## Lock Screen
+Cntl-shift-eject keys
+
 # Startup items
 ## color for desktop
 RGB: 67,105.150
