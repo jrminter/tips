@@ -6,7 +6,39 @@ Git tips
 These are John Minter's tips for a workflow using git. They were
 compiled from several web sources.
 
-# getting github not to ask for a password on windows
+## Oops control - recovering a deleted file.
+
+Put this first because when I'm in a panic after an accidental
+deletion, I'm in no mood to search.
+
+From [John Bohn](http://jjbohn.info/blog/2013/10/03/find-deleted-files-in-git/)
+
+So, if I have a file that I deleted a month or so ago called ``foo.rb`` 
+but for some reason I need to bring it back into my local repo.
+I can easily bring it back by running the following:
+
+```
+git checkout `git rev-list -n 1 HEAD -- foo.rb`^ foo.rb
+```
+
+So, that's obviously a bit of a long-winded shortcut. Let's break it down.
+
+It's really two commands in one. Let’s start with inside the ticks.
+
+```
+git rev-list -n 1 HEAD -- foo.rb
+```
+The ``-n`` 1 says "give me one revision". ``HEAD`` represents the tip of
+the current branch. The bare double dashes (or ``--`` ) represents my current
+branch. When all put together we are saying, print the latest commit hash
+starting from the commit I am currently on, in the branch that I am currently
+on, that modified ``foo.rb``. The caret (``^``) is a shortcut that represents
+the previous commit to whatever it appends.
+
+Once you grok that, the next part is pretty easy. Once interperted by the
+shell, the command is just a normal checkout from an alternate commit.
+
+## getting github not to ask for a password on windows
 [stackexchange](http://stackoverflow.com/questions/3625148/how-do-i-store-a-password-for-my-key-so-i-can-commit-and-pull-from-repository-wh)
 pointed me to a solution on
 [github](https://help.github.com/articles/working-with-ssh-key-passphrases#platform-windows)

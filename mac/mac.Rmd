@@ -3,13 +3,14 @@ Mac OSX Tips
 
 [Back to Index](../README.html)
 
-# Quick
-## Lock Screen
+## Quick
+### Lock Screen
 Cntl-shift-eject keys
 
-# Startup items
-## color for desktop
-RGB: 67,105.150
+## Startup items
+### my favorite color for desktop
+RGB: 0,34,64
+
 ## global environment variables
 If one has global environment variables to set at
 launch time and be avaible to all applications (that
@@ -25,10 +26,31 @@ Note how this uses ``csh`` syntax...
 ## Personal environment variables
 These are best set in ``.profile``
 
+## Prework for Mavericks
 
+From [John Bohn](http://jjbohn.info/blog/2013/10/02/fixing-homebrew-on-mac-osx-mavericks/)
 
-# Hardware tips
-## Eject a stuck CD/DVD
+I've had lots of problems with homebrew since upgrading to Mavericks.
+The same problems also existed when trying to ``rbenv install`` and
+really anything else that compiles. The root cause of the issue ended
+up being a conflict Mountain Lion Command Line Tools and the ones
+provided by Maverick.
+
+There was an easy solution however. By running ``xcode-select``
+(a tool provided to change the path to the current active developer
+directory) it will fix the issue.
+
+Specifically, run this from your terminal:
+
+```
+xcode-select --install
+```
+
+This will bring up a dialog to install the Command Line Tools
+(which you will have to type in your password) and will fix the problem.
+
+## Hardware tips
+### Eject a stuck CD/DVD
 1. Restart the computer. If necessary, use the reset/interrupt
 button.
 2. Immediately after the system startup tone, press and
