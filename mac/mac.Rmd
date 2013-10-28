@@ -28,6 +28,40 @@ These are best set in ``.profile``
 
 ## Prework for Mavericks
 
+### For a clean Install
+
+From [Christina Warren](http://mashable.com/2013/10/23/clean-install-os-x-mavericks/)
+
+### Homebrew
+
+Current error building R packages
+
+A hint from [StackOverflow](http://stackoverflow.com/questions/19533220/cannot-install-r-package-from-source-in-mac-osx-maverick) fixed the problem!!!
+
+Edit ``Makeconf`` in  ``/Library/Frameworks/R.framework/Resources/etc``
+
+set
+
+```
+CC=clang
+CXX=clang++
+```
+
+Error described below:
+
+It uses something like:
+
+```
+llvm-gcc-4.2 -arch x86_64 -std=gnu99 -I/Library/Frameworks/R.framework/Resources/include -DNDEBUG  -I/usr/local/include    -fPIC  -mtune=core2 -g -O2  -c spectrum.c -o spectrum.o
+```
+
+Which produces this error
+
+```
+make: llvm-gcc-4.2: No such file or directory
+```
+
+This seemed to work for me until I updated homebrew...
 From [John Bohn](http://jjbohn.info/blog/2013/10/02/fixing-homebrew-on-mac-osx-mavericks/)
 
 I've had lots of problems with homebrew since upgrading to Mavericks.
