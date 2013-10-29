@@ -7,6 +7,9 @@ Mac OSX Tips
 ### Lock Screen
 Cntl-shift-eject keys
 
+### Watch for this
+[Reports](https://discussions.apple.com/message/23505531#23505531) of battery life issue after upgrade to Mavericks. Note that [Apple](http://www.apple.com/batteries/notebooks.html) has some tips about batteries.
+
 ## Startup items
 ### my favorite color for desktop
 RGB: 0,34,64
