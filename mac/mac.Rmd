@@ -33,8 +33,25 @@ These are best set in ``.profile``
 
 ### For a clean Install
 
-From [Christina Warren](http://mashable.com/2013/10/23/clean-install-os-x-mavericks/)
+From [Christina Warren](http://mashable.com/2013/10/23/clean-install-os-x-mavericks/) and [Ed Rhee](http://howto.cnet.com/8301-11310_39-57608836-285/how-to-create-a-bootable-os-x-mavericks-usb-install-drive/)
 
+Creating an OS X USB installer from the App Store download hasn't been very straightforward in the past, and the old methods no longer work for OS X 10.9. However, there's a new Apple utility with Mavericks that makes it relatively simple, and thanks to MacForums member, tywebb13, we know how to use it. With a USB installer, you'll be able to perform a clean installation of Mavericks whenever you want and without having to download it again from the App Store. Here's how to create a bootable OS X Mavericks install drive:
+
+**Step 1:** Download the OS X Mavericks installer from the App Store, but don't run the installer yet. If you've already upgraded, you'll have to download the installer again from the App Store, since it deletes itself after the upgrade. Make sure the installer is located in the Applications folder.
+
+**Step 2:** Format a USB flash drive that's at least 8GB, as Mac OS Extended (Journaled) and keep the default name as "Untitled." Make sure that you don't have another volume with the same name. If you do, unmount the other volume or rename it temporarily. You can also name the USB flash drive to something other than "Untitled," but just make sure to change the command in Step 3 to reflect the correct name.
+![Disk Util](png/format_USB_drive.png)
+
+**Step 3:** Open a terminal window and enter the following command:
+
+```
+sudo /Applications/Install\ OS\ X\ Mavericks.app/Contents/Resources/createinstallmedia --volume /Volumes/Untitled --applicationpath /Applications/Install\ OS\ X\ Mavericks.app --nointeraction
+```
+![In Terminal](png/Create_OSX_install_media.png)
+
+Since the utility requires root privileges, you'll need to enter your password to continue. It shouldn't take more than 20 minutes or so for it to complete.
+
+That's it. You should now be able to boot with the USB installer while holding down the Option key and begin your clean install of OS X Mavericks. If the utility seems to be stuck at "Copying installer files to disk," try switching to a different USB flash drive. Another issue that seems to come up is the USB installer not appearing in Startup Manager. Again, try switching to a different USB flash drive if you have problems booting into it. If you're not having any luck with the Apple utility, you might also want give DiskMaker X (formerly Lion DiskMaker) a try.
 ### Homebrew
 
 Current error building R packages
