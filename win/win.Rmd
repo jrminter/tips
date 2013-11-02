@@ -5,6 +5,25 @@ Win32 tips
 
 Some useful tips for windows
 
+## Fixing major annoyances
+
+### No context menus in Win 7
+This has been a pain for a while on a few systems.
+Of all the tips I found on line the insteuctions
+from [here](http://sourceforge.net/p/sevenzip/discussion/45797/thread/838d57cb/) aorked
+
+```
+1. open regedit
+2. open HKEY_CLASSES_ROOT
+3. open *
+4. open shellex
+5. open right click on ContextMenuHandlers and go to permissions
+6. click on Advanced
+7. check "Replace all child objects permissions with inheritable permissions form this object"
+8. hit OK a few times
+9. try to right click on a file and see if it shows up.
+```
+
 ## Environment Variables
 
 A pair of useful lists from
