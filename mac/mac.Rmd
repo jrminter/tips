@@ -3,13 +3,17 @@ Mac OSX Tips
 
 [Back to Index](../README.html)
 
-# Quick
-## Lock Screen
+## Quick
+### Lock Screen
 Cntl-shift-eject keys
 
-# Startup items
-## color for desktop
-RGB: 67,105.150
+### Watch for this
+[Reports](https://discussions.apple.com/message/23505531#23505531) of battery life issue after upgrade to Mavericks. Note that [Apple](http://www.apple.com/batteries/notebooks.html) has some tips about batteries.
+
+## Startup items
+### my favorite color for desktop
+RGB: 0,34,64
+
 ## global environment variables
 If one has global environment variables to set at
 launch time and be avaible to all applications (that
@@ -25,10 +29,82 @@ Note how this uses ``csh`` syntax...
 ## Personal environment variables
 These are best set in ``.profile``
 
+## Prework for Mavericks
 
+### For a clean Install
 
-# Hardware tips
-## Eject a stuck CD/DVD
+From [Christina Warren](http://mashable.com/2013/10/23/clean-install-os-x-mavericks/) and [Ed Rhee](http://howto.cnet.com/8301-11310_39-57608836-285/how-to-create-a-bootable-os-x-mavericks-usb-install-drive/)
+
+Creating an OS X USB installer from the App Store download hasn't been very straightforward in the past, and the old methods no longer work for OS X 10.9. However, there's a new Apple utility with Mavericks that makes it relatively simple, and thanks to MacForums member, tywebb13, we know how to use it. With a USB installer, you'll be able to perform a clean installation of Mavericks whenever you want and without having to download it again from the App Store. Here's how to create a bootable OS X Mavericks install drive:
+
+**Step 1:** Download the OS X Mavericks installer from the App Store, but don't run the installer yet. If you've already upgraded, you'll have to download the installer again from the App Store, since it deletes itself after the upgrade. Make sure the installer is located in the Applications folder.
+
+**Step 2:** Format a USB flash drive that's at least 8GB, as Mac OS Extended (Journaled) and keep the default name as "Untitled." Make sure that you don't have another volume with the same name. If you do, unmount the other volume or rename it temporarily. You can also name the USB flash drive to something other than "Untitled," but just make sure to change the command in Step 3 to reflect the correct name.
+![Disk Util](png/format_USB_drive.png)
+
+**Step 3:** Open a terminal window and enter the following command:
+
+```
+sudo /Applications/Install\ OS\ X\ Mavericks.app/Contents/Resources/createinstallmedia --volume /Volumes/Untitled --applicationpath /Applications/Install\ OS\ X\ Mavericks.app --nointeraction
+```
+![In Terminal](png/Create_OSX_install_media.png)
+
+Since the utility requires root privileges, you'll need to enter your password to continue. It shouldn't take more than 20 minutes or so for it to complete.
+
+That's it. You should now be able to boot with the USB installer while holding down the Option key and begin your clean install of OS X Mavericks. If the utility seems to be stuck at "Copying installer files to disk," try switching to a different USB flash drive. Another issue that seems to come up is the USB installer not appearing in Startup Manager. Again, try switching to a different USB flash drive if you have problems booting into it. If you're not having any luck with the Apple utility, you might also want give DiskMaker X (formerly Lion DiskMaker) a try.
+### Homebrew
+
+Current error building R packages
+
+A hint from [StackOverflow](http://stackoverflow.com/questions/19533220/cannot-install-r-package-from-source-in-mac-osx-maverick) fixed the problem!!!
+
+Edit ``Makeconf`` in  ``/Library/Frameworks/R.framework/Resources/etc``
+
+set
+
+```
+CC=clang
+CXX=clang++
+```
+
+Error described below:
+
+It uses something like:
+
+```
+llvm-gcc-4.2 -arch x86_64 -std=gnu99 -I/Library/Frameworks/R.framework/Resources/include -DNDEBUG  -I/usr/local/include    -fPIC  -mtune=core2 -g -O2  -c spectrum.c -o spectrum.o
+```
+
+Which produces this error
+
+```
+make: llvm-gcc-4.2: No such file or directory
+```
+
+This seemed to work for me until I updated homebrew...
+From [John Bohn](http://jjbohn.info/blog/2013/10/02/fixing-homebrew-on-mac-osx-mavericks/)
+
+I've had lots of problems with homebrew since upgrading to Mavericks.
+The same problems also existed when trying to ``rbenv install`` and
+really anything else that compiles. The root cause of the issue ended
+up being a conflict Mountain Lion Command Line Tools and the ones
+provided by Maverick.
+
+There was an easy solution however. By running ``xcode-select``
+(a tool provided to change the path to the current active developer
+directory) it will fix the issue.
+
+Specifically, run this from your terminal:
+
+```
+xcode-select --install
+```
+
+This will bring up a dialog to install the Command Line Tools
+(which you will have to type in your password) and will fix the problem.
+
+## Hardware tips
+### Eject a stuck CD/DVD
 1. Restart the computer. If necessary, use the reset/interrupt
 button.
 2. Immediately after the system startup tone, press and

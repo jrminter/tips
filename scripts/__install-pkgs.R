@@ -3,6 +3,7 @@ str.cran.repo <- 'http://cran.revolutionanalytics.com/'
 str.lib <- .Library
 
 source("http://bioconductor.org/biocLite.R")
+biocLite("BiocUpgrade")
 
 install_new<-function(mypkg){
   if (mypkg %in% installed.packages()){
@@ -56,11 +57,15 @@ update.packages(ask=FALSE, checkBuilt = TRUE)
 # install_new('RMySQL')
 # install_new('RExcel')
 
+install_new_bioconductor("BiocStyle")
 install_new_bioconductor("RCurl")
 install_new_bioconductor("EBImage")
 install_new_bioconductor("gpls")
+install_new_bioconductor("graph")
+install_new_bioconductor("RBGL")
 
 install_new('Unicode')
+install_new('TeachingDemos')
 
 # metrology packages
 install_new('metRology')

@@ -85,6 +85,12 @@ R-Anova/figure/
 R-Anova/R-Anova.md
 R-Anova/R-Anova.html
 
+# R-bar-plots directory
+R-bar-plots/.DS_Store
+R-bar-plots/figure/
+R-bar-plots/R-bar-plots.md
+R-bar-plots/R-bar-plots.html
+
 # R-Anova directory
 R-foreach/.DS_Store
 R-foreach/figure/

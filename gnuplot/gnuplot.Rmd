@@ -22,7 +22,7 @@ compiled from several web sources. Some helpful ones:
 Use something like this
 ```
 # easy to comment out with #
-# set terminal postscript enhanced "Arial" 16
+# set terminal postscript enhanced color "Arial" 16
 # set output "200nmNiOnCu15kV.ps"
 # set terminal png
 # set terminal window
@@ -38,6 +38,15 @@ rm -rf temp.pdf
 ```
 Cropping the margins is especailly helpful for inclusion
 in $\LaTeX$ documents.
+
+### PNG
+The best png output comes via postscript. Make sure ImageMagick's
+``convert`` program is ahead of windows ``convert`` program in the
+path. The use
+
+```
+convert -density 150 -geometry 100% plt.ps plt.png
+```
 
 ## Useful DTSA Spectrum Plot hacks
 
