@@ -103,6 +103,15 @@ xcode-select --install
 This will bring up a dialog to install the Command Line Tools
 (which you will have to type in your password) and will fix the problem.
 
+### QT problem
+From [Cliff Rowley](https://github.com/mxcl/homebrew/pull/23793)
+
+```
+brew install https://raw.github.com/cliffrowley/homebrew/patched_qt/Library/Formula/qt.rb --HEAD
+```
+
+Still have issues with lib mismatch between sip, qt, and pyqt. Grrr...
+
 ## Hardware tips
 ### Eject a stuck CD/DVD
 1. Restart the computer. If necessary, use the reset/interrupt
