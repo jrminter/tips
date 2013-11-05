@@ -39,11 +39,20 @@ pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start &
 Some tips
 ```
 $ psql testdb
-mydb=# create table users(id serial, name varchar(25));
-mydb=# insert into users(name) values('john');
-mydb=# insert into users(name) values('minter');
-mydb=# select * from users;
-mydb=# \q
+testdb=# create table users(id serial, name varchar(25));
+testdb=# insert into users(name) values('john');
+testdb=# insert into users(name) values('minter');
+testdb=# select * from users;
+testdbmy=# \q
+```
+
+later
+```
+$psql testdb
+testdb=# \l
+testdb=# \d
+testdb=# \d company
+testdb=# \c testdb;
 ```
 
 ### Watch for this
