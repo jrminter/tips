@@ -7,6 +7,45 @@ Mac OSX Tips
 ### Lock Screen
 Cntl-shift-eject keys
 
+### Postgres
+[an example](http://www.mikeball.us/blog/setting-up-postgres-on-mac-osx-with-homebrew)
+
+[another example](https://gist.github.com/lxneng/741932)
+
+[lunchy](http://www.moncefbelyamani.com/how-to-install-postgresql-on-a-mac-with-homebrew-and-lunchy/)
+
+```
+lunchy start postgres
+lunchy stop postgres
+```
+
+On first install
+```
+initdb /usr/local/var/postgres
+```
+You can now start the database server using:
+```
+postgres -D /usr/local/var/postgres
+```
+or
+```
+pg_ctl -D /usr/local/var/postgres -l logfile start
+```
+i.e.
+```
+pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start &
+```
+
+Some tips
+```
+$ psql testdb
+mydb=# create table users(id serial, name varchar(25));
+mydb=# insert into users(name) values('john');
+mydb=# insert into users(name) values('minter');
+mydb=# select * from users;
+mydb=# \q
+```
+
 ### Watch for this
 [Reports](https://discussions.apple.com/message/23505531#23505531) of battery life issue after upgrade to Mavericks. Note that [Apple](http://www.apple.com/batteries/notebooks.html) has some tips about batteries.
 
