@@ -100,6 +100,16 @@ sudo /Applications/Install\ OS\ X\ Mavericks.app/Contents/Resources/createinstal
 Since the utility requires root privileges, you'll need to enter your password to continue. It shouldn't take more than 20 minutes or so for it to complete.
 
 That's it. You should now be able to boot with the USB installer while holding down the Option key and begin your clean install of OS X Mavericks. If the utility seems to be stuck at "Copying installer files to disk," try switching to a different USB flash drive. Another issue that seems to come up is the USB installer not appearing in Startup Manager. Again, try switching to a different USB flash drive if you have problems booting into it. If you're not having any luck with the Apple utility, you might also want give DiskMaker X (formerly Lion DiskMaker) a try.
+
+### C++11
+Guess there are issues. One suggestion from
+[Sebastian Raschka](http://stackoverflow.com/questions/19649421/something-odd-happened-to-c-11-in-mavericks)
+
+```
+
+clang++ -std=c++11 -stdlib=libc++
+
+```
 ### Homebrew
 
 Current error building R packages
