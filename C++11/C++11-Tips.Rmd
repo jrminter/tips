@@ -1,0 +1,29 @@
+C++11 Tips
+========================================================
+```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
+# make this an external chunk that can be included in any file
+options(width = 72)
+opts_chunk$set(message = F, error = F, warning = F, comment = NA, fig.align = 'center', dpi = 100, tidy = F, cache.path = '.cache/', fig.path = 'figure/')
+
+options(xtable.type = 'html')
+knit_hooks$set(inline = function(x) {
+  if(is.numeric(x)) {
+    round(x, getOption('digits'))
+  } else {
+    paste(as.character(x), collapse = ', ')
+  }
+})
+knit_hooks$set(plot = knitr:::hook_plot_html)
+```
+[Back to Index](../README.html)
+
+### Go Native conference
+The [Going Native 2013](http://channel9.msdn.com/Events/GoingNative/2013) Conference had some great keynotes. I enjoyed the presentations by [Bjarne Stroustrup](http://channel9.msdn.com/Events/GoingNative/2013/Opening-Keynote-Bjarne-Stroustrup) and [Herb Sutter](http://channel9.msdn.com/Events/GoingNative/2013/Keynote-Herb-Sutter-One-Cpp). Sutter had a great example of Planetary built using the Cinder lib by a self-taught programmer with a degree in sculpture. Planetary received an award at Cannes and is the first program to be archived by the Smithsonian.  
+
+### Cinder
+
+[Install on MacOSX](http://libcinder.org/docs/welcome/GitSetup.html)
+
+
+
+[Back to Index](../README.html)

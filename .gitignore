@@ -6,6 +6,12 @@ tab.tex
 Readme.md
 *.html
 
+# C++11 directory
+C++11/.DS_Store
+C++11/C++11-Tips.md
+C++11/C++11-Tips.html
+C++11/figure/
+
 # color directory
 color/.DS_Store
 color/color.md
