@@ -7,6 +7,10 @@ Mac OSX Tips
 ### Lock Screen
 Cntl-shift-eject keys
 
+### Change the login screen
+
+[osx daily](http://osxdaily.com/2013/11/04/change-login-screen-wallpaper-os-x-mavericks/)
+
 ### Postgres
 [an example](http://www.mikeball.us/blog/setting-up-postgres-on-mac-osx-with-homebrew)
 
