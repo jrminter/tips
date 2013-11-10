@@ -11,7 +11,7 @@ names <- c("C++11-Tips.Rmd", "color.Rmd", "DiffractionLimit.Rmd", "EDAX.Rmd",
            "ImageJ.Rmd", "Legacy.Rmd", "mac.Rmd", 
            "micro.Rmd", "mysql.Rmd",
            "python.Rmd","R-tips.Rmd", 
-           "R-Anova.Rmd", "R-bar-plots","R-foreach.Rmd",
+           "R-Anova.Rmd", "R-bar-plots","R-foreach.Rmd", "R-GeoSpatial.Rmd",
            "Salabim-graphics.Rmd", "Slidify.Rmd",
            "Sweave.Rmd", "tex-tips.Rmd",
            "win.Rmd","README.Rmd")
@@ -19,7 +19,7 @@ rPath <- c("C++11", "../color", "../DiffractionLimit", "../EDAX",
            "../git", "../gnuplot", "../ImageJ",
            "../legacy", "../mac","../micro", "../mysql",
            "../python", "../R",
-           "../R-Anova", "../R-bar-plots" ,"../R-foreach", 
+           "../R-Anova", "../R-bar-plots" ,"../R-foreach", "../R-GeoSpatial",
            "../Salabim", "../Slidify", "../Sweave",
            "../tex", "../win", "../")
 

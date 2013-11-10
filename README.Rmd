@@ -37,6 +37,8 @@ Topic
 
 [R-foreach](./R-Anova/R-foreach.html)
 
+[R-GeoSpatial](./R-GeoSpatial/R-GeoSpatial.html)
+
 [Salabim-Creating publication quality graphs in R](./Salabim/Salabim-graphics.html)
 
 [Slidify](./Slidify/Slidify.html)

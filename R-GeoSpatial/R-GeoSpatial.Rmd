@@ -1,0 +1,40 @@
+Tips for handling geospatial data in R
+========================================================
+```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
+# make this an external chunk that can be included in any file
+options(width = 72)
+opts_chunk$set(message = F, error = F, warning = F, comment = NA, fig.align = 'center', dpi = 100, tidy = F, cache.path = '.cache/', fig.path = 'figure/')
+
+options(xtable.type = 'html')
+knit_hooks$set(inline = function(x) {
+  if(is.numeric(x)) {
+    round(x, getOption('digits'))
+  } else {
+    paste(as.character(x), collapse = ', ')
+  }
+})
+knit_hooks$set(plot = knitr:::hook_plot_html)
+```
+[Back to Index](../README.html)
+
+
+### Plotting on Google Maps
+
+[Digg Data](http://diggdata.in/post/51396519384/plotting-geo-spatial-data-on-google-maps-in-r) presents a nice example which was explained on [Stack Overflow](http://stackoverflow.com/questions/19886996/understanding-spatial-objects-in-r)
+
+Here is a reproducible  example that plots the cadmium distribution and opens in a browser window.
+
+```{r}
+library(sp)
+library(plotGoogleMaps)
+data(meuse)
+str(meuse)
+coordinates(meuse)<-~x+y
+proj4string(meuse) <- CRS('+init=epsg:28992')
+str(meuse)
+m<-plotGoogleMaps(meuse,filename='MyMap.htm', zcol='copper'
+                  , draggableMarker=FALSE, colPalette=c('#FF0000', '#FFA500', '#65ed12'))
+```
+
+
+[Back to Index](../README.html)

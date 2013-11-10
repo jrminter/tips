@@ -97,11 +97,19 @@ R-bar-plots/figure/
 R-bar-plots/R-bar-plots.md
 R-bar-plots/R-bar-plots.html
 
-# R-Anova directory
+# R-foreach directory
 R-foreach/.DS_Store
 R-foreach/figure/
 R-foreach/R-foreach.md
 R-foreach/R-foreach.html
+
+# R-GeoSpatial directory
+R-GeoSpatial/.DS_Store
+R-GeoSpatial/figure/
+R-GeoSpatial/R-GeoSpatial.md
+R-GeoSpatial/*.html
+R-GeoSpatial/*.htm
+R-GeoSpatial/Legend*.png
 
 # Salabim directory
 Salabim/.DS_Store
