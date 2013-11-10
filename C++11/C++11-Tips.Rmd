@@ -18,7 +18,7 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 [Back to Index](../README.html)
 
 ### Go Native conference
-The [Going Native 2013](http://channel9.msdn.com/Events/GoingNative/2013) Conference had some great keynotes. I enjoyed the presentations by [Bjarne Stroustrup](http://channel9.msdn.com/Events/GoingNative/2013/Opening-Keynote-Bjarne-Stroustrup) and [Herb Sutter](http://channel9.msdn.com/Events/GoingNative/2013/Keynote-Herb-Sutter-One-Cpp). Sutter had a great example of Planetary built using the Cinder lib by a self-taught programmer with a degree in sculpture. Planetary received an award at Cannes and is the first program to be archived by the Smithsonian.  
+The [Going Native 2013](http://channel9.msdn.com/Events/GoingNative/2013) Conference had some great keynotes. I enjoyed the presentations by [Bjarne Stroustrup](http://channel9.msdn.com/Events/GoingNative/2013/Opening-Keynote-Bjarne-Stroustrup) and [Herb Sutter](http://channel9.msdn.com/Events/GoingNative/2013/Keynote-Herb-Sutter-One-Cpp). Sutter had a great example of Planetary built using the Cinder lib by a self-taught programmer with a degree in sculpture. Planetary received an award at Cannes and is the first program to be archived by the [Smithsonian](http://www.smithsonianmag.com/arts-culture/smithsonian-institution/How-Does-a-Museum-Acquire-an-iPad-App-for-its-Collections-220570391.html).  
 
 ### Cinder
 
