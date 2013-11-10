@@ -17,6 +17,18 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 ```
 [Back to Index](../README.html)
 
+### Setup on MacOSX Mavericks
+
+```
+jrm-mbp [~/src/c++/play1]
+jrminter 27: cpp --version
+Apple LLVM version 5.0 (clang-500.2.79) (based on LLVM 3.3svn)
+Target: x86_64-apple-darwin13.0.0
+Thread model: posix
+```
+
+Note that I get the same result with ``cpp`` and ``clang++``.
+
 ### Go Native conference
 The [Going Native 2013](http://channel9.msdn.com/Events/GoingNative/2013) Conference had some great keynotes. I enjoyed the presentations by [Bjarne Stroustrup](http://channel9.msdn.com/Events/GoingNative/2013/Opening-Keynote-Bjarne-Stroustrup) and [Herb Sutter](http://channel9.msdn.com/Events/GoingNative/2013/Keynote-Herb-Sutter-One-Cpp). Sutter had a great example of Planetary built using the Cinder lib by a self-taught programmer with a degree in sculpture. Planetary received an award at Cannes and is the first program to be archived by the [Smithsonian](http://www.smithsonianmag.com/arts-culture/smithsonian-institution/How-Does-a-Museum-Acquire-an-iPad-App-for-its-Collections-220570391.html).  
 
@@ -24,6 +36,10 @@ The [Going Native 2013](http://channel9.msdn.com/Events/GoingNative/2013) Confer
 
 [Install on MacOSX](http://libcinder.org/docs/welcome/GitSetup.html)
 
+### Iterators
 
+A simple iterator tutorial by
+[Alex Allain](http://www.cprogramming.com/tutorial/stl/iterators.html)
+and [here](http://www.cprogramming.com/c++11/c++11-ranged-for-loop.html)
 
 [Back to Index](../README.html)
