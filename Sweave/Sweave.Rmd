@@ -8,6 +8,21 @@ They were compiled from several web sources.
 
 # xtable tips
 
+[StackOverflow](http://stackoverflow.com/questions/19846796/adding-titles-to-xtable) has a nice example.
+
+```
+library(xtable)
+Grade3 <- c("A","B","B","A","B","C","C","D","A","B","C","C","C","D","B","B","D","C","C","D")
+Grade6 <- c("A","A","A","B","B","B","B","B","C","C","A","C","C","C","D","D","D","D","D","D")
+Cohort <- table(Grade3,Grade6)
+addtorow <- list()
+addtorow$pos <- list()
+addtorow$pos[[1]] <- 0
+addtorow$pos[[2]] <- 0
+addtorow$command <- c('& \\multicolumn{4}{c}{Grade 6} \\\\\n', "Grade 3 & A & B & C & D \\\\\n")
+print(xtable(Cohort, caption = 'My Title'), caption.placement = 'top', add.to.row = addtorow, include.colnames = FALSE)
+```
+
 A simple wrapper that works... Note the renaming of columns
 and specificing digits. Rememeber there that there need to
 be ``ncol+1`` entries in the digit vector. Still need to
