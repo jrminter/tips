@@ -126,6 +126,95 @@ largeData <- read.csv("huge-file.csv",
 [Milano R net](http://www.milanor.net/blog/?p=779)
 has a nice description of the available options.
 
+
+## Colored sizeplot with ggplot2
+
+[martinsbioblogg](http://martinsbioblogg.wordpress.com/2013/11/17/using-r-coloured-sizeplot-with-ggplot2/)
+
+```{r}
+library(ggplot2)
+library(reshape2)
+data <- data.frame(x=c(0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4),
+                   y=c(0, 0, 0, 3, 1, 1, 1, 2, 2, 1, 4, 4),
+                   group=c(rep(1, 6), rep(2, 4), rep(3, 2)))
+counts <- melt(table(data[1:2]))
+colnames(counts) <- c(colnames(data)[1:2], "count")
+counts <- subset(counts, count != 0)
+counts.and.groups <- merge(counts, unique(data))
+sizeplot.colour <- qplot(x=x, y=y, size=count, colour=factor(group), data=counts.and.groups) + scale_size(range=c(5, 10))
+
+sizeplot.colour
+
+```
+
+## Least Squares and Maximum Liklihood Calibration
+[Édouard Tallent](http://quantcorner.wordpress.com/2013/11/17/least-squares-and-maximum-likelihood-estimation-calibration-with-r/)
+
+```{r}
+# Least Squares Calibration
+# Please see http://www.sitmo.com/article/calibrating-the-ornstein-uhlenbeck-model/
+
+S <- c(3, 1.76, 1.2693, 1.196, 0.9468,
+        0.9532, 0.6252, 0.8604, 1.0984,
+        1.431, 1.3019, 1.4005, 1.2686,
+        0.7147, 0.9237, 0.7297, 0.7105,
+        0.8683, 0.7406, 0.7314, 0.6232)
+n <- 20
+delta <- 0.25
+
+Sx <- sum(S[1:length(S)-1])
+Sy <- sum(S[2:length(S)])
+Sxx <- crossprod(S[1:length(S)-1], S[1:length(S)-1])
+Sxy <- crossprod(S[1:length(S)-1], S[2:length(S)])
+Syy <- crossprod(S[2:length(S)], S[2:length(S)])
+
+a  <- (n*Sxy - Sx * Sy ) / ( n * Sxx - Sx^2 )
+b  <- (Sy - a * Sx ) / n
+sd <- sqrt((n * Syy - Sy^2 - a * (n * Sxy - Sx * Sy)) / (n * (n-2)))
+
+lambda <- -log(a)/delta
+mu <- b/(1-a)
+sigma <- sd * sqrt( -2*log(a)/delta/(1-a^2))
+
+res <- c(lambda, mu, sigma)
+names(res) <- c("lambda", "mu", "sigma")
+
+res
+
+```
+
+
+```{r}
+# Maximum Likelihood Calibration
+# PLease, see http://www.sitmo.com/article/calibrating-the-ornstein-uhlenbeck-model/
+
+S <- c(3, 1.76, 1.2693, 1.196, 0.9468,
+        0.9532, 0.6252, 0.8604, 1.0984,
+        1.431, 1.3019, 1.4005, 1.2686,
+        0.7147, 0.9237, 0.7297, 0.7105,
+        0.8683, 0.7406, 0.7314, 0.6232)
+n <- 20
+delta <- 0.25
+
+Sx <- sum(S[1:length(S)-1])
+Sy <- sum(S[2:length(S)])
+Sxx <- crossprod(S[1:length(S)-1], S[1:length(S)-1])
+Sxy <- crossprod(S[1:length(S)-1], S[2:length(S)])
+Syy <- crossprod(S[2:length(S)], S[2:length(S)])
+
+mu  <- (Sy * Sxx - Sx * Sxy) / (n* (Sxx - Sxy) - (Sx^2 - Sx*Sy) )
+lambda <- -log((Sxy - mu * Sx - mu * Sy + n * mu^2) /   (Sxx - 2 * mu * Sx + n * mu^2)) / delta
+a <- exp(-lambda*delta)
+sigmah2 <- (Syy - 2 * a * Sxy + a^2 * Sxx - 2 * mu * (1-a) * (Sy - a * Sx) + n * mu^2 * (1 - a)^2)/n
+sigma <- sqrt(sigmah2 * 2 * lambda / (1 - a^2))
+
+res <- c(lambda, mu, sigma)
+names(res) <- c("lambda", "mu", "sigma")
+
+res
+```
+
+
 # Mathematical annotation
 
 ## Resources
