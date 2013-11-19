@@ -5,6 +5,16 @@ Win32 tips
 
 Some useful tips for windows
 
+## Re-assigning drive letters
+
+From [superuser.com](http://superuser.com/questions/70295/force-a-usb-device-to-use-a-certain-drive-letter?rq=1)
+
+1. Start | Control Panel | Administrative Tools | Computer Management
+2. Click on "Disk Management"
+3. Select the USB drive in the list
+4. Right-click and "Change Drive Letters and Paths..."
+5. Assign a different, unused drive letter.
+
 ## Fixing major annoyances
 
 ### No context menus in Win 7
