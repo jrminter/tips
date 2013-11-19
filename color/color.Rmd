@@ -37,13 +37,15 @@ Resources
 
 ## My favorite desktop background
 
-I like ``RGB(0,34,64)`` which is ``#002240``
+I like ``RGB(0,34,64)`` which is ``#002240``. Note that my favorite
+light yellow background for analySIS scale bars is ``RGB(255,255,220)``
+which is ``#FFFFDC`` 
 
 ```{r,fig.height=1, fig.width=1}
-pal <- "#002240"
+pal <- c("#002240", "#FFFFDC")
 std.mar <- par()$mar
 par(mar = rep(0, 4)) 
-image(matrix(1:1), col = pal, axes = FALSE)
+image(matrix(1:2), col = pal, axes = FALSE)
 par(mar=std.mar)
 ```
 
