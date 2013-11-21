@@ -5,6 +5,16 @@ Win32 tips
 
 Some useful tips for windows
 
+## Poster printing
+
+To use the poster printer in the 8th floor site office
+
+1. **Queue:** ``\\rocps003\PLT4022``
+2. Works well with Adobe Reader. Go to ``page setup``
+3. **Paper Choice** ``Oversize B0(JIS)``
+4. **Paper Source:** Check before use. Typically ``Roll 1`` is satin, ``Roll 2`` is glossy.
+5. Make sure you choose best quality - it is slow; typucally takes 20 min for a typical poster.
+
 ## Re-assigning drive letters
 
 From [superuser.com](http://superuser.com/questions/70295/force-a-usb-device-to-use-a-certain-drive-letter?rq=1)
