@@ -119,6 +119,12 @@ Salabim/Salabim-graphics.html
 Salabim/figure/
 Salabim/wc5/
 
+# shell directory
+shell/.DS_Store
+shell/shell-tips.md
+shell/shell-tips.html
+shell/figure/
+
 # Slidify directory
 Slidify/.DS_Store
 Slidify/Slidify.md

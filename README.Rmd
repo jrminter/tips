@@ -43,6 +43,8 @@ Topic
 
 [Slidify](./Slidify/Slidify.html)
 
+[shell](./shell/shell-tips.html)
+
 [Sweave](./Sweave/Sweave.html)
 
 [TeX](./tex/tex-tips.html)
