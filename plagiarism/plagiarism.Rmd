@@ -1,0 +1,39 @@
+Plagiarism
+============================================================================
+
+```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
+# make this an external chunk that can be included in any file
+options(width = 72)
+opts_chunk$set(message = F, error = F, warning = F, comment = NA, fig.align = 'center', dpi = 100, tidy = F, cache.path = '.cache/', fig.path = 'figure/')
+
+options(xtable.type = 'html')
+knit_hooks$set(inline = function(x) {
+  if(is.numeric(x)) {
+    round(x, getOption('digits'))
+  } else {
+    paste(as.character(x), collapse = ', ')
+  }
+})
+knit_hooks$set(plot = knitr:::hook_plot_html)
+```
+[Back to Index](../README.html)
+
+Some helpful hints from [Jeff Gissing](http://jeffgissing.com/2013/11/28/plagiarism/) in response to a nasty situation with Mark Driscoll and Janet Mefferd detailed [here](http://jonathanmerritt.religionnews.com/2013/11/27/mark-driscoll-silent-amid-mounting-allegations-of-plagiarism/).
+
+I would note that the allegations would be considered plagiarism, at least by [JHU](http://advanced.jhu.edu/current-students/policies-2/notice-on-plagiarism-2/) who refer students to plagiarism.org - a site that seems to have expired.
+
+
+
+How then can you avoid plagiarism in your writing, whether that content is received aurally or visually:
+
+1. **Footnote. Footnote. Footnote.** If you’re blogging do your best to link to the original source if you’re quoting it. If you can’t find it, say so. If you’re writing a paper or book chapter, make sure you footnote. My rule of thumb here is: if in doubt, footnote. In my academic writing, which I haven’t done much of lately, my rule of thumb was that the number of citations should be roughly twice to three times the number of pages (excluding introduction and conclusion) in the document.
+
+2. **If you’re delivering a sermon and you directly quote someone, you must state that you’re doing so.** For this reason, I suggest not having more than one to two direct quotes in a sermon. Use them sparingly because the value of the quote has to far exceed the cost of stating "Charles Williams states…."
+
+3. **Always have down time between reading/research and writing.** Some of you won’t struggle with this, but I find that if I read a chapter of a book or an article on a topic I’m researching, and then immediately try to incorporate that into my article I will disproportionately be influenced by that research. When you’re really concentrating on understanding the depths of another’s argument and even interacting with in a mental conversation or sparring match, I find it takes some time before I’m ready to integrate these new insights into my writing with the appropriate degree of differentiation.
+
+4. **Don’t outsource research. Period.** My advice is try to avoid outsourcing research, especially if you’re a pastor. If you’re a writer or academic then it’s more justifiable. Remember, if you outsource research then you’re also outsourcing your integrity and your reputation so be sure you trust your assistant and do your due diligence (i.e., double check).
+
+5. **Remember, you only get one chance.** Somehow I doubt that Driscoll will do what he’s told others to do and quit his ministry over this. However, his reputation has taken a hit and for a lot of people what he’s alleged to have done will be seen as one more reason to deride the Christian faith.
+
+[Back to Index](../README.html)

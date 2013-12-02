@@ -27,6 +27,8 @@ Topic
 
 [MySQL](./mysql/mysql.html)
 
+[plagiarism](./plagiarism/plagiarism.html)
+
 [python](./python/python.html)
 
 [R](./R/R-tips.html)

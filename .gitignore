@@ -72,6 +72,12 @@ mysql/mysql.md
 mysql/mysql.html
 mysql/figure/
 
+# plagiarism directory
+plagiarism/.DS_Store
+plagiarism/plagiarism.md
+plagiarism/plagiarism.html
+plagiarism/figure/
+
 # python directory
 python/.DS_Store
 python/python.md
