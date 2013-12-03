@@ -21,6 +21,8 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 Version of 2013-09-13
 
+[Google](http://google-styleguide.googlecode.com/svn/trunk/Rguide.xml) has a nice R style guide.
+
 R can be **really** frustrating at time. These are some
 tips on matters that made me go *hmmm...*
 
