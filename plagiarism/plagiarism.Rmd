@@ -20,7 +20,9 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 Some helpful hints from [Jeff Gissing](http://jeffgissing.com/2013/11/28/plagiarism/) in response to a nasty situation with Mark Driscoll and Janet Mefferd detailed [here](http://jonathanmerritt.religionnews.com/2013/11/27/mark-driscoll-silent-amid-mounting-allegations-of-plagiarism/).
 
-I would note that the allegations would be considered plagiarism, at least by [JHU](http://advanced.jhu.edu/current-students/policies-2/notice-on-plagiarism-2/) who refer students to plagiarism.org - a site that seems to have expired.
+I would note that the allegations would be considered plagiarism, at least by [Harvard](√) and [JHU](http://advanced.jhu.edu/current-students/policies-2/notice-on-plagiarism-2/) who refer students to [plagiarism.org](http://www.plagiarism.org/).
+
+
 
 
 
