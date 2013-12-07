@@ -17,7 +17,7 @@ Some useful tips for windows
 
 ## Enabling cut/paste w mouse from cmd window
 
-[MS Technet](http://technet.microsoft.com/en-us/magazine/ff758104.aspx) notes that one can enable copy/paste with the mouse by enabling ``QuickEdit Mode`` in the default command window properties.
+[MS Technet](http://technet.microsoft.com/en-us/magazine/ff758104.aspx) notes that one can enable copy/paste with the mouse by enabling ``QuickEdit Mode`` in the default command window properties. See also [howto geek](http://www.howtogeek.com/howto/windows-vista/copy-to-the-clipboard-from-the-windows-command-prompt/)
 
 ## Poster printing
 
