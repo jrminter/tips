@@ -13,7 +13,7 @@ Some useful tips for windows
 
 3. Place shared dlls/scripts in ``C:\Apps\local``
 
-4. Install Apps like analySIS, R, texlive, etc that tou would like to play well across systems call frequently from the system path into a folder in ``C:\Apps``. Avoid spaces in path names was much as possible. Short is good!!!
+4. Install Apps like analySIS, R, texlive, etc that you would like to play well across systems call frequently from the system path into a folder in ``C:\Apps``. Avoid spaces in path names was much as possible. Short is good!!!
 
 ## Enabling cut/paste w mouse from cmd window
 
@@ -27,7 +27,7 @@ To use the poster printer in the 8th floor site office
 2. Works well with Adobe Reader. Go to ``page setup``
 3. **Paper Choice** ``Oversize B0(JIS)``
 4. **Paper Source:** Check before use. Typically ``Roll 1`` is satin, ``Roll 2`` is glossy.
-5. Make sure you choose best quality - it is slow; typucally takes 20 min for a typical poster.
+5. Make sure you choose best quality - it is slow; typically takes 20 min for a typical poster.
 
 ## Re-assigning drive letters
 
@@ -41,10 +41,24 @@ From [superuser.com](http://superuser.com/questions/70295/force-a-usb-device-to-
 
 ## Fixing major annoyances
 
+### Quick Launch Bar in Win7
+
+The [howto geek](http://www.howtogeek.com/howto/windows-7/add-the-quick-launch-bar-to-the-taskbar-in-windows-7/) shows us how...
+
+1. Unlock taskbar
+2. Create a new toolbar from the menu
+3. Type in the location:
+
+```
+%appdata%\Microsoft\Internet Explorer\Quick Launch
+```
+
+It will be all the way over on the right, so you’ll want to click on the dotted lines and then drag the toolbar all the way to the left (which is slightly tricky sometimes). ***Note that you’ll need to right-click and unlock the taskbar before you can move the toolbar.***
+
 ### No context menus in Win 7
 This has been a pain for a while on a few systems.
-Of all the tips I found on line the insteuctions
-from [here](http://sourceforge.net/p/sevenzip/discussion/45797/thread/838d57cb/) aorked
+Of all the tips I found on line the instructions
+from [here](http://sourceforge.net/p/sevenzip/discussion/45797/thread/838d57cb/) worked
 
 ```
 1. open regedit
@@ -103,7 +117,7 @@ Environment Variable        Path
 %SystemRoot%                C:\Windows
 %TEMP% and %TMP%            C:\Users\{username}\AppData\Local\Temp
 %USERPROFILE%               C:\Users\{username}
-%WINDIR%	C:\Windows
+%WINDIR%	                C:\Windows
 ```
 
 
