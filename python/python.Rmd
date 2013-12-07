@@ -3,9 +3,40 @@ Python tips
 
 [Back to Index](../README.html)
 
-# GUI
-## Eclipse
-### Install from PyDev
+## Building Python Extensions on Win 7 x64
+
+One must precisely match the compiler used to
+build the binaries. For Python 3.3, this is
+Visula Studio 2010.  I did a custom install of
+Visula Studio 2010 Premium to get the x64 compilers
+installed. I also installed Service Pack 1 and
+the x64 redistributable package.
+
+## Get the environment variables set
+
+The easiest way to do this is to use the ``Visual
+Studio x64 Win64 Command Prompt`` command window.
+
+### Example: compiling the 0.10 dev version of scikit-image
+
+1. I started the ``x64 Win64 Command Prompt``
+2. I downloaded the source from github.
+3. When I first tried ``python setup.py build`` it complained about missing the cython dependency.
+4. I did ``pip3 install cython`` from the command window.
+5. On my second attempt at ``python setup.py build`` I got an error complaining about undefined ``M_PI``. This should have been picked up by ``include math.h`` but was not. I placed this in the two affected files
+
+```
+#ifndef M_PI
+  #define M_PI 3.14159265358979323846
+#endif
+```
+
+This built and installed without further error messages.
+
+
+## GUI
+### Eclipse
+#### Install from PyDev
 Install from update site ``http://pydev.org/updates``
 ### Color themes
 Install from update site ``http://eclipse-color-theme.github.io/update/``
