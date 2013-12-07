@@ -5,6 +5,17 @@ Win32 tips
 
 Some useful tips for windows
 
+## A setup for Win7/WinXP compatibility
+
+1. On WinXP, create ``C:\Users\userName`` for each user. Create a ``Documents`` folder there. Change ``My Documents`` to point there. This is the default for Win7. We will use this as the user's ``%HOME%`` directory on both systems.
+
+2. Create ``git``, ``work``, and ``src`` directories in each users ``Documents``. Create a ``proj`` directory in ``work``. 
+
+3. Place shared dlls/scripts in ``C:\Apps\local``
+
+4. Install Apps like analySIS, R, texlive, etc that tou would like to play well across systems call frequently from the system path into a folder in ``C:\Apps``. Avoid spaces in path names was much as possible. Short is good!!!
+
+
 ## Poster printing
 
 To use the poster printer in the 8th floor site office
