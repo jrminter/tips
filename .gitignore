@@ -1,5 +1,6 @@
 .DS_Store
 .Rhistory
+.RData
 .cache/
 .Rproj.user
 tab.tex
