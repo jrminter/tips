@@ -5,6 +5,8 @@ format.
 
 Topic
 
+[EkAutomater](./automater/automater.html)
+
 [C++11](./C++11/C++11-Tips.html)
 
 [Color](./color/color.html)

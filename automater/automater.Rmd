@@ -1,0 +1,18 @@
+Setting up an EkAutomater AnalySIS
+========================================================
+
+[Back to Index](../README.html)
+
+The safest strategy for setting up an EkAutomater analysis is
+to start with a pretty clean system. To do this:
+
+1. **Back up your current analysis:** Go through the following directories in the Analysis root directory (``C:\Apps\analySIS\``) and copy all the saved files folder-by-folder to a folder with ``anaName-eka``. Be sure to go though these folders: ``Analyse``, ``atd``, ``Measure``, ``oper``,  and ``Process``. Delete these files from the folders in the analySIS root directory. Make a ``7zip`` archive of your old analysis and store it on the network hare.
+2. Go to the Automater ``Define Processing`` Dialog and remove all the items from the analysis in each of the tabs.
+3. Select the ``File`` tab and save this in ``_MyAnaName``. Be sure to use an underscore for the beginning of the prototype process, which will be stored in the file ``_MyAnaName.MIL`` in the process directory.
+4. Configure your processing steps from the menu. Save all of the config files as ``MyAnaName``. This will make them easy to spot and back-up from the ``Analyse``, ``atd``, ``Measure``, ``oper``,  and ``Process`` folders where the EkAutomater stores them.
+5. Once you get your prototype working, make a backup and store it to the network drive as described in step 1.
+
+
+
+[Back to Index](../README.html)
+

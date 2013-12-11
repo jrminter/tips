@@ -6,8 +6,8 @@ require(knitr)
 strGitHome <- Sys.getenv("GIT_HOME")
 strRel     <- '/tips/scripts'
 
-names <- c("C++11-Tips.Rmd", "color.Rmd", "DiffractionLimit.Rmd", "EDAX.Rmd",
-           "git-tips.Rmd","gnuplot.Rmd",
+names <- c("automater.Rmd", "C++11-Tips.Rmd", "color.Rmd", "DiffractionLimit.Rmd",
+           "EDAX.Rmd", "git-tips.Rmd","gnuplot.Rmd",
            "ImageJ.Rmd", "Legacy.Rmd", "mac.Rmd", 
            "micro.Rmd", "mysql.Rmd", "plagiarism.Rmd",
            "python.Rmd","R-tips.Rmd", 
@@ -15,8 +15,8 @@ names <- c("C++11-Tips.Rmd", "color.Rmd", "DiffractionLimit.Rmd", "EDAX.Rmd",
            "Salabim-graphics.Rmd", "shell-tips.Rmd", "Slidify.Rmd",
            "Sweave.Rmd", "tex-tips.Rmd",
            "win.Rmd","README.Rmd")
-rPath <- c("C++11", "../color", "../DiffractionLimit", "../EDAX",
-           "../git", "../gnuplot", "../ImageJ",
+rPath <- c("automater", "C++11", "../color", "../DiffractionLimit", 
+           "../EDAX", "../git", "../gnuplot", "../ImageJ",
            "../legacy", "../mac","../micro", "../mysql",
            "../plagiarism", "../python", "../R",
            "../R-Anova", "../R-bar-plots" ,"../R-foreach", "../R-GeoSpatial",

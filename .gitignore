@@ -7,6 +7,12 @@ tab.tex
 Readme.md
 *.html
 
+# automater directory
+automater/.DS_Store
+automater/automater.md
+automater/automater.html
+automater/figure/
+
 # C++11 directory
 C++11/.DS_Store
 C++11/C++11-Tips.md
