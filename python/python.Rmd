@@ -3,6 +3,9 @@ Python tips
 
 [Back to Index](../README.html)
 
+## Getting Python 2 and 3 to play well with Win7
+There was a great discussion on [StackOverflow](http://stackoverflow.com/questions/15912063/how-do-i-run-python-2-and-3-in-windows-7) that suggested the [Python launcher for Windows](http://www.python.org/dev/peps/pep-0397/) introduced in Python 3.
+
 ## Building Python Extensions on Win 7 x64
 
 One must precisely match the compiler used to
@@ -12,7 +15,7 @@ Visula Studio 2010 Premium to get the x64 compilers
 installed. I also installed Service Pack 1 and
 the x64 redistributable package.
 
-## Get the environment variables set
+### Get the environment variables set
 
 The easiest way to do this is to use the ``Visual
 Studio x64 Win64 Command Prompt`` command window.
