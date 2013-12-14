@@ -3,6 +3,8 @@ Python tips
 
 [Back to Index](../README.html)
 
+``2to3`` is a utility installed with python3 that helps convert. The documentation is [here](http://docs.python.org/2/library/2to3.html).
+
 ## Getting Python 2 and 3 to play well with Win7
 There was a great discussion on [StackOverflow](http://stackoverflow.com/questions/15912063/how-do-i-run-python-2-and-3-in-windows-7) that suggested the [Python launcher for Windows](http://www.python.org/dev/peps/pep-0397/) introduced in Python 3. The documentation is on [bitbucket](https://bitbucket.org/vinay.sajip/pylauncher/src/tip/Doc/launcher.rst).
 
