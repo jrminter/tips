@@ -138,6 +138,12 @@ shell/shell-tips.md
 shell/shell-tips.html
 shell/figure/
 
+# skimage directory
+skimage/.DS_Store
+skimage/skimage.md
+skimage/skimage.html
+skimage/figure/
+
 # Slidify directory
 Slidify/.DS_Store
 Slidify/Slidify.md

@@ -1,0 +1,31 @@
+scikits-image (skimage) tips
+========================================================
+```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
+# make this an external chunk that can be included in any file
+options(width = 72)
+opts_chunk$set(message = F, error = F, warning = F, comment = NA, fig.align = 'center', dpi = 100, tidy = F, cache.path = '.cache/', fig.path = 'figure/')
+
+options(xtable.type = 'html')
+knit_hooks$set(inline = function(x) {
+  if(is.numeric(x)) {
+    round(x, getOption('digits'))
+  } else {
+    paste(as.character(x), collapse = ', ')
+  }
+})
+knit_hooks$set(plot = knitr:::hook_plot_html)
+```
+[Back to Index](../README.html)
+
+skimage is a useful image processing package
+
+## Useful ipython notebooks
+
+[morphology](http://nbviewer.ipython.org/github/chintak/scikit-image-examples/blob/master/skimage_morphology.ipynb)    
+[another morphology](http://www.cs.put.poznan.pl/wjaskowski/pub/teaching/kck/lectures/notebooks/morphology.ipynb) and [the whole group](http://www.cs.put.poznan.pl/wjaskowski/pub/teaching/kck/lectures/notebooks/)      
+[parallel image processing](https://github.com/minrk/IPython.parallel.tutorial/blob/master/Parallel%20image%20processing.ipynb)   
+
+
+
+
+[Back to Index](../README.html)
