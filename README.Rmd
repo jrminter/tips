@@ -39,7 +39,7 @@ Topic
 
 [R-bar-plots](./R-bar-plots/R-bar-plots.html)
 
-[R-foreach](./R-Anova/R-foreach.html)
+[R-foreach](./R-foreach/R-foreach.html)
 
 [R-GeoSpatial](./R-GeoSpatial/R-GeoSpatial.html)
 
