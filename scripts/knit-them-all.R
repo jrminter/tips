@@ -18,7 +18,7 @@ names <- c("automater.Rmd", "C++11-Tips.Rmd",
            "Salabim-graphics.Rmd", "shell-tips.Rmd",
            "skimage.Rmd","Slidify.Rmd",
            "Sweave.Rmd", "tex-tips.Rmd",
-           "win.Rmd","README.Rmd")
+           "VS2010.Rmd","win.Rmd","README.Rmd")
 rPath <- c("../automater", "../C++11",
            "../color", "../DiffractionLimit", 
            "../EDAX", "../git", "../gnuplot", "../ImageJ",
@@ -28,8 +28,8 @@ rPath <- c("../automater", "../C++11",
            "../R-foreach", "../R-GeoSpatial",
            "../Salabim", "../shell", 
            "../skimage", "../Slidify",
-           "../Sweave",
-           "../tex", "../win", "../")
+           "../Sweave", "../tex",
+           "../VS2010","../win", "../")
 
 knitIt <- function(wrkPath, scrPath, theName){
   print(wrkPath)
