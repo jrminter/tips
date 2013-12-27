@@ -12,14 +12,22 @@ add a lot of size to a project.
 
 A very helpful solution from [StackOverflow](http://stackoverflow.com/questions/7706984/visual-studio-2010-c-project-remove-sdf-file)
 
-You can safely delete the .sdf file and ipch folder but you can also stop VS from putting those files in the project folder in the first place. (Useful if you have your source in a SVN or other synchronised folder, or if you store your project on a small volume like a USB stick or SSD and you don't want those large files stored in the same folder). HT Ozzah.
+> You can safely delete the .sdf file and ipch folder but you can also stop VS from putting those files in the project folder in the first place. (Useful if you have your source in a SVN or other synchronised folder, or if you store your project on a small volume like a USB stick or SSD and you don't want those large files stored in the same folder).
 
-Go to:
+> Go to:
 
 ```
 Tools -> Options -> Text Editor -> C/C++ -> Advanced
 ```
 
-In the ``Fallback Location``, set ``Always Use Fallback Location`` to ``True`` and ``Do Not Warn If Fallback Location Used`` to ``True``. In ``Fallback Location`` you can either put a path like ``C:\Temp`` or if you leave it blank then VS will use the temporary directory in your ``AppData`` folder.
+> In the ``Fallback Location``, set ``Always Use Fallback Location`` to ``True`` and ``Do Not Warn If Fallback Location Used`` to ``True``. In ``Fallback Location`` you can either put a path like ``C:\Temp`` or if you leave it blank then VS will use the temporary directory in your ``AppData`` folder.
+
+HT Ozzah.
+
+Note: another user noted:
+
+> One can actually prevent VS making these files in the first place by setting ``Tools -> Options -> Text Editor -> C/C++ -> Advanced -> Disable Database`` option to ``True``.
+  
+I prefer the temp file approach...
 
 [Back to Index](../README.html)
