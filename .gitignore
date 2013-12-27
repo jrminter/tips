@@ -165,6 +165,13 @@ tex/tex-tips.md
 tex/tex-tips.html
 tex/figure/
 
+
+# tex tips directory
+VS2010/.DS_Store
+VS2010/VS2010.md
+VS2010/VS2010.html
+VS2010/figure/
+
 # win tips directory
 win/.DS_Store
 win/win.md
