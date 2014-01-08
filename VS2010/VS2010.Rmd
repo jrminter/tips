@@ -5,6 +5,10 @@ VS 2010 Tips
 
 Some useful tips for Visual Studio 2010
 
+### Using cmake
+
+[StackOverflow](http://stackoverflow.com/questions/4219479/using-cmake-with-windows-7-visual-studio-2010-and-the-command-line)
+
 ### Reduce project size
 
 Visual Studio creates ``Intellisense`` files that
