@@ -6,6 +6,30 @@ Git tips
 These are John Minter's tips for a workflow using git. They were
 compiled from several web sources.
 
+## removing unwanted cached files
+
+From[Source.kohlerville.com](http://source.kohlerville.com/2009/02/untrack-files-in-git/)
+
+Today I learned how to untrack files that have already been added
+to a git repository. The following command will stop tracking but
+keep the file there intact. This is good for directories that have
+auto generated files every so often so everytime you do a git commit,
+you don’t have to commit a new copy of these files.
+
+```
+git rm --cached filename
+
+```
+
+For example,
+
+
+```
+git rm --cached man/*.Rd
+
+```
+
+
 ## Oops control - recovering a deleted file.
 
 Put this first because when I'm in a panic after an accidental
