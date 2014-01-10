@@ -5,6 +5,30 @@ Win32 tips
 
 Some useful tips for windows
 
+## Win7 libraries
+
+[microsoft's tutorial](http://windows.microsoft.com/en-us/windows7/include-folders-in-a-library)
+
+Libraries are a new feature in Win7 that gather content from various folders.
+
+### To include a folder in a library:
+
+1. Open the location of the folder you want to include.
+2. Right-click on the folder and select ``Include in library``'.
+3. Choose from a Library in the list or create a new one. Note that the folder is linked into the library, but remains in its original location.
+
+### To remove a folder from a library
+
+1. In the task bar, click the ``Windows Explorer`` button.
+2. Click the library in the navigation pane.
+3. Click ``locations`` at the top of the window.
+4. Click the folder you want to remove from the library and then the ``Remove`` button and then ``Ok``. The folder is unlinked from the library but remains in its original location.
+
+
+
+
+
+
 ## A setup for Win7/WinXP compatibility
 
 1. On WinXP, create ``C:\Users\userName`` for each user. Create a ``Documents`` folder there. Change ``My Documents`` to point there. This is the default for Win7. We will use this as the user's ``%HOME%`` directory on both systems.
