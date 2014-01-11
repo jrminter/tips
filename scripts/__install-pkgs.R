@@ -66,6 +66,7 @@ install_new_bioconductor("RBGL")
 
 install_new('Unicode')
 install_new('TeachingDemos')
+install_new('plotGoogleMaps')
 
 # Sweave and pandoc tools
 install_new('cacheSweave')
