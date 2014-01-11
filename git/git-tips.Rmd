@@ -6,6 +6,14 @@ Git tips
 These are John Minter's tips for a workflow using git. They were
 compiled from several web sources.
 
+## see what changed
+
+My new favorite command...
+
+```
+git whatchanged
+```
+
 ## removing unwanted cached files
 
 From[Source.kohlerville.com](http://source.kohlerville.com/2009/02/untrack-files-in-git/)
