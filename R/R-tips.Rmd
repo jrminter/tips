@@ -28,6 +28,10 @@ tips on matters that made me go *hmmm...*
 
 # Hard things to find
 
+## Web scraping
+
+Hadley Wickham recommend [selector gadget](http://selectorgadget.com/) as an aid to web scraping.
+
 ## xtable from knitr and Rmarkdown in RStudio
 This worked when using options to the R chunk
 of ` echo=FALSE, results='asis' `
