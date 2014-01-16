@@ -33,7 +33,7 @@ First, boot the SystemRescue CD, or other Linux Live CD.
 
 ![cfdisk](./png/cfdisk.png)
 
-1. Mount the windows partition. If you don’t know what 
+Mount the windows partition. If you don’t know what 
 device it is on, you can use the cfdisk command and it will 
 tell you the device. The device should look something
 like
@@ -58,7 +58,7 @@ mount -t ntfs-3g /dev/sda1 /mnt/windows
 
 ![chntpw1](./png/chntpw1.png)
 
-2. Now, to make it a little easier, go ahead and switch to the location of the Windows Sam file and other hive files.
+Now, to make it a little easier, go ahead and switch to the location of the Windows Sam file and other hive files.
 
 ```
 cd /mnt/WINDOWS/system32/config
@@ -72,7 +72,7 @@ capital ``S``**
 
 ![chntpw2-5](./png/chntpw2-5.png)
 
-3. Type ``chntpw -h`` to familiarize yourself with
+Type ``chntpw -h`` to familiarize yourself with
 the different options and usage of chntpw. If you like, you 
 can actually use ``chntpw`` by giving it the
 appropriate option, but I like to use interactive mode, 
@@ -86,7 +86,7 @@ WINDOWS, NT uses WINNT.)
 
 ![chntpw2](./png/chntpw2.png)
 
-4. Use the ``-i`` option to start chntpw in interactive 
+Use the ``-i`` option to start chntpw in interactive 
 mode and make sure to specify the name of the Windows sam 
 file, as well as any other registry hive files you want to 
 edit.
@@ -122,7 +122,7 @@ For more options, press ``?``.
 
 ![chntpw4](./png/chntpw4.png)
 
-5. Once you are done making changes, you need to exit from 
+Once you are done making changes, you need to exit from 
 the main chntpw menu and press ``Y`` to write the changes 
 or ``N`` to ignore the changes.
 
