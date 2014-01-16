@@ -8,7 +8,8 @@ if(strGitHome=="") strGitHome="~/git"
 strRel     <- '/tips/scripts'
 
 names <- c("automater.Rmd", "C++11-Tips.Rmd",
-           "color.Rmd", "DiffractionLimit.Rmd",
+           "chntpw.Rmd", "color.Rmd",
+           "DiffractionLimit.Rmd",
            "EDAX.Rmd", "git-tips.Rmd","gnuplot.Rmd",
            "ImageJ.Rmd", "Legacy.Rmd", "mac.Rmd", 
            "micro.Rmd", "mysql.Rmd", "plagiarism.Rmd",
@@ -20,7 +21,8 @@ names <- c("automater.Rmd", "C++11-Tips.Rmd",
            "Sweave.Rmd", "tex-tips.Rmd",
            "VS2010.Rmd","win.Rmd","README.Rmd")
 rPath <- c("../automater", "../C++11",
-           "../color", "../DiffractionLimit", 
+           "../chntpw", "../color",
+           "../DiffractionLimit", 
            "../EDAX", "../git", "../gnuplot", "../ImageJ",
            "../legacy", "../mac","../micro", "../mysql",
            "../plagiarism", "../python", "../R",
