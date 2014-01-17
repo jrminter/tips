@@ -57,6 +57,8 @@ Topic
 
 [TeX](./tex/tex-tips.html)
 
+[Ubuntu](./ubuntu/ubuntu.html)
+
 [Visual Studio 2010](./VS2010/VS2010.html)
 
 [Win](./win/win.html)

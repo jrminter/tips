@@ -171,6 +171,11 @@ tex/tex-tips.md
 tex/tex-tips.html
 tex/figure/
 
+# win tips directory
+ubuntu/.DS_Store
+ubuntu/ubuntu.md
+ubuntu/ubuntu.html
+ubuntu/figure/
 
 # tex tips directory
 VS2010/.DS_Store

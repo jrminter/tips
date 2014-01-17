@@ -1,0 +1,36 @@
+John Minter's Ubuntu tips
+========================================================
+```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
+# make this an external chunk that can be included in any file
+options(width = 72)
+opts_chunk$set(message = F, error = F, warning = F, comment = NA, fig.align = 'center', dpi = 100, tidy = F, cache.path = '.cache/', fig.path = 'figure/')
+
+options(xtable.type = 'html')
+knit_hooks$set(inline = function(x) {
+  if(is.numeric(x)) {
+    round(x, getOption('digits'))
+  } else {
+    paste(as.character(x), collapse = ', ')
+  }
+})
+knit_hooks$set(plot = knitr:::hook_plot_html)
+```
+
+
+[Back to Index](../README.html)
+
+## How to upgrade kernels from the command line
+
+From [Ask Ubuntu](http://askubuntu.com/questions/221/how-to-force-installation-of-kernel-updates-when-using-apt-get-upgrade)
+
+
+After a little research, what you probably want to use is:
+
+```
+aptitude safe-upgrade
+```
+which does install new kernels. You should probably prefer
+``aptitude`` in general to ``apt-get`` anyway, unless
+you specifically need something in ``apt-get``.
+
+[Back to Index](../README.html)
