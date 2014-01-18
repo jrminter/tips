@@ -14,6 +14,13 @@ My new favorite command...
 git whatchanged
 ```
 
+## git config file
+
+From [Getting Started](http://git-scm.com/book/en/Getting-Started-First-Time-Git-Setup)
+
+On Windows systems, Git looks for the ``.gitconfig`` file in the ``$HOME`` directory (``%USERPROFILE%`` in the Windows environment), which is usually  ``C:\Documents and Settings\$USER`` or ``C:\Users\$USER`` for most people, depending on version (``$USER`` is ``%USERNAME%`` in the Windows environment). It also still looks for ``/etc/gitconfig``, although it’s relative to the MSys root, which is wherever you decide to install Git on your Windows system when you run the installer.
+
+
 ## removing unwanted cached files
 
 From[Source.kohlerville.com](http://source.kohlerville.com/2009/02/untrack-files-in-git/)
