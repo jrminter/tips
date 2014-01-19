@@ -64,6 +64,7 @@ install_new_bioconductor("gpls")
 install_new_bioconductor("graph")
 install_new_bioconductor("RBGL")
 
+install_new('RODBC')
 install_new('Unicode')
 install_new('TeachingDemos')
 install_new('plotGoogleMaps')
