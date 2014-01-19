@@ -31,7 +31,7 @@ Topic
 
 [MySQL](./mysql/mysql.html)
 
-[OS Packages](./osPkgs/osPkgs.html)
+[OS Package Links](./osPkgs/osPkgs.html)
 
 [plagiarism](./plagiarism/plagiarism.html)
 
