@@ -31,6 +31,8 @@ Topic
 
 [MySQL](./mysql/mysql.html)
 
+[OS Packages](./osPkgs/osPkgs.html)
+
 [plagiarism](./plagiarism/plagiarism.html)
 
 [python](./python/python.html)

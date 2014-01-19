@@ -85,6 +85,12 @@ mysql/mysql.md
 mysql/mysql.html
 mysql/figure/
 
+# osPkgs directory
+osPkgs/.DS_Store
+osPkgs/osPkgs.md
+osPkgs/osPkgs.html
+osPkgs/figure/
+
 # plagiarism directory
 plagiarism/.DS_Store
 plagiarism/plagiarism.md
