@@ -25,7 +25,39 @@ Libraries are a new feature in Win7 that gather content from various folders.
 4. Click the folder you want to remove from the library and then the ``Remove`` button and then ``Ok``. The folder is unlinked from the library but remains in its original location.
 
 
+## Net use
+see [Technet](http://technet.microsoft.com/en-us/library/gg651155.aspx) also see [about.com](http://pcsupport.about.com/od/commandlinereference/p/net-use-command.htm)
 
+### Syntax
+
+```
+net use [{<DeviceName> | *}] [\\<ComputerName>\<ShareName>[\<volume>]] [{<Password> | *}]] [/user:[<DomainName>\]<UserName] >[/user:[<DottedDomainName>\]<UserName>] [/user: [<UserName@DottedDomainName>] [/savecred] [/smartcard] [{/delete | /persistent:{yes | no}}]
+
+net use [<DeviceName> [/home[{<Password> | *}] [/delete:{yes | no}]]
+
+net use [/persistent:{yes | no}]
+```
+
+### Example
+
+```
+net use d:\\server\share /user:Accounts\User1
+```
+
+
+Here's a slightly more complicated example that you might see in a business setting.
+
+In this net use example, I want to map my ``e:`` drive to the ``smithmark`` shared folder on ``usrsvr002``. I want to connect as another user account I have ``[/user]`` by the name of ``msmith2`` that's stored on the ``pdc01`` domain with a password of ``Ue345Ii``. I don't want to map this drive manually every time I start my computer ``[/p:yes]`` nor do I want to enter my username and password each time ``[/savecred]``.
+
+```
+net use e: \\usrsvr002\smithmark Ue345Ii /user:pdc01\msmith2 /savecred /p:yes
+```
+
+I suppose an appropriate final example of net use would be the removal ``[/delete]`` of a currently mapped drive, in this case ``p:``.
+
+```
+net use p: /delete
+```
 
 
 
