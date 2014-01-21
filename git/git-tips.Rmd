@@ -45,7 +45,7 @@ git rm --cached man/*.Rd
 ```
 
 ## Git extensions for VS
-[source forge](√http://sourceforge.net/projects/gitextensions/)
+[source forge](http://sourceforge.net/projects/gitextensions/)
 
 ## Oops control - recovering a deleted file.
 
