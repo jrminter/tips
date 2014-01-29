@@ -28,6 +28,18 @@ tips on matters that made me go *hmmm...*
 
 # Hard things to find
 
+## Data corruption in R 3.0.2 when using read.csv
+
+From [John Myles White](http://www.johnmyleswhite.com/notebook/2014/01/29/data-corruption-in-r-3-0-2-when-using-read-csv/) 
+
+He notes:
+
+> It may be old news to some, but I just recently discovered that the automatic type inference system that R uses when parsing CSV files assumes that data sets will never contain 64-bit integer values.
+
+> Specially, if an integer value read from a CSV file is too large to fit in a 32-bit integer field without overflow, the column of data that contains that value will be automatically converted to floating point. This conversion will take place without any warnings, even though it may lead to data corruption.
+
+> The reason that the automatic conversion of 64-bit integer-valued data to floating point is problematic is that floating point numbers lack sufficient precision to exactly represent the full range of 64-bit integer values. As a consequence of the lower precision of floating point numbers, two unequal integer values in the input file may be converted to two equal floating point values in the data.frame R uses to represent that data. Subsequent analysis in R will therefore treat unequal values as if they were equal, corrupting any downstream analysis that assumes that the equality predicate can be trusted.
+
 ## Web scraping
 
 Hadley Wickham recommend [selector gadget](http://selectorgadget.com/) as an aid to web scraping.
