@@ -14,6 +14,21 @@ My new favorite command...
 git whatchanged
 ```
 
+### get rid of obsolete, merged branches
+
+```
+git branch --merged | xargs git branch -d
+```
+
+### local cherry picking
+```
+git checkout <OTHER_BRANCH> -- path/to/file
+```
+
+## more nice tip resources
+
+[git tips from the trenches](https://ochronus.com/git-tips-from-the-trenches/)
+
 ## git config file
 
 From [Getting Started](http://git-scm.com/book/en/Getting-Started-First-Time-Git-Setup)
