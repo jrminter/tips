@@ -1,0 +1,23 @@
+Research tips
+========================================================
+
+[Back to Index](../README.html)
+
+These are tips on effective scientific research collected by John Minter from selected web sources.
+
+### William Shockley on what makes an effective researcher
+[Brian McGill](http://dynamicecology.wordpress.com/2014/01/23/william-shockley-on-what-makes-a-person-write-a-lot-of-papers-and-the-superstar-researcher-system/) has a nice summary on Shockley's view of research. He used publication as a metric and noted the factors that were required:
+
+1. ability to think of a good problem
+2. ability to work on it
+3. ability to recognize a worthwhile result
+4. ability to make a decision as to when to stop and write up the results
+5. ability to write adequately
+6. ability to profit constructively from criticism
+7. determination to submit the paper to a journal
+8. persistence in making changes (if necessary as a result of journal action).
+
+Shockley then posits, what if the odds of a person clearing hurdle ``i`` from the list of 8 above is $p_i$? Then the rate of publishing papers for this individual should be proportional to $p_{1}p_{2}p_{3}\dots p_{8}$. This gives the multiplication of random variables needed to explain the lognormal distribution of productivity (Shockley goes on to note that if one person is 50% above average in each of the 8 areas then they will be 2460% more productive than average at the total process).
+
+
+[Back to Index](../README.html)

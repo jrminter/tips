@@ -47,6 +47,8 @@ Topic
 
 [R-GeoSpatial](./R-GeoSpatial/R-GeoSpatial.html)
 
+[Research](./research/research.html)
+
 [Salabim-Creating publication quality graphs in R](./Salabim/Salabim-graphics.html)
 
 [skimage](./skimage/skimage.html)

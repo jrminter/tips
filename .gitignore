@@ -136,6 +136,13 @@ R-GeoSpatial/*.html
 R-GeoSpatial/*.htm
 R-GeoSpatial/Legend*.png
 
+# research directory
+research/.DS_Store
+research/figure/
+research/*.md
+research/*.html
+research/*.htm
+
 # Salabim directory
 Salabim/.DS_Store
 Salabim/DE*
