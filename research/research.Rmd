@@ -19,5 +19,7 @@ These are tips on effective scientific research collected by John Minter from se
 
 Shockley then posits, what if the odds of a person clearing hurdle ``i`` from the list of 8 above is $p_i$? Then the rate of publishing papers for this individual should be proportional to $p_{1}p_{2}p_{3}\dots p_{8}$. This gives the multiplication of random variables needed to explain the lognormal distribution of productivity (Shockley goes on to note that if one person is 50% above average in each of the 8 areas then they will be 2460% more productive than average at the total process).
 
+Another conclusion is that if you are really bad at just one factor ($p_{i}$ close to zero for just one $i$), it sinks your overall productivity. This is innate in the multiplicative model. This is a solid rationale for working on one's weakest required skill before enhancing one's best requirement - or at least collaborating with those skills who complement yours.
+
 
 [Back to Index](../README.html)

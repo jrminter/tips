@@ -122,6 +122,12 @@ R-bar-plots/figure/
 R-bar-plots/R-bar-plots.md
 R-bar-plots/R-bar-plots.html
 
+# R-boxplots directory
+R-boxplots/.DS_Store
+R-boxplots/figure/
+R-boxplots/R-boxplots.md
+R-boxplots/R-boxplots.html
+
 # R-foreach directory
 R-foreach/.DS_Store
 R-foreach/figure/

@@ -43,6 +43,8 @@ Topic
 
 [R-bar-plots](./R-bar-plots/R-bar-plots.html)
 
+[R-boxplots](./R-boxplots/R-boxplots.html)
+
 [R-foreach](./R-foreach/R-foreach.html)
 
 [R-GeoSpatial](./R-GeoSpatial/R-GeoSpatial.html)

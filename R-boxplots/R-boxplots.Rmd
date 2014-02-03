@@ -1,0 +1,58 @@
+Box plots in R
+==============================
+```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
+# make this an external chunk that can be included in any file
+options(width = 72)
+opts_chunk$set(message = F, error = F, warning = F, comment = NA, fig.align = 'center', dpi = 100, tidy = F, cache.path = '.cache/', fig.path = 'figure/')
+
+options(xtable.type = 'html')
+knit_hooks$set(inline = function(x) {
+  if(is.numeric(x)) {
+    round(x, getOption('digits'))
+  } else {
+    paste(as.character(x), collapse = ', ')
+  }
+})
+knit_hooks$set(plot = knitr:::hook_plot_html)
+```
+
+[Back to Index](../README.html)
+
+### A nice ggplot example
+
+From [statistic-on-air](http://statistic-on-air.blogspot.com/2014/02/boxplot-with-mean-and-standard.html)
+
+```{r, fig.width=6}
+library(ggplot2)
+ 
+# create fictitious data
+a <- runif(10)
+b <- runif(12)
+c <- runif(7)
+d <- runif(15)
+ 
+# data groups
+group <- factor(rep(1:4, c(10, 12, 7, 15)))
+ 
+# dataframe
+mydata <- data.frame(c(a,b,c,d), group)
+names(mydata) <- c("value", "group")
+ 
+# function for computing mean, DS, max and min values
+min.mean.sd.max <- function(x) {
+  r <- c(min(x), mean(x) - sd(x), mean(x), mean(x) + sd(x), max(x))
+  names(r) <- c("ymin", "lower", "middle", "upper", "ymax")
+  r
+}
+ 
+# ggplot code
+p1 <- ggplot(aes(y = value, x = factor(group)), data = mydata)
+p1 <- p1 + stat_summary(fun.data = min.mean.sd.max, geom = "boxplot") + geom_jitter(position=position_jitter(width=.2), size=3) + ggtitle("Boxplot") + xlab("Group") + ylab("Value")
+
+p1
+
+```
+
+
+
+[Back to Index](../README.html)
