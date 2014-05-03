@@ -31,7 +31,7 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 2. Once the, image is acquired, select spot, line or matrix type from Location menu. Click on the EDAX image area to select the spot, line or matrix locations    
 ![menu](img/loca-menu.png)   
-desired for analysis, then click on the !['S'](img/s.png) toolbar button to save each location. 
+desired for analysis, then click on the !['S'](img/s.png) toolbar button to save each location.
 
 3. Click on Table under the Location menu. The location table will display all selected X, Y coordinate data. At this point you can edit the number of points for the line (No-X) or matrix (No-X and No-Y).
 
@@ -41,7 +41,7 @@ ve defined on the image.
 5. Select live time preset under the Setup, Preset & Mem..., say 20 seconds, for analysis.
 
 6. Select Setup, Auto Output:   
-![menu](img/mp-out-menu.png) Choose Live X-ray, Save spectra, and Concentrations Calc. Input the desired filename for the spectra e.g. "GABI100", you may need to use the File button to specify this. Click on OK.
+![menu](img/mp-out-menu.png) Choose Live X-ray, Save spectra, and Concentrations Calc. Input the desired filename for the spectra e.g. ``GABI001``, you may need to use the File button to specify this. Note that we are limited by the MS-DOS "8.3" name/extension convention - and the last three characters in the name need to be ``001``. Click on OK.
 
 7. Click on Auto, and View Parameters, take note that the estimated runtime in the automation section has a time specified, otherwise it will display N/A or 0.0 for the Est.Time, and the autorun will not execute.
 
@@ -55,13 +55,14 @@ To view the quantitative results graphically in SEM / TEM Multi-point Analysis, 
 ### Setting up a line profile in MultiPoint
 
 #### Setting a P1-P2 Line
-- Click on the P1-P1 Line menu
-- Click on the P1 point in the image
-- Click on the S in the tool bar area to save the P1 point to the location table
-- Click on the P2 point in the image
+- ***First*** click on any other method in the menu to reset the choice. Failure to do this causes a lot of annoyance...
+- Click on the P1-P1 Line menu.
+- Click on the P1 point in the image.
+- Click on the S in the tool bar area to save the P1 point to the location table.
+- Click on the P2 point in the image.
 - Click on the S in the toolbar area to save the P2 point.
 - Open the location table and verify the endpoints. Change the number of steps from 10 if desired.
-- Verify by ...
+- Verify by having it draw all loctions on the image.
 
 ## Fixes for annoying issues
 
