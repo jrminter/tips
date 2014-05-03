@@ -1,6 +1,8 @@
 Creating publication quality graphs in R
 ========================================================
-
+```{r,echo=FALSE}
+library(knitr)
+```
 [Back to Index](../README.html)
 
 ![](http://i.creativecommons.org/l/by-sa/3.0/88x31.png)

@@ -1,5 +1,8 @@
 Sweave Tips
 ==================================================================
+```{r, echo=FALSE}
+library(knitr)
+```
 
 [Back to Index](../README.html)
 

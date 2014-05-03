@@ -2,6 +2,7 @@ Diffraction Limit
 ========================================================
 ```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
 # make this an external chunk that can be included in any file
+library(knitr)
 options(width = 72)
 opts_chunk$set(message = F, error = F, warning = F, comment = NA, fig.align = 'center', dpi = 100, tidy = F, cache.path = '.cache/', fig.path = 'figure/')
 

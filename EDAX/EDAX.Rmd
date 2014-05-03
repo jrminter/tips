@@ -2,6 +2,7 @@ EDAX tips
 ========================================================
 ```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
 # make this an external chunk that can be included in any file
+library(knitr)
 options(width = 72)
 opts_chunk$set(message = F, error = F, warning = F, comment = NA, fig.align = 'center', dpi = 100, tidy = F, cache.path = '.cache/', fig.path = 'figure/')
 
@@ -62,7 +63,7 @@ To view the quantitative results graphically in SEM / TEM Multi-point Analysis, 
 - Open the location table and verify the endpoints. Change the number of steps from 10 if desired.
 - Verify by ...
 
-## Fixes for annying issues
+## Fixes for annoying issues
 
 ### Menu bar issues on WinXP
 Applications menu bar is partially obscured by the Genesis multi-tab

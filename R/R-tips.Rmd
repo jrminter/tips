@@ -1,9 +1,10 @@
 John Minter's R tips
 ========================================================
 ```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
+library(knitr)
 # make this an external chunk that can be included in any file
 options(width = 72)
-opts_chunk$set(message = F, error = F, warning = F, comment = NA, fig.align = 'center', dpi = 100, tidy = F, cache.path = '.cache/', fig.path = 'figure/')
+# opts_chunk$set(message = F, error = F, warning = F, comment = NA, fig.align = 'center', dpi = 100, tidy = F, cache.path = '.cache/', fig.path = 'figure/')
 
 options(xtable.type = 'html')
 knit_hooks$set(inline = function(x) {
@@ -27,6 +28,16 @@ R can be **really** frustrating at time. These are some
 tips on matters that made me go *hmmm...*
 
 # Hard things to find
+
+## Crash when using knitr
+Make certain that
+
+```{r}
+library(knitr)
+```
+
+is in the first chunk calling R
+
 
 ## Data corruption in R 3.0.2 when using read.csv
 
@@ -144,6 +155,102 @@ largeData <- read.csv("huge-file.csv",
 [Milano R net](http://www.milanor.net/blog/?p=779)
 has a nice description of the available options.
 
+## Reading large data tables
+
+[Stack Overflow](http://stackoverflow.com/questions/1727772/quickly-reading-very-large-tables-as-dataframes-in-r)
+has a nice example highligting fread
+
+```
+library(data.table)
+# Demo speedup
+n=1e6
+DT = data.table( a=sample(1:1000,n,replace=TRUE),
+                 b=sample(1:1000,n,replace=TRUE),
+                 c=rnorm(n),
+                 d=sample(c("foo","bar","baz","qux","quux"),n,replace=TRUE),
+                 e=rnorm(n),
+                 f=sample(1:1000,n,replace=TRUE) )
+DT[2,b:=NA_integer_]
+DT[4,c:=NA_real_]
+DT[3,d:=NA_character_]
+DT[5,d:=""]
+DT[2,e:=+Inf]
+DT[3,e:=-Inf]
+standard read.table
+write.table(DT,"test.csv",sep=",",row.names=FALSE,quote=FALSE)
+cat("File size (MB):",round(file.info("test.csv")$size/1024^2),"\n")    
+## File size (MB): 51 
+
+system.time(DF1 <- read.csv("test.csv",stringsAsFactors=FALSE))        
+##    user  system elapsed 
+##   24.71    0.15   25.42
+# second run will be faster
+system.time(DF1 <- read.csv("test.csv",stringsAsFactors=FALSE))        
+##    user  system elapsed 
+##   17.85    0.07   17.98
+```
+
+### optimized read.table
+```
+system.time(DF2 <- read.table("test.csv",header=TRUE,sep=",",quote="",  
+                          stringsAsFactors=FALSE,comment.char="",nrows=n,                   
+                          colClasses=c("integer","integer","numeric",                        
+                                       "character","numeric","integer")))
+
+
+##    user  system elapsed 
+##   10.20    0.03   10.32
+```
+
+### fread
+```
+require(data.table)
+system.time(DT <- fread("test.csv"))                                  
+ ##    user  system elapsed 
+##    3.12    0.01    3.22
+```
+
+### sqldf
+```
+require(sqldf)
+
+system.time(SQLDF <- read.csv.sql("test.csv",dbname=NULL))             
+
+##    user  system elapsed 
+##   12.49    0.09   12.69
+```
+
+### sqldf as on SO
+```
+f <- file("test.csv")
+system.time(SQLf <- sqldf("select * from f", dbname = tempfile(), file.format = list(header = T, row.names = F)))
+
+##    user  system elapsed 
+##   10.21    0.47   10.73
+```
+
+### ff / ffdf
+
+```
+require(ff)
+
+system.time(FFDF <- read.csv.ffdf(file="test.csv",nrows=n))   
+##    user  system elapsed 
+##   10.85    0.10   10.99
+```
+
+### summary
+
+```
+##    user  system elapsed  Method
+##   24.71    0.15   25.42  read.csv (first time)
+##   17.85    0.07   17.98  read.csv (second time)
+##   10.20    0.03   10.32  Optimized read.table
+##    3.12    0.01    3.22  fread
+##   12.49    0.09   12.69  sqldf
+##   10.21    0.47   10.73  sqldf on SO
+##   10.85    0.10   10.99  ffdf
+```
 
 ## Colored sizeplot with ggplot2
 
