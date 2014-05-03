@@ -68,6 +68,7 @@ install_new('RODBC')
 install_new('Unicode')
 install_new('TeachingDemos')
 install_new('plotGoogleMaps')
+install_new('tikzDevice') # now back on CRAN...
 
 # Sweave and pandoc tools
 install_new('cacheSweave')
