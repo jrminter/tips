@@ -27,9 +27,9 @@ Version of 2013-09-13
 R can be **really** frustrating at time. These are some
 tips on matters that made me go *hmmm...*
 
-# Hard things to find
+## Hard things to find
 
-## Crash when using knitr
+### Crash when using knitr
 Make certain that
 
 ```{r}
@@ -39,7 +39,7 @@ library(knitr)
 is in the first chunk calling R
 
 
-## Data corruption in R 3.0.2 when using read.csv
+### Data corruption in R 3.0.2 when using read.csv
 
 From [John Myles White](http://www.johnmyleswhite.com/notebook/2014/01/29/data-corruption-in-r-3-0-2-when-using-read-csv/) 
 
@@ -51,11 +51,11 @@ He notes:
 
 > The reason that the automatic conversion of 64-bit integer-valued data to floating point is problematic is that floating point numbers lack sufficient precision to exactly represent the full range of 64-bit integer values. As a consequence of the lower precision of floating point numbers, two unequal integer values in the input file may be converted to two equal floating point values in the data.frame R uses to represent that data. Subsequent analysis in R will therefore treat unequal values as if they were equal, corrupting any downstream analysis that assumes that the equality predicate can be trusted.
 
-## Web scraping
+### Web scraping
 
 Hadley Wickham recommend [selector gadget](http://selectorgadget.com/) as an aid to web scraping.
 
-## xtable from knitr and Rmarkdown in RStudio
+### xtable from knitr and Rmarkdown in RStudio
 This worked when using options to the R chunk
 of ` echo=FALSE, results='asis' `
 
@@ -69,7 +69,7 @@ xt <- xtable(slope, digits=dig, display=disp)
 print(xt, type='html')
 ```
 
-## Using custom environment variables
+### Using custom environment variables
 Custom environment variables are helpful in standardizing relative
 paths across systems. On Linux and MacOSX (using bash,)
 I set these in ``.profile``
@@ -131,9 +131,57 @@ print(Sys.getenv("GITHOME"))
 print(Sys.getenv("IMG_ROOT"))
 
 ```
+### LaTeX in R Plots
+
+The tikzDevice R package is again being maintained and is back on CRAN.
+This permits you to output a plot as a `.tex` file and have full $\LaTeX$
+text. Here is an example. First we create the file `normDist.R` to output
+the tikzpicture file as `normDist.tex`.
+
+```
+library(tikzDevice)
+
+setwd('C:/Temp')
+
+tikz('normDist.tex', width=7, height=7)
+# Normal distribution curve
+x <- seq(-4.5,4.5,length.out=100)
+y <- dnorm(x)
+
+# Integration points
+xi <- seq(-2,2,length.out=30)
+yi <- dnorm(xi)
+
+# plot the curve
+plot(x,y,type='l',lwd=3,col='red',ylab='\\Large{$p(x)$}',xlab='\\Large{$x$}')
+# plot the panels
+lines(xi,yi,type='s')
+lines(range(xi),c(0,0))
+lines(xi,yi,type='h')
+
+#Add some equations as labels
+title(main="\\LARGE{$p(x)=\\frac{1}{\\sqrt{2\\pi}}e^{-\\frac{x^2}{2}}$}")
+int <- integrate(dnorm,min(xi),max(xi),subdivisions=length(xi))
+text(2.8, 0.3, paste("\\Large{$\\displaystyle\\int_{", min(xi),
+                     "}^{", max(xi), "}p(x)dx\\approx", round(int[['value']],3),
+                     '$}', sep=''))
+
+#Close the device
+dev.off()
 
 
-## Using colClasses when reading data into R
+# this line lets one input the file...
+str.ei <- '\\endinput'
+cat(str.ei, file='normDist.tex', sep='\n', append=TRUE)
+```
+
+One can then simply include the file in the main $\LaTeX$ file
+
+```
+\input{"normDist.tex"}
+```
+
+### Using colClasses when reading data into R
 
 [Mollie's Research Blog](http://www.mollietaylor.com/2013/09/using-colclasses-to-load-data-more.html)
 
@@ -150,12 +198,12 @@ largeData <- read.csv("huge-file.csv",
                       "Date", "integer", "logical"))
 ```
 
-## Reading Excel workbooks
+### Reading Excel workbooks
 
 [Milano R net](http://www.milanor.net/blog/?p=779)
 has a nice description of the available options.
 
-## Reading large data tables
+### Reading large data tables
 
 [Stack Overflow](http://stackoverflow.com/questions/1727772/quickly-reading-very-large-tables-as-dataframes-in-r)
 has a nice example highligting fread
@@ -272,7 +320,7 @@ sizeplot.colour
 
 ```
 
-## Least Squares and Maximum Liklihood Calibration
+### Least Squares and Maximum Liklihood Calibration
 [Édouard Tallent](http://quantcorner.wordpress.com/2013/11/17/least-squares-and-maximum-likelihood-estimation-calibration-with-r/)
 
 ```{r}
@@ -340,12 +388,12 @@ res
 ```
 
 
-# Mathematical annotation
+## Mathematical annotation
 
-## Resources
+### Resources
 [Vistat Blog](http://vis.supstat.com/2013/04/mathematical-annotation-in-r/)
 
-## Adding results to plot legends and saving to PDF
+### Adding results to plot legends and saving to PDF
 I like to add values to calibration plots where I have
 computed the mean and standard error. Getting the $\pm$
 symbol to work on multiple platforms was fun. Note the
@@ -512,7 +560,7 @@ text(2.5, 0.115, expression(alpha==0.05))
 #dev.off()
 ```
 
-# Drawing 95% Confidence intervals
+## Drawing 95% Confidence intervals
 [Natan Lemoine](http://climateecology.wordpress.com/2013/08/05/drawing-a-95-confidence-interval-in-r/) notes:
 
 I’m writing a post on how to draw a in 95% confidence interval in R by hand. I spent an hour or so trying to figure this out, and most message threads point someone to the ellipse() function. However, I wanted to know how it works.
@@ -601,56 +649,12 @@ This gives the following plot, with the red line being the output from the ellip
 
 And that’s that! Hopefully this helps someone like me who spent hours looking but couldn’t find anything.
 
-# LaTeX in R Plots
 
-Arthur Charpentier
-[provided](http://freakonometrics.hypotheses.org/6290)
-instructions on how to manually install the tikzDevice R
-package. This package is awesome, but since it is no longer
-actively maintained, it has been removed from the CRAN
-website. Took a while to get this to work on R-3.0.1.
-Ended up bulding from source from Charlie Sharpenstein's
-site (minus one vignette). The source package builds on all
-my systems. ___Note that vignettes fail to build on my
-win32 systems if the temp path is long - i.e. buried
-in ``Documents and Settings`` usually set a user environment
-variable for ``TEMP`` to ``C:\Temp\tmp``. I use ``C:\Temp``
-as a convenient directory for quick installs or builds...
-There is first a dependence on the ``filehash`` package
 
-```
-install.packages("filehash")
-```
 
-Note this was written by Charlie Sharpsteen and one may
-get the latest code from github
+## Confidence levels and intervals.
 
-```
-> cd ~/bld
-> git clone git://github.com/Sharpie/RTikZDevice.git
-> cd ~/bld/RTikZDevice
-> make
-> brew install ghc
-> tlmgr install ucs
-> tlmgr install etoolbox
-> brew install haskell-platform
-> cabal update
-> cabal install pandoc
-# add to your path "~/.cabal/bin"
-> make deps
-> make docs 
-> make news
-> make vignette
-> make build 
-> make check
-> make install
-> make test   
-
-```
-
-# Confidence levels and intervals.
-
-## Confidence levels and intervals in lm fits
+### Confidence levels and intervals in lm fits
 
 This one bit me recently.... Remember that if we want
 the $\alpha$ confidence interval, R will report the
@@ -669,9 +673,9 @@ confint(fit, level=0.90)
 
 ```
 
-# Graphics tips
+## Graphics tips
 
-## A nice example from Jeff Leek:
+### A nice example from Jeff Leek:
 
 [A useful reference (www.statmethods.net)](http://www.statmethods.net/advgraphs/axes.html)
 
@@ -690,9 +694,9 @@ meanRatings <- tapply(movies$score,movies$rating,mean)
 points(1:4,meanRatings,col="red",pch="-",cex=5)
 ```
 
-# RMySQL
+## RMySQL
 
-## Building on Windows
+### Building on Windows
 
 Note: this works on WinXP and Win7 x64.
 
@@ -747,9 +751,9 @@ dbDisconnect(con)
 dbUnloadDriver(drv)
 ```
 
-# R and C/C++
+## R and C/C++
 
-## Rboolean type and obsolete headers
+### Rboolean type and obsolete headers
 
 On 2013-05-24, Jan van der Laan wrote the r-devel mailing
 list noting some problems when trying to pass an an argument
@@ -774,8 +778,8 @@ Prof Brian Ripley (ripley@stats.ox.ac.uk) replied
 > Rdefines.h was for compatibility with S code from
 > the 1990s: it is not kept up to date.
 
-# Heat maps
-## Correlation heatmap with ggplot2
+## Heat maps
+### Correlation heatmap with ggplot2
 
 from [Martin Johnsson](http://martinsbioblogg.wordpress.com/2013/03/21/using-r-correlation-heatmap-with-ggplot2/)
 
@@ -790,9 +794,9 @@ require(reshape2)
 qplot(x=Var1, y=Var2, data=melt(cor(attitude)), fill=value, geom="tile")
 ```
 
-# Alchemy
+## Alchemy
 
-## Compiling an Rmath dynamic library
+### Compiling an Rmath dynamic library
 [Dirk Eddelbuettel](http://r.789695.n4.nabble.com/R-Rmath-R-libraries-from-C-on-Mac-OS-X-td814726.html) noted
 
 ```
@@ -842,7 +846,7 @@ system.time(convolve(x, y, type = "open"))
 # 685.31    0.09  691.79
 ```
 
-# Parse arguments of an R script
+## Parse arguments of an R script
 By [Gregor Gorjanc](http://ggorjan.blogspot.com/2013/07/parse-arguments-of-r-script.html)
 
 R can be used also as a scripting tool. We just need to add shebang in the first line of a file (script):
@@ -881,13 +885,13 @@ if("--help" %in% args) {
   q(save="no")
 }
  
-## Parse arguments (we expect the form --arg=value)
+### Parse arguments (we expect the form --arg=value)
 parseArgs <- function(x) strsplit(sub("^--", "", x), "=")
 argsDF <- as.data.frame(do.call("rbind", parseArgs(args)))
 argsL <- as.list(as.character(argsDF$V2))
 names(argsL) <- argsDF$V1
  
-## Arg1 default
+### Arg1 default
 if(is.null(args$arg1)) {
   ## do something
 }
