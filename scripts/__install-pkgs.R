@@ -52,8 +52,7 @@ install_new_github<-function(mypkg, repo){
 # first update anything not built with your current version of R.
 update.packages(ask=FALSE, checkBuilt = TRUE)
 
-# Problem packages for R-3.0.1
-# install_new('tikzDevice')
+# Problem packages for R-3.1.0
 # install_new('RMySQL')
 # install_new('RExcel')
 
