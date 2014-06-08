@@ -3,6 +3,22 @@ Python tips
 
 [Back to Index](../README.html)
 
+### installing from git repos
+
+For python 3
+```
+$ cd repo
+$ pip3 install -e ./
+```
+
+For python 2
+```
+$ cd repo
+$ pip install -e ./
+```
+
+### 2to3
+
 ``2to3`` is a utility installed with python3 that helps convert. The documentation is [here](http://docs.python.org/2/library/2to3.html).
 
 ## Getting Python 2 and 3 to play well with Win7
