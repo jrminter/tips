@@ -17,6 +17,19 @@ $ cd repo
 $ pip install -e ./
 ```
 
+### Creating the default ipython profiles
+
+Clean out any old ones
+
+```
+cd ~
+rm -rf .ipython
+# create new defaults
+ipython profile create
+```
+
+[A useful ref](http://ipython.org/ipython-doc/dev/config/intro.html)
+
 ### 2to3
 
 ``2to3`` is a utility installed with python3 that helps convert. The documentation is [here](http://docs.python.org/2/library/2to3.html).
