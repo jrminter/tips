@@ -1342,7 +1342,8 @@ library(raster)
 library(fields) # only needed for the hideous tim.colors() palette
 
 ### load the German federal state polygons
-gadm <- getData('GADM', country = 'DEU', level = 1)
+# gadm <- getData('GADM', country = 'DEU', level = 1)
+load('./dat/gadm.RData')
 
 #load('/media/windows/tappelhans/uni/marburg/lehre/2013/ss/Sp-VpPh/data/DEU_adm1.RData')
 
@@ -1482,7 +1483,8 @@ The steps we are taking below to produce maps of average August temperatures in 
 5. to highlight the problems related to color representation we already touched upon in section 2.1.1. we plot 5 different representations of the same data on one page (similar to the polygon data from section 5.1.)
 
 ```{r spatial raster data, tidy = FALSE, message = FALSE}
-Tmean <- getData('worldclim', var = 'tmean', res = 5)
+# Tmean <- getData('worldclim', var = 'tmean', res = 5)
+load('./dat/Tmean.RData')
 ext <- extent(gadm)
 
 Tmean.ger <- crop(Tmean, ext)
@@ -1503,7 +1505,8 @@ print(Tplot)
 So, let's manipulate the colors a little...
 
 ```{r plotting raster data coladjustment, tidy = FALSE, fig.width=10, fig.height=15, fig.cap = fn("a basic raster plot using raster package"), fig.align = 'center'}
-ger <- getData('GADM', country = 'DEU', level = 0)
+# ger <- getData('GADM', country = 'DEU', level = 0)
+load('./dat/ger.RData')
 
 Tplot.spec <- spplot(Tmean.ger, zcol = "tmean8", 
                      col.regions = clrs.spec(1001), 
