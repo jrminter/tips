@@ -29,6 +29,14 @@ tips on matters that made me go *hmmm...*
 
 ## Hard things to find
 
+###
+
+Upgrade packages after new verion
+
+```
+update.packages(checkBuilt=TRUE, ask=FALSE)
+```
+
 ### Crash when using knitr
 Make certain that
 
