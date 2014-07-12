@@ -302,6 +302,12 @@ tlmgr option location http://mirrors.rit.edu/CTAN/systems/texlive/tlnet/
 install-tl -repository  http://mirrors.rit.edu/CTAN/systems/texlive/tlnet/
 ```
 
+Set up update
+
+```
+tlmgr option repository http://mirrors.rit.edu/CTAN/systems/texlive/tlnet/
+```
+
 ### on win7
 ```
 install-tl -gui text -repository  http://mirrors.rit.edu/CTAN/systems/texlive/tlnet/
