@@ -7,7 +7,7 @@ Mac OSX Tips
 
 ### Fixing ``/usr/local`` permissions for ``homebrew`` and ``texlive``
 ```
-sudo chown -R `whoami` /usr/local
+sudo chown -R $USER /usr/local
 ```
 ### Lock Screen
 Cntl-shift-eject keys
