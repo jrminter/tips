@@ -4,6 +4,11 @@ Mac OSX Tips
 [Back to Index](../README.html)
 
 ## Quick
+
+### Fixing ``/usr/local`` permissions for ``homebrew`` and ``texlive``
+```
+sudo chown -R `whoami` /usr/local
+```
 ### Lock Screen
 Cntl-shift-eject keys
 
