@@ -10,6 +10,18 @@ ImageJ tips
 
 # Alchemy...
 
+## How do I launch ImageJ with a different version of Java?
+
+[FAQ](http://fiji.sc/Frequently_Asked_Questions#How_do_I_launch_ImageJ_with_a_different_version_of_Java.3F)
+
+Use the --java-home command line option. Examples:
+
+On OS X:
+```
+/Applications/Fiji.app/Contents/MacOS/ImageJ-macosx --java-home \
+  '/Library/Java/JavaVirtualMachines/jdk1.7.0_65.jdk/Contents/Home'
+```
+
 ## Edge-preserving averaging (smoothing) algorithms
 
 ### Thresholded Blur
