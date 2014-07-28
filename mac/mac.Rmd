@@ -9,6 +9,24 @@ Mac OSX Tips
 ```
 sudo chown -R $USER /usr/local
 ```
+
+### Some hints for SSDs
+From [alutam.com](http://blog.alutam.com/2012/04/01/optimizing-macos-x-lion-for-ssd/)
+
+There is no GUI switch to turn these local backups off, but it can easily be done on the command line. Just start Terminal.app and execute the following command:
+
+```
+sudo tmutil disablelocal
+```
+
+Once you do this, the TM Preferences panel will immediately reflect it – the text will change from "Time Machine keeps local snapshots as space permits, and:"" to "Time Machine keeps:". To turn it back on, you can simply run the following in the Terminal:
+
+```
+sudo tmutil enablelocal
+```
+
+Also note, this feature gets turned on automatically whenever you turn off and on the Time Machine – so don’t forget to turn the local backups back off again whenever you do that.
+
 ### Lock Screen
 Cntl-shift-eject keys
 
