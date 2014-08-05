@@ -78,6 +78,18 @@ Now I know better. This is the 3 hours of my life that I will
 never get back. All because I put label before a caption.
 Do not do that to yourself!
 
+## Hiding citations
+A useful hint from
+[texblog.org](http://texblog.org/2014/08/05/undefining-a-command-in-latex/)
+
+> I was editing a poster and didn't know whether or not to include a bibliography. I had already added ``\cite`` commands and wanted to get an idea of what it looks like without bibliography. So I commented out ``\printbiliography`` to get rid of the bibliography, but the numbers were still in the text. Removing all ``\cite`` commands wasn't an option in case I wanted to have them back. The solution was to overwrite ``\cite`` with a command that's defined, but does nothing:
+
+```
+\let\cite\empty
+```
+This did the trick!
+
+
 ## Citations in figures
 
 Another old but useful tip from
@@ -198,7 +210,7 @@ cat(str.ei, file=tab.tex, sep='\n', append=TRUE)
 
 ```
 
-### Useful snippets from stack exchage
+### Useful snippets from Stack Exchange
 
 #### Left margins inside a block environment
 
