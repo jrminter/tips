@@ -76,6 +76,31 @@ image(matrix(1:8), col = pal, axes = FALSE)
 par(mar=std.mar)
 ```
 
+### 8-class  RdYlBu
+
+```
+Red
+#d73027
+#f46d43
+#fdae61
+#fee090
+#e0f3f8
+#abd9e9
+#74add1
+#4575b4
+Blue
+```
+
+```{r,fig.height=1}
+pal <- c("#d73027","#f46d43","#fdae61","#fee090","#e0f3f8","#abd9e9","#74add1","#4575b4")
+names(pal) <- c("","","","","","","","")
+std.mar <- par()$mar
+par(mar = rep(0, 4)) 
+image(matrix(1:8), col = pal, axes = FALSE)
+par(mar=std.mar)
+```
+
+
 [Business Casual](https://kuler.adobe.com/Business-Casual-color-theme-5595/)
 
 ```{r,fig.height=1}
