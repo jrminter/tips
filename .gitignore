@@ -61,6 +61,12 @@ ImageJ/ImageJ.md
 ImageJ/ImageJ.html
 ImageJ/figure/
 
+# iOS tips directory
+iOS/.DS_Store
+iOS/iOS.md
+iOS/iOS.html
+iOS/figure/
+
 # legacy directory
 legacy/.DS_Store
 legacy/Legacy.md

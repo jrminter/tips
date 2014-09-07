@@ -1,0 +1,16 @@
+iOS Tips
+===========================================================
+
+[Back to Index](../README.html)
+
+## Turn off the Facebook auto-play video feature?
+
+From [moneysavingexpert.com](http://www.moneysavingexpert.com/news/protect/2014/09/facebook-app-user-beware-big-bills-as-videos-automatically-play)
+
+Go to your phone's settings
+
+```
+Settings > Facebook > Settings > Select 'Auto-play only on Wi-fi', or 'Off'.
+```
+
+[Back to Index](../README.html)

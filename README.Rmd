@@ -23,6 +23,8 @@ Topic
 
 [Image-J](./ImageJ/ImageJ.html)
 
+[iOS](./iOS/iOS.html)
+
 [mac](./mac/mac.html)
 
 [maintaining legacy equipment](./legacy/Legacy.html)
