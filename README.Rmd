@@ -7,6 +7,8 @@ Topic
 
 [EkAutomater](./automater/automater.html)
 
+[Oxford AZtec](./AZtec/AZtec.html)
+
 [C++11](./C++11/C++11-Tips.html)
 
 [chntpw](./chntpw/chntpw.html)

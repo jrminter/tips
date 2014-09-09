@@ -13,6 +13,13 @@ automater/automater.md
 automater/automater.html
 automater/figure/
 
+
+# AZtec directory
+AZtec/.DS_Store
+AZtec/AZtec.md
+AZtec/AZtec.html
+AZtec/figure/
+
 # C++11 directory
 C++11/.DS_Store
 C++11/C++11-Tips.md

@@ -7,7 +7,7 @@ strGitHome <- Sys.getenv("GIT_HOME")
 if(strGitHome=="") strGitHome="~/git"
 strRel     <- '/tips/scripts'
 
-names <- c("automater.Rmd", "C++11-Tips.Rmd",
+names <- c("automater.Rmd", "AZtec.Rmd", "C++11-Tips.Rmd",
            "chntpw.Rmd", "color.Rmd",
            "DiffractionLimit.Rmd",
            "EDAX.Rmd", "git-tips.Rmd","gnuplot.Rmd",
@@ -21,7 +21,7 @@ names <- c("automater.Rmd", "C++11-Tips.Rmd",
            "skimage.Rmd","Slidify.Rmd",
            "Sweave.Rmd", "tex-tips.Rmd","ubuntu.Rmd",
            "VS2010.Rmd","win.Rmd","README.Rmd")
-rPath <- c("../automater", "../C++11",
+rPath <- c("../automater", "../AZtec", "../C++11",
            "../chntpw", "../color",
            "../DiffractionLimit", 
            "../EDAX", "../git", "../gnuplot", "../ImageJ", "../iOS",

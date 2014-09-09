@@ -1,0 +1,10 @@
+Oxford AZtec Tips
+===========================================================
+
+[Back to Index](../README.html)
+
+### Setting your own logo
+
+The Oxford logo is in a file ``logo.png`` in ``C:\Program Files\Oxford Instruments NanoAnalysis\AZtec\Reports``. It is ``150x71`` pixels. design a replacement with the same aspect ratio and rename the old one to ``logo-old.png``
+
+[Back to Index](../README.html)
