@@ -3,6 +3,21 @@ Oxford AZtec Tips
 
 [Back to Index](../README.html)
 
+### Preferred colors for maps
+
+It helps to have consistent colors for maps. *N.B.* there are issues with R/G colorblindness here....
+```
+C-K    0 red
+O-K  120 green
+Cu-L 180 cyan
+P-K       ??
+Pd-L  60 yellow
+Ag-L  30 brown
+
+```
+
+
+
 ### Controlling the export of maps
 1. For the map you want, right click and select ``Details``.
 2. Note the ``Resolution (Width)`` (e.g. 1024 px) and the ``Image Width`` (e.g. 193 um). You may want to note the ``Magnification`` as well...
