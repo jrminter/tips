@@ -1,5 +1,9 @@
-Oxford AZtec Tips
-===========================================================
+---
+title: "AZtec Tips"
+author: "John Minter"
+date: "Tuesday, September 09, 2014"
+output: html_document
+---
 
 [Back to Index](../README.html)
 
@@ -11,7 +15,7 @@ C-K    0 red
 O-K  120 green
 Cu-L 180 cyan
 P-K  150 spring green
-Pd-L  60 yellow
+Pd-L60 yellow
 Pt-M  90 chartreuse green
 Ag-L  30 orange
 Ga-L 300 magenta
@@ -25,7 +29,32 @@ See [Wikipedia](http://simple.wikipedia.org/wiki/Color_wheel)
 
 "RBG color wheel" by DanPMK.
 
-The 12 major colors of the color wheel, at 30 degree intervals on the HSV color wheel (shown above), are the following: red (0 degrees or 360 degrees), orange (30 degrees), yellow (60 degrees), chartreuse green (90 degrees), green (120 degrees), spring green (150 degrees), cyan (180 degrees), azure (210 degrees), blue (240 degrees), violet (270 degrees), magenta (300 degrees), and rose (330 degrees). This constitutes the complete set of primary, secondary, and tertiary color names.
+The 12 major colors of the color wheel, at 30 degree intervals on the HSV color wheel (shown above), are the following:
+<style>
+table:nth-of-type(1) {
+    display:table;
+    width:20%;
+}
+</style>
+
+
+|color            | degrees|
+|-----------------|-------:|
+|red              |    0   |
+|orange           |   30   |
+|yellow           |   60   |
+|chartreuse green |   90   |
+|green            |  120   |
+|spring green     |  150   |
+|cyan             |  180   |
+|azure            |  210   |
+|blue             |  240   |
+|violet           |  270   |
+|magenta          |  300   |
+|rose             |  330   |
+
+
+This constitutes the complete set of primary, secondary, and tertiary color names.
 
 ### EDS Mapping parameters
 
