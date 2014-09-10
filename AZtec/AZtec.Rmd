@@ -15,14 +15,34 @@ Pd-L  60 yellow
 Ag-L  30 brown
 
 ```
+### EDS Mapping parameters
 
+Autolock
 
+![Autolock](img/GoodAutolock.png)
+
+EDS Mapping for 7 kV
+
+![Mapping](img/GoodMapPar.png)
 
 ### Controlling the export of maps
 1. For the map you want, right click and select ``Details``.
 2. Note the ``Resolution (Width)`` (e.g. 1024 px) and the ``Image Width`` (e.g. 193 um). You may want to note the ``Magnification`` as well...
 3. Again for the map you want, right click and select ``Export >> Settings``. Leave ``Keep Aspect Ratio``checked and turn off what you don't want. Set to the resolution you want (i.e. 1024) and then press ``Save As...``
 
+### Basic Info
+
+Oxford S/N: ``CZC4081PBM``
+``
+System NO: ``37404``
+
+#### The setup
+
+There is a power strip mounted on the base of the Sirion on the bottom rail. It supplies power to the computer, monitor, the micsF+ box and the x-stream-2 box, as well as a 24 V laptop power supply. The laptop power supply plugs into a cable on the detector and another cable goes to the x-stream2 box.
+
+One can shut the computer down and turn off the strip to turn everything off.
+
+Note: one can use the tidy-up program to reset everything.
 
 ### Setting your own logo
 
