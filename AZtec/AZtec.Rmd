@@ -71,11 +71,30 @@ EDS Mapping for 7 kV
 2. Note the ``Resolution (Width)`` (e.g. 1024 px) and the ``Image Width`` (e.g. 193 um). You may want to note the ``Magnification`` as well...
 3. Again for the map you want, right click and select ``Export >> Settings``. Leave ``Keep Aspect Ratio``checked and turn off what you don't want. Set to the resolution you want (i.e. 1024) and then press ``Save As...``
 
+## A better proposed stategy for probe current proxy measurements
+
+### The basic idea
+ 
+The ``Optimize`` menu makes it easy to do a beam current measurement. It is important to configure for the correct element and process time to be relevant to our DTSA-II detectors.
+
+![BeamCurrentMeasCfg](img/BeamCurrentMeasCfg.png)
+
+The manual (p. 86) has a discussion of the proper element to use. They like Cr because it polishes well and does not oxidize. The K line isn't sufficiently excited to use below 15 kV.  Cu grids are convenient, but seem to have the same problem if the software wants to use the K line. Silicon chips might make a good option for a wide range of voltages but would be hard to use with my Pella XCS-8 standard Faraday cage.
+
+It might be prudent to do a cross-over with Cu and the XCS-8 standard Faraday cage at 20 kV and compare to one of my home-made Faraday cages with a Cu grid and a Si chip at 20 kV. Anyway, one would use the measured probe currents to measure the mean cps/nA for the target elements.
+
+One gets the required data from the ``Calculate Composition`` tab of ``Point & ID`` and then choosing the ``Spectrum Details`` from the ``Available Templates``:
+
+![AvailableTemplates](img/AvailableTemplates.png)
+
+Note the ``Beam Calibration Information`` section contains all we need:
+
+![Beam Calibration Information](img/BeamCalibrationInfo.png)
+
 ### Basic Info
 
-Oxford S/N: ``CZC4081PBM``
-``
-System NO: ``37404``
+Oxford S/N: ``CZC4081PBM``     
+System NO:  ``37404``
 
 #### The setup
 
