@@ -91,6 +91,18 @@ Note the ``Beam Calibration Information`` section contains all we need:
 
 ![Beam Calibration Information](img/BeamCalibrationInfo.png)
 
+An example from the Mn spectrum at 20 kV on 2014-09-04
+
+```{r}
+pc <- 0.77      # nA
+pi <- 483262.0  # counts in Mn Ka
+lt <- 90.4      # sec
+
+cps <- pi/lt
+cpsPerNa <- cps/pc
+print(sprintf("%.2f", cpsPerNa))
+```
+
 ### Basic Info
 
 Oxford S/N: ``CZC4081PBM``     
