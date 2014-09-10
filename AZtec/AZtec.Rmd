@@ -96,6 +96,21 @@ Note the ``Beam Calibration Information`` section contains all we need:
 Oxford S/N: ``CZC4081PBM``     
 System NO:  ``37404``
 
+
+### A proposed SPI Standards Block
+
+```
+1. Faraday Cup      02750-AB      $611.80
+2. Cu               AS4150-AB     $178.60
+3. Pd               AS4250-AB     $178.60
+4. K496 (P and O)   AS7270-AB     $357.20
+5. Si               AS4060-AB     $178.60
+6. Co               AS4130-AB     $178.60
+7. Rb2SnCl6 (Cl)    AS8230-AB     $178.60
+8. Pyrolytic C      AS4030-AB     $178.60
+9. Nine Hole Mount  ASTP05009-AB $2379.75
+```
+
 #### The setup
 
 There is a power strip mounted on the base of the Sirion on the bottom rail. It supplies power to the computer, monitor, the micsF+ box and the x-stream-2 box, as well as a 24 V laptop power supply. The laptop power supply plugs into a cable on the detector and another cable goes to the x-stream2 box.
