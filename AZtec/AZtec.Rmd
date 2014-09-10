@@ -10,11 +10,23 @@ It helps to have consistent colors for maps. *N.B.* there are issues with R/G co
 C-K    0 red
 O-K  120 green
 Cu-L 180 cyan
-P-K       ??
+P-K  150 spring green
 Pd-L  60 yellow
-Ag-L  30 brown
+Pt-M  90 chartreuse green
+Ag-L  30 orange
+Ga-L 300 magenta
 
 ```
+#### HSV Color wheel values
+
+See [Wikipedia](http://simple.wikipedia.org/wiki/Color_wheel)
+
+![RBG color wheel](img/RBG_color_wheel.png)
+
+"RBG color wheel" by DanPMK.
+
+The 12 major colors of the color wheel, at 30 degree intervals on the HSV color wheel (shown above), are the following: red (0 degrees or 360 degrees), orange (30 degrees), yellow (60 degrees), chartreuse green (90 degrees), green (120 degrees), spring green (150 degrees), cyan (180 degrees), azure (210 degrees), blue (240 degrees), violet (270 degrees), magenta (300 degrees), and rose (330 degrees). This constitutes the complete set of primary, secondary, and tertiary color names.
+
 ### EDS Mapping parameters
 
 Autolock
