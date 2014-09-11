@@ -10,17 +10,26 @@ output: html_document
 ### Preferred colors for maps
 
 It helps to have consistent colors for maps. *N.B.* there are issues with R/G colorblindness here....
-```
-C-K    0 red
-O-K  120 green
-Cu-L 180 cyan
-P-K  150 spring green
-Pd-L60 yellow
-Pt-M  90 chartreuse green
-Ag-L  30 orange
-Ga-L 300 magenta
 
-```
+<style>
+table:nth-of-type(1) {
+    display:table;
+    width:25%;
+}
+</style>
+
+| transition | deg | name             |
+|------------|----:|:-----------------|
+| C K        | 0   | red              |
+| O K        | 120 | green            |
+| Cu L       | 180 | cyan             |
+| P K        | 150 | spring green     |
+| Pd L       |  60 | yellow           |
+| Pt M       |  90 | chartreuse green |
+| Ag L       |  30 | orange           |
+| Ga L       | 300 | magenta          |
+
+
 #### HSV Color wheel values
 
 See [Wikipedia](http://simple.wikipedia.org/wiki/Color_wheel)
@@ -30,12 +39,7 @@ See [Wikipedia](http://simple.wikipedia.org/wiki/Color_wheel)
 "RBG color wheel" by DanPMK.
 
 The 12 major colors of the color wheel, at 30 degree intervals on the HSV color wheel (shown above), are the following:
-<style>
-table:nth-of-type(1) {
-    display:table;
-    width:20%;
-}
-</style>
+
 
 
 |color            | degrees|
@@ -58,11 +62,15 @@ This constitutes the complete set of primary, secondary, and tertiary color name
 
 ### EDS Mapping parameters
 
-Autolock
+#### Autolock
+
+Current parameters below...
 
 ![Autolock](img/GoodAutolock.png)
 
-EDS Mapping for 7 kV
+The best discussion starts on p. 160 of the manual. It might be worth changing my tracking image to size 512 and a dwell time of 10 us. Need to see how that changes the frame time and think about a reasonable interval (they use 10 sec).
+
+#### EDS Mapping for 7 kV
 
 ![Mapping](img/GoodMapPar.png)
 
@@ -103,7 +111,19 @@ cpsPerNa <- cps/pc
 print(sprintf("%.2f", cpsPerNa))
 ```
 
-### Basic Info
+## Alchemy...
+
+### Distorted scan
+
+Sometimes when image collection is stopped, the scan is offset and looks odd on the microscope display. The solution is to reset the hardware. Close AZtec and run the tidy-up program to reset everything.
+
+### Setting your own logo
+
+The Oxford logo is in a file ``logo.png`` in ``C:\Program Files\Oxford Instruments NanoAnalysis\AZtec\Reports``. It is ``150x71`` pixels. design a replacement with the same aspect ratio and rename the old one to ``logo-old.png``
+
+
+
+## Basic Info
 
 Oxford S/N: ``CZC4081PBM``     
 System NO:  ``37404``
@@ -123,7 +143,7 @@ System NO:  ``37404``
 9. Nine Hole Mount  ASTP05009-AB $2379.75
 ```
 
-#### The setup
+### The setup
 
 There is a power strip mounted on the base of the Sirion on the bottom rail. It supplies power to the computer, monitor, the micsF+ box and the x-stream-2 box, as well as a 24 V laptop power supply. The laptop power supply plugs into a cable on the detector and another cable goes to the x-stream2 box.
 
@@ -131,9 +151,6 @@ One can shut the computer down and turn off the strip to turn everything off.
 
 Note: one can use the tidy-up program to reset everything.
 
-### Setting your own logo
-
-The Oxford logo is in a file ``logo.png`` in ``C:\Program Files\Oxford Instruments NanoAnalysis\AZtec\Reports``. It is ``150x71`` pixels. design a replacement with the same aspect ratio and rename the old one to ``logo-old.png``
 
 
 [Back to Index](../README.html)
