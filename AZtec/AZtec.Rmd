@@ -29,6 +29,10 @@ table:nth-of-type(1) {
 | Ag L       |  30 | orange           |
 | Ga L       | 300 | magenta          |
 
+**Note** One can easily see and change values from the Summary view
+
+![Summary View](img/EasySetMapColors.png)
+
 
 #### HSV Color wheel values
 
