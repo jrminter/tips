@@ -64,6 +64,12 @@ The 12 major colors of the color wheel, at 30 degree intervals on the HSV color 
 
 This constitutes the complete set of primary, secondary, and tertiary color names.
 
+### Report templates
+
+My current favorite report templates are
+
+![FavReportTemplates](img/FavReportTemplates.png)
+
 ### EDS Mapping parameters
 
 #### Autolock
