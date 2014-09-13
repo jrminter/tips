@@ -1,7 +1,7 @@
 ---
 title: "AZtec Tips"
 author: "John Minter"
-date: "Tuesday, September 11, 2014"
+date: "Saturday, September 13, 2014"
 output: html_document
 ---
 
@@ -108,6 +108,8 @@ One gets the required data from the ``Calculate Composition`` tab of ``Point & I
 Note the ``Beam Calibration Information`` section contains all we need:
 
 ![Beam Calibration Information](img/BeamCalibrationInfo.png)
+
+We can copy this information into a text document with a right click.
 
 An example from the Mn spectrum at 20 kV on 2014-09-04
 
