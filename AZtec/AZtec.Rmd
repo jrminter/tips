@@ -16,6 +16,10 @@ table:nth-of-type(1) {
     display:table;
     width:25%;
 }
+table:nth-of-type(2) {
+    display:table;
+    width:30%;
+}
 </style>
 
 | transition | deg | name             |
@@ -99,11 +103,25 @@ The ``Optimize`` menu makes it easy to do a beam current measurement. It is impo
 
 The manual (p. 86) has a discussion of the proper element to use. They like Cr because it polishes well and does not oxidize. The K line isn't sufficiently excited to use below 15 kV.  Cu grids are convenient, but seem to have the same problem if the software wants to use the K line. Silicon chips might make a good option for a wide range of voltages but would be hard to use with my Pella XCS-8 standard Faraday cage.
 
-It might be prudent to do a cross-over with Cu and the XCS-8 standard Faraday cage at 20 kV and compare to one of my home-made Faraday cages with a Cu grid and a Si chip at 20 kV. Anyway, one would use the measured probe currents to measure the mean cps/nA for the target elements.
-
 One gets the required data from the ``Calculate Composition`` tab of ``Point & ID`` and then choosing the ``Spectrum Details`` from the ``Available Templates``:
 
 ![AvailableTemplates](img/AvailableTemplates.png)
+
+Si is a good choice for the whole range. I measured the ``cps/nA`` for a range of voltages. See the project ``2014-09-12-Cu-Si`` for the data and more information. 
+
+
+|e0  | mean    | std dev |
+|---:|--------:|--------:|
+|  5 |  1825.1 |  39.7   |
+|  7 |  3895.1 |  65.1   |
+| 10 |  7605.8 | 106.0   |
+| 15 | 14052.0 | 170.0   |
+| 20 | 20305.2 | 261.3   |
+| 30 | 29843.4 | 383.9   |
+
+![AZtec-Si-Beam-Calibration](img/AZtec-Si-Beam-Calibration.png)
+
+
 
 Note the ``Beam Calibration Information`` section contains all we need:
 
@@ -111,17 +129,21 @@ Note the ``Beam Calibration Information`` section contains all we need:
 
 We can copy this information into a text document with a right click.
 
-An example from the Mn spectrum at 20 kV on 2014-09-04
 
-```{r}
-pc <- 0.77      # nA
-pi <- 483262.0  # counts in Mn Ka
-lt <- 90.4      # sec
+The Si peak is well-behaved with voltage. This is an analysis using DTSA-II to fit **just the characteristic peaks**. This is easily automated, given the spectra, using a Jython script.
 
-cps <- pi/lt
-cpsPerNa <- cps/pc
-print(sprintf("%.2f", cpsPerNa))
-```
+![SiK](img/SiK.png)
+
+|e0  | mean    | std dev |
+|---:|--------:|--------:|
+|  5 |  1832.4 |  40.3   |
+|  7 |  3884.2 |  65.3   |
+| 10 |  7573.1 | 105.7   |
+| 15 | 13921.0 | 168.2   |
+| 20 | 20059.1 | 257.7   |
+| 30 | 29362.6 | 377.0   |
+
+The AZtec beam measurement routine only works successfully for Cu above 10 kV (because it always uses the K-line), though one can use DTSA-II approach. The Si spectra are cleaner and have no oxidation. The Cu data are in the project ``2014-09-12-QC``.
 
 ## Alchemy...
 
