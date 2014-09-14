@@ -90,7 +90,7 @@ The best discussion starts on p. 160 of the manual. It might be worth changing m
 
 ### Controlling the export of maps
 1. For the map you want, right click and select ``Details``.
-2. Note the ``Resolution (Width)`` (e.g. 1024 px) and the ``Image Width`` (e.g. 193 um). You may want to note the ``Magnification`` as well...
+2. Note the ``Resolution (Width)`` (e.g. 1024 px) and the ``Image Width`` (e.g. 193 $\mu$m). You may want to note the ``Magnification`` as well...
 3. Again for the map you want, right click and select ``Export >> Settings``. Leave ``Keep Aspect Ratio``checked and turn off what you don't want. Set to the resolution you want (i.e. 1024) and then press ``Save As...``
 
 ## A better proposed stategy for probe current proxy measurements
