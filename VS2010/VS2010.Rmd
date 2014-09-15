@@ -4,9 +4,9 @@ VS 2010 Tips
 [Back to Index](../README.html)
 
 ### A quickie for VS2003.NET
-Solution to not being able to open progam database, From [here](http://social.msdn.microsoft.com/Forums/en-US/c18f09f2-871e-4810-a803-c889994415c3/visual-studio-fatal-error-c1033-cannot-open-program-database?forum=Vsexpressvc)
+Solution to not being able to open program database, From [here](http://social.msdn.microsoft.com/Forums/en-US/c18f09f2-871e-4810-a803-c889994415c3/visual-studio-fatal-error-c1033-cannot-open-program-database?forum=Vsexpressvc)
 
-> Because of legacy code I required VS 2003 witha at least SP1 on Windows7 to build C++.  I was able to reslove this problem by chosing compatibility mode Vista.  When I installed the program the defalult selection was XP service pack 3.
+> Because of legacy code I required VS 2003 with at least SP1 on Windows7 to build C++.  I was able to resolve this problem by choosing compatibility mode Vista.  When I installed the program the default selection was XP service pack 3.
 
 Some useful tips for Visual Studio 2010
 
