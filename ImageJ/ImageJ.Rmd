@@ -3,14 +3,33 @@ ImageJ tips
 
 [Back to Index](../README.html)
 
-# Sources of plugins
+## Sources of plugins
 
 [Stowers Research Institute](http://research.stowers.org/imagejplugins/)
 
+## Reproducible Jython Scripting
 
-# Alchemy...
+For a couple of years I have been trying to follow the ``DRY`` process (Don't Repeat Yourself) for more reproducible Jython scripting with DTSA. Recently I have been migrating my ImageJ scripts to Jython to use with Fiji. I just learned how import user functions...
 
-## How do I launch ImageJ with a different version of Java?
+1. Create a folder ``Lib`` in FIJI_ROOT/jars/
+2. Create your user module. My first one is ``jmFijiGen.py`` and place it in your new ``Lib`` folder. One of the first functions is ``ensureDir``.
+3. Use the following to use ``utf-8``.
+
+```
+from org.python.core import codecs
+codecs.setDefaultEncoding('utf-8')
+```
+4. To use ``ensureDir`` in your Jython scripts, include
+
+```
+import jmFijiGen as jmg
+jmg.ensureDir(imgDir)
+```
+
+
+## Alchemy...
+
+### How do I launch ImageJ with a different version of Java?
 
 [FAQ](http://fiji.sc/Frequently_Asked_Questions#How_do_I_launch_ImageJ_with_a_different_version_of_Java.3F)
 
@@ -41,7 +60,7 @@ imp = WindowManager.getCurrentImage()
 
 ```
 
-# Using overlays on image channels
+## Using overlays on image channels
 
 Wayne Rasband provided (2013-05-24) this useful snippet
 
