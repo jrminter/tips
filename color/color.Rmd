@@ -76,6 +76,8 @@ image(matrix(1:8), col = pal, axes = FALSE)
 par(mar=std.mar)
 ```
 
+
+
 ### 8-class  RdYlBu
 
 ```
@@ -90,13 +92,46 @@ Red
 #4575b4
 Blue
 ```
-
 ```{r,fig.height=1}
 pal <- c("#d73027","#f46d43","#fdae61","#fee090","#e0f3f8","#abd9e9","#74add1","#4575b4")
 names(pal) <- c("","","","","","","","")
 std.mar <- par()$mar
 par(mar = rep(0, 4)) 
 image(matrix(1:8), col = pal, axes = FALSE)
+par(mar=std.mar)
+```
+
+
+### Colors that look OK with Kodak colors...
+```
+Kodak trade dress yellow: #FFCC00
+   Kodak trade dress red: #CC0000
+        Third-party blue: #3300FF
+                80% Gray: #2F2F2F
+                60% Gray: #5F5F5F
+                30% Gray: #B2B2B2
+                20% Gray: #D2D2D2
+                10% Gray: #EFEFEF
+```
+
+```{r,fig.height=1}
+pal <- c("#FFCC00","#CC0000","#3300FF","#2F2F2F","#5F5F5F","#B2B2B2","#D2D2D2","#EFEFEF")
+names(pal) <- c("","","","","","","","")
+std.mar <- par()$mar
+par(mar = rep(0, 4)) 
+image(matrix(1:8), col = pal, axes = FALSE)
+par(mar=std.mar)
+```
+
+or my own 7 step mix -- too garish...
+
+```{r,fig.height=1}
+# pal <- c("#CC0000","#D62900","#E05200","#EB7A00","#F5A300","#FFCC00","#D6A333","#AD7A66","#6633BF","#5C29CC","#3300FF")
+pal <- c("#CC0000","#E05200","#F5A300","#FFCC00","#D6A333","#6633BF","#3300FF")
+names(pal) <- c("","","","","","","")
+std.mar <- par()$mar
+par(mar = rep(0, 4)) 
+image(matrix(1:7), col = pal, axes = FALSE)
 par(mar=std.mar)
 ```
 
