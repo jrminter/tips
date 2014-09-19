@@ -29,6 +29,17 @@ jmg.ensureDir(imgDir)
 
 ## Alchemy...
 
+### Using a mu in a Jython script
+
+The usual Windows key sequence for a $\mu$ is **not** a utf-8 character. Using this gives errors in Jython scripts. Here is how to define a $\mu$
+as a utf-8 character:
+
+```
+a = [0xCE, 0xBC]
+mu = "".join([chr(c) for c in a]).decode('UTF-8')
+units  = mu+"m"
+```
+
 ### How do I launch ImageJ with a different version of Java?
 
 [FAQ](http://fiji.sc/Frequently_Asked_Questions#How_do_I_launch_ImageJ_with_a_different_version_of_Java.3F)
