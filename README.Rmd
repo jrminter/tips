@@ -33,6 +33,8 @@ Topic
 
 [microscopy](./micro/micro.html)
 
+[MS Office](./msOffice/msOffice.html)
+
 [MySQL](./mysql/mysql.html)
 
 [OS Package Links](./osPkgs/osPkgs.html)

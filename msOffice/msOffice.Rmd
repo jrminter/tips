@@ -1,0 +1,30 @@
+MS Office tips
+========================================================
+
+[Back to Index](../README.html)
+
+These are John Minter's tips for MS Office.
+They were compiled from several web sources.
+
+## PowerPoint
+
+### Footers don't show up
+
+From [Holly Green](http://blogs.mccombs.utexas.edu/the-most/2012/06/04/when-the-slide-number-doesnt-show-in-powerpoint/)
+
+If you?re working in PowerPoint, and you want the slide number to display on the slide, the process is generally simple:
+
+1. Go to the Insert tab.
+2. Click the Slide Number button.
+3. On the Slide tab, check the Slide Number box.
+4. Click Apply to All to make the slide number show on all slides, or Apply to make the slide number show on just the current slide.
+
+### Template location
+
+On Win7 ``C:\Users\jrminter\AppData\Roaming\Microsoft\Templates``
+
+
+
+
+
+[Back to Index](../README.html)
