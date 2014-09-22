@@ -12,7 +12,7 @@ They were compiled from several web sources.
 
 From [Holly Green](http://blogs.mccombs.utexas.edu/the-most/2012/06/04/when-the-slide-number-doesnt-show-in-powerpoint/)
 
-If you?re working in PowerPoint, and you want the slide number to display on the slide, the process is generally simple:
+If you're working in PowerPoint, and you want the slide number to display on the slide, the process is generally simple:
 
 1. Go to the Insert tab.
 2. Click the Slide Number button.
