@@ -56,9 +56,10 @@ On Win7, this works from the ``fiji.cmd`` in ``C:\Apps\local``:
 And this works starting it with Java8 from the ``fiji8.cmd`` in ``C:\Apps\local``:
 
 ```
-"C:\Apps\Fiji.app.win64\ImageJ-win64.exe" -Dpython.cachedir.skip=false --java-home "C:\Program Files\Java\jdk1.8.0_20"&&pause
+"C:\Apps\Fiji.app.win64\ImageJ-win64.exe" -Dpython.cachedir.skip=false --java-home "C:\Program Files\Java\jdk1.8.0_20"
 ```
 
+Note that these command arguments may also be put in the shortcuts that start Fiji. I did this on ``ROCPW6C6XDN1``
 
 
 ### How do I launch ImageJ with a different version of Java?
