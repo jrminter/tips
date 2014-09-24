@@ -47,6 +47,20 @@ One needs to start Fiji with a command switch. On MacOSX, this works:
 /Applications/Fiji.app/Contents/MacOS/ImageJ-macosx -Dpython.cachedir.skip=false --
 ```
 
+On Win7, this works from the ``fiji.cmd`` in ``C:\Apps\local``:
+
+```
+"C:\Apps\Fiji.app.win64\ImageJ-win64.exe" -Dpython.cachedir.skip=false --
+```
+
+And this works starting it with Java8 from the ``fiji8.cmd`` in ``C:\Apps\local``:
+
+```
+"C:\Apps\Fiji.app.win64\ImageJ-win64.exe" -Dpython.cachedir.skip=false --java-home "C:\Program Files\Java\jdk1.8.0_20"&&pause
+```
+
+
+
 ### How do I launch ImageJ with a different version of Java?
 
 [FAQ](http://fiji.sc/Frequently_Asked_Questions#How_do_I_launch_ImageJ_with_a_different_version_of_Java.3F)
