@@ -39,6 +39,13 @@ a = [0xCE, 0xBC]
 mu = "".join([chr(c) for c in a]).decode('UTF-8')
 units  = mu+"m"
 ```
+### Getting dir() to work with Jython in Fiji
+
+One needs to start Fiji with a command switch. On MacOSX, this works:
+
+```
+/Applications/Fiji.app/Contents/MacOS/ImageJ-macosx -Dpython.cachedir.skip=false --
+```
 
 ### How do I launch ImageJ with a different version of Java?
 
