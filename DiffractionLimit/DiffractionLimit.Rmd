@@ -1,5 +1,12 @@
-Diffraction Limit
-========================================================
+---
+title: "Diffraction Limit"
+author: "J. R. Minter"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    theme: united
+    highlight: pygments
+---
 ```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
 # make this an external chunk that can be included in any file
 library(knitr)

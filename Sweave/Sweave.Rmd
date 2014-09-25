@@ -1,5 +1,12 @@
-Sweave Tips
-==================================================================
+---
+title: "Sweave Tips"
+author: "J. R. Minter"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    theme: united
+    highlight: pygments
+---
 ```{r, echo=FALSE}
 library(knitr)
 ```

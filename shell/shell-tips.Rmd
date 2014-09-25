@@ -1,5 +1,12 @@
-Linux shell tips and tricks
-=============================================
+---
+title: "Linux Shell Tips"
+author: "J. R. Minter"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    theme: united
+    highlight: pygments
+---
 [Back to Index](../README.html)
 
 from [techbar.me](http://www.techbar.me/linux-shell-tips/)

@@ -1,5 +1,12 @@
-Bar plot with error bars in R
-==============================
+---
+title: "Bar Plot with Error Bars in R"
+author: "J. R. Minter"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    theme: united
+    highlight: pygments
+---
 2013-10-20 from
 [here](http://heuristically.wordpress.com/2013/10/20/bar-plot-with-error-bars-r/)
 

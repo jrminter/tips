@@ -1,5 +1,12 @@
-Creating publication quality graphs in R
-========================================================
+---
+title: "Publication Quality Graphics in R"
+author: "J. R. Minter"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    theme: united
+    highlight: pygments
+---
 ```{r,echo=FALSE}
 library(knitr)
 ```

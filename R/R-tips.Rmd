@@ -1,5 +1,12 @@
-John Minter's R tips
-========================================================
+---
+title: "R Tips"
+author: "J. R. Minter"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    theme: united
+    highlight: pygments
+---
 ```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
 library(knitr)
 # make this an external chunk that can be included in any file
