@@ -1,9 +1,14 @@
 ---
-title: "AZtec Tips"
-author: "John Minter"
-date: "Saturday, September 13, 2014"
-output: html_document
+title: "John's AZtec Tips"
+author: "J. R. Minter"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    theme: united
+    highlight: pygments
 ---
+
+This documents contains hints that I find helpul when using the Oxford AZtec 2.2 Software.
 
 [Back to Index](../README.html)
 

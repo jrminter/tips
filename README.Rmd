@@ -1,4 +1,13 @@
-## J. R. Minter's useful tips 
+---
+title: "John Minter's Helpful Tips"
+author: "J. R. Minter"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    theme: united
+    highlight: pygments
+---
+
 
 This repository contains the John Minter's useful tips in Rmarkdown
 format.
