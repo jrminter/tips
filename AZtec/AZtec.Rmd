@@ -81,11 +81,28 @@ My current favorite report templates are
 
 ### EDS Mapping parameters
 
-#### Autolock
 
-Current parameters below...
+#### AutoLock
 
-![Autolock](img/GoodAutolock.png)
+My first reasonable set below...
+
+![AutoLock Set 1](img/GoodAutolock.png)
+
+My most recent reasonable set for a high resolution map below:
+
+![AutoLock Set 2](img/map-3-autolock-settings.png)
+
+One annoying feature of autolock is that one cannot see the autolock settings on an offline version. I tend to do a screen print of the AutoLock History in the Mini View
+
+![Autolock History](img/map-3-autolock-meas.png)
+
+and the AutoLock Progression image. Note the substantial drift that was corrected in three and a half hours.
+
+![AutoLock Progression](img/map-3-autolock-progression.png)
+
+On the AZtec system one can crop these using ``Microsoft Paint`` and store them in the ``reports`` folder. Note that this specimen was mounted on a C-coated Formvar support film on a 200 mesh grid in turn mounted on a C adhesive tab. Many microscope engineers warn that drift is bad when these tabs are used.
+
+
 
 The best discussion starts on p. 160 of the manual. It might be worth changing my tracking image to size 512 and a dwell time of 10 us. Need to see how that changes the frame time and think about a reasonable interval (they use 10 sec).
 
