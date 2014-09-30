@@ -43,6 +43,10 @@ jmg.ensureDir(imgDir)
 
 ## Alchemy...
 
+### Inverting an image
+
+I am always hunting for the invert command. it is **not** in the ``Process > Binary`` menu but rather in the ``Edit > Invert`` menu. The shortcut is ``Ctrl-Shift-I``
+
 ### Using a mu in a Jython script
 
 The usual Windows key sequence for a $\mu$ is **not** a utf-8 character. Using this gives errors in Jython scripts. Here is how to define a $\mu$
