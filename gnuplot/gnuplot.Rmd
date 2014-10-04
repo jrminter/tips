@@ -31,12 +31,13 @@ Use something like this
 # easy to comment out with #
 # set terminal postscript enhanced color "Arial" 16
 # set output "200nmNiOnCu15kV.ps"
+# proc-gnuplot.sh 200nmNiOnCu15kV
 # set terminal png
 # set terminal window
 ```
 
-One then can convert the file to pdf and crop the margins
-like this:
+Note the proc-gnuplot.sh script converts the file to pdf and crops the 
+margins like this:
 
 ```
 ps2pdf 200nmNiOnCu15kV.ps temp.pdf
