@@ -10,6 +10,30 @@ output:
 
 [Back to Index](../README.html)
 
+## Yosemite
+
+There is a significant problem passing environment variables. Nice solution posted on [stackoverflow](http://stackoverflow.com/questions/25385934/yosemite-launchd-conf-no-longer-work).
+
+You can still use launchctl setenv variablename value to set a variable so that is picked up by all applications (graphical applications started via the Dock or Spotlight, in addition to those started via the terminal).
+
+Obviously you will not want to do this every time you login.
+
+[Edit]: To avoid this, launch AppleScript Editor, enter a command like this:
+
+``do shell script "launchctl setenv variablename value"``
+
+(Use multiple lines if you want to set multiple variables)
+
+Now save (⌘+s) as File format: Application. Finally open System Settings → Users & Groups → Login Items and add your new application.
+
+[Original answer]: To work around this place all the variables you wish to define in a short shell script, then have a look at this previous answer about how to run a script on MacOS login. That way the the script will be invoked when the user logs in.
+
+Neither solution is perfect as the variables will only be set for that specific user but I am hoping/guessing that may be all you require.
+
+If you do have multiple users you could either manually set a Login Item for each of them or place a copy of com.user.loginscript.plist in each of their local Library/LaunchAgents directories, pointing at the same shell script.
+
+Granted, neither of these workarounds is as convenient as /etc/launchd.conf.
+
 ## Quick
 
 ### Fixing ``/usr/local`` permissions for ``homebrew`` and ``texlive``
