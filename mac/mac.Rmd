@@ -36,6 +36,12 @@ Granted, neither of these workarounds is as convenient as /etc/launchd.conf.
 
 ## Quick
 
+### See what the installer is doing
+
+During a recent install of the Yosemite release candidate, the intaller hung for over an hour at the "2 min left" point. Turrns out that this was a known issue on upgrade installs since it is copying files back from a recovery partition to ``/usr/local/``. With Homebrew and TeXLive installed, I had a lot there. The log is our friend...
+
+Type ``Ctrl-L`` to see the log.
+
 ### Fixing ``/usr/local`` permissions for ``homebrew`` and ``texlive``
 ```
 sudo chown -R $USER /usr/local
