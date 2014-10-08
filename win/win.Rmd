@@ -16,6 +16,8 @@ Some useful tips for windows
 Make a shortcut to ``%HOMEPATH%\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch``
 Get the icon from here ``%windir%\explorer.exe``. Leave start in blank
 
+Creat a similar shortcut of the character map ``%windir%\system32\charmap.exe``
+
 ## Use Imagemagick to convert png to pdf from the command line
 ```
 convert sample.png sample.pdf
