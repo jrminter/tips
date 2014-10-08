@@ -12,7 +12,7 @@ output:
 
 Some useful tips for windows
 
-## Create s shortcut to switch between windows in Win 7
+## Create a shortcut to switch between windows in Win 7
 Make a shortcut to ``%HOMEPATH%\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch``
 Get the icon from here ``%windir%\explorer.exe``. Leave start in blank
 
