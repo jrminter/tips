@@ -13,8 +13,7 @@ output:
 Some useful tips for windows
 
 ## Create a shortcut to switch between windows in Win 7
-Make a shortcut to ``%HOMEPATH%\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch``
-Get the icon from here ``%windir%\explorer.exe``. Leave start in blank
+Drag the shortcut from to ``%USERPROFILE%\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\Switch`` the quick launch bar.
 
 Creat a similar shortcut of the character map ``%windir%\system32\charmap.exe``
 
