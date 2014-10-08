@@ -56,6 +56,9 @@ path. The use
 convert -density 150 -geometry 100% plt.ps plt.png
 ```
 
+One can so this manually using Fiji's "Import PDF" and chosing a 200 dpi from the dialog. This is nice because one can copy an image of a ROI from which an EDS spectrum was collected and paste it into the PNG of the spectrum to make a self-contained figure.
+
+
 ## Useful DTSA Spectrum Plot hacks
 
 ```
