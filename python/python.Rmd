@@ -24,6 +24,64 @@ $ cd repo
 $ pip install -e ./
 ```
 
+### Uninstalling Python 3.4.1 on Win7 x64
+
+Following the hints below:
+
+1. I uninstalled all other installed py34 pgms
+2. Did a regedit search for ``Python 3.4.1`` and deleted all keys
+3. Did a ``Python`` search and deleted all keys
+4. Ran CCCleaner and cleaned all
+5. Deleted everything in Python34 except empty Scripts folder
+6. Restarted
+7. Ran CCCleaner and cleaned all
+8. Installed 3.4.2
+
+Not the first person to run into this problem. Found [this](http://www.gossamer-threads.com/lists/python/python/1157273)
+
+On 8/29/2014 11:26 PM, Llelan D. wrote: 
+
+> Actually, I do know more than a little about the Windows MSI service and 
+> application, and had already perused the logs to no avail. All of the 
+> listed registry keys were deleted without changing the problem. The 
+> missing file is of no importance since I already know the installation 
+> directory is deleted. It's just that the installer should normally 
+> supply that information. 
+> 
+> The error messages are Windows System errors that are being caused by 
+> requirements of the MSI installer file and not the msiexec.exe 
+> application. The problem is with how the installer is written and not 
+> the MSI system. 
+> 
+> There's always a simple answer to things like this. It's just that the 
+> simple answers are harder to find in poorly written code. 
+> 
+> I randomly poked around the registry a lot more, deleting anything I 
+> could find referring to Python34 and then the string "Python 3.4.1". I 
+> finally got desperate enough to delete the python installer entries 
+> under the Windows Installer key (the list of installed applications in 
+> the Windows "Uninstall or Change a Program" Control Panel). You know, 
+> the registry keys you are *NEVER* to use as an indication if the 
+> application is currently installed because MS constantly corrupts this 
+> list and can leave your installation in an un-installable, 
+> un-repairable, and un-removeable state? 
+> 
+> Well it worked. The Python installer no longer sees the application as 
+> installed and happily performs a full installation. I did that, a full 
+> removal to get rid of any other problems, and a clean installation and 
+> everything works fine now. 
+> 
+> This installer is seriously screwed up and desperately needs a re-write. 
+> It should use its own key to indicate whether the application is 
+> installed but should not depend on it in case of a partially 
+> installed/removed state, should not require any installed file to fully 
+> repair or remove the application, and should query the user if any 
+> information required is missing from the installation or registry. In 
+> other words, the normal MSI installer guidelines. 
+> 
+> I hope this is of help to someone out there. 
+
+
 ### Creating the default ipython profiles
 
 Clean out any old ones
