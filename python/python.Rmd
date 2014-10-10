@@ -28,7 +28,7 @@ $ pip install -e ./
 
 Following the hints below:
 
-1. I uninstalled all other installed py34 pgms
+1. I uninstalled all other installed py34 pgms. Uninstalled 3.4.1. Failed.
 2. Did a regedit search for ``Python 3.4.1`` and deleted all keys
 3. Did a ``Python`` search and deleted all keys
 4. Ran CCCleaner and cleaned all
