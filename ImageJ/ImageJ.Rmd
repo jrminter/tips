@@ -49,11 +49,17 @@ I am always hunting for the invert command. it is **not** in the ``Process > Bin
 
 ### Using a mu in a Jython script
 
+[Stackexchange](http://tex.stackexchange.com/questions/33965/siunitx-%C2%B5-doesnt-work) helped!!!
+
 The usual Windows key sequence for a $\mu$ is **not** a utf-8 character. Using this gives errors in Jython scripts. Here is how to define a $\mu$
 as a utf-8 character:
 
+
 ```
-a = [0xCE, 0xBC]
+# DO NOT use GREEK SMALL LETTER MU
+# a = [0xCE, 0xBC]
+# DO USE MICRO SIGN
+a = [0xC2, 0xB5]
 mu = "".join([chr(c) for c in a]).decode('UTF-8')
 units  = mu+"m"
 ```
