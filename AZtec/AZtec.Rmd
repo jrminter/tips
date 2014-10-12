@@ -12,6 +12,51 @@ This documents contains hints that I find helpul when using the Oxford AZtec 2.2
 
 [Back to Index](../README.html)
 
+### Exporting maps and making montages
+
+I like tightly-montaged maps with the ability to crop regions of interest. Here is the current procedure I use. The export of the PNG files is kludgy - I need to try to write an AutoIT to script. This keeps the raw images in the ``$EDS_ROOT/Oxford/ProjName/reports/map-name/png`` tree where I cannot use version control (AZtec projects fail to open...) and the python scripts and report images in the ``$HOME/work/proj/QM14-NN-MM-Client/`` tree where I do use version control (``git``). **Note:** the scripts below use functions from ``jmFijiGen.py`` which must be in ``$FIJI_ROOT/jars/Lib/``.
+
+1. **Set the maps to have consistent colors**. I have some suggestions below. This is most easily accomplished from the ``Summary View``.
+
+2. **Record the full width of the ROI**. From the ``Interactive View``, select a map, right click and select ``Details``. Record the ``Resolution (Width)`` (px) and ``Image (width)`` (typically $\mu m$).
+
+3. **Export PNG images of the maps**. This is most easily done from the ``Interactive View``. You will typically want to export maps at either the ``Resolution (Width)`` or half that value. From the ``Interactive View``, click on the desired map, right click, select ``Export``, pull-right and select ``Settings``. Typically, one just wants ``Keep Aspect Ratio`` checked and the desired width. See the image below. I prefer to burn scale bars and annotations on the montage with Fiji/ImageJ. 
+
+![Export-Settings](img/Export-Settings.png)
+
+4. **Choose ``Save As``**, navigate to a folder you created in ``$EDS_ROOT/Oxford/ProjName/reports/map-name/png`` and save the image with a name like ``1-CK.png``. Repeat this for all the other maps and the final image of the ROI, like ``6-ROI.png``. Note, one might want extracted spectra ROIs on the ROI image...
+
+5. **Create a ``py`` folder** in ``$HOME/work/proj/QM14-NN-MM-Client/py/Fiji`` and make a copy of ``$GIT_HOME/OSImageAnalysis/ImageJ/macros/py/makeMapMontagesPd-8-1_.py`` in the folder with a name appropriate for your map, i.e. ``makeMapMontagesSampID7kVMap1_.py``
+
+6. **Edit the file paths** to point to your map in the ``$EDS_ROOT`` folder tree and to the project folder in the ``$HOME/work/proj/QM14-NN-MM-Client/Sweave/inc/png`` tree.
+
+7. **Edit the list of image names. Note:** This list fills from left to right from the top row.
+
+```
+lNames  = ["2-OK","3-CuL","6-PK","7-PdL","8-AgL","9-ROI"]
+```
+
+8. **Edit the calibration info:** 
+
+```
+#        sz   w-px  um
+lCal = [1.45, 512, -6]
+```
+
+9. **Decide if you want a crop.** You can see the points in the ImageJ window when a rectangle is drawn on the screen.
+
+```
+# now crop a ROI
+#       x0  y0  w   h
+lCr  = [200,30,200,220]
+```
+
+10. **Run the montage program.** Make sure you get what you want.
+
+11. **Add a scale bar.** Use the ``Cookbook > Annotating Images > Add Scale Bar`` tool.
+
+12. **Annotate the map.** Use the ``Text Tool``. Save the annotated map, ``qm-0nnnn-sampID7kVMap1-ann.png``, in the ``$HOME/work/proj/QM14-NN-MM-Client/Sweave/inc/png`` tree.
+
 ### Preferred colors for maps
 
 It helps to have consistent colors for maps. *N.B.* there are issues with R/G colorblindness here....
