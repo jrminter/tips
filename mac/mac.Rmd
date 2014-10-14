@@ -145,7 +145,31 @@ These are best set in ``.profile``
 
 ### For a clean Install
 
-From [Christina Warren](http://mashable.com/2013/10/23/clean-install-os-x-mavericks/) and [Ed Rhee](http://howto.cnet.com/8301-11310_39-57608836-285/how-to-create-a-bootable-os-x-mavericks-usb-install-drive/)
+#### First, [Apple's version](http://support.apple.com/kb/HT5856)
+
+With OS X Mavericks, you can create a bootable OS X installer which can be used to install the operating system while started from removable media, such as a USB flash drive.
+
+Before being able to create a bootable OS X installer, you'll need to do the following first:
+
+1. Use the Mac App Store to download the OS X installer app.
+2. Mount the volume you wish to convert into a bootable installer. This could be removable media such as a USB flash drive or a secondary internal partition.
+3. You can then use the ``createinstallmedia`` tool to convert the volume from step two into a bootable installer based off the installer app from step one. To learn how to use ``createinstallmedia``, use the following command in ``Terminal``:
+
+```
+/Applications/Install\ OS\ X\ Mavericks.app/Contents/Resources/createinstallmedia
+```
+
+For example, assuming you have a volume mounted at ``/Volumes/MyVolume`` and the OS X installer app is at ``/Applications/Install\ OS\ X\ Mavericks.app`` you could erase ``/Volumes/MyVolume`` and convert it into a bootable installer with this command:
+
+```
+sudo /Applications/Install\ OS\ X\ Mavericks.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume --applicationpath /Applications/Install\ OS\ X\ Mavericks.app
+```
+
+You may need to adjust the path to the OS X installer app in the above command.
+
+***Note:*** ``createinstallmedia`` is an advanced option for system administrators and as such, requires some knowledge of the command line in order to be used properly. It is only intended to be used with the version of OS X installer app it came with.
+
+#### From [Christina Warren](http://mashable.com/2013/10/23/clean-install-os-x-mavericks/) and [Ed Rhee](http://howto.cnet.com/8301-11310_39-57608836-285/how-to-create-a-bootable-os-x-mavericks-usb-install-drive/)
 
 Creating an OS X USB installer from the App Store download hasn't been very straightforward in the past, and the old methods no longer work for OS X 10.9. However, there's a new Apple utility with Mavericks that makes it relatively simple, and thanks to MacForums member, tywebb13, we know how to use it. With a USB installer, you'll be able to perform a clean installation of Mavericks whenever you want and without having to download it again from the App Store. Here's how to create a bootable OS X Mavericks install drive:
 
