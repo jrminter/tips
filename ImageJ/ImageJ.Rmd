@@ -40,6 +40,26 @@ import jmFijiGen as jmg
 jmg.ensureDir(imgDir)
 ```
 
+## Extended depth of field
+
+I wanted a substitute foe analySIS Five's ``Extended Focus Imaging``. ImageJ/Fiji has some helpful plugins. To date I have not been able to script them...
+
+#### Test Images
+
+I have a test image stacck (pre-aligned) in ``$GIT_HOME/OSImageAnalysis/images/extended-depth-of-field/Mattheddleite/Mattheddleite-jm-cr-align-stack.tif``.
+#### Procedure
+1. Load all the TIF images. Crop them to the same side if need be.
+2. Convert the loaded images to a stack (``Image > Stacks > Images to Stack``).
+3. Align the images in the stack. (``Plugins > Registration > StackReg``). I choose the ``Translation`` option.
+4. Process the aligned stack with (``Plugins > Process > Extended Depth of Field (Expert Mode)``). One can set the menus as below and ``Save settings``. In future runs, one can ``Load settings``.
+
+![1](./png/1-EDF-Menu.png)
+
+![2](./png/2-Color-Menu.png)
+
+![3](./png/3-PostProcess.png)
+
+
 
 ## Alchemy...
 
