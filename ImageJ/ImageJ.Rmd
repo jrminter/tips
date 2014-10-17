@@ -47,7 +47,9 @@ I wanted a substitute foe analySIS Five's ``Extended Focus Imaging``. ImageJ/Fij
 #### Test Images
 
 I have a test image stacck (pre-aligned) in ``$GIT_HOME/OSImageAnalysis/images/extended-depth-of-field/Mattheddleite/Mattheddleite-jm-cr-align-stack.tif``.
+
 #### Procedure
+
 1. Load all the TIF images. Crop them to the same side if need be.
 2. Convert the loaded images to a stack (``Image > Stacks > Images to Stack``).
 3. Align the images in the stack. (``Plugins > Registration > StackReg``). I choose the ``Translation`` option.
