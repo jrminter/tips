@@ -141,6 +141,14 @@ Note how this uses ``csh`` syntax...
 ## Personal environment variables
 These are best set in ``.profile``
 
+## Prework for Yosemite
+
+Create an install disk. I did this after download
+
+```
+sudo /Applications/Install\ OS\ X\ Yosemite.app/Contents/Resources/createinstallmedia --volume /Volumes/Mac\ OS\ X\ Install\ ESD --applicationpath /Applications/Install\ OS\ X\ Yosemite.app --nointeraction
+```
+
 ## Prework for Mavericks
 
 ### For a clean Install
