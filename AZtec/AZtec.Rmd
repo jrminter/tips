@@ -100,20 +100,20 @@ The 12 major colors of the color wheel, at 30 degree intervals on the HSV color 
 
 
 
-|color            | degrees|
-|-----------------|-------:|
-|red              |    0   |
-|orange           |   30   |
-|yellow           |   60   |
-|chartreuse green |   90   |
-|green            |  120   |
-|spring green     |  150   |
-|cyan             |  180   |
-|azure            |  210   |
-|blue             |  240   |
-|violet           |  270   |
-|magenta          |  300   |
-|rose             |  330   |
+|color            | degrees|  R  |  G  |  B  |
+|-----------------|-------:|----:|----:|----:|
+|red              |    0   | 255 |   0 |   0 |
+|orange           |   30   | 255 | 127 |   0 |
+|yellow           |   60   | 255 | 255 |   0 |
+|chartreuse green |   90   | 127 | 255 |   0 |
+|green            |  120   |   0 | 255 |   0 |
+|spring green     |  150   |   0 | 255 | 127 |
+|cyan             |  180   |   0 | 255 | 255 |
+|azure            |  210   |   0 | 127 | 255 |
+|blue             |  240   |   0 |   0 | 255 |
+|violet           |  270   | 127 |   0 | 255 |
+|magenta          |  300   | 255 |   0 | 255 |
+|rose             |  330   | 255 |   0 | 127 |
 
 
 This constitutes the complete set of primary, secondary, and tertiary color names.
