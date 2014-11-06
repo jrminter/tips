@@ -39,10 +39,71 @@ codecs.setDefaultEncoding('utf-8')
 import jmFijiGen as jmg
 jmg.ensureDir(imgDir)
 ```
+5. Converting integers to bytes. Think I found this idea from Albert Cardona. Here it is encapsulated as a useful function
+
+```
+def i2b(i):
+  """def i2b(i)
+  Convert an integer to a byte. Useful for LUTs."""
+  if i > 127:
+    i -= 256
+  if i < -128:
+    i = 128
+  return i
+```
+
+I wanted to use a hue-based LUT for X-ray maps.
+
+First we need and HSV to RGB function. I found that this worked
+
+```
+from colorsys import hsv_to_rgb
+def hueDegToRGBCol(hue):
+  """hueDegToRGBCol(hue)
+  Convert a hue balue (0 to 360 degrees) to an RGB color.
+  Useful for LUTs."""
+  h = hue / 360.
+  [r, g, b] =  hsv_to_rgb(h, 1.0, 1.0)
+  ret = [255.0*r, 255.0*g, 255.0*b]
+  return ret
+```
+
+And put it all together with
+
+```
+def applyHueLUT(imp, hueDeg, gamma=1.0):
+  """applyHueLUT(imp, hueDeg, gamma=1.0)
+  Create and a apply a LUT to an ImagePlus where the maximum intensity corresponds to
+  the hue specified by hueDeg. Optionally apply a gamma.
+  Input Parameters
+  imp - the ImagePlus
+  hueDeg - the hue angle, in degrees, from 0 to 360
+  gamma  - an optional gamma correction, defaults to 1.0
+  Returns
+  an ImagePlus with the new LUT applied"""
+  ret = imp.duplicate()
+  r, g, b = hueDegToRGBCol(hueDeg)
+  print(r,g,b)
+  ra = jarray.zeros(256, 'b')
+  ga = jarray.zeros(256, 'b')
+  ba = jarray.zeros(256, 'b')
+  
+  for i in range(256):
+    ra[i] = i2b(int(round(r*pow(float(i)/256., gamma))))
+    ga[i] = i2b(int(round(g*pow(float(i)/256., gamma))))
+    ba[i] = i2b(int(round(b*pow(float(i)/256., gamma))))
+
+  lut = LUT(ra, ga, ba)
+  ip = ret.getProcessor() 
+  ip.setLut(lut)
+  ret.updateImage() 
+  
+  return ret
+```
 
 ## Extended depth of field
 
-I wanted a substitute foe analySIS Five's ``Extended Focus Imaging``. ImageJ/Fiji has some helpful plugins. To date I have not been able to script them...
+I wanted a substitute for analySIS Five's ``Extended Focus Imaging``. ImageJ/Fiji has some helpful plugins. To date I have not been able to script them...
 
 #### Test Images
 
