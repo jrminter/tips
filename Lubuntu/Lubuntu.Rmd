@@ -1,0 +1,30 @@
+---
+title: "John Minter's Lubuntu Tips"
+author: "J. R. Minter"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    theme: united
+    highlight: pygments
+---
+
+[Back to Index](../README.html)
+
+Lubuntu is a light-weight Ubuntu distribution based upon LDXE.
+
+
+### Creating a quick launcher
+
+From [askubuntu.com](http://askubuntu.com/questions/466395/how-can-i-create-a-quick-launcher-in-lubuntu). I used this to set one up for DTSA-II Halley.
+
+Run in terminal
+
+```
+lxshortcut -o ~/Desktop/myLauncher
+```
+
+
+
+
+
+[Back to Index](../README.html)
