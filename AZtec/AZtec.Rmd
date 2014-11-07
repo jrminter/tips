@@ -8,54 +8,52 @@ output:
     highlight: pygments
 ---
 
-This documents contains hints that I find helpul when using the Oxford AZtec 2.2 Software.
+This documents contains hints that I find helpful when using the Oxford AZtec 2.2 Software.
 
 [Back to Index](../README.html)
 
 ### Exporting maps and making montages
 
-I like tightly-montaged maps with the ability to crop regions of interest. Here is the current procedure I use. The export of the PNG files is kludgy - I need to try to write an AutoIT to script. This keeps the raw images in the ``$EDS_ROOT/Oxford/ProjName/reports/map-name/png`` tree where I cannot use version control (AZtec projects fail to open...) and the python scripts and report images in the ``$HOME/work/proj/QM14-NN-MM-Client/`` tree where I do use version control (``git``). **Note:** the scripts below use functions from ``jmFijiGen.py`` which must be in ``$FIJI_ROOT/jars/Lib/``.
+I like tightly-stitched maps with the ability to crop regions of interest. Here is the current procedure I use. The export of the PNG files is kludgy - I need to try to write an AutoIT to script. This keeps the raw images in the ``$EDS_ROOT/Oxford/ProjName/reports/map-name/png`` tree where I cannot use version control (AZtec projects fail to open...) and the python scripts and report images in the ``$HOME/work/proj/QM14-NN-MM-Client/`` tree where I do use version control (``git``). **Note:** the scripts below use functions from ``jmFijiGen.py`` which must be in ``$FIJI_ROOT/jars/Lib/``.
 
-1. **Set the maps to have consistent colors**. I have some suggestions below. This is most easily accomplished from the ``Summary View``.
-
-2. **Record the full width of the ROI**. From the ``Interactive View``, select a map, right click and select ``Details``. Record the ``Resolution (Width)`` (px) and ``Image (width)`` (typically $\mu m$).
-
-3. **Export PNG images of the maps**. This is most easily done from the ``Interactive View``. You will typically want to export maps at either the ``Resolution (Width)`` or half that value. From the ``Interactive View``, click on the desired map, right click, select ``Export``, pull-right and select ``Settings``. Typically, one just wants ``Keep Aspect Ratio`` checked and the desired width. See the image below. I prefer to burn scale bars and annotations on the montage with Fiji/ImageJ. 
-
-![Export-Settings](img/Export-Settings.png)
-
-4. **Choose ``Save As``**, navigate to a folder you created in ``$EDS_ROOT/Oxford/ProjName/reports/map-name/png`` and save the image with a name like ``1-CK.png``. Repeat this for all the other maps and the final image of the ROI, like ``6-ROI.png``. Note, one might want extracted spectra ROIs on the ROI image...
-
-5. **Create a ``py`` folder** in ``$HOME/work/proj/QM14-NN-MM-Client/py/Fiji`` and make a copy of ``$GIT_HOME/OSImageAnalysis/ImageJ/macros/py/makeMapMontagesPd-8-1_.py`` in the folder with a name appropriate for your map, i.e. ``makeMapMontagesSampID7kVMap1_.py``
-
-6. **Edit the file paths** to point to your map in the ``$EDS_ROOT`` folder tree and to the project folder in the ``$HOME/work/proj/QM14-NN-MM-Client/Sweave/inc/png`` tree.
-
-7. **Edit the list of image names. Note:** This list fills from left to right from the top row.
+1. **Set the maps to have consistent colors**. I have some suggestions below. This is most easily accomplished from the ``Summary View``. One may export these as '.png' files but the brightness/contrast/gain mapping are done with point and click. It is better to record a lists of names, hue values, and gammas for the newer scripts. An example is shown below. **Note:** the -1 value for hue is a flag not to run the LUT change routine.
 
 ```
-lNames  = ["2-OK","3-CuL","6-PK","7-PdL","8-AgL","9-ROI"]
+lName   = ["N-K","O-K","Cu-L", "P-K", "Na-K","Cl-K", "Pd-L", "Ag-L", "ROI"]
+lHue    = [    0,  120,   180,   150,   210,    90,     60,     30 , -1   ]
+lGamma  = [  1.0,  1.0,   1.0,   1.0,   1.0,   1.0,    1.0,    1.0 , 1.0  ]
+
 ```
 
-8. **Edit the calibration info:** 
+2. **Record the full width of the ROI**. From the ``Interactive View``, select a map, right click and select ``Details``. Record the ``Resolution (Width)`` (px) and ``Image (width)`` (typically $\mu m$). For maps processed with the new ImageJ scripts, one wants this type of detail for the scripts
 
 ```
 #        sz   w-px  um
-lCal = [1.45, 512, -6]
+lCal = [116., 1024, -6]
 ```
 
-9. **Decide if you want a crop.** You can see the points in the ImageJ window when a rectangle is drawn on the screen.
+3. **Export images of the maps**. 
 
-```
-# now crop a ROI
-#       x0  y0  w   h
-lCr  = [200,30,200,220]
-```
+a. **Preferred way** Export ``Data Only`` as  **TIF** files. This is preferred because one gets 16 bit data and can map it with a script. Sometimes if you used a ROI during acquisition, the microscope image is not exactly the same size as the others. You may have to use the GUI (as shown below) for that image. In this case you will un-click the keep aspect ratio box and enter the desired values. Grrr.....
 
-10. **Run the montage program.** Make sure you get what you want.
+b. **Use Gui** This requires a lot of point and click and you get what AZtec shows. It is is most easily done from the ``Interactive View``. You will typically want to export maps at either the ``Resolution (Width)`` or half that value. From the ``Interactive View``, click on the desired map, right click, select ``Export``, pull-right and select ``Settings``. Typically, one just wants ``Keep Aspect Ratio`` checked and the desired width. See the image below. I prefer to burn scale bars and annotations on the montage with Fiji/ImageJ. Save these as **PNG** files (loss-less compression) 
+![Export-Settings](img/Export-Settings.png)
+**Choose ``Save As``**, navigate to a folder you created in ``$EDS_ROOT/Oxford/ProjName/reports/map-name/png`` and save the image with a name like ``1-CK.png``. Repeat this for all the other maps and the final image of the ROI, like ``6-ROI.png``. Note, one might want extracted spectra ROIs on the ROI image...
 
-11. **Add a scale bar.** Use the ``Cookbook > Annotating Images > Add Scale Bar`` tool.
+4. **Create a ``py`` folder** in ``$HOME/work/proj/QM14-NN-MM-Client/py/Fiji`` and make a copy of ``$GIT_HOME/OSImageAnalysis/ImageJ/macros/py/maps/01-Prep-qm-04219-49G003-188-7kV-map-1.py`` in the folder with a name appropriate for your map, i.e. ``01-Prep-qm-nnnnn-samp-id-7kV-map-1.py`` and a copy of ``$GIT_HOME/OSImageAnalysis/ImageJ/macros/py/maps/02-montage-qm-04219-49G003-188-7kV-map-1.py``with an appropriate name.
 
-12. **Annotate the map.** Use the ``Text Tool``. Save the annotated map, ``qm-0nnnn-sampID7kVMap1-ann.png``, in the ``$HOME/work/proj/QM14-NN-MM-Client/Sweave/inc/png`` tree.
+6. **Edit the file paths** to point to your map in the ``$EDS_ROOT`` folder tree and to the project folder in the ``$HOME/work/proj/QM14-NN-MM-Client/Sweave/inc/png`` tree.
+
+7. **Edit the configuration info from step 2.  Note:** The name list fills from left to right from the top row.
+
+
+8. **Run the prep script.** Make sure you get the intensity mapping that you want and are pleased with the display.
+
+9. **Run the montage program** This will give you a calibrated image.
+
+10. **Add a scale bar.** Use the ``Cookbook > Annotating Images > Add Scale Bar`` tool.
+
+11. **Annotate the map.** Use the ``Text Tool``. Save the annotated map, ``qm-0nnnn-sampID7kVMap1-ann.png``, in the ``$HOME/work/proj/QM14-NN-MM-Client/Sweave/inc/png`` tree.
 
 ### Preferred colors for maps
 
@@ -100,20 +98,20 @@ The 12 major colors of the color wheel, at 30 degree intervals on the HSV color 
 
 
 
-|color            | degrees|  R  |  G  |  B  |
-|-----------------|-------:|----:|----:|----:|
-|red              |    0   | 255 |   0 |   0 |
-|orange           |   30   | 255 | 127 |   0 |
-|yellow           |   60   | 255 | 255 |   0 |
-|chartreuse green |   90   | 127 | 255 |   0 |
-|green            |  120   |   0 | 255 |   0 |
-|spring green     |  150   |   0 | 255 | 127 |
-|cyan             |  180   |   0 | 255 | 255 |
-|azure            |  210   |   0 | 127 | 255 |
-|blue             |  240   |   0 |   0 | 255 |
-|violet           |  270   | 127 |   0 | 255 |
-|magenta          |  300   | 255 |   0 | 255 |
-|rose             |  330   | 255 |   0 | 127 |
+|color            | degrees|
+|-----------------|-------:|
+|red              |    0   |
+|orange           |   30   |
+|yellow           |   60   |
+|chartreuse green |   90   |
+|green            |  120   |
+|spring green     |  150   |
+|cyan             |  180   |
+|azure            |  210   |
+|blue             |  240   |
+|violet           |  270   |
+|magenta          |  300   |
+|rose             |  330   |
 
 
 This constitutes the complete set of primary, secondary, and tertiary color names.
@@ -137,7 +135,7 @@ My most recent reasonable set for a high resolution map below:
 
 ![AutoLock Set 2](img/map-3-autolock-settings.png)
 
-One annoying feature of autolock is that one cannot see the autolock settings on an offline version. I tend to do a screen print of the AutoLock History in the Mini View
+One annoying feature of Auto-Lock is that one cannot see the Auto-Lock settings on an offline version. I tend to do a screen print of the AutoLock History in the Mini View
 
 ![Autolock History](img/map-3-autolock-meas.png)
 
@@ -160,7 +158,7 @@ The best discussion starts on p. 160 of the manual. It might be worth changing m
 2. Note the ``Resolution (Width)`` (e.g. 1024 px) and the ``Image Width`` (e.g. 193 $\mu$m). You may want to note the ``Magnification`` as well...
 3. Again for the map you want, right click and select ``Export >> Settings``. Leave ``Keep Aspect Ratio``checked and turn off what you don't want. Set to the resolution you want (i.e. 1024) and then press ``Save As...``
 
-## A better proposed stategy for probe current proxy measurements
+## A better proposed strategy for probe current proxy measurements
 
 ### The basic idea
  
