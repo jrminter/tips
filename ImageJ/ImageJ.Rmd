@@ -39,7 +39,11 @@ codecs.setDefaultEncoding('utf-8')
 import jmFijiGen as jmg
 jmg.ensureDir(imgDir)
 ```
-5. Converting integers to bytes. Think I found this idea from Albert Cardona. Here it is encapsulated as a useful function
+5. Converting integers to bytes. Wayne Rasband notes:
+
+>  Java's byte data type is signed and has values ranging from – 128 to 127.
+
+Think I found this idea from Albert Cardona. Here it is encapsulated as a useful function
 
 ```
 def i2b(i):
