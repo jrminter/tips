@@ -23,8 +23,44 @@ Run in terminal
 lxshortcut -o ~/Desktop/myLauncher
 ```
 
+### Configuring proxy servers
+
+from [askubuntu]( http://askubuntu.com/questions/175172/how-do-i-configure-proxies-in-ubuntu-server-or-minimal-cli-ubuntu)
 
 
+ System-wide proxies in CLI Ubuntu/Server must be set as environment variables.
+
+ Open the ``/etc/environment`` file with vi (or your favorite editor). This file stores the system-wide variables initialized upon boot. Add the following lines, modifying appropriately. You must duplicate in both upper-case and lower-case because (unfortunately) some programs only look for one or the other:
+ 
+```
+http_proxy="http://proxy1.kodak.com:81/"    
+https_proxy="http://proxy1.kodak.com:81/"    
+ftp_proxy="http://proxy1.kodak.com:81/"    
+no_proxy="localhost,127.0.0.1,localaddress,.kodak.com"    
+HTTP_PROXY="http://proxy1.kodak.com:81/"    
+HTTPS_PROXY="http://proxy1.kodak.com:81/"    
+FTP_PROXY="http://proxy1.kodak.com:81/"    
+NO_PROXY="localhost,127.0.0.1,localaddress,.kodak.com"    
+``` 
+ 
+ 
+ ``apt-get``, ``aptitude``, etc. will not obey the environment variables when used normally with sudo. So separately configure them; create a file called ``95proxies`` in ``/etc/apt/apt.conf.d/``, and include the following:
+
+```
+Acquire::http::proxy "http://proxy1.kodak.com:81/";
+Acquire::ftp::proxy "ftp://proxy1.kodak.com:81/";
+Acquire::https::proxy "https://proxy1.kodak.com:81/";
+```
+ 
+Finally, logout and reboot to make sure the changes take effect.
+ 
+ 
+### Other
+
+[Ubuntu cleanup](http://www.stchman.com/cleanup.html)
+ 
+ 
+[Fresh Install](http://www.noah.org/wiki/Ubuntu_Fresh_Install)
 
 
 [Back to Index](../README.html)

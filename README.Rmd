@@ -36,6 +36,8 @@ Topic
 
 [iOS](./iOS/iOS.html)
 
+[Lubuntu](./Lubuntu/Lubuntu.html)
+
 [mac](./mac/mac.html)
 
 [maintaining legacy equipment](./legacy/Legacy.html)
