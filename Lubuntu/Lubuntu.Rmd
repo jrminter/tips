@@ -55,6 +55,10 @@ Acquire::https::proxy "https://proxy1.kodak.com:81/";
 ```
  
 Finally, logout and reboot to make sure the changes take effect.
+
+### For R
+
+See [Cran's Ubuntu page](http://cran.rstudio.com/bin/linux/ubuntu/)
  
  
 ### Other
