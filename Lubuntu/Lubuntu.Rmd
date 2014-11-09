@@ -10,7 +10,9 @@ output:
 
 [Back to Index](../README.html)
 
-Lubuntu is a light-weight Ubuntu distribution based upon LDXE.
+Lubuntu is a light-weight Ubuntu distribution based upon [LDXE](http://wiki.lxde.org/en/Main_Page).
+
+The Lubuntu Community documentation is [here](https://help.ubuntu.com/community/Lubuntu/Documentation). Note the [Editing the Menu](https://help.ubuntu.com/community/Lubuntu/Documentation/EditingTheMenu) Section.
 
 
 ### Creating a quick launcher
