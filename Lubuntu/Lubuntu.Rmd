@@ -66,6 +66,15 @@ add to ``/etc/apt/sources``
 deb http://mirrors.rit.edu/CRAN/bin/linux/ubuntu trusty/
 ```
 
+Then run
+```
+gpg --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E084DAB9
+gpg -a --export E084DAB9 | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install r-base
+sudo apt-get install r-base-dev
+```
+
 ### Other
 
 [Ubuntu cleanup](http://www.stchman.com/cleanup.html)
