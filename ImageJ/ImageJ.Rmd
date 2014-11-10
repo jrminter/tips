@@ -21,6 +21,21 @@ The ``Cookbook > Annotating images > Add Scale bar`` choice from the menu opens 
 
 [Stowers Research Institute](http://research.stowers.org/imagejplugins/)
 
+## Plugin performance
+
+Java seems most efficient... Apparently written in 2005, [Hartenstein](https://www.mcdb.ucla.edu/Research/Hartenstein/software/imagej/other_plugins.html), of UCLA, cites these performance comparisons from a series of  ``Add Noise`` plug-ins by Albert Cardona performing operations on a 600x900 px image. I have archived copies of these in ``$GIT_HOME//OSImageAnalysis/ImageJ/Cardona-Language-Benchmarks``.
+
+1. [Add_Noise.java](https://www.mcdb.ucla.edu/Research/Hartenstein/software/imagej/Add_Noise.java) 1-2 sec.
+2. [Add_Noise.txt](https://www.mcdb.ucla.edu/Research/Hartenstein/software/imagej/Add_Noise.txt) 12 sec
+3. [Add_Noise_1.py](https://www.mcdb.ucla.edu/Research/Hartenstein/software/imagej/Add_Noise_1.py) 15 sec (pythonesque version using java.util.Random)
+4. [Add_Noise.py](https://www.mcdb.ucla.edu/Research/Hartenstein/software/imagej/Add_Noise.py) 44 sec (macro-like version, but using python's random.randint() function)
+
+All this plugin/macro/script does is to duplicate the current image, get one pixel at a time and add random noise to it.
+The ImageJ builtin macro language is certainly more specific to ImageJ and thus goes through less clutter than the more generalistic jython interpreter. Still a 4x in execution time is quite astonishing. Luckily enough the biggest different is made when using the java.util.Random class instead of python'rs 'random' module.
+Note that the complexity of the 3 files is quite similar, both in terms of length and in assumptions about the system. Thus the coder needs to learn several conventions before writing any of the 3 versions of this program. Stay with java plugins if speed matters to your program!
+Jython though really pays off when properly optimized, and it's particularly useful to make GUIs in no time.
+
+
 ## Reproducible Jython Scripting
 
 For a couple of years I have been trying to follow the ``DRY`` process (Don't Repeat Yourself) for more reproducible Jython scripting with DTSA. Recently I have been migrating my ImageJ scripts to Jython to use with Fiji. I just learned how import user functions...
