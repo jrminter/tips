@@ -59,8 +59,13 @@ Finally, logout and reboot to make sure the changes take effect.
 ### For R
 
 See [Cran's Ubuntu page](http://cran.rstudio.com/bin/linux/ubuntu/)
- 
- 
+
+add to ``/etc/apt/sources``
+
+```
+deb http://mirrors.rit.edu/CRAN/bin/linux/ubuntu trusty/
+```
+
 ### Other
 
 [Ubuntu cleanup](http://www.stchman.com/cleanup.html)

@@ -38,7 +38,7 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 2. Once the, image is acquired, select spot, line or matrix type from Location menu. Click on the EDAX image area to select the spot, line or matrix locations    
 ![menu](img/loca-menu.png)   
-desired for analysis, then click on the !['S'](img/s.png) toolbar button to save each location.
+desired for analysis, then click on the !['S'](img/S.png) toolbar button to save each location.
 
 3. Click on Table under the Location menu. The location table will display all selected X, Y coordinate data. At this point you can edit the number of points for the line (No-X) or matrix (No-X and No-Y).
 
