@@ -92,6 +92,21 @@ sudo apt-get install r-base-dev
 
 ### Check a disk for bad blocks
 
+#### Smartmontools
+
+[Smartmontools](https://help.ubuntu.com/community/Smartmontools)
+
+Smartmontools is a set of applications that can test hard drives and read their hardware SMART statistics. Note: SMART data may not accurately predict future drive failure, however abnormal error rates may be an indication of possible hardware failure or data inconsistency.
+
+The most useful test is the extended test (long). You can initiate the test by typing:
+
+```
+sudo smartctl -t long /dev/sda 
+
+```
+
+#### badblocks
+
 From [tech Hacks](http://tech.chandrahasa.com/2013/06/09/how-to-check-your-hard-disk-for-bad-blocks-in-ubuntu/)
 
 If your system regularly does disk checks or scan disks on boot up and if it often finds errors during the check, its highly possible that you have bad sectors on your hard disk.  In such cases its highly recommended to do a disk check to detect if you have bad sectors on the disk.
