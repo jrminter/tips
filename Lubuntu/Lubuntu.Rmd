@@ -14,7 +14,22 @@ Lubuntu is a light-weight Ubuntu distribution based upon [LDXE](http://wiki.lxde
 
 The Lubuntu Community documentation is [here](https://help.ubuntu.com/community/Lubuntu/Documentation). Note the [Editing the Menu](https://help.ubuntu.com/community/Lubuntu/Documentation/EditingTheMenu) Section.
 
+### Install a .deb file
 
+From [askubuntu](http://
+askubuntu.com/questions/40779/how-do-i-install-a-deb-file-via-the-command-line)
+
+Install
+
+```
+sudo dpkg -i DEB_PACKAGE
+```
+
+Remove
+
+```
+sudo dpkg -r PACKAGE_NAME
+```
 ### Creating a quick launcher
 
 From [askubuntu.com](http://askubuntu.com/questions/466395/how-can-i-create-a-quick-launcher-in-lubuntu). I used this to set one up for DTSA-II Halley.
