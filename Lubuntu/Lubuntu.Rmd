@@ -90,6 +90,50 @@ sudo apt-get install r-base
 sudo apt-get install r-base-dev
 ```
 
+### Check a disk for bad blocks
+
+From [tech Hacks](http://tech.chandrahasa.com/2013/06/09/how-to-check-your-hard-disk-for-bad-blocks-in-ubuntu/)
+
+If your system regularly does disk checks or scan disks on boot up and if it often finds errors during the check, its highly possible that you have bad sectors on your hard disk.  In such cases its highly recommended to do a disk check to detect if you have bad sectors on the disk.
+
+What is a bad sector? A bad sector is a sector on a computer’s disk drive or flash memory that cannot be used due to permanent damage (or an OS inability to successfully access it), such as physical damage to the disk surface (or sometimes sectors being stuck in a magnetic or digital state that cannot be reversed) or failed flash memory transistors.
+
+The simplest way to do a check on a disk is to use the badblocks command from the command line in Linux. Here is how to check a disk partition(in this case /dev/sdc1) for errors:
+
+```
+sudo badblocks -v /dev/sdc1
+```
+
+The output will be in the following format:
+
+```
+tech@hacks:~$ sudo badblocks -v /dev/sdc1
+Checking blocks 0 to 130954239
+Checking for bad blocks (read-only test): 5621828 done, 3:37 elapsed
+5621860 done, 8:43 elapsed
+5621861 done, 13:25 elapsed
+5621862 done, 17:57 elapsed
+done
+Pass completed, 4 bad blocks found.
+```
+
+
+If you find bad sectors it usually means its time to change your disk. The situation will most probably get worse over time, but there is a tiny possibility that these are false positives(mostly coz of problems elsewhere in the system). The alternative option is to mark these blocks as badblocks and tell your system to not write any data there. This will surely buy you some more life of the disk.
+
+Note: The second option is cheaper(takes a bit of time though) and effective way of finding over time if your disk really had errors but if your data is very important to you, please back it up elsewhere or you risk losing it.
+
+First we have to write the location of the bad sectors into a file.
+
+```
+sudo badblocks /dev/sdc > /home/hacks/bad-blocks
+```
+
+After that, we need to feed the file into the FSCK command to mark these bad sectors as 'unusable' sectors.
+
+```
+sudo fsck -l bad-blocks /dev/sdc
+```
+
 ### Other
 
 [Ubuntu cleanup](http://www.stchman.com/cleanup.html)
