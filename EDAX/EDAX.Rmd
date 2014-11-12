@@ -83,4 +83,22 @@ larger Title bar.
 - Select from the Item Drop Down list "Menu". 
 - To the right of this dropdown there is a numerical up/down selection for the menu bars height.  If this set to 18, try around 29 for Small Font Mode and click on Apply.  Start the Genesis software by double clicking on the Genesis icon in the EDAX Genesis folder, or in the Windows explorer on the file "c:\edax32\genesis\GenTabs.exe", and you should see that the Genesis Spectrum software menu bar is not obscured by the EDAX tabbed window.
 
+### Dewar Vacuum
+
+From the Microscopy mailing list (2014-11-11)
+
+The thread started with Warren Straszheim's question
+
+> I posted a couple weeks back about a problem with a Noran Vantage Si(Li) detector. Those problems remain.
+
+> Many suggested the problem was due to ice, but I am reluctant to believe it. (You may check out an Excel file comparing various spectra or the EMSA files of the spectra at ftp://ftp.marl.iastate.edu/Equipment/Noran-EDS.)
+
+> Anyway, we know the vacuum is quite soft in the Dewar and we need to do something. If the sorbent is saturated and we warm the detector up to deal with ice or send it back for repair, we risk blowing out the window and incurring a more expensive repair.
+
+> Therefore, I wonder if we might beg, buy or borrow a fitting through which we could pump down the Dewar before and/or while we warm it up. It would be great if that alone solved the problem; however, I suspect we have other issues that will necessitate more serious refurbishing of the detector.
+
+Bill Tivol replied:
+
+> When we had this problem in Albany, our shop made a back plate out of brass that had a copper tube with a Swagelok fitting on it.  This allowed us to attach the dewar to vacuum.  We also from time to time removed the zeolite and either regenerated it or replaced it. We didn't have a mate to the existing vacuum fitting on the dewar, but our work-around functioned very well.
+
 [Back to Index](../README.html)
