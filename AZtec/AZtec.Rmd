@@ -14,7 +14,7 @@ This documents contains hints that I find helpful when using the Oxford AZtec 2.
 
 ### Exporting maps and making montages
 
-I like tightly-stitched maps with the ability to crop regions of interest. Here is the current procedure I use. The export of the PNG files is kludgy - I need to try to write an AutoIT to script. This keeps the raw images in the ``$EDS_ROOT/Oxford/ProjName/reports/map-name/png`` tree where I cannot use version control (AZtec projects fail to open...) and the python scripts and report images in the ``$HOME/work/proj/QM14-NN-MM-Client/`` tree where I do use version control (``git``). **Note:** the scripts below use functions from ``jmFijiGen.py`` which must be in ``$FIJI_ROOT/jars/Lib/``.
+I like tightly-stitched maps with the ability to crop regions of interest. Here is the current procedure I use. The export of the PNG files is kludgy - I need to try to write an Auto-IT to script. This keeps the raw images in the ``$EDS_ROOT/Oxford/QM14-nn-nnA-Client/reports/qm-nnnnn-sampleID/qm-nnnnn-sampleID-nnkV-map1/tif`` tree where I cannot use version control (AZtec projects fail to open...) and the python scripts and report images in the ``$HOME/work/proj/QM14-nn-nnA-Client/`` tree where I do use version control (``git``). **Note:** the scripts below use functions from ``jmFijiGen.py`` which must be in ``$FIJI_ROOT/jars/Lib/``.
 
 1. **Set the maps to have consistent colors**. I have some suggestions below. This is most easily accomplished from the ``Summary View``. One may export these as '.png' files but the brightness/contrast/gain mapping are done with point and click. It is better to record a lists of names, hue values, and gammas for the newer scripts. An example is shown below. **Note:** the -1 value for hue is a flag not to run the LUT change routine.
 
@@ -32,28 +32,28 @@ lGamma  = [  1.0,  1.0,   1.0,   1.0,   1.0,   1.0,    1.0,    1.0 , 1.0  ]
 lCal = [116., 1024, -6]
 ```
 
-3. **Export images of the maps**. 
+3. **Export images of the maps**.  Note the **Preferred way:** Export ``Data Only`` from the ``Data Tree`` as  **TIF** files. This is preferred because one gets 16 bit data and can map it with a script and it minimizes directory changes. Sometimes if you used a ROI during acquisition, the microscope image is not exactly the same size as the others. You may have to use the GUI (as shown below) for that image. In this case you will un-click the keep aspect ratio box and enter the desired values. You can also have AZtec draw the ROIs for desired extracted spectra. 
 
-a. **Preferred way** Export ``Data Only`` as  **TIF** files. This is preferred because one gets 16 bit data and can map it with a script. Sometimes if you used a ROI during acquisition, the microscope image is not exactly the same size as the others. You may have to use the GUI (as shown below) for that image. In this case you will un-click the keep aspect ratio box and enter the desired values. Grrr.....
-
-b. **Use Gui** This requires a lot of point and click and you get what AZtec shows. It is is most easily done from the ``Interactive View``. You will typically want to export maps at either the ``Resolution (Width)`` or half that value. From the ``Interactive View``, click on the desired map, right click, select ``Export``, pull-right and select ``Settings``. Typically, one just wants ``Keep Aspect Ratio`` checked and the desired width. See the image below. I prefer to burn scale bars and annotations on the montage with Fiji/ImageJ. Save these as **PNG** files (loss-less compression) 
 ![Export-Settings](img/Export-Settings.png)
-**Choose ``Save As``**, navigate to a folder you created in ``$EDS_ROOT/Oxford/ProjName/reports/map-name/png`` and save the image with a name like ``1-CK.png``. Repeat this for all the other maps and the final image of the ROI, like ``6-ROI.png``. Note, one might want extracted spectra ROIs on the ROI image...
 
-4. **Create a ``py`` folder** in ``$HOME/work/proj/QM14-NN-MM-Client/py/Fiji`` and make a copy of ``$GIT_HOME/OSImageAnalysis/ImageJ/macros/py/maps/01-Prep-qm-04219-49G003-188-7kV-map-1.py`` in the folder with a name appropriate for your map, i.e. ``01-Prep-qm-nnnnn-samp-id-7kV-map-1.py`` and a copy of ``$GIT_HOME/OSImageAnalysis/ImageJ/macros/py/maps/02-montage-qm-04219-49G003-188-7kV-map-1.py``with an appropriate name.
+Note that following the convention for folders (``$EDS_ROOT/Oxford/QM14-nn-nnA-Client/reports/qm-nnnnn-sampleID/qm-nnnnn-sampleID-nnkV-map1/tif``) makes it a **lot** easier to configure the scripts.
 
-6. **Edit the file paths** to point to your map in the ``$EDS_ROOT`` folder tree and to the project folder in the ``$HOME/work/proj/QM14-NN-MM-Client/Sweave/inc/png`` tree.
+After you navigate to a folder you created, save the image with a name like ``C-K.tif``, ``Ag-L.tif``, ... Repeat this for all the other maps and the final image of the ROI, like ``ROI.tif``. Note, one might want extracted spectra ROIs on the ROI image. Then you need to use the GUI as noted above.
+
+4. **Create a folder** in ``$HOME/work/proj/QM14-nn-nnA-Client/py/Fiji`` and make a copy of the folder ``$GIT_HOME/OSImageAnalysis/ImageJ/macros/py/maps`` using the name of your map, i.e. ``qm-0nnnn-sampID-nnkV-mapN`` and rename the scripts in the folder to match the sample and the map.
+
+6. **Edit the file paths** to point to your map in the ``$EDS_ROOT`` folder tree and to the project folder in the ``$HOME/work/proj/QM14-nn-nnA-Client/Sweave/inc/png`` tree. These have been tuned with path variables to minimize typing/editing. 
 
 7. **Edit the configuration info from step 2.  Note:** The name list fills from left to right from the top row.
 
 
-8. **Run the prep script.** Make sure you get the intensity mapping that you want and are pleased with the display.
+8. **Run the prep script.** Make sure you get the intensity mapping that you want and are pleased with the display. Note the ``bTstPath`` flag. If this is ``True`` it will just print the paths so you know they are right. Note the ``bSave`` flag. Set this to ``False`` to make sure you get the hue and gamma values tuned to best display the information in the map. Then set it to ``True`` to save the images. The script pauses for 2 sec per image so you can see it on the final pass.
 
-9. **Run the montage program** This will give you a calibrated image.
+9. **Run the montage script** This will give you a calibrated image. This has a ``bTestPaths`` that if set to ``True`` will make sure it can load the ROI image. There is a ``bScale`` flag and a ``scaFac`` variable (often set to 0.5) to let you down-sample the maps with a bi-cubic spline. This makes the montages a bit smaller and gives reasonable averaging to improve S/N. You will get a calibrated map that is saved to the report tree.
 
 10. **Add a scale bar.** Use the ``Cookbook > Annotating Images > Add Scale Bar`` tool.
 
-11. **Annotate the map.** Use the ``Text Tool``. Save the annotated map, ``qm-0nnnn-sampID7kVMap1-ann.png``, in the ``$HOME/work/proj/QM14-NN-MM-Client/Sweave/inc/png`` tree.
+11. **Annotate the map.** Use the ``Text Tool``. Save the annotated map, ``qm-nnnnn-sampleID-nnkV-mapN-ann.png``, in the ``$HOME/work/proj/QM14-nn-nnA-Client/Sweave/inc/png`` tree. These ``.png`` files may be used with Sweave, RMarkdown, or PowerPoint for reports.
 
 ### Preferred colors for maps
 
@@ -166,7 +166,7 @@ The ``Optimize`` menu makes it easy to do a beam current measurement. It is impo
 
 ![BeamCurrentMeasCfg](img/BeamCurrentMeasCfg.png)
 
-The manual (p. 86) has a discussion of the proper element to use. They like Cr because it polishes well and does not oxidize. The K line isn't sufficiently excited to use below 15 kV.  Cu grids are convenient, but seem to have the same problem if the software wants to use the K line. Silicon chips might make a good option for a wide range of voltages but would be hard to use with my Pella XCS-8 standard Faraday cage.
+The manual (p. 86) has a discussion of the proper element to use. They like Cr because it polishes well and does not oxidize. The K line isn't sufficiently excited to use below 15 kV.  Cu grids are convenient, but seem to have the same problem if the software wants to use the K line. Silicon chips might make a good option for a wide range of voltages but would be hard to use with my Ted Pella XCS-8 standard Faraday cage.
 
 One gets the required data from the ``Calculate Composition`` tab of ``Point & ID`` and then choosing the ``Spectrum Details`` from the ``Available Templates``:
 
