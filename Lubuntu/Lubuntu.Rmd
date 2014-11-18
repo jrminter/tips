@@ -14,6 +14,16 @@ Lubuntu is a light-weight Ubuntu distribution based upon [LDXE](http://wiki.lxde
 
 The Lubuntu Community documentation is [here](https://help.ubuntu.com/community/Lubuntu/Documentation). Note the [Editing the Menu](https://help.ubuntu.com/community/Lubuntu/Documentation/EditingTheMenu) Section.
 
+### Update from the command line
+
+```
+# update database and upgrade current packages
+sudo apt-get update; sudo apt-get upgrade
+# do a distribution upgrade
+sudo apt-get dist-upgrade
+```
+
+
 ### Install a .deb file
 
 From [askubuntu](http://
