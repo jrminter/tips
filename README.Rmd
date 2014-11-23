@@ -32,6 +32,8 @@ Topic
 
 [gnuplot](./gnuplot/gnuplot.html)
 
+[Håklev's tips on R](./hacklev/hacklev.html)
+
 [Image-J](./ImageJ/ImageJ.html)
 
 [iOS](./iOS/iOS.html)
