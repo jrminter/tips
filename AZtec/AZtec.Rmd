@@ -78,6 +78,7 @@ table:nth-of-type(2) {
 | Si K       | 330 | rose             |
 | Cu L       | 180 | cyan             |
 | P K        | 150 | spring green     |
+| K K        | 270 | violet           |
 | Pd L       |  60 | yellow           |
 | Cl K       |  90 | chartreuse green |
 | Pt M       |  90 | chartreuse green |
