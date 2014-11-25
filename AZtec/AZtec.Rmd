@@ -79,12 +79,13 @@ table:nth-of-type(2) {
 | Cu L       | 180 | cyan             |
 | P K        | 150 | spring green     |
 | Pd L       |  60 | yellow           |
-| Cl K       |  90 | chartreuse green | don't often have both...
+| Cl K       |  90 | chartreuse green |
 | Pt M       |  90 | chartreuse green |
 | Ag L       |  30 | orange           |
 | Ga L       | 300 | magenta          |
+| S  K       | 300 | magenta          |
 
-**Note** One can easily see and change values from the Summary view
+**Note** One can easily see and change values from the Summary view. We also don't often have don't often have both Ga and S or Pt and Cl
 
 ![Summary View](img/EasySetMapColors.png)
 
