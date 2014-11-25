@@ -73,10 +73,13 @@ table:nth-of-type(2) {
 | transition | deg | name             |
 |------------|----:|:-----------------|
 | C K        | 0   | red              |
+| N K        | 210 | azure            |
 | O K        | 120 | green            |
+| Si K       | 330 | rose             |
 | Cu L       | 180 | cyan             |
 | P K        | 150 | spring green     |
 | Pd L       |  60 | yellow           |
+| Cl K       |  90 | chartreuse green | don't often have both...
 | Pt M       |  90 | chartreuse green |
 | Ag L       |  30 | orange           |
 | Ga L       | 300 | magenta          |
