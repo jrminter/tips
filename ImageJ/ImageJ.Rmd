@@ -13,9 +13,13 @@ output:
 ## Annotating images
 From [wiki.imagej.net](http://wiki.imagej.net/Annotating_Images#Issues_with_adding_text)
 
-Images can be annotated using the annotation tool. Double-click to get a configuration image. Adding text to a stack is a slightly different process. You can draw a text box by following the same steps, but on a stack, keyboard shortcut ``Ctrl+B`` will overlay the text on the current slice, while shortcut ``Ctrl+D`` will draw the text on every slice of the stack.
+Images can be annotated using the annotation tool. Double-click to get a configuration image. Adding text to a stack is a slightly different process. You can draw a text box by following the same steps, but on a stack, keyboard shortcut ``Ctrl+B`` will overlay the text on the current slice, while shortcut ``Ctrl+D`` will draw the text on every slice of the stack. These get written into an overlay.
 
 The ``Cookbook > Annotating images > Add Scale bar`` choice from the menu opens a configurable dialog. One needs to set the scale from ``Analyze > Set Scale`` first.
+
+There is a useful tutorial attributed to [Chris Ambrose](http://www.allandebono.org/show/protocols/imagejoverlays/)
+
+
 
 ## Sources of plugins
 
