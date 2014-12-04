@@ -10,6 +10,8 @@ output:
 
 [Back to Index](../README.html)
 
+I have collected these tips both from experience and from a very helpful user community.
+
 ## Annotating images
 From [wiki.imagej.net](http://wiki.imagej.net/Annotating_Images#Issues_with_adding_text)
 
@@ -19,6 +21,20 @@ The ``Cookbook > Annotating images > Add Scale bar`` choice from the menu opens 
 
 There is a useful tutorial attributed to [Chris Ambrose](http://www.allandebono.org/show/protocols/imagejoverlays/)
 
+
+## 16bit images
+
+[Michael Schmid](http://imagej.1557.x6.nabble.com/Use-of-LUTS-give-different-results-td5010726.html) provides some interesting tips regarding LUTs for 16 bit images where there is a limited range of information. He notes:
+
+> If you have 16-bit data and a LUT, it depends on the min & max of the display range of the pixels how it appears on the screen. By default, the display range is the full 16-bit range, 0-65535 
+
+> See ``ImageProcessor.setMinAndMax(double min, double max)`` 
+
+> In your case, with values between 15000 and 24000, just use 
+
+```
+ip.setMinAndMax(15000, 24000);
+```
 
 
 ## Sources of plugins
@@ -236,5 +252,24 @@ rect1.setPosition(1, 1, 0);
 overlay.add(rect1);
 
 ```
+
+### Hints on video
+
+Again [Michael Schmid](http://imagej.1557.x6.nabble.com/Compress-AVI-for-ImageJ-td5010753.html) provides some helpful hints
+
+> If you open an (uncompressed) AVI as virtual stack, the file size does not matter, it only keeps the frame currently visible in memory. You can then view the video and perform read-only operations, such as "Analyze Particles" 
+An alternative: Read only part of the video (the AVI import dialog has an option to select which frames), and process it in parts. 
+
+> If you want to process the whole video in ImageJ: As soon as any operations modify the frames, ImageJ must load everything into memory. In that case it won't help to compress the video on disk, because it must be uncompressed as soon as it is in ImageJ. 
+
+> Plain ImageJ only accepts very few compression techniques, to keep the code simple and partly related to licensing/copyright issues, but also because compression causes artifacts that should be avoided in scientific image processing. 
+
+> Plain ImageJ supports the following types: 
+
+> - Raw video with 8-bit or 16-bit grayscale and RGB (3 * 8 = 24 bits/pxl) 
+- Various color ('chroma') subsampling types, because frame grabbers or cameras often deliver these as raw format (Y422, YUYV, I420, NV12, and the like) 
+- PNG or JPEG compression of individual frames (the latter is also known as MJPG). 
+
+
 
 [Back to Index](../README.html)
