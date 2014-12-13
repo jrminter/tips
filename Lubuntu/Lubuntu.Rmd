@@ -161,6 +161,60 @@ sudo fsck -l bad-blocks /dev/sdc
 
 ### Other
 
+#### Making a bootable Lubuntu USB from a mac
+
+From [computers.tutsplus.com](http://computers.tutsplus.com/tutorials/how-to-create-a-bootable-ubuntu-usb-drive-for-mac-in-os-x--cms-21253)
+
+1. Download the desired iso. For a mac get the `+mac` version. In our case, the file was `lubuntu-14.04.1-desktop-amd64+mac.iso`
+
+2. Format a USB drive, of 2GB capacity or more with Disk Utility making a ``Mac OS Extended (Journaled)`` partition. 
+
+![partiton](images/partition.png)
+
+Be sure to set the partition to use a GUID partition table
+
+![guid-format](images/guid-format.png)
+
+and then press the ``Apply`` button.
+
+The rest you can do from terminal.
+
+3. Convert the `.iso` to a `dmg`
+
+```
+hdiutil convert -format UDRW -o ~/Downloads/lubuntu-14.04.1-desktop-amd64+mac.dmg ~/Downloads/lubuntu-14.04.1-desktop-amd64+mac.iso
+```
+
+4. Find the disk id of the USB (likely `/dev/disk2`). Be **sure** to get this right!!!
+
+```
+diskutil list
+```
+
+5. Unmount the USB disk
+
+```
+diskutil unmountDisk /dev/disk2
+```
+
+6. Copy the image to the disk
+
+```
+sudo dd if=/Users/jrminter/Downloads/lubuntu-14.04.1-desktop-amd64+mac.dmg of=/dev/rdisk10 bs=1m
+```
+
+7. Ignore the `disk unreadable` error. Do **nothing** and eject from the command line
+
+![disk-unreadable](images/disk-unreadable.png)
+
+```
+diskutil eject /dev/disk2
+```
+
+8. Hold down the ``Alt`` key during reboot to select the USB...
+
+#### More tips
+
 [Ubuntu cleanup](http://www.stchman.com/cleanup.html)
  
  
