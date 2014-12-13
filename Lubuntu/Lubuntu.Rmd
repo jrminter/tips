@@ -203,13 +203,17 @@ diskutil unmountDisk /dev/disk2
 sudo dd if=/Users/jrminter/Downloads/lubuntu-14.04.1-desktop-amd64+mac.dmg of=/dev/rdisk10 bs=1m
 ```
 
-7. Ignore the `disk unreadable` error. Do **nothing** and eject from the command line
+7. Ignore the `disk unreadable` error. Do **nothing**. Check the terminal output that the copy went well. 
 
 ![disk-unreadable](images/disk-unreadable.png)
+
+Then eject from the command line.
 
 ```
 diskutil eject /dev/disk2
 ```
+
+Regarding the dialogue box, click Ignore to get rid of it. It is now safe to remove the USB drive from the Mac or to reboot and give it a try.
 
 8. Hold down the ``Alt`` key during reboot to select the USB...
 
