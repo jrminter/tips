@@ -210,7 +210,7 @@ This one had me ripping my hair out. The solution was
 [here](http://answers.google.com/answers/threadview/id/522710.html)
 
 
-There's a simple way to do it:
+There's a simple way to do it on Win XP:
 
 run ``cmd.exe`` and do the following:
 ```
@@ -218,6 +218,41 @@ cd "long path name"
 command
 ```
 Then ``command.com`` will come up and display the short path name.
+
+Note that this will not work on Win7 x64. But one can do this
+instead, for example:
+
+```
+C:\Program Files>cd c:\
+c:\>dir /X
+```
+
+Note the fifth column returns the short name
+
+```
+ Directory of c:\
+
+11/06/2013  01:00 PM    <DIR>          140260~1     140260dea5eb814742d2cc928a
+01/06/2015  08:21 AM    <DIR>                       Apps
+12/09/2014  08:54 AM    <DIR>                       Data
+08/20/2014  07:14 AM               449              Desktop.lnk
+03/05/2014  11:33 AM    <DIR>                       EDAX32
+11/06/2013  08:28 AM               353              INSTALL.LOG
+12/05/2013  10:30 AM    <DIR>                       Intel
+11/17/2014  02:34 PM    <DIR>                       Kip
+07/13/2009  10:20 PM    <DIR>                       PerfLogs
+12/09/2013  01:54 PM    <DIR>                       process
+12/15/2014  08:18 AM    <DIR>          PROGRA~1     Program Files
+12/19/2014  07:03 AM    <DIR>          PROGRA~2     Program Files (x86)
+10/10/2014  09:19 AM    <DIR>                       Python34
+01/06/2015  03:41 PM    <DIR>                       Temp
+04/22/2014  08:01 AM    <DIR>          USERIM~1     UserImages
+12/06/2013  08:46 AM    <DIR>                       Users
+12/16/2014  01:16 PM    <DIR>                       Windows
+```
+
+For a long directory with lots of levels one would have to do this at
+each level with a space ...
 
 [Back to Index](../README.html)
 
