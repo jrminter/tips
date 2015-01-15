@@ -12,6 +12,20 @@ output:
 
 I have collected these tips both from experience and from a very helpful user community.
 
+## Useful keyboard shortcuts
+
+`[` - Start the script editor. 
+
+`Ctl-l` - Bring up a search dialog to match commands to classes
+
+`Clt-m` - measure a line or selected feature
+
+`Ctl-Enter` - Bring the main window to the front
+
+See the full list [here](http://rsb.info.nih.gov/ij/docs/shortcuts.html)
+ 
+ 
+
 ## Annotating images
 From [wiki.imagej.net](http://wiki.imagej.net/Annotating_Images#Issues_with_adding_text)
 
