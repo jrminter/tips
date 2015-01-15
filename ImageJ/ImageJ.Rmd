@@ -16,9 +16,15 @@ I have collected these tips both from experience and from a very helpful user co
 
 `[` - Start the script editor. 
 
+`Ctl-b` - burns into overlay something drawn
+
+`Ctl-B` - open blobs sample image
+
 `Ctl-l` - Bring up a search dialog to match commands to classes
 
 `Clt-m` - measure a line or selected feature
+
+`Ctl-t` - add a selection to the ROI manager
 
 `Ctl-Enter` - Bring the main window to the front
 
