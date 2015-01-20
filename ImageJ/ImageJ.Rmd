@@ -12,6 +12,17 @@ output:
 
 I have collected these tips both from experience and from a very helpful user community.
 
+## Mailing Lists
+
+### ImageJ-devel
+
+Send a message to ``imagej-devel@imagej.net``
+
+### ImageJ
+
+send message to ``imagej@list.nih.gov``
+
+
 ## Annotating images
 From [wiki.imagej.net](http://wiki.imagej.net/Annotating_Images#Issues_with_adding_text)
 
