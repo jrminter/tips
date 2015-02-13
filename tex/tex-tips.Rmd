@@ -19,6 +19,15 @@ These are frequently used in themes.
 
 # Simple tricks
 
+## Choose the program to compile
+
+Add the following at the top of the `*.tex` file, choosing the desired program (pdflatex, xelatex):
+
+```
+%!TEX program = xelatex
+```
+
+
 ## Hide the page number on first page of a chapter
 
 ```
