@@ -1,0 +1,37 @@
+---
+title: "Sublime Text 3 Tips"
+author: "J. R. Minter"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    theme: united
+    highlight: pygments
+---
+
+[Back to Index](../README.html)
+
+These are John Minter's tips for using the editor ``Sublime Text 3``.
+
+## Spell Checking
+One can set the dictionary from the ``View`` menu. One can toggle spell checking either from the ``View`` menu or with ``F6``. For more information, see [here](https://www.sublimetext.com/docs/3/spell_checking.html).
+
+## The Package Control add-in
+
+This is quite helpful. Installation instructions from
+[here](https://packagecontrol.io/installation#st3):
+
+1. Open the console: (``Ctrl + ` ``). 
+2. Type this:
+```
+import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
+```
+
+## The LaTeXTools plug-in
+
+From [here](https://github.com/SublimeText/LaTeXTools)
+
+They have complete installation instructions.
+
+
+
+[Back to Index](../README.html)

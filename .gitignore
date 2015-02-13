@@ -188,6 +188,11 @@ Slidify/Slidify.md
 Slidify/Slidify.html
 Slidify/figure/
 
+# ST3 directory
+ST3/.DS_Store
+ST3/ST3.md
+ST3/ST3.html
+
 # Sweave directory
 Sweave/.DS_Store
 Sweave/Sweave.md

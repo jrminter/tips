@@ -19,7 +19,7 @@ names <- c("automater.Rmd", "AZtec.Rmd", "C++11-Tips.Rmd",
            "R-Anova.Rmd", "R-bar-plots.Rmd", "R-boxplots.Rmd",
            "R-foreach.Rmd", "R-GeoSpatial.Rmd","research.Rmd",
            "Salabim-graphics.Rmd", "shell-tips.Rmd",
-           "skimage.Rmd","Slidify.Rmd",
+           "skimage.Rmd","Slidify.Rmd", "ST3.Rmd",
            "Sweave.Rmd", "tex-tips.Rmd","ubuntu.Rmd",
            "VS2010.Rmd","win.Rmd","README.Rmd")
 rPath <- c("../automater", "../AZtec", "../C++11",
@@ -33,7 +33,7 @@ rPath <- c("../automater", "../AZtec", "../C++11",
            "../R-Anova", "../R-bar-plots", "../R-boxplots" ,
            "../R-foreach", "../R-GeoSpatial", "../research",
            "../Salabim", "../shell", 
-           "../skimage", "../Slidify",
+           "../skimage", "../Slidify", "../ST3",
            "../Sweave", "../tex", "../ubuntu",
            "../VS2010","../win", "../")
 
