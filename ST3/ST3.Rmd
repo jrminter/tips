@@ -34,7 +34,7 @@ They have complete installation instructions.
 
 ## The Spacegray Theme
 
-I like Spacegray-ocean-dark. Install by
+I like Flatland-Monoaki and Spacegray-ocean-dark for Python  and Monoaki for LaTeX. Install by
 
 1. Open Command Palette using menu item ``Tools -> Command Palette`` (`` ⇧⌘P`` on Mac)
 2. Choose Package Control: Install Package
