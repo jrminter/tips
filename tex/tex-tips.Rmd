@@ -27,6 +27,13 @@ Add the following at the top of the `*.tex` file, choosing the desired program (
 %!TEX program = xelatex
 ```
 
+## XeLaTeX resources
+
+A great intro by [Rob Hyndman](http://robjhyndman.com/hyndsight/xelatex/)
+
+Lots of info in the [fontspec manual](http://tug.ctan.org/tex-archive/macros/latex/contrib/fontspec/fontspec.pdf)
+
+
 
 ## Hide the page number on first page of a chapter
 
