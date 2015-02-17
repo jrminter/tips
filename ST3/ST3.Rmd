@@ -32,6 +32,14 @@ From [here](https://github.com/SublimeText/LaTeXTools)
 
 They have complete installation instructions.
 
+## The Spacegray Theme
+
+I like Flatland-Monoaki and Spacegray-ocean-dark for Python  and Monoaki for LaTeX. Install by
+
+1. Open Command Palette using menu item ``Tools -> Command Palette`` (`` ⇧⌘P`` on Mac)
+2. Choose Package Control: Install Package
+3. Find Theme - Spacegray and hit Enter
+4. Use ``Preferences -> Color Scheme -> base16-ocean-dark``
 
 
 [Back to Index](../README.html)
