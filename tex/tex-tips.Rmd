@@ -25,13 +25,26 @@ Add the following at the top of the `*.tex` file, choosing the desired program (
 
 ```
 %!TEX program = xelatex
+%!TEX encoding = UTF-8 Unicode
 ```
+
+The second line will let one use unicode characters in XeLaTeX.
 
 ## XeLaTeX resources
 
-A great intro by [Rob Hyndman](http://robjhyndman.com/hyndsight/xelatex/)
+Great, short intros by [Rob Hyndman](http://robjhyndman.com/hyndsight/xelatex/) and
+[LingSUN](http://lingsun.altervista.org/xelatex/), and
+[Deep Core](http://blog.deepcore.gr/?p=243)
+
+[Markus Gesmann](http://www.magesblog.com/2011/10/using-sweave-with-xelatex.html) has a great example of using XeLaTeX with Sweave, with the source on [github](https://gist.github.com/mages/1307543) as a gist.
 
 Lots of info in the [fontspec manual](http://tug.ctan.org/tex-archive/macros/latex/contrib/fontspec/fontspec.pdf)
+
+There is the XeTeX
+[SIL](http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&item_id=xetex)
+home page and the 
+[sourceforge](http://xetex.sourceforge.net/) home page
+and the mailing list [archives](http://tug.org/pipermail/xetex/)
 
 
 
