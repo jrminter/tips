@@ -64,7 +64,7 @@ On 8/29/2014 11:26 PM, Llelan D. wrote:
 > the registry keys you are *NEVER* to use as an indication if the 
 > application is currently installed because MS constantly corrupts this 
 > list and can leave your installation in an un-installable, 
-> un-repairable, and un-removeable state? 
+> un-repairable, and un-removable state? 
 > 
 > Well it worked. The Python installer no longer sees the application as 
 > installed and happily performs a full installation. I did that, a full 
@@ -117,8 +117,8 @@ There was a great discussion on [StackOverflow](http://stackoverflow.com/questio
 
 One must precisely match the compiler used to
 build the binaries. For Python 3.3, this is
-Visula Studio 2010.  I did a custom install of
-Visula Studio 2010 Premium to get the x64 compilers
+Visual Studio 2010.  I did a custom install of
+Visual Studio 2010 Premium to get the x64 compilers
 installed. I also installed Service Pack 1 and
 the x64 redistributable package.
 
@@ -198,7 +198,7 @@ Let’s start with a simple list.
 
 Quite often, we’ll need to build a new list from the elements of an existing list. For example, let’s say we want to make a list containing all elements of ``my_list``, each multiplied by 2. 
 
-### Using Python's List Comprehesion
+### Using Python's List Comprehension
 Now let’s take a look at how to do this using Python’s list comprehension syntax.
 
 ```
