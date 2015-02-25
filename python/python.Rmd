@@ -81,6 +81,17 @@ On 8/29/2014 11:26 PM, Llelan D. wrote:
 > 
 > I hope this is of help to someone out there. 
 
+### Fixing python-win32 on python 3.4
+
+From [stackoverflow](http://stackoverflow.com/questions/22490233/win32com-import-error-python-3-4)
+
+We need to re-run the install script to get ``import win32wnet`` to work.
+
+```
+python C:\Python34\Scripts\pywin32_postinstall.py -install
+```
+
+
 
 ### Creating the default ipython profiles
 
