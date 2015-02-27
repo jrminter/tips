@@ -27,6 +27,18 @@ git whatchanged
 git branch --merged | xargs git branch -d
 ```
 
+### see commits with abbreviated sha
+
+Hadley Wickham noted:
+
+> With git, each change (commit) is given a unique identifier, called a sha. The sha is a key into a database that provides the author, date, and a description.
+
+Here is how we can see them...
+
+```
+git log --oneline --decorate --tags
+```
+
 ### local cherry picking
 ```
 git checkout <OTHER_BRANCH> -- path/to/file
