@@ -254,5 +254,45 @@ Note the fifth column returns the short name
 For a long directory with lots of levels one would have to do this at
 each level with a space ...
 
+### Power configuration
+
+Hints from [here](http://ss64.com/nt/powercfg.html)
+
+The three built-in power schemes have the GUIDs listed below:
+
+```
+SCHEME_MAX = Power saver (Max power saving) 
+SCHEME_BALANCED = Balanced (Typical)
+SCHEME_MIN = High performance (Min power saving)
+```
+
+List all Aliases:
+
+```
+powercfg -aliases
+```
+
+Retrieve the currently active power scheme
+
+```
+Powercfg -getactivescheme
+```
+
+Set the Monitor and disc timeouts for the current Power saver scheme
+
+```
+Powercfg -Change -monitor-timeout-ac 20
+Powercfg -Change -disk-timeout-ac 30
+```
+
+Enable the mouse to wake from sleep 
+
+```
+Powercfg -deviceEnableWake "Microsoft USB IntelliMouse Explorer"
+
+```
+
+
+
 [Back to Index](../README.html)
 
