@@ -65,6 +65,12 @@ There is a useful tutorial attributed to [Chris Ambrose](http://www.allandebono.
 ```
 ip.setMinAndMax(15000, 24000);
 ```
+## Explicitly setting the standard grayscale LUT
+[Michael Schmid](http://imagej.1557.x6.nabble.com/Problem-saving-PNG-files-in-particular-order-td5011977.html#a5012010) notes that one can explicitly set the standard grayscale LUT with the following snippet
+
+```
+ ip.setColorModel(ip.getDefaultColorModel()) 
+```
 
 
 ## Sources of plugins
