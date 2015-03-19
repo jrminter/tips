@@ -15,6 +15,14 @@ These are John Minter's tips for using the editor ``Sublime Text 3``.
 ## Spell Checking
 One can set the dictionary from the ``View`` menu. One can toggle spell checking either from the ``View`` menu or with ``F6``. For more information, see [here](https://www.sublimetext.com/docs/3/spell_checking.html).
 
+## Setting file associations
+
+From [StackOverflow](http://stackoverflow.com/questions/7574502/set-default-syntax-to-different-filetype-in-sublime-text-2)
+
+In the current version of Sublime Text 2 and 3 you can set the syntax for all files of a certain file extension using an option in the menu bar. Open a file with the extension you want to set a default for and navigate through the following menus: 
+
+```View -> Syntax -> Open all with current extension as... ->[your syntax choice].```
+
 ## The Package Control add-in
 
 This is quite helpful. Installation instructions from
@@ -31,6 +39,12 @@ import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7
 From [here](https://github.com/SublimeText/LaTeXTools)
 
 They have complete installation instructions.
+
+## Numix theme
+
+I like Numix Dark + Monoaki
+
+Intall and see intructions [here](https://packagecontrol.io/packages/Numix%20Theme)
 
 ## The Spacegray Theme
 

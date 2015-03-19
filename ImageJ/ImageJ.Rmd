@@ -268,6 +268,23 @@ On OS X:
   '/Library/Java/JavaVirtualMachines/jdk1.7.0_65.jdk/Contents/Home'
 ```
 
+### Constructing line perpendicular to other line (saved in ROI manager)
+
+From Wayne Rasband on IJ mailing list
+
+```
+count = roiManager("count");
+  if (count==0)
+     exit("ROI Manager line selection required");
+  roiManager("select", count-1);
+  if (selectionType!=5)
+     exit("Straight line selection required");
+  run("Rotate...", "angle=90");
+  roiManager("Add");
+  roiManager("Show All without labels");
+```
+
+
 ## Edge-preserving averaging (smoothing) algorithms
 
 ### Thresholded Blur
