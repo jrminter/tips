@@ -1,0 +1,317 @@
+---
+title: "How to Make a Histogram with ggplot2"
+author: "The DataCamp Blog"
+date: "March 14th, 2015"
+output: html_document
+---
+
+[Back to Index](../README.html)
+
+This is from [The DataCamp Blog](http://blog.datacamp.com/make-histogram-ggplot2/)
+
+In our previous post you learned how to make histograms with the hist() function. You can also make a histogram with ``ggplot2``, “a plotting system for R, based on the grammar of graphics”. This post will focus on making a Histogram With ggplot2. Want to learn more? Discover the DataCamp tutorials.
+
+## Step One. Check That You Have ggplot2 installed
+
+First, go to the tab “packages” in RStudio, an IDE to work with R efficiently, search for ``ggplot2`` and mark the checkbox. Alternatively, it could be that you need to install the package. In this case, you stay in the same tab and you click on “Install”. Enter ``ggplot2``, press ENTER and wait one or two minutes for the package to install.
+
+You can also install ``ggplot2`` from the console with the ``install.packages()`` function:
+
+```
+install.packages("ggplot2")
+```
+
+To effectively load the ``ggplot2`` package, execute the following command.
+
+```{r}
+library(ggplot2)
+```
+
+## Step Two. The Data
+
+Next, make sure that you have some dataset to work with: import the necessary file or use one that is built into R. This tutorial will be working with the chol dataset. If you’re just tuning in, you can download the this dataset from here.
+
+You can load in the chol data set by using the ``url()`` function embedded into the ``read.table()`` function:
+
+```{r}
+chol <- read.table(url("http://assets.datacamp.com/blog_assets/chol.txt"), header = TRUE)
+```
+
+## Step Three. Making Your Histogram With ggplot2
+
+You have two options to make a histogram with ``ggplot2`` package. You can either use the ``qplot()`` function, which looks very much like the ``hist()`` function:
+
+```{r}
+#Take the column "AGE" from the "chol" dataset and make a histogram of it
+qplot(chol$AGE, geom="histogram") 
+```
+
+You can also use the ``ggplot()`` function to make the same histogram:
+
+```{r}
+# Take the dataset "chol" to be plotted, pass the "AGE" column from the "chol" dataset as values on the x-axis and compute a histogram of this
+ggplot(data=chol, aes(chol$AGE)) + geom_histogram()
+```
+
+The difference between these two options? The ``qplot()`` function is supposed to make the same graph as ``ggplot()``, but with a simpler syntax. While ``ggplot()`` allows for maximum features and flexibility, ``qplot()`` is a simpler but less customizable wrapper around ``ggplot``.
+
+Note in practice, ``ggplot()`` is used more often.
+
+## Step Four. Taking It One Step Further
+
+### Adjusting qplot()
+
+The options to adjust your histogram through ``qplot()`` are not too extensive, but this function does allow you to adjust the basics to improve the visualization and hence the understanding of the histograms; All you need to do is add some more arguments, just like you did with the ``hist()`` function.
+
+**Tip** compare the arguments to the ones that are used in the ``hist()`` function to get some more insight!
+
+In any case, you could adjust the original plot to look like this:
+
+```{r}
+# Histogram for the "AGE" column in the "chol" dataset, with title "Histogram for Age" and label for the x-axis ("Age"), with bins of a width of 5 that range from values 20 to 50 on the x-axis and that have transparent blue filling and red borders
+qplot(chol$AGE,
+      geom="histogram",
+      binwidth = 5,  
+      main = "Histogram for Age", 
+      xlab = "Age",  
+      fill=I("blue"), 
+      col=I("red"), 
+      alpha=I(.2),
+      xlim=c(20,50))
+```
+
+Since the R commands are only getting longer and longer, you might need some help to understand what each part of the code does to the histogram’s appearance. Again, let’s just break it down to smaller pieces:
+
+#### Bins
+
+You can change the binwidth by specifying a binwidth argument in your ``qplot()`` function:
+
+```{r}
+qplot(chol$AGE,
+      geom="histogram", 
+      binwidth = 5)
+```
+
+#### Names/colors
+
+As with the ``hist()`` function, you can use the argument main to change the title of the histogram:
+
+```{r}
+qplot(chol$AGE,
+      geom="histogram",
+      binwidth = 5,
+      main = "Histogram for Age")
+```
+
+To change the labels that refer to the x-and y-axes, use ``xlab`` and ``ylab``, just like you do when you use the ``hist()`` function.
+
+```{r}
+qplot(chol$AGE,
+      geom="histogram",
+      binwidth = 5,  
+      main = "Histogram for Age", 
+      xlab = "Age")
+```
+
+If you want to adjust the colors of your histogram, you have to take a slightly different approach than with the ``hist()`` function:
+
+```{r}
+qplot(chol$AGE,
+      geom="histogram",
+      binwidth = 5,  
+      main = "Histogram for Age", 
+      xlab = "Age",  
+      fill=I("blue"))
+```
+
+This different approach also counts if you want to change the border of the bins; You add the ``col`` argument, with the ``I()`` function in which you can nest a color:
+
+```{r}
+qplot(chol$AGE,
+      geom="histogram",
+      binwidth = 5,  
+      main = "Histogram for Age", 
+      xlab = "Age", 
+      fill=I("blue"), 
+      col=I("red"))
+```
+
+The ``I()`` function inhibits the interpretation of its arguments. In this case, the ``col`` argument is affected. Without it, the ``qplot()`` function would print a legend, saying that “col = “red”“, which is definitely not what you want in this case (Muenchen et al. 2010).
+
+**Tip** try removing the ``I()`` function and see for yourself what happens!
+
+If you want to set the transparency of the bins’ filling, just add the argument alpha, together with a value that is between 0 (fully transparent) and 1 (opaque):
+
+```{r}
+qplot(chol$AGE,
+      geom="histogram",
+      binwidth = 5,  
+      main = "Histogram for Age", 
+      xlab = "Age", 
+      fill=I("blue"), 
+      col=I("red"), 
+      alpha=I(.2))
+```
+
+Note that the ``I()`` function is used here also! Again, try to leave this function out and see what effect this has on the histogram.
+
+#### X- and Y-Axes
+
+The ``qplot()`` function also allows you to set limits on the values that appear on the x-and y-axes. Just use xlim and ylim, in the same way as it was described for the ``hist()`` function in the first part of this tutorial on histograms. After adding the xlim argument and some reasonable paramters, you end up with the histogram from the start of this section:
+
+```{r}
+qplot(chol$AGE,
+      geom="histogram",
+      binwidth = 5,  
+      main = "Histogram for Age", 
+      xlab = "Age",  
+      fill=I("blue"), 
+      col=I("red"), 
+      alpha=I(.2),
+      xlim=c(20,50))
+```
+
+**Tip** do not forget to use the ``c()`` function to specify xlim and ylim!
+
+### Adjusting ggplot()
+
+Just like the two other options that have been discussed so far, adjusting your histogram through the ``ggplot()`` function is also very easy. The general message stays the same: just add more code to the original code that plots your (basic) histogram! This way, you can adjust your basic ggplot to look like the following:
+
+```{r}
+ggplot(data=chol, aes(chol$AGE)) + 
+  geom_histogram(breaks=seq(20, 50, by = 2), 
+                 col="red", 
+                 fill="green", 
+                 alpha = .2) + 
+  labs(title="Histogram for Age") +
+  labs(x="Age", y="Count") + 
+  xlim(c(18,52)) + 
+  ylim(c(0,30))
+```
+
+Again, let’s break this huge chunk of code into pieces to see exactly what each part contributes to the visualization of your histogram:
+
+#### Bins
+
+To adjust the bin width and the breakpoints, you can basically follow the general guidelines that were provided in the first part of the tutorial on histograms, since the arguments work alike. This means that you can add breaks to change the bin width:
+
+```{r}
+ggplot(data=chol, aes(chol$AGE)) + 
+  geom_histogram(breaks=seq(20, 50, by=2))
+```
+
+Note that it is possible for the ``seq()`` function to explicitly specify the by argument name as the last argument. This can be more informative, but it doesn’t change the resulting histogram!
+
+Remember that you could also express the same constraints on the bins with the ``c()`` function, but that this can make your code messy.
+
+#### Names/Colors
+
+To adjust the colors of your histogram, just add the arguments ``col`` and ``fill``, together with the desired color:
+
+```{r}
+ggplot(data=chol, aes(chol$AGE)) + 
+  geom_histogram(breaks=seq(20, 50, by =2), 
+                 col="red", 
+                 fill="green")
+```
+
+The alpha argument controls the fill transparency. Remember to pass a value between 0 (transparent) and 1 (opaque):
+
+```{r}
+ggplot(data=chol, aes(chol$AGE)) + 
+  geom_histogram(breaks=seq(20, 50, by =2), 
+                 col="red", 
+                 fill="green", 
+                 alpha = .2)
+```
+
+You can also fill the bins with colors according to the count numbers that are presented in the y-axis, something that is not possible in the ``qplot()`` function:
+
+```{r}
+ggplot(data=chol, aes(chol$AGE)) + 
+  geom_histogram(breaks=seq(20, 50, by =2), 
+                 col="red", 
+                 aes(fill=..count..))
+```
+
+The default color scheme is blue. If you want to change this, you should add something more to your code: the ``scale_fill_gradient``, which allows you to specify, for example:
+
+- that you’re taking the count values from the y-axis,
+- that the low values should be in green and
+- that the higher values should appear in red:
+
+```{r}
+ggplot(data=chol, aes(chol$AGE)) + 
+  geom_histogram(breaks=seq(20, 50, by =2), 
+                 col="red", 
+                 aes(fill=..count..)) +
+  scale_fill_gradient("Count", low = "green", high = "red")
+```
+
+Remember that the ultimate purpose of adjusting your histogram should always be improving the understanding of it; Even though the histograms above look very fancy, they might not be exactly what you need; So always keep in mind what you’re trying to achieve!
+
+Note that there are several more options to adjust the color of your histograms. If you want to experiment some more, you can find other arguments in the “Scales” section of the ggplot documentation page.
+
+```{r}
+ggplot(data=chol, aes(chol$AGE)) + 
+  geom_histogram(breaks=seq(20, 50, by = 2), 
+                 col="red", 
+                 fill="green", 
+                 alpha = .2) + 
+  labs(title="Histogram for Age")
+```
+
+To adjust the labels on the x-and y-axes of your histogram, add the arguments x and y, followed by a string of your choice:
+```{r}
+ggplot(data=chol, aes(chol$AGE)) + 
+  geom_histogram(breaks=seq(20, 50, by = 2), 
+                 col="red", 
+                 fill="green", 
+                 alpha = .2) + 
+  labs(title="Histogram for Age") +
+  labs(x="Age", y="Count")
+```
+
+#### X-And Y Axes
+
+Similar to the arguments that the ``hist()`` function uses to adjust the x-and y-axes, you can use the ``xlim()`` and ``ylim()``. If you add these two functions, you end up with the histogram from the start of this section:
+
+```{r}
+ggplot(data=chol, aes(chol$AGE)) + 
+  geom_histogram(breaks=seq(20, 50, by = 2), 
+                 col="red", 
+                 fill="green", 
+                 alpha = .2) + 
+  labs(title="Histogram for Age") +
+  labs(x="Age", y="Count") + 
+  xlim(c(18,52)) +
+  ylim(c(0,30))
+```
+
+**Tip** do not forget to use the ``c()`` function when you use the arguments ``xlim`` and ``ylim``! And you should probably watch out for those parentheses too.
+
+#### Extra: Trendline
+
+You can easily add a trendline to your histogram by adding geom_density to your code:
+
+```{r}
+ggplot(data=chol, aes(chol$AGE)) + 
+  geom_histogram(aes(y =..density..), 
+                 breaks=seq(20, 50, by = 2), 
+                 col="red", 
+                 fill="green", 
+                 alpha = .2) + 
+  geom_density(col=2) + 
+  labs(title="Histogram for Age") +
+  labs(x="Age", y="Count")
+```
+
+Remember: just like with the ``hist()`` function, your histograms with ggplot2 also need to plot the density for this to work. Remember also that the hist() function required you to make a trendline by entering two separate commands while ggplot2 allows you to do it all in one single command.
+
+## Step Five. Feeling Like Going Far And Beyond?
+
+If you’re intrigued by the histograms that you can make with ggplot2, and if you want to discover what more you can do with this package, you can read more about it on the RDocumentation page. It is a great starting point for anybody that is interested in taking ggplot2 to the next level.
+
+If you already have some understanding of SAS, SPSS and STATA and you want to discover more about ggplot2 but also other useful R packages, you might want to check out DataCamp’s course “R for SAS, SPSS and STATA Users”. The course is taught by Bob Muenchen, who is considered one of the prominent figures in the R community and whose book has briefly been mentioned in this tutorial.
+
+[Back to Index](../README.html)

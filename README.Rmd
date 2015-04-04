@@ -28,6 +28,10 @@ Topic
 
 [EDAX](./EDAX/EDAX.html)
 
+[ggplot2Intro](./ggplot2Intro/ggplot2Intro.html)
+
+[ggvisIntro](./ggvisIntro/ggvisIntro.html)
+
 [git](./git/git-tips.html)
 
 [gnuplot](./gnuplot/gnuplot.html)

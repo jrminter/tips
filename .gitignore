@@ -50,6 +50,18 @@ EDAX/EDAX.md
 EDAX/EDAX.html
 EDAX/figure/
 
+# ggplot2Intro tips directory
+ggplot2Intro/.DS_Store
+ggplot2Intro/ggplot2Intro.md
+ggplot2Intro/ggplot2Intro.html
+ggplot2Intro/figure/
+
+# ggvisIntro tips directory
+ggvisIntro/.DS_Store
+ggvisIntro/ggvisIntro.md
+ggvisIntro/ggvisIntro.html
+ggvisIntro/figure/
+
 # git tips directory
 git/.DS_Store
 git/git-tips.md
