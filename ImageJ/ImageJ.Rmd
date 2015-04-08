@@ -22,7 +22,6 @@ Send a message to ``imagej-devel@imagej.net``
 
 send message to ``imagej@list.nih.gov``
 
-=======
 ## Useful keyboard shortcuts
 
 `[` - Start the script editor. 

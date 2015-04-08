@@ -55,5 +55,22 @@ I like Flatland-Monoaki and Spacegray-ocean-dark for Python  and Monoaki for LaT
 3. Find Theme - Spacegray and hit Enter
 4. Use ``Preferences -> Color Scheme -> base16-ocean-dark``
 
+### My curent user preferences
+
+```
+{
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"font_size": 14,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"tab_size": 2,
+	"theme": "Numix Dark.sublime-theme",
+	"numix_folder_icons": true,
+	"tabs_large": true
+}
+```
+
 
 [Back to Index](../README.html)

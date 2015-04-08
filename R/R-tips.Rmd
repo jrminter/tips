@@ -27,7 +27,7 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 [Back to Index](../README.html)
 
-RStudio - Tomorrow Night Bright theme is easy on the eyes
+RStudio - Tomorrow Night Bright theme is easy on the eyes. Monokai is somewhat better.
 
 [Google](http://google-styleguide.googlecode.com/svn/trunk/Rguide.xml) has a nice R style guide.
 
