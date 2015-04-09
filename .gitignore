@@ -216,6 +216,7 @@ scripts/.RData
 
 # testMakefileBeamerSlideHandouts dir
 testMakefileBeamerSlideHandouts/.DS_Store
+testMakefileBeamerSlideHandouts/*.pdf
 
 # tex tips directory
 tex/.DS_Store
