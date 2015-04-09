@@ -214,6 +214,9 @@ Sweave/figure/
 # scripts dir
 scripts/.RData
 
+# testMakefileBeamerSlideHandouts dir
+testMakefileBeamerSlideHandouts/.DS_Store
+
 # tex tips directory
 tex/.DS_Store
 tex/tex-tips.md
