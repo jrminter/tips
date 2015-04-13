@@ -85,6 +85,7 @@ table:nth-of-type(2) {
 | Ag L       |  30 | orange           |
 | Ga L       | 300 | magenta          |
 | S  K       | 300 | magenta          |
+| Na K       | 240 | blue             |
 
 **Note** One can easily see and change values from the Summary view. We also don't often have don't often have both Ga and S or Pt and Cl
 
