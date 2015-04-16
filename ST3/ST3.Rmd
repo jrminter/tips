@@ -71,6 +71,26 @@ I like Flatland-Monoaki and Spacegray-ocean-dark for Python  and Monoaki for LaT
 	"tabs_large": true
 }
 ```
+## Using Sublime Text 3 with git
 
+### Windows
+
+From [Stack Overflow](http://stackoverflow.com/questions/8951275/git-config-core-editor-how-to-make-sublime-text-the-default-editor-for-git-on)
+
+> Sublime Text 3 (Build 3065)
+
+> Sublime Text 3 (Build 3065) added the subl.exe command line helper. Use `subl.exe -h` for the options available to you. I have `"hot_exit": true` and `"remember_open_files": true` set in my Sublime Text user settings. I have found the following to git config to work well for me.
+
+```
+git config --global core.editor "'c:/program files/sublime text 3/subl.exe' -w"
+```
+
+> With this git config the a new tab is opened in my editor. I edit my commit message, save the tab and close it (`CTRL+w`). Git will wait until the tab is closed to continue its work.
+
+### MacOSX
+
+See the [Git Hub](https://help.github.com/articles/associating-text-editors-with-git/) page
+
+Need to test the Windows approach. Need to see where subl is, perhaps symlink to `/usr/local/bin`
 
 [Back to Index](../README.html)
