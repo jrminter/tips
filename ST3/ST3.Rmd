@@ -60,15 +60,24 @@ I like Flatland-Monoaki and Spacegray-ocean-dark for Python  and Monoaki for LaT
 ```
 {
 	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"dictionary": "Packages/Language - English/en_US.dic",
+	"font_face": "Lucida Console",
 	"font_size": 14,
 	"ignored_packages":
 	[
 		"Vintage"
 	],
+	"rulers":
+	[
+		72
+	],
 	"tab_size": 2,
+	"tabs_large": true,
 	"theme": "Numix Dark.sublime-theme",
 	"numix_folder_icons": true,
-	"tabs_large": true
+	"translate_tabs_to_spaces": true,
+	"hot_exit": true,
+	"remember_open_files": true
 }
 ```
 ## Using Sublime Text 3 with git
