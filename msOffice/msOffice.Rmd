@@ -13,6 +13,17 @@ output:
 These are John Minter's tips for MS Office.
 They were compiled from several web sources.
 
+## Outlook
+
+I have had problems with links with spaces. The key is to surround the
+link with what
+[Microsoft](https://support.office.com/en-ie/article/Add-links-containing-spaces-to-an-e-mail-message-65e3086b-8f1c-4e4c-88ab-7489b3c823b1)
+calls `chevrons`. See the example below
+
+```
+<\\ekc1\fs1\My Project\@Weekly Meeting\+2015 Characterization Meeting Agenda>
+```
+
 ## PowerPoint
 
 ### Footers don't show up
