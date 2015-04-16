@@ -13,6 +13,12 @@ output:
 These are John Minter's tips for a workflow using git. They were
 compiled from several web sources.
 
+## Some helps on commit messages
+
+[Chris Beams](http://chris.beams.io/posts/git-commit/#seven-rules)
+
+[Brigade Engineering](https://medium.com/brigade-engineering/the-secrets-to-great-commit-messages-106fc0a92a25)
+
 ## see what changed
 
 My new favorite command...
