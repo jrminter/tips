@@ -38,6 +38,12 @@ color/color.md
 color/color.html
 color/figure/
 
+# ConductiveEpoxy directory
+ConductiveEpoxy/.DS_Store
+ConductiveEpoxy/ConductiveEpoxy.md
+ConductiveEpoxy/ConductiveEpoxy.html
+ConductiveEpoxy/figure/
+
 # DiffractionLimit tips directory
 DiffractionLimit/.DS_Store
 DiffractionLimit/DiffractionLimit.md

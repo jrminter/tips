@@ -1,0 +1,69 @@
+---
+title: "Conductive Epoxies for Microscopy"
+author: "J. R. Minter"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    theme: united
+    highlight: pygments
+---
+
+[Back to Index](../README.html)
+
+We frequently neeed conductive epoxies for SEM and EDS. Here are some choices.
+
+## Epic Resin's S7076
+
+This is the first one I tried. The information below was extracted from [SPI's web site](http://www.2spi.com/catalog/spec_prep/carbon-black-filled-conductive-epoxy-metallography-resin.shtml) where it is sold as "SPI ConductoBed™ Carbon Black Filled Conductive Epoxy Mounting Resin for Metallographic Applications"
+
+### Introduction
+
+When samples are to be "metallographically mounted" and polished and then examined by SEM or SEM/EDS, it is desirable to have the mounting medium have a resistivity that is lower than that obtained using any of the standard metallographic mounting materials, such as the Koldmount™ Fast Curing Cold Mounting Kit.
+
+SPI Supplies now offers as a standard product the SPI ConductoBed™ Carbon Black Filled Conductive Epoxy Mounting Resin System. It is a two part conductive epoxy composition designed specifically for use in SEM/EDS applications where additional conductivity is needed. It contains a both resin and hardener, and the hardness of the final mount can be controlled by either increasing or decreasing the amount of hardener being used to bring about either, respectively, a harder or softer final mount.
+
+### Mixing instructions
+
+The ratio of resin to hardener is 2:1.
+
+### Product overview
+
+Both components, resin and hardener are very viscous and could easily be described as having a consistency like that of a paste. Because of its higher-than-normal viscosity, the components generally have to be "spooned out" and measured in separate cups. Some might even find that getting precise weights might not be so easy.
+
+### Odors
+We are very concerned about any smells or odors uses might be exposed in their normal use of the product. Both ConductoBed as well as KoldMount and QuickMount resins have odors as well, but the odor from ConductoBed is definitely stronger but not to the point it could make a difference in terms of one wanting to use it. The best way to describe the odor would be to describe it as smelling like asphalt.
+
+### Comments about mixing and curing
+
+Mixing the two compounds product together was not particularly easy. Even harder was trying to load the mold. It was difficult trying to ensure that the sample was mounted properly and that all voids were filled (in fact, they were not). **JRM note:** I wonder if heating to 40C would help...
+
+#### Sample cure times
+7 days @ room temperature sample will be hard and stay hard through the entire night.
+
+3 days @ room temperature sample will be hard but still on the "soft" side of being hounded for meeting times with distributors.
+
+24 hours @ 70°C
+
+###Some other comments:
+In spite of the overall softness of the product, it ground and polished reasonably well. Upon closer examination of the cured sample, when the embedded sample is actually "pushed aside" during the potting operation, voids were clearly observed.
+
+In our own JEOL Model 840 SEM, ConductoBed did show good conductivity, allowing the sample to be examined without any carbon coating whatsoever. However, there does appear to be some low level contamination in the resin, as detected by EDS. Chlorine, aluminum, silicon, calcium and iron were all detected. We believe the Al and Si may be from grinding and polishing since there is some amount of porosity in the sample mount. The calcium and iron are low, but not that low that it can be ignored.
+
+### The downside
+
+Our initial evaluation revealed a difficult system to work with but with experience, we had fewer and fewer difficulties. There is an odor but it is not as strong as some other popular mounting media such as Koldmount™ Epoxy Resin.
+
+Our own laboratory staff also find the higher than normal viscosity of the resin to make it more challenging as an embedding resin. A sample with porosity probably would not work very well with ConductoBed resin. And because it is opaque, one cannot use this system when wanting to grind and polish down to a specific location. But when a conductive resin is needed, we are sure that ConductoBed will provide the needed conductivity.
+
+## Buehler ProbeMet
+
+[Buehler](https://shop.buehler.com/consumables/sectioning/compression-mounting/probemet) sells ProbeMet under part number 203385064 (4 lbs, 1.8 kg). It is
+
+- Copper (Cu) and Mineral (SiO2) filled epoxy thermoset
+- Conductive material with good edge retention
+- Use in SEM analysis when copper is not of interest
+- Can cause a Cu-Al galvanic couple on Aluminum (Al) specimens
+
+Note: this is a compression mount resin.
+
+[Back to Index](../README.html)
