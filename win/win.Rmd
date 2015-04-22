@@ -292,6 +292,29 @@ Powercfg -deviceEnableWake "Microsoft USB IntelliMouse Explorer"
 
 ```
 
+### Database access
+
+Database access on 64 bit systems can be a challenge. Had trouble
+getting rWipeTest to run on my Win7_x64 system.
+
+The information from [this article](https://robertoschiabel.wordpress.com/2008/02/28/windows-x64-32bit-odbc-vs-64bit-odbc/)
+was interesting.
+
+> It’s important to understand which kind of DSN you have. On an x64 system, you can create an ODBC connection(DSN) on the 32-bit side of the system or on the 64-bit side of the system.
+32-bit applications will only see ODBC connections created in the 32-bit side, and 64-bits applications will only see ODBC connections from the 64-bit side. Each kind of application has is own registry.To setup DSN for 32-bit application you must use:
+%WINDIR%\SysWOW64\odbcad32.exe
+and for 64-bit application you must use:
+%WINDIR%\System32\odbcad32.exe
+
+> There is not 32-bit edition of Windows XP on the XP Pro x64 media.
+> http://support.microsoft.com/kb/942976/en-us
+
+> A 64-bit version of the Microsoft Windows operating system includes the following versions of the Microsoft Open Database Connectivity (ODBC) Data Source Administrator tool (Odbcad32.exe):
+- The 32-bit version of the Odbcad32.exe file is located in the %systemdrive%WindowsSysWoW64 folder.
+-	The 64-bit version of the Odbcad32.exe file is located in the %systemdrive%WindowsSystem32 folder.
+The Odbcad32.exe file displays the following types of data source names (DSNs):
+-	System DSNs
+-	User DSNs
 
 
 [Back to Index](../README.html)
