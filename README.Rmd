@@ -28,6 +28,8 @@ chrome://flags/#enhanced-bookmarks-experiment
 
 Topic
 
+[AccessToSqlite](./AccessToSqlite/AccessToSqlite.html)
+
 [EkAutomater](./automater/automater.html)
 
 [Oxford AZtec](./AZtec/AZtec.html)

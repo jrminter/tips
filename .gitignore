@@ -7,6 +7,12 @@ tab.tex
 Readme.md
 *.html
 
+# AccessToSqlite directory
+AccessToSqlite/.DS_Store
+AccessToSqlite/AccessToSqlite.md
+AccessToSqlite/AccessToSqlite.html
+AccessToSqlite/figure/
+
 # automater directory
 automater/.DS_Store
 automater/automater.md
