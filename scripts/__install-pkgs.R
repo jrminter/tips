@@ -1,9 +1,3 @@
-# installPkgs.R
-str.cran.repo <- 'http://cran.revolutionanalytics.com/'
-str.lib <- .Library
-
-source("http://bioconductor.org/biocLite.R")
-biocLite("BiocUpgrade")
 
 install_new<-function(mypkg){
   if (mypkg %in% installed.packages()){
@@ -34,7 +28,8 @@ install_new_bioconductor<-function(mypkg){
 }
 
 install_new_github<-function(mypkg, repo){
-  require(devtools)
+  library(devtools)
+  theCmd <- paste0(repo,'/', mypkg)
   if (mypkg %in% installed.packages()){
     str.line <- paste0("Package ", mypkg, " already installed \n")
     cat(str.line)
@@ -45,7 +40,7 @@ install_new_github<-function(mypkg, repo){
     cat()
     Sys.sleep(5)
 
-    install_github(mypkg, repo)
+    install_github(theCmd)
   }
 }
 
@@ -57,7 +52,7 @@ update.packages(ask=FALSE, checkBuilt = TRUE)
 # install_new('RExcel')
 
 install_new_bioconductor("BiocStyle")
-install_new_bioconductor("RCurl")
+#install_new_bioconductor("RCurl") # avail from CRAN
 install_new_bioconductor("EBImage")
 install_new_bioconductor("gpls")
 install_new_bioconductor("graph")
@@ -70,7 +65,7 @@ install_new('plotGoogleMaps')
 install_new('tikzDevice') # now back on CRAN...
 
 # Sweave and pandoc tools
-install_new('cacheSweave')
+# install_new('cacheSweave') # not avail 3.2
 install_new('knitr')
 install_new('knitcitations')
 install_new('pander')
@@ -91,21 +86,24 @@ install_new('rtiff')
 # for foreach
 install_new('foreach')
 install_new('numbers')
-install_new('doMC')
+# install_new('doMC') # not avail 3.2
 install_new('rbenchmark')
 install_new('doSNOW')
 
 
 
-
+install_new('dplyr')
+install_new('tidyr')
 install_new('PerformanceAnalytics')
+install_new('quantmod')
+install_new('TTR')
 install_new('RJSONIO')
 install_new('rgdal')
 install_new('filehash')
 install_new('sp')
 install_new('raster')
 install_new('fields')
-install_new('h5r')
+# install_new('h5r') # not avail 3.2
 install_new('devtools')
 install_new('rJava')
 install_new('xtable')
@@ -182,5 +180,8 @@ install_new('lme4')
 
 install_new_github('slidify','ramnathv')
 install_new_github('slidifyLibraries','ramnathv')
+install_new_github('bookdown','hadley')
+install_new_github('captioner','adletaw')
+
 
 
