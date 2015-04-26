@@ -10,6 +10,21 @@ output:
 
 [Back to Index](../README.html)
 
+## An annoyance with R and Gtk2 with R-3.2.0
+
+Using Gtk2 from homebrew seemed to work
+
+```
+brew install gtk+
+export PKG_CONFIG_PATH=/usr/X11/lib/pkgconfig:$PKG_CONFIG_PATH
+R
+install.packages("RGtk2")
+install.packages("cairoDevice")
+```
+
+I also added the line to my fixYosemite.app AppleScript
+
+
 ## Yosemite
 
 There is a significant problem passing environment variables. Nice solution posted on [stackoverflow](http://stackoverflow.com/questions/25385934/yosemite-launchd-conf-no-longer-work).
