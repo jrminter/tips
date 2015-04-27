@@ -9,7 +9,7 @@ strRel     <- '/tips/scripts'
 
 names <- c("AccessToSqlite.Rmd", "automater.Rmd", "AZtec.Rmd",
            "C++11-Tips.Rmd",
-           "chntpw.Rmd", "color.Rmd", "ConductiveEpoxy.Rmd"
+           "chntpw.Rmd", "color.Rmd", "ConductiveEpoxy.Rmd",
            "DiffractionLimit.Rmd",
            "EDAX.Rmd", "ggplot2Intro.Rmd",
            "ggvisIntro.Rmd", "git-tips.Rmd", 
@@ -32,7 +32,7 @@ rPath <- c("../AccessToSqlite", "../automater",
            "../EDAX", "../ggplot2Intro", "../ggvisIntro", "../git", 
            "../gnuplot", "../hacklev",
            "../ImageJ", "../iOS",
-           "../legacy", "../Lubuntu". "../mac","../micro", "../msOffice",
+           "../legacy", "../Lubuntu", "../mac","../micro", "../msOffice",
            "../mysql", "../osPkgs",
            "../plagiarism", "../python", "../R",
            "../R-Anova", "../R-bar-plots", "../R-boxplots" ,
