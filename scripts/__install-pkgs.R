@@ -59,12 +59,6 @@ update.packages(ask=FALSE, checkBuilt = TRUE)
 # install_new('RMySQL')
 # install_new('RExcel')
 
-install_new_bioconductor("BiocStyle")
-#install_new_bioconductor("RCurl") # avail from CRAN
-install_new_bioconductor("EBImage")
-install_new_bioconductor("gpls")
-install_new_bioconductor("graph")
-install_new_bioconductor("RBGL")
 
 install_new('RODBC')
 install_new('Unicode')
@@ -185,6 +179,14 @@ install_new('stringr')
 install_new('quantreg')
 install_new('zoo')
 install_new('lme4')
+
+
+install_new_bioconductor("BiocStyle")
+#install_new_bioconductor("RCurl") # avail from CRAN
+install_new_bioconductor("EBImage")
+install_new_bioconductor("gpls")
+install_new_bioconductor("graph")
+install_new_bioconductor("RBGL")
 
 install_new_github('slidify','ramnathv')
 install_new_github('slidifyLibraries','ramnathv')

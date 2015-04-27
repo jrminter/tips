@@ -302,9 +302,16 @@ was interesting.
 
 > It’s important to understand which kind of DSN you have. On an x64 system, you can create an ODBC connection(DSN) on the 32-bit side of the system or on the 64-bit side of the system.
 32-bit applications will only see ODBC connections created in the 32-bit side, and 64-bits applications will only see ODBC connections from the 64-bit side. Each kind of application has is own registry.To setup DSN for 32-bit application you must use:
+
+```
 %WINDIR%\SysWOW64\odbcad32.exe
+```
+
 and for 64-bit application you must use:
+
+```
 %WINDIR%\System32\odbcad32.exe
+```
 
 > There is not 32-bit edition of Windows XP on the XP Pro x64 media.
 > http://support.microsoft.com/kb/942976/en-us
