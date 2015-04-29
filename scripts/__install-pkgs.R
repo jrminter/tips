@@ -192,6 +192,7 @@ install_new_github('slidify','ramnathv')
 install_new_github('slidifyLibraries','ramnathv')
 install_new_github('bookdown','hadley')
 install_new_github('captioner','adletaw')
+install_new_github('choroplethrZip@v1.3.0','arilamstein')
 
 
 
