@@ -94,6 +94,7 @@ install_new('doSNOW')
 
 
 install_new('RGtk2')
+install_new('testthat')
 install_new('dplyr')
 install_new('tidyr')
 install_new('PerformanceAnalytics')
