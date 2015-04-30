@@ -36,9 +36,33 @@ tips on matters that made me go *hmmm...*
 
 ## Hard things to find
 
-###
 
-Upgrade packages after new verion
+### Using Hmisc LaTeX functions without Miktex
+
+TexLive does not include the expected Windows dvi viewer `yap` which is standard with Miktex and is expected on Windows with Hmisc. The workaround is to use the `option` command. Try this solution that will write a tex file in the `$TEMP` directory. *Note:* one must manually close the `dviout` window for the script to continue.
+
+```{r, message=FALSE}
+library(Hmisc)
+wd <- getwd()
+tmp <- Sys.getenv("TEMP")
+setwd(tmp)
+x <- matrix(1:6, nrow=2,
+            dimnames=list(c('a','b'),c('c','d','this that')))
+
+if(Sys.info()['sysname'] == "Windows"){
+  options(xdvicmd='dviout.exe')
+}
+# This will display the file (and work...)
+#
+# latex(x, file='matrix.tex')
+#
+# we can supress display by specifying the file and storing the
+# result in an object...
+ignore <- latex(x, file='matrix.tex')
+setwd(wd)
+```
+
+### Upgrade packages after new verion
 
 ```
 update.packages(checkBuilt=TRUE, ask=FALSE)
