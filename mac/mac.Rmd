@@ -61,7 +61,7 @@ Type ``⌘+l`` to see the log.
 
 ### Fixing ``/usr/local`` permissions for ``homebrew`` and ``texlive``
 ```
-sudo chown -R $USER /usr/local
+sudo chown -R $(whoami) /usr/local
 ```
 
 ### Some hints for SSDs
