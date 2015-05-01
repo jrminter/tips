@@ -70,6 +70,8 @@ update.packages(checkBuilt=TRUE, ask=FALSE)
 
 ### Some hints from Karl Broman for mac
 
+from [Stack Overflow](https://github.com/kbroman/ProgrammingNotes)
+
 #### installing gfortran
 
 ```
