@@ -68,7 +68,35 @@ setwd(wd)
 update.packages(checkBuilt=TRUE, ask=FALSE)
 ```
 
+### Some hints from Karl Broman for mac
+
+#### installing gfortran
+
+```
+cd ~/Desktop
+wget http://r.research.att.com/libs/gfortran-4.8.2-darwin13.tar.bz2
+sudo tar fxz ~/Desktop/gfortran-4.8.2-darwin13.tar.bz2 -C /
+```
+
+Place in `~/.R/config`:
+
+```
+CC=clang
+CXX=clang++
+F77=gfortran-4.8
+FC=$F77
+OBJC=clang
+```
+
+Also, place in `~/.R/Makevars`:
+
+```
+CFLAGS=-g -O2 -Wall -pedantic
+CXXFLAGS=-g -O2 -Wall -pedantic
+```
+
 ### Crash when using knitr
+
 Make certain that
 
 ```{r}
