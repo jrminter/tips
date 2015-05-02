@@ -1,0 +1,14 @@
+---
+title: "Workflow Tips"
+author: "J. R. Minter"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    theme: united
+    highlight: pygments
+---
+
+[Back to Index](../README.html)
+
+
+[Back to Index](../README.html)
