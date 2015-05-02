@@ -356,6 +356,13 @@ Set up update
 tlmgr option repository http://mirrors.rit.edu/CTAN/systems/texlive/tlnet/
 ```
 
+Set up update for pretest
+
+```
+tlmgr option repository http://mirror.hmc.edu/tlpretest/
+```
+
+
 ### on win7
 ```
 install-tl -gui text -repository  http://mirrors.rit.edu/CTAN/systems/texlive/tlnet/
