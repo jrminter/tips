@@ -31,6 +31,9 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 ``Slidify`` is a package by Ramnath Vaidyanathan that may be used
 to create HTML5 slides from R.
 
+
+**Note 2015-05-04:** There is apparently a problem with slidify working with `stringr-1.0.0`. The interim solution is to revert to revert to `stringr-0.6.2`.
+
 # Installation
 One installs Slidify from github in R with the commands
 
@@ -46,8 +49,8 @@ RV provides some helpful tips to get started on his
 Here are the first steps (from R)
 
 ```
-setwd("~/work/slideRmd")
-require(slidify)
+setwd("~/work/play")
+library(slidify)
 author("jrmSlides")
 ```
 
