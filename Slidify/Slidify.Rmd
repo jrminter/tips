@@ -46,9 +46,9 @@ RV provides some helpful tips to get started on his
 Here are the first steps (from R)
 
 ```
-setwd("~/work/slideRmd")
-require(slidify)
-author("jrmSlides")
+setwd("~/work/play")
+library(slidify)
+author("testSlidify")
 ```
 
 This creates a basic framework in directory ``jrmSlides`` with
