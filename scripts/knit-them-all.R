@@ -24,7 +24,8 @@ names <- c("AccessToSqlite.Rmd", "automater.Rmd", "AZtec.Rmd",
            "Salabim-graphics.Rmd", "shell-tips.Rmd",
            "skimage.Rmd","Slidify.Rmd", "ST3.Rmd",
            "Sweave.Rmd", "tex-tips.Rmd","ubuntu.Rmd",
-           "VS2010.Rmd","win.Rmd","README.Rmd")
+           "VS2010.Rmd","win.Rmd","workflow.Rmd", "README.Rmd")
+
 rPath <- c("../AccessToSqlite", "../automater", 
            "../AZtec", "../C++11",
            "../chntpw", "../color", "../ConductiveEpoxy",
@@ -40,7 +41,7 @@ rPath <- c("../AccessToSqlite", "../automater",
            "../Salabim", "../shell", 
            "../skimage", "../Slidify", "../ST3",
            "../Sweave", "../tex", "../ubuntu",
-           "../VS2010","../win", "../")
+           "../VS2010","../win", "../workflow", "../")
 
 knitIt <- function(wrkPath, scrPath, theName){
   print(wrkPath)

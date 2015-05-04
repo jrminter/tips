@@ -253,3 +253,9 @@ win/.DS_Store
 win/win.md
 win/win.html
 win/figure/
+
+# workflow tips directory
+workflow/.DS_Store
+workflow/workflow.md
+workflow/workflow.html
+workflow/figure/

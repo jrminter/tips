@@ -180,6 +180,7 @@ install_new('stringr')
 install_new('quantreg')
 install_new('zoo')
 install_new('lme4')
+install_new('plotGoogleMaps')
 
 
 install_new_bioconductor("BiocStyle")

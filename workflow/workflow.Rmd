@@ -1,0 +1,29 @@
+---
+title: "Workflow Tips"
+author: "J. R. Minter"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  html_document:
+    theme: united
+    highlight: pygments
+---
+
+[Back to Index](../README.html)
+
+
+## Converting Word .docx to markdown
+
+
+
+1. Open the Word document `foo.docx`
+2. Save any images as `.png` images
+3. Convert to markdown with `pandoc`
+
+```
+pandoc foo.docx -o foo.md
+```
+Not the greatest conversion. Much better than the html conversion
+[here](http://sumanmathmedicine.blogspot.com/2014/11/using-markdown-and-pandoc-for.html).
+
+
+[Back to Index](../README.html)
