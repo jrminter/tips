@@ -32,13 +32,13 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 to create HTML5 slides from R.
 
 
-**Note 2015-05-04:** There is apparently a problem with slidify working with `stringr-1.0.0`. The interim solution is to revert to revert to `stringr-0.6.2`.
+**2015-05-04 Note:** There is an incompatibility between the latest version of `Slidify` and the release version of `stringr` caused by a problem with processing regular expressions. The current workaround is to install `stringr-0.6.2` from the `CRAN` archives.
 
 # Installation
 One installs Slidify from github in R with the commands
 
 ```
-require(devtools)
+library(devtools)
 install_github('slidify', 'ramnathv')
 install_github('slidifyLibraries', 'ramnathv')
 ```
@@ -51,7 +51,11 @@ Here are the first steps (from R)
 ```
 setwd("~/work/play")
 library(slidify)
+<<<<<<< HEAD
 author("jrmSlides")
+=======
+author("testSlidify")
+>>>>>>> c5d048b5ce381fb8cb09cf4937ff8634156f6c5e
 ```
 
 This creates a basic framework in directory ``jrmSlides`` with
@@ -64,8 +68,8 @@ If you want a splash image on a starter slide and a logo on the
 title slide, add
 
 ```
-logo        : latex.png
-biglogo     : mandril.png 
+logo        : M3A-large.png
+biglogo     : mandrill.png 
 ```
 just above ``framework`` in the YAMML top matter and put the images
 in the ``assets/img`` directory.
@@ -76,11 +80,13 @@ widgets     : []  # {mathjax, quiz, bootstrap}
 ```
 to
 ```
-widgets     : [mathjax, bootstrap]  # {mathjax, quiz, bootstrap}
+widgets     : [mathjax]  # {mathjax, quiz, bootstrap}
 ```
 
 Then run ``Knit HTML`` in RStudio
 to incorporate the changes.
+
+**Note:** I have a template (index.Rmd) in `templates/Rmd/Slidify` and a `slidify.css` file in `global/css/`. Also have some logos in `global/png/`
 
 
 # Alchemy
@@ -88,6 +94,8 @@ to incorporate the changes.
 ``io2012`` is a convenient framework for slides. I find the default
 text too small and like to add some color to the title slide. We
 need to edit files in the ``libraries/frameworks/io2012`` directory.
+
+Want to double check this one in my current template... 
 
 ### css/slidify.css
 change the ``article`` styles
@@ -101,17 +109,7 @@ article p, article li, article li.build{
   color: #474747;
 }
 ```
-### layouts/deck.html
- Change the ``hgroup`` in the title slide to
- 
- ```
-       <hgroup class="auto-fadein">
-        <h1 style="color:#CC2904">{{ title }}</h1>
-        <h2 style="color:#474747">{{ subtitle }}</h2>
-        <p style="color:#474747">{{ author }}<br/>{{ job }}</p>
-      </hgroup>
- ```
- Note that we are using a darker gray for the text.
+
  
  ### Making a reproducible, custom theme.
  Once one gets a set of changes that we would like
