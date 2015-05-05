@@ -51,11 +51,7 @@ Here are the first steps (from R)
 ```
 setwd("~/work/play")
 library(slidify)
-<<<<<<< HEAD
-author("jrmSlides")
-=======
 author("testSlidify")
->>>>>>> c5d048b5ce381fb8cb09cf4937ff8634156f6c5e
 ```
 
 This creates a basic framework in directory ``jrmSlides`` with
