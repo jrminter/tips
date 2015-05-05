@@ -58,7 +58,7 @@ This creates a basic framework in directory ``jrmSlides`` with
 an ``index.Rmd`` template and an ``assets`` directory. When you
 edit the ``index.Rmd`` template and ``Knit HTML`` in RStudio, this
 creates the ``index.md`` and ``index.html`` files and a ``libraries``
-directory.
+directory. It helps to create a RStudio project in the directory...
 
 If you want a splash image on a starter slide and a logo on the
 title slide, add
