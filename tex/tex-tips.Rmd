@@ -288,14 +288,15 @@ Some packages have problems with paths with spaces on Windoze
 
 Typical culprits are ("Program Files", "Documents and Settings")
 so I like a non-standard install. I do this for R as well...
+I also switch using environment variables.
 
 ```
 C:/Apps/texlive/
-C:/Apps/texlive/2012
+C:/Apps/texlive/2015
 C:/Apps/texlive/texmf-local
 
-C:/Apps/R/R-2.15.3
-C:/Apps/R/R-3.0.1
+C:/Apps/R/R-3.1.3
+C:/Apps/R/R-3.2.0
 C:/Apps/R/Rtools
 
 ```
@@ -350,7 +351,7 @@ tlmgr option location http://mirrors.rit.edu/CTAN/systems/texlive/tlnet/
 install-tl -repository  http://mirrors.rit.edu/CTAN/systems/texlive/tlnet/
 ```
 
-Set up update
+Set up update (normal)
 
 ```
 tlmgr option repository http://mirrors.rit.edu/CTAN/systems/texlive/tlnet/
@@ -360,6 +361,12 @@ Set up update for pretest
 
 ```
 tlmgr option repository http://mirror.hmc.edu/tlpretest/
+```
+
+On Windows, the update-tl.bat runs
+
+```
+cmd /k "tlmgr update --self --all --reinstall-forcibly-removed&&pause"
 ```
 
 
