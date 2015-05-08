@@ -179,6 +179,13 @@ R-GeoSpatial/*.html
 R-GeoSpatial/*.htm
 R-GeoSpatial/Legend*.png
 
+# R-packages directory
+R-packages/.DS_Store
+R-packages/R-packages.md
+R-packages/*.html
+R-packages/*.htm
+R-packages/Legend*.png
+
 # research directory
 research/.DS_Store
 research/figure/

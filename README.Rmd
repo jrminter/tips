@@ -90,6 +90,8 @@ Topic
 
 [R-GeoSpatial](./R-GeoSpatial/R-GeoSpatial.html)
 
+[R Packages](./R-packages/R-packages.html)
+
 [Research](./research/research.html)
 
 [Salabim-Creating publication quality graphs in R](./Salabim/Salabim-graphics.html)

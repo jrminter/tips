@@ -1,0 +1,71 @@
+---
+title: "R Package Tips"
+author: "J. R. Minter"
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Spectrum Deconvolution}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+[Back to Index](../README.html)
+
+## Overview
+
+One of the best ways to make analyses reproducible is to not 
+repeatedly write the same code. Instead, our goal is to assemble
+re-usable functions into R packages under version control and
+containing unit tests. This document contains my favorite tips
+assembled from various sites on the web.
+
+## Key snippets
+
+### Set up a new package `myPkg` that we plan to host on github
+
+On my local computer:
+
+```
+setwd("~/git/")
+library("devtools")
+library("roxygen2")
+library("knitr")
+create("myPkg")
+```
+
+Then from the shell:
+
+```
+cd ~/git/myPkg
+git init
+```
+
+Create a new repository on github. Then push my local copy to
+github from the shell:
+
+```
+git remote add origin git@github.com:jrminter/myPkg.git
+git add *
+git commit -m 'initial commit'
+git push -u origin master
+```
+
+### The cursed "no visible binding for global variable" error...
+
+Using LazyLoaded data often gives this error. The key is to explictly use the variable from the package namespace, eg:
+
+```
+ret <- func(myPkg::var, other)
+```
+### The importance of vignettes
+
+Vignettes are preferred to examples in documentation...
+
+
+## Key References
+
+[Jeff Leek's group practices](https://github.com/jtleek/rpackages)     
+[Hadley Wikham's site](http://r-pkgs.had.co.nz/)     
+[Hadley book on github](https://github.com/hadley/r-pkgs/) 
+
+[Back to Index](../README.html)
