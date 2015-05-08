@@ -61,7 +61,7 @@ ret <- func(myPkg::var, other)
 
 > If you’re thinking without writing, you only think you’re thinking. -- Leslie Lamport
 
-Vignettes are preferred to examples in documentation...
+Vignettes are preferred to examples in documentation. These are much less painful to write using `rmarkdown` than `LaTeX`!
 
 To create the first vignette, run:
 
