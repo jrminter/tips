@@ -19,6 +19,15 @@ re-usable functions into R packages under version control and
 containing unit tests. This document contains my favorite tips
 assembled from various sites on the web.
 
+## Key References
+
+[Jeff Leek's group practices](https://github.com/jtleek/rpackages)     
+[Hadley Wikham's site](http://r-pkgs.had.co.nz/)     
+[Hadley book on github](https://github.com/hadley/r-pkgs/)     
+[CRAN keywords vignette](http://cran.r-project.org/web/packages/roxygen2/vignettes/rdkeywords.html)    
+[CRAN roxygen process](http://cran.r-project.org/web/packages/roxygen2/vignettes/rd.html)    
+
+
 ## Key snippets
 
 ### Set up a new package `myPkg` that we plan to host on github
@@ -75,10 +84,6 @@ This will:
 2. Add the necessary dependencies to DESCRIPTION.
 3. Draft a vignette, `vignettes/my-vignette.Rmd`.
 
-## Key References
 
-[Jeff Leek's group practices](https://github.com/jtleek/rpackages)     
-[Hadley Wikham's site](http://r-pkgs.had.co.nz/)     
-[Hadley book on github](https://github.com/hadley/r-pkgs/) 
 
 [Back to Index](../README.html)
