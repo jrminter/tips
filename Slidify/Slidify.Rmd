@@ -1,7 +1,7 @@
 ---
 title: "Tips on Using Slidify"
 author: "J. R. Minter"
-date: "`r format(Sys.time(), '%d %B, %Y')`"
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
   html_document:
     theme: united
@@ -106,9 +106,38 @@ article p, article li, article li.build{
 }
 ```
 
+### Overriding a single instance from the .css
+
+Here is a case where the default left margin for a quote (50px) was too small. Use the html tag to override.
+
+```
+<q style="margin-left:140px;">The overriding design goal for Markdown’s formatting syntax is to make it as readable as possible. The idea is that a Markdown-formatted document should be publishable as-is, as plain text, without looking like it’s been marked up with tags or formatting instructions.</q>
+
+```
+
+### Adding a footer
+
+From Ramnath's user2014 tutorial, slide 30
+
+change `layout/slide.html`
+
+```
+<slide class="{{ slide.class }}">
+  <hgroup>
+    {{{ slide.header }}}
+  </hgroup>
+  <article>
+    {{{ slide.content }}}  
+   <footer class = 'logo'>
+      <img src = 'path/to/logo'></img>
+   </footer>
+  </article>
+</slide>
+```
  
- ### Making a reproducible, custom theme.
- Once one gets a set of changes that we would like
+### Making a reproducible, custom theme.
+
+Once one gets a set of changes that we would like
  to recycle, one can always make a new copy of
  ``io2012`` in the ``[R-HOME]/library/slidifyLibraries/libraries/frameworks/`` directory and incorporate the changes there.
 
