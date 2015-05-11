@@ -165,6 +165,12 @@ R-boxplots/figure/
 R-boxplots/R-boxplots.md
 R-boxplots/R-boxplots.html
 
+# R-Excel directory
+R-Excel/.DS_Store
+R-Excel/figure/
+R-Excel/R-Excel.md
+R-Excel/R-Excel.html
+
 # R-foreach directory
 R-foreach/.DS_Store
 R-foreach/figure/

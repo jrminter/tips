@@ -88,6 +88,8 @@ Topic
 
 [R-boxplots](./R-boxplots/R-boxplots.html)
 
+[R-Excel](./R-Excel/R-Excel.html)
+
 [R-foreach](./R-foreach/R-foreach.html)
 
 [R-GeoSpatial](./R-GeoSpatial/R-GeoSpatial.html)
