@@ -5,7 +5,19 @@ str.cran.repo <- 'http://cran.revolutionanalytics.com/'
 str.lib <- .Library
 
 source("http://bioconductor.org/biocLite.R")
-biocLite()
+
+
+ensure_devtools <- function(){
+  if ("devtools" %in% installed.packages()){
+    print("devtools already installed")
+  }else{
+    print("Installing devtools")
+    install.packages("devtools",repos=str.cran.repo,
+                     dep=TRUE,lib=str.lib)
+    
+  }
+}
+ensure_devtools()
 
 install_new<-function(mypkg){
   if (mypkg %in% installed.packages()){
@@ -54,6 +66,8 @@ install_new_github<-function(mypkg, repo){
 
 # first update anything not built with your current version of R.
 update.packages(ask=FALSE, checkBuilt = TRUE)
+
+
 
 # Problem packages for R-3.1.0
 # install_new('RMySQL')
@@ -181,7 +195,9 @@ install_new('quantreg')
 install_new('zoo')
 install_new('lme4')
 install_new('plotGoogleMaps')
+install_new('devtools')
 
+biocLite()
 
 install_new_bioconductor("BiocStyle")
 #install_new_bioconductor("RCurl") # avail from CRAN
@@ -195,7 +211,4 @@ install_new_github('slidifyLibraries','ramnathv')
 install_new_github('rCharts','ramnathv')
 install_new_github('bookdown','hadley')
 install_new_github('captioner','adletaw')
-install_new_github('choroplethrZip@v1.3.0','arilamstein')
-
-
-
+install_new_github('choroplethrZip','arilamstein')
