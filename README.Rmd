@@ -46,6 +46,8 @@ Topic
 
 [EDAX](./EDAX/EDAX.html)
 
+[Fitness](./fitness/fitness.html)
+
 [ggplot2Intro](./ggplot2Intro/ggplot2Intro.html)
 
 [ggvisIntro](./ggvisIntro/ggvisIntro.html)

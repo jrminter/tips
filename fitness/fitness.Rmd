@@ -1,0 +1,43 @@
+---
+title: "Fitness tips"
+author: "J. R. Minter"
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
+output:
+  html_document:
+    theme: united
+    highlight: pygments
+---
+```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
+# make this an external chunk that can be included in any file
+
+library(knitr)
+options(width = 72)
+opts_chunk$set(message = F, error = F, warning = F, comment = NA, fig.align = 'center', dpi = 100, tidy = F, cache.path = '.cache/', fig.path = 'figure/')
+
+options(xtable.type = 'html')
+knit_hooks$set(inline = function(x) {
+  if(is.numeric(x)) {
+    round(x, getOption('digits'))
+  } else {
+    paste(as.character(x), collapse = ', ')
+  }
+})
+knit_hooks$set(plot = knitr:::hook_plot_html)
+```
+
+
+[Back to Index](../README.html)
+
+## From Jeff Galloway
+
+Walking as an Endurance Excercise 
+[2015-05-10](http://jeffgalloway.typepad.com/jeff_galloways_blog/2015/05/walking-as-an-endurance-exercise.html)
+
+> What is endurance exercise?
+
+> The essence of endurance exercise is to go farther – to keep doing an exercise long enough so that the body must find more efficient ways of moving, of processing energy, sending blood, etc. For untrained muscles, a walk of 10 minutes will do this. As we push back this threshold, our first goal is to get to 3 sessions a walk of 30 minutes each. For continuing progress, one of these could be a long one that pushes up to the current endurance limit or beyond (45 minutes, then 60 minutes, then whatever you want).
+
+
+
+
+[Back to Index](../README.html)
