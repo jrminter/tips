@@ -73,7 +73,7 @@ update.packages(ask=FALSE, checkBuilt = TRUE)
 # install_new('RMySQL')
 # install_new('RExcel')
 
-
+install_new('pryr')
 install_new('RODBC')
 install_new('Unicode')
 install_new('TeachingDemos')
