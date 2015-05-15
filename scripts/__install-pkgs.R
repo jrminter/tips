@@ -74,6 +74,7 @@ update.packages(ask=FALSE, checkBuilt = TRUE)
 # install_new('RExcel')
 
 install_new('pryr')
+install_new('nycflights13')
 install_new('readr')
 install_new('RODBC')
 install_new('Unicode')
