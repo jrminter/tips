@@ -19,6 +19,13 @@ These are frequently used in themes.
 
 # Simple tricks
 
+## Spacing
+
+From [TeX Tips](https://twitter.com/TeXtip/status/599224090004697088)
+
+Use `\phantom{}` to insert white space the size of the argument. 
+For example, `\phantom{\sum}` is an invisible `\sum`.
+
 ## Choose the program to compile
 
 Add the following at the top of the `*.tex` file, choosing the desired program (pdflatex, xelatex):
