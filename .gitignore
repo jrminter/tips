@@ -56,6 +56,11 @@ DiffractionLimit/DiffractionLimit.md
 DiffractionLimit/DiffractionLimit.html
 DiffractionLimit/figure/
 
+# dtsa2 tips directory
+dtsa2/.DS_Store
+dtsa2/dtsa2.md
+dtsa2/dtsa2.html
+
 # EDAX tips directory
 EDAX/.DS_Store
 EDAX/EDAX.md

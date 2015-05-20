@@ -1,0 +1,63 @@
+---
+title: "Tips on Using DTSA-II"
+author: "J. R. Minter"
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Spectrum Deconvolution}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+[Back to Index](../README.html)
+
+### Getting NISTMonte Monte Carlo packages to work with Iona
+
+DTSA-II Iona seems to not export classes that were available
+in Halley. I noticed that the `mcSimulate3.py` file had these
+curious lines at the top:
+
+```
+import sys
+sys.packageManager.makeJavaPackage("gov.nist.microanalysis.NISTMonte.Gen3", "CharacteristicXRayGeneration3, BremsstrahlungXRayGeneration3, FluorescenceXRayGeneration3, XRayTransport3", None)
+```
+
+I did a Google search  and found
+[this](http://sourceforge.net/p/jython/mailman/message/6725556/)
+explanation: The following code works with Jython launched from the jar in the standard install:
+
+```
+import java.awt
+f = java.awt.Frame()
+f.title = "Hello AWT"
+f.visible = True
+```
+
+but when run with `Jython.jar` from the standalone install
+the code gives
+
+```
+>java -jar jython.jar
+Jython 2.2b1 on java1.6.0 (JIT: null)
+Type "copyright", "credits" or "license" for more information.
+>>> import java.awt
+Traceback (innermost last):
+  File "", line 1, in ?
+ImportError: no module named awt
+>>> ^Z
+```
+
+WORKROUND
+
+You need to nudge the system to do what caching would have done:-
+
+```
+import sys
+sys.packageManager.makeJavaPackage("java.awt", "Window", None)
+import java.awt
+f = java.awt.Frame()
+f.title = "Hello AWT"
+f.visible = True
+```
+
+[Back to Index](../README.html)
