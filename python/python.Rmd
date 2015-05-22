@@ -10,6 +10,20 @@ output:
 
 [Back to Index](../README.html)
 
+### Checking outdated packages
+
+For python 2
+
+```
+pip2 list --outdated
+
+pip2 install h5py --upgrade
+pip2 install traitsui --upgrade
+
+
+
+```
+
 ### installing from git repos
 
 For python 3
