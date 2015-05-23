@@ -11,9 +11,10 @@ vignette: >
 
 [Back to Index](../README.html)
 
-### Key imports
+### Key imports for iPy3 notebooks
 
 ```
+%matplotlib inline
 import os
 import numpy as np
 import matplotlib.pyplot as plt

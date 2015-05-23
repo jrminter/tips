@@ -10,6 +10,19 @@ output:
 
 [Back to Index](../README.html)
 
+### iPython Notebook
+
+Some hints from version 3.
+
+- `--pylab` flag has been disabled as a flag; one should use
+`%pylab` or `%matplotlib` in the notebook to enable matplotlib. 
+
+- `--notebook-dir=<Unicode> (NotebookApp.notebook_dir)` the 
+default is `u''`. This is the directory to use for notebooks
+and kernels.  If one starts from the Anaconda Launcher, it seems
+to start in one's home directory. One can navigate to the
+desired folder.
+
 ### Checking outdated packages
 
 For python 2
