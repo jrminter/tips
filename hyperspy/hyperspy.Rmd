@@ -19,6 +19,8 @@ import os
 import numpy as np
 import matplotlib.pyplot as plt
 import hyperspy.hspy as hs
+# set the default figure size
+plt.rcParams['figure.figsize'] = 11, 7
 ```
 
 Note, with this approach we need to be more explicit with the
