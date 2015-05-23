@@ -10,6 +10,13 @@ output:
 
 [Back to Index](../README.html)
 
+### Updating Anaconda
+
+```
+conda update conda
+conda update anaconda
+```
+
 ### iPython Notebook
 
 Some hints from version 3.
