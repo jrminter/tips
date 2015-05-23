@@ -1,11 +1,12 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "`r format(Sys.time(), '%d %B, %Y')`"
-output:
-  html_document:
-    theme: united
-    highlight: pygments
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Tips}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
 ---
 
 
@@ -59,6 +60,8 @@ Topic
 [gnuplot](./gnuplot/gnuplot.html)
 
 [Håklev's tips on R](./hacklev/hacklev.html)
+
+[hyperspy](./hyperspy/hyperspy.html)
 
 [Image-J](./ImageJ/ImageJ.html)
 

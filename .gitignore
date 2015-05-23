@@ -91,6 +91,18 @@ gnuplot/gnuplot.md
 gnuplot/gnuplot.html
 gnuplot/figure/
 
+# hacklev directory
+hacklev/.DS_Store
+hacklev/hacklev.md
+hacklev/hacklev.html
+hacklev/figure/
+
+# hyperspy directory
+hyperspy/.DS_Store
+hyperspy/hyperspy.md
+hyperspy/hyperspy.html
+hyperspy/figure/
+
 # Image-J tips directory
 ImageJ/.DS_Store
 ImageJ/ImageJ.md

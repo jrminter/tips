@@ -1,0 +1,35 @@
+---
+title: "Tips on using hyperspy"
+author: "J. R. Minter"
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{DTSA-II}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+[Back to Index](../README.html)
+
+### Key imports
+
+```
+import numpy as np
+import matplotlib.pyplot as plt
+import hyperspy.hspy as hs
+```
+
+Note, with this approach we need to be more explicit with the
+class structure. Where older scripts wrote
+
+```
+signals.Spectrum()
+```
+
+It now requires more explict
+
+```
+hs.signals.Spectrum()
+```
+
+[Back to Index](../README.html)
