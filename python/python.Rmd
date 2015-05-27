@@ -10,6 +10,16 @@ output:
 
 [Back to Index](../README.html)
 
+### Anaconda python
+
+To update
+
+
+```
+conda update conda
+conda update anaconda
+```
+
 ### iPython Notebook
 
 Some hints from version 3.
@@ -25,6 +35,12 @@ desired folder.
 
 ### Checking outdated packages
 
+```
+pip install wheel
+pip install some-package.whl
+
+```
+
 For python 2
 
 ```
@@ -32,10 +48,20 @@ pip2 list --outdated
 
 pip2 install h5py --upgrade
 pip2 install traitsui --upgrade
-
-
-
 ```
+
+#### Microsoft Visual C++ Compiler for Python 2.7
+
+##### Installing and Uninstalling
+
+The compiler package will default to installing just for the current user and does not require administrative privileges. To install for all users of a machine, execute `msiexec /i <path to MSI> ALLUSERS=1` from an elevated Command Prompt.
+
+To remove or repair the compiler package, locate the entry in Programs and Features and select Remove or Repair.
+
+##### Using with Python distribution tools
+Python package developers should download and use this compiler to produce binary wheels for their Python packages to upload to PyPI. Installing the wheel package, updating to setuptools 6.0 or later, and adding setup.py bdist_wheel upload to your build process will produce the correct files (remember to do this for both 32-bit and 64-bit versions).
+
+If a Python package you are installing does not have a wheel, you can install this compiler package on your own machine. Once the compiler is installed and you have updated to setuptools 6.0 or later, you can use pip install to build and install the Python package. If you are managing multiple machines and need to install the Python package on all of them, you should install the wheel package and use pip wheel to produce a wheel that can be installed on machines without requiring this package.
 
 ### installing from git repos
 
