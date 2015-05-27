@@ -10,9 +10,8 @@ output:
 
 [Back to Index](../README.html)
 
-### Anaconda python
 
-To update
+### Updating Anaconda
 
 
 ```
