@@ -43,4 +43,27 @@ It now requires more explict
 hs.signals.Spectrum()
 ```
 
+## Getting development right to test new EDS model
+
+1. Deleted old hyperspy fork.
+
+2. Created a new hyperspy fork.
+
+3. Clone this locally.
+
+4. Create a branch testPB473 `git checkout -b testPB473` Add some
+   text to eds.rst. Push with `git checkout -b testPB473`.
+   
+5. I used the github gui to send my forked hyperspy repository from Pierre Burdet's.
+
+<figure>
+  <img src="figs/pull-req.png"
+  alt="Drawing" style="width: 640px;"/>
+<figcaption>Figure 1. Pull request 473. </figcaption>
+</figure>
+
+6. I merged the pull request on github. I then pulled it down. I now have branches `master` and `testPB473`. Should just need to pull this down at home...
+
+
+
 [Back to Index](../README.html)
