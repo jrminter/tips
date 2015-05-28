@@ -135,6 +135,23 @@ Here is github's official document on [Syncing a fork][1]:
   [2]: https://help.github.com/articles/pushing-to-a-remote#pushing-a-branch
 
 
+## Getting a pending Fork
+
+From [stackoverflow](http://stackoverflow.com/questions/6022302/pull-requests-from-other-forks-into-my-fork/28729484#28729484) answer 3.
+
+### **Update: Via Webpage**
+
+> Nowadays (since?), you can do this via the github webpage.
+
+> I assume, you should have already a fork (`MyFork`) of the common repo (`BaseRepo`) which has the pending pull request from a fork (`OtherFork`) you are interested in.
+
+> 1. Navigate to the fork (`OtherFork`) which has initiated the pull request which you like to get into your fork (`MyFork`)
+2. Go to the pull requests page of `OtherFork`
+3. Click new pull request
+4. The pending pull request(s) should be offered. Select on the left side as the base fork your fork (MyFork) (**IMPORTANT**)
+5. Now the option of `View pull request` should change to `Create pull request`. Click this.
+
+> Now you should have a pending pull request in your fork (`MyFork`), which you can simply accept.
 
 ## more nice tip resources
 
