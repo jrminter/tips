@@ -1,11 +1,12 @@
 ---
 title: "Git Tips"
 author: "J. R. Minter"
-date: "`r format(Sys.time(), '%d %B, %Y')`"
-output:
-  html_document:
-    theme: united
-    highlight: pygments
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{DTSA-II}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
 ---
 
 [Back to Index](../README.html)
@@ -49,6 +50,91 @@ git log --oneline --decorate --tags
 ```
 git checkout <OTHER_BRANCH> -- path/to/file
 ```
+
+## Synching a fork
+
+Here is github's official document on [Syncing a fork][1]:
+
+### The Setup
+
+> Before you can sync, you need to add a remote that points to the upstream repository. You may have done this when you originally forked.
+
+> *Tip: Syncing your fork only updates your local copy of the repository; it does not update your repository on GitHub.*
+
+>     $ git remote -v
+    # List the current remotes
+    origin  https://github.com/user/repo.git (fetch)
+    origin  https://github.com/user/repo.git (push)
+    
+>     $ git remote add upstream https://github.com/otheruser/repo.git
+    # Set a new remote
+    
+>     $ git remote -v
+    # Verify new remote
+    origin    https://github.com/user/repo.git (fetch)
+    origin    https://github.com/user/repo.git (push)
+    upstream  https://github.com/otheruser/repo.git (fetch)
+    upstream  https://github.com/otheruser/repo.git (push)
+
+### Syncing
+
+> There are two steps required to sync your repository with the upstream: first you must fetch from the remote, then you must merge the desired branch into your local branch.
+
+#### Fetching
+
+> Fetching from the remote repository will bring in its branches and their respective commits. These are stored in your local repository under special branches.
+
+>     $ git fetch upstream
+    # Grab the upstream remote's branches
+    remote: Counting objects: 75, done.
+    remote: Compressing objects: 100% (53/53), done.
+    remote: Total 62 (delta 27), reused 44 (delta 9)
+    Unpacking objects: 100% (62/62), done.
+    From https://github.com/otheruser/repo
+     * [new branch]      master     -> upstream/master
+
+> We now have the upstream's master branch stored in a local branch, upstream/master
+
+>     $ git branch -va
+    # List all local and remote-tracking branches
+    * master                  a422352 My local commit
+      remotes/origin/HEAD     -> origin/master
+      remotes/origin/master   a422352 My local commit
+      remotes/upstream/master 5fdff0f Some upstream commit
+
+#### Merging
+
+> Now that we have fetched the upstream repository, we want to merge its changes into our local branch. This will bring that branch into sync with the upstream, without losing our local changes.
+
+>     $ git checkout master
+    # Check out our local master branch
+    Switched to branch 'master'
+    
+>     $ git merge upstream/master
+    # Merge upstream's master into our own
+    Updating a422352..5fdff0f
+    Fast-forward
+     README                    |    9 -------
+     README.md                 |    7 ++++++
+     2 files changed, 7 insertions(+), 9 deletions(-)
+     delete mode 100644 README
+     create mode 100644 README.md
+
+> If your local branch didn't have any unique commits, git will instead perform a "fast-forward":
+
+>     $ git merge upstream/master
+    Updating 34e91da..16c56ad
+    Fast-forward
+     README.md                 |    5 +++--
+     1 file changed, 3 insertions(+), 2 deletions(-)
+
+> *Tip: If you want to update your repository on GitHub, follow the instructions [here][2]*
+
+
+  [1]: https://help.github.com/articles/syncing-a-fork
+  [2]: https://help.github.com/articles/pushing-to-a-remote#pushing-a-branch
+
+
 
 ## more nice tip resources
 
