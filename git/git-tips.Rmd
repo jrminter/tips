@@ -28,6 +28,14 @@ My new favorite command...
 git whatchanged
 ```
 
+### Check out and track a remote branch
+
+From [stackoverflow](http://stackoverflow.com/questions/379081/track-all-remote-git-branches-as-local-branches/6300386#6300386) answer to inital question
+
+```
+git checkout --track origin/branchname
+```
+
 ### get rid of obsolete, merged branches
 
 ```
