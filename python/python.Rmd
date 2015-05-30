@@ -12,8 +12,25 @@ vignette: >
 [Back to Index](../README.html)
 
 
-### Updating Anaconda
+## Anaconda
 
+## Launching
+
+On MacOSX, a recent update broke the launcher for spyder,
+glueviz,and qtconsole. In reality, it is easier to use the Finder
+to navigate to the desired directory, use the `cd to.app` to open
+a terminal in that directory and start with one of
+
+```
+ipython qtconsole
+ipython notebook
+spyder
+```
+
+Note that starting `launcher` from the terminal makes the
+graphical start work. Go figure...
+
+### Updating
 
 ```
 conda update conda
@@ -25,6 +42,7 @@ To update all packages
 ```
 conda update --all
 ```
+
 
 ### iPython Notebook
 
