@@ -23,7 +23,7 @@ conda update anaconda
 To update all packages
 
 ```
-conda update --alll
+conda update --all
 ```
 
 ### iPython Notebook
