@@ -1,11 +1,13 @@
 ---
-title: "Tips on Using Slidify"
+title: "Slidify Tips"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
-output:
-  html_document:
-    theme: united
-    highlight: pygments
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Slidify Tips}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---ighlight: pygments
 ---
 ```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
 # make this an external chunk that can be included in any file

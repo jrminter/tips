@@ -8,7 +8,6 @@ vignette: >
   %\VignetteEngine{knitr::rmarkdown}
   \usepackage[utf8]{inputenc}
 ---
----
 
 [Back to Index](../README.html)
 
@@ -19,6 +18,12 @@ vignette: >
 ```
 conda update conda
 conda update anaconda
+```
+
+To update all packages
+
+```
+conda update --alll
 ```
 
 ### iPython Notebook

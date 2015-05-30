@@ -1,8 +1,12 @@
 ---
-title: "How to Make a Histogram with ggplot2"
+title: "Making a histogram with ggplot2"
 author: "The DataCamp Blog"
-date: "March 14th, 2015"
-output: html_document
+date: "2015-03-14"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Making a histogram with ggplot2}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
 ---
 
 [Back to Index](../README.html)

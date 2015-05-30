@@ -59,7 +59,7 @@ Topic
 
 [gnuplot](./gnuplot/gnuplot.html)
 
-[Håklev's tips on R](./hacklev/hacklev.html)
+[Håklev's tips on data wrangling with R](./hacklev/hacklev.html)
 
 [hyperspy](./hyperspy/hyperspy.html)
 

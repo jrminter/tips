@@ -1,11 +1,12 @@
 ---
 title: "Publication Quality Graphics in R"
-author: "J. R. Minter"
-date: "`r format(Sys.time(), '%d %B, %Y')`"
-output:
-  html_document:
-    theme: united
-    highlight: pygments
+author: "Tim Salabim"
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Publication Quality Graphics in R}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
 ---
 ```{r,echo=FALSE}
 library(knitr)

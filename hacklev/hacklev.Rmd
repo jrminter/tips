@@ -1,11 +1,12 @@
 ---
 title: "Starting data analysis/wrangling with R: Things I wish I'd been told"
 author: "Stian Håklev"
-date: "14-October-2014"
-output:
-  html_document:
-    theme: united
-    highlight: pygments
+date: "2014-10-14"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Data wrangling with R}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
 ---
 
 From [here](http://reganmian.net/blog/2014/10/14/starting-data-analysiswrangling-with-r-things-i-wish-id-been-told/)

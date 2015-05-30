@@ -2,10 +2,11 @@
 title: "Fitness tips"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
-output:
-  html_document:
-    theme: united
-    highlight: pygments
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Fitness Tips}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
 ---
 ```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
 # make this an external chunk that can be included in any file
