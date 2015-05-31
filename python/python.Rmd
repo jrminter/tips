@@ -11,10 +11,11 @@ vignette: >
 
 [Back to Index](../README.html)
 
+See also [hyperspy tips](../hyperspy/hyperspy.html)
 
 ## Anaconda
 
-## Launching
+### Launching
 
 On MacOSX, a recent update broke the launcher for spyder,
 glueviz,and qtconsole. In reality, it is easier to use the Finder

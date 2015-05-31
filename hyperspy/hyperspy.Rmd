@@ -11,6 +11,8 @@ vignette: >
 
 [Back to Index](../README.html)
 
+See also [python tips](../python/python.html)
+
 ### Key imports for iPy3 notebooks
 
 ```
