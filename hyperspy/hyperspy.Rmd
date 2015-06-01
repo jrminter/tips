@@ -15,14 +15,25 @@ See also [python tips](../python/python.html)
 
 ### Key imports for iPy3 notebooks
 
+A really helpful post on [stackoverflow](http://stackoverflow.com/questions/3828723/why-we-need-sys-setdefaultencodingutf-8-in-a-py-script)
+
+The last answer (big surprise...) had the key. On Widows set an
+environment variable.
+
 ```
-# This fixes problem with iPython3, Anaconda 2.2 on Windows
+PYTHONIOENCODING=UTF-8
+```
+
+there are **many** warnings to **not** use
+
+```
 import sys
 reload(sys)
-sys.setdefaultencoding('utf-8')
-print(sys.getdefaultencoding())
-import json
-# this is normal...
+sys.setdefaultencoding("utf-8")
+```
+
+#### My current Notebook setup block
+```
 %matplotlib inline
 import os
 import numpy as np
