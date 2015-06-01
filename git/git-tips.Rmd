@@ -42,6 +42,12 @@ git checkout --track origin/branchname
 git branch --merged | xargs git branch -d
 ```
 
+## To remove a remote branch (if you know what you are doing!)
+
+```
+git push origin :the_remote_branch
+```
+
 ### see commits with abbreviated sha
 
 Hadley Wickham noted:
