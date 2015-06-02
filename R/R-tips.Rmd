@@ -45,7 +45,7 @@ See [this](http://www.stats.ox.ac.uk/pub/Rtools/libs.html) for how
 to configure `LOCAL_SOFT`.
 
 I created `C:/Apps/R/local/local320` and unzipped `local320.zip` and
-`spatial320.zip` there and set `LOCAL_SOFT` in `etc/{i386,x64}/Makeconf`
+`spatial320.zip` there and set `LOCAL_SOFT` in `etc/{i386,x64}/Makeconf` (line 30)
 files in the binary distribution. This means I could add other versions
 accordingly.
 
