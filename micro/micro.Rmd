@@ -11,6 +11,18 @@ vignette: >
 
 [Back to Index](../README.html)
 
+## Chillers
+
+From Bill Tivol 2015-05-26 on the Microscopy Listserver
+
+> When I was in charge of the HVEM, we left the chillers on all the
+time, and in over 20 years we had no problems.  We added an
+anti-corrosion preparation from Aqua Labs, Aquatreet 42, which was
+Mo-based, and we kept the pH between 7.5 and 8 to prevent solvation of
+the Cu tubing.  If Aqua Labs cannot supply the product, Skasol has a
+similar one.  (Aqua supplied the East, and Skasol, at least, the West).
+
+
 ## Microanalysis Simulation
 
 ### Casino
