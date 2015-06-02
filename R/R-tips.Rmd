@@ -37,6 +37,18 @@ tips on matters that made me go *hmmm...*
 
 ## Hard things to find
 
+### Configuring local soft on Windows.
+
+HT [stewid](https://github.com/ropensci/git2r/issues/139#issuecomment-101176755)
+
+See [this](http://www.stats.ox.ac.uk/pub/Rtools/libs.html) for how
+to configure `LOCAL_SOFT`.
+
+I created `C:/Apps/R/local/local320` and unzipped `local320.zip` and
+`spatial320.zip` there and set `LOCAL_SOFT` in `etc/{i386,x64}/Makeconf`
+files in the binary distribution. This means I could add other versions
+accordingly.
+
 
 ### Using Hmisc LaTeX functions without Miktex
 
