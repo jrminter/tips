@@ -49,6 +49,20 @@ I created `C:/Apps/R/local/local320` and unzipped `local320.zip` and
 files in the binary distribution. This means I could add other versions
 accordingly.
 
+### git2r for WinXP
+
+HT [stewid](https://github.com/ropensci/git2r/issues/139#issuecomment-101176755)
+
+> git2r is an interface to the libgit2 library. Since libgit2 dropped support for Windows XP with the v0.21.0 release, git2r can not support Windows XP.
+
+> @jrminter you only need zlib on Windows, no need for openssl. If you have installed Rtools and configured LOCAL_SOFT, it should work to install with:
+
+```
+git clone https://github.com/ropensci/git2r.git
+cd git2r
+make
+```
+
 
 ### Using Hmisc LaTeX functions without Miktex
 
