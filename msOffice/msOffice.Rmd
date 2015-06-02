@@ -14,6 +14,25 @@ vignette: >
 These are John Minter's tips for MS Office.
 They were compiled from several web sources.
 
+## Skype for Business
+
+How do I use Skype for Business? 
+  
+Click [here](https://www.youtube.com/watch?v=7_c4zVJ739M&feature=youtu.be) to watch a Skype for Business: Step-by-step guide for new users 
+  
+Some additional Training videos:   
+  
+Click [here](https://www.youtube.com/watch?v=qVq7A7nS_TQ&feature=youtu.be&list=PLH5ElbTc1hWQirKampULE7vlfTbhSqssq) for a video Introducing Skype for Business 
+  
+Click [here](https://www.youtube.com/watch?v=eCIGpbukmow&feature=youtu.be&list=PLH5ElbTc1hWQirKampULE7vlfTbhSqssq) to see how to add a contact in Skype for Business 
+  
+Click [here](https://youtu.be/oEBQgOgAtnk?list=PLH5ElbTc1hWQirKampULE7vlfTbhSqssq) for a video on Presence and IM in Skype for Business 
+  
+Click [here](https://youtu.be/i9ubU-ndMZE?list=PLH5ElbTc1hWQirKampULE7vlfTbhSqssq) to see how to Meet and share using Skype for Business 
+  
+Click [here](https://youtu.be/XNuIQks8kuk?list=PLH5ElbTc1hWQirKampULE7vlfTbhSqssq) to see how to schedule a Skype for Business meeting
+
+
 ## Outlook
 
 I have had problems with links with spaces. The key is to surround the
