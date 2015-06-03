@@ -13,6 +13,49 @@ vignette: >
 
 See also [python tips](../python/python.html)
 
+##  Updates
+
+### Anaconda
+
+From my cmd-anaconda prompt...
+
+```
+conda update conda
+conda update anaconda
+conda update --all
+```
+
+### hyperspy
+
+#### Temporarily install a branch
+
+From my cmd-anaconda prompt...
+```
+pip uninstall hyperspy
+cd %GITHOME%/hyperspy
+pip install -e ./
+```
+
+#### Not affected by git...
+
+To be **really** clean...
+
+1. delete everything from the local git repo but `.git`
+2. From git bash prompt
+
+```
+git checkout <branch>
+git reset --hard
+```
+
+From my cmd-anaconda prompt...
+```
+pip uninstall hyperspy
+cd %GITHOME%/hyperspy
+python setup.py install
+```
+
+
 ### Key imports for iPy3 notebooks
 
 A really helpful post on [stackoverflow](http://stackoverflow.com/questions/3828723/why-we-need-sys-setdefaultencodingutf-8-in-a-py-script)
