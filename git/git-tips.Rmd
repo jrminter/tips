@@ -104,6 +104,38 @@ From [GitHub Help](https://help.github.com/articles/syncing-a-fork/)
 Work should be done on a branch to keep `master` clean. Think of
 `master` as a production environment. 
 
+### Merge a branch with master
+
+```
+git checkout master
+get merge my-branch
+```
+
+May need to resolve merge history
+
+```
+<<<<<< Head
+some code
+=======
+diff code
+>>>>>>> my-branch
+```
+fix and
+```
+git add the-file
+```
+repeat for other files, then
+```
+git commit -a -m'fixed conflicts'
+```
+
+If you don't have time to fix conflict
+
+```
+git merge --abort
+```
+
+will clean up
 ### Delete a branch
 
 1. A fully-merged branch
