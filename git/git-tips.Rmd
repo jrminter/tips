@@ -99,7 +99,26 @@ From [GitHub Help](https://help.github.com/articles/syncing-a-fork/)
 4. `git push`
 5. `git pull`
 
+## Branches
 
+Work should be done on a branch to keep `master` clean. Think of
+`master` as a production environment. 
+
+### Delete a branch
+
+1. A fully-merged branch
+
+```
+git checkout master
+git branch -d my-merged branch
+```
+
+2. A non-fully megred branch
+
+```
+git checkout master
+git branch -D my-merged branch
+```
 
 ### Check out and track a remote branch
 
