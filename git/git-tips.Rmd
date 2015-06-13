@@ -14,6 +14,61 @@ vignette: >
 These are John Minter's tips for a workflow using git. They were
 compiled from several web sources.
 
+## Initial configuration
+
+Here are some useful initial variables to set up for git
+
+```
+git config --global user.name "John Minter"
+
+git config --global user.email "jrminter@gmail.com"
+git config --global user.email "john.r.minter@kodak.com"
+
+# saves multiplatform headaches caused by line endings...
+# Configure Git on OS X to properly handle line endings
+git config --global core.autocrlf input 
+
+git config --global color.ui true
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
+git config --global alias.st status
+git config --global alias.lol "log --oneline --graph --all --decorate"
+```
+
+### Note this procedure after changing line endings in a repo
+
+1. Save your current files in Git, so that none of your work is lost.
+
+```
+git add . -u
+git commit -m "Saving files before refreshing line endings"
+```
+2. Remove every file from Git's index.
+
+```
+git rm --cached -r .
+```
+
+3. Rewrite the Git index to pick up all the new line endings.
+
+```
+git reset --hard
+```
+
+4. Add all your changed files back, and prepare them for a commit. This is your chance to inspect which files, if any, were unchanged.
+
+```
+git add .
+```
+It is perfectly safe to see a lot of messages here that read warning: CRLF will be replaced by LF in file."
+
+5. Commit the changes to your repository.
+
+```
+git commit -m "Normalize all the line endings"
+```
+
 ## Some helps on commit messages
 
 [Chris Beams](http://chris.beams.io/posts/git-commit/#seven-rules)
@@ -452,26 +507,6 @@ tag -d v1.4.400
 
 ```
 
-## Initial configuration
-
-Here are some useful initial variables to set up for git
-
-```
-git config --global user.email "jrminter@gmail.com"
-
-git config --global user.name "John Minter"
-git config --global user.email "john.r.minter@kodak.com"
-
-# saves multiplatform headaches caused by line endings...
-git config --global core.autocrlf input 
-
-git config --global color.ui true
-git config --global alias.co checkout
-git config --global alias.br branch
-git config --global alias.ci commit
-git config --global alias.st status
-git config --global alias.lol "log --oneline --graph --all --decorate"
-```
 
 # Changing the origin for a repository
 
