@@ -36,6 +36,12 @@ git config --global alias.st status
 git config --global alias.lol "log --oneline --graph --all --decorate"
 ```
 
+### See what git ignores
+
+```
+git ls-files --others --ignored --exclude-standard
+```
+
 ### Note this procedure after changing line endings in a repo
 
 1. Save your current files in Git, so that none of your work is lost.
