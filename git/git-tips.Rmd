@@ -14,8 +14,7 @@ vignette: >
 These are John Minter's tips for a workflow using git. They were
 compiled from several web sources.
 
-<<<<<<< HEAD
-## recent changes
+## Recent changes
 
 Now use
 
@@ -24,7 +23,7 @@ git add --all :/
 ```
 
 To add from all directories.
-=======
+
 ## Initial configuration
 
 Here are some useful initial variables to set up for git
@@ -79,7 +78,6 @@ It is perfectly safe to see a lot of messages here that read warning: CRLF will 
 ```
 git commit -m "Normalize all the line endings"
 ```
->>>>>>> 16ea2b5774020e030a48d3ea19213b25938eed39
 
 ## Some helps on commit messages
 
