@@ -14,6 +14,16 @@ vignette: >
 These are John Minter's tips for a workflow using git. They were
 compiled from several web sources.
 
+## recent changes
+
+Now use
+
+```
+git add --all :/
+```
+
+To add from all directories.
+
 ## Some helps on commit messages
 
 [Chris Beams](http://chris.beams.io/posts/git-commit/#seven-rules)
