@@ -258,5 +258,17 @@ One can shut the computer down and turn off the strip to turn everything off.
 Note: one can use the tidy-up program to reset everything.
 
 
+## Low-energy and high spatial resolution EDS mapping
+
+A webinar (2015-06-18) by Jens Rafaelsen  of EDAX. He had real tech issues... Did simulations with DTSA-II and Casino. Also uses the radial distributions, also simulating probe size. This would be useful.
+
+Test specimen - flick a lighter flint onto Si. Flint has Ce.
+
+He thinks beam drift at. Drift was manageble. Also said let scope stabilize for an hour before drift correction.
+
+
+
+
+
 
 [Back to Index](../README.html)
