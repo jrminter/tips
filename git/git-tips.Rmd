@@ -14,7 +14,19 @@ vignette: >
 These are John Minter's tips for a workflow using git. They were
 compiled from several web sources.
 
+
 See youtube [Git Foundation Playlist](https://www.youtube.com/playlist?list=PLg7s6cbtAD15G8lNyoaYDuKZSKyJrgwB-)
+
+## Recent changes
+
+Now use
+
+```
+git add --all :/
+```
+
+To add from all directories.
+
 
 ## Initial configuration
 
