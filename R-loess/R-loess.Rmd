@@ -1,0 +1,244 @@
+---
+title: "R loess"
+author: "Earl F. Glynn"
+date: "2005-06-24"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{R loess}
+  %\VignetteEngine{knitr::rmarkdown}
+  \usepackage[utf8]{inputenc}
+---
+
+[Back to Index](../README.html)
+
+This document was preserved from [here](http://research.stowers-institute.org/efg/R/Statistics/loess.htm)
+with minor edits by J. R. minter to be compatible with R-markdown.
+
+## Purpose
+
+This TechNote shows examples of loess (local polynomial regression fitting) smoothing for various "span" values. The online R documentation [?loess](http://www.maths.lth.se/help/R/.R/library/modreg/html/loess.html) says the default span value is 0.75, but doesn't give much guidance, nor visual examples, of how the span value affects smoothing.
+
+In addition to simply smoothing a curve, the R loess function can be used to impute missing data points. An example of data imputation with loess is shown.
+
+In addition to simply smoothing a curve, the R loess function can be used to impute missing data points. An example of data imputation with loess is shown.
+
+## Background
+
+NIST Engineering Statistics Handbook:  [Loess (aka Lowess)](http://www.itl.nist.gov/div898/handbook/pmd/section1/pmd144.htm)
+
+Mathworks: [Lowess and Loess: Local Regression Smoothing](http://www.mathworks.com/access/helpdesk/help/toolbox/curvefit/ch_data7.html)
+
+SAS: [Fitting Curves](http://www.math.wpi.edu/saspdf/insight/chap13.pdf)
+
+## Software Requirements
+
+[R](http://www.r-project.org/) 2.0.1 or later
+
+
+## Step-by-Step Procedure
+
+Let's take a sine curve, add some "noise" to it, and then see how the loess "span" parameter affects the look of the smoothed curve.
+
+1. Create a sine curve and add some noise:
+
+```{r, tidy=TRUE}
+period <- 120
+x <- 1:120
+y <- sin(2*pi*x/period) + runif(length(x),-1,1)
+```
+
+2. Apply loess smoothing using the default span value of 0.75:
+
+```{r, tidy=TRUE}
+y.loess <- loess(y ~ x, span=0.75, data.frame(x=x, y=y))
+```
+
+3. Compute loess smoothed values for all points along the curve:
+
+```{r, tidy=TRUE}
+y.predict <- predict(y.loess, data.frame(x=x))
+```
+
+4. Let's use the R "optimize" function to find the peak of the loess smoothed curve and plot that point:
+
+```{r, tidy=TRUE}
+peak <- optimize(function(x, model)
+                 predict(model, data.frame(x=x)),
+                 c(min(x),max(x)),
+                 maximum=TRUE,
+                 model=y.loess)
+```
+
+5. Plot the loess smoothed curve along with the points that were already plotted:
+
+```{r,fig.width=7.25, fig.height=2*7.25/3, tidy=TRUE}
+plot(x,y, main="Sine Curve + 'Uniform' Noise")
+mtext("showing loess smoothing (local regression smoothing)")
+lines(x,y.predict)
+points(peak$maximum,peak$objective, pch=FILLED.CIRCLE<-19)
+```
+
+6. Repeat steps 1-6 above for various span values. A script was created to automate this. The original script is [here](http://research.stowers-institute.org/efg/R/Statistics/loess-sin+runif.R).
+
+```{r, fig.width=7.25, fig.height=2*7.25/3, tidy=TRUE}
+# Make example reproducible
+set.seed(19)
+
+period <- 120
+
+# Create sine curve with noise
+x <- 1:120
+y <- sin(2*pi*x/period) + runif(length(x),-1,1)
+
+# Plot points on noisy curve
+plot(x,y, main="Sine Curve + 'Uniform' Noise")
+mtext("showing loess smoothing (local regression smoothing)")
+
+spanlist <- c(0.10, 0.25, 0.50, 0.75, 1.00, 2.00)
+for (i in 1:length(spanlist))
+{
+  y.loess <- loess(y ~ x, span=spanlist[i], data.frame(x=x, y=y))
+  y.predict <- predict(y.loess, data.frame(x=x))
+
+  # Plot the loess smoothed curve
+  lines(x,y.predict,col=i)
+
+  # Find peak point on smoothed curve
+  peak <- optimize(function(x, model)
+                    predict(model, data.frame(x=x)),
+                            c(min(x),max(x)),
+                            maximum=TRUE,
+                            model=y.loess)
+  # Show position of smoothed curve maximum
+  points(peak$maximum,peak$objective, pch=FILLED.CIRCLE<-19, col=i)
+}
+
+legend (15,-0.4,
+        c(paste("span=", formatC(spanlist, digits=2, format="f"))),
+        lty=SOLID<-1, col=1:length(spanlist), bty="n", cex=0.8)
+```
+
+7. Compare "noise" from a uniform distribution from -1 to 1 (above) to Gaussian noise, with mean 0 and standard deviation 1.0 (below). The original scripy is [here](http://research.stowers-institute.org/efg/R/Statistics/loess-sin+rnorm.R).
+
+```{r, fig.width=7.25, fig.height=2*7.25/3, tidy=TRUE}
+# efg, 15 April 2005
+# Stowers Institute for Medical Research
+# Make example reproducible
+set.seed(19)
+
+period <- 120;
+
+# Create sine curve with noise
+x <- 1:120
+y <- sin(2*pi*x/period) + rnorm(length(x))
+
+# Plot points on noisy curve
+plot(x,y, main="Sine Curve + 'Normal' Noise")
+mtext("showing loess smoothing (local regression smoothing)")
+
+spanlist <- c(0.10, 0.25, 0.50, 0.75, 1.00, 2.00)
+for (i in 1:length(spanlist))
+{
+  y.loess <- loess(y ~ x, span=spanlist[i], data.frame(x=x, y=y))
+  y.predict <- predict(y.loess, data.frame(x=x))
+
+  # Plot the loess smoothed curve
+  lines(x,y.predict,col=i)
+
+  # Find peak point on smooted curve
+  peak <- optimize(function(x, model)
+                    predict(model, data.frame(x=x)),
+                            c(min(x),max(x)),
+                            maximum=TRUE,
+                            model=y.loess)
+
+  # Show position of smoothed curve maximum
+  points(peak$maximum,peak$objective, pch=FILLED.CIRCLE<-19, col=i)
+}
+
+legend (0,-0.8,
+        c(paste("span=", formatC(spanlist, digits=2, format="f"))),
+        lty=1, col=1:length(spanlist), bty="n")
+
+```
+
+8. Let's use loess to impute data points. Let's start by taking a sine curve with noise, like computed above, but leave out 15 of the 120 data points using R's "sample" function:
+
+```{r, fig.width=7.25, fig.height=2*7.25/3, tidy=TRUE}
+# efg, 15 April 2005
+# Stowers Institute for Medical Research
+period <- 120
+FullList <- 1:120
+x <- FullList
+
+# "randomly" make 15 of the points "missing"
+MissingList <- sample(x,15)
+x[MissingList] <- NA
+
+# Create sine curve with noise
+y <- sin(2*pi*x/period) + runif(length(x),-1,1) 
+
+# Plot points on noisy curve
+plot(x,y, main="Sine Curve + 'Uniform' Noise")
+mtext("Using loess smoothed fit to impute missing values")
+
+y.loess <- loess(y ~ x, span=0.75, data.frame(x=x, y=y))
+y.predict <- predict(y.loess, data.frame(x=FullList))
+
+# Plot the loess smoothed curve showing gaps for missing data
+lines(x,y.predict,col=i)
+
+# Show imputed points to fill in gaps
+y.Missing <- predict(y.loess, data.frame(x=MissingList))
+points(MissingList, y.Missing, pch=FILLED.CIRCLE<-19, col=i)
+```
+9. Compare the loess smoothed fit and imputed points for various span values. The original script is [here](http://research.stowers-institute.org/efg/R/Statistics/loess-sin+runif-impute.R).
+
+```{r, fig.width=7.25, fig.height=2*7.25/3, tidy=TRUE}
+# efg, 15 April 2005
+# Stowers Institute for Medical Research
+
+# Make example reproducible
+set.seed(19)
+
+period <- 120
+
+FullList <- 1:120
+x <- FullList
+
+# "randomly" make 15 of the points "missing"
+MissingList <- sample(x,15)
+x[MissingList] <- NA
+
+# Create sine curve with noise
+y <- sin(2*pi*x/period) + runif(length(x),-1,1)
+
+# Plot points on noisy curve
+plot(x,y, main="Sine Curve + 'Uniform' Noise")
+mtext("Using loess smoothed fit to impute missing values")
+
+spanlist <- c(0.50, 1.00, 2.00)
+for (i in 1:length(spanlist))
+{
+  y.loess <- loess(y ~ x, span=spanlist[i], data.frame(x=x, y=y))
+  y.predict <- predict(y.loess, data.frame(x=FullList))
+
+  # Plot the loess smoothed curve showing gaps for missing data
+  lines(x,y.predict,col=i)
+
+  # Show imputed points to fill in gaps
+  y.Missing <-  predict(y.loess, data.frame(x=MissingList))
+  points(MissingList, y.Missing, pch=FILLED.CIRCLE<-19, col=i)
+}
+
+legend (0,-0.8,
+        c(paste("span=", formatC(spanlist, digits=2, format="f"))),
+        lty=SOLID<-1, col=1:length(spanlist), bty="n")
+```
+
+## Discussion/Conclusion
+
+Span values as small as 0.10 do not provide much smoothing and can result in a "jerky" curve. Span values as large as 2.0 provide perhaps too much smoothing, at least in the cases shown above. Overall, the default value of 0.75 worked fairly well in "finding" the sine curve.
+
+
+[Back to Index](../README.html)
