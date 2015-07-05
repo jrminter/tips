@@ -37,6 +37,17 @@ tips on matters that made me go *hmmm...*
 
 ## Hard things to find
 
+### Speeding up compile on 64 bit R
+
+From [here](http://www.rexamine.com/2015/07/speeding-up-r-package-installation-process/)
+
+On many R installations, the build process is set up so that only one C/C++ source file is compiled at a time. Yet, there is a simple solution for that — we may ask GNU make to allow more than one job to be submitted at once. In order to do so, we edit the `/lib64/R/etc/Renviron` file (where `/lib64/R/etc/`) is the result to a call to the R.home() function in R) and set:
+
+```
+MAKE='make -j 8' # submit 8 jobs at once
+```
+instead of previously used settings. This significantly decreases the time needed to compile.
+
 ### Configuring local soft on Windows.
 
 HT [stewid](https://github.com/ropensci/git2r/issues/139#issuecomment-101176755)
