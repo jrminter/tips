@@ -37,6 +37,17 @@ tips on matters that made me go *hmmm...*
 
 ## Hard things to find
 
+### Speeding up compile on 64 bit R
+
+From [here](http://www.rexamine.com/2015/07/speeding-up-r-package-installation-process/)
+
+On many R installations, the build process is set up so that only one C/C++ source file is compiled at a time. Yet, there is a simple solution for that — we may ask GNU make to allow more than one job to be submitted at once. In order to do so, we edit the `/lib64/R/etc/Renviron` file (where `/lib64/R/etc/`) is the result to a call to the R.home() function in R) and set:
+
+```
+MAKE='make -j 8' # submit 8 jobs at once
+```
+instead of previously used settings. This significantly decreases the time needed to compile.
+
 ### Configuring local soft on Windows.
 
 HT [stewid](https://github.com/ropensci/git2r/issues/139#issuecomment-101176755)
@@ -228,6 +239,43 @@ print(Sys.getenv("IMG_ROOT"))
 
 ```
 ### LaTeX in R Plots
+
+#### latexexp
+
+This is from [here](http://www.magesblog.com/2015/07/adding-mathematical-notations-to-r-plots.html) and was accessed 2015-07-07.
+
+One needs to remember to escape the `"\"` character, that is write `"\\"` instead of `"\"`.
+
+```{r, fig.width=7.5, fig.height=7.5}
+library(latex2exp)
+x <- seq(-4, 4, len = 101)
+y <- cbind(sin(x), cos(x))
+ 
+op=par(mfrow=c(2,1))
+## plotmath
+matplot(x, y, type = "l", xaxt = "n",
+        main = expression(paste("plotmath: ", plain(sin) * phi, "  and  ",
+                                plain(cos) * phi)),
+        ylab = expression("sin" * phi, "cos" * phi), # only 1st is taken
+        xlab = expression(paste("Phase Angle ", phi)),
+        col.main = "blue")
+axis(1, at = c(-pi, -pi/2, 0, pi/2, pi),
+     labels = expression(-pi, -pi/2, 0, pi/2, pi))
+ 
+## latex2exp
+matplot(x, y, type = "l", xaxt = "n",
+        main = latex2exp("latex2exp: $\\sin \\phi$ and $\\cos \\phi$"),
+        ylab = latex2exp("$\\sin \\phi$ and $\\cos \\phi$"),
+        xlab = latex2exp("Phase Angle $\\phi$"),
+        col.main = "blue")
+axis(1, at = c(-pi, -pi/2, 0, pi/2, pi),
+     labels = sapply(c("$-\\pi$", "$-\\pi/2$", 
+                        "0", "$\\pi/2$", "$\\pi$"),
+                     latex2exp))
+par(op)
+```
+
+#### TikzDevice
 
 The tikzDevice R package is again being maintained and is back on CRAN.
 This permits you to output a plot as a `.tex` file and have full $\LaTeX$

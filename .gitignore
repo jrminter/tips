@@ -202,6 +202,14 @@ R-GeoSpatial/*.html
 R-GeoSpatial/*.htm
 R-GeoSpatial/Legend*.png
 
+# R-loess directory
+R-loess/.DS_Store
+R-loess/figure/
+R-loess/R-loess.md
+R-loess/*.html
+R-loess/*.htm
+R-loess/Legend*.png
+
 # R-packages directory
 R-packages/.DS_Store
 R-packages/R-packages.md
