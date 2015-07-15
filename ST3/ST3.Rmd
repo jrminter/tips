@@ -70,6 +70,7 @@ I like Flatland-Monoaki and Spacegray-ocean-dark for Python  and Monoaki for LaT
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"font_face": "Lucida Console",
 	"font_size": 14,
+	"draw_white_space": "all",
 	"ignored_packages":
 	[
 		"Vintage"
