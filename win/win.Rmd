@@ -13,6 +13,17 @@ vignette: >
 
 Some useful tips for windows
 
+## Notepad++ style persistence
+
+From [superuser.com](http://superuser.com/questions/214849/how-to-save-font-settings-in-notepad)
+
+There are persitence problems with Notepad++ configurations on Vista/Win7
+
+> As of v5.8.6, theme files are stored under `%PROGRAMFILES(x86)%.` Vista/Win7 will refuse to write to this directory when the application is not run as Administrator. Furthermore, it appears that "Global Override" settings get saved into the active theme file. Hopefully future versions of Notepad++ will store these user-specific theme settings under `%APPDATA%` as the Windows paradigm intends.
+
+The solution is to `run as administrator` for the configuration
+
+
 ## Create a shortcut to switch between windows in Win 7
 Drag the shortcut from to ``%USERPROFILE%\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\Switch`` the quick launch bar.
 
