@@ -21,7 +21,7 @@ There are persitence problems with Notepad++ configurations on Vista/Win7
 
 > As of v5.8.6, theme files are stored under `%PROGRAMFILES(x86)%.` Vista/Win7 will refuse to write to this directory when the application is not run as Administrator. Furthermore, it appears that "Global Override" settings get saved into the active theme file. Hopefully future versions of Notepad++ will store these user-specific theme settings under `%APPDATA%` as the Windows paradigm intends.
 
-The solution is to `run as administrator` for the configuration
+The solution is to `run as Administrator` for the configuration to be saved.
 
 
 ## Create a shortcut to switch between windows in Win 7
