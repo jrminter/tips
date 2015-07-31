@@ -23,6 +23,21 @@ There are persitence problems with Notepad++ configurations on Vista/Win7
 
 The solution is to `run as Administrator` for the configuration to be saved.
 
+## Getting into `safe` mode in Win 7 on ASUS computer (`crunch`)
+
+From [microsoft](https://social.technet.microsoft.com/forums/windows/en-US/2b8419dd-4610-4703-a807-4ef9d862bb6d/f8-does-not-take-me-into-safe-mode)
+
+Two suggestions:
+
+1. From H. A. V. Arinda : use `F5`
+
+2. BF&I approach from Lany Zhang of Microsoft:
+
+> a. Click Start, and type `msconfig` in the search box, and then press Enter.
+> b. Select the Boot tab, and check the `Safe boot` in the Boot options section, and set the radio button to `Minimal`, and then click OK.
+> c. Select Restart or Exit without restart in the following System Configuration prompt. Either way, the next boot will take you into safe mode.
+> d. Note: Make sure you put the computer back to Normal Startup once you are done with the troubleshooting. Just open msconfig the same way as above, and then on the Boot tab uncheck the Safe boot checkbox.
+
 
 ## Create a shortcut to switch between windows in Win 7
 Drag the shortcut from to ``%USERPROFILE%\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\Switch`` the quick launch bar.
