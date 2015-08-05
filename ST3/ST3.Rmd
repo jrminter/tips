@@ -13,6 +13,14 @@ vignette: >
 
 These are John Minter's tips for using the editor ``Sublime Text 3``.
 
+## Better Markdown
+
+From [Marius Schulz](https://blog.mariusschulz.com/2014/12/16/how-to-set-up-sublime-text-for-a-vastly-better-markdown-writing-experience)
+
+1. Install the `Monokai Extended` package.
+2. Install the `Markdown Extended` package to get the additional color scheme.
+
+
 ## Spell Checking
 One can set the dictionary from the ``View`` menu. One can toggle spell checking either from the ``View`` menu or with ``F6``. For more information, see [here](https://www.sublimetext.com/docs/3/spell_checking.html).
 
@@ -64,28 +72,28 @@ I like Flatland-Monoaki and Spacegray-ocean-dark for Python  and Monoaki for LaT
 	[
 		"microscopist",
 		"micrographs",
-		"micrograph"
+		"micrograph",
+		"nanoparticles",
+		"ultrathin",
+		"chemometrics"
 	],
-	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"color_scheme": "Packages/Monokai Extended/Monokai Extended.tmTheme",
 	"dictionary": "Packages/Language - English/en_US.dic",
-	"font_face": "Lucida Console",
-	"font_size": 14,
 	"draw_white_space": "all",
+	"font_face": "Lucida Console",
+	"font_size": 12,
 	"ignored_packages":
 	[
-		"Vintage"
 	],
+	"numix_folder_icons": true,
+	"overlay_scroll_bars": "enabled",
 	"rulers":
 	[
 		72
 	],
 	"tab_size": 2,
 	"tabs_large": true,
-	"theme": "Numix Dark.sublime-theme",
-	"numix_folder_icons": true,
-	"translate_tabs_to_spaces": true,
-	"hot_exit": true,
-	"remember_open_files": true
+	"theme": "Default.sublime-theme"
 }
 ```
 ## Using Sublime Text 3 with git
