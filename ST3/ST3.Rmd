@@ -53,7 +53,7 @@ They have complete installation instructions.
 
 I like Numix Dark + Monoaki
 
-Intall and see intructions [here](https://packagecontrol.io/packages/Numix%20Theme)
+Install and see instructions [here](https://packagecontrol.io/packages/Numix%20Theme)
 
 ## The Spacegray Theme
 
@@ -64,12 +64,14 @@ I like Flatland-Monoaki and Spacegray-ocean-dark for Python  and Monoaki for LaT
 3. Find Theme - Spacegray and hit Enter
 4. Use ``Preferences -> Color Scheme -> base16-ocean-dark``
 
-### My curent user preferences
+### My current user preferences
 
 ```
 {
 	"added_words":
 	[
+		"Northgate",
+		"metallographic",
 		"microscopist",
 		"micrographs",
 		"micrograph",
@@ -80,20 +82,20 @@ I like Flatland-Monoaki and Spacegray-ocean-dark for Python  and Monoaki for LaT
 	"color_scheme": "Packages/Monokai Extended/Monokai Extended.tmTheme",
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"draw_white_space": "all",
-	"font_face": "Lucida Console",
-	"font_size": 12,
+	"font_size": 14,
 	"ignored_packages":
 	[
+		"Vintage",
+		"Markdown"
 	],
-	"numix_folder_icons": true,
-	"overlay_scroll_bars": "enabled",
 	"rulers":
 	[
 		72
 	],
+	"numix_folder_icons": true,
 	"tab_size": 2,
 	"tabs_large": true,
-	"theme": "Default.sublime-theme"
+	"theme": "Numix Dark.sublime-theme"
 }
 ```
 ## Using Sublime Text 3 with git
