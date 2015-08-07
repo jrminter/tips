@@ -112,6 +112,13 @@ I like Flatland-Monoaki and Spacegray-ocean-dark for Python  and Monoaki for LaT
 	"translate_tabs_to_spaces": false
 }
 ```
+On Windows, this is in file `Preferences.sublime-settings` in:
+
+```
+C:\Users\userName\AppData\Roaming\Sublime Text 3\Packages\User
+```
+
+
 ## Using Sublime Text 3 with git
 
 ### Windows
