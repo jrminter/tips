@@ -70,6 +70,8 @@ I like Flatland-Monoaki and Spacegray-ocean-dark for Python  and Monoaki for LaT
 {
 	"added_words":
 	[
+		"maxima",
+		"binarize",
 		"Northgate",
 		"metallographic",
 		"microscopist",
@@ -79,23 +81,35 @@ I like Flatland-Monoaki and Spacegray-ocean-dark for Python  and Monoaki for LaT
 		"ultrathin",
 		"chemometrics"
 	],
-	"color_scheme": "Packages/Monokai Extended/Monokai Extended.tmTheme",
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"draw_white_space": "all",
-	"font_size": 14,
+	"font_face": "Lucida Console",
+	"font_size": 12,
+	"hot_exit": true,
 	"ignored_packages":
 	[
 		"Vintage",
 		"Markdown"
 	],
+	"ignored_words":
+	[
+		"Lispix",
+		"hexane",
+		"nanoparticles",
+		"toolbar",
+		"ultrathin"
+	],
+	"numix_folder_icons": true,
+	"remember_open_files": true,
 	"rulers":
 	[
 		72
 	],
-	"numix_folder_icons": true,
 	"tab_size": 2,
 	"tabs_large": true,
-	"theme": "Numix Dark.sublime-theme"
+	"theme": "Numix Dark.sublime-theme",
+	"translate_tabs_to_spaces": false
 }
 ```
 ## Using Sublime Text 3 with git
