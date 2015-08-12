@@ -13,6 +13,14 @@ vignette: >
 
 Some useful tips for windows
 
+## Connecting to Ubuntu Samba shares from Win7
+
+From [ubuntu forums](http://ubuntuforums.org/showthread.php?t=1942514)
+
+> I resolved my problem connecting my Windows 7 box to my Ubuntu samba (11.10). I Had the "Windows cannot access" error (0x80070035 - the network path was not found" when trying to access the server (or share). I tried a lot of things, but when it came down to what actually solved it (all other items reversed) it was the "Microsoft Network client: Digitally sign communications (always)" setting that was causing my problem. Once it was disabled, I could see the shares and map the drive.
+
+> for the record, my "Microsoft Network client: Digitally sign communications" is set to 0 in the registry.
+
 ## Notepad++ style persistence
 
 From [superuser.com](http://superuser.com/questions/214849/how-to-save-font-settings-in-notepad)
