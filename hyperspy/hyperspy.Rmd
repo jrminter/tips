@@ -17,6 +17,27 @@ See also [python tips](../python/python.html)
 
 ### Anaconda
 
+#### My pull script from `~/git/pullAll.sh` on `jrmFastMac`
+
+```
+cd ~/git/hyperspy
+echo hyperspy 
+git fetch
+git fetch upstream
+git fetch pburdet
+git checkout EHN_map_multiprocessing
+git pull
+git checkout edslab
+git pull  
+git checkout master
+git pull
+git checkout testPB473
+git pull
+git checkout master
+git status
+echo 
+```
+
 From my cmd-anaconda prompt...
 
 ```
