@@ -51,7 +51,7 @@ in $\LaTeX$ documents.
 #### PNG
 The best png output comes via postscript. Make sure ImageMagick's
 ``convert`` program is ahead of windows ``convert`` program in the
-path. The use
+path. Then use
 
 ```
 convert -density 150 -geometry 100% plt.ps plt.png
