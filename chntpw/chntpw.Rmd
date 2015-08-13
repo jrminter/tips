@@ -55,7 +55,7 @@ First, boot the SystemRescue CD, or other Linux Live CD.
 
 ![cfdisk](./png/cfdisk.png)
 
-Mount the windows partition. If you don’t know what 
+Mount the windows partition. If you don't know what 
 device it is on, you can use the cfdisk command and it will 
 tell you the device. The device should look something
 like
