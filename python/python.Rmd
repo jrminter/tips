@@ -13,6 +13,10 @@ vignette: >
 
 See also [hyperspy tips](../hyperspy/hyperspy.html)
 
+## Spyder problem on Py 3.4
+
+Had problems with crashes. Turned out to be Babel 2.0. Ended up installing both Babel and Spyder from source. 
+
 ## Anaconda
 
 ### Launching
