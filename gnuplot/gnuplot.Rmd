@@ -21,11 +21,11 @@ compiled from several web sources. Some helpful ones:
 [gnuplotting.org](http://www.gnuplotting.org/)
 
 
-# Hacking the .plt file
+## Hacking the .plt file
 
-## Devices
+### Devices
 
-### Postscript
+#### Postscript
 
 Use something like this
 ```
@@ -48,7 +48,7 @@ rm -rf temp.pdf
 Cropping the margins is especailly helpful for inclusion
 in $\LaTeX$ documents.
 
-### PNG
+#### PNG
 The best png output comes via postscript. Make sure ImageMagick's
 ``convert`` program is ahead of windows ``convert`` program in the
 path. The use
