@@ -38,6 +38,57 @@ git status
 echo 
 ```
 
+note the branches defined
+
+```
+jrminter 1: git remote -v
+origin	https://github.com/jrminter/hyperspy.git (fetch)
+origin	https://github.com/jrminter/hyperspy.git (push)
+pburdet	https://github.com/pburdet/hyperspy.git (fetch)
+pburdet	https://github.com/pburdet/hyperspy.git (push)
+upstream	https://github.com/hyperspy/hyperspy.git (push)
+upstream	https://github.com/hyperspy/hyperspy.git (fetch)
+
+jrminter 2: git branch -a
+  EHN_map_multiprocessing
+  checkout
+  edslab
+* master
+  testPB473
+  remotes/origin/0.6
+  remotes/origin/0.7
+  remotes/origin/0.7.x
+  remotes/origin/0.8.x
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/NEW_eds_model
+  remotes/origin/eelslab
+  remotes/origin/master
+  remotes/origin/revert-492-BUGFIX_migration_to_ipython3.0
+  remotes/origin/testPB473
+  remotes/pburdet/EHN_map_multiprocessing
+  remotes/pburdet/EHN_test_notebook_doc_docstr
+  remotes/pburdet/ENH_3D_mayavi_isosurface
+  remotes/pburdet/ENH_plot_orthoview
+  remotes/pburdet/NEW_absorption_coeff
+  remotes/pburdet/NEW_det_efficiency
+  remotes/pburdet/NEW_eds_background_model
+  remotes/pburdet/NEW_eds_model
+  remotes/pburdet/NEW_get_signal_signal
+  remotes/pburdet/NEW_simulate_simple_EDS_model
+  remotes/pburdet/NEW_tomographic_reconstruction
+  remotes/pburdet/edslab
+  remotes/pburdet/image_FFT
+  remotes/pburdet/master
+  remotes/pburdet/storing_result
+  remotes/upstream/0.6
+  remotes/upstream/0.7
+  remotes/upstream/0.7.x
+  remotes/upstream/0.8.x
+  remotes/upstream/eelslab
+  remotes/upstream/master
+  remotes/upstream/revert-492-BUGFIX_migration_to_ipython3.0
+```
+
 From my cmd-anaconda prompt...
 
 ```
