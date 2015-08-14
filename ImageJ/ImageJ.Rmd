@@ -2,11 +2,9 @@
 title: "Image-J Tips"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{ImageJ Tips}
-  %\VignetteEngine{knitr::rmarkdown}
-  \usepackage[utf8]{inputenc}
+output:
+  html_document:
+    css: ../theme/custom.css
 ---
 
 [Back to Index](../README.html)
@@ -40,6 +38,19 @@ send message to ``imagej@list.nih.gov``
 `Ctl-Enter` - Bring the main window to the front
 
 See the full list [here](http://rsb.info.nih.gov/ij/docs/shortcuts.html)
+
+## Stitching images using MosaicJ
+
+The ``MosaicJ``plug-in for Fiji/ImageJ is a useful free alternative to the ``Multiple Image Alignment`` (MIA) module of analySIS Five. It does not have the nice initial rough alignment step using cross correlation, but gets the job done.
+
+Here is a reasonable workflow.
+
+1. **Pre-processing:** Open the individual images in Fiji and manually crop away most of the overlap legions. This will make your life a **lot** easier. Save these in a folder named ``prep``. 
+2. **Start MosaicJ:** Open the plug-in from the ``Plugins > Stitching`` menu.
+3. **Load your images:** From the MosaicJ file menu choose ``Load Image sequence`` and select the first image in your ``prep`` folder. This will load the images into MosaicJ's bottom panel.
+4. **Rough placement:** Click each image in the bottom panel. It will place each image into the top panel. Use the mouse to roughly move each image into the position it should have in the array.
+5. **Fine placement:** use the mouse to better align the tiles. The ``Scale > Magnifiy`` menu item will zoom. Note that ``Ctrl +`` (using the plus on the numeric keypad) shortcut zooms; ``Ctrl -`` shrinks. Do your best to move the images so the features overlap.
+6. **Create the montage:** Use ``File > Create Mosaic`` to generate the montage image. Save it as a tif in the parent folder of your ``prep`` folder. You can then crop, correct aspect ratio, adjust the LUT as needed and burn a scale bar.
 
 
 ## Annotating images
