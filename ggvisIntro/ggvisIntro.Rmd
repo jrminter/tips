@@ -2,11 +2,9 @@
 title: "Making a Histogram with ggvis in R"
 author: "The DataCamp Blog"
 date: "2015-03-14"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Making a histogram using ggvis in R}
-  %\VignetteEngine{knitr::rmarkdown}
-  \usepackage[utf8]{inputenc}
+output:
+  html_document:
+    css: ../theme/custom.css
 ---
 
 [Back to Index](../README.html)

@@ -2,12 +2,11 @@
 title: "Sweave Tips"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Sweave Tips}
-  %\VignetteEngine{knitr::rmarkdown}
-  \usepackage[utf8]{inputenc}
+output:
+  html_document:
+    css: ../theme/custom.css
 ---
+
 ```{r, echo=FALSE}
 library(knitr)
 ```

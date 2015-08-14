@@ -2,13 +2,11 @@
 title: "Slidify Tips"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Slidify Tips}
-  %\VignetteEngine{knitr::rmarkdown}
-  \usepackage[utf8]{inputenc}
----ighlight: pygments
+output:
+  html_document:
+    css: ../theme/custom.css
 ---
+
 ```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
 # make this an external chunk that can be included in any file
 
@@ -36,7 +34,7 @@ to create HTML5 slides from R.
 
 **2015-05-04 Note:** There is an incompatibility between the latest version of `Slidify` and the release version of `stringr` caused by a problem with processing regular expressions. The current workaround is to install `stringr-0.6.2` from the `CRAN` archives.
 
-# Installation
+## Installation
 One installs Slidify from github in R with the commands
 
 ```
@@ -44,7 +42,7 @@ library(devtools)
 install_github('slidify', 'ramnathv')
 install_github('slidifyLibraries', 'ramnathv')
 ```
-# Getting started
+## Getting started
 RV provides some helpful tips to get started on his
 [github](https://github.com/ramnathv/slidify) page.
 
@@ -87,8 +85,9 @@ to incorporate the changes.
 **Note:** I have a template (index.Rmd) in `templates/Rmd/Slidify` and a `slidify.css` file in `global/css/`. Also have some logos in `global/png/`
 
 
-# Alchemy
-## io2012
+## Alchemy
+
+### io2012
 ``io2012`` is a convenient framework for slides. I find the default
 text too small and like to add some color to the title slide. We
 need to edit files in the ``libraries/frameworks/io2012`` directory.

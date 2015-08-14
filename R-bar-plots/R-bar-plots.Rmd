@@ -2,12 +2,13 @@
 title: "Bar Plot with Error Bars in R"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Bar Plot with Error Bars in R}
-  %\VignetteEngine{knitr::rmarkdown}
-  \usepackage[utf8]{inputenc}
+output:
+  html_document:
+    css: ../theme/custom.css
 ---
+
+[Back to Index](../README.html)
+
 2013-10-20 from
 [here](http://heuristically.wordpress.com/2013/10/20/bar-plot-with-error-bars-r/)
 
@@ -72,3 +73,5 @@ ggplot(data.summary, aes(x = treatment, y = mean)) +
   theme(panel.grid.major = element_blank())
 # dev.off()
 ```
+
+[Back to Index](../README.html)

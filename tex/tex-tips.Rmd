@@ -2,11 +2,9 @@
 title: "TeXLive Hints"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{TeXLive Tips}
-  %\VignetteEngine{knitr::rmarkdown}
-  \usepackage[utf8]{inputenc}
+output:
+  html_document:
+    css: ../theme/custom.css
 ---
 
 [Back to Index](../README.html)
@@ -14,13 +12,13 @@ vignette: >
 These are John Minter's tips for a workflow using TeXlive.
 They were compiled from several web sources.
 
-# HTML Colors
+## HTML Colors
 These are frequently used in themes.
 [ColorPicker](http://www.w3schools.com/tags/ref_colorpicker.asp)
 
-# Simple tricks
+### Simple tricks
 
-## Spacing
+### Spacing
 
 From [TeX Tips](https://twitter.com/TeXtip/status/599224090004697088)
 
@@ -190,7 +188,7 @@ figure, but not in the LoF and thus the order of references
 is preserved.
 
 
-# Avoiding Sweave...
+## Avoiding Sweave...
 
 Sometimes it is helpful to write a table from R to be included.
 Even if one uses Sweave for some tasks, this trick can make
@@ -232,14 +230,15 @@ cat(str.ei, file=tab.tex, sep='\n', append=TRUE)
 ```
 
 
-# Beamer
-## some references
+## Beamer
+
+### some references
 [WikiBooks](http://en.wikibooks.org/wiki/LaTeX/Presentations)   
 [Beamer Poster](http://www-i6.informatik.rwth-aachen.de/~dreuw/latexbeamerposter.php)
 
-## some snippets
+### some snippets
 
-### my color definitions from beamerthemeEK.sty
+#### my color definitions from beamerthemeEK.sty
 ```
 \selectcolormodel{cmyk}
 
@@ -288,9 +287,9 @@ cat(str.ei, file=tab.tex, sep='\n', append=TRUE)
 ```
 
 
-# System Administration
+## System Administration
 
-## Spaces in file names
+### Spaces in file names
 
 Some packages have problems with paths with spaces on Windoze
 

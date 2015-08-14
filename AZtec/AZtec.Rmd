@@ -2,11 +2,9 @@
 title: "John's AZtec Tips"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Oxford AZtec Tips}
-  %\VignetteEngine{knitr::rmarkdown}
-  \usepackage[utf8]{inputenc}
+output:
+  html_document:
+    css: ../theme/custom.css
 ---
 
 This documents contains hints that I find helpful when using the Oxford AZtec 2.2 Software.

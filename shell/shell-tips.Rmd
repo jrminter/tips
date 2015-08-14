@@ -2,12 +2,11 @@
 title: "Linux Shell Tips"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Linux Shell Tips}
-  %\VignetteEngine{knitr::rmarkdown}
-  \usepackage[utf8]{inputenc}
+output:
+  html_document:
+    css: ../theme/custom.css
 ---
+
 [Back to Index](../README.html)
 
 from [techbar.me](http://www.techbar.me/linux-shell-tips/)

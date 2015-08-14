@@ -2,13 +2,10 @@
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
-output: rmarkdown::html_vignette
-vignette: >
-  %\VignetteIndexEntry{Tips}
-  %\VignetteEngine{knitr::rmarkdown}
-  \usepackage[utf8]{inputenc}
+output:
+  html_document:
+    css: ./theme/custom.css
 ---
-
 
 This repository contains the John Minter's useful tips in Rmarkdown
 format.
