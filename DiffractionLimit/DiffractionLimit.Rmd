@@ -6,6 +6,7 @@ output:
   html_document:
     css: ../theme/custom.css
 ---
+
 ```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
 # make this an external chunk that can be included in any file
 library(knitr)
