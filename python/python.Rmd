@@ -9,6 +9,8 @@ output:
 
 [Back to Index](../README.html)
 
+See also [Intermediate Python](http://book.pythontips.com/en/latest/)
+
 See also [hyperspy tips](../hyperspy/hyperspy.html)
 
 ## Spyder problem on Py 3.4
