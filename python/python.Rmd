@@ -11,6 +11,22 @@ output:
 
 See also [Intermediate Python](http://book.pythontips.com/en/latest/)
 
+## ipython4 and jupyter
+
+Jupyter must be installed separately. See [jupyter github](https://github.com/jupyter/notebook)
+
+```
+# ensure setuptools/pip are up-to-date
+pip install --upgrade setuptools pip
+cd ~/git
+git clone https://github.com/jupyter/notebook.git
+cd notebook
+pip install --pre -e .
+jupyter notebook
+```
+
+## hyperspy
+
 See also [hyperspy tips](../hyperspy/hyperspy.html)
 
 ## Spyder problem on Py 3.4
@@ -235,20 +251,20 @@ Install from update site ``http://eclipse-color-theme.github.io/update/``
 
 They have a nice Sublime Text 2 theme
 
-# directory operations
+## Directory operations
 
-## get the current working directory
+### get the current working directory
 ```
 import os
 os.getcwd()
 ```
-## remove an entire tree
+### remove an entire tree
 ```
 import shutil
 shutil.rmtree(path, ignore_errors=False, onerror=None)
 ```
 
-# ini files
+## ini files
 [StackOverflow](http://stackoverflow.com/questions/8884188/how-to-read-and-write-ini-file-with-python)
 
 ```
@@ -266,8 +282,9 @@ with open('FILE.INI', 'w') as configfile:    # save
 
 Seems to work fine...
 
-# List Comprehensions
-## From [Carl Groner](http://carlgroner.me/Python/2011/11/09/An-Introduction-to-List-Comprehensions-in-Python.html)
+## List Comprehensions
+
+From [Carl Groner](http://carlgroner.me/Python/2011/11/09/An-Introduction-to-List-Comprehensions-in-Python.html)
 
 ### The basics.
 Let’s start with a simple list.
@@ -358,11 +375,12 @@ Just like you would expect in for loops, the last loop moves the fastest. Also n
 List comprehension in Python can often provide a neat, clear, and concise syntax for creating lists from other lists. However, one should always be aware that, particularly for complex transformations or predicates, the concise and terse syntax can quickly become very difficult to read. In these cases, it's often beneficial to revert to traditional looping constructs.
 
 
-# Alchemy...
-## An DM3 image reader in python
+## Alchemy...
+
+## A DM3 image reader in python
 [ImageJ Wiki](http://imagejdocu.tudor.lu/doku.php?id=plugin:utilities:python_dm3_reader:start)
 
-# MySQL
+## MySQL
 
 ## With Python 3
 
