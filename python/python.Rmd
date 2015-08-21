@@ -15,6 +15,14 @@ See also [Intermediate Python](http://book.pythontips.com/en/latest/)
 
 Jupyter must be installed separately. See [jupyter github](https://github.com/jupyter/notebook)
 
+An easy way to update aftet **the big split** from [blog.jupyter.org](http://blog.jupyter.org/2015/08/12/first-release-of-jupyter/)
+
+```
+pip install --upgrade ipython[all]  
+```
+
+or BF&I
+
 ```
 # ensure setuptools/pip are up-to-date
 pip install --upgrade setuptools pip
