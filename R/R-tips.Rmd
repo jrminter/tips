@@ -36,6 +36,10 @@ tips on matters that made me go *hmmm...*
 
 ## Hard things to find
 
+### Cool R-markdown Examples
+
+[João Neto](http://www.di.fc.ul.pt/~jpn/r/) has some really nice examples. They plot as `.html` but one can change the extension to `.Rmd` to get the source.
+
 ### Speeding up compile on 64 bit R
 
 From [here](http://www.rexamine.com/2015/07/speeding-up-r-package-installation-process/)
