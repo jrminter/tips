@@ -11,6 +11,14 @@ This documents contains hints that I find helpful when using the Oxford AZtec 2.
 
 [Back to Index](../README.html)
 
+### User-Generated Public Templates
+
+These are in
+
+```
+C:\Users\Public\Documents\AZtec\Report Templates
+```
+
 ### Exporting maps and making montages
 
 I like tightly-stitched maps with the ability to crop regions of interest. Here is the current procedure I use. The export of the PNG files is kludgy - I need to try to write an Auto-IT to script. This keeps the raw images in the ``$EDS_ROOT/Oxford/QM14-nn-nnA-Client/reports/qm-nnnnn-sampleID/qm-nnnnn-sampleID-nnkV-map1/tif`` tree where I cannot use version control (AZtec projects fail to open...) and the python scripts and report images in the ``$HOME/work/proj/QM14-nn-nnA-Client/`` tree where I do use version control (``git``). **Note:** the scripts below use functions from ``jmFijiGen.py`` which must be in ``$FIJI_ROOT/jars/Lib/``.
