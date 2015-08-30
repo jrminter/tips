@@ -8,6 +8,175 @@ output:
 ---
 [Back to Index](../README.html)
 
+## Command line tips
+From [www.mitchchn.me](http://www.mitchchn.me/2014/os-x-terminal)
+
+### open
+
+```
+$ open /Applications/Safari.app/
+
+NAME
+     open -- open files and directories
+
+SYNOPSIS
+     open [-e] [-t] [-f] [-F] [-W] [-R] [-n] [-g] [-h] [-b bundle_identifier]
+          [-a application] file ... [--args arg1 ...]
+```
+
+### pbcopy/pbpaste
+
+```
+$ ls ~ | pbcopy
+$ pbcopy < blogpost.txt
+$ curl http://www.google.com/doodles#oodles/archive | grep -A5 'latest-doodle on' | grep 'img src' | sed s/.*'<img src="\/\/'/''/ | sed s/'" alt=".*'/''/ | pbcopy
+$ pbpaste >> tasklist.txt
+
+
+NAME
+  pbcopy,  pbpaste  -  provide copying and pasting to the pasteboard (the Clipboard) 
+                       from command line
+
+SYNOPSIS
+  pbcopy [-help] [-pboard {general | ruler | find | font}]
+
+  pbpaste [-help] [-pboard {general | ruler | find | font}]
+          [-Prefer {txt | rtf | ps}]
+```
+
+### mdfind
+
+```
+$ mdfind -onlyin ~/Documents essay
+
+NAME
+     mdfind -- finds files matching a given query
+
+SYNOPSIS
+     mdfind [-live] [-count] [-onlyin directory] [-name fileName] query
+```
+
+### screencapture
+
+```
+$ screencapture -C -M image.png
+$ screencapture -c -W
+$ screencapture -T 10 -P image.png
+$ screencapture -s -t pdf image.pdf
+
+NAME
+     screencapture -- capture images from the screen and save them to a file
+     or the clipboard
+
+SYNOPSIS
+     screencapture [-SWCTMPcimswxto] file
+     
+DESCRIPTION
+     The screencapture utility is not very well documented to date.  A list of
+     options follows.
+     -c      Force screen capture to go to the clipboard.
+
+     -C      Capture the cursor as well as the screen.  Only allowed in non-
+             interactive modes.
+
+     -i      Capture screen interactively, by selection or window.  The con-
+             trol key will cause the screen shot to go to the clipboard.  The
+             space key will toggle between mouse selection and window selec-
+             tion modes.  The escape key will cancel the interactive screen
+             shot.
+
+     -m      Only capture the main monitor, undefined if -i is set.
+
+     -M      Open the taken picture in a new Mail message.
+
+     -o      In window capture mode, do not capture the shadow of the window.
+     -P      Open the taken picture in a Preview window.
+
+     -s      Only allow mouse selection mode.
+
+     -S      In window capture mode, capture the screen instead of the window.
+
+     -t      <format> Image format to create, default is png (other options
+             include pdf, jpg, tiff and other formats).
+
+     -T      <seconds> Take the picture after a delay of <seconds>, default is
+             5.
+
+     -w      Only allow window selection mode.
+
+     -W      Start interaction in window selection mode.
+
+     -x      Do not play sounds.
+     -x      Do not play sounds.
+
+     -a      Do not capture attached windows.
+
+     -r      Do not add screen dpi meta data to captured file.
+
+     files   where to save the screen capture, 1 file per scree
+
+```
+###  launchctl
+
+`launchctl` lets you interact with the OS X init script system, launchd. With launch daemons and launch agents, you can control the services that start up when you boot your computer. You can even set up scripts to run periodically or at timed intervals in the background, similar to cron jobs on Linux.
+
+For example, if you’d like to have the Apache web server start automatically when you turn on your Mac, simply type:
+
+```
+$ sudo launchctl load -w /System/Library/LaunchDaemons/org.apache.httpd.plist
+```
+
+Running launchctl list will show you what launch scripts are currently loaded. `sudo launchctl unload [path/to/script]` will stop and unload running scripts, and adding the `-w` flag will remove those scripts permanently from your boot sequence. I like to run this one on all the auto-update "helpers" created by Adobe apps and Microsoft Office.
+
+Launchd scripts are stored in the folllowing locations:
+
+```
+~/Library/LaunchAgents    
+/Library/LaunchAgents          
+/Library/LaunchDaemons
+/System/Library/LaunchAgents
+/System/Library/LaunchDaemons
+```
+
+To see what goes into a launch agent or daemon, there’s a great blog post by [Paul Annesley](http://paul.annesley.cc/2012/09/mac-os-x-launchd-is-cool/) that walks you through the file format. And if you’d like to learn how to write your own launchd scripts, Apple provides some helpful documentation on their [Developer site](https://developer.apple.com/library/mac/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html). 
+
+### say
+
+```
+say "I'm done" -v Samantha
+
+NAME
+  say - Convert text to audible speech
+
+SYNOPSIS
+  say [-v voice] [-r rate] [-o outfile [audio format options] | -n name:port |
+  -a device] [-f file | string ...]
+```
+
+### diskutil
+
+```
+diskutil list
+
+/dev/disk0
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:      GUID_partition_scheme                        *500.3 GB   disk0
+   1:                        EFI EFI                     209.7 MB   disk0s1
+   2:          Apple_CoreStorage                         499.4 GB   disk0s2
+   3:                 Apple_Boot Recovery HD             650.0 MB   disk0s3
+/dev/disk1
+   #:                       TYPE NAME                    SIZE       IDENTIFIER
+   0:                  Apple_HFS jrm-FastMac            *499.0 GB   disk1
+                                 Logical Volume on disk0s2
+                                 8B76568F-93D3-4A49-B3F6-721A4642738D
+
+diskutil repairPermissions [-plist] device
+
+diskutil repairPermissions /dev/disk1
+
+see man diskutil
+```
+
 ## An annoyance with R and Gtk2 with R-3.2.0
 
 Using Gtk2 from homebrew seemed to work
