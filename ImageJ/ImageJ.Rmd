@@ -11,6 +11,8 @@ output:
 
 I have collected these tips both from experience and from a very helpful user community.
 
+Check out the [Action Bar](http://imagejdocu.tudor.lu/doku.php?id=plugin:utilities:action_bar:start) plug-in...
+
 ## Mailing Lists
 
 ### ImageJ-devel
