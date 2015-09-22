@@ -3,13 +3,30 @@ title: "Tips on Using DTSA-II"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{Tips on Using DTSA-II}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 [Back to Index](../README.html)
 
-### Getting NISTMonte Monte Carlo packages to work with Iona
+# Defining a custom material
+
+It is important to add a name when one define a name when defining a
+custom material that will be used with the MC3 simulations. Here is an
+example for PET
+
+```
+pet = epq.Material(epq.Composition([epq.Element.C,epq.Element.H,epq.Element.O],[0.62502,0.04196,0.069042]),epq.ToSI.gPerCC(1.37))
+pet.setName("PET")
+```
+
+
+# Getting NISTMonte Monte Carlo packages to work with Iona
 
 DTSA-II Iona seems to not export classes that were available
 in Halley. I noticed that the `mcSimulate3.py` file had these
