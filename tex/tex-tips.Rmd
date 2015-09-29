@@ -1,10 +1,14 @@
 ---
 title: "TeXLive Hints"
 author: "J. R. Minter"
-date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{Analysis of coated Ag ink}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 [Back to Index](../README.html)
@@ -12,13 +16,19 @@ output:
 These are John Minter's tips for a workflow using TeXlive.
 They were compiled from several web sources.
 
+# Simple tricks
+
 ## HTML Colors
 These are frequently used in themes.
 [ColorPicker](http://www.w3schools.com/tags/ref_colorpicker.asp)
 
-### Simple tricks
+## Hyphenation
 
-### Spacing
+From [Malaysian LaTeX UG](http://latex-my.blogspot.com/2015/09/rant-warning-i-dont-want-hyphenation-in.html)
+
+>  A quick way to disable hyphenation is to put `\sloppy` just after your `\begin{document}`.
+
+## Spacing
 
 From [TeX Tips](https://twitter.com/TeXtip/status/599224090004697088)
 
@@ -62,6 +72,17 @@ my text
 \newpage
 \pagenumbering{arabic}
 
+```
+
+## Compressing pdflatex output with ghostscript
+
+```
+gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=compressed.pdf orig.pdf
+```
+
+## Crop pdf margina
+```
+pdfcrop --margins 4 orig.pdf cropped.pdf
 ```
 
 ## Multiple files
@@ -119,6 +140,8 @@ fine. I have no clue what possessed me to write it this way.
 Now I know better. This is the 3 hours of my life that I will
 never get back. All because I put label before a caption.
 Do not do that to yourself!
+
+# Citations
 
 ## Hiding citations
 A useful hint from
@@ -188,7 +211,7 @@ figure, but not in the LoF and thus the order of references
 is preserved.
 
 
-## Avoiding Sweave...
+# Avoiding Sweave...
 
 Sometimes it is helpful to write a table from R to be included.
 Even if one uses Sweave for some tasks, this trick can make
@@ -230,15 +253,15 @@ cat(str.ei, file=tab.tex, sep='\n', append=TRUE)
 ```
 
 
-## Beamer
+# Beamer
 
-### some references
+## some references
 [WikiBooks](http://en.wikibooks.org/wiki/LaTeX/Presentations)   
 [Beamer Poster](http://www-i6.informatik.rwth-aachen.de/~dreuw/latexbeamerposter.php)
 
-### some snippets
+## some snippets
 
-#### my color definitions from beamerthemeEK.sty
+### my color definitions from beamerthemeEK.sty
 ```
 \selectcolormodel{cmyk}
 
@@ -253,9 +276,9 @@ cat(str.ei, file=tab.tex, sep='\n', append=TRUE)
 
 ```
 
-### Useful snippets from Stack Exchange
+# Useful snippets from Stack Exchange
 
-#### Left margins inside a block environment
+## Left margins inside a block environment
 
 ```
 \documentclass{beamer}
@@ -287,9 +310,9 @@ cat(str.ei, file=tab.tex, sep='\n', append=TRUE)
 ```
 
 
-## System Administration
+# System Administration
 
-### Spaces in file names
+## Spaces in file names
 
 Some packages have problems with paths with spaces on Windoze
 
@@ -308,16 +331,7 @@ C:/Apps/R/Rtools
 
 ```
 
-### Compressing pdflatex output with ghostscript
 
-```
-gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile=compressed.pdf orig.pdf
-```
-
-### Crop pdf margina
-```
-pdfcrop --margins 4 orig.pdf cropped.pdf
-```
 
 ## Regenerating config files
 
