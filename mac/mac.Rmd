@@ -3,15 +3,59 @@ title: "MacOS Tips"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{MacOS Tips}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 [Back to Index](../README.html)
 
-## Command line tips
+# El Capitan & Homebrew
+
+From [DomT4](https://raw.githubusercontent.com/Homebrew/homebrew/master/share/doc/homebrew/El_Capitan_and_Homebrew.md)
+
+Part of the OS X 10.11/El Capitan changes is something called [System Integrity Protection](https://en.wikipedia.org/wiki/System_Integrity_Protection) or "SIP".
+
+SIP prevents you from writing to many system directories such as `/usr`, `/System` & `/bin`, regardless of whether or not you are root. The Apple keynote is [here](https://developer.apple.com/videos/wwdc/2015/?id=706) if you'd like to learn more.
+
+One of the implications of SIP is that you cannot simply create `/usr/local` if it is removed or doesn't exist for another reason. However, as noted in the keynote, Apple is leaving `/usr/local` open for developers to use, so Homebrew can still be used as expected.
+
+Apple documentation hints that `/usr/local` will be returned to `root:wheel restricted` permissions on [every OS X update](https://developer.apple.com/library/prerelease/mac/releasenotes/General/rn-osx-10.11/); Homebrew will be adding a `brew doctor` check to warn you when this happens in the near future.
+
+If you haven't installed Homebrew in `/usr/local` or another system-protected directory, none of these concerns apply to you.
+
+This is how to fix Homebrew on El Capitan if you see permission issues:
+
+## If `/usr/local` exists already:
+
+```bash
+sudo chown $(whoami):admin /usr/local && sudo chown -R $(whoami):admin /usr/local
+```
+
+## If `/usr/local` does not exist:
+
+* Reboot into Recovery mode (Hold Cmd+R on boot) & access the Terminal.
+* In that terminal run:
+    `csrutil disable`
+* Reboot back into OS X
+* Open your Terminal application and execute:
+
+```bash
+  sudo mkdir /usr/local && sudo chflags norestricted /usr/local && sudo chown $(whoami):admin /usr/local && sudo chown -R $(whoami):admin /usr/local
+```
+
+* Reboot back into Recovery Mode & access the Terminal again.
+* In that terminal execute:
+  `csrutil enable`
+* Reboot back into OS X & you'll be able to write to `/usr/local` & install Homebrew.
+
+# Command line tips
 From [www.mitchchn.me](http://www.mitchchn.me/2014/os-x-terminal)
 
-### open
+## open
 
 ```
 $ open /Applications/Safari.app/
@@ -24,7 +68,7 @@ SYNOPSIS
           [-a application] file ... [--args arg1 ...]
 ```
 
-### pbcopy/pbpaste
+## pbcopy/pbpaste
 
 ```
 $ ls ~ | pbcopy
@@ -44,7 +88,7 @@ SYNOPSIS
           [-Prefer {txt | rtf | ps}]
 ```
 
-### mdfind
+## mdfind
 
 ```
 $ mdfind -onlyin ~/Documents essay
@@ -56,7 +100,7 @@ SYNOPSIS
      mdfind [-live] [-count] [-onlyin directory] [-name fileName] query
 ```
 
-### screencapture
+## screencapture
 
 ```
 $ screencapture -C -M image.png
@@ -116,7 +160,7 @@ DESCRIPTION
      files   where to save the screen capture, 1 file per scree
 
 ```
-###  launchctl
+##  launchctl
 
 `launchctl` lets you interact with the OS X init script system, launchd. With launch daemons and launch agents, you can control the services that start up when you boot your computer. You can even set up scripts to run periodically or at timed intervals in the background, similar to cron jobs on Linux.
 
@@ -140,7 +184,7 @@ Launchd scripts are stored in the folllowing locations:
 
 To see what goes into a launch agent or daemon, there’s a great blog post by [Paul Annesley](http://paul.annesley.cc/2012/09/mac-os-x-launchd-is-cool/) that walks you through the file format. And if you’d like to learn how to write your own launchd scripts, Apple provides some helpful documentation on their [Developer site](https://developer.apple.com/library/mac/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLaunchdJobs.html). 
 
-### say
+## say
 
 ```
 say "I'm done" -v Samantha
@@ -153,7 +197,7 @@ SYNOPSIS
   -a device] [-f file | string ...]
 ```
 
-### diskutil
+## diskutil
 
 ```
 diskutil list
@@ -177,7 +221,7 @@ diskutil repairPermissions /dev/disk1
 see man diskutil
 ```
 
-## An annoyance with R and Gtk2 with R-3.2.0
+# An annoyance with R and Gtk2 with R-3.2.0
 
 Using Gtk2 from homebrew seemed to work
 
@@ -194,7 +238,7 @@ install.packages("cairoDevice")
 I also added the line to my fixYosemite.app AppleScript
 
 
-## Yosemite
+# Yosemite
 
 There is a significant problem passing environment variables. Nice solution posted on [stackoverflow](http://stackoverflow.com/questions/25385934/yosemite-launchd-conf-no-longer-work).
 
@@ -218,9 +262,9 @@ If you do have multiple users you could either manually set a Login Item for eac
 
 Granted, neither of these workarounds is as convenient as /etc/launchd.conf.
 
-## Quick
+# Quick
 
-### See what the installer is doing
+## See what the installer is doing
 
 During a recent install of the Yosemite release candidate, the intaller hung for over an hour at the "2 min left" point. Turrns out that this was a known issue on upgrade installs since it is copying files back from a recovery partition to ``/usr/local/``. With Homebrew and TeXLive installed, I had a lot there. The log is our friend...
 
@@ -231,7 +275,7 @@ Type ``⌘+l`` to see the log.
 sudo chown -R $(whoami) /usr/local
 ```
 
-### Some hints for SSDs
+## Some hints for SSDs
 From [alutam.com](http://blog.alutam.com/2012/04/01/optimizing-macos-x-lion-for-ssd/)
 
 There is no GUI switch to turn these local backups off, but it can easily be done on the command line. Just start Terminal.app and execute the following command:
@@ -248,10 +292,10 @@ sudo tmutil enablelocal
 
 Also note, this feature gets turned on automatically whenever you turn off and on the Time Machine – so don’t forget to turn the local backups back off again whenever you do that.
 
-### Lock Screen
+## Lock Screen
 Cntl-shift-eject keys
 
-### Fix wireless problems
+## Fix wireless problems
 
 From [osx daily](http://osxdaily.com/2014/10/25/fix-wi-fi-problems-os-x-yosemite/)
 
@@ -259,7 +303,7 @@ Some Mac users who upgraded to OS X Yosemite have discovered a variety of wirele
 
 It should be noted that it’s difficult to point to a single cause for sudden and unexpected wireless troubles with any OS X version, and there may be different causes for different users. Accordingly, it’s challenging to offer a single solution to the Yosemite Wi-Fi problems that users are experiencing. With that said, we’ve been able to resolve the problem for many Macs by using the steps outlined below. This involves editing some system level configuration files, and you should probably start a Time Machine backup before proceeding just to be on the safe side of things.
 
-#### 1: Remove Network Configuration & Preference Files
+### 1: Remove Network Configuration & Preference Files
 
 Manually trashing the network plist files should be your first line of troubleshooting. This is one of those tricks that consistently resolves even the most stubborn wireless problems on Macs of nearly any OS X version. This is particularly effective for Macs who updated to Yosemite that may have a corrupt or dysfunctional preference file mucking things up:
 
@@ -286,7 +330,7 @@ Reboot the Mac
 Turn ON WI-Fi from the wireless network menu again
 This forces OS X to recreate all network configuration files. This alone may resolve your problems, but if you’re continuing to have trouble we recommend following through with the second step which means using some custom network settings.
 
-#### 2: Create a New Wi-Fi Network Location with Custom DNS
+### 2: Create a New Wi-Fi Network Location with Custom DNS
 
 What we’re doing here is creating a new network location which is going to have a configuration different from the defaults. First, we’ll use a completely new network setup. Then, we’ll set DNS on the computer rather than waiting for OS X to get DNS details from the wi-fi router, which alone can resolve many issues with DNS lookups, since Yosemite seems to be finicky with some routers. Finally, we’re going to set a custom MTU size that is slightly smaller than the default, which will get rejected less often by a router, it’s an old netadmin trick that has long been used to fix network troubles.
 
@@ -306,7 +350,7 @@ Click on MTU and change it to “Custom” and set the MTU number to 1453 (this 
 Now click on “Apply” to set your network changes
 Quit and relaunch any apps that require network access, like Safari, Chrome, Messages, Mail, and your wireless connectivity should be flawless and back at full speed at this point.
 
-#### Unload & Reload discoveryd to Fix DNS & Wi-Fi Failures in OS X Yosemite
+### Unload & Reload discoveryd to Fix DNS & Wi-Fi Failures in OS X Yosemite
 
 Another trick that was left in the comments (thanks Frank!) involves refreshing the discoveryd service by unloading and reloading it with the launchctl command. This is a bit curious but apparently it works for some users, suggesting there could be an issue with discovery or resolving DNS on some Yosemite Macs. It’s certainly worth a try if the above tricks failed to resolve your wi-fi connectivity problems in OS X 10.10, as there are a fair amount of positive reports with this one:
 
@@ -326,7 +370,7 @@ sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.discoveryd.plist
 Again hit Return to finish the command
 You may need to relaunch apps that require network connectivity. Note that if you reboot the Mac with this one, you will have to repeat the above steps to unload and reload discoveryd into launchd.
 
-#### Bonus OS X Yosemite Wi-Fi Troubleshooting Tricks
+### Bonus OS X Yosemite Wi-Fi Troubleshooting Tricks
 
 - Here are some other less than ideal solutions that have been reported to remedy wi-fi issues in OS X Yosemite.
 
@@ -340,11 +384,11 @@ If none of the above works, there could be other problems. Sometimes starting fr
 Have you experienced wireless connectivity issues with OS X Yosemite? What have you tried, and how did you resolve them? Let us know what has been working to remedy your wifi troubles by leaving a comment!
 
 
-### Change the login screen
+## Change the login screen
 
 [osx daily](http://osxdaily.com/2013/11/04/change-login-screen-wallpaper-os-x-mavericks/)
 
-### Postgres
+## Postgres
 [an example](http://www.mikeball.us/blog/setting-up-postgres-on-mac-osx-with-homebrew)
 
 [another example](https://gist.github.com/lxneng/741932)
@@ -392,7 +436,7 @@ testdb=# \d company
 testdb=# \c testdb;
 ```
 
-### Watch for this
+## Watch for this
 [Reports](https://discussions.apple.com/message/23505531#23505531) of battery life issue after upgrade to Mavericks. Note that [Apple](http://www.apple.com/batteries/notebooks.html) has some tips about batteries.
 
 ## Startup items
@@ -414,63 +458,22 @@ Note how this uses ``csh`` syntax...
 ## Personal environment variables
 These are best set in ``.profile``
 
-## Prework for Yosemite
+# Create an install disk for for El Capitan
 
-Create an install disk. I did this after download
+From [ars technica](http://arstechnica.com/apple/2015/09/how-to-make-your-own-bootable-os-x-10-11-el-capitan-usb-install-drive/)
 
-```
-sudo /Applications/Install\ OS\ X\ Yosemite.app/Contents/Resources/createinstallmedia --volume /Volumes/Mac\ OS\ X\ Install\ ESD --applicationpath /Applications/Install\ OS\ X\ Yosemite.app --nointeraction
-```
-
-## Prework for Mavericks
-
-### For a clean Install
-
-#### First, [Apple's version](http://support.apple.com/kb/HT5856)
-
-With OS X Mavericks, you can create a bootable OS X installer which can be used to install the operating system while started from removable media, such as a USB flash drive.
-
-Before being able to create a bootable OS X installer, you'll need to do the following first:
-
-1. Use the Mac App Store to download the OS X installer app.
-2. Mount the volume you wish to convert into a bootable installer. This could be removable media such as a USB flash drive or a secondary internal partition.
-3. You can then use the ``createinstallmedia`` tool to convert the volume from step two into a bootable installer based off the installer app from step one. To learn how to use ``createinstallmedia``, use the following command in ``Terminal``:
+Apple has actually included a terminal command that can create an install disk for you. Assuming that you have the OS X El Capitan installer in your Applications folder and you have a Mac OS X Extended (Journaled)-formatted USB drive named "Untitled" mounted on the system (you can rename an old one in Disk Utility...), you can create an El Capitan install drive by typing the following command into the Terminal.
 
 ```
-/Applications/Install\ OS\ X\ Mavericks.app/Contents/Resources/createinstallmedia
+sudo /Applications/Install\ OS\ X\ El\ Capitan.app/Contents/Resources/createinstallmedia --volume /Volumes/Untitled --applicationpath /Applications/Install\ OS\ X\ El\ Capitan.app --nointeraction
 ```
 
-For example, assuming you have a volume mounted at ``/Volumes/MyVolume`` and the OS X installer app is at ``/Applications/Install\ OS\ X\ Mavericks.app`` you could erase ``/Volumes/MyVolume`` and convert it into a bootable installer with this command:
+The command will erase the disk and copy the install files over. Give it some time, and your volume will soon be loaded up with not just the OS X installer but also an external recovery partition that may come in handy if your hard drive dies and you're away from an Internet connection.
 
-```
-sudo /Applications/Install\ OS\ X\ Mavericks.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume --applicationpath /Applications/Install\ OS\ X\ Mavericks.app
-```
+Whichever method you use, you should be able to boot from your new USB drive either by changing the default Startup Disk in System Preferences or by holding down the Option key at boot and selecting the drive. Once booted, you'll be able to install or upgrade El Capitan as you normally would.
 
-You may need to adjust the path to the OS X installer app in the above command.
 
-***Note:*** ``createinstallmedia`` is an advanced option for system administrators and as such, requires some knowledge of the command line in order to be used properly. It is only intended to be used with the version of OS X installer app it came with.
-
-#### From [Christina Warren](http://mashable.com/2013/10/23/clean-install-os-x-mavericks/) and [Ed Rhee](http://howto.cnet.com/8301-11310_39-57608836-285/how-to-create-a-bootable-os-x-mavericks-usb-install-drive/)
-
-Creating an OS X USB installer from the App Store download hasn't been very straightforward in the past, and the old methods no longer work for OS X 10.9. However, there's a new Apple utility with Mavericks that makes it relatively simple, and thanks to MacForums member, tywebb13, we know how to use it. With a USB installer, you'll be able to perform a clean installation of Mavericks whenever you want and without having to download it again from the App Store. Here's how to create a bootable OS X Mavericks install drive:
-
-**Step 1:** Download the OS X Mavericks installer from the App Store, but don't run the installer yet. If you've already upgraded, you'll have to download the installer again from the App Store, since it deletes itself after the upgrade. Make sure the installer is located in the Applications folder.
-
-**Step 2:** Format a USB flash drive that's at least 8GB, as Mac OS Extended (Journaled) and keep the default name as "Untitled." Make sure that you don't have another volume with the same name. If you do, unmount the other volume or rename it temporarily. You can also name the USB flash drive to something other than "Untitled," but just make sure to change the command in Step 3 to reflect the correct name.
-![Disk Util](png/format_USB_drive.png)
-
-**Step 3:** Open a terminal window and enter the following command:
-
-```
-sudo /Applications/Install\ OS\ X\ Mavericks.app/Contents/Resources/createinstallmedia --volume /Volumes/Untitled --applicationpath /Applications/Install\ OS\ X\ Mavericks.app --nointeraction
-```
-![In Terminal](png/Create_OSX_install_media.png)
-
-Since the utility requires root privileges, you'll need to enter your password to continue. It shouldn't take more than 20 minutes or so for it to complete.
-
-That's it. You should now be able to boot with the USB installer while holding down the Option key and begin your clean install of OS X Mavericks. If the utility seems to be stuck at "Copying installer files to disk," try switching to a different USB flash drive. Another issue that seems to come up is the USB installer not appearing in Startup Manager. Again, try switching to a different USB flash drive if you have problems booting into it. If you're not having any luck with the Apple utility, you might also want give DiskMaker X (formerly Lion DiskMaker) a try.
-
-### C++11
+# C++11
 Guess there are issues. One suggestion from
 [Sebastian Raschka](http://stackoverflow.com/questions/19649421/something-odd-happened-to-c-11-in-mavericks)
 
@@ -479,7 +482,7 @@ Guess there are issues. One suggestion from
 clang++ -std=c++11 -stdlib=libc++
 
 ```
-### Homebrew
+# Homebrew
 
 Current error building R packages
 
@@ -530,7 +533,7 @@ xcode-select --install
 This will bring up a dialog to install the Command Line Tools
 (which you will have to type in your password) and will fix the problem.
 
-### QT problem
+## QT problem
 From [Cliff Rowley](https://github.com/mxcl/homebrew/pull/23793)
 
 ```
