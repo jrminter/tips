@@ -104,6 +104,8 @@ Topic
 
 [Salabim-Creating publication quality graphs in R](./Salabim/Salabim-graphics.html)
 
+[SEM](./SEM/SEM.html)
+
 [skimage](./skimage/skimage.html)
 
 [Slidify](./Slidify/Slidify.html)

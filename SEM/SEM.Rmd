@@ -1,0 +1,58 @@
+---
+title: "SEM Tips"
+author: "J. R. Minter"
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
+output:
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{SEM Tips}
+  %\VignetteEngine{knitr::rmarkdown}
+---
+[Back to Index](../README.html)
+
+# Handling problem specimens that charge
+
+## Comments from Steve Chapman 2015-10-07
+
+These comments came from the microscopy listserver in response to a question about imaging a problematic leather specimen.
+
+> Sounds as if you are trying, but if the charge is worse with dropping to 5 kV
+that tells me you have lost the BSE contribution, this will be a big problem
+whist using a TTL system. The converted BSE provide SE, but because they are
+derived from BSE they do not carry so much charge information
+
+> The approach to a problem specimen should be as follows:
+
+> 1. Use the smallest possible piece of material, fixed to the stub with
+a good quality conducting media.
+> 2. Start at the lowest kV that you are able to work with, and a small
+spot size; all aimed at not damaging or charging the specimen.  If you use a
+TTL system go to the standard detector in the lower chamber, with about 7 mm
+working distance.  You need a contribution of converted BSE (less charge)
+which you are unlikely to have with TTL detection. If the signal is too low,
+slightly increase the spot size.
+> 3. If the specimen is not giving you a problem other than resolution,
+increase the magnification using a fast scan if possible, to reduce the
+intensity of beam on a particular area.
+> 4. Having increased the magnification, as resolution is the problem,
+increase the kV slightly (e.g. if you were using 1kV go to 1.5kV).
+> 5. As long as there is no charge continue stepping up the kV until you
+are happy with the result or the specimen charges.  If you charge the
+specimen take it to air to discharge it, and go back to an earlier kV.
+Slight charge may be reduced by reducing the spot size slightly.
+> 6. If resolution is still the problem, try moving the specimen closer
+to the final lens by a few mm, not too close as you will lose the very
+valuable converted BSE.
+> 7. Still a resolution problem, if you have a TTL system try 10 mm WD
+then in steps down to 5 mm WD with this system, and see if you are able to
+obtain a satisfactory result (with many TTL systems between 7 mm and 5 mm
+works).
+> 8. All of the time you are looking for a mix of kV, spot size, and WD
+that provides the best mix of signal and therefore performance.
+
+
+
+[Back to Index](../README.html)
