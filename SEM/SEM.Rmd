@@ -15,7 +15,7 @@ vignette: >
 
 # Handling problem specimens that charge
 
-## Comments from Steve Chapman 2015-10-07
+## Comments from Steve Chapman 2015-10-07 (protrain@emcourses.com)
 
 These comments came from the microscopy listserver in response to a question about imaging a problematic leather specimen.
 
@@ -53,6 +53,57 @@ works).
 > 8. All of the time you are looking for a mix of kV, spot size, and WD
 that provides the best mix of signal and therefore performance.
 
+## Comments from Gary Brown (microscopy.gmb@gmail.com)
+
+> I agree with what Steve had to say and have some additional comments.
+
+> - A sample of a square centimeter or so is probably not too large.
+The conductive media should make a continuous electrical connection
+between the bare metal stub and the upper surface and continuing onto
+the upper surface of the sample.  I often use Leit C carbon adhesive
+from my friendly microscopy supply house because it combines
+electrical conductivity with excellent mechanical strength that
+materials like colloidal graphite (DAG) and silver paint don't have.
+Silver paint can also be problematic in EDS analysis.
+
+> -  The power that field emission SEM offers is incredibly bright
+source combined with a stable low voltage beam.  Secondary electron
+imaging (SEI) at low voltage provides the best topographical analysis
+of surface roughness.  Charge control in SEI is achieved by balancing
+the number of incident electrons entering the sample and electrons
+leaving as secondary and backscattered electrons.  I highly recommend
+the book "Scanning Electron Microscopy and X-ray Microanalysis", 3rd
+Edition by Goldstein et al., Springer, 2013.  The chapter on
+Procedures for Elimination of Charging in Nonconducting Specimens
+should be very helpful.
+
+> -  My 25 years of experience in low voltage, field emission SEM of
+polymers leads me to believe that some of the imaging problems
+experienced with leather may be similar to those observed in polymers.
+Both are insulators and consist of low atomic weight elements.  Like
+Steve, I suggest you start at around 1 kV accelerating voltage.  Use
+the spot size that the service engineers use to check your spatial
+resolution at 1 kV: this spot size is a good place to start because
+the manufacturer knows it gives an excellence balance of resolution
+and signal-to-noise.
+
+> -  For best results, I suggest you work with an uncoated sample.  You
+might start with a coated sample then move to the bare, uncoated
+sample.  Gold and gold-palladium coatings will obscure possibly
+important surface information.
+
+> -  Faster scan rates produce less charging than longer scan rates.
+If a single scan allows you to control charging but is somewhat noisy,
+average several scans recorded using shorter scan rates.  Do a few
+quick tests on fresh areas of the sample to see how long a scan rate
+you can use without producing charging.  Be aware that your default
+image acquisition scan rate may be much longer than the ideal scan
+rate for your sample. If this happens, record your images at the
+preferred rate.
+
+> -  Fortunately, sub-micrometer surface texture and porosity (as I
+would expect to see in collagen-based leather surfaces) dissipate
+charging thus making imaging easier.
 
 
 [Back to Index](../README.html)
