@@ -3,13 +3,18 @@ title: "iOS Tips"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{iOS Tips}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 [Back to Index](../README.html)
 
-## Turn off the Facebook auto-play video feature?
+# Turn off the Facebook auto-play video feature?
 
 From [moneysavingexpert.com](http://www.moneysavingexpert.com/news/protect/2014/09/facebook-app-user-beware-big-bills-as-videos-automatically-play)
 

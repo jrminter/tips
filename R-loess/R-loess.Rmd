@@ -3,8 +3,13 @@ title: "R loess"
 author: "Earl F. Glynn"
 date: "2005-06-24"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{R loess}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 [Back to Index](../README.html)
@@ -12,7 +17,7 @@ output:
 This document was preserved from [here](http://research.stowers-institute.org/efg/R/Statistics/loess.htm)
 with minor edits by J. R. minter to be compatible with R-markdown.
 
-## Purpose
+# Purpose
 
 This TechNote shows examples of loess (local polynomial regression fitting) smoothing for various "span" values. The online R documentation [?loess](http://www.maths.lth.se/help/R/.R/library/modreg/html/loess.html) says the default span value is 0.75, but doesn't give much guidance, nor visual examples, of how the span value affects smoothing.
 
@@ -20,7 +25,7 @@ In addition to simply smoothing a curve, the R loess function can be used to imp
 
 In addition to simply smoothing a curve, the R loess function can be used to impute missing data points. An example of data imputation with loess is shown.
 
-## Background
+# Background
 
 NIST Engineering Statistics Handbook:  [Loess (aka Lowess)](http://www.itl.nist.gov/div898/handbook/pmd/section1/pmd144.htm)
 
@@ -28,12 +33,12 @@ Mathworks: [Lowess and Loess: Local Regression Smoothing](http://www.mathworks.c
 
 SAS: [Fitting Curves](http://www.math.wpi.edu/saspdf/insight/chap13.pdf)
 
-## Software Requirements
+# Software Requirements
 
 [R](http://www.r-project.org/) 2.0.1 or later
 
 
-## Step-by-Step Procedure
+# Step-by-Step Procedure
 
 Let's take a sine curve, add some "noise" to it, and then see how the loess "span" parameter affects the look of the smoothed curve.
 
@@ -234,7 +239,7 @@ legend (0,-0.8,
         lty=SOLID<-1, col=1:length(spanlist), bty="n")
 ```
 
-## Discussion/Conclusion
+# Discussion/Conclusion
 
 Span values as small as 0.10 do not provide much smoothing and can result in a "jerky" curve. Span values as large as 2.0 provide perhaps too much smoothing, at least in the cases shown above. Overall, the default value of 0.75 worked fairly well in "finding" the sine curve.
 

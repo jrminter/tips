@@ -3,8 +3,13 @@ title: "Git Tips"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{Git Tips}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 [Back to Index](../README.html)
@@ -15,7 +20,7 @@ compiled from several web sources.
 
 See youtube [Git Foundation Playlist](https://www.youtube.com/playlist?list=PLg7s6cbtAD15G8lNyoaYDuKZSKyJrgwB-)
 
-## Recent changes
+# Recent changes
 
 Now use
 
@@ -26,7 +31,7 @@ git add --all :/
 To add from all directories.
 
 
-## Initial configuration
+# Initial configuration
 
 Here are some useful initial variables to set up for git
 
@@ -48,13 +53,13 @@ git config --global alias.st status
 git config --global alias.lol "log --oneline --graph --all --decorate"
 ```
 
-### See what git ignores
+## See what git ignores
 
 ```
 git ls-files --others --ignored --exclude-standard
 ```
 
-### Note this procedure after changing line endings in a repo
+## Note this procedure after changing line endings in a repo
 
 1. Save your current files in Git, so that none of your work is lost.
 
@@ -87,13 +92,13 @@ It is perfectly safe to see a lot of messages here that read warning: CRLF will 
 git commit -m "Normalize all the line endings"
 ```
 
-## Some helps on commit messages
+# Some helps on commit messages
 
 [Chris Beams](http://chris.beams.io/posts/git-commit/#seven-rules)
 
 [Brigade Engineering](https://medium.com/brigade-engineering/the-secrets-to-great-commit-messages-106fc0a92a25)
 
-## see what changed
+# see what changed
 
 My new favorite command...
 
@@ -101,7 +106,7 @@ My new favorite command...
 git whatchanged
 ```
 
-### Synching a fork
+# Synching a fork
 
 From [GitHub Help](https://help.github.com/articles/syncing-a-fork/)
 
@@ -111,12 +116,12 @@ From [GitHub Help](https://help.github.com/articles/syncing-a-fork/)
 4. `git push`
 5. `git pull`
 
-## Branches
+# Branches
 
 Work should be done on a branch to keep `master` clean. Think of
 `master` as a production environment. 
 
-### Merge a branch with master
+## Merge a branch with master
 
 ```
 git checkout master
@@ -157,7 +162,7 @@ git merge --squash target-branch
 merges all changes and generates a single new staged commit for
 you to commit with a single message.
 
-### Delete a branch
+## Delete a branch
 
 1. A fully-merged branch
 
@@ -173,7 +178,7 @@ git checkout master
 git branch -D my-merged branch
 ```
 
-### Check out and track a remote branch
+## Check out and track a remote branch
 
 From [stackoverflow](http://stackoverflow.com/questions/379081/track-all-remote-git-branches-as-local-branches/6300386#6300386) answer to inital question
 
@@ -181,7 +186,7 @@ From [stackoverflow](http://stackoverflow.com/questions/379081/track-all-remote-
 git checkout --track origin/branchname
 ```
 
-### get rid of obsolete, merged branches
+## get rid of obsolete, merged branches
 
 ```
 git branch --merged | xargs git branch -d
@@ -193,7 +198,7 @@ git branch --merged | xargs git branch -d
 git push origin :the_remote_branch
 ```
 
-### see commits with abbreviated sha
+## see commits with abbreviated sha
 
 Hadley Wickham noted:
 
@@ -205,7 +210,7 @@ Here is how we can see them...
 git log --oneline --decorate --tags
 ```
 
-### local cherry picking
+## local cherry picking
 ```
 git checkout <OTHER_BRANCH> -- path/to/file
 ```
@@ -239,7 +244,7 @@ Here is github's official document on [Syncing a fork][1]:
 
 > There are two steps required to sync your repository with the upstream: first you must fetch from the remote, then you must merge the desired branch into your local branch.
 
-#### Fetching
+## Fetching
 
 > Fetching from the remote repository will bring in its branches and their respective commits. These are stored in your local repository under special branches.
 
@@ -261,7 +266,7 @@ Here is github's official document on [Syncing a fork][1]:
       remotes/origin/master   a422352 My local commit
       remotes/upstream/master 5fdff0f Some upstream commit
 
-#### Merging
+## Merging
 
 > Now that we have fetched the upstream repository, we want to merge its changes into our local branch. This will bring that branch into sync with the upstream, without losing our local changes.
 
@@ -323,7 +328,7 @@ From [Getting Started](http://git-scm.com/book/en/Getting-Started-First-Time-Git
 On Windows systems, Git looks for the ``.gitconfig`` file in the ``$HOME`` directory (``%USERPROFILE%`` in the Windows environment), which is usually  ``C:\Documents and Settings\$USER`` or ``C:\Users\$USER`` for most people, depending on version (``$USER`` is ``%USERNAME%`` in the Windows environment). It also still looks for ``/etc/gitconfig``, although it’s relative to the MSys root, which is wherever you decide to install Git on your Windows system when you run the installer.
 
 
-## removing unwanted cached files
+# removing unwanted cached files
 
 From[Source.kohlerville.com](http://source.kohlerville.com/2009/02/untrack-files-in-git/)
 
@@ -346,7 +351,7 @@ git rm --cached man/*.Rd
 
 ```
 
-## Git extensions for VS
+# Git extensions for VS
 [source forge](http://sourceforge.net/projects/gitextensions/)
 
 ## Oops control - recovering a deleted file.

@@ -3,27 +3,32 @@ title: "Image-J Tips"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{Image-J Tips}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 [Back to Index](../README.html)
 
 I have collected these tips both from experience and from a very helpful user community.
 
-Check out the [Action Bar](http://imagejdocu.tudor.lu/doku.php?id=plugin:utilities:action_bar:start) plug-in...
 
-## Mailing Lists
 
-### ImageJ-devel
+# Mailing Lists
+
+## ImageJ-devel
 
 Send a message to ``imagej-devel@imagej.net``
 
-### ImageJ
+## ImageJ
 
 send message to ``imagej@list.nih.gov``
 
-## Useful keyboard shortcuts
+# Useful keyboard shortcuts
 
 `[` - Start the script editor. 
 
@@ -41,7 +46,7 @@ send message to ``imagej@list.nih.gov``
 
 See the full list [here](http://rsb.info.nih.gov/ij/docs/shortcuts.html)
 
-## Stitching images using MosaicJ
+# Stitching images using MosaicJ
 
 The ``MosaicJ``plug-in for Fiji/ImageJ is a useful free alternative to the ``Multiple Image Alignment`` (MIA) module of analySIS Five. It does not have the nice initial rough alignment step using cross correlation, but gets the job done.
 
@@ -54,8 +59,37 @@ Here is a reasonable workflow.
 5. **Fine placement:** use the mouse to better align the tiles. The ``Scale > Magnifiy`` menu item will zoom. Note that ``Ctrl +`` (using the plus on the numeric keypad) shortcut zooms; ``Ctrl -`` shrinks. Do your best to move the images so the features overlap.
 6. **Create the montage:** Use ``File > Create Mosaic`` to generate the montage image. Save it as a tif in the parent folder of your ``prep`` folder. You can then crop, correct aspect ratio, adjust the LUT as needed and burn a scale bar.
 
+# Stack Alignment using the TemplateMatching Plug-in
 
-## Annotating images
+From
+[Qingzong (Zong) Tseng](https://sites.google.com/site/qingzongtseng/template-matching-ij-plugin/tuto2)
+
+Download the plug-in from [here](https://sites.google.com/site/qingzongtseng/template-matching-ij-plugin#downloads).
+
+1. Open the stack called "stack to align.tif" (download it [here](https://sites.google.com/site/fileqzt/file/Template_Matching_sample.zip?attredirects=0) ). You can see that it composed of several images of similar patterns but not well aligned.
+
+2. Run ``Plugins > Template Matching > Align`` slices in stack...
+
+<img src="./figs/templateMatchStep2.jpg" width="650px" />
+
+3. Click ``OK``, then a dialog will appear to ask you to select a square ROI region as the landmark for aligning
+
+<img src="./figs/templateMatchStep3.jpg" width="650px" />
+
+4. After making a square ROI on the image stack, click on ``OK``.
+
+5. All the slices in the stack will be aligned, and the displacements for each slice are printed out in both log window and results table. 
+
+<figure>
+  <img src="./figs/templateMatchStep5a.gif"
+  alt="Drawing" style="width: 320px;"/>
+  <img src="./figs/templateMatchStep5b.gif"
+  alt="Drawing" style="width: 320px;"/>
+<figcaption>**Left:** Before alignment. **Right:** After alignment.</figcaption>
+</figure>
+
+
+# Annotating images
 From [wiki.imagej.net](http://wiki.imagej.net/Annotating_Images#Issues_with_adding_text)
 
 Images can be annotated using the annotation tool. Double-click to get a configuration image. Adding text to a stack is a slightly different process. You can draw a text box by following the same steps, but on a stack, keyboard shortcut ``Ctrl+B`` will overlay the text on the current slice, while shortcut ``Ctrl+D`` will draw the text on every slice of the stack. These get written into an overlay.
@@ -65,7 +99,7 @@ The ``Cookbook > Annotating images > Add Scale bar`` choice from the menu opens 
 There is a useful tutorial attributed to [Chris Ambrose](http://www.allandebono.org/show/protocols/imagejoverlays/)
 
 
-## 16bit images
+# 16bit images
 
 [Michael Schmid](http://imagej.1557.x6.nabble.com/Use-of-LUTS-give-different-results-td5010726.html) provides some interesting tips regarding LUTs for 16 bit images where there is a limited range of information. He notes:
 
@@ -85,8 +119,11 @@ ip.setMinAndMax(15000, 24000);
  ip.setColorModel(ip.getDefaultColorModel()) 
 ```
 
+# The Action Bar plug-in
 
-## Sources of plugins
+Check out the [Action Bar](http://imagejdocu.tudor.lu/doku.php?id=plugin:utilities:action_bar:start) plug-in...
+
+# Sources of plugins
 
 [Stowers Research Institute](http://research.stowers.org/imagejplugins/)
 
@@ -100,12 +137,12 @@ Java seems most efficient... Apparently written in 2005, [Hartenstein](https://w
 4. [Add_Noise.py](https://www.mcdb.ucla.edu/Research/Hartenstein/software/imagej/Add_Noise.py) 44 sec (macro-like version, but using python's random.randint() function)
 
 All this plugin/macro/script does is to duplicate the current image, get one pixel at a time and add random noise to it.
-The ImageJ builtin macro language is certainly more specific to ImageJ and thus goes through less clutter than the more generalistic jython interpreter. Still a 4x in execution time is quite astonishing. Luckily enough the biggest different is made when using the java.util.Random class instead of python'rs 'random' module.
-Note that the complexity of the 3 files is quite similar, both in terms of length and in assumptions about the system. Thus the coder needs to learn several conventions before writing any of the 3 versions of this program. Stay with java plugins if speed matters to your program!
+The ImageJ builtin macro language is certainly more specific to ImageJ and thus goes through less clutter than the more general jython interpreter. Still a 4x in execution time is quite astonishing. Luckily enough the biggest different is made when using the java.util.Random class instead of python's 'random' module.
+Note that the complexity of the 3 files is quite similar, both in terms of length and in assumptions about the system. Thus the coder needs to learn several conventions before writing any of the 3 versions of this program. Stay with Java plugins if speed matters to your program!
 Jython though really pays off when properly optimized, and it's particularly useful to make GUIs in no time.
 
 
-## Reproducible Jython Scripting
+# Reproducible Jython Scripting
 
 For a couple of years I have been trying to follow the ``DRY`` process (Don't Repeat Yourself) for more reproducible Jython scripting with DTSA. Recently I have been migrating my ImageJ scripts to Jython to use with Fiji. I just learned how import user functions...
 
@@ -189,15 +226,15 @@ def applyHueLUT(imp, hueDeg, gamma=1.0):
   return ret
 ```
 
-## Extended depth of field
+# Extended depth of field
 
 I wanted a substitute for analySIS Five's ``Extended Focus Imaging``. ImageJ/Fiji has some helpful plugins. To date I have not been able to script them...
 
-#### Test Images
+## Test Images
 
 I have a test image stacck (pre-aligned) in ``$GIT_HOME/OSImageAnalysis/images/extended-depth-of-field/Mattheddleite/Mattheddleite-jm-cr-align-stack.tif``.
 
-#### Procedure
+## Procedure
 
 1. Load all the TIF images. Crop them to the same side if need be.
 2. Convert the loaded images to a stack (``Image > Stacks > Images to Stack``).
@@ -212,13 +249,13 @@ I have a test image stacck (pre-aligned) in ``$GIT_HOME/OSImageAnalysis/images/e
 
 
 
-## Alchemy...
+# Alchemy...
 
-### Inverting an image
+## Inverting an image
 
 I am always hunting for the invert command. it is **not** in the ``Process > Binary`` menu but rather in the ``Edit > Invert`` menu. The shortcut is ``Ctrl-Shift-I``
 
-### Using a mu in a Jython script
+## Using a mu in a Jython script
 
 [Stackexchange](http://tex.stackexchange.com/questions/33965/siunitx-%C2%B5-doesnt-work) helped!!!
 
@@ -281,7 +318,7 @@ On OS X:
   '/Library/Java/JavaVirtualMachines/jdk1.7.0_65.jdk/Contents/Home'
 ```
 
-### Constructing line perpendicular to other line (saved in ROI manager)
+## Constructing line perpendicular to other line (saved in ROI manager)
 
 From Wayne Rasband on IJ mailing list
 
@@ -298,18 +335,18 @@ count = roiManager("count");
 ```
 
 
-## Edge-preserving averaging (smoothing) algorithms
+# Edge-preserving averaging (smoothing) algorithms
 
-### Thresholded Blur
+## Thresholded Blur
 
 [ImageJ Wiki](http://imagejdocu.tudor.lu/doku.php?id=plugin:filter:thresholded_blur:start)
 
-## Plug-ins that don't return an image reference
+# Plug-ins that don't return an image reference
 
 Wayne Rasband noted (2013-05-22) that some reader plugins,
 including Bio-Formats, open and display the image without
 returning a reference. He offered the following
-work-around in jython scripts:
+work-around in Jython scripts:
 
 ```
 imp = IJ.openImage(path)
@@ -317,7 +354,7 @@ imp = WindowManager.getCurrentImage()
 
 ```
 
-## Using overlays on image channels
+# Using overlays on image channels
 
 Wayne Rasband provided (2013-05-24) this useful snippet
 
@@ -331,7 +368,7 @@ overlay.add(rect1);
 
 ```
 
-### Hints on video
+# Hints on video
 
 Again [Michael Schmid](http://imagej.1557.x6.nabble.com/Compress-AVI-for-ImageJ-td5010753.html) provides some helpful hints
 

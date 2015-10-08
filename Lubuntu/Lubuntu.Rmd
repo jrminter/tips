@@ -3,8 +3,13 @@ title: "John Minter's Lubuntu Tips"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{Lubuntu Tips}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 [Back to Index](../README.html)
@@ -13,7 +18,7 @@ Lubuntu is a light-weight Ubuntu distribution based upon [LDXE](http://wiki.lxde
 
 The Lubuntu Community documentation is [here](https://help.ubuntu.com/community/Lubuntu/Documentation). Note the [Editing the Menu](https://help.ubuntu.com/community/Lubuntu/Documentation/EditingTheMenu) Section.
 
-### Update from the command line
+# Update from the command line
 
 ```
 # update database and upgrade current packages
@@ -23,7 +28,7 @@ sudo apt-get dist-upgrade
 ```
 
 
-### Install a .deb file
+# Install a .deb file
 
 From [askubuntu](http://
 askubuntu.com/questions/40779/how-do-i-install-a-deb-file-via-the-command-line)
@@ -39,7 +44,7 @@ Remove
 ```
 sudo dpkg -r PACKAGE_NAME
 ```
-### Creating a quick launcher
+# Creating a quick launcher
 
 From [askubuntu.com](http://askubuntu.com/questions/466395/how-can-i-create-a-quick-launcher-in-lubuntu). I used this to set one up for DTSA-II Halley.
 
@@ -49,7 +54,7 @@ Run in terminal
 lxshortcut -o ~/Desktop/myLauncher
 ```
 
-### Configuring proxy servers
+# Configuring proxy servers
 
 from [askubuntu]( http://askubuntu.com/questions/175172/how-do-i-configure-proxies-in-ubuntu-server-or-minimal-cli-ubuntu)
 
@@ -80,7 +85,7 @@ Acquire::https::proxy "https://proxy1.kodak.com:81/";
  
 Finally, logout and reboot to make sure the changes take effect.
 
-### For R
+# For R
 
 See [Cran's Ubuntu page](http://cran.rstudio.com/bin/linux/ubuntu/)
 
@@ -99,9 +104,9 @@ sudo apt-get install r-base
 sudo apt-get install r-base-dev
 ```
 
-### Check a disk for bad blocks
+# Check a disk for bad blocks
 
-#### Smartmontools
+## Smartmontools
 
 [Smartmontools](https://help.ubuntu.com/community/Smartmontools)
 
@@ -114,7 +119,7 @@ sudo smartctl -t long /dev/sda
 
 ```
 
-#### badblocks
+## badblocks
 
 From [tech Hacks](http://tech.chandrahasa.com/2013/06/09/how-to-check-your-hard-disk-for-bad-blocks-in-ubuntu/)
 
@@ -158,9 +163,9 @@ After that, we need to feed the file into the FSCK command to mark these bad sec
 sudo fsck -l bad-blocks /dev/sdc
 ```
 
-### Other
+# Other
 
-#### Making a bootable Lubuntu USB from a mac
+## Making a bootable Lubuntu USB from a mac
 
 From [computers.tutsplus.com](http://computers.tutsplus.com/tutorials/how-to-create-a-bootable-ubuntu-usb-drive-for-mac-in-os-x--cms-21253)
 
@@ -216,7 +221,7 @@ Regarding the dialogue box, click Ignore to get rid of it. It is now safe to rem
 
 8. Hold down the ``Alt`` key during reboot to select the USB...
 
-#### More tips
+# More tips
 
 [Ubuntu cleanup](http://www.stchman.com/cleanup.html)
  

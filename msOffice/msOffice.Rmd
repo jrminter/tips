@@ -1,10 +1,14 @@
 ---
 title: "MS Office Tips"
 author: "J. R. Minter"
-date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{Office Tips}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 [Back to Index](../README.html)
@@ -12,7 +16,7 @@ output:
 These are John Minter's tips for MS Office.
 They were compiled from several web sources.
 
-## Skype for Business
+# Skype for Business
 
 How do I use Skype for Business? 
   
@@ -31,7 +35,7 @@ Click [here](https://youtu.be/i9ubU-ndMZE?list=PLH5ElbTc1hWQirKampULE7vlfTbhSqss
 Click [here](https://youtu.be/XNuIQks8kuk?list=PLH5ElbTc1hWQirKampULE7vlfTbhSqssq) to see how to schedule a Skype for Business meeting
 
 
-## Outlook
+# Outlook
 
 I have had problems with links with spaces. The key is to surround the
 link with what
@@ -42,9 +46,9 @@ calls `chevrons`. See the example below
 <\\ekc1\fs1\My Project\@Weekly Meeting\+2015 Characterization Meeting Agenda>
 ```
 
-## PowerPoint
+# PowerPoint
 
-### Footers don't show up
+# Footers don't show up
 
 From [Holly Green](http://blogs.mccombs.utexas.edu/the-most/2012/06/04/when-the-slide-number-doesnt-show-in-powerpoint/)
 
@@ -55,7 +59,7 @@ If you're working in PowerPoint, and you want the slide number to display on the
 3. On the Slide tab, check the Slide Number box.
 4. Click Apply to All to make the slide number show on all slides, or Apply to make the slide number show on just the current slide.
 
-### Template location
+# Template location
 
 On Win7 ``C:\Users\jrminter\AppData\Roaming\Microsoft\Templates``
 

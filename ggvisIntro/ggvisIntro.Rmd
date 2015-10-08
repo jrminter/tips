@@ -3,8 +3,13 @@ title: "Making a Histogram with ggvis in R"
 author: "The DataCamp Blog"
 date: "2015-03-14"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{ggvis Intro}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 [Back to Index](../README.html)
@@ -13,7 +18,7 @@ This is from [The DataCamp Blog](http://blog.datacamp.com/make-histogram-ggvis-r
 
 The two previous posts described how you can make histograms with basic R and the ggplot2 package. This third and last part of our histograms tutorial will look at how to make a histogram with ggvis. This package is similar to ggplot2, as it is also based on “the grammar of graphics”. However, ggvis has slightly different expressions and extends ggplot2 by adding new features to make your plots interactive. Want to learn more? [Discover the DataCamp tutorials](https://www.datacamp.com/).
 
-## Step One. Get The ggvis Package into RStudio
+# Step One. Get The ggvis Package into RStudio
 
 To start off plotting histograms in ggvis, you first need to load the ggvis package:
 
@@ -23,7 +28,7 @@ library(ggvis)
 
 If ggvis is not yet installed on your system, you’ll have to do this first. This can easily be done through ``install.packages("ggvis")``
 
-## Step Two. Load the Data
+# Step Two. Load the Data
 
 It might seem silly, but do not forget about your data! You can use a data set that is built into R already, or get your own data set. In this example, we will continue with the data from the previous blogpost on histograms: the chol data set.
 
@@ -33,7 +38,7 @@ If you’re new to this tutorial, you can load in the data set through the ``url
 chol <- read.table(url("http://s3.amazonaws.com/assets.datacamp.com/blog_assets/chol.txt"), header = TRUE)
 ```
 
-## Step Three. How to make a histogram with ggvis.
+# Step Three. How to make a histogram with ggvis.
 
 To make a basic histogram, you can use the following line of code:
 
@@ -50,7 +55,7 @@ option1 <- sum(abs(-3:3))
 option2 <- -3:3 %>% abs() %>% sum()
 ```
 
-## Step Four. Prettify Your Histograms
+# Step Four. Prettify Your Histograms
 
 Similarly to the ``hist()`` function and functions of ``ggplot2()``, you can easily adapt the visualization of your histogram by extending the original code. In this case, the original line of code could be extended as follows:
 
@@ -66,7 +71,7 @@ chol %>%
 
 Just like with the ``hist()`` function and ``ggplot2``, you can break up this rather large chunk of code to see what each small piece contributes to the visualization during the plotting of the histogram:
 
-### Bins
+## Bins
 
 You can easily adjust the width of the bins by changing the width argument inside the layer_histograms() function:
 
@@ -131,7 +136,7 @@ Note the use of ``:=``, which sets a property to a specific color (or size, widt
 
 Note you can find more information about this in DataCamp’s ggvis course.
 
-## Step Five. Adding Basic Interactivity To Your Histograms
+# Step Five. Adding Basic Interactivity To Your Histograms
 
 There are many advantages of working with ggvis, but one that definitely stands out is the fact that you can actually make your histograms interactive! This allows readers of your reports to change the parameters of your plots and see the results of these changes instantaneously. ggvis makes use of shiny for this. Let’s go into the basics of the interactivity that you can add to your histograms.
 
@@ -170,13 +175,13 @@ Note that the shiny package is needed for these interactive visualizations. Norm
 
 Remember to keep in mind what you want to achieve with your histogram and how you want to achieve this! Sometimes, a static representation might be better than a dynamic one.
 
-## Step Six. Using ggvis For So Much More
+# Step Six. Using ggvis For So Much More
 
 This section was just the tip of the iceberg! Believe us when we say that you can do so much more with this package.
 
 Remember If you would like to have a more detailed and broader understanding of ``ggvis``, you might be interested in the DataCamp R training path, which includes a ggvis course taught by Garrett Grolemund, author of Hands on Programming with R, as well as Data Science with R, an upcoming book from O’Reilly Media.
 
-## Conclusion
+# Conclusion
 
 There are a lot of options to make histograms in R. The option you should choose is really rather a trade-off between what you want to accomplish and how fast you want to accomplish this. But of course, this trade-off is subject to your own programming experience with R and other languages: either option would go fast for any well-trained programmer.
 

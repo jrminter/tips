@@ -3,8 +3,13 @@ title: "Publication Quality Graphics in R"
 author: "Tim Salabim"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{Publication Quality Graphics in R}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 ```{r,echo=FALSE}
@@ -58,7 +63,7 @@ _Before we start, I would like to highlight a few useful web resources for findi
 * [R-Bloggers](http://www.r-bloggers.com) is a nice site that provides access to all sorts of blog sites dedicated to R from all around the world (in fact, a lot of the material of this workshop is derived from posts found there).
 * last, but not least, I am hopeful that [this site](http://www.teachpress.environmentalinformatics-marburg.de) will continue to grow and hence provide more and more useful tutorials closely related to issued in environmental sciences. So keep checking this site...
 
-## 1. Data handling
+# Data handling
 
 One thing that most people fail to acknowledge is that visualizing data in R (or any other programming language for that matter) usually involves a little more effort than simply calling some plot function to create a meaningful graph. Data visualization is in essence an abstract representation of raw data. Most plotting routines available in R, however, are not designed to provide any useful data abstraction. This means that it is up to us to prepare our data to a level of abstraction that is feasible for what we want to show with our visualization.   
 Therefore, before we start to produce plots, we will need to spend some time and effort get familiar with some tools to manipulate our raw data sets.
@@ -67,7 +72,7 @@ In particular, we will learn how to **subset**, **aggregate**, **sort** & **merg
 
 **Right, enough of that introductory talk, let's start getting our hands dirty...**
 
-### 1.1. sub-setting our data
+## Sub-setting our data
 
 **As a final introductory note I would like to draw your attention to the fact that for the sake of reproducibility, this workshop will make use of the diamonds data set (which comes with ggplot2) in all the provided examples**
 
@@ -91,13 +96,13 @@ fn = local({
 First things first, as always in R, we load the necessary packages first (and this should always happen at the beginning of a script, not somewhere in the middle or towards the end!)
 
 ```{r global settings, tidy = FALSE, message = FALSE, results = 'hide'}
-### here's a rather handy way of loading all packages that you need
-### for your code to work in one go
+## here's a rather handy way of loading all packages that you need
+## for your code to work in one go
 libs <- c('ggplot2', 'latticeExtra', 'gridExtra', 'MASS', 
           'colorspace', 'plyr', 'Hmisc', 'scales')
 lapply(libs, require, character.only = T)
 
-### load the diamonds data set (comes with ggplot2)
+## load the diamonds data set (comes with ggplot2)
 data(diamonds)
 ```
 
@@ -174,20 +179,20 @@ str(diamonds.premium.or.cheap)
 
 There is, in principle, no limitation to the combination of these so-called Boolean operators (and, or, equal to, not equal to, greater than, less than). I guess you get the idea...
 
-> ### -----------------------~~ Exercise I ~~------------------------------
+> ## -----------------------~~ Exercise I ~~------------------------------
 create one subset of the diamonds dataframe which contains    
 only diamonds of quality 'Ideal' and a second subset that     
 contains the rest excluding all diamonds of color 'J'
-> ### ----------------------------~~ ° ~~--------------------------------------
+> ## ----------------------------~~ ° ~~--------------------------------------
 
-### 1.2. aggregating our data
+## Aggregating our data
 
 Suppose we wanted to calculate the average price of the diamonds for each level of ```cut```, i.e. the average price for all diamonds of "Ideal" quality, for all diamonds of "Premium" quality and so on, this would be done like this
 
 ```{r aggregate price cut, tidy = FALSE}
 ave.price.cut <- aggregate(diamonds$price, by = list(diamonds$cut), 
                            FUN = mean)
-### by = ... needs a list, even if there is only one entry
+# by = ... needs a list, even if there is only one entry
 ```
 
 and will look like this
@@ -217,12 +222,12 @@ str(ave.n.cut.color)
 
 So, I hope you see how useful ```aggregate()``` is for calculating summary statistics of your data.
 
-> ### -----------------------~~ Exercise II ~~-----------------------------
+> # -----------------------~~ Exercise II ~~-----------------------------
 aggregate the first dataframe from exercise I as mean carat    
 per clarity and the second one as median carat per clarity
-> ### -----------------------------~~ ° ~~------------------------------------
+> # -----------------------------~~ ° ~~------------------------------------
 
-### 1.3. sorting our data
+## Sorting our data
 
 Sorting our data according to one (or more) of the variables in our data can also be very handy.   
 Sorting of a vector can be achieved using ```sort()```
@@ -248,11 +253,11 @@ ave.n.cut.color <- ave.n.cut.color[order(ave.n.cut.color$cut,
 ave.n.cut.color
 ```
 
-> ### -------------------------~~ Exercise III ~~--------------------------
+> ## -------------------------~~ Exercise III ~~--------------------------
 sort the first data frame from exercise 2 according to carat
-> ### -------------------------------~~ ° ~~-----------------------------------
+> ## -------------------------------~~ ° ~~-----------------------------------
 
-### 1.4. merging our data
+## Merging our data
 
 Often enough we end up with multiple data sets on our hard drive that contain useful data for the same analysis. In this case we might want to amalgamate our data sets so that we have all the data in one set.   
 R provides a function called ```merge()``` that does just that
@@ -283,15 +288,15 @@ ave.n.cut.color.price <- Reduce(function(...) merge(..., all=T),
 ave.n.cut.color.price
 ```
 
-> ### ------------------------~~ Exercise IV ~~----------------------------
+> ## ------------------------~~ Exercise IV ~~----------------------------
 merge the two data frames from exercise II
-> ### ------------------------------~~ ° ~~------------------------------------
+> ## ------------------------------~~ ° ~~------------------------------------
 
 Ok, so now we have a few tools at hand to manipulate our data in a way that we should be able to produce some meaningful graphs which tell the story that we want to be heard, or better, seen...
 
 So, let's start plotting stuff
 
-## 2. Data visualization
+# Data visualization
 
 In the next few sections, we will produce several varieties of *scatter plots*, *box & whisker plots*, *plots with error bars*, *histograms* and *density plots*. All of these will first be produced using the ```lattice``` package and then an attempt is made to recreate these in (pretty much) the exact same way in ```ggplot2```. First, the default versions are created and then we will see how they can be modified in order to produce plots that satisfy the requirements of most academic journals.    
 
@@ -299,13 +304,13 @@ We will see that some things are easier to achieve using ```lattice```, some oth
 
 Ok, let's start with the classic statistical plot of variable x vs. variable y - the scatter plot...
 
-### 2.1. Scatter plots
+## Scatter plots
 
 Even with all the enhancements & progress made in the field of computer based graphics in recent years/decades, the best (as most intuitive) way to show the relationship between two continuous variables remains the scatter plot. Just like for the smoothest ride, the best shape of the wheel is still round.
 
 If, from our original diamonds data set we wanted to see the relation between price and carat of the diamonds (or more precisely how price is influenced by carat), we would use a scatter plot.
 
-#### 2.1.1. The _lattice_ way
+### The _lattice_ way
 
 ```{r scatter lattice, tidy = FALSE, fig.width = 10, fig.height = 10, fig.cap = fn("a basic scatter plot produced with lattice"), fig.align = 'center'}
 scatter.lattice <- xyplot(price ~ carat, data = diamonds)
@@ -451,7 +456,7 @@ clrs.hcl <- function(n) {
       fixup = TRUE)
   }
 
-### function to plot a colour palette
+## function to plot a colour palette
 pal <- function(col, border = "transparent", ...)
 {
  n <- length(col)
@@ -568,7 +573,7 @@ print(l.sc.smooth)
 
 This representation of our data basically adds another dimension to our plot which enables us to see that no matter what the quality of the diamond, most of the diamonds are actually of low carat and low price. Whether this is good or bad news, depends on your interpretation (and the size of your wallet, of course).
 
-#### 2.1.2. The _ggplot2_ way
+### The _ggplot2_ way
 
 Now let's try to recreate what we have achieved with ```lattice``` using ```ggplot2```.
 
@@ -640,13 +645,13 @@ g.sc <- scatter.ggplot +
 print(g.sc)
 ```
 
-> ### ------------------------~~ Exercise V ~~-----------------------------
+> ## ------------------------~~ Exercise V ~~-----------------------------
 create a lattice & a ggplot2 scatterplot of mean (y) vs. median (x)     
 carat using the merged data set from exercise IV both with      
 standard confidence intervals
-> ### ------------------------------~~ ° ~~------------------------------------
+> ## ------------------------------~~ ° ~~------------------------------------
 
-### 2.2. Box an whisker plots
+2.2. Box an whisker plots
 
 I honestly don't have a lot to say about box and whisker plots. They are probably the most useful plots for showing the nature/distribution of your data and allow for some easy comparisons between different levels of a factor for example.
 
@@ -654,7 +659,7 @@ see http://upload.wikimedia.org/wikipedia/commons/1/1a/Boxplot_vs_PDF.svg for a 
 
 So without further ado, here's a basic lattice box and whisker plot.
 
-#### 2.2.1. The _lattice_ way
+### The _lattice_ way
 
 ```{r latt bw1, tidy = FALSE, fig.cap = fn("a basic box-whisker-plot produced with lattice"), fig.align = 'center'}
 bw.lattice <- bwplot(price ~ color, data = diamonds)
@@ -697,7 +702,7 @@ print(l.bw)
 
 In addition to the rather obvious provision of a color palette to to fill the boxes, in this final box & whisker plot we have also told ```lattice``` to adjust the widths of the boxes so that they reflect the relative sizes of the data samples for each of the factors (colors). This is a rather handy way of providing insight into the data distribution along the factor of the x-axis. We can show this without having to provide any additional plot to highlight that some of the factor levels (i.e. colors) are much less represented than others ('J' compared to 'G', for example, especially for the 'Ideal' quality class). 
 
-#### 2.2.2. The _ggplot2_ way
+### The _ggplot2_ way
 
 As much as I love ```lattice```, I always end up drawing box and whisker plots with ```ggplot2``` because they look so much nicer and there's no need to modify so many graphical parameter settings in order to get an acceptable result.
 
@@ -753,11 +758,11 @@ The result is very very similar to what we have achieved earlier with ```lattice
 
 Boxplots are, as mentioned above, a brilliant way to visualize data distribution(s). Their strength lies in the comparability of different classes as they are plotted next to each other using a common scale. Another, more classical - as parametric - way are histograms (and densityplots).
 
-### 2.2. Histograms & densityplots
+## Histograms & densityplots
 
 The classic way to visualize the distribution any data are histograms. They are closely related to density plots, where the individual data points are not binned into certain classes but a continuous density function is calculated to show the distribution. Both approaches reflect a certain level of abstraction (binning vs. functional representation), therefore a general formulation of which of them is more accepted is hard. In any case, the both achieve exactly the same result, they will show us the distribution of our data.
 
-#### 2.2.1. The _lattice_ way
+### The _lattice_ way
 
 As is to be expected with ```lattice```, the default plotting routine does not really satisfy the (or maybe better my) aesthetic expectations.
 
@@ -818,7 +823,7 @@ You may have noticed that the lines of the densityplot are plotted in a light sh
 
 Another thing you may notice when looking at the above plot is that the x-axis labels are rotated by 45 degrees. This one I also leave up to you to figure out... ;-)
 
-#### 2.2.2. The _ggplot2_ way
+### The _ggplot2_ way
 
 Much like with the box and whisker plot, the default settings of ```ggplot2``` are quite a bit nicer for both histogram and densityplot.
 
@@ -878,9 +883,9 @@ print(g.den)
 
 Ok, another thing we might want to show is the value of a certain estimated value (like the mean of our sample) including error bars.
 
-### 2.3. Plotting error bars
+## Plotting error bars
 
-#### 2.3.1. The _lattice_ way
+### The _lattice_ way
 
 Honestly, ```lattice``` sucks at plotting error bars... Therefore, we will only explore one way of achieving this. In case you really want to explore this further, I refer you to Stackoverflow and other R related forums/lists, where you will find a solution, but I doubt that you will like it... Error bars are much easier plotted using ```ggplot2```.
 
@@ -906,7 +911,7 @@ l.err <- errbar.lattice
 print(l.err)
 ```
 
-#### 2.3.2. The _ggplot2_ way
+### The _ggplot2_ way
 
 As mentioned above, when plotting error bars ```ggplot2``` is much easier. Whether this is because of the general ongoing discussion about the usefulness of these plots I do not want to judge.
 
@@ -940,10 +945,10 @@ Just as before (with the box widths) though, applying this to each panel is a li
 ```{r gg facet err bar, tidy = FALSE, concordance = TRUE, fig.cap = fn("a ggplot2 panel bar plot with error bars and modified fill colours"), fig.align = 'center'}
 errbar.ggplot.facets <- ggplot(diamonds, aes(x = color, y = price))
 
-### function to calculate the standard error of the mean
+## function to calculate the standard error of the mean
 se <- function(x) sd(x)/sqrt(length(x))
 
-### function to be applied to each panel/facet
+## function to be applied to each panel/facet
 my.fun <- function(x) {
   data.frame(ymin = mean(x) - se(x), 
              ymax = mean(x) + se(x), 
@@ -963,7 +968,7 @@ print(g.err.f)
 
 Still, trust me on this, much much easier than to achieve the same result in ```lattice```.
 
-## 3. Manipulating plots with the grid package
+# 3. Manipulating plots with the grid package
 
 Ok, so now we have seen how to produce a variety of widely used plot types using both ```lattice``` and ```ggplot2```. I hope that, apart from the specifics, you also obtained a general idea of how these two packages work and how you may use the various things we've touched upon here in scenarios other than the ones provided here.
 
@@ -991,8 +996,8 @@ A viewport needs some basic specifications for it to be located somewhere in the
 `x`, `y` and `just` are a bit more mind-bending. As default, `x` and `y` are 0.5 and `just` is `c(centre, centre)`. This means that the new viewport will be positioned at `x = 0.5` and `y = 0.5`. As the default of `just` is `centre` this means that a new viewport will be created at the midpoint of the current viewport (0.5 & 0.5) and it will be centered on this point. It helps to think of the `just` specification in the same way that you provide your text justification in Word (left, right, center & justified). Let us try a first example which should highlight the way this works
 
 ```{r, include = FALSE}
-## this is needed to keep the graphical device open so that we can build 
-## our layered grid figure
+# this is needed to keep the graphical device open so that we can build 
+# our layered grid figure
 opts_knit$set(global.device = TRUE)
 ```
 
@@ -1074,7 +1079,7 @@ grid.rect(gp = gpar(fill = "grey", alpha = 0.5))
 ```
 
 ```{r, include = FALSE}
-## close the graphical device again
+# close the graphical device again
 opts_knit$set(global.device = FALSE)
 ```
 
@@ -1085,7 +1090,7 @@ I hope that you have understood 2 things now:
 
 Assuming that you have understood these two points, lets make use of the first one and use this incredibly flexible plotting framework for arranging multiple plots on one page.
 
-### 3.1. multiple plots on one page
+## Multiple plots on one page
 
 **In order to succeed plotting several of our previoulsly created plots on one page, there's two things of importance:**
 
@@ -1095,43 +1100,43 @@ Assuming that you have understood these two points, lets make use of the first o
 Let's try and plot the ```lattice``` and `ggplot2` versions of our box and whisker plots and scatter plots next to each other on one page by setting up a suitable viewport structure.
 
 ```{r grid multiple, tidy = FALSE, fig.cap = fn("using the grid package to place multiple plots on one page"), fig.align = 'center'}
-### clear plot area
+## clear plot area
 grid.newpage()
 
-### define first plotting region (viewport)
+## define first plotting region (viewport)
 vp1 <- viewport(x = 0, y = 0, 
                 height = 0.5, width = 0.5,
                 just = c("left", "bottom"),
                 name = "lower left")
 
-### enter vp1 
+## enter vp1 
 pushViewport(vp1)
 
-### show the plotting region (viewport extent)
+## show the plotting region (viewport extent)
 grid.rect(gp = gpar(fill = "red", alpha = 0.2))
 
-### plot a plot - needs to be printed (and newpage set to FALSE)!!!
+## plot a plot - needs to be printed (and newpage set to FALSE)!!!
 print(l.bw, newpage = FALSE)
 
-### leave vp1 - up one level (into root vieport)
+## leave vp1 - up one level (into root vieport)
 upViewport(1)
 
-### define second plot area
+## define second plot area
 vp2 <- viewport(x = 1, y = 0, 
                 height = 0.5, width = 0.5,
                 just = c("right", "bottom"),
                 name = "lower right")
 
-### enter vp2
+## enter vp2
 pushViewport(vp2)
 
-### show the plotting region (viewport extent)
+## show the plotting region (viewport extent)
 grid.rect(gp = gpar(fill =  "white", alpha = 0.2))
 
-### plot another plot
+## plot another plot
 print(g.bw, newpage = FALSE)
 
-### leave vp2
+## leave vp2
 upViewport(1)
 
 
@@ -1142,7 +1147,7 @@ vp3 <- viewport(x = 0, y = 1,
 
 pushViewport(vp3)
 
-### show the plotting region (viewport extent)
+## show the plotting region (viewport extent)
 grid.rect(gp = gpar(fill =  "green", alpha = 0.2))
 
 print(l.sc, newpage = FALSE)
@@ -1157,7 +1162,7 @@ vp4 <- viewport(x = 1, y = 1,
 
 pushViewport(vp4)
 
-### show the plotting region (viewport extent)
+## show the plotting region (viewport extent)
 grid.rect(gp = gpar(fill =  "black", alpha = 0.2))
 
 print(g.sc, newpage = FALSE)
@@ -1167,7 +1172,7 @@ upViewport(1)
 
 So there we have it. Creating and navigating between viewports enables us to build a graphical layout in whatever way we want. In my opinion this is way better than saving all the plots to the hard drive and then using some sort of graphics software such as Photoshop or Inkscape to arrange the plots onto one page. After all, sometimes we may have several of these multi-plot-pages that we want to produce and now we know how to do this automatically and we won't need any post-production steps.
 
-### 3.2. manipulating existing plots
+## Manipulating existing plots
 
 Another application of `grid` is to manipulate an existing plot object. You may have noted that our version of the 2D density scatter plot produced with `lattice` lacks a color key. This can be easily added using `grid`. As `lattice` is built upon `grid`, it produces a lot of viewports in the creation of the plots (like our scatter plot). We can, after they have been set up, navigate to each of these and edit them or delete them or add new stuff. Looking at the `ggplot2` version of the density scatter, we see that this has a color key which is placed to right of the main plot. Given that we have 5 panels, we actually have some 'white' space that we could use for the color key placement, thus making better use of the available space...
 
@@ -1228,7 +1233,7 @@ I hope it became clear just how useful `grid` can be and how it provides us with
 
 So far, we have put our efforts into plot creation. I think, by now, we have a few tools handy to achieve what we want, so let's see how we can save our graphics to our hard drive.
 
-## 4. Saving your visualizations
+# 4. Saving your visualizations
 
 Saving graphics in R is very straight forward. We simply need to call a suitable device. There are a number of different plotting devices available. Here, we will introduce 2 examples, `postscript` and `png`. `postscript` should be used for vector graphics (e.g. line plots, point plots, polygon plots etc.), whereas `png` is preferable for raster graphics (e.g. photos, our density scatter plot or anything pixel based).
 
@@ -1299,12 +1304,12 @@ upViewport(3)
 dev.off()
 ```
 
-> ### -----------------------~~ Exercise VI ~~-----------------------------
+> ## -----------------------~~ Exercise VI ~~-----------------------------
 using one of the data sets from exercise I save to your local drive     
 a plot showing the lattice and ggplot2 versions of a histogram of      
 price conditioned according to both cut and color utilising the       
 grid package to set up the plotting device
-> ### -------------------------------~~ ° ~~------------------------------------
+> ## -------------------------------~~ ° ~~------------------------------------
 
 Ok, so for the general part of this tutorial, we have come to an end. 
 

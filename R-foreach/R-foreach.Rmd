@@ -2,8 +2,13 @@
 title: "R foreach Tips"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{R foreach}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 ```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
@@ -62,7 +67,7 @@ max.eig(5, 1)
 Since the data are random, each function call yields a different 
 result.
 
-## Vectorised
+# Vectorised
 
 It would be interesting to look at the distribution of these results. 
 We can produce a multitude of such results using vectorised multiple 
@@ -80,7 +85,7 @@ took a couple of seconds on my middle-of-the-range laptop. Not a big
 wait. But it was only using one of the four cores on the machine, so 
 in principle it could have gone faster.
 
-## eigenvalue-histogram
+# eigenvalue-histogram
 
 We can make things more interesting by varying the dimensions of the 
 matrix.
@@ -101,7 +106,7 @@ sapply(1:5, function(n) {sapply(1:3, function(m) {max.eig(n, m)})})
 The results are presented in an intuitive matrix. Everything up to 
 this point is being done serially.
 
-## Enter foreach
+# Enter foreach
 
 At first sight, the foreach library provides a slightly different 
 interface for vectorisation. We’ll start off with simple repetition.
@@ -164,7 +169,7 @@ foreach(n = 1:5, m = 1:5) %do% max.eig(n, m)
 
 But this is still all serial…
 
-## Filtering
+# Filtering
 
 One final capability before we move on to parallel execution, is the 
 ability to add in a filter within the foreach() statement.
@@ -182,7 +187,7 @@ through the entire sequence of values and selecting only those that
 satisfy the condition in the when() clause. Of course, there are more 
 efficient ways to do this, but this notation is rather neat.
 
-## Going Parallel
+# Going Parallel
 
 Making the transition from serial to parallel is as simple as
 changing ``%do%`` to ``%dopar%``.
@@ -202,7 +207,7 @@ to choose a parallel backend. And here, again, there are a few
 options. We will start with the most accessible, which is the 
 multicore backend.
 
-## Multicore
+# Multicore
 
 Multicore processing is provided by the doMC library. You need to load 
 the library and tell it how many cores you want to use.
@@ -332,7 +337,7 @@ The key in both cases is that the boot library must be loaded on each
 of the cluster nodes as well so that its functionality is available. 
 Simply loading the library on the root node is not enough!
 
-## Conclusion
+# Conclusion
 
 Using the parallel computing functionality in R via the foreach 
 package has completely transformed my workflow. Jobs that have 

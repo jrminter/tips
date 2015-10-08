@@ -3,8 +3,13 @@ title: "MySQL Tips"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{MySQL Tips}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 [Back to Index](../README.html)
@@ -43,12 +48,13 @@ commit;
 exit
 ```
 
-## Delete a database
+# Delete a database
+
 ```
 DROP {DATABASE | SCHEMA} [IF EXISTS] db_name;
 ```
 
-## Homebrew
+# Homebrew
 Set up databases to run AS YOUR USER ACCOUNT with:
 ```
 unset TMPDIR

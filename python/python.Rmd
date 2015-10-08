@@ -1,17 +1,21 @@
 ---
 title: "Python Tips"
 author: "J. R. Minter"
-date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{Python Tips}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 [Back to Index](../README.html)
 
 See also [Intermediate Python](http://book.pythontips.com/en/latest/)
 
-## ipython4 and jupyter
+# ipython4 and jupyter
 
 Jupyter must be installed separately. See [jupyter github](https://github.com/jupyter/notebook)
 
@@ -33,17 +37,17 @@ pip install --pre -e .
 jupyter notebook
 ```
 
-## hyperspy
+# hyperspy
 
 See also [hyperspy tips](../hyperspy/hyperspy.html)
 
-## Spyder problem on Py 3.4
+# Spyder problem on Py 3.4
 
 Had problems with crashes. Turned out to be Babel 2.0. Ended up installing both Babel and Spyder from source. 
 
-## Anaconda
+# Anaconda
 
-### Launching
+## Launching
 
 On MacOSX, a recent update broke the launcher for spyder,
 glueviz,and qtconsole. In reality, it is easier to use the Finder
@@ -59,7 +63,7 @@ spyder
 Note that starting `launcher` from the terminal makes the
 graphical start work. Go figure...
 
-### Updating
+## Updating
 
 ```
 conda update conda
@@ -73,7 +77,7 @@ conda update --all
 ```
 
 
-### iPython Notebook
+## iPython Notebook
 
 Some hints from version 3.
 
@@ -86,7 +90,7 @@ and kernels.  If one starts from the Anaconda Launcher, it seems
 to start in one's home directory. One can navigate to the
 desired folder.
 
-### Checking outdated packages
+## Checking outdated packages
 
 ```
 pip install wheel
@@ -103,20 +107,20 @@ pip2 install h5py --upgrade
 pip2 install traitsui --upgrade
 ```
 
-#### Microsoft Visual C++ Compiler for Python 2.7
+## Microsoft Visual C++ Compiler for Python 2.7
 
-##### Installing and Uninstalling
+### Installing and Uninstalling
 
 The compiler package will default to installing just for the current user and does not require administrative privileges. To install for all users of a machine, execute `msiexec /i <path to MSI> ALLUSERS=1` from an elevated Command Prompt.
 
 To remove or repair the compiler package, locate the entry in Programs and Features and select Remove or Repair.
 
-##### Using with Python distribution tools
+### Using with Python distribution tools
 Python package developers should download and use this compiler to produce binary wheels for their Python packages to upload to PyPI. Installing the wheel package, updating to setuptools 6.0 or later, and adding setup.py bdist_wheel upload to your build process will produce the correct files (remember to do this for both 32-bit and 64-bit versions).
 
 If a Python package you are installing does not have a wheel, you can install this compiler package on your own machine. Once the compiler is installed and you have updated to setuptools 6.0 or later, you can use pip install to build and install the Python package. If you are managing multiple machines and need to install the Python package on all of them, you should install the wheel package and use pip wheel to produce a wheel that can be installed on machines without requiring this package.
 
-### installing from git repos
+## installing from git repos
 
 For python 3
 ```
@@ -130,7 +134,7 @@ $ cd repo
 $ pip install -e ./
 ```
 
-### Uninstalling Python 3.4.1 on Win7 x64
+## Uninstalling Python 3.4.1 on Win7 x64
 
 Following the hints below:
 
@@ -187,7 +191,7 @@ On 8/29/2014 11:26 PM, Llelan D. wrote:
 > 
 > I hope this is of help to someone out there. 
 
-### Fixing python-win32 on python 3.4
+## Fixing python-win32 on python 3.4
 
 From [stackoverflow](http://stackoverflow.com/questions/22490233/win32com-import-error-python-3-4)
 
@@ -199,7 +203,7 @@ python C:\Python34\Scripts\pywin32_postinstall.py -install
 
 
 
-### Creating the default ipython profiles
+## Creating the default ipython profiles
 
 Clean out any old ones
 
@@ -212,11 +216,11 @@ ipython profile create
 
 [A useful ref](http://ipython.org/ipython-doc/dev/config/intro.html)
 
-### 2to3
+## 2to3
 
 ``2to3`` is a utility installed with python3 that helps convert. The documentation is [here](http://docs.python.org/2/library/2to3.html).
 
-## Getting Python 2 and 3 to play well with Win7
+# Getting Python 2 and 3 to play well with Win7
 There was a great discussion on [StackOverflow](http://stackoverflow.com/questions/15912063/how-do-i-run-python-2-and-3-in-windows-7) that suggested the [Python launcher for Windows](http://www.python.org/dev/peps/pep-0397/) introduced in Python 3. The documentation is on [bitbucket](https://bitbucket.org/vinay.sajip/pylauncher/src/tip/Doc/launcher.rst).
 
 ## Building Python Extensions on Win 7 x64

@@ -3,15 +3,20 @@ title: "Research Tips"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{Research Tips}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 [Back to Index](../README.html)
 
 These are tips on effective scientific research collected by John Minter from selected web sources.
 
-### William Shockley on what makes an effective researcher
+# William Shockley on what makes an effective researcher
 [Brian McGill](http://dynamicecology.wordpress.com/2014/01/23/william-shockley-on-what-makes-a-person-write-a-lot-of-papers-and-the-superstar-researcher-system/) has a nice summary on Shockley's view of research. He used publication as a metric and noted the factors that were required:
 
 1. ability to think of a good problem

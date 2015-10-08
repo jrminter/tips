@@ -3,8 +3,13 @@ title: "Maintaining Legacy Equipment"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{Legacy Equipment}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 [Back to Index](../README.html)
@@ -14,7 +19,7 @@ Keeping these boat anchors working with newer computers is
 frequently a real challenge. These tips can make our lives
 easier.
 
-## USB to RS232 converters
+# USB to RS232 converters
 
 Triplite has the [USA-19HS](http://www.tripplite.com/en/products/model.cfm?txtSeriesID=849&txtModelID=3914)
 Looks like it has good driver support.

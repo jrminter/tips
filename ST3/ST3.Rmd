@@ -3,15 +3,20 @@ title: "Sublime Text 3 Tips"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{ST3 Tips}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 [Back to Index](../README.html)
 
 These are John Minter's tips for using the editor ``Sublime Text 3``.
 
-## Better Markdown
+# Better Markdown
 
 From [Marius Schulz](https://blog.mariusschulz.com/2014/12/16/how-to-set-up-sublime-text-for-a-vastly-better-markdown-writing-experience)
 
@@ -19,10 +24,10 @@ From [Marius Schulz](https://blog.mariusschulz.com/2014/12/16/how-to-set-up-subl
 2. Install the `Markdown Extended` package to get the additional color scheme.
 
 
-## Spell Checking
+# Spell Checking
 One can set the dictionary from the ``View`` menu. One can toggle spell checking either from the ``View`` menu or with ``F6``. For more information, see [here](https://www.sublimetext.com/docs/3/spell_checking.html).
 
-## Setting file associations
+# Setting file associations
 
 From [StackOverflow](http://stackoverflow.com/questions/7574502/set-default-syntax-to-different-filetype-in-sublime-text-2)
 
@@ -30,7 +35,7 @@ In the current version of Sublime Text 2 and 3 you can set the syntax for all fi
 
 ```View -> Syntax -> Open all with current extension as... ->[your syntax choice].```
 
-## The Package Control add-in
+# The Package Control add-in
 
 This is quite helpful. Installation instructions from
 [here](https://packagecontrol.io/installation#st3):
@@ -41,19 +46,19 @@ This is quite helpful. Installation instructions from
 import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
 ```
 
-## The LaTeXTools plug-in
+# The LaTeXTools plug-in
 
 From [here](https://github.com/SublimeText/LaTeXTools)
 
 They have complete installation instructions.
 
-## Numix theme
+# Numix theme
 
 I like Numix Dark + Monoaki
 
 Install and see instructions [here](https://packagecontrol.io/packages/Numix%20Theme)
 
-## The Spacegray Theme
+# The Spacegray Theme
 
 I like Flatland-Monoaki and Spacegray-ocean-dark for Python  and Monoaki for LaTeX. Install by
 
@@ -62,7 +67,7 @@ I like Flatland-Monoaki and Spacegray-ocean-dark for Python  and Monoaki for LaT
 3. Find Theme - Spacegray and hit Enter
 4. Use ``Preferences -> Color Scheme -> base16-ocean-dark``
 
-### My current user preferences
+# My current user preferences
 
 ```
 {
@@ -117,9 +122,9 @@ C:\Users\userName\AppData\Roaming\Sublime Text 3\Packages\User
 ```
 
 
-## Using Sublime Text 3 with git
+# Using Sublime Text 3 with git
 
-### Windows
+# Windows
 
 From [Stack Overflow](http://stackoverflow.com/questions/8951275/git-config-core-editor-how-to-make-sublime-text-the-default-editor-for-git-on)
 
@@ -133,7 +138,7 @@ git config --global core.editor "'c:/program files/sublime text 3/subl.exe' -w"
 
 > With this git config the a new tab is opened in my editor. I edit my commit message, save the tab and close it (`CTRL+w`). Git will wait until the tab is closed to continue its work.
 
-### MacOSX
+# MacOSX
 
 See the [Git Hub](https://help.github.com/articles/associating-text-editors-with-git/) page
 

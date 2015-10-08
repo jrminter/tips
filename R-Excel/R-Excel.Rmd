@@ -3,18 +3,23 @@ title: "R-Excel Tips"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{R-Excel Tips}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 [Back to Index](../README.html)
 
-## Overview
+# Overview
 
 Like it or not, we need to extract data from Excel workbooks. These are
 some tips I have collected.
 
-## When what you know is the sheet, row, and column...
+# When what you know is the sheet, row, and column...
 
 From [here](https://statcompute.wordpress.com/2015/05/10/read-a-block-of-spreadsheet-with-r/)
 
@@ -34,7 +39,7 @@ df1
 # 3 3 C 2015-03-01
 ```
 
-## When you have a named range
+# When you have a named range
 
 From [here](https://statcompute.wordpress.com/2015/05/10/read-a-block-of-spreadsheet-with-r/)
 

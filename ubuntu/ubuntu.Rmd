@@ -3,8 +3,13 @@ title: "Ubuntu Tips"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{Ubuntu Tips}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 ```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
@@ -27,11 +32,11 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 [Back to Index](../README.html)
 
-## Choose a kernel on boot
+# Choose a kernel on boot
 hold down ``left shift`` key on boot to get to grub menu
 
 
-## How to upgrade kernels from the command line
+# How to upgrade kernels from the command line
 
 From [Ask Ubuntu](http://askubuntu.com/questions/221/how-to-force-installation-of-kernel-updates-when-using-apt-get-upgrade)
 
@@ -45,9 +50,9 @@ which does install new kernels. You should probably prefer
 ``aptitude`` in general to ``apt-get`` anyway, unless
 you specifically need something in ``apt-get``.
 
-## Managing software - From Distrowatch
+# Managing software - From Distrowatch
 
-### Install/remove
+## Install/remove
 
 ```
 Install new software from repository......... apt-get install pkg
@@ -56,7 +61,7 @@ Update existing software .................... apt-get install pkg
 Remove unwanted software .................... apt-get remove pkg
 ```
 
-### Updating the system
+## Updating the system
 
 ```
 Update package list .......................... apt-get update
@@ -65,7 +70,7 @@ Update system ................................ apt-get upgrade
                 .............................. aptitude safe-upgrade
 ```
 
-### Searching for packages
+## Searching for packages
 
 ```
 Search by package name ........................ apt-cache search pkg
@@ -75,7 +80,7 @@ List pkg contents ............................. x86_64-linux-gnu.confackageName
 List installed package ........................ dpkg -l
 ```
 
-### Configuring access to software repositories
+## Configuring access to software repositories
 
 ```
 List repositories .............................. cat /etc/apt/sources.list
@@ -83,15 +88,15 @@ Add repository  ................................ (edit /etc/apt/sources.list)
 Remove repository .............................. (edit /etc/apt/sources.list)
 ```
 
-## Find and remove old kernels
+# Find and remove old kernels
 from [liberiangeek.net](http://www.liberiangeek.net/2011/11/remove-old-kernels-in-ubuntu-11-10-oneiric-ocelot/)
 
-#### Find the current kernel. Don’t remove this one!!!
+### Find the current kernel. Don’t remove this one!!!
 ```
 uname -r
 ```
 
-#### List all installed kernels
+### List all installed kernels
 ```
 dpkg --list | grep linux-image
 ```
@@ -101,28 +106,28 @@ Finally, run the commands below to remove the kernel(s) you selected.
 sudo apt-get purge linux-image-x.x.x.x-generic
 ```
 
-#### Update grub2 when done
+### Update grub2 when done
 ```
 sudo update-grub2
 ```
 
-## Quick mount windows share
+# Quick mount windows share
 From [here](https://help.ubuntu.com/community/Samba/SambaClientGuide)
 
-#### restart when required
+## restart when required
 ```
 sudo service smbd restart
 sudo service nmbd restart
 ```
 
-#### see what is going on with SAMBA
+## see what is going on with SAMBA
 ```
 smbclient -L //marathon
 smbclient -L //fortress
 smbclient //fortress/data -U jrminter
 ```
 
-#### get it where the computer can find the server
+## get it where the computer can find the server
 ```
 sudo apt-get install winbind
 sudo mousepad /etc/nsswitch.conf
@@ -137,16 +142,16 @@ hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4 wins
 ```
 ***Note*** putting wins earlier broke Google Chrome...
 
-#### Connecting using CIFS
+## Connecting using CIFS
 CIFS is included in the smbfs package and is a replacement for smbfs.
 [Reference](http://linux-cifs.samba.org/)
 
-#### Install smbfs
+## Install smbfs
 ```
 sudo apt-get install smbfs winbind
 ```
 
-#### Allow non-root users to mount SMB shares
+## Allow non-root users to mount SMB shares
 
 You may either allow the group "users" to mount SMB shares, or add a group, samba, and add users you wish to allow to mount SMB shares to the samba group.
 
@@ -161,14 +166,14 @@ sudo visudo
 In the "group" section add your group you wish to allow to mount SMB shares
 Add a line  in the "group" section :
 ```
-## Members of the admin group may gain root privileges
+# Members of the admin group may gain root privileges
 %admin ALL=(ALL) ALL
 %samba   ALL=(ALL) /bin/mount,/bin/umount,/sbin/mount.cifs,/sbin/umount.cifs
 ```
 
 Change ``%samba`` to ``%users`` if you wish to allow members of the users group to mount SMB shares.
 
-#### create a mount point
+## create a mount point
 ```
 sudo mkdir /media/fortress
 sudo mkdir /media/fortress/data
@@ -180,7 +185,7 @@ sudo mount -t cifs //fortress/data /media/fortress/data -o username=samb_user,no
 
 **Note:** ``samba_user`` = the user name on the samba server (may be different from your log-in name on the client). The "noexec" option prevents executable scripts running from the SMB share. You will be asked for BOTH your sudo and then your samba_user password.
 
-#### To umount
+## To umount
 ```
 sudo umount /media/fortress/data
 ```

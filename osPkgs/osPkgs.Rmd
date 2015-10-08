@@ -3,8 +3,13 @@ title: "OSX Packages"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{OSX Packages}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 ```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
 # make this an external chunk that can be included in any file
@@ -26,7 +31,7 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 [Back to Index](../README.html)
 
-## Plot digitizers
+# Plot digitizers
 
 [A review](http://wiekvoet.blogspot.com/2014/01/convering-plots-to-data.html). His conclusions: The programs complement each other. Engauge is great for automated extraction, complex plots. However, it is not so easy for occasional usage. PlotDigitizer is easy to use, great if you want to manually select your points.
 

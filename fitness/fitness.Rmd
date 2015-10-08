@@ -3,8 +3,13 @@ title: "Fitness tips"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{Fitness Tips}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 ```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
 # make this an external chunk that can be included in any file
@@ -27,22 +32,22 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 [Back to Index](../README.html)
 
-## From Jeff Galloway
+# From Jeff Galloway
 
-### Walking as an Endurance Excercise 
+## Walking as an Endurance Excercise 
 [2015-05-10](http://jeffgalloway.typepad.com/jeff_galloways_blog/2015/05/walking-as-an-endurance-exercise.html)
 
 > What is endurance exercise?
 
 > The essence of endurance exercise is to go farther – to keep doing an exercise long enough so that the body must find more efficient ways of moving, of processing energy, sending blood, etc. For untrained muscles, a walk of 10 minutes will do this. As we push back this threshold, our first goal is to get to 3 sessions a walk of 30 minutes each. For continuing progress, one of these could be a long one that pushes up to the current endurance limit or beyond (45 minutes, then 60 minutes, then whatever you want).
 
-### [2015-03-09](http://jeffgalloway.typepad.com/jeff_galloways_blog/2015/03/when-to-start-walk-breaks.html) When to start walk breaks
+## [2015-03-09](http://jeffgalloway.typepad.com/jeff_galloways_blog/2015/03/when-to-start-walk-breaks.html) When to start walk breaks
 
 > Walk breaks taken early in the run keep the muscles strong and resilient enough so the legs can move with strength and efficiency throughout. This will significantly reduce or eliminate the excess stress around the knees, ankles, feet, etc. which produces injury. The little “back-up” muscle groups can stay in reserve and fine-tune the running motion after fatigue sets in.
 
 > The earlier you take the walk breaks, the more they help you! To receive maximum benefit, you must start the walk breaks before you feel any fatigue in the first mile. If you wait until you feel the need for a walk break, you’ve already reduced your potential performance. Even waiting until the two-mile mark to take the first one will reduce the resiliency you could regain from walking in the first mile. 
 
-### [2014-09-28](http://jeffgalloway.typepad.com/jeff_galloways_blog/2014/09/motivation-to-get-out-the-door-early-morning.html) Motivation to get out the door in the early morning
+## [2014-09-28](http://jeffgalloway.typepad.com/jeff_galloways_blog/2014/09/motivation-to-get-out-the-door-early-morning.html) Motivation to get out the door in the early morning
 
 > A high percentage of busy people find that the best time to exercise is before work. Here is the rehearsal that has been effective in getting out the door to the workout – even for those who are "non-morning persons".
 
@@ -57,7 +62,7 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 > The principle here is "A body on the bed wants to stay on the bed. But once a body is in motion, it wants to stay in motion". 
 
-### [2014-09-14](http://jeffgalloway.typepad.com/jeff_galloways_blog/2014/09/long-run-facts.html) Long Run Facts
+## [2014-09-14](http://jeffgalloway.typepad.com/jeff_galloways_blog/2014/09/long-run-facts.html) Long Run Facts
 
 > - Twenty miles with walking breaks equals 20 miles run continuously…at any speed (but you recover faster with walk breaks).
 - Forget about speed on long runs. Focus only on the component of endurance.

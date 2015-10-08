@@ -3,19 +3,24 @@ title: "Tips on using hyperspy"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{hyperspy Tips}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 [Back to Index](../README.html)
 
 See also [python tips](../python/python.html)
 
-##  Updates
+#  Updates
 
-### Anaconda
+## Anaconda
 
-#### My pull script from `~/git/pullAll.sh` on `jrmFastMac`
+## My pull script from `~/git/pullAll.sh` on `jrmFastMac`
 
 ```
 cd ~/git/hyperspy
@@ -95,9 +100,9 @@ conda update anaconda
 conda update --all
 ```
 
-### hyperspy
+# hyperspy
 
-#### Temporarily install a branch
+## Temporarily install a branch
 
 From my cmd-anaconda prompt...
 ```
@@ -106,7 +111,7 @@ cd %GITHOME%/hyperspy
 pip install -e ./
 ```
 
-#### Not affected by git...
+## Not affected by git...
 
 To be **really** clean...
 
@@ -126,7 +131,7 @@ python setup.py install
 ```
 
 
-### Key imports for iPy3 notebooks
+# Key imports for iPy3 notebooks
 
 A really helpful post on [stackoverflow](http://stackoverflow.com/questions/3828723/why-we-need-sys-setdefaultencodingutf-8-in-a-py-script)
 
@@ -145,7 +150,7 @@ reload(sys)
 sys.setdefaultencoding("utf-8")
 ```
 
-#### My current Notebook setup block
+## My current Notebook setup block
 ```
 %matplotlib inline
 import os
@@ -169,7 +174,7 @@ It now requires more explict
 hs.signals.Spectrum()
 ```
 
-## Getting development right to test new EDS model
+# Getting development right to test new EDS model
 
 1. Deleted old hyperspy fork.
 

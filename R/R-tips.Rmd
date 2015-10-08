@@ -3,8 +3,13 @@ title: "R Tips"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
-  html_document:
+  knitr:::html_vignette:
     css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{R Tips}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 ```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
@@ -38,7 +43,7 @@ tips on matters that made me go *hmmm...*
 
 # Hard things to find
 
-## Adjustments for El Capitan
+# Adjustments for El Capitan
 
 1. **Make changes to .Renviron** . This makes sure R (esp. RStudio) can find what it needs. Mine is:
 
@@ -62,11 +67,11 @@ alias instR="R CMD INSTALL *.gz; rm -rf *.gz"
 ```
 
 
-### Cool R-markdown Examples
+# Cool R-markdown Examples
 
 [João Neto](http://www.di.fc.ul.pt/~jpn/r/) has some really nice examples. They plot as `.html` but one can change the extension to `.Rmd` to get the source.
 
-### Speeding up compile on 64 bit R
+# Speeding up compile on 64 bit R
 
 From [here](http://www.rexamine.com/2015/07/speeding-up-r-package-installation-process/)
 
@@ -77,7 +82,7 @@ MAKE='make -j 8' # submit 8 jobs at once
 ```
 instead of previously used settings. This significantly decreases the time needed to compile.
 
-### Configuring local soft on Windows.
+# Configuring local soft on Windows.
 
 HT [stewid](https://github.com/ropensci/git2r/issues/139#issuecomment-101176755)
 
@@ -89,7 +94,7 @@ I created `C:/Apps/R/local/local320` and unzipped `local320.zip` and
 files in the binary distribution. This means I could add other versions
 accordingly.
 
-### git2r for WinXP
+# git2r for WinXP
 
 HT [stewid](https://github.com/ropensci/git2r/issues/139#issuecomment-101176755)
 
@@ -104,7 +109,7 @@ make
 ```
 
 
-### Using Hmisc LaTeX functions without Miktex
+# Using Hmisc LaTeX functions without Miktex
 
 TexLive does not include the expected Windows dvi viewer `yap` which is standard with Miktex and is expected on Windows with Hmisc. The workaround is to use the `option` command. Try this solution that will write a tex file in the `$TEMP` directory. *Note:* one must manually close the `dviout` window for the script to continue.
 
@@ -129,17 +134,17 @@ ignore <- latex(x, file='matrix.tex')
 setwd(wd)
 ```
 
-### Upgrade packages after new verion
+# Upgrade packages after new verion
 
 ```
 update.packages(checkBuilt=TRUE, ask=FALSE)
 ```
 
-### Some hints from Karl Broman for mac
+# Some hints from Karl Broman for mac
 
 from [Stack Overflow](https://github.com/kbroman/ProgrammingNotes)
 
-#### installing gfortran
+## installing gfortran
 
 ```
 cd ~/Desktop
@@ -164,7 +169,7 @@ CFLAGS=-g -O2 -Wall -pedantic
 CXXFLAGS=-g -O2 -Wall -pedantic
 ```
 
-### Crash when using knitr
+# Crash when using knitr
 
 Make certain that
 
@@ -175,7 +180,7 @@ library(knitr)
 is in the first chunk calling R
 
 
-### Data corruption in R 3.0.2 when using read.csv
+# Data corruption in R 3.0.2 when using read.csv
 
 From [John Myles White](http://www.johnmyleswhite.com/notebook/2014/01/29/data-corruption-in-r-3-0-2-when-using-read-csv/) 
 
@@ -187,11 +192,11 @@ He notes:
 
 > The reason that the automatic conversion of 64-bit integer-valued data to floating point is problematic is that floating point numbers lack sufficient precision to exactly represent the full range of 64-bit integer values. As a consequence of the lower precision of floating point numbers, two unequal integer values in the input file may be converted to two equal floating point values in the data.frame R uses to represent that data. Subsequent analysis in R will therefore treat unequal values as if they were equal, corrupting any downstream analysis that assumes that the equality predicate can be trusted.
 
-### Web scraping
+# Web scraping
 
 Hadley Wickham recommend [selector gadget](http://selectorgadget.com/) as an aid to web scraping.
 
-### xtable from knitr and Rmarkdown in RStudio
+# xtable from knitr and Rmarkdown in RStudio
 This worked when using options to the R chunk
 of ` echo=FALSE, results='asis' `
 
@@ -205,7 +210,7 @@ xt <- xtable(slope, digits=dig, display=disp)
 print(xt, type='html')
 ```
 
-### Using custom environment variables
+# Using custom environment variables
 Custom environment variables are helpful in standardizing relative
 paths across systems. On Linux and MacOSX (using bash,)
 I set these in ``.profile``
@@ -267,9 +272,9 @@ print(Sys.getenv("GITHOME"))
 print(Sys.getenv("IMG_ROOT"))
 
 ```
-### LaTeX in R Plots
+# LaTeX in R Plots
 
-#### latexexp
+## latexexp
 
 This is from [here](http://www.magesblog.com/2015/07/adding-mathematical-notations-to-r-plots.html) and was accessed 2015-07-07.
 
@@ -281,7 +286,7 @@ x <- seq(-4, 4, len = 101)
 y <- cbind(sin(x), cos(x))
  
 op=par(mfrow=c(2,1))
-## plotmath
+# plotmath
 matplot(x, y, type = "l", xaxt = "n",
         main = expression(paste("plotmath: ", plain(sin) * phi, "  and  ",
                                 plain(cos) * phi)),
@@ -291,7 +296,7 @@ matplot(x, y, type = "l", xaxt = "n",
 axis(1, at = c(-pi, -pi/2, 0, pi/2, pi),
      labels = expression(-pi, -pi/2, 0, pi/2, pi))
  
-## latex2exp
+# latex2exp
 matplot(x, y, type = "l", xaxt = "n",
         main = latex2exp("latex2exp: $\\sin \\phi$ and $\\cos \\phi$"),
         ylab = latex2exp("$\\sin \\phi$ and $\\cos \\phi$"),
@@ -304,7 +309,7 @@ axis(1, at = c(-pi, -pi/2, 0, pi/2, pi),
 par(op)
 ```
 
-#### TikzDevice
+## TikzDevice
 
 The tikzDevice R package is again being maintained and is back on CRAN.
 This permits you to output a plot as a `.tex` file and have full $\LaTeX$
@@ -354,7 +359,7 @@ One can then simply include the file in the main $\LaTeX$ file
 \input{"normDist.tex"}
 ```
 
-### Using colClasses when reading data into R
+# Using colClasses when reading data into R
 
 [Mollie's Research Blog](http://www.mollietaylor.com/2013/09/using-colclasses-to-load-data-more.html)
 
@@ -371,12 +376,12 @@ largeData <- read.csv("huge-file.csv",
                       "Date", "integer", "logical"))
 ```
 
-### Reading Excel workbooks
+# Reading Excel workbooks
 
 [Milano R net](http://www.milanor.net/blog/?p=779)
 has a nice description of the available options.
 
-### Reading large data tables
+# Reading large data tables
 
 [Stack Overflow](http://stackoverflow.com/questions/1727772/quickly-reading-very-large-tables-as-dataframes-in-r)
 has a nice example highligting fread
@@ -400,18 +405,18 @@ DT[3,e:=-Inf]
 standard read.table
 write.table(DT,"test.csv",sep=",",row.names=FALSE,quote=FALSE)
 cat("File size (MB):",round(file.info("test.csv")$size/1024^2),"\n")    
-## File size (MB): 51 
+# File size (MB): 51 
 
 system.time(DF1 <- read.csv("test.csv",stringsAsFactors=FALSE))        
-##    user  system elapsed 
-##   24.71    0.15   25.42
+#    user  system elapsed 
+#   24.71    0.15   25.42
 # second run will be faster
 system.time(DF1 <- read.csv("test.csv",stringsAsFactors=FALSE))        
-##    user  system elapsed 
-##   17.85    0.07   17.98
+#    user  system elapsed 
+#   17.85    0.07   17.98
 ```
 
-### optimized read.table
+# optimized read.table
 ```
 system.time(DF2 <- read.table("test.csv",header=TRUE,sep=",",quote="",  
                           stringsAsFactors=FALSE,comment.char="",nrows=n,                   
@@ -419,61 +424,61 @@ system.time(DF2 <- read.table("test.csv",header=TRUE,sep=",",quote="",
                                        "character","numeric","integer")))
 
 
-##    user  system elapsed 
-##   10.20    0.03   10.32
+#    user  system elapsed 
+#   10.20    0.03   10.32
 ```
 
-### fread
+# fread
 ```
 require(data.table)
 system.time(DT <- fread("test.csv"))                                  
- ##    user  system elapsed 
-##    3.12    0.01    3.22
+ #    user  system elapsed 
+#    3.12    0.01    3.22
 ```
 
-### sqldf
+# sqldf
 ```
 require(sqldf)
 
 system.time(SQLDF <- read.csv.sql("test.csv",dbname=NULL))             
 
-##    user  system elapsed 
-##   12.49    0.09   12.69
+#    user  system elapsed 
+#   12.49    0.09   12.69
 ```
 
-### sqldf as on SO
+# sqldf as on SO
 ```
 f <- file("test.csv")
 system.time(SQLf <- sqldf("select * from f", dbname = tempfile(), file.format = list(header = T, row.names = F)))
 
-##    user  system elapsed 
-##   10.21    0.47   10.73
+#    user  system elapsed 
+#   10.21    0.47   10.73
 ```
 
-### ff / ffdf
+# ff / ffdf
 
 ```
 require(ff)
 
 system.time(FFDF <- read.csv.ffdf(file="test.csv",nrows=n))   
-##    user  system elapsed 
-##   10.85    0.10   10.99
+#    user  system elapsed 
+#   10.85    0.10   10.99
 ```
 
-### summary
+# summary
 
 ```
-##    user  system elapsed  Method
-##   24.71    0.15   25.42  read.csv (first time)
-##   17.85    0.07   17.98  read.csv (second time)
-##   10.20    0.03   10.32  Optimized read.table
-##    3.12    0.01    3.22  fread
-##   12.49    0.09   12.69  sqldf
-##   10.21    0.47   10.73  sqldf on SO
-##   10.85    0.10   10.99  ffdf
+#    user  system elapsed  Method
+#   24.71    0.15   25.42  read.csv (first time)
+#   17.85    0.07   17.98  read.csv (second time)
+#   10.20    0.03   10.32  Optimized read.table
+#    3.12    0.01    3.22  fread
+#   12.49    0.09   12.69  sqldf
+#   10.21    0.47   10.73  sqldf on SO
+#   10.85    0.10   10.99  ffdf
 ```
 
-## Colored sizeplot with ggplot2
+# Colored sizeplot with ggplot2
 
 [martinsbioblogg](http://martinsbioblogg.wordpress.com/2013/11/17/using-r-coloured-sizeplot-with-ggplot2/)
 
@@ -493,7 +498,7 @@ sizeplot.colour
 
 ```
 
-### Least Squares and Maximum Liklihood Calibration
+# Least Squares and Maximum Liklihood Calibration
 [Édouard Tallent](http://quantcorner.wordpress.com/2013/11/17/least-squares-and-maximum-likelihood-estimation-calibration-with-r/)
 
 ```{r}
@@ -561,12 +566,12 @@ res
 ```
 
 
-## Mathematical annotation
+# Mathematical annotation
 
-### Resources
+# Resources
 [Vistat Blog](http://vis.supstat.com/2013/04/mathematical-annotation-in-r/)
 
-### Adding results to plot legends and saving to PDF
+# Adding results to plot legends and saving to PDF
 I like to add values to calibration plots where I have
 computed the mean and standard error. Getting the $\pm$
 symbol to work on multiple platforms was fun. Note the
@@ -605,7 +610,7 @@ a function of window size. Especially when using Sweave,
 I found it helpful to just write a contolled pdf and
 from an R script and load/plot from Sweave in the report.
 
-### An example from a R Script
+# An example from a R Script
 ```
 my.plot.wrapper <- function(){
   #             B    L    T    R
@@ -648,9 +653,9 @@ Then from LaTeX (e.g. in a beamer template)
 \end{frame}
 ```
 
-## Tricks with sapply and friends
+# Tricks with sapply and friends
 
-### A nice example via RBloggers
+# A nice example via RBloggers
 
 From [rforwork.info](http://rforwork.info/2013/08/15/sapply-is-my-new-friend/)
 
@@ -674,7 +679,7 @@ mydf[,30:40] = sapply(mydf[,30:40], zerofy)
 
 
 
-## Nice examples from Vistat
+# Nice examples from Vistat
 
 We can get a good list of symbols with
 
@@ -702,7 +707,7 @@ hist(rnorm(100, x_mean, x_sd),
 )
 
 ```
-## Polygons
+# Polygons
 
 From [Daniel Marcelino](http://danielmarcelino.com/advanced-graphics/)
 ```{r}
@@ -733,7 +738,7 @@ text(2.5, 0.115, expression(alpha==0.05))
 #dev.off()
 ```
 
-## Drawing 95% Confidence intervals
+# Drawing 95% Confidence intervals
 [Natan Lemoine](http://climateecology.wordpress.com/2013/08/05/drawing-a-95-confidence-interval-in-r/) notes:
 
 I’m writing a post on how to draw a in 95% confidence interval in R by hand. I spent an hour or so trying to figure this out, and most message threads point someone to the ellipse() function. However, I wanted to know how it works.
@@ -825,9 +830,9 @@ And that’s that! Hopefully this helps someone like me who spent hours looking 
 
 
 
-## Confidence levels and intervals.
+# Confidence levels and intervals.
 
-### Confidence levels and intervals in lm fits
+# Confidence levels and intervals in lm fits
 
 This one bit me recently.... Remember that if we want
 the $\alpha$ confidence interval, R will report the
@@ -846,9 +851,9 @@ confint(fit, level=0.90)
 
 ```
 
-## Graphics tips
+# Graphics tips
 
-### A nice example from Jeff Leek:
+# A nice example from Jeff Leek:
 
 [A useful reference (www.statmethods.net)](http://www.statmethods.net/advgraphs/axes.html)
 
@@ -867,9 +872,9 @@ meanRatings <- tapply(movies$score,movies$rating,mean)
 points(1:4,meanRatings,col="red",pch="-",cex=5)
 ```
 
-## RMySQL
+# RMySQL
 
-### Building on Windows
+# Building on Windows
 
 Note: this works on WinXP and Win7 x64.
 
@@ -924,9 +929,9 @@ dbDisconnect(con)
 dbUnloadDriver(drv)
 ```
 
-## R and C/C++
+# R and C/C++
 
-### Rboolean type and obsolete headers
+# Rboolean type and obsolete headers
 
 On 2013-05-24, Jan van der Laan wrote the r-devel mailing
 list noting some problems when trying to pass an an argument
@@ -951,8 +956,8 @@ Prof Brian Ripley (ripley@stats.ox.ac.uk) replied
 > Rdefines.h was for compatibility with S code from
 > the 1990s: it is not kept up to date.
 
-## Heat maps
-### Correlation heatmap with ggplot2
+# Heat maps
+# Correlation heatmap with ggplot2
 
 from [Martin Johnsson](http://martinsbioblogg.wordpress.com/2013/03/21/using-r-correlation-heatmap-with-ggplot2/)
 
@@ -967,9 +972,9 @@ require(reshape2)
 qplot(x=Var1, y=Var2, data=melt(cor(attitude)), fill=value, geom="tile")
 ```
 
-## Alchemy
+# Alchemy
 
-### Compiling an Rmath dynamic library
+# Compiling an Rmath dynamic library
 [Dirk Eddelbuettel](http://r.789695.n4.nabble.com/R-Rmath-R-libraries-from-C-on-Mac-OS-X-td814726.html) noted
 
 ```
@@ -979,7 +984,7 @@ qplot(x=Var1, y=Var2, data=melt(cor(attitude)), fill=value, geom="tile")
 On Linux/MacOSX sytems these need to be in the
 LD_LIBRARY path. I put sym links into /usr/local/lib
 
-## Using stats::convolve effectively
+# Using stats::convolve effectively
 [Michael Moers](https://stat.ethz.ch/pipermail/r-devel/attachments/20130623/232921bc/attachment.pl)
 
 The function stats::convolve does not mention efficient usage of the 
@@ -1019,7 +1024,7 @@ system.time(convolve(x, y, type = "open"))
 # 685.31    0.09  691.79
 ```
 
-## Parse arguments of an R script
+# Parse arguments of an R script
 By [Gregor Gorjanc](http://ggorjan.blogspot.com/2013/07/parse-arguments-of-r-script.html)
 
 R can be used also as a scripting tool. We just need to add shebang in the first line of a file (script):
@@ -1033,15 +1038,15 @@ and then the R code should follow.
 Often we want to pass arguments to such a script, which can be collected in the script by the commandArgs() function. Then we need to parse the arguments and conditional on them do something. I came with a rather general way of parsing these arguments using simply these few lines:
 
 ```
-## Collect arguments
+# Collect arguments
 args <- commandArgs(TRUE)
  
-## Default setting when no arguments passed
+# Default setting when no arguments passed
 if(length(args) < 1) {
   args <- c("--help")
 }
  
-## Help section
+# Help section
 if("--help" %in% args) {
   cat("
       The R Script
@@ -1058,28 +1063,28 @@ if("--help" %in% args) {
   q(save="no")
 }
  
-### Parse arguments (we expect the form --arg=value)
+# Parse arguments (we expect the form --arg=value)
 parseArgs <- function(x) strsplit(sub("^--", "", x), "=")
 argsDF <- as.data.frame(do.call("rbind", parseArgs(args)))
 argsL <- as.list(as.character(argsDF$V2))
 names(argsL) <- argsDF$V1
  
-### Arg1 default
+# Arg1 default
 if(is.null(args$arg1)) {
-  ## do something
+  # do something
 }
  
-## Arg2 default
+# Arg2 default
 if(is.null(args$arg2)) {
-  ## do something
+  # do something
 }
  
-## Arg3 default
+# Arg3 default
 if(is.null(args$arg3)) {
-  ## do something
+  # do something
 }
  
-## ... your code here ...
+# ... your code here ...
 
 ```
 

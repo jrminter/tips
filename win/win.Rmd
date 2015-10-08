@@ -3,15 +3,20 @@ title: "Windows Tips"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{Windows Tips}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 [Back to Index](../README.html)
 
 Some useful tips for windows
 
-## Connecting to Ubuntu Samba shares from Win7
+# Connecting to Ubuntu Samba shares from Win7
 
 From [ubuntu forums](http://ubuntuforums.org/showthread.php?t=1942514)
 
@@ -19,7 +24,7 @@ From [ubuntu forums](http://ubuntuforums.org/showthread.php?t=1942514)
 
 > for the record, my "Microsoft Network client: Digitally sign communications" is set to 0 in the registry.
 
-## Notepad++ style persistence
+# Notepad++ style persistence
 
 From [superuser.com](http://superuser.com/questions/214849/how-to-save-font-settings-in-notepad)
 
@@ -29,7 +34,7 @@ There are persitence problems with Notepad++ configurations on Vista/Win7
 
 The solution is to `run as Administrator` for the configuration to be saved.
 
-## Getting into `safe` mode in Win 7 on ASUS computer (`crunch`)
+# Getting into `safe` mode in Win 7 on ASUS computer (`crunch`)
 
 From [microsoft](https://social.technet.microsoft.com/forums/windows/en-US/2b8419dd-4610-4703-a807-4ef9d862bb6d/f8-does-not-take-me-into-safe-mode)
 
@@ -45,12 +50,12 @@ Two suggestions:
 > d. Note: Make sure you put the computer back to Normal Startup once you are done with the troubleshooting. Just open msconfig the same way as above, and then on the Boot tab uncheck the Safe boot checkbox.
 
 
-## Create a shortcut to switch between windows in Win 7
+# Create a shortcut to switch between windows in Win 7
 Drag the shortcut from to ``%USERPROFILE%\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\Switch`` the quick launch bar.
 
 Creat a similar shortcut of the character map ``%windir%\system32\charmap.exe``
 
-## Use Imagemagick to convert png to pdf from the command line
+# Use Imagemagick to convert png to pdf from the command line
 ```
 convert sample.png sample.pdf
 ```
@@ -62,19 +67,19 @@ Note: for high resolution (default is 72 dpi) one can add
 
 From [Stackoverflow](http://unix.stackexchange.com/questions/42856/how-can-i-convert-a-png-to-a-pdf-in-high-quality-so-its-not-blurry-or-fuzzy)
 
-## Win7 libraries
+# Win7 libraries
 
 [microsoft's tutorial](http://windows.microsoft.com/en-us/windows7/include-folders-in-a-library)
 
 Libraries are a new feature in Win7 that gather content from various folders.
 
-### To include a folder in a library:
+## To include a folder in a library:
 
 1. Open the location of the folder you want to include.
 2. Right-click on the folder and select ``Include in library``'.
 3. Choose from a Library in the list or create a new one. Note that the folder is linked into the library, but remains in its original location.
 
-### To remove a folder from a library
+## To remove a folder from a library
 
 1. In the task bar, click the ``Windows Explorer`` button.
 2. Click the library in the navigation pane.
@@ -82,10 +87,10 @@ Libraries are a new feature in Win7 that gather content from various folders.
 4. Click the folder you want to remove from the library and then the ``Remove`` button and then ``Ok``. The folder is unlinked from the library but remains in its original location.
 
 
-## Net use
+# Net use
 see [Technet](http://technet.microsoft.com/en-us/library/gg651155.aspx) also see [about.com](http://pcsupport.about.com/od/commandlinereference/p/net-use-command.htm)
 
-### Syntax
+## Syntax
 
 ```
 net use [{<DeviceName> | *}] [\\<ComputerName>\<ShareName>[\<volume>]] [{<Password> | *}]] [/user:[<DomainName>\]<UserName] >[/user:[<DottedDomainName>\]<UserName>] [/user: [<UserName@DottedDomainName>] [/savecred] [/smartcard] [{/delete | /persistent:{yes | no}}]
@@ -95,7 +100,7 @@ net use [<DeviceName> [/home[{<Password> | *}] [/delete:{yes | no}]]
 net use [/persistent:{yes | no}]
 ```
 
-### Example
+## Example
 
 ```
 net use d:\\server\share /user:Accounts\User1
@@ -118,7 +123,7 @@ net use p: /delete
 
 
 
-## A setup for Win7/WinXP compatibility
+# A setup for Win7/WinXP compatibility
 
 1. On WinXP, create ``C:\Users\userName`` for each user. Create a ``Documents`` folder there. Change ``My Documents`` to point there. This is the default for Win7. We will use this as the user's ``%HOME%`` directory on both systems.
 
@@ -128,11 +133,11 @@ net use p: /delete
 
 4. Install Apps like analySIS, R, texlive, etc that you would like to play well across systems call frequently from the system path into a folder in ``C:\Apps``. Avoid spaces in path names was much as possible. Short is good!!!
 
-## Enabling cut/paste w mouse from cmd window
+# Enabling cut/paste w mouse from cmd window
 
 [MS Technet](http://technet.microsoft.com/en-us/magazine/ff758104.aspx) notes that one can enable copy/paste with the mouse by enabling ``QuickEdit Mode`` in the default command window properties. See also [howto geek](http://www.howtogeek.com/howto/windows-vista/copy-to-the-clipboard-from-the-windows-command-prompt/)
 
-## Poster printing
+# Poster printing
 
 To use the poster printer in the 8th floor site office
 
@@ -142,7 +147,7 @@ To use the poster printer in the 8th floor site office
 4. **Paper Source:** Check before use. Typically ``Roll 1`` is satin, ``Roll 2`` is glossy.
 5. Make sure you choose best quality - it is slow; typically takes 20 min for a typical poster.
 
-## Re-assigning drive letters
+# Re-assigning drive letters
 
 From [superuser.com](http://superuser.com/questions/70295/force-a-usb-device-to-use-a-certain-drive-letter?rq=1)
 
@@ -152,9 +157,9 @@ From [superuser.com](http://superuser.com/questions/70295/force-a-usb-device-to-
 4. Right-click and "Change Drive Letters and Paths..."
 5. Assign a different, unused drive letter.
 
-## Fixing major annoyances
+# Fixing major annoyances
 
-### Quick Launch Bar in Win7
+## Quick Launch Bar in Win7
 
 The [howto geek](http://www.howtogeek.com/howto/windows-7/add-the-quick-launch-bar-to-the-taskbar-in-windows-7/) shows us how...
 
@@ -168,7 +173,7 @@ The [howto geek](http://www.howtogeek.com/howto/windows-7/add-the-quick-launch-b
 
 It will be all the way over on the right, so you’ll want to click on the dotted lines and then drag the toolbar all the way to the left (which is slightly tricky sometimes). ***Note that you’ll need to right-click and unlock the taskbar before you can move the toolbar.***
 
-### No context menus in Win 7
+## No context menus in Win 7
 This has been a pain for a while on a few systems.
 Of all the tips I found on line the instructions
 from [here](http://sourceforge.net/p/sevenzip/discussion/45797/thread/838d57cb/) worked
@@ -185,12 +190,12 @@ from [here](http://sourceforge.net/p/sevenzip/discussion/45797/thread/838d57cb/)
 9. try to right click on a file and see if it shows up.
 ```
 
-## Environment Variables
+# Environment Variables
 
 A pair of useful lists from
 [askvg.com](http://www.askvg.com/list-of-environment-variables-in-windows-xp-vista-and-7/)
 
-### WinXP
+## WinXP
 
 ```
 Environment Variable         Path
@@ -210,7 +215,7 @@ Environment Variable         Path
 %WINDIR%                    C:\Windows
 ```
 
-### Vista and Win 7
+## Vista and Win 7
 
 ```
 Environment Variable        Path

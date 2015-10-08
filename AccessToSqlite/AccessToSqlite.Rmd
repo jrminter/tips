@@ -3,21 +3,26 @@ title: "AccessToSqlite"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{AccessToSqlite"}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 [Back to Index](../README.html)
 
 Old Access databases are a real pain. One idea os to convert them to sqlite. Below is an example from [Google Code](https://code.google.com/p/mdb-sqlite/). Need to try this for wipe tests...
 
-## Description
+# Description
 
 Provides automated conversion of MS Access 2000 databases to SQLite on any platform, utilizing Jackcess and SQLite Java libraries. No native driver required.
 
 MDB-SQLite is used by Plausible Labs to read government-supplied Access databases.
 
-### Usage
+## Usage
 
 To compile, run:
 

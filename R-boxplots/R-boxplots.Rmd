@@ -2,8 +2,13 @@
 title: "Box Plots in R"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{Box Plots in R}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 ```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
@@ -25,7 +30,7 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 [Back to Index](../README.html)
 
-### A nice ggplot example
+# A nice ggplot example
 
 From [statistic-on-air](http://statistic-on-air.blogspot.com/2014/02/boxplot-with-mean-and-standard.html)
 

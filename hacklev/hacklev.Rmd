@@ -3,8 +3,13 @@ title: "Starting data analysis/wrangling with R: Things I wish I'd been told"
 author: "Stian Håklev"
 date: "2014-10-14"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{R: Things I wish I'd been told}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 From [here](http://reganmian.net/blog/2014/10/14/starting-data-analysiswrangling-with-r-things-i-wish-id-been-told/)
@@ -26,7 +31,7 @@ So here are some of my suggestions and "lessons learnt", in no particular order.
 
 <!-- more -->
 
-## Use RStudio
+# Use RStudio
 
 ![](images/2013-10-09-starting-data-analysiswrangling-with-r-things-i-wish-id-been-told-_-whole-01.png)
 
@@ -43,7 +48,7 @@ So here are some of my suggestions and "lessons learnt", in no particular order.
 
 There's even a version of RStudio [that runs in the browser](http://www.rstudio.com/ide/docs/server/getting_started) â€“ we're currently using it to coordinate data analysis among a geographically dispersed team on many gigabytes of data. Keeping it on a central server, and letting people run analyses directly on the data is much more convenient and secure than having everyone store tens of gigabytes of data on their personal computers.
 
-## Use Knitr
+# Use Knitr
 
 [Literate programming](http://en.wikipedia.org/wiki/Literate_programming) is the idea of mixing executable code with documentation in the same document. Knitr brings this functionality to R, and it's integrated beautifully with RStudio. By default, all the text you write in a Knitr document is interpreted as [Markdown](http://daringfireball.net/projects/markdown/) (a light-weight markup language, which I'm also using to author this blog). Press `Alt+Cmd I` to insert an R code block. You can run the code either by pressing `Cmd+Enter` on a single line, or `Alt+Cmd C` to execute an entire code block. When you're done, you can press "Knit HTML", which executes the whole document and produces a report.
 
@@ -68,7 +73,7 @@ Not only is this a great way of writing reports (you can also export to PDF, or 
 
 https://www.youtube.com/watch?v=LIIC8cViC54
 
-## Learn from others
+# Learn from others
 
 There are lot's of R textbooks and documentation out there. Two other great sources of ideas are [RPubs](http://rpubs.com/) and [r-bloggers](http://www.r-bloggers.com/). Using knitr to write reports in RStudio, as described above, you have the option to upload your report to RPubs. You can also see all the reports that others have written. These are great to learn from, since they typically contain both all the code, and the output and graphs, tying it all together into an analytical narrative. Unfortunately, there is no good way of searching the site, so you will find people's homework nestled between great expository writing, but it's still well worth a visit. You can also visit [the knitr notebook showcase](http://yihui.name/knitr/demo/showcase/) to see some select examples.
 
@@ -76,7 +81,7 @@ There are lot's of R textbooks and documentation out there. Two other great sour
 
 [![](images/2014-10-14-starting-data-analysiswrangling-with-r-things-i-wish-id-been-told_-_whole-01.png)](http://rpubs.com/)
 
-## Separate cleaning and organizing from analysis
+# Separate cleaning and organizing from analysis
 
 Although R is a fully-fledged (although a bit crufty) programming language with object-orientation and functions, the code that users typically write is very different from an R package. Users usually write very imperative code, *"load this file, then transform the second column, then add the third column, then graph it"*. However, acquiring some good habits of organizing the code and working with the data, might save you a lot of time in the long run. *(Also see the section on DRY below)*
 
@@ -164,7 +169,8 @@ And we have a nicely prepared table that we can begin exploring.
 
 ![](images/2013-10-09-starting-data-analysiswrangling-with-r-things-i-wish-id-been-told_-_whole-07.png)
 
-## Use version control
+# Use version control
+
 ![ version control](images/2013-10-09-starting-data-analysiswrangling-with-r-things-i-wish-id-been-told_-_half-02.png)
 RStudio comes with support for [git](http://git-scm.com/) baked in, and it's a great practice to use it. When you create a new project, check the box for *"Create a git repository for this project"*, and you get all this functionality for free. Once you have a functioning version of your script, commit it to Git, and when you later make changes, you can easily track those changes back in history, restore earlier versions, etc. This is great for people collaborating, but it's actually a great idea to start doing it even on solo-projects, and can save you a lot of grief in the future. RStudio has a good [writeup](http://www.rstudio.com/ide/docs/version_control/overview) of this functionality.
 
@@ -172,7 +178,7 @@ RStudio comes with support for [git](http://git-scm.com/) baked in, and it's a g
 
 Of course, if you are able to do so, it would be great if you could share your scripts (and data) on [GitHub](https://github.com/) or another public repository. Even in cases where you can't share your raw data (because of ethics, etc), your code could be useful to others. (I have shared some of the code we used [to analyze Coursera MOOC data](http://www.ocw.utoronto.ca/demographic-reports/) in [a GitHub repository](https://github.com/houshuang/coursera-scripts), but I could probably go through my folders and find more snippets of code to share).
 
-## Learn the DSLs in R
+# Learn the DSLs in R
 
 DSL stands for domain-specific language, and the key to being efficient in R (and one of the reasons beginners might feel that the learning curve is very steep), is to realize that R is actually composed of several different embedded languages. Most end-users of R actually don't need to know very much about the R programming language, mostly people write scripts in a very imperative way "first do this, then do this, then do that". There are probably data analysts that have used R for years, and never written a function or a loop statement.
 
@@ -203,7 +209,7 @@ dt.statsPlayer <- dt.boxscore.subset[,list(minutes=sum(minutes),
 
 The key to getting proficient in R is to choose one main way of doing things, for example ggplot2 for all graphics (and not worrying about learning grid and lattice plotting), and either data.table or plyr, and focusing on understanding their underlying logic, and using them frequently.
 
-## DRY - Don't repeat yourself
+# DRY - Don't repeat yourself
 
 This used to be a mantra when programming Ruby, but is often overlooked in R code. Since many people think of doing analysis in R as simply writing a number of instructions to be executed linearly, we forget that the language let's us be much more efficient. I did say above that you don't need to understand the R programming language in depth to use R profitably, however, a few features are very useful.
 
@@ -270,7 +276,7 @@ for (e in names(db)) {
 }
 ```
 
-## Keeping track of types in R
+# Keeping track of types in R
 
 Again breaking against my statement that you don't need to know much of the R language, but [the various data types](http://www.statmethods.net/input/datatypes.html) is one of the things that has tripped me up the most. This is because certain operations can return different data types than you were expecting.
 
@@ -302,7 +308,7 @@ You can check the class of an object with `class()`,
 
 If you run into weird bugs, make sure that every step of the pipeline returns the data type that the next function is expecting (or explicitly cast). Also remember that certain functions work differently depending on different data types. For example, `length()` on a list or vector returns the number of elements. `length()` on a data.frame returns the number of columns, if you want the number of rows, you need `nrow()`.
 
-## Asking questions - providing reproducible examples
+# Asking questions - providing reproducible examples
 
 There are many great resources for getting help with R, including all the books I showed pictures of at the beginning of this post. An advantage of R being text-oriented is that it is easy to paste exactly the code that is misbehaving, and for others to help out. [StackOverflow](http://stackoverflow.com/questions/tagged/r) has a very active R community, however you have a much higher chance of getting help if you make your problem reproducible.
 
@@ -326,7 +332,7 @@ ggplot(a, aes(x=A, y=B)) + geom_point()
 
 ...and anyone can paste this into their R interpreter, and see the same output that you get. [Longer explanation](http://stackoverflow.com/questions/5963269/how-to-make-a-great-r-reproducible-example) and here's [a small example](http://stackoverflow.com/questions/1299871/how-to-join-data-frames-in-r-inner-outer-left-right).
 
-## Packages to use
+# Packages to use
 One of the strengths of R is the incredible selection of packages available, but this can also be quite disorienting to a beginner. Here are just a few packages that are often useful:
 
 |Package|Description |

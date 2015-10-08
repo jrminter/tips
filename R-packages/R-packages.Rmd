@@ -3,13 +3,18 @@ title: "R Package Tips"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{R package Tips}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 [Back to Index](../README.html)
 
-## Overview
+# Overview
 
 One of the best ways to make analyses reproducible is to not 
 repeatedly write the same code. Instead, our goal is to assemble
@@ -17,7 +22,7 @@ re-usable functions into R packages under version control and
 containing unit tests. This document contains my favorite tips
 assembled from various sites on the web.
 
-## Key References
+# Key References
 
 [Jeff Leek's group practices](https://github.com/jtleek/rpackages)     
 [Hadley Wikham's site](http://r-pkgs.had.co.nz/)     
@@ -26,9 +31,8 @@ assembled from various sites on the web.
 [CRAN roxygen process](http://cran.r-project.org/web/packages/roxygen2/vignettes/rd.html)    
 
 
-## Key snippets
 
-### Set up a new package `myPkg` that we plan to host on github
+# Set up a new package `myPkg` that we plan to host on github
 
 On my local computer:
 
@@ -57,14 +61,15 @@ git commit -m 'initial commit'
 git push -u origin master
 ```
 
-### The cursed "no visible binding for global variable" error...
+# The cursed "no visible binding for global variable" error...
 
 Using LazyLoaded data often gives this error. The key is to explictly use the variable from the package namespace, eg:
 
 ```
 ret <- func(myPkg::var, other)
 ```
-### The importance of vignettes
+
+# The importance of vignettes
 
 > If you’re thinking without writing, you only think you’re thinking. -- Leslie Lamport
 

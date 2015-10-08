@@ -3,8 +3,13 @@ title: "Making a histogram with ggplot2"
 author: "The DataCamp Blog"
 date: "2015-03-14"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{Making a histogram with ggplot2}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 [Back to Index](../README.html)
@@ -13,7 +18,7 @@ This is from [The DataCamp Blog](http://blog.datacamp.com/make-histogram-ggplot2
 
 In our previous post you learned how to make histograms with the hist() function. You can also make a histogram with ``ggplot2``, “a plotting system for R, based on the grammar of graphics”. This post will focus on making a Histogram With ggplot2. Want to learn more? Discover the DataCamp tutorials.
 
-## Step One. Check That You Have ggplot2 installed
+# Step One. Check That You Have ggplot2 installed
 
 First, go to the tab “packages” in RStudio, an IDE to work with R efficiently, search for ``ggplot2`` and mark the checkbox. Alternatively, it could be that you need to install the package. In this case, you stay in the same tab and you click on “Install”. Enter ``ggplot2``, press ENTER and wait one or two minutes for the package to install.
 
@@ -29,7 +34,7 @@ To effectively load the ``ggplot2`` package, execute the following command.
 library(ggplot2)
 ```
 
-## Step Two. The Data
+# Step Two. The Data
 
 Next, make sure that you have some dataset to work with: import the necessary file or use one that is built into R. This tutorial will be working with the chol dataset. If you’re just tuning in, you can download the this dataset from here.
 
@@ -39,7 +44,7 @@ You can load in the chol data set by using the ``url()`` function embedded into 
 chol <- read.table(url("http://assets.datacamp.com/blog_assets/chol.txt"), header = TRUE)
 ```
 
-## Step Three. Making Your Histogram With ggplot2
+# Step Three. Making Your Histogram With ggplot2
 
 You have two options to make a histogram with ``ggplot2`` package. You can either use the ``qplot()`` function, which looks very much like the ``hist()`` function:
 
@@ -59,9 +64,9 @@ The difference between these two options? The ``qplot()`` function is supposed t
 
 Note in practice, ``ggplot()`` is used more often.
 
-## Step Four. Taking It One Step Further
+# Step Four. Taking It One Step Further
 
-### Adjusting qplot()
+## Adjusting qplot()
 
 The options to adjust your histogram through ``qplot()`` are not too extensive, but this function does allow you to adjust the basics to improve the visualization and hence the understanding of the histograms; All you need to do is add some more arguments, just like you did with the ``hist()`` function.
 
@@ -84,7 +89,7 @@ qplot(chol$AGE,
 
 Since the R commands are only getting longer and longer, you might need some help to understand what each part of the code does to the histogram’s appearance. Again, let’s just break it down to smaller pieces:
 
-#### Bins
+## Bins
 
 You can change the binwidth by specifying a binwidth argument in your ``qplot()`` function:
 
@@ -94,7 +99,7 @@ qplot(chol$AGE,
       binwidth = 5)
 ```
 
-#### Names/colors
+## Names/colors
 
 As with the ``hist()`` function, you can use the argument main to change the title of the histogram:
 
@@ -157,7 +162,7 @@ qplot(chol$AGE,
 
 Note that the ``I()`` function is used here also! Again, try to leave this function out and see what effect this has on the histogram.
 
-#### X- and Y-Axes
+## X- and Y-Axes
 
 The ``qplot()`` function also allows you to set limits on the values that appear on the x-and y-axes. Just use xlim and ylim, in the same way as it was described for the ``hist()`` function in the first part of this tutorial on histograms. After adding the xlim argument and some reasonable paramters, you end up with the histogram from the start of this section:
 
@@ -175,7 +180,7 @@ qplot(chol$AGE,
 
 **Tip** do not forget to use the ``c()`` function to specify xlim and ylim!
 
-### Adjusting ggplot()
+# Adjusting ggplot()
 
 Just like the two other options that have been discussed so far, adjusting your histogram through the ``ggplot()`` function is also very easy. The general message stays the same: just add more code to the original code that plots your (basic) histogram! This way, you can adjust your basic ggplot to look like the following:
 
@@ -193,7 +198,7 @@ ggplot(data=chol, aes(chol$AGE)) +
 
 Again, let’s break this huge chunk of code into pieces to see exactly what each part contributes to the visualization of your histogram:
 
-#### Bins
+## Bins
 
 To adjust the bin width and the breakpoints, you can basically follow the general guidelines that were provided in the first part of the tutorial on histograms, since the arguments work alike. This means that you can add breaks to change the bin width:
 
@@ -206,7 +211,7 @@ Note that it is possible for the ``seq()`` function to explicitly specify the by
 
 Remember that you could also express the same constraints on the bins with the ``c()`` function, but that this can make your code messy.
 
-#### Names/Colors
+## Names/Colors
 
 To adjust the colors of your histogram, just add the arguments ``col`` and ``fill``, together with the desired color:
 
@@ -274,7 +279,7 @@ ggplot(data=chol, aes(chol$AGE)) +
   labs(x="Age", y="Count")
 ```
 
-#### X-And Y Axes
+## X-And Y Axes
 
 Similar to the arguments that the ``hist()`` function uses to adjust the x-and y-axes, you can use the ``xlim()`` and ``ylim()``. If you add these two functions, you end up with the histogram from the start of this section:
 
@@ -292,7 +297,7 @@ ggplot(data=chol, aes(chol$AGE)) +
 
 **Tip** do not forget to use the ``c()`` function when you use the arguments ``xlim`` and ``ylim``! And you should probably watch out for those parentheses too.
 
-#### Extra: Trendline
+## Extra: Trendline
 
 You can easily add a trendline to your histogram by adding geom_density to your code:
 
@@ -310,7 +315,7 @@ ggplot(data=chol, aes(chol$AGE)) +
 
 Remember: just like with the ``hist()`` function, your histograms with ggplot2 also need to plot the density for this to work. Remember also that the hist() function required you to make a trendline by entering two separate commands while ggplot2 allows you to do it all in one single command.
 
-## Step Five. Feeling Like Going Far And Beyond?
+# Step Five. Feeling Like Going Far And Beyond?
 
 If you’re intrigued by the histograms that you can make with ggplot2, and if you want to discover what more you can do with this package, you can read more about it on the RDocumentation page. It is a great starting point for anybody that is interested in taking ggplot2 to the next level.
 

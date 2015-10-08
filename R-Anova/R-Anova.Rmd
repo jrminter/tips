@@ -2,8 +2,13 @@
 title: "ANOVA and R"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{ANOVA and R}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 ```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
@@ -29,7 +34,7 @@ Author: [Falk Scholer]
 (http://goanna.cs.rmit.edu.au/~fscholer/anova.php),
 Date: November 30, 2012
 
-## The ANOVA Controversy
+# The ANOVA Controversy
 ANOVA is a statistical process for analysing the amount
 of variance that is contributed to a sample by different
 factors. It was initially derived by R. A. Fisher in
@@ -47,7 +52,7 @@ led to an ongoing controversy in the field of statistics
 comes down to testing different hypotheses about the 
 data.
 
-## Type I, II and III Sums of Squares
+# Type I, II and III Sums of Squares
 
 Consider a model that includes two factors A and B; 
 there are therefore two main effects, and an
@@ -88,7 +93,7 @@ The different types of sums of squares then arise
 depending on the stage of model reduction at which they 
 are carried out. In particular:
 
-### Type I, also called "sequential" sum of squares:
+## Type I, also called "sequential" sum of squares:
 
 * ``SS(A)`` for factor A.
 * ``SS(B | A)`` for factor B.
@@ -117,7 +122,7 @@ first factor without controlling for the other factor
 Note that this is often not the hypothesis that is of 
 interest when dealing with unbalanced data.
 
-### Type II:
+## Type II:
 
 * ``SS(A | B)`` for factor A.
 * ``SS(B | A)`` for factor B.
@@ -140,7 +145,7 @@ taking the appropriate output (the second, where one
 main effect is run after the other, in the example
 above).
 
-### Type III:
+## Type III:
 
 * ``SS(A | B, AB)`` for factor A.
 * ``SS(B | A, AB)`` for factor B.
@@ -162,7 +167,7 @@ more powerful test.
 orthogonal, and types I, II and III all give the same 
 results.
 
-### Summary
+## Summary
 Usually the hypothesis of interest is about 
 the significance of one factor while controlling for the 
 level of the other factors. This equates to using type 
@@ -174,7 +179,7 @@ can still be used, but results need to be interpreted
 with caution (in the presence of interactions, main 
 effects are rarely interpretable).
 
-## The ``anova()`` and ``aov()`` Functions in R
+# The ``anova()`` and ``aov()`` Functions in R
 
 The ``anova()`` and ``aov()`` functions in R implement
 a sequential sum of squares (type I). As indicated
@@ -188,7 +193,7 @@ particular levels of observations that occur in the
 discussion, it should be clear that it is relatively 
 straightforward to obtain type II SS in R.
 
-### Type II SS in R
+## Type II SS in R
 
 Since type II SS tests each main effect after the other 
 main effects, and assumes no interactions, the correct 
@@ -203,7 +208,7 @@ experimental search systems on which they run the test
 (sys). They are also assigned a number of different 
 search queries (topic).
 
-### To obtain type I SS:
+## To obtain type I SS:
 
 ```anova(lm(time ~ sys * topic, data=search))```
 
@@ -219,7 +224,7 @@ after the first factor). That is, you obtain the type II
 SS results for topic from the first command, and the 
 results for sys from the second.
 
-### Type III SS in R
+## Type III SS in R
 
 This is slightly more involved than the type II results.
 First, it is necessary to set the contrasts option in R. 

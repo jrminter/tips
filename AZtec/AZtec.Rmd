@@ -1,17 +1,22 @@
 ---
-title: "John's AZtec Tips"
+title: "AZtec Tips"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{AZtec Tips}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
-This documents contains hints that I find helpful when using the Oxford AZtec 2.2 Software.
+This documents contains hints that I find helpful when using the Oxford AZtec 3.0 Software.
 
 [Back to Index](../README.html)
 
-### User-Generated Public Templates
+# User-Generated Public Templates
 
 These are in
 
@@ -19,7 +24,7 @@ These are in
 C:\Users\Public\Documents\AZtec\Report Templates
 ```
 
-### Exporting maps and making montages
+# Exporting maps and making montages
 
 I like tightly-stitched maps with the ability to crop regions of interest. Here is the current procedure I use. The export of the PNG files is kludgy - I need to try to write an Auto-IT to script. This keeps the raw images in the ``$EDS_ROOT/Oxford/QM14-nn-nnA-Client/reports/qm-nnnnn-sampleID/qm-nnnnn-sampleID-nnkV-map1/tif`` tree where I cannot use version control (AZtec projects fail to open...) and the python scripts and report images in the ``$HOME/work/proj/QM14-nn-nnA-Client/`` tree where I do use version control (``git``). **Note:** the scripts below use functions from ``jmFijiGen.py`` which must be in ``$FIJI_ROOT/jars/Lib/``.
 
@@ -62,7 +67,7 @@ After you navigate to a folder you created, save the image with a name like ``C-
 
 11. **Annotate the map.** Use the ``Text Tool``. Save the annotated map, ``qm-nnnnn-sampleID-nnkV-mapN-ann.png``, in the ``$HOME/work/proj/QM14-nn-nnA-Client/Sweave/inc/png`` tree. These ``.png`` files may be used with Sweave, RMarkdown, or PowerPoint for reports.
 
-### Preferred colors for maps
+# Preferred colors for maps
 
 It helps to have consistent colors for maps. *N.B.* there are issues with R/G colorblindness here....
 
@@ -99,7 +104,7 @@ table:nth-of-type(2) {
 ![Summary View](img/EasySetMapColors.png)
 
 
-#### HSV Color wheel values
+## HSV Color wheel values
 
 See [Wikipedia](http://simple.wikipedia.org/wiki/Color_wheel)
 
@@ -129,16 +134,16 @@ The 12 major colors of the color wheel, at 30 degree intervals on the HSV color 
 
 This constitutes the complete set of primary, secondary, and tertiary color names.
 
-### Report templates
+# Report templates
 
 My current favorite report templates are
 
 ![FavReportTemplates](img/FavReportTemplates.png)
 
-### EDS Mapping parameters
+# EDS Mapping parameters
 
 
-#### AutoLock
+## AutoLock
 
 My first reasonable set below...
 
@@ -162,18 +167,18 @@ On the AZtec system one can crop these using ``Microsoft Paint`` and store them 
 
 The best discussion starts on p. 160 of the manual. It might be worth changing my tracking image to size 512 and a dwell time of 10 us. Need to see how that changes the frame time and think about a reasonable interval (they use 10 sec).
 
-#### EDS Mapping for 7 kV
+### EDS Mapping for 7 kV
 
 ![Mapping](img/GoodMapPar.png)
 
-### Controlling the export of maps
+## Controlling the export of maps
 1. For the map you want, right click and select ``Details``.
 2. Note the ``Resolution (Width)`` (e.g. 1024 px) and the ``Image Width`` (e.g. 193 $\mu$m). You may want to note the ``Magnification`` as well...
 3. Again for the map you want, right click and select ``Export >> Settings``. Leave ``Keep Aspect Ratio``checked and turn off what you don't want. Set to the resolution you want (i.e. 1024) and then press ``Save As...``
 
-## A better proposed strategy for probe current proxy measurements
+# A better proposed strategy for probe current proxy measurements
 
-### The basic idea
+## The basic idea
  
 The ``Optimize`` menu makes it easy to do a beam current measurement. It is important to configure for the correct element and process time to be relevant to our DTSA-II detectors.
 
@@ -223,25 +228,34 @@ The Si peak is well-behaved with voltage. This is an analysis using DTSA-II to f
 
 The AZtec beam measurement routine only works successfully for Cu above 10 kV (because it always uses the K-line), though one can use DTSA-II approach. The Si spectra are cleaner and have no oxidation. The Cu data are in the project ``2014-09-12-QC``.
 
-## Alchemy...
+## Low-energy and high spatial resolution EDS mapping
 
-### Distorted scan
+A webinar (2015-06-18) by Jens Rafaelsen, an applications engineer at EDAX. He had real tech issues... Did simulations with DTSA-II and Casino. Also uses the radial distributions, also simulating probe size. This would be useful.
+
+Test specimen - flick a lighter flint onto Si. Flint has Ce.
+
+He thinks beam drift at. Drift was manageble. Also said let scope stabilize for an hour before drift correction.
+
+
+# Alchemy...
+
+## Distorted scan
 
 Sometimes when image collection is stopped, the scan is offset and looks odd on the microscope display. The solution is to reset the hardware. Close AZtec and run the tidy-up program to reset everything.
 
-### Setting your own logo
+# Setting your own logo
 
 The Oxford logo is in a file ``logo.png`` in ``C:\Program Files\Oxford Instruments NanoAnalysis\AZtec\Reports``. It is ``150x71`` pixels. design a replacement with the same aspect ratio and rename the old one to ``logo-old.png``
 
 
 
-## Basic Info
+# Basic Info
 
 Oxford S/N: ``CZC4081PBM``     
 System NO:  ``37404``
 
 
-### A proposed SPI Standards Block
+# A proposed SPI Standards Block
 
 ```
 1. Faraday Cup      02750-AB      $611.80
@@ -255,7 +269,7 @@ System NO:  ``37404``
 9. Nine Hole Mount  ASTP05009-AB $2379.75
 ```
 
-### The setup
+# The system setup
 
 There is a power strip mounted on the base of the Sirion on the bottom rail. It supplies power to the computer, monitor, the micsF+ box and the x-stream-2 box, as well as a 24 V laptop power supply. The laptop power supply plugs into a cable on the detector and another cable goes to the x-stream2 box.
 
@@ -264,13 +278,6 @@ One can shut the computer down and turn off the strip to turn everything off.
 Note: one can use the tidy-up program to reset everything.
 
 
-## Low-energy and high spatial resolution EDS mapping
-
-A webinar (2015-06-18) by Jens Rafaelsen, an applications engineer at EDAX. He had real tech issues... Did simulations with DTSA-II and Casino. Also uses the radial distributions, also simulating probe size. This would be useful.
-
-Test specimen - flick a lighter flint onto Si. Flint has Ce.
-
-He thinks beam drift at. Drift was manageble. Also said let scope stabilize for an hour before drift correction.
 
 
 

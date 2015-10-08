@@ -1,9 +1,14 @@
 ---
-title: "Tips on Handling Geospatial Data in R"
+title: "Handling Geospatial Data in R"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{Handling Geospatial Data in R}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 ```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
@@ -25,7 +30,7 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 [Back to Index](../README.html)
 
 
-### Plotting on Google Maps
+# Plotting on Google Maps
 
 [Digg Data](http://diggdata.in/post/51396519384/plotting-geo-spatial-data-on-google-maps-in-r) presents a nice example which was explained on [Stack Overflow](http://stackoverflow.com/questions/19886996/understanding-spatial-objects-in-r)
 

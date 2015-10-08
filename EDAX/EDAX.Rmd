@@ -3,8 +3,13 @@ title: "EDAX Genesis Tips"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{EDAX Genesis Tips}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 ```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
 # make this an external chunk that can be included in any file
@@ -26,12 +31,12 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 [Back to Index](../README.html)
 
-## Key info
+# Key info
 - ***EDAM Shell password:*** EDAM3PCI
 - ***CM20UT system ID:*** HX-0412 (STEM 200kV: Field width is 194 mm)
 - ***FIB620 system ID:*** HX-0382 detector from Phoenix HX-0183
 
-### Perform a Multi-point Automated Beam Analysis
+# Perform a Multi-point Automated Beam Analysis
 
 1. Double click on the SEM / TEM Multi-point Analysis icon, setup your sample in the microscope and collect an Image via the Image-Collect menu item or the toolbar !['e'](img/e.png).  Set the scanning mode ( Scan-F ) to spot mode, Scan-S. Then clear the EDX spectrum and position the red crosshair on a feature of the image and click on the Start button to start the spectrum analysis. Identify the peaks in the spectrum by using the Peak ID function. It is very important to identify all the elements that you may expect for the automated analysis.
 
@@ -58,9 +63,9 @@ ve defined on the image.
 To view the quantitative results graphically in SEM / TEM Multi-point Analysis, click on "Graph" from the results summary dialog.
 
 
-### Setting up a line profile in MultiPoint
+## Setting up a line profile in MultiPoint
 
-#### Setting a P1-P2 Line
+### Setting a P1-P2 Line
 - ***First*** click on any other method in the menu to reset the choice. Failure to do this causes a lot of annoyance...
 - Click on the P1-P1 Line menu.
 - Click on the P1 point in the image.
@@ -70,9 +75,9 @@ To view the quantitative results graphically in SEM / TEM Multi-point Analysis, 
 - Open the location table and verify the endpoints. Change the number of steps from 10 if desired.
 - Verify by having it draw all loctions on the image.
 
-## Fixes for annoying issues
+# Fixes for annoying issues
 
-### Menu bar issues on WinXP
+## Menu bar issues on WinXP
 Applications menu bar is partially obscured by the Genesis multi-tab
 window. Note : On Windows XP this may not be a problem because of the
 larger Title bar.
@@ -82,7 +87,7 @@ larger Title bar.
 - Select from the Item Drop Down list "Menu". 
 - To the right of this dropdown there is a numerical up/down selection for the menu bars height.  If this set to 18, try around 29 for Small Font Mode and click on Apply.  Start the Genesis software by double clicking on the Genesis icon in the EDAX Genesis folder, or in the Windows explorer on the file "c:\edax32\genesis\GenTabs.exe", and you should see that the Genesis Spectrum software menu bar is not obscured by the EDAX tabbed window.
 
-### Dewar Vacuum
+## Dewar Vacuum
 
 From the Microscopy mailing list (2014-11-11)
 

@@ -3,8 +3,13 @@ title: "Gnuplot Tips"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
-  html_document:
-    css: ../theme/custom.css
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{Gnuplot Tips}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 [Back to Index](../README.html)
@@ -19,11 +24,11 @@ compiled from several web sources. Some helpful ones:
 [gnuplotting.org](http://www.gnuplotting.org/)
 
 
-## Hacking the .plt file
+# Hacking the .plt file
 
-### Devices
+## Devices
 
-#### Postscript
+### Postscript
 
 Use something like this
 ```
@@ -46,7 +51,7 @@ rm -rf temp.pdf
 Cropping the margins is especailly helpful for inclusion
 in $\LaTeX$ documents.
 
-#### PNG
+### PNG
 The best png output comes via postscript. Make sure ImageMagick's
 ``convert`` program is ahead of windows ``convert`` program in the
 path. Then use
@@ -58,7 +63,7 @@ convert -density 150 -geometry 100% plt.ps plt.png
 One can so this manually using Fiji's "Import PDF" and chosing a 200 dpi from the dialog. This is nice because one can copy an image of a ROI from which an EDS spectrum was collected and paste it into the PNG of the spectrum to make a self-contained figure.
 
 
-## Useful DTSA Spectrum Plot hacks
+# Useful DTSA Spectrum Plot hacks
 
 ```
 unset logscale x
@@ -71,6 +76,8 @@ set format x "%g"
 set format y "%g"
 unset label
 ```
+
+# Color
 
 ## RGB Colors
 
@@ -112,7 +119,7 @@ pal <-brewer.pal(8,"Blues")
 pal
 ```
 
-### Changing label colors
+## Changing label colors
 
 Try
 
@@ -120,7 +127,7 @@ Try
 set label 3 "Si (ignored)" at first 1730,90000 center textcolor rgb "skyblue"
 ```
 
-### Adding symbols
+# Adding symbols
 
 ```
 # Setting the terminal postscript with the options
@@ -150,7 +157,7 @@ sin(x) w l lt 3 lc 2 lw 3 t "sin{/Symbol a})"
 
 ```
 
-### Controlling borders
+# Controlling borders
 
 The FAQ suggests:
 
