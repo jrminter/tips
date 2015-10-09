@@ -56,7 +56,8 @@ qplot(chol$AGE, geom="histogram")
 You can also use the ``ggplot()`` function to make the same histogram:
 
 ```{r}
-# Take the dataset "chol" to be plotted, pass the "AGE" column from the "chol" dataset as values on the x-axis and compute a histogram of this
+# Take the dataset "chol" to be plotted, pass the "AGE" column from the "chol"
+# dataset as values on the x-axis and compute a histogram of this
 ggplot(data=chol, aes(chol$AGE)) + geom_histogram()
 ```
 
