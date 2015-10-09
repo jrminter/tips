@@ -124,7 +124,7 @@ C:\Users\userName\AppData\Roaming\Sublime Text 3\Packages\User
 
 # Using Sublime Text 3 with git
 
-# Windows
+## Windows
 
 From [Stack Overflow](http://stackoverflow.com/questions/8951275/git-config-core-editor-how-to-make-sublime-text-the-default-editor-for-git-on)
 
@@ -138,7 +138,7 @@ git config --global core.editor "'c:/program files/sublime text 3/subl.exe' -w"
 
 > With this git config the a new tab is opened in my editor. I edit my commit message, save the tab and close it (`CTRL+w`). Git will wait until the tab is closed to continue its work.
 
-# MacOSX
+## MacOSX
 
 See the [Git Hub](https://help.github.com/articles/associating-text-editors-with-git/) page
 

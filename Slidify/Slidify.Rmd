@@ -39,7 +39,7 @@ to create HTML5 slides from R.
 
 **2015-05-04 Note:** There is an incompatibility between the latest version of `Slidify` and the release version of `stringr` caused by a problem with processing regular expressions. The current workaround is to install `stringr-0.6.2` from the `CRAN` archives.
 
-## Installation
+# Installation
 One installs Slidify from github in R with the commands
 
 ```
@@ -47,7 +47,7 @@ library(devtools)
 install_github('slidify', 'ramnathv')
 install_github('slidifyLibraries', 'ramnathv')
 ```
-## Getting started
+# Getting started
 RV provides some helpful tips to get started on his
 [github](https://github.com/ramnathv/slidify) page.
 
@@ -90,16 +90,16 @@ to incorporate the changes.
 **Note:** I have a template (index.Rmd) in `templates/Rmd/Slidify` and a `slidify.css` file in `global/css/`. Also have some logos in `global/png/`
 
 
-## Alchemy
+# Alchemy
 
-### io2012
+## io2012
 ``io2012`` is a convenient framework for slides. I find the default
 text too small and like to add some color to the title slide. We
 need to edit files in the ``libraries/frameworks/io2012`` directory.
 
 Want to double check this one in my current template... 
 
-### css/slidify.css
+## css/slidify.css
 change the ``article`` styles
 
 ```
@@ -112,7 +112,7 @@ article p, article li, article li.build{
 }
 ```
 
-### Overriding a single instance from the .css
+## Overriding a single instance from the .css
 
 Here is a case where the default left margin for a quote (50px) was too small. Use the html tag to override.
 
@@ -121,7 +121,7 @@ Here is a case where the default left margin for a quote (50px) was too small. U
 
 ```
 
-### Adding a footer
+## Adding a footer
 
 From Ramnath's user2014 tutorial, slide 30
 
@@ -141,7 +141,7 @@ change `layout/slide.html`
 </slide>
 ```
  
-### Making a reproducible, custom theme.
+## Making a reproducible, custom theme.
 
 Once one gets a set of changes that we would like
  to recycle, one can always make a new copy of

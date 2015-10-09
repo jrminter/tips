@@ -1,6 +1,7 @@
 ---
 title: "Plagiarism"
-date: "`r format(Sys.time(), '%Y-%m-%d')`"
+author: "Jeff Gissing"
+date: "2013-11-28"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-mod-vignette.css
@@ -30,13 +31,13 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 ```
 [Back to Index](../README.html)
 
+# Introduction
+
 Some helpful hints from [Jeff Gissing](http://jeffgissing.com/2013/11/28/plagiarism/) in response to a nasty situation with Mark Driscoll and Janet Mefferd detailed [here](http://jonathanmerritt.religionnews.com/2013/11/27/mark-driscoll-silent-amid-mounting-allegations-of-plagiarism/).
 
-I would note that the allegations would be considered plagiarism, at least by [Harvard](√) and [JHU](http://advanced.jhu.edu/current-students/policies-2/notice-on-plagiarism-2/) who refer students to [plagiarism.org](http://www.plagiarism.org/).
+I (J. R. Minter) would note that the allegations would be considered plagiarism, at least by [JHU](http://advanced.jhu.edu/current-students/policies-2/notice-on-plagiarism-2/) who refer students to [plagiarism.org](http://www.plagiarism.org/).
 
-
-
-
+# Avoiding Plagiarism
 
 How then can you avoid plagiarism in your writing, whether that content is received aurally or visually:
 

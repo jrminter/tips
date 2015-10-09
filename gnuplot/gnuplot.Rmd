@@ -97,7 +97,7 @@ pal <-brewer.pal(8,"Oranges")
 pal
 ```
 
-### Plotting lines
+## Plotting lines
 
 use these in gnuplot like
 ```
