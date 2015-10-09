@@ -41,7 +41,7 @@ Next, make sure that you have some dataset to work with: import the necessary fi
 You can load in the chol data set by using the ``url()`` function embedded into the ``read.table()`` function:
 
 ```{r}
-chol <- read.table(url("http://assets.datacamp.com/blog_assets/chol.txt"), header = TRUE)
+chol <- read.table("./dat/chol.txt", header = TRUE)
 ```
 
 # Step Three. Making Your Histogram With ggplot2
@@ -50,7 +50,8 @@ You have two options to make a histogram with ``ggplot2`` package. You can eithe
 
 ```{r}
 #Take the column "AGE" from the "chol" dataset and make a histogram of it
-qplot(chol$AGE, geom="histogram") 
+age <- chol$AGE
+qplot(age, geom="histogram") 
 ```
 
 You can also use the ``ggplot()`` function to make the same histogram:
@@ -58,7 +59,7 @@ You can also use the ``ggplot()`` function to make the same histogram:
 ```{r}
 # Take the dataset "chol" to be plotted, pass the "AGE" column from the "chol"
 # dataset as values on the x-axis and compute a histogram of this
-ggplot(data=chol, aes(chol$AGE)) + geom_histogram()
+ggplot(data=data.frame(age=age), aes(age)) + geom_histogram()
 ```
 
 The difference between these two options? The ``qplot()`` function is supposed to make the same graph as ``ggplot()``, but with a simpler syntax. While ``ggplot()`` allows for maximum features and flexibility, ``qplot()`` is a simpler but less customizable wrapper around ``ggplot``.
@@ -186,7 +187,7 @@ qplot(chol$AGE,
 Just like the two other options that have been discussed so far, adjusting your histogram through the ``ggplot()`` function is also very easy. The general message stays the same: just add more code to the original code that plots your (basic) histogram! This way, you can adjust your basic ggplot to look like the following:
 
 ```{r}
-ggplot(data=chol, aes(chol$AGE)) + 
+ggplot(data=data.frame(age=age), aes(age)) + 
   geom_histogram(breaks=seq(20, 50, by = 2), 
                  col="red", 
                  fill="green", 
@@ -204,7 +205,7 @@ Again, let’s break this huge chunk of code into pieces to see exactly what eac
 To adjust the bin width and the breakpoints, you can basically follow the general guidelines that were provided in the first part of the tutorial on histograms, since the arguments work alike. This means that you can add breaks to change the bin width:
 
 ```{r}
-ggplot(data=chol, aes(chol$AGE)) + 
+ggplot(data=data.frame(age=age), aes(age)) + 
   geom_histogram(breaks=seq(20, 50, by=2))
 ```
 
@@ -217,7 +218,7 @@ Remember that you could also express the same constraints on the bins with the `
 To adjust the colors of your histogram, just add the arguments ``col`` and ``fill``, together with the desired color:
 
 ```{r}
-ggplot(data=chol, aes(chol$AGE)) + 
+ggplot(data=data.frame(age=age), aes(age)) + 
   geom_histogram(breaks=seq(20, 50, by =2), 
                  col="red", 
                  fill="green")
@@ -226,7 +227,7 @@ ggplot(data=chol, aes(chol$AGE)) +
 The alpha argument controls the fill transparency. Remember to pass a value between 0 (transparent) and 1 (opaque):
 
 ```{r}
-ggplot(data=chol, aes(chol$AGE)) + 
+ggplot(data=data.frame(age=age), aes(age)) + 
   geom_histogram(breaks=seq(20, 50, by =2), 
                  col="red", 
                  fill="green", 
@@ -236,7 +237,7 @@ ggplot(data=chol, aes(chol$AGE)) +
 You can also fill the bins with colors according to the count numbers that are presented in the y-axis, something that is not possible in the ``qplot()`` function:
 
 ```{r}
-ggplot(data=chol, aes(chol$AGE)) + 
+ggplot(data=data.frame(age=age), aes(age)) + 
   geom_histogram(breaks=seq(20, 50, by =2), 
                  col="red", 
                  aes(fill=..count..))
@@ -249,7 +250,7 @@ The default color scheme is blue. If you want to change this, you should add som
 - that the higher values should appear in red:
 
 ```{r}
-ggplot(data=chol, aes(chol$AGE)) + 
+ggplot(data=data.frame(age=age), aes(age)) + 
   geom_histogram(breaks=seq(20, 50, by =2), 
                  col="red", 
                  aes(fill=..count..)) +
@@ -261,7 +262,7 @@ Remember that the ultimate purpose of adjusting your histogram should always be 
 Note that there are several more options to adjust the color of your histograms. If you want to experiment some more, you can find other arguments in the “Scales” section of the ggplot documentation page.
 
 ```{r}
-ggplot(data=chol, aes(chol$AGE)) + 
+ggplot(data=data.frame(age=age), aes(age)) + 
   geom_histogram(breaks=seq(20, 50, by = 2), 
                  col="red", 
                  fill="green", 
@@ -271,7 +272,7 @@ ggplot(data=chol, aes(chol$AGE)) +
 
 To adjust the labels on the x-and y-axes of your histogram, add the arguments x and y, followed by a string of your choice:
 ```{r}
-ggplot(data=chol, aes(chol$AGE)) + 
+ggplot(data=data.frame(age=age), aes(age)) + 
   geom_histogram(breaks=seq(20, 50, by = 2), 
                  col="red", 
                  fill="green", 
@@ -285,7 +286,7 @@ ggplot(data=chol, aes(chol$AGE)) +
 Similar to the arguments that the ``hist()`` function uses to adjust the x-and y-axes, you can use the ``xlim()`` and ``ylim()``. If you add these two functions, you end up with the histogram from the start of this section:
 
 ```{r}
-ggplot(data=chol, aes(chol$AGE)) + 
+ggplot(data=data.frame(age=age), aes(age)) + 
   geom_histogram(breaks=seq(20, 50, by = 2), 
                  col="red", 
                  fill="green", 
@@ -303,7 +304,7 @@ ggplot(data=chol, aes(chol$AGE)) +
 You can easily add a trendline to your histogram by adding geom_density to your code:
 
 ```{r}
-ggplot(data=chol, aes(chol$AGE)) + 
+ggplot(data=data.frame(age=age), aes(age)) + 
   geom_histogram(aes(y =..density..), 
                  breaks=seq(20, 50, by = 2), 
                  col="red", 
