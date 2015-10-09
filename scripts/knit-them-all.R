@@ -1,7 +1,8 @@
 # knit-them-all.R
 
 rm(list=ls())
-require(knitr)
+library(knitr)
+library(rmarkdown)
 
 strGitHome <- Sys.getenv("GIT_HOME")
 if(strGitHome=="") strGitHome="~/git"
@@ -22,7 +23,7 @@ names <- c("AccessToSqlite.Rmd", "automater.Rmd", "AZtec.Rmd",
            "R-Anova.Rmd", "R-bar-plots.Rmd", "R-boxplots.Rmd",
            "R-Excel.Rmd","R-foreach.Rmd", "R-GeoSpatial.Rmd",
            "R-loess.Rmd", "R-packages.Rmd", "research.Rmd",
-           "Salabim-graphics.Rmd", "shell-tips.Rmd",
+           "SEM.Rmd", "shell-tips.Rmd",
            "skimage.Rmd","Slidify.Rmd", "ST3.Rmd",
            "Sweave.Rmd", "tex-tips.Rmd","ubuntu.Rmd",
            "VS2010.Rmd","win.Rmd","workflow.Rmd", "README.Rmd")
@@ -42,7 +43,7 @@ rPath <- c("../AccessToSqlite", "../automater",
            "../R-Anova", "../R-bar-plots", "../R-boxplots" ,
            "../R-Excel", "../R-foreach", "../R-GeoSpatial", 
            "../R-loess", "../R-packages","../research",
-           "../Salabim", "../shell", 
+           "../SEM", "../shell", 
            "../skimage", "../Slidify", "../ST3",
            "../Sweave", "../tex", "../ubuntu",
            "../VS2010","../win", "../workflow", "../")
@@ -50,7 +51,8 @@ rPath <- c("../AccessToSqlite", "../automater",
 knitIt <- function(wrkPath, scrPath, theName){
   print(wrkPath)
   setwd(wrkPath)
-  knit2html(theName)
+  # knit2html(theName)
+  rmarkdown::render(theName)
   theMD <- paste0(strsplit(theName, ".Rmd")[[1]], ".md")
   file.remove(theMD)
   setwd(scrPath)
