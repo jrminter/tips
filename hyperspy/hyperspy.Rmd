@@ -28,6 +28,9 @@ echo hyperspy
 git fetch
 git fetch upstream
 git fetch pburdet
+git fetch to266
+git checkout ENH_python3
+git pull
 git checkout EHN_map_multiprocessing
 git pull
 git checkout edslab
