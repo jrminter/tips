@@ -202,6 +202,15 @@ jrminter 2: git branch -a
   remotes/upstream/revert-492-BUGFIX_migration_to_ipython3.0
 ```
 
+
+and an install of a branch...
+
+```
+pip uninstall hyperspy
+cd %GITHOME%/hyperspy
+pip install -e ./
+```
+
 From my cmd-anaconda prompt...
 
 ```
