@@ -41,6 +41,22 @@ jupyter notebook
 
 See also [hyperspy tips](../hyperspy/hyperspy.html)
 
+**N.B.** [francisco-dlp](https://github.com/hyperspy/hyperspy/issues/790) noted this problem with hyperspy when updating anaconda.
+
+```
+...
+from skimage.external.tifffile import imsave, TiffFile
+...
+RuntimeError: module compiled against API version a but this version of numpy is 9
+```
+
+One can check the version with
+
+```
+import numpy
+print numpy.__version__
+```
+
 # Spyder problem on Py 3.4
 
 Had problems with crashes. Turned out to be Babel 2.0. Ended up installing both Babel and Spyder from source. 
