@@ -92,6 +92,13 @@ To update all packages
 conda update --all
 ```
 
+## Environments
+
+To list a detailed package list for an environment
+
+```
+conda list -e
+```
 
 ## iPython Notebook
 
