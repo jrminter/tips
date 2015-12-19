@@ -18,14 +18,28 @@ See also [python tips](../python/python.html)
 
 #  Updates
 
-## Conda install of hyperspy.  From [here](https://github.com/hyperspy/hyperspy/pull/792).
+## Anaconda
+
+### Conda install of hyperspy.  From [here](https://github.com/hyperspy/hyperspy/pull/792).
 
 ```
 conda env create -f anaconda_hyperspy_environment.yml
 source activate hyperspy
 ```
 
-## Anaconda
+To deactivate
+
+```
+source deactivate
+```
+
+### Get a detailed list for an environment
+
+```
+conda list -e
+```
+
+
 
 ## My pull script from `~/git/pullAll.sh` on `jrmFastMac`
 
