@@ -66,7 +66,7 @@ Had problems with crashes. Turned out to be Babel 2.0. Ended up installing both 
 ## Getting a good Anaconda set-up on Win7 x64
 
 1. Uninstall all system Pythons
-2. Install Anaconda3 2.4.1 in C:\Apps\Anaconda3
+2. Install Anaconda3 2.4.1 in `C:\Apps\Anaconda3`
 3. move `C:\Apps\Anaconda3;C:\Apps\Anaconda3\Scripts;C:\Apps\Anaconda3\Library\bin;` to right after R in PATH
 4. `conda update conda`
 5. `conda update anaconda`   (does nothing)
