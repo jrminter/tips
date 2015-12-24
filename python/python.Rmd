@@ -20,6 +20,7 @@ See also [Intermediate Python](http://book.pythontips.com/en/latest/)
 
 ## Youtube videos
 
+### Stefan van der Walt (2012)
 [skimage 2012 Stefan van der Walt](https://www.youtube.com/watch?v=QXTyYYx5_6o) - a nice introduction 
 
 ![hierarchy](./images/skimage-hierarchy.png)
@@ -29,6 +30,12 @@ See also [Intermediate Python](http://book.pythontips.com/en/latest/)
 He showed a great way to get a histogram by flattening...
 
 ![histogram](./images/histogramExStefan.png)
+
+### Others
+
+[SciPy 2014 Juan Nunez Iglesia and Tony Yu](https://www.youtube.com/watch?v=MP-MTiCETYg)
+[Ravi Chtyala](https://www.youtube.com/watch?v=LIltHIIxZxo)
+[PyCon Australia 2013 Edward Scofield](https://www.youtube.com/watch?v=hqOsfS3dP9w)
 
 # ipython4 and jupyter
 
