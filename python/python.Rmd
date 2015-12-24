@@ -15,6 +15,21 @@ vignette: >
 
 See also [Intermediate Python](http://book.pythontips.com/en/latest/)
 
+
+# Python image processing
+
+## Youtube videos
+
+[skimage 2012 Stefan van der Walt](https://www.youtube.com/watch?v=QXTyYYx5_6o) - a nice introduction 
+
+![hierarchy](./images/skimage-hierarchy.png)
+
+`ndimage` is written in pure C. See the [ndimage](http://docs.scipy.org/doc/scipy/reference/ndimage.html) docs. He illustrated with the SEM image of glass looking for bubbles (it is a BSE image).
+
+He showed a great way to get a histogram by flattening...
+
+![histogram](./images/histogramExStefan.png)
+
 # ipython4 and jupyter
 
 Jupyter must be installed separately. See [jupyter github](https://github.com/jupyter/notebook)
