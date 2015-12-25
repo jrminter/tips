@@ -33,9 +33,9 @@ He showed a great way to get a histogram by flattening...
 
 ### Others
 
-[SciPy 2014 Juan Nunez Iglesia and Tony Yu](https://www.youtube.com/watch?v=MP-MTiCETYg)
-[Ravi Chtyala](https://www.youtube.com/watch?v=LIltHIIxZxo)
-[PyCon Australia 2013 Edward Scofield](https://www.youtube.com/watch?v=hqOsfS3dP9w)
+[SciPy 2014 Juan Nunez Iglesia and Tony Yu](https://www.youtube.com/watch?v=MP-MTiCETYg), 
+[Ravi Chtyala](https://www.youtube.com/watch?v=LIltHIIxZxo), and
+[PyCon Australia 2013 Edward Scofield](https://www.youtube.com/watch?v=hqOsfS3dP9w).
 
 # ipython4 and jupyter
 
