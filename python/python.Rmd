@@ -34,8 +34,8 @@ He showed a great way to get a histogram by flattening...
 ### Others
 
 [SciPy 2014 Juan Nunez Iglesia and Tony Yu](https://www.youtube.com/watch?v=MP-MTiCETYg), 
-[Ravi Chtyala](https://www.youtube.com/watch?v=LIltHIIxZxo), and
-[PyCon Australia 2013 Edward Scofield](https://www.youtube.com/watch?v=hqOsfS3dP9w).
+[Ravi Chityala](https://www.youtube.com/watch?v=LIltHIIxZxo) who wrote [Image Processing and Acquisition using Python](https://www.crcpress.com/Image-Processing-and-Acquisition-using-Python/Chityala-Pudipeddi/9781466583757), and
+[PyCon Australia](https://www.youtube.com/watch?v=hqOsfS3dP9w) by Edward Scofield.
 
 # ipython4 and jupyter
 
