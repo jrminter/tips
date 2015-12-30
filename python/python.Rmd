@@ -34,10 +34,16 @@ He showed a great way to get a histogram by flattening...
 ### Others
 
 
-[Image Processing with Scikit Image | EuroSciPy 2015 | Emmanuelle Gouillart, Juan Nunez Iglesias](https://www.youtube.com/watch?v=SZvez2u-w9I), 
-[SciPy 2014 Juan Nunez Iglesia and Tony Yu](https://www.youtube.com/watch?v=MP-MTiCETYg), 
-[Ravi Chityala](https://www.youtube.com/watch?v=LIltHIIxZxo) who wrote [Image Processing and Acquisition using Python](https://www.crcpress.com/Image-Processing-and-Acquisition-using-Python/Chityala-Pudipeddi/9781466583757), and
-[PyCon Australia](https://www.youtube.com/watch?v=hqOsfS3dP9w) by Edward Scofield.
+[Image Processing with Scikit Image | EuroSciPy 2015 | Emmanuelle Gouillart, Juan Nunez Iglesias](https://www.youtube.com/watch?v=SZvez2u-w9I) Juan Iglesia had problems with the video projector, but Emanuelle's presnetion was especially helpful. She has her tutorials on [github](https://github.com/emmanuelle/image-processing-tutorials). She processis SEM images as well and is a contributor to skimage...
+
+
+[SciPy 2014 Juan Nunez Iglesia and Tony Yu](https://www.youtube.com/watch?v=MP-MTiCETYg)
+
+[Ravi Chityala](https://www.youtube.com/watch?v=LIltHIIxZxo) who wrote [Image Processing and Acquisition using Python](https://www.crcpress.com/Image-Processing-and-Acquisition-using-Python/Chityala-Pudipeddi/9781466583757). 
+
+and
+
+[PyCon Australia](https://www.youtube.com/watch?v=hqOsfS3dP9w) by Edward Scofield. Lot's of ummmms.
 
 # ipython4 and jupyter
 
