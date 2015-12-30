@@ -28,6 +28,20 @@ Now use
 git add --all :/
 ```
 
+## Connect a local repository to github
+
+1. Prepare the local repository as usual. It helps to have the folder be the desired repository name on github.
+2. Go to [github](https://github.com/).
+3. Log into your account as usual
+4. Click the [new](https://github.com/new) button in the top-right. You’ll have an option there to initialize the repository with a README file, but it is better not to add it.
+5. Click the ``Create repository`` button.
+6. Go to the local repository and type at the command prompt (`$`):
+
+```
+git remote add origin https://github.com/username/new_repo_name
+git push -u origin master
+```
+
 To add from all directories.
 
 
