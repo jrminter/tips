@@ -30,6 +30,8 @@ git add --all :/
 
 ## Connect a local repository to github
 
+from [Karl Broman](http://kbroman.org/github_tutorial/pages/init.html)
+
 1. Prepare the local repository as usual. It helps to have the folder be the desired repository name on github.
 2. Go to [github](https://github.com/).
 3. Log into your account as usual
