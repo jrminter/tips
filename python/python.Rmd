@@ -23,6 +23,8 @@ See also [Intermediate Python](http://book.pythontips.com/en/latest/)
 ### Stefan van der Walt (2012)
 [skimage 2012 Stefan van der Walt](https://www.youtube.com/watch?v=QXTyYYx5_6o) - a nice introduction 
 
+[Image Analysis in Python with SciPy and Scikit Image | SciPy 2015 Tutorial | Stefan Van der Wal](https://www.youtube.com/watch?v=olb7R1cuzyU)
+
 ![hierarchy](./images/skimage-hierarchy.png)
 
 `ndimage` is written in pure C. See the [ndimage](http://docs.scipy.org/doc/scipy/reference/ndimage.html) docs. He illustrated with the SEM image of glass looking for bubbles (it is a BSE image).

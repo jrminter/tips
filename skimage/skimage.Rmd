@@ -33,6 +33,45 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 skimage is a useful image processing package
 
+# A useful image montage function
+
+This creates a montage of images with an optional colorbar. I spent **a lot of time** getting that colorbar to work right!
+
+```
+from matplotlib import pyplot as plt
+from mpl_toolkits.axes_grid1 import make_axes_locatable
+
+def plotImageMontage(lData, lTitles, nrows, ncols, title=None,
+                     baseSize=5, fSize=12, bare=False, cb=False, **kwargs):
+    xSize = ncols*baseSize
+    ySize = nrows*baseSize
+    fig, axes = plt.subplots(nrows=nrows, ncols=ncols, figsize=(xSize, ySize))
+    if title != None:
+        fig.suptitle(title, fontsize=fSize+2)
+    for ax, im, ti in zip(axes.flat, lData, lTitles):
+        ax.set_title(ti, fontsize=fSize)
+        cim = ax.imshow(im, **kwargs)
+        if cb == True:
+            # Create divider for existing axes instance
+            div = make_axes_locatable(ax)
+            # Append axes to the right of ax, with 10% width of ax
+            cax = div.append_axes("right", size="10%", pad=0.05)
+            # Create colorbar in the appended axes
+            cbar = plt.colorbar(cim, cax=cax)
+        # Remove xicks from ax
+        if bare == True:
+            ax.xaxis.set_visible(False)
+            ax.yaxis.set_visible(False)
+    plt.show()
+    return(fig)
+
+
+res = plotImageMontage([orig,astro,deconvolved], ['orig', 'blurred', 'deconvolved'], 1, 3,
+                       title='Skimage Deconvolution Demo',baseSize=5, bare=True,
+                       cb=True, vmin=0, vmax=1)
+
+```
+
 # Useful ipython notebooks
 
 [morphology](http://nbviewer.ipython.org/github/chintak/scikit-image-examples/blob/master/skimage_morphology.ipynb)    
