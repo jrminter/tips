@@ -18,6 +18,24 @@ See also [python tips](../python/python.html)
 
 #  Updates
 
+## Issues
+
+**N.B.** [francisco-dlp](https://github.com/hyperspy/hyperspy/issues/790) noted this problem with hyperspy when updating anaconda.
+
+```
+...
+from skimage.external.tifffile import imsave, TiffFile
+...
+RuntimeError: module compiled against API version a but this version of numpy is 9
+```
+
+One can check the version with
+
+```
+import numpy
+print numpy.__version__
+```
+
 ## Anaconda
 
 ### Conda install of hyperspy.  From [here](https://github.com/hyperspy/hyperspy/pull/792).

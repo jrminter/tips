@@ -82,6 +82,8 @@ Topic
 
 [python](./python/python.html)
 
+[python image processing with skimage](./skimage/skimage.html)
+
 [R](./R/R-tips.html)
 
 [R-Anova](./R-Anova/R-Anova.html)

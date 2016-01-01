@@ -1,5 +1,5 @@
 ---
-title: "scikits-image (skimage) Tips"
+title: "Python Image Processing with skimage"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
@@ -8,7 +8,7 @@ output:
     number_sections: yes
     toc: yes
 vignette: >
-  %\VignetteIndexEntry{skimage Tips}
+  %\VignetteIndexEntry{Python Image Processing with skimage}
   %\VignetteEngine{knitr::rmarkdown}
 ---
 
@@ -32,6 +32,52 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 [Back to Index](../README.html)
 
 skimage is a useful image processing package
+
+# Key documentation
+
+- [The API Reference](http://scikit-image.org/docs/dev/api/api.html) should be my first stop...
+
+- [Key examples](http://scikit-image.org/docs/dev/auto_examples/index.html) - they have lots of examples to get started.
+
+- [The SciPy Lecture Notes](http://www.scipy-lectures.org/) provide a lot of complementary information.
+
+- [Emmanuelle Gouillart's blog](http://emmanuelle.github.io/). Her tutorial on [segmentation](http://emmanuelle.github.io/a-tutorial-on-segmentation.html) is **particularly relevant**.  She reminded me that following the [NumPy doc string convention](http://emmanuelle.github.io/tools-and-tips-for-documenting-scientific-python-projects.html) gets me a long way along the road to clarity. The details are [here...](https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt#sections).
+
+- [GitHub tutorial notebooks](https://github.com/scikit-image/skimage-tutorials/tree/master/lectures). We owe Stéfan Van Der Walt, Emmanuelle Gouillart, and others a debt of gratitude for these.
+
+- [Stéfan Van Der Walt](http://bids.berkeley.edu/people/st%C3%A9fan-van-der-walt) makes his [lecture notes](https://github.com/stefanv/teaching) available on GitHub.
+
+- [Sébastien Brisard's blog](http://sbrisard.github.io/posts/20150223-Orientation_correlations_among_rice_grains-01.html) has a really nice series on 3-D segmentation of rice grains.
+
+## Youtube videos
+
+### Stefan van der Walt (2012)
+[skimage 2012 Stefan van der Walt](https://www.youtube.com/watch?v=QXTyYYx5_6o) - a nice introduction 
+
+[Image Analysis in Python with SciPy and Scikit Image | SciPy 2015 Tutorial | Stefan Van der Wal](https://www.youtube.com/watch?v=olb7R1cuzyU)
+
+![hierarchy](./images/skimage-hierarchy.png)
+
+`ndimage` is written in pure C. See the [ndimage](http://docs.scipy.org/doc/scipy/reference/ndimage.html) docs. He illustrated with the SEM image of glass looking for bubbles (it is a BSE image).
+
+He showed a great way to get a histogram by flattening...
+
+![histogram](./images/histogramExStefan.png)
+
+### Others
+
+
+[Image Processing with Scikit Image | EuroSciPy 2015 | Emmanuelle Gouillart, Juan Nunez Iglesias](https://www.youtube.com/watch?v=SZvez2u-w9I) Juan Iglesia had problems with the video projector, but Emanuelle's presnetion was especially helpful. She has her tutorials on [github](https://github.com/emmanuelle/image-processing-tutorials). She processis SEM images as well and is a contributor to skimage...
+
+
+[SciPy 2014 Juan Nunez Iglesia and Tony Yu](https://www.youtube.com/watch?v=MP-MTiCETYg)
+
+[Ravi Chityala](https://www.youtube.com/watch?v=LIltHIIxZxo) who wrote [Image Processing and Acquisition using Python](https://www.crcpress.com/Image-Processing-and-Acquisition-using-Python/Chityala-Pudipeddi/9781466583757). 
+
+and
+
+[PyCon Australia](https://www.youtube.com/watch?v=hqOsfS3dP9w) by Edward Scofield. Lot's of ummmms.
+
 
 # A useful image montage function
 
@@ -75,8 +121,8 @@ res = plotImageMontage([orig,astro,deconvolved], ['orig', 'blurred', 'deconvolve
 # Useful ipython notebooks
 
 [morphology](http://nbviewer.ipython.org/github/chintak/scikit-image-examples/blob/master/skimage_morphology.ipynb)    
-[another morphology](http://www.cs.put.poznan.pl/wjaskowski/pub/teaching/kck/lectures/notebooks/morphology.ipynb) and [the whole group](http://www.cs.put.poznan.pl/wjaskowski/pub/teaching/kck/lectures/notebooks/)      
-[parallel image processing](https://github.com/minrk/IPython.parallel.tutorial/blob/master/Parallel%20image%20processing.ipynb)   
+[another morphology](http://nbviewer.ipython.org/url/www.cs.put.poznan.pl/wjaskowski/pub/teaching/kck/lectures/notebooks/morphology.ipynb) and [the whole group](http://www.cs.put.poznan.pl/wjaskowski/pub/teaching/kck/lectures/notebooks/)      
+[parallel image processing](http://nbviewer.ipython.org/github/minrk/IPython-parallel-tutorial/blob/master/Index.ipynb) - especially [this one](http://nbviewer.ipython.org/github/minrk/IPython-parallel-tutorial/blob/master/examples/Parallel%20image%20processing.ipynb) 
 
 
 

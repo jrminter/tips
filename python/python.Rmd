@@ -1,6 +1,7 @@
 ---
 title: "Python Tips"
 author: "J. R. Minter"
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-mod-vignette.css
@@ -14,84 +15,6 @@ vignette: >
 [Back to Index](../README.html)
 
 See also [Intermediate Python](http://book.pythontips.com/en/latest/)
-
-
-# Python image processing
-
-## Youtube videos
-
-### Stefan van der Walt (2012)
-[skimage 2012 Stefan van der Walt](https://www.youtube.com/watch?v=QXTyYYx5_6o) - a nice introduction 
-
-[Image Analysis in Python with SciPy and Scikit Image | SciPy 2015 Tutorial | Stefan Van der Wal](https://www.youtube.com/watch?v=olb7R1cuzyU)
-
-![hierarchy](./images/skimage-hierarchy.png)
-
-`ndimage` is written in pure C. See the [ndimage](http://docs.scipy.org/doc/scipy/reference/ndimage.html) docs. He illustrated with the SEM image of glass looking for bubbles (it is a BSE image).
-
-He showed a great way to get a histogram by flattening...
-
-![histogram](./images/histogramExStefan.png)
-
-### Others
-
-
-[Image Processing with Scikit Image | EuroSciPy 2015 | Emmanuelle Gouillart, Juan Nunez Iglesias](https://www.youtube.com/watch?v=SZvez2u-w9I) Juan Iglesia had problems with the video projector, but Emanuelle's presnetion was especially helpful. She has her tutorials on [github](https://github.com/emmanuelle/image-processing-tutorials). She processis SEM images as well and is a contributor to skimage...
-
-
-[SciPy 2014 Juan Nunez Iglesia and Tony Yu](https://www.youtube.com/watch?v=MP-MTiCETYg)
-
-[Ravi Chityala](https://www.youtube.com/watch?v=LIltHIIxZxo) who wrote [Image Processing and Acquisition using Python](https://www.crcpress.com/Image-Processing-and-Acquisition-using-Python/Chityala-Pudipeddi/9781466583757). 
-
-and
-
-[PyCon Australia](https://www.youtube.com/watch?v=hqOsfS3dP9w) by Edward Scofield. Lot's of ummmms.
-
-# ipython4 and jupyter
-
-Jupyter must be installed separately. See [jupyter github](https://github.com/jupyter/notebook)
-
-An easy way to update aftet **the big split** from [blog.jupyter.org](http://blog.jupyter.org/2015/08/12/first-release-of-jupyter/)
-
-```
-pip install --upgrade ipython[all]  
-```
-
-or BF&I
-
-```
-# ensure setuptools/pip are up-to-date
-pip install --upgrade setuptools pip
-cd ~/git
-git clone https://github.com/jupyter/notebook.git
-cd notebook
-pip install --pre -e .
-jupyter notebook
-```
-
-# hyperspy
-
-See also [hyperspy tips](../hyperspy/hyperspy.html)
-
-**N.B.** [francisco-dlp](https://github.com/hyperspy/hyperspy/issues/790) noted this problem with hyperspy when updating anaconda.
-
-```
-...
-from skimage.external.tifffile import imsave, TiffFile
-...
-RuntimeError: module compiled against API version a but this version of numpy is 9
-```
-
-One can check the version with
-
-```
-import numpy
-print numpy.__version__
-```
-
-# Spyder problem on Py 3.4
-
-Had problems with crashes. Turned out to be Babel 2.0. Ended up installing both Babel and Spyder from source. 
 
 # Anaconda
 
@@ -204,7 +127,7 @@ Remove an environment
 conda remove --name theName --all
 ```
 
-## iPython Notebook
+# iPython Notebook
 
 Some hints from version 3.
 
@@ -216,6 +139,33 @@ default is `u''`. This is the directory to use for notebooks
 and kernels.  If one starts from the Anaconda Launcher, it seems
 to start in one's home directory. One can navigate to the
 desired folder.
+
+## ipython4 and jupyter
+
+Jupyter must be installed separately. See [jupyter github](https://github.com/jupyter/notebook)
+
+An easy way to update aftet **the big split** from [blog.jupyter.org](http://blog.jupyter.org/2015/08/12/first-release-of-jupyter/)
+
+```
+pip install --upgrade ipython[all]  
+```
+
+or BF&I
+
+```
+# ensure setuptools/pip are up-to-date
+pip install --upgrade setuptools pip
+cd ~/git
+git clone https://github.com/jupyter/notebook.git
+cd notebook
+pip install --pre -e .
+jupyter notebook
+```
+
+
+# Spyder problem on Py 3.4
+
+Had problems with crashes. Turned out to be Babel 2.0. Ended up installing both Babel and Spyder from source. 
 
 ## Checking outdated packages
 
