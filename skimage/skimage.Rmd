@@ -35,48 +35,60 @@ skimage is a useful image processing package
 
 # Key documentation
 
+## Core components
+
 - [The API Reference](http://scikit-image.org/docs/dev/api/api.html) should be my first stop...
 
 - [Key examples](http://scikit-image.org/docs/dev/auto_examples/index.html) - they have lots of examples to get started.
 
 - [The SciPy Lecture Notes](http://www.scipy-lectures.org/) provide a lot of complementary information.
 
-- [Emmanuelle Gouillart's blog](http://emmanuelle.github.io/). Her tutorial on [segmentation](http://emmanuelle.github.io/a-tutorial-on-segmentation.html) is **particularly relevant**.  She reminded me that following the [NumPy doc string convention](http://emmanuelle.github.io/tools-and-tips-for-documenting-scientific-python-projects.html) gets me a long way along the road to clarity. The details are [here...](https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt#sections).
+- Tutorial notebooks on [GitHub](https://github.com/scikit-image/skimage-tutorials/tree/master/lectures). We owe Stéfan Van Der Walt, Emmanuelle Gouillart, and others a debt of gratitude for these.
 
-- [GitHub tutorial notebooks](https://github.com/scikit-image/skimage-tutorials/tree/master/lectures). We owe Stéfan Van Der Walt, Emmanuelle Gouillart, and others a debt of gratitude for these.
+## Individuals
 
-- [Stéfan Van Der Walt](http://bids.berkeley.edu/people/st%C3%A9fan-van-der-walt) makes his [lecture notes](https://github.com/stefanv/teaching) available on GitHub.
+- **Emmanuelle Gouillart** ([website](http://www.svi.cnrs-bellevue.fr/spip/spip.php?article27)) has an excellent  [blog](http://emmanuelle.github.io/). Her tutorial on [segmentation](http://emmanuelle.github.io/a-tutorial-on-segmentation.html) is **particularly relevant**.  She reminded me that following the [NumPy doc string convention](http://emmanuelle.github.io/tools-and-tips-for-documenting-scientific-python-projects.html) gets me a long way along the road to clarity. The details are [here...](https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt#sections).
 
-- [Sébastien Brisard's blog](http://sbrisard.github.io/posts/20150223-Orientation_correlations_among_rice_grains-01.html) has a really nice series on 3-D segmentation of rice grains.
+- **Stéfan Van Der Walt** ([website](http://bids.berkeley.edu/people/st%C3%A9fan-van-der-walt)) seems to be the primary maintainer of `skimage`. His personal lecture notes are  available on [GitHub](https://github.com/stefanv/teaching).
+
+- **Juan Nunez-Iglesias** ([website](https://www.vlsci.org.au/researcher/juan-nunez-iglesias)) has a helpful [blog](http://ilovesymposia.com/). One particularly helpful post is on reading [metadata from microscopy images](http://ilovesymposia.com/2014/08/10/read-microscopy-images-to-numpy-arrays-with-python-bioformats/). His [GitHub](https://github.com/jni) repository has some helpful code. He uses python/skimage as well as ImageJ/Fiji.
+
+- **Sébastien Brisard** ([website](http://navier.enpc.fr/BRISARD-Sebastien?lang=en)) specializes in X-ray Tomography. His  [blog](http://sbrisard.github.io/posts/20150223-Orientation_correlations_among_rice_grains-01.html) has a really nice series on 3-D segmentation of rice grains.
 
 ## Youtube videos
 
-### Stefan van der Walt (2012)
-[skimage 2012 Stefan van der Walt](https://www.youtube.com/watch?v=QXTyYYx5_6o) - a nice introduction 
+### Stéfan Van Der Walt
 
-[Image Analysis in Python with SciPy and Scikit Image | SciPy 2015 Tutorial | Stefan Van der Wal](https://www.youtube.com/watch?v=olb7R1cuzyU)
+[Image Analysis in Python with SciPy and Scikit Image](https://www.youtube.com/watch?v=olb7R1cuzyU) from SciPy 2015
+
+[Image Processing in Python with Scikits image](https://www.youtube.com/watch?v=QXTyYYx5_6o) from PyData 2012 is a slightly older video, but a nice introduction to how Numpy, SciPy, and skimage all fit together. 
 
 ![hierarchy](./images/skimage-hierarchy.png)
 
 `ndimage` is written in pure C. See the [ndimage](http://docs.scipy.org/doc/scipy/reference/ndimage.html) docs. He illustrated with the SEM image of glass looking for bubbles (it is a BSE image).
 
-He showed a great way to get a histogram by flattening...
+He showed a great way to plot a histogram by flattening (note the call to `plt.hist`)
 
-![histogram](./images/histogramExStefan.png)
+```
+from skimage import data, color
+from matplotlib import pyplot as plt
+
+img = color.rgb2gray(data.lena())
+plt.hist(img.flat, bins=256)
+plt.show();
+```
+<center><img src="./images/lena-gray-hist.png" width="300px" /></center>
 
 ### Others
 
+- Emmanuelle Gouillart and Juan Nunez Iglesias
+[Image Processing with Scikit Image](https://www.youtube.com/watch?v=SZvez2u-w9I) from EuroSciPy 2015. In the first half, Juan Iglesia had problems with the video projector. They fixed it before Emanuelle's presention, which was especially helpful. She has her tutorials on [github](https://github.com/emmanuelle/image-processing-tutorials). She processes SEM images as well and is a contributor to skimage...
 
-[Image Processing with Scikit Image | EuroSciPy 2015 | Emmanuelle Gouillart, Juan Nunez Iglesias](https://www.youtube.com/watch?v=SZvez2u-w9I) Juan Iglesia had problems with the video projector, but Emanuelle's presnetion was especially helpful. She has her tutorials on [github](https://github.com/emmanuelle/image-processing-tutorials). She processis SEM images as well and is a contributor to skimage...
 
+- Juan Nunez Iglesia and Tony Yu [Image analysis in Python with scipy and scikit image](https://www.youtube.com/watch?v=MP-MTiCETYg) from SciPy 2014.
 
-[SciPy 2014 Juan Nunez Iglesia and Tony Yu](https://www.youtube.com/watch?v=MP-MTiCETYg)
+- Ravi Chityala [mage Processing using Python](https://www.youtube.com/watch?v=LIltHIIxZxo) from an "All Things Python meetup" in 2014. Ravi wrote [Image Processing and Acquisition using Python](https://www.crcpress.com/Image-Processing-and-Acquisition-using-Python/Chityala-Pudipeddi/9781466583757). 
 
-[Ravi Chityala](https://www.youtube.com/watch?v=LIltHIIxZxo) who wrote [Image Processing and Acquisition using Python](https://www.crcpress.com/Image-Processing-and-Acquisition-using-Python/Chityala-Pudipeddi/9781466583757). 
-
-and
-
-[PyCon Australia](https://www.youtube.com/watch?v=hqOsfS3dP9w) by Edward Scofield. Lot's of ummmms.
 
 
 # A useful image montage function
