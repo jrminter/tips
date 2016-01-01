@@ -144,7 +144,7 @@ conda update --all
 
 The definitive guide is [here](http://conda.pydata.org/docs/using/envs.html)
 
-To list all environments
+### To list all environments
 
 ```
 conda info --envs
@@ -154,14 +154,33 @@ or
 ```
 conda env list
 ```
+### To activate/deactivate an environment
 
-To list a detailed package list for an environment
+On Windows
+
+```
+activate name
+
+deactivate
+```
+
+On MacOSX/Linux
+
+```
+source activate name
+
+source deactivate
+```
+
+### To list a detailed package list for an environment
 
 ```
 conda list -e
 ```
 
-To create an environment from the command line
+### To create an environment
+
+From the command line...
 
 ```
 conda create --name myEnv python=3 scipy otherpackage
