@@ -85,7 +85,7 @@ plt.show();
 [Image Processing with Scikit Image](https://www.youtube.com/watch?v=SZvez2u-w9I) from EuroSciPy 2015. In the first half, Juan Iglesia had problems with the video projector. They fixed it before Emanuelle's presention, which was especially helpful. She has her tutorials on [github](https://github.com/emmanuelle/image-processing-tutorials). She processes SEM images as well and is a contributor to skimage...
 
 
-- Juan Nunez Iglesia and Tony Yu [Image analysis in Python with scipy and scikit image](https://www.youtube.com/watch?v=MP-MTiCETYg) from SciPy 2014.
+- Juan Nunez Iglesia and Tony Yu, **Image analysis in Python with scipy and scikit image** [Part 1](https://www.youtube.com/watch?v=MP-MTiCETYg), [Part 2](https://www.youtube.com/watch?v=SE7h0IWD93Y), and [Part 3](https://www.youtube.com/watch?v=Yxpnvc4RHy4) from SciPy 2014.
 
 - Ravi Chityala [mage Processing using Python](https://www.youtube.com/watch?v=LIltHIIxZxo) from an "All Things Python meetup" in 2014. Ravi wrote [Image Processing and Acquisition using Python](https://www.crcpress.com/Image-Processing-and-Acquisition-using-Python/Chityala-Pudipeddi/9781466583757). 
 
