@@ -198,6 +198,8 @@ install_new('zoo')
 install_new('lme4')
 install_new('plotGoogleMaps')
 install_new('devtools')
+install_new('latex2exp')
+install_new('ggvis')
 
 biocLite()
 
