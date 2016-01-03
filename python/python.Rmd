@@ -18,8 +18,16 @@ See also [Intermediate Python](http://book.pythontips.com/en/latest/)
 
 # Youtube tutorials
 
-- **Michael Droettboom** (Continuum Analytics) - [Intro](https://www.youtube.com/watch?v=tWHiUk7PRyw) notebook from [GitHub](https://github.com/dmcdougall/strata-mpl-tutorial) - from PyData 2015 NYC.
+- **Michael Droettboom** (Continuum Analytics) - [Intro](https://www.youtube.com/watch?v=tWHiUk7PRyw) notebook from [GitHub](https://github.com/dmcdougall/strata-mpl-tutorial) - from PyData 2015 NYC. He references the tutorial by [Nicolas Rougier](http://www.labri.fr/perso/nrougier/teaching/matplotlib/) who also has the source on [GitHub](https://github.com/rougier/matplotlib-tutorial). Some of this was inspired by [Ten Simple Rules for Better Figures](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003833).
 
+# Things that made me go "huh"...
+
+## Strings
+
+- `r'$+\pi/2$'` - a `raw string`, where backslashes are not escaped. In this case this would be useful for an axis label in `matplotlib`.
+
+- `u'  '` a unicode string.
+- `ur'xxx' - a unicode raw string.
 
 # Anaconda
 
