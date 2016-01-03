@@ -16,6 +16,11 @@ vignette: >
 
 See also [Intermediate Python](http://book.pythontips.com/en/latest/)
 
+# Youtube tutorials
+
+- **Michael Droettboom** (Continuum Analytics) - [Intro](https://www.youtube.com/watch?v=tWHiUk7PRyw) notebook from [GitHub](https://github.com/dmcdougall/strata-mpl-tutorial) - from PyData 2015 NYC.
+
+
 # Anaconda
 
 ## Getting a good Anaconda set-up on Win7 x64
