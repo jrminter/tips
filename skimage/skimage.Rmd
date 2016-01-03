@@ -63,7 +63,7 @@ skimage is a useful image processing package
 
 [Image Processing in Python with Scikits image](https://www.youtube.com/watch?v=QXTyYYx5_6o) from PyData 2012 is a slightly older video, but a nice introduction to how Numpy, SciPy, and skimage all fit together. 
 
-![hierarchy](./images/skimage-hierarchy.png)
+![skimage processing stack](./images/skimage_proc_stack.svg)
 
 `ndimage` is written in pure C. See the [ndimage](http://docs.scipy.org/doc/scipy/reference/ndimage.html) docs. He illustrated with the SEM image of glass looking for bubbles (it is a BSE image).
 
