@@ -200,6 +200,7 @@ install_new('plotGoogleMaps')
 install_new('devtools')
 install_new('latex2exp')
 install_new('ggvis')
+install_new('highcharter')
 
 biocLite()
 
