@@ -50,6 +50,8 @@ Topic
 
 [ggplot2Intro](./ggplot2Intro/ggplot2Intro.html)
 
+[ggplot2UseCases](./ggplot2UseCases/ggplot2UseCases.html)
+
 [ggvisIntro](./ggvisIntro/ggvisIntro.html)
 
 [git](./git/git-tips.html)
