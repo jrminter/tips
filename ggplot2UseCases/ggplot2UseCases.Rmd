@@ -1,0 +1,93 @@
+---
+title: "The microscopist's use cases for ggplot2"
+author: "J. R. Minter"
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
+output:
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{The microscopist's use cases for ggplot2}
+  %\VignetteEngine{knitr::rmarkdown}
+---
+
+[Back to Index](../README.html)
+
+# Making a histogram from particle diameter data
+
+First, let's load the packages we need.
+
+```{r}
+library(ggplot2)
+library(latex2exp)
+```
+
+Now load the data
+
+```{r}
+grains <- read.csv("./dat/grains.csv", header = TRUE, as.is=TRUE)
+print(head(grains))
+
+```
+
+# Step Three. Making Your Histogram With ggplot2
+
+You have two options to make a histogram with ``ggplot2`` package. You can either use the ``qplot()`` function, which looks very much like the ``hist()`` function:
+
+```{r}
+pHistoAgX <- ggplot(grains, aes(ecd.nm)) +
+  geom_histogram(binwidth = 5) +
+  # scale_x_continuous(breaks = seq(from = 7, to = 20, by = 1)) +
+  # scale_y_discrete(breaks = c(0, 2, 4, 6, 8, 10, 12, 14, 16)) +
+  ggtitle("Grain Equivalent Circular Diameter") +
+  theme(plot.title = element_text(lineheight=2, size=12)) +
+  # labs(x=TeX("diameter ($\\mu$m)"), y="Count")
+  labs(x="diameter (nm)", y="Count") 
+print(pHistoAgX)
+ggsave("./dat/grain-ecd-histo.png", plot=pHistoAgX, width=6, height=4, units="in", dpi=150)
+```
+
+Now make one for the aspect ratio
+
+
+```{r}
+print(summary(grains$a.r))
+
+pHistoAgX <- ggplot(grains, aes(a.r)) +
+  geom_histogram(bins=50) +  # binwidth = 5) +
+  # scale_x_continuous(breaks = seq(from = 7, to = 20, by = 1)) +
+  # scale_y_discrete(breaks = c(0, 2, 4, 6, 8, 10, 12, 14, 16)) +
+  ggtitle("Grain Equivalent Circular Diameter") +
+  theme(plot.title = element_text(lineheight=2, size=12)) +
+  # labs(x=TeX("diameter ($\\mu$m)"), y="Count")
+  labs(x="diameter (nm)", y="Count") 
+print(pHistoAgX)
+ggsave("./dat/grain-ecd-histo.png", plot=pHistoAgX, width=6, height=4, units="in", dpi=150)
+```
+
+So let's make some classes
+
+```{r}
+equiAxial <- grains$ecd.nm[grains$a.r < 1.05]
+elongated <- grains$ecd.nm[grains$a.r >= 1.05]
+df1 <- data.frame(ecd=equiAxial,shape='equiaxial')
+df2 <- data.frame(ecd=elongated,shape='elonganted')
+shapes <- rbind(df1,df2)
+rm(df1, df2)
+
+pBoxPlot <- ggplot(shapes, aes(x=shape, y=ecd)) +
+  geom_boxplot(aes(fill = shape)) +
+  # scale_y_continuous(breaks = seq(from = 10, to = 20, by = 1)) +
+  # ggtitle(TeX("Beads $\\geq 10\\mu$m\n from Class 837 Support")) +
+  # theme(plot.title = element_text(lineheight=2, size=12)) +
+  labs("equivalent circular diameter (nm)") 
+print(pBoxPlot)
+
+
+```
+
+
+
+
+[Back to Index](../README.html)

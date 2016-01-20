@@ -73,6 +73,13 @@ ggplot2Intro/ggplot2Intro.md
 ggplot2Intro/ggplot2Intro.html
 ggplot2Intro/figure/
 
+# ggplotUseCases directory
+ggplot2UseCases/.DS_Store
+ggplot2UseCases/ggplot2Intro.md
+ggplot2UseCases/ggplot2Intro.html
+ggplot2UseCases/dat/*.png
+ggplot2UseCases/figure/
+
 # ggvisIntro tips directory
 ggvisIntro/.DS_Store
 ggvisIntro/ggvisIntro.md
