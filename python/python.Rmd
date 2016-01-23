@@ -22,6 +22,138 @@ See also [Intermediate Python](http://book.pythontips.com/en/latest/)
 
 # Things that made me go "huh"...
 
+## Problems with ipynb conversions to PDF
+
+It did not like this kind of markdown:
+
+```
+data type, `'uint8'` (unsigned, 8-bit integer)
+```
+produced this $\LaTeX$
+
+```
+data type, \texttt{\textquotesingle{}uint8\textquotesingle{}} (unsigned, 8-bit integer)
+```
+
+gave the error:
+
+```
+LaTeX Error: Command \textquotesingle unavailable in encoding OT1.
+```
+
+but this was OK
+
+```
+ data type, `uint8` (unsigned, 8-bit integer)
+```
+
+I diagnosed this by converting to $\LaTeX$ with this command
+
+```
+ipython nbconvert --to latex 01_color_and_exposure.ipynb
+```
+
+and processing the $\LaTeX$
+
+One directly converts to pdf with
+
+```
+ipython nbconvert --to pdf 01_color_and_exposure.ipynb
+```
+
+Note that Fernando Perez shows a useful Makefile for replacement 
+[here](https://github.com/ipython/sloan-2013-reports/blob/master/Makefile).
+
+Here is one I wrote that let me edit the $\LaTeX$ file in between
+
+```
+# in
+# /Users/jrminter/src/py2/tstMakePdfFromIpynb
+BASE=demonstrateEigenValues
+
+all: $(BASE).pdf
+
+$(BASE).tex: $(BASE).ipynb
+	ipython nbconvert --to latex $(BASE).ipynb
+	./replace.py $(BASE).tex
+
+
+$(BASE).pdf: $(BASE).tex
+	pdflatex $(BASE)
+	pdflatex $(BASE)
+
+clean:
+	rm -rf $(BASE)_files
+	rm -rf *.a*
+	rm -rf *.b*
+	rm -rf *.l*
+	rm -rf *.t*
+	rm -ff *.out
+
+cleanall: clean
+	rm -f $(PDF)
+
+```
+
+This is the `replace.py` file (from F. Perez)
+
+```
+#!/usr/bin/env python
+"""Simple script to replace a list of regex patterns in the input file.
+
+WARNING: this modifies the input file in place!!! It does leave file~ as a
+backup.
+
+Usage::
+
+    replace.py <input filename>
+"""
+
+#-----------------------------------------------------------------------------
+# Configure here - define replacement list
+#-----------------------------------------------------------------------------
+
+patterns = [(r'\\documentclass{article}',
+             r'\\documentclass[11pt]{article}\n  \\usepackage{palatino}'),
+             (r'\\title{demonstrateEigenValues}',
+              r'\\title{Demonstrate EigenValues}\n \\author{John Minter}\n  \\date{\\today}')
+            ]
+
+# You shouldn't need to configure any further code.
+
+#-----------------------------------------------------------------------------
+# Imports
+#-----------------------------------------------------------------------------
+
+import os
+import re
+import sys
+
+#-----------------------------------------------------------------------------
+# Main code
+#-----------------------------------------------------------------------------
+
+# Compile regexes first. That way, if there's an error in any of them, we fail
+# early before touching any files.
+replacements = [ (re.compile(pat, re.MULTILINE), rep)
+                 for (pat, rep) in patterns ]
+
+# Rename input file, read it in, run over the regexes and write output file
+fname = sys.argv[1]
+backup = fname+'~'
+
+os.rename(fname, backup)
+
+with open(backup) as fin:
+    out = fin.read()
+
+for rx, rep in replacements:
+    out = rx.sub(rep, out)
+
+with open(fname, 'w') as f:
+    f.write(out)
+```
+
 ## Strings
 
 - `r'$+\pi/2$'` - a `raw string`, where backslashes are not escaped. In this case this would be useful for an axis label in `matplotlib`.
