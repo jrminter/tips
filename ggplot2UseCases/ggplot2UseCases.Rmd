@@ -23,12 +23,12 @@ library(ggplot2)
 library(latex2exp)
 ```
 
-Now load the data
+Now load the data and decide if we want to save plots
 
-```{r}
+```{r, results='asis'}
 grains <- read.csv("./dat/grains.csv", header = TRUE, as.is=TRUE)
-print(head(grains))
-
+print(names(grains))
+bSave <- FALSE
 ```
 
 # Step Three. Making Your Histogram With ggplot2
@@ -36,7 +36,7 @@ print(head(grains))
 You have two options to make a histogram with ``ggplot2`` package. You can either use the ``qplot()`` function, which looks very much like the ``hist()`` function:
 
 ```{r}
-pHistoAgX <- ggplot(grains, aes(ecd.nm)) +
+pHistoAgxDiam <- ggplot(grains, aes(ecd.nm)) +
   geom_histogram(binwidth = 5) +
   # scale_x_continuous(breaks = seq(from = 7, to = 20, by = 1)) +
   # scale_y_discrete(breaks = c(0, 2, 4, 6, 8, 10, 12, 14, 16)) +
@@ -44,8 +44,11 @@ pHistoAgX <- ggplot(grains, aes(ecd.nm)) +
   theme(plot.title = element_text(lineheight=2, size=12)) +
   # labs(x=TeX("diameter ($\\mu$m)"), y="Count")
   labs(x="diameter (nm)", y="Count") 
-print(pHistoAgX)
-ggsave("./dat/grain-ecd-histo.png", plot=pHistoAgX, width=6, height=4, units="in", dpi=150)
+
+if (bSave == TRUE) {
+ ggsave("./dat/grain-ecd-histo.png", plot=pHistoAgxDiam, width=6, height=4, units="in", dpi=150)
+}
+print(pHistoAgxDiam)
 ```
 
 Now make one for the aspect ratio
@@ -54,16 +57,19 @@ Now make one for the aspect ratio
 ```{r}
 print(summary(grains$a.r))
 
-pHistoAgX <- ggplot(grains, aes(a.r)) +
+pHistoAgxAr <- ggplot(grains, aes(a.r)) +
   geom_histogram(bins=50) +  # binwidth = 5) +
   # scale_x_continuous(breaks = seq(from = 7, to = 20, by = 1)) +
   # scale_y_discrete(breaks = c(0, 2, 4, 6, 8, 10, 12, 14, 16)) +
-  ggtitle("Grain Equivalent Circular Diameter") +
+  ggtitle("Grain Aspect Ratio") +
   theme(plot.title = element_text(lineheight=2, size=12)) +
   # labs(x=TeX("diameter ($\\mu$m)"), y="Count")
   labs(x="diameter (nm)", y="Count") 
-print(pHistoAgX)
-ggsave("./dat/grain-ecd-histo.png", plot=pHistoAgX, width=6, height=4, units="in", dpi=150)
+
+if (bSave == TRUE) {
+  ggsave("./dat/grain-ecd-histo.png", plot=pHistoAgxAr, width=6, height=4, units="in", dpi=150)
+}
+print(pHistoAgxAr)
 ```
 
 So let's make some classes
@@ -76,18 +82,90 @@ df2 <- data.frame(ecd=elongated,shape='elonganted')
 shapes <- rbind(df1,df2)
 rm(df1, df2)
 
-pBoxPlot <- ggplot(shapes, aes(x=shape, y=ecd)) +
+pBoxPlotEcdAr <- ggplot(shapes, aes(x=shape, y=ecd)) +
   geom_boxplot(aes(fill = shape)) +
   # scale_y_continuous(breaks = seq(from = 10, to = 20, by = 1)) +
   # ggtitle(TeX("Beads $\\geq 10\\mu$m\n from Class 837 Support")) +
   # theme(plot.title = element_text(lineheight=2, size=12)) +
   labs("equivalent circular diameter (nm)") 
-print(pBoxPlot)
+
+if (bSave == TRUE) {
+   ggsave("./dat/grain-ecd-shape-boxplot.png", plot=pBoxPlotEcdAr, width=6, height=4, units="in", dpi=150)
+}
+print(pBoxPlotEcdAr)
+```
+Let's try a scatter plot
 
 
+```{r}
+pScatterAgXArEcd <- ggplot(grains, aes(x=a.r, y=ecd.nm)) +
+  geom_point(colour="blue") + 
+  # scale_x_continuous(breaks = seq(from = 7, to = 20, by = 1)) +
+  # scale_y_discrete(breaks = c(0, 2, 4, 6, 8, 10, 12, 14, 16)) +
+  # ggtitle("Grain Aspect Ratio") +
+  # theme(plot.title = element_text(lineheight=2, size=12)) +
+  # labs(x=TeX("diameter ($\\mu$m)"), y="Count")
+  labs(x="aspect ratio", y="ecd [nm]") 
+if (bSave == TRUE) {
+  ggsave("./dat/grain-ecd-ar.png", plot=pScatterAgXArEcd, width=6, height=4, units="in", dpi=150)
+}
+print(pScatterAgXArEcd)
 ```
 
+```{r}
+pScatterAgXCircEcd <- ggplot(grains, aes(x=circ, y=ecd.nm)) +
+  geom_point(colour="blue") + 
+  # scale_x_continuous(breaks = seq(from = 7, to = 20, by = 1)) +
+  # scale_y_discrete(breaks = c(0, 2, 4, 6, 8, 10, 12, 14, 16)) +
+  # ggtitle("Grain Aspect Ratio") +
+  # theme(plot.title = element_text(lineheight=2, size=12)) +
+  # labs(x=TeX("diameter ($\\mu$m)"), y="Count")
+  labs(x="circularity", y="ecd [nm]") 
+if (bSave == TRUE) {
+  ggsave("./dat/grain-ecd-circ.png", plot=pScatterAgXCircEcd, width=6, height=4, units="in", dpi=150)
+}
+print(pScatterAgXCircEcd)
+```
 
+So let's see the diameter distrbution of our dominant morphology
+
+```{r}
+dominant <- grains[grains$a.r <= 1.2, ]
+dominant <- dominant[dominant$circ >= 0.8, ]
+
+ecd.mu <- mean(dominant$ecd.nm)
+ecd.sd <- sd(dominant$ecd.nm)
+
+
+pDomGrainDiam <- ggplot(dominant, aes(ecd.nm)) +
+  geom_histogram(binwidth = 5) +
+  # scale_x_continuous(breaks = seq(from = 7, to = 20, by = 1)) +
+  # scale_y_discrete(breaks = c(0, 2, 4, 6, 8, 10, 12, 14, 16)) +
+  ggtitle("Dominant Population Equivalent Circular Diameter") +
+  theme(plot.title = element_text(lineheight=2, size=12)) +
+  # labs(x=TeX("diameter ($\\mu$m)"), y="Count")
+  labs(x="diameter (nm)", y="Count") 
+
+if (bSave == TRUE) {
+ ggsave("./dat/dom-grain-ecd-histo.png", plot=pDomGrainDiam, width=6, height=4, units="in", dpi=150)
+}
+print(pDomGrainDiam)
+```
+
+Let's try a gaussian fit
+
+```{r}
+
+ecd <- rnorm(100000, mean=ecd.mu, sd=ecd.sd)
+df <- data.frame(ecd=ecd)
+theoHistPlot <- ggplot(df, aes(ecd)) +
+  geom_histogram(binwidth = .1) +
+  labs(x="diameter (nm)", y="Count") 
+
+print(theoHistPlot)
+  
+
+```
 
 
 [Back to Index](../README.html)
