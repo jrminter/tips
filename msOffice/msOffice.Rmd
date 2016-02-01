@@ -59,6 +59,18 @@ If you're working in PowerPoint, and you want the slide number to display on the
 3. On the Slide tab, check the Slide Number box.
 4. Click Apply to All to make the slide number show on all slides, or Apply to make the slide number show on just the current slide.
 
+**JRM note:** This caused me major annoyance in later versions of PowerPoint.
+
+In later versions one also needs to go to the `Insert` menu and select `Header & Footer`.
+
+<center><img src="./png/ins-hf.png" width="600px" /></center>
+
+This produces a dialog box, where one chooses how to apply the slide numbers.
+
+<center><img src="./png/hf-dlg.png" width="600px" /></center>
+
+
+
 # Template location
 
 On Win7 ``C:\Users\jrminter\AppData\Roaming\Microsoft\Templates``
