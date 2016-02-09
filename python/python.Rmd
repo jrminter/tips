@@ -38,6 +38,14 @@ python -m wheel install wheel_file.whl
 
 Note that `.whl` files are just specially formatted `.zip` archives. Change the extension to `.zip` and we can extract/explore...
 
+## Visual Studio Versions
+
+| Python | Ver  |    Microsoft                 |
+|:-------|:-----|:-----------------------------|
+| 2.7    |  9.0 | VCForPython27.msi (VS 2008)  |
+| 3.5    | 14.0 | Visual Studio 2015 Community |
+
+
 ## Problems with ipynb conversions to PDF
 
 It did not like this kind of markdown:
