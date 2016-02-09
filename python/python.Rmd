@@ -36,14 +36,20 @@ or, directly from python
 python -m wheel install wheel_file.whl
 ```
 
+convert an `.egg` file to `.whl`
+
+```
+wheel convert ./wheel_file.egg
+```
+
 Note that `.whl` files are just specially formatted `.zip` archives. Change the extension to `.zip` and we can extract/explore...
 
 ## Visual Studio Versions
 
-| Python | Ver  |    Microsoft                 |
-|:-------|:-----|:-----------------------------|
-| 2.7    |  9.0 | VCForPython27.msi (VS 2008)  |
-| 3.5    | 14.0 | Visual Studio 2015 Community |
+| Python | Ver  |    Microsoft                           |
+|:-------|:-----|:---------------------------------------|
+| 2.7    |  9.0 | VCForPython27.msi (VS 2008)            |
+| 3.5    | 14.0 | VisualCppBuildTools_Full.exe (VS 2015) |
 
 
 ## Problems with ipynb conversions to PDF
@@ -190,17 +196,18 @@ with open(fname, 'w') as f:
 ## Getting a good Anaconda set-up on Win7 x64
 
 1. Uninstall all system Pythons
-2. Install Anaconda3 2.4.1 in `C:\Apps\Anaconda3`
+2. Install Anaconda3 2.5.0 in `C:\Apps\Anaconda3`
 3. move `C:\Apps\Anaconda3;C:\Apps\Anaconda3\Scripts;C:\Apps\Anaconda3\Library\bin;` to right after R in PATH
 4. `conda update conda`
 5. `conda update anaconda`   (does nothing)
 6. `conda update --all`
-7. `conda install mysql-connector-python`
+7. `conda install mysql-connector-python wheel`
 8. Fix path in `startMIDB3.bat`
-9. `cd C:\Data\eds\hyperspy`
-10. `conda env create -f testHS.yml`
-11. Go to hyperspy `git reset --hard; git checkout master`, install hyperspy from command line `(source) activate testHS` and `python setup install`
+9. `cd %GIT_HOME%\OSImageAnalysis\py2\yml`
+10. `conda env create -f py27.yml`
+11. Go to hyperspy `git reset --hard; git checkout master`, install hyperspy from command line `(source) activate py27` and `python setup install`
 
+**JRM Note:** For some reason on `ROCPW7ZC5C42` I cannot compile skimage without getting an error about not being able to import `io.h`. Works fine on `crunch`. Need to try `set` from both command prompts...
 
 
 ## Launching
