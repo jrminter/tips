@@ -22,6 +22,21 @@ See also [Intermediate Python](http://book.pythontips.com/en/latest/)
 
 # Things that made me go "huh"...
 
+## install a `.whl` file
+
+Using pip
+
+```
+pip install wheel_file.whl
+```
+
+or, directly from python
+
+```
+python -m wheel install wheel_file.whl
+```
+
+
 ## Problems with ipynb conversions to PDF
 
 It did not like this kind of markdown:
