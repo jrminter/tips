@@ -36,6 +36,7 @@ or, directly from python
 python -m wheel install wheel_file.whl
 ```
 
+Note that `.whl` files are just specially formatted `.zip` archives. Change the extension to `.zip` and we can extract/explore...
 
 ## Problems with ipynb conversions to PDF
 
