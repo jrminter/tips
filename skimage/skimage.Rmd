@@ -33,6 +33,26 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 skimage is a useful image processing package
 
+# Things that made me go huh...
+
+## Building from github repo under python 3.5
+
+This has me pulling hair... Python 5.5 is supposed to use Visual Studio 2015. I've had lots of trouble. I finally got it to work from `crunch`. Some of this is alchemy...
+
+1. I updated the repo. Cleared all but `.git` directory and did `git reset --hard`.
+
+2. For some reason building from the VS2015_X64 commanbd prompt was problematic. Building from the git bash prompt worked. Go figure...
+
+3. The `dist` directory has `scikit_image-0.12.dev0-py3.5-win-amd64.egg`. I made a `.whl` by
+a tip from [here](http://stackoverflow.com/questions/21856048/can-i-convert-an-egg-to-wheel).
+
+```
+conda install wheel
+
+cd  ~/git/scikit-image/dist
+wheel convert ./scikit_image-0.12.dev0-py3.5-win-amd64.egg
+```
+
 # Key documentation
 
 ## Core components
