@@ -18,11 +18,11 @@ These are tips on effective scientific research collected by John Minter from se
 
 # Good advice from Neal Anderson
 
-From [Practical Process Research and Development - A guide for Organic Chemists, Second Edition 2nd Edition, p. 19](http://www.amazon.com/dp/0123865379)
+From [Practical Process Research and Development - A guide for Organic Chemists, Second Edition 2nd Edition, p. 19](http://www.amazon.com/dp/0123865379). Hat Tip [ChemJobber](http://chemjobber.blogspot.co.uk/2016/02/bonus-process-wednesday-life-tips-from.html).
 
-The attitudes for chemists in process R&D may differ from those of drug discovery chemists.
+> The attitudes for chemists in process R&D may differ from those of drug discovery chemists.
 
-1. Teamwork is key. Optimize interactions between discovery chemists, engineers, analysts. microbiologists, operators, Environmental Health & Safety officer, pharmaceutical chemists. QA/QC personnel, attorneys for patent applications, out-sourcing (CROs, CMOs), your manufacturing counterparts, and regulatory personnel. **Don't trivialize the work of others, especially if you don't understand their job.** (emphasis mine)
+> 1. Teamwork is key. Optimize interactions between discovery chemists, engineers, analysts. microbiologists, operators, Environmental Health & Safety officer, pharmaceutical chemists. QA/QC personnel, attorneys for patent applications, out-sourcing (CROs, CMOs), your manufacturing counterparts, and regulatory personnel. **Don't trivialize the work of others, especially if you don't understand their job.** (emphasis mine)
 2. Recognize that the need to minimize impurities drives process development.
 3. Know the edge of failure for your operations. For rapid development, stay away from the edge. For cost-effective processes, you may want to operate close to the edge.
 4. Reproducible, accurate analytical data are necessary for effective process development.
