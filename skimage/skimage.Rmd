@@ -37,7 +37,13 @@ skimage is a useful image processing package
 
 ## Building from github repo under python 3.5
 
-This has me pulling hair... Python 5.5 is supposed to use Visual Studio 2015. I've had lots of trouble. I finally got it to work from `crunch`. Some of this is alchemy...
+This has me pulling hair... Python 3.5 is supposed to use Visual Studio 2015. I've had lots of trouble. I finally got it to work from `crunch`. Some of this is alchemy...
+
+1. Make sure latest Anaconda Python 3.5 is installed. Need to install some packages
+
+```
+conda install dask wheel 
+```
 
 1. I updated the repo. Cleared all but `.git` directory and did `git reset --hard`.
 

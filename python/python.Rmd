@@ -51,6 +51,25 @@ Note that `.whl` files are just specially formatted `.zip` archives. Change the 
 | 2.7    |  9.0 | VCForPython27.msi (VS 2008)            |
 | 3.5    | 14.0 | VisualCppBuildTools_Full.exe (VS 2015) |
 
+## Getting a good Anaconda set-up on Win7 x64
+
+1. Uninstall all system Pythons
+2. Install Anaconda3 2.5.0 in `C:\Apps\Anaconda3`
+3. Move `C:\Apps\Anaconda3;C:\Apps\Anaconda3\Scripts;C:\Apps\Anaconda3\Library\bin;` to right after R in PATH
+4. Run `conda update conda`
+5. Run `conda update anaconda`   (does nothing)
+6. Run `conda update --all`
+7. Run `conda install mysql-connector-python wheel dask`
+8. Install `VisualCppBuildTools_Full.exe` to get VS-2015 C++ compiler.
+9. Copy `vcbuildtoolsJM.bat` into `C:\Program Files (x86)\Microsoft Visual C++ Build Tools`. Create a launcher like `Visual C++ x64 Native Build Tools Command Prompt` in `C:\Program Files (x86)\Microsoft Visual C++ Build Tools`.
+10. Run `cd %GIT_HOME%\scikit-image`. Run `clean.sh`. Then run `python setup.py install` to install v.12 of scikit-image.
+12. Fix path in `startMIDB3.bat`
+13. Run `cd %GIT_HOME%\OSImageAnalysis\py2\yml`
+14. Run `conda env create -f py27.yml`
+15. Run `cd %GIT_HOME%\hyperspy`, then `git reset --hard; git checkout master`
+16. Install hyperspy from command line `(source) activate py27` and `python setup install`
+
+
 
 ## Problems with ipynb conversions to PDF
 
@@ -191,23 +210,6 @@ with open(fname, 'w') as f:
 - `u'  '` a unicode string.
 - `ur'xxx' - a unicode raw string.
 
-# Anaconda
-
-## Getting a good Anaconda set-up on Win7 x64
-
-1. Uninstall all system Pythons
-2. Install Anaconda3 2.5.0 in `C:\Apps\Anaconda3`
-3. move `C:\Apps\Anaconda3;C:\Apps\Anaconda3\Scripts;C:\Apps\Anaconda3\Library\bin;` to right after R in PATH
-4. `conda update conda`
-5. `conda update anaconda`   (does nothing)
-6. `conda update --all`
-7. `conda install mysql-connector-python wheel`
-8. Fix path in `startMIDB3.bat`
-9. `cd %GIT_HOME%\OSImageAnalysis\py2\yml`
-10. `conda env create -f py27.yml`
-11. Go to hyperspy `git reset --hard; git checkout master`, install hyperspy from command line `(source) activate py27` and `python setup install`
-
-**JRM Note:** For some reason on `ROCPW7ZC5C42` I cannot compile skimage without getting an error about not being able to import `io.h`. Works fine on `crunch`. Need to try `set` from both command prompts...
 
 
 ## Launching
