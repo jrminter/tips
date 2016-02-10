@@ -53,21 +53,26 @@ Note that `.whl` files are just specially formatted `.zip` archives. Change the 
 
 ## Getting a good Anaconda set-up on Win7 x64
 
-1. Uninstall all system Pythons
-2. Install Anaconda3 2.5.0 in `C:\Apps\Anaconda3`
-3. Move `C:\Apps\Anaconda3;C:\Apps\Anaconda3\Scripts;C:\Apps\Anaconda3\Library\bin;` to right after R in PATH
-4. Run `conda update conda`
-5. Run `conda update anaconda`   (does nothing)
-6. Run `conda update --all`
-7. Run `conda install mysql-connector-python wheel dask`
-8. Install `VisualCppBuildTools_Full.exe` to get VS-2015 C++ compiler.
-9. Copy `vcbuildtoolsJM.bat` into `C:\Program Files (x86)\Microsoft Visual C++ Build Tools`. Create a launcher like `Visual C++ x64 Native Build Tools Command Prompt` in `C:\Program Files (x86)\Microsoft Visual C++ Build Tools`.
-10. Run `cd %GIT_HOME%\scikit-image`. Run `clean.sh`. Then run `python setup.py install` to install v.12 of scikit-image.
-12. Fix path in `startMIDB3.bat`
-13. Run `cd %GIT_HOME%\OSImageAnalysis\py2\yml`
-14. Run `conda env create -f py27.yml`
-15. Run `cd %GIT_HOME%\hyperspy`, then `git reset --hard; git checkout master`
-16. Install hyperspy from command line `(source) activate py27` and `python setup install`
+We will install the latest Anaconda Python 3.5 environment as a primary environment and use `conda` to create a Python 2.7 environment. This will provide a way to get whatever versiobn of python you want and have them all play nicely together. We want to start with a clean slate...
+
+1. Uninstall all system Pythons. Anaconda will replace them and let you set up environments with `conda`.
+2. Run `ccleaner` and clean out the leftover cruft from the registry.
+3. Install Anaconda3 2.5.0 in `C:\Apps\Anaconda3`
+4. Move `C:\Apps\Anaconda3;C:\Apps\Anaconda3\Scripts;C:\Apps\Anaconda3\Library\bin;` to right after R in `%PATH%`
+5. Run `conda update conda`
+6. Run `conda update anaconda`   (does nothing at the moment, but can later...)
+7. Run `conda update --all`
+8. Run `conda install mysql-connector-python wheel dask`
+9. Install `VisualCppBuildTools_Full.exe` to get a minimal, but sufficent VS-2015 C++ compiler. This is **much** lighter weight than `Visual Studio 2015 Community Edition`. This step is essential to build many packages (such as `skimage`) from their source (to get newer features).
+10. Copy `vcbuildtoolsJM.bat` into `C:\Program Files (x86)\Microsoft Visual C++ Build Tools`. Create a launcher with `C:\Windows\System32\cmd.exe /k ""C:\Program Files (x86)\Microsoft Visual C++ Build Tools\vcbuildtoolsJM.bat"" amd64` and edit so it starts in a convenient directory (e.g. `C:\Users\my-userid\Documents\work\py3`).
+11. Run `cd %GIT_HOME%\scikit-image`. Run `clean.sh`. Then run `python setup.py install` to install v.12-dev0 of scikit-image. All the tutorials use this. Not sure why they have not released it...
+12. Fix path in `startMIDB3.bat`.
+13. Run `cd %GIT_HOME%\OSImageAnalysis\py2\yml`.
+14. Run `conda env create -f py27.yml`. This creates a `Python 2.7` environment.
+15. For some reason, `juypter` is not properly installed from the `.yml` file, so run `conda install jupyter`. This installs jupyter and all the dependencies.
+16. Copy `vcvarsallJM.bat` into `C:\Users\my-user-id\AppData\Local\Programs\Common\Microsoft\Visual C++ for Python\9.0` and set up on the desktop a launcher with `C:\Windows\System32\cmd.exe /k ""C:\Users\l837410\AppData\Local\Programs\Common\Microsoft\Visual C++ for Python\9.0\vcvarsallJM.bat" amd64"`. Edit the batch file so that it starts in a convenient directory (e.g. `C:\Users\my-userid\Documents\work\py2`). **Note:** For some reason `%comspec%` doesn't work on `ROCPW7ZC5C423`.... This `.bat` file sets the environment variables, changes to the desired directory,  and activates py27.
+17. Run `cd %GIT_HOME%\hyperspy`, then `git reset --hard; git checkout master`
+18. Install hyperspy from command line:  `python setup install`
 
 
 
