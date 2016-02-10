@@ -72,7 +72,7 @@ We will install the latest Anaconda Python 3.5 environment as a primary environm
 15. For some reason, `juypter` is not properly installed from the `.yml` file, so run `conda install jupyter`. This installs jupyter and all the dependencies.
 16. Copy `vcvarsallJM.bat` into `C:\Users\my-user-id\AppData\Local\Programs\Common\Microsoft\Visual C++ for Python\9.0` and set up on the desktop a launcher with `C:\Windows\System32\cmd.exe /k ""C:\Users\l837410\AppData\Local\Programs\Common\Microsoft\Visual C++ for Python\9.0\vcvarsallJM.bat" amd64"`. Edit the batch file so that it starts in a convenient directory (e.g. `C:\Users\my-userid\Documents\work\py2`). **Note:** For some reason `%comspec%` doesn't work on `ROCPW7ZC5C423`.... This `.bat` file sets the environment variables, changes to the desired directory,  and activates py27.
 17. Run `cd %GIT_HOME%\hyperspy`, then `git reset --hard; git checkout master`
-18. Install hyperspy from command line:  `python setup install`
+18. Install hyperspy from command line:  `python setup install`.
 
 
 
