@@ -1,0 +1,28 @@
+---
+title: "Skills"
+author: "J. R. Minter"
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
+output:
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+vignette: >
+  %\VignetteIndexEntry{Skills}
+  %\VignetteEngine{knitr::rmarkdown}
+---
+
+[Back to Index](../README.html)
+
+# Don't outsource your thinking
+
+[Blake Ross](https://medium.com/@blakeross/don-t-outsource-your-thinking-ad825a9b4653#.8uvbfx8ir) warns:
+
+> Doubt the media. Always doubt the media. Many journalists are superb, but certain reporters would publish plainly inaccurate information about our products on a regular basis. And if they got our tech wrong, what were they getting wrong in that science story? That war piece?
+
+He goes on to recommend a **healthy skepticism** and to suggest we do our own research.
+
+
+
+
+[Back to Index](../README.html)

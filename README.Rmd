@@ -108,11 +108,13 @@ Topic
 
 [SEM](./SEM/SEM.html)
 
+[shell](./shell/shell-tips.html)
+
+[skills](./skills/skills.html)
+
 [skimage](./skimage/skimage.html)
 
 [Slidify](./Slidify/Slidify.html)
-
-[shell](./shell/shell-tips.html)
 
 [Sublime Text 3](./ST3/ST3.html)
 

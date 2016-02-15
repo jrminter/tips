@@ -239,11 +239,23 @@ Salabim/Salabim-graphics.html
 Salabim/figure/
 Salabim/wc5/
 
+# SEM directory
+SEM/.DS_Store
+SEM/SEM.md
+SEM/SEM.html
+SEM/figure/
+
 # shell directory
 shell/.DS_Store
 shell/shell-tips.md
 shell/shell-tips.html
 shell/figure/
+
+# skills directory
+skills/.DS_Store
+skills/skills.md
+skills/skills.html
+skills/figure/
 
 # skimage directory
 skimage/.DS_Store
