@@ -74,6 +74,81 @@ We will install the latest Anaconda Python 3.5 environment as a primary environm
 17. Run `cd %GIT_HOME%\hyperspy`, then `git reset --hard; git checkout master`
 18. Install hyperspy from command line:  `python setup install`.
 
+## Polished jupyter notebooks
+
+From [Chris Said](http://chris-said.io/2016/02/13/how-to-make-polished-jupyter-presentations-with-optional-code-visibility/) 2016-02-13.
+
+To make the code optionally visible, available at the click of a button, include a raw cell at the beginning of your notebook containing the JavaScript and HTML below. This code sample is inspired by a [Stack Overflow](http://stackoverflow.com/questions/27934885/how-to-hide-code-from-cells-in-ipython-notebook-visualized-with-nbviewer) post, but makes a few improvements such as using a raw cell so that the button position stays fixed, changing the button text depending on state, and displaying gradual transitions so the user understands what is happening.
+
+```
+<script>
+  function code_toggle() {
+    if (code_shown){
+      $('div.input').hide('500');
+      $('#toggleButton').val('Show Code')
+    } else {
+      $('div.input').show('500');
+      $('#toggleButton').val('Hide Code')
+    }
+    code_shown = !code_shown
+  }
+
+  $( document ).ready(function(){
+    code_shown=false;
+    $('div.input').hide()
+  });
+</script>
+<form action="javascript:code_toggle()"><input type="submit" id="toggleButton" value="Show Code"></form>
+```
+
+It’s pretty straightforward to remove the extra elements like the header, footer, and prompt numbers. That being said, you may want to still include some attribution to the Jupyter project and to your free hosting service. To do all of this, just include a raw cell at the end of your notebook with some more JavaScript.
+
+```
+<script>
+  $(document).ready(function(){
+    $('div.prompt').hide();
+    $('div.back-to-top').hide();
+    $('nav#menubar').hide();
+    $('.breadcrumb').hide();
+    $('.hidden-print').hide();
+  });
+</script>
+
+<footer id="attribution" style="float:right; color:#999; background:#fff;">
+Created with Jupyter, delivered by Fastly, rendered by Rackspace.
+</footer>
+```
+
+One shortcoming with what we have so far is that users may still see some code or other unwanted elements while the page is loading. This can be especially problematic if you have a long presentation with many plots. To avoid this problem, add a raw cell at the very top of your notebook containing a preloader. This example preloader includes an animation that signals to users that the page is still loading. It heavily inspired by [this preloader](http://codepen.io/mimoYmima/pen/fisgL) created by [@mimoYmima](https://twitter.com/@mimoYmima).
+
+```
+<script>
+  jQuery(document).ready(function($) {
+
+  $(window).load(function(){
+    $('#preloader').fadeOut('slow',function(){$(this).remove();});
+  });
+
+  });
+</script>
+
+<style type="text/css">
+  div#preloader { position: fixed;
+      left: 0;
+      top: 0;
+      z-index: 999;
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+      background: #fff url('http://preloaders.net/preloaders/720/Moving%20line.gif') no-repeat center center;
+  }
+
+</style>
+
+<div id="preloader"></div>
+```
+
+To work with these notebooks, you can clone my [GitHub repository](https://github.com/csaid/polished_notebooks). While the notebooks render correctly on nbviewer ([unpolished](http://nbviewer.jupyter.org/github/csaid/polished_notebooks/blob/master/notebook_original.ipynb), [polished](http://nbviewer.jupyter.org/github/csaid/polished_notebooks/blob/master/notebook_polished.ipynb)), they do not render correctly on the GitHub viewer.
 
 
 ## Problems with ipynb conversions to PDF
