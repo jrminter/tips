@@ -53,6 +53,12 @@ Note that `.whl` files are just specially formatted `.zip` archives. Change the 
 
 ## Getting a good Anaconda set-up on Win7 x64
 
+**NB:** If we want to pull packages from Anaconda Cloud we need to run
+
+```
+anaconda login
+```
+
 We will install the latest Anaconda Python 3.5 environment as a primary environment and use `conda` to create a Python 2.7 environment. This will provide a way to get whatever versiobn of python you want and have them all play nicely together. We want to start with a clean slate...
 
 1. Uninstall all system Pythons. Anaconda will replace them and let you set up environments with `conda`.
