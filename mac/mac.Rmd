@@ -13,6 +13,32 @@ vignette: >
 ---
 [Back to Index](../README.html)
 
+# Rendering markdown with Quick Look
+
+From [Wikipedia](https://en.wikipedia.org/wiki/Quick_Look)
+
+Quick Look is a quick preview feature developed by Apple Inc. which was introduced in its operating system, Mac OS X 10.5 Leopard.
+
+![](png/quicklook.png)
+We can install a markdown extension - [qlmarkdown](https://github.com/toland/qlmarkdown)- using `homebrew`
+
+```
+$ brew update
+$ brew cask install qlmarkdown
+```
+
+To uninstall
+
+```
+$ brew cask uninstall qlmarkdown
+```
+
+Quick Look doesn't allow selecting text. If you want to select the text in the markdown preview, you will need to enable text selection in Quick Look by running the following in Terminal:
+
+```
+defaults write com.apple.finder QLEnableTextSelection -bool TRUE; killall Finder
+```
+
 # El Capitan & Homebrew
 
 From [DomT4](https://raw.githubusercontent.com/Homebrew/homebrew/master/share/doc/homebrew/El_Capitan_and_Homebrew.md)
