@@ -57,23 +57,34 @@ source deactivate
 conda list -e
 ```
 
+## latest remote
 
+```
+git remote add vidartf https://github.com/vidartf/hyperspy.git
+git checkout --track vidartf/hyperspyui_py3 
+```
 
 ## My pull script from `~/git/pullAll.sh` on `jrmFastMac`
 
 ```
 cd ~/git/hyperspy
 echo hyperspy 
-git fetch
-git fetch dnjohnstone
+echo hyperspy: branches set 2016-03-02
+git fetch 
 git fetch upstream
 git fetch pburdet
 git fetch to266
-git checkout NEW_eds_model
-git pull
-git checkout ENH_python3
+git fetch dnjohnstone
+git fetch vidarrf
+git checkout hyperspyui_py3
+git pull 
+git checkout 0.8.x
 git pull
 git checkout EHN_map_multiprocessing
+git pull
+git checkout ENH_environment
+git pull
+git checkout NEW_eds_model
 git pull
 git checkout edslab
 git pull  
@@ -83,7 +94,6 @@ git checkout testPB473
 git pull
 git checkout master
 git status
-echo
 ```
 
 note the branches defined
