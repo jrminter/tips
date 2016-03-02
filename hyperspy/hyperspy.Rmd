@@ -75,7 +75,7 @@ git fetch upstream
 git fetch pburdet
 git fetch to266
 git fetch dnjohnstone
-git fetch vidarrf
+git fetch vidartf
 git checkout hyperspyui_py3
 git pull 
 git checkout 0.8.x
