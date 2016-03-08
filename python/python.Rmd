@@ -28,6 +28,11 @@ From [tacaswell](https://github.com/scikit-image/scikit-image/issues/1775)
 
 > `tight_layout` is not the default behavior in mpl because it is not 100% reliable (there are some artists it does not know about), does not work with all ways of making axes, and requires 2 passes through the rendering to get all of the sizes right. You can pass `tight_layout=True` as a kwarg to both `plt.figure()` and `plt.subplots()`
 
+Note that `soupault` commented:
+
+> I always use `plt.tight_layout()` right before `savefig()` or `plt.show()` in order to get fancy spacing. Although I don't really utilize any extraordinary capabilities of matplotlib (the most "complex" are: `twinx`, `twiny`, `long ticklabels`), that is for the reasons you described above.
+As far as we use only basic plotting routines in skimage gallery, this change should be sufficient.
+
 ## install a `.whl` file
 
 Using pip
