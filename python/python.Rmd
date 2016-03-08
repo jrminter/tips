@@ -22,6 +22,12 @@ See also [Intermediate Python](http://book.pythontips.com/en/latest/)
 
 # Things that made me go "huh"...
 
+## matplotlib: tight_layout
+
+From [tacaswell](https://github.com/scikit-image/scikit-image/issues/1775)
+
+> `tight_layout` is not the default behavior in mpl because it is not 100% reliable (there are some artists it does not know about), does not work with all ways of making axes, and requires 2 passes through the rendering to get all of the sizes right. You can pass `tight_layout=True` as a kwarg to both `plt.figure()` and `plt.subplots()`
+
 ## install a `.whl` file
 
 Using pip
