@@ -13,6 +13,50 @@ vignette: >
 ---
 [Back to Index](../README.html)
 
+# Getting Environment Variables loaded in elCapitan
+
+From [how-to-geek](http://www.e-howtogeek.com/60745/setting-environment-variables-launchd-longer-yosemite-capitan)
+
+Create an environment.plist file in `~/Library/LaunchAgents/` with this content:
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>my.startup</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>sh</string>
+    <string>-c</string>
+    <string>
+    launchctl setenv PRODUCTS_PATH /Users/mortimer/Projects/my_products
+    launchctl setenv ANDROID_NDK_HOME /Applications/android-ndk
+    launchctl setenv PATH $PATH:/Applications/gradle/bin
+    </string>
+
+  </array>
+  <key>RunAtLoad</key>
+  <true/>
+</dict>
+</plist>
+```
+
+You can add many launchctl commands inside the <string></string> block.
+
+The plist will activate after system reboot. You can also use `launchctl load ~/Library/LaunchAgents/environment.plist` to launch it immediately.
+
+The same solution works in El Capitan too.
+
+Xcode 7.0+ doesn't evaluate environment variables by default. The old behaviour can be enabled with this command:
+
+```
+defaults write com.apple.dt.Xcode UseSanitizedBuildSystemEnvironment -bool NO
+```
+
+flag
+
 # Rendering markdown with Quick Look
 
 From [Wikipedia](https://en.wikipedia.org/wiki/Quick_Look)
