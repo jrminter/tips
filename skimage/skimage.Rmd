@@ -35,6 +35,23 @@ skimage is a useful image processing package
 
 # Things that made me go huh...
 
+## Synching my local scikit-image repository
+
+```
+echo "synch scikit-image repositories. Version 2016-03-08"
+echo 
+cd $GIT_HOME/scikit-image
+echo scikit-image
+git checkout master
+git pull
+git pull upstream master
+git checkout v0.12.x
+git pull
+git pull upstream v0.12.x
+
+```
+
+
 ## Building from github repo under python 3.5
 
 This has me pulling hair... Python 3.5 is supposed to use Visual Studio 2015. I've had lots of trouble. I finally got it to work from `crunch`. Some of this is alchemy...
