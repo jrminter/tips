@@ -19,6 +19,10 @@ vignette: >
 
 > Working essentially as a one person SEM lab, long ago I came to the conclusion that unless the cleaning was very quick and easy, it was more practical to simply recycle the small stubs. I could not justify much time to clean them. I do think the larger items are a different consideration, however. My metallurgical mount holders, vices, multi-stub holders, etc., are pricey and well worth an effort to keep them looking good, both for myself and clients. For these, I remove paints and tape residues ultrasonically with an organic solvent. Once that is done, I've had decent success by ultrasonically cleaning them in a warm water solution with Alconox powder. This removes sputtered materials and other residuals nicely. The holders come out looking great again with no signs of etching or attack on the aluminum. I've never tried any of the other Alconox products for this, however. (I have no stake in Alconox.)
 
+Note [Gert ten Brink](g.h.ten.brink@rug.nl)'s reply
+
+> I do not even bother to clean them. They are consumables. Mind you, if you don't clean the old ones properly you make your SEM/vacuum dirty. If you buy them via the internet for a 100 pieces they cost 23.- euro's. The time spent cleaning them cost more.
+
 
 
 
