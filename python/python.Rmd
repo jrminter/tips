@@ -93,6 +93,20 @@ We will install the latest Anaconda Python 3.5 environment as a primary environm
 
 ## Polished jupyter notebooks
 
+### Matplotlib tricks
+
+From [here](https://www.reddit.com/r/IPython/comments/36p360/try_matplotlib_notebook_for_interactive_plots/)
+
+> The old `%matplotlib inline` activates the inline backend, which renders figures in the notebook as static pngs.
+
+If one wants to convert the notebook to PDF, this is the desired option
+
+> The new `%matplotlib notebook` activates the nbagg backend, added in matplotlib 1.4, which will include a javascript interface for interaction with inline figures in the notebook. This only works in IPython >= 3.x;
+
+This is a great option for notebooks that will remain in html format
+
+### Optionally visible code
+
 From [Chris Said](http://chris-said.io/2016/02/13/how-to-make-polished-jupyter-presentations-with-optional-code-visibility/) 2016-02-13.
 
 To make the code optionally visible, available at the click of a button, include a raw cell at the beginning of your notebook containing the JavaScript and HTML below. This code sample is inspired by a [Stack Overflow](http://stackoverflow.com/questions/27934885/how-to-hide-code-from-cells-in-ipython-notebook-visualized-with-nbviewer) post, but makes a few improvements such as using a raw cell so that the button position stays fixed, changing the button text depending on state, and displaying gradual transitions so the user understands what is happening.
