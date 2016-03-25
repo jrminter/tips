@@ -91,6 +91,143 @@ We will install the latest Anaconda Python 3.5 environment as a primary environm
 17. Run `cd %GIT_HOME%\hyperspy`, then `git reset --hard; git checkout master`
 18. Install hyperspy from command line:  `python setup install`.
 
+
+## Strings
+
+- `r'$+\pi/2$'` - a `raw string`, where backslashes are not escaped. In this case this would be useful for an axis label in `matplotlib`.
+
+- `u'  '` a unicode string.
+- `ur'xxx' - a unicode raw string.
+
+
+
+## Launching
+
+On MacOSX, a recent update broke the launcher for spyder,
+glueviz,and qtconsole. In reality, it is easier to use the Finder
+to navigate to the desired directory, use the `cd to.app` to open
+a terminal in that directory and start with one of
+
+```
+ipython qtconsole
+ipython notebook
+spyder
+```
+
+Note that starting `launcher` from the terminal makes the
+graphical start work. Go figure...
+
+## Updating
+
+```
+conda update conda
+conda update anaconda
+```
+
+To update all packages
+
+```
+conda update --all
+```
+
+## Environments
+
+The definitive guide is [here](http://conda.pydata.org/docs/using/envs.html)
+
+### To list all environments
+
+```
+conda info --envs
+```
+or
+
+```
+conda env list
+```
+### To activate/deactivate an environment
+
+On Windows
+
+```
+activate name
+
+deactivate
+```
+
+On MacOSX/Linux
+
+```
+source activate name
+
+source deactivate
+```
+
+### To list a detailed package list for an environment
+
+```
+conda list -e
+```
+
+### To create an environment
+
+From the command line...
+
+```
+conda create --name myEnv python=3 scipy otherpackage
+```
+
+or from a yaml file
+
+```
+conda env create -f environment.yml
+```
+
+Export this file with from the active environment
+
+```
+conda env export > myName.yml
+```
+
+Remove an environment
+
+```
+conda remove --name theName --all
+```
+
+# iPython Notebook
+
+Some hints from version 3.
+
+- `--pylab` flag has been disabled as a flag; one should use
+`%pylab` or `%matplotlib` in the notebook to enable matplotlib. 
+
+- `--notebook-dir=<Unicode> (NotebookApp.notebook_dir)` the 
+default is `u''`. This is the directory to use for notebooks
+and kernels.  If one starts from the Anaconda Launcher, it seems
+to start in one's home directory. One can navigate to the
+desired folder.
+
+## ipython4 and jupyter
+
+Jupyter must be installed separately. See [jupyter github](https://github.com/jupyter/notebook)
+
+An easy way to update aftet **the big split** from [blog.jupyter.org](http://blog.jupyter.org/2015/08/12/first-release-of-jupyter/)
+
+```
+pip install --upgrade ipython[all]  
+```
+
+or BF&I
+
+```
+# ensure setuptools/pip are up-to-date
+pip install --upgrade setuptools pip
+cd ~/git
+git clone https://github.com/jupyter/notebook.git
+cd notebook
+pip install --pre -e .
+jupyter notebook
+```
 ## Polished jupyter notebooks
 
 ### Matplotlib tricks
@@ -312,143 +449,6 @@ for rx, rep in replacements:
 
 with open(fname, 'w') as f:
     f.write(out)
-```
-
-## Strings
-
-- `r'$+\pi/2$'` - a `raw string`, where backslashes are not escaped. In this case this would be useful for an axis label in `matplotlib`.
-
-- `u'  '` a unicode string.
-- `ur'xxx' - a unicode raw string.
-
-
-
-## Launching
-
-On MacOSX, a recent update broke the launcher for spyder,
-glueviz,and qtconsole. In reality, it is easier to use the Finder
-to navigate to the desired directory, use the `cd to.app` to open
-a terminal in that directory and start with one of
-
-```
-ipython qtconsole
-ipython notebook
-spyder
-```
-
-Note that starting `launcher` from the terminal makes the
-graphical start work. Go figure...
-
-## Updating
-
-```
-conda update conda
-conda update anaconda
-```
-
-To update all packages
-
-```
-conda update --all
-```
-
-## Environments
-
-The definitive guide is [here](http://conda.pydata.org/docs/using/envs.html)
-
-### To list all environments
-
-```
-conda info --envs
-```
-or
-
-```
-conda env list
-```
-### To activate/deactivate an environment
-
-On Windows
-
-```
-activate name
-
-deactivate
-```
-
-On MacOSX/Linux
-
-```
-source activate name
-
-source deactivate
-```
-
-### To list a detailed package list for an environment
-
-```
-conda list -e
-```
-
-### To create an environment
-
-From the command line...
-
-```
-conda create --name myEnv python=3 scipy otherpackage
-```
-
-or from a yaml file
-
-```
-conda env create -f environment.yml
-```
-
-Export this file with from the active environment
-
-```
-conda env export > myName.yml
-```
-
-Remove an environment
-
-```
-conda remove --name theName --all
-```
-
-# iPython Notebook
-
-Some hints from version 3.
-
-- `--pylab` flag has been disabled as a flag; one should use
-`%pylab` or `%matplotlib` in the notebook to enable matplotlib. 
-
-- `--notebook-dir=<Unicode> (NotebookApp.notebook_dir)` the 
-default is `u''`. This is the directory to use for notebooks
-and kernels.  If one starts from the Anaconda Launcher, it seems
-to start in one's home directory. One can navigate to the
-desired folder.
-
-## ipython4 and jupyter
-
-Jupyter must be installed separately. See [jupyter github](https://github.com/jupyter/notebook)
-
-An easy way to update aftet **the big split** from [blog.jupyter.org](http://blog.jupyter.org/2015/08/12/first-release-of-jupyter/)
-
-```
-pip install --upgrade ipython[all]  
-```
-
-or BF&I
-
-```
-# ensure setuptools/pip are up-to-date
-pip install --upgrade setuptools pip
-cd ~/git
-git clone https://github.com/jupyter/notebook.git
-cd notebook
-pip install --pre -e .
-jupyter notebook
 ```
 
 
