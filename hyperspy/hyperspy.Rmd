@@ -57,6 +57,25 @@ source deactivate
 conda list -e
 ```
 
+## setting up a newly clone repo
+
+```
+cd git
+rm -rf hyperspy
+git clone https://github.com/jrminter/hyperspy.git
+cd hyperspy
+git remote add upstream https://github.com/hyperspy/hyperspy.git
+git checkout master
+git fetch upstream
+git rebase upstream/master
+git push
+git checkout --track origin/0.8.x
+git checkout 0.8.x
+git fetch upstream
+git rebase upstream/0.8.x
+git push
+```
+
 ## latest remote
 
 ```
