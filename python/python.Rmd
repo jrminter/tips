@@ -91,6 +91,17 @@ We will install the latest Anaconda Python 3.5 environment as a primary environm
 17. Run `cd %GIT_HOME%\hyperspy`, then `git reset --hard; git checkout master`
 18. Install hyperspy from command line:  `python setup install`.
 
+## Downloads
+
+```
+from urllib.request import urlretrieve
+
+url = 'http://cook.msm.cam.ac.uk//~hyperspy//EDS_tutorial//'
+files = ['Ni_superalloy_1pix.msa', 'Ni_superalloy_010.rpl',
+         'Ni_superalloy_010.raw']
+for file in files:
+    urlretrieve(url + file, file)
+```
 
 ## Strings
 
