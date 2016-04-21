@@ -14,6 +14,69 @@ vignette: >
 
 [Back to Index](../README.html)
 
+# LaB6 Cathodes
+
+A thread from the microscopy listserver 2016-04-20
+
+## [John L. Grazul](jlg98@cornell.edu)
+
+Fellow microscopists it has been a long time since I have posted mainly because anything that comes out of Cornell is un-postable for really good reasons I assume. The huge issue I have been having for the past couple of years is the quality, reliability and life span of my LaB6 sources. Now this is not an issue with just one scope or just one vendor. Tungsten filaments work fantastic and hit all the numbers perfectly in both of our 120kV Tecnais.  When we put a LaB6 in really weird things happen. Before you get suspicious and think we just started up with LaB6, this is all that we have ever used on our tools, I just had to test the scopes with W to make sure I wasn't imagining things. We need LaB6 because of the brightness and hours of use; each scope is used 40-50 hr/week. So much for the introduction, now on to the issues:
+
+1. I have not seen a Maltese cross on either a Kimball or Denka in 5 years or so, or about 5- 8 filaments, on either of my Tecnais. The engineers and I just undersaturate and go for max brightness.
+
+2. Filament life used to be 2500-3000 hours, the last five tips have flamed out around 500 hours. BTW the vacuum has been rock steady in both scopes.
+
+3. I have had two tips fail due to micro cracks in the carbon crucible.
+
+4. The last five tips drift for the first 100-200 hours, and we are talking X-Y and Z. This is to the point that the deflectors can't compensate and I have to break vacuum and re-center manually.
+
+5. My 24 Volt power supply for the filament is fine, swapped them around my scopes with the same result.
+
+If the darn things didn't cost nearly $900.00 I might tolerate this. I have to give high marks to EMS, they have been listening to my complaints and have made good on the tips that have failed out of the box. But the quality of the product I really have questions about. Has Kimball changed their carbon supplier, is it softer? Why are there cracks?
+
+And the last question is have any of you guys had the same or similar issues? And the absolutely final question is am I missing something? After 30+ years of ripping scopes apart I might just have lost the magic touch or there is a vortex of Lab6 instability issues in Ithaca.
+
+## [Robert Keyse](rok210@lehigh.edu)
+
+We've had similar issues with the LaB6 filament image (odd shape) and used the gun tilt to max out the screen current as an alignment technique.  We also have the filament image moving across the screen when saturation is being approached.  But the latter is what I've been told is due to some dirt on the final anode or some nearby electrode perhaps in the accelerator.  This wandering is happening with W filaments too and is less critical at lower mags.
+
+I went to put a new LaB6 filament in the other day and it just broke off, much to my embarrassment and I'm putting off buying a new one for a while.  FYI our microscope is a JEOL 2000FX and vacuum isn't a problem so long as we replace the ion pump every five years.  The new one that broke while I was putting it in was a KP (the Denka are welded and robust).
+
+The thing that has my blood boiling is the so-called long-life FEI gallium sources that don't last more than three months.  And as you may know they come in at over $2000 each, as do the expendable extractors similarly priced.  The one we got with the new install lasted very nicely, but since then not so much.
+
+Best of luck with your search here,    
+Rob Keyse
+
+Robert Keyse, DPhil    
+Research Scientist    
+Lehigh University    
+
+5, East Packer Avenue,    
+Whitaker Laboratory    
+Bethlehem, PA 18015-3194    
+
+Office (610)758-3465    
+Fax    (610)758-4244    
+
+## [Hendrik O. Colijn](colijn.1@osu.edu)
+
+I've had some issues over the past several years with the Kimball Physics LaB6 cathodes.  (I'm not sure which brand you are using.)  After meticulously setting the depth and centering the cathode, I run out of gun tilt when warming it up.  After pulling it back out of the scope, I find that the cathode is still perfectly centered in the wehnelt.  I often go through 3 or 4 iterations before I can get a usable setting of the cathode, each time finding that it looks perfectly centered outside of the scope.
+
+My suspicion is that the legs have slightly different resistances and that one leg warms up more than the other pushing the cathode to the side.  When the cathode cools back down, the tip recenters itself.  This theory is pretty hard to verify since I can't directly observe the tip while it is warm.  If I can get the tip centered enough I do see the "maltese cross" figure though sometimes it's a bit off center.
+
+One thing that may affect your lifetime is the filament limit for saturation.  I have noticed that if I initially set the cathode to be just saturated, then check it 20-30 minutes later I find I can back the filament drive off by 1 or 2 clicks and it is still saturated.  I assume that as the components warm up, the saturation point changes slightly. I do have to tell the students that this is the correct way to operate so that they don't reset the limit themselves.  So, I now set my filament limit to be at least one click undersaturated.  This way, as it warms up, it will bring itself to the proper saturation point.  Note that the Kimball Physics documents indicate that the evaporation rate will triple in going from 1800K to 1850K.  This will bring the lifetime from ~2000 hours down to a 600-700 hour range.
+
+If the tip isn't oxidized by one of the students, I can still get close to 2000 hours from a cathode. I did have one student destroy one in 20 minutes by letting the cold trap warm up while it was hot. (I was NOT happy.)
+
+Kimball Physics has some useful info in the technical documents on their web site.
+
+Hendrik O. Colijn    
+Center for Electron Microscopy and Analysis    
+The Ohio State University    
+1305 Kinnear Rd, Suite 100, Columbus, OH  43212    
+colijn.1@osu.edu            614/643-3458    
+cemas.osu.edu <about:cemas.osu.edu>
+
 # Chillers
 
 From Bill Tivol 2015-05-26 on the Microscopy Listserver
