@@ -34,6 +34,8 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 # Don't forget...
 
+[datascienceriot](https://www.datascienceriot.com/how-to-install-r-in-linux-ubuntu-16-04-xenial-xerus/kris/) shows how to install R and R-Studion on Ubuntu 16.04 Xenial Xerus.
+
 RStudio - Tomorrow Night Bright theme is easy on the eyes. Monokai is somewhat better.
 
 [rud.is](http://rud.is/b/2015/10/20/installing-r-on-os-x/) has a nice guide to installation on Mac OSX.
