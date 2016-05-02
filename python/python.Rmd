@@ -22,6 +22,15 @@ See also [Intermediate Python](http://book.pythontips.com/en/latest/)
 
 # Things that made me go "huh"...
 
+## installing mayavi 4.4.0 on py35
+
+```
+conda install -c menpo vtk=7.0.0
+pip install mayavi
+
+```
+
+
 ## matplotlib: tight_layout
 
 From [tacaswell](https://github.com/scikit-image/scikit-image/issues/1775)
