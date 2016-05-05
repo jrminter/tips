@@ -88,16 +88,18 @@ git checkout --track vidartf/hyperspyui_py3
 ```
 cd $GIT_HOME/hyperspy
 echo hyperspy 
-echo hyperspy: branches set 2016-05-04
+echo hyperspy: branches set 2016-05-05
 git checkout master
 git pull
 git fetch upstream
 git rebase upstream/master
 git pull
+git pull
 git push
 git checkout 0.8.x
 git pull
 git rebase upstream/0.8.x
+git pull
 git pull
 git push
 git checkout master
