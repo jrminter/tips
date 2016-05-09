@@ -157,7 +157,8 @@ install_new('DMwR')
 install_new('fBasics')
 install_new('vcd')
 install_new('gplots')
-install_new('vcd')
+install_new('vcd')y
+
 install_new('rpart')
 install_new('ROCR')
 install_new('party')
@@ -217,3 +218,7 @@ install_new_github('rCharts','ramnathv')
 install_new_github('bookdown','hadley')
 install_new_github('captioner','adletaw')
 install_new_github('choroplethrZip','arilamstein')
+
+install_new_github('rAnaLab','jrminter')
+install_new_github('rPeaks','jrminter')
+
