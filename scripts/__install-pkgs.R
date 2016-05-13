@@ -1,5 +1,6 @@
 # __install-pkgs.R Install a list of Packages for R, if needed
 # 2015-04-26 Updated for R-3.2.1
+# 2016-05-09 Updated for R-3.3.0
 
 str.cran.repo <- 'http://cran.revolutionanalytics.com/'
 str.lib <- .Library
@@ -157,7 +158,7 @@ install_new('DMwR')
 install_new('fBasics')
 install_new('vcd')
 install_new('gplots')
-install_new('vcd')y
+install_new('vcd')
 
 install_new('rpart')
 install_new('ROCR')
@@ -218,6 +219,7 @@ install_new_github('rCharts','ramnathv')
 install_new_github('bookdown','hadley')
 install_new_github('captioner','adletaw')
 install_new_github('choroplethrZip','arilamstein')
+install_new_github('printr','yihui')
 
 install_new_github('rAnaLab','jrminter')
 install_new_github('rPeaks','jrminter')
