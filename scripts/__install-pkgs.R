@@ -224,3 +224,4 @@ install_new_github('printr','yihui')
 install_new_github('rAnaLab','jrminter')
 install_new_github('rPeaks','jrminter')
 
+devtools::install_github('WinVector/WVPlots',build_vignettes=TRUE)
