@@ -14,17 +14,6 @@ vignette: >
 
 [Back to Index](../README.html)
 
-# Things that make me go grrrr...
-
-## MacOSX
-
-1. **location of preference file**
-
-```
-~/Library/Preferences/gov.nist.microanalysis.plist
-```
-
-
 # Defining a custom material
 
 It is important to add a name when one define a name when defining a
@@ -46,6 +35,12 @@ On Windows, preferences are stored in the registry. The base key is:
 [HKEY_CURRENT_USER\Software\JavaSoft\Prefs\gov]
 ```
 It is always useful to export this as a `.reg` file.
+
+On MacOSX, preferences are stored in a `.plist` file...
+
+```
+~/Library/Preferences/gov.nist.microanalysis.plist
+```
 
 
 # Getting NISTMonte Monte Carlo packages to work with Iona
