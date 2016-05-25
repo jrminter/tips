@@ -25,6 +25,17 @@ pet = epq.Material(epq.Composition([epq.Element.C,epq.Element.H,epq.Element.O],[
 pet.setName("PET")
 ```
 
+# System Admin
+
+## Preferences
+
+On Windows, preferences are stored in the registry. The base key is:
+
+```
+[HKEY_CURRENT_USER\Software\JavaSoft\Prefs\gov]
+```
+It is always useful to export this as a `.reg` file.
+
 
 # Getting NISTMonte Monte Carlo packages to work with Iona
 
