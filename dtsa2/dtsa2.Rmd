@@ -43,7 +43,7 @@ On MacOSX, preferences are stored in a `.plist` file...
 ```
 
 
-# Getting NISTMonte Monte Carlo packages to work with Iona
+# Getting NISTMonte Monte Carlo packages to work with Iona and Jupiter
 
 DTSA-II Iona seems to not export classes that were available
 in Halley. I noticed that the `mcSimulate3.py` file had these
@@ -53,6 +53,8 @@ curious lines at the top:
 import sys
 sys.packageManager.makeJavaPackage("gov.nist.microanalysis.NISTMonte.Gen3", "CharacteristicXRayGeneration3, BremsstrahlungXRayGeneration3, FluorescenceXRayGeneration3, XRayTransport3", None)
 ```
+
+Note: it does **not** like the lines to be split...
 
 I did a Google search  and found
 [this](http://sourceforge.net/p/jython/mailman/message/6725556/)
