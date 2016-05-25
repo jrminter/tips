@@ -14,6 +14,17 @@ vignette: >
 
 [Back to Index](../README.html)
 
+# Things that make me go grrrr...
+
+## MacOSX
+
+1. **location of preference file**
+
+```
+~/Library/Preferences/gov.nist.microanalysis.plist
+```
+
+
 # Defining a custom material
 
 It is important to add a name when one define a name when defining a
