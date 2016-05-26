@@ -184,7 +184,31 @@ pip uninstall hyperspy
 cd %GITHOME%/hyperspy
 python setup.py install
 ```
+# Hyperspy Demos
 
+These are changing. D. N. Johnstone is leading the charge..
+
+Have a cloned repository...
+
+```
+git clone https://github.com/jrminter/hyperspy-demos.git
+cd hyperspy-demos
+git checkout master
+git remote add upstream https://github.com/hyperspy/hyperspy-demos.git
+git fetch upstream
+git merge  upstream/master master
+git pull
+git push
+git rebase upstream/master
+git push
+git remote add dnjohnstone https://github.com/dnjohnstone/hyperspy-demos.git
+git fetch dnjohnstone
+git checkout --track dnjohnstone/ENH_TEM_EDS_TutorialUpdate
+
+git checkout master
+
+
+```
 
 # Key imports for iPy3 notebooks
 
