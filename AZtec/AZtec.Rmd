@@ -16,7 +16,15 @@ This documents contains hints that I find helpful when using the Oxford AZtec 3.
 
 [Back to Index](../README.html)
 
-# User-Generated Public Templates
+# Useful quick tips
+
+## Naming standard spectra
+
+```
+YYYY-MM-DD-xxkV-Cu-S4-P4-5eV-2K-UHR-x.ymm
+```
+
+## User-Generated Public Templates
 
 These are in
 
