@@ -15,6 +15,16 @@ vignette: >
 
 # Getting Environment Variables loaded in elCapitan
 
+edit
+
+```
+/etc/launchd.conf
+
+may need to
+
+defaults write com.apple.dt.Xcode UseSanitizedBuildSystemEnvironment -bool NO
+```
+
 From [how-to-geek](http://www.e-howtogeek.com/60745/setting-environment-variables-launchd-longer-yosemite-capitan)
 
 Create an environment.plist file in `~/Library/LaunchAgents/` with this content:

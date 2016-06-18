@@ -5,7 +5,8 @@ library(knitr)
 library(rmarkdown)
 
 strGitHome <- Sys.getenv("GIT_HOME")
-if(strGitHome=="") strGitHome="~/git"
+if(strGitHome=="") strGitHome="~/Documents/git"
+#if(strGitHome=="/Users/jrminter/git") strGitHome="/Users/jrminter/Documents/git"
 strRel     <- '/tips/scripts'
 
 names <- c("AccessToSqlite.Rmd", "automater.Rmd", "AZtec.Rmd",
