@@ -1,6 +1,7 @@
 # __install-pkgs.R Install a list of Packages for R, if needed
 # 2015-04-26 Updated for R-3.2.1
 # 2016-05-09 Updated for R-3.3.0
+# 2016-06-23 Updated for R-3.3.1
 
 str.cran.repo <- 'http://cran.revolutionanalytics.com/'
 str.lib <- .Library
