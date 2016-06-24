@@ -38,16 +38,23 @@ skimage is a useful image processing package
 ## Synching my local scikit-image repository
 
 ```
-echo "synch scikit-image repositories. Version 2016-03-08"
+echo   
+echo "synch scikit-image repositories. Version 2016-06-23"
 echo 
 cd $GIT_HOME/scikit-image
 echo scikit-image
 git checkout master
 git pull
-git pull upstream master
+git fetch upstream
+git merge upstream/master master
+git push
+git pull
 git checkout v0.12.x
 git pull
-git pull upstream v0.12.x
+git merge upstream/v0.12.x v0.12.x
+git push . v0.12.x
+git pull
+git checkout master
 
 ```
 
