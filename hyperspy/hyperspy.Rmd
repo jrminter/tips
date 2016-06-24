@@ -100,7 +100,7 @@ git push
 git pull
 git checkout 0.8.x
 git merge upstream/0.8.x 0.8.x
-git push
+git push . 0.8.x
 git pull
 git checkout master
 git status
