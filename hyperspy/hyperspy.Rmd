@@ -67,13 +67,16 @@ cd hyperspy
 git remote add upstream https://github.com/hyperspy/hyperspy.git
 git checkout master
 git fetch upstream
-git rebase upstream/master
+git merge upstream/master master
+git checkout --track -b 0.8.x
+git merge upstream/0.8.x 0.8.x
 git push
-git checkout --track origin/0.8.x
-git checkout 0.8.x
+git pull
+git checkout master
 git fetch upstream
-git rebase upstream/0.8.x
+git merge upstream/master master
 git push
+git pull
 ```
 
 ## latest remote
@@ -88,20 +91,17 @@ git checkout --track vidartf/hyperspyui_py3
 ```
 cd $GIT_HOME/hyperspy
 echo hyperspy 
-echo hyperspy: branches set 2016-05-05
+echo hyperspy: branches set 2016-06-23
 git checkout master
 git pull
 git fetch upstream
-git rebase upstream/master
-git pull
-git pull
+git merge upstream/master master
 git push
+git pull
 git checkout 0.8.x
-git pull
-git rebase upstream/0.8.x
-git pull
-git pull
+git merge upstream/0.8.x 0.8.x
 git push
+git pull
 git checkout master
 git status
 echo 
@@ -112,14 +112,14 @@ note the branches defined
 ```
 jrminter@crunch MINGW64 ~/git/hyperspy (master)
 $ git remote -v
-origin  https://github.com/jrminter/hyperspy.git (fetch)
-origin  https://github.com/jrminter/hyperspy.git (push)
-upstream        https://github.com/hyperspy/hyperspy.git (fetch)
-upstream        https://github.com/hyperspy/hyperspy.git (push)
+origin	https://jrminter:qaz123wsx@github.com/jrminter/hyperspy.git (fetch)
+origin	https://jrminter:qaz123wsx@github.com/jrminter/hyperspy.git (push)
+upstream	https://github.com/hyperspy/hyperspy.git (fetch)
+upstream	https://github.com/hyperspy/hyperspy.git (push)
 
 jrminter@crunch MINGW64 ~/git/hyperspy (master)
 $ git branch -a
-  0.8.x
+0.8.x
 * master
   remotes/origin/0.6
   remotes/origin/0.7
