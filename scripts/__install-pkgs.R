@@ -204,6 +204,9 @@ install_new('devtools')
 install_new('latex2exp')
 install_new('ggvis')
 install_new('highcharter')
+install_new('RgoogleMaps')
+install_new('WDI')
+install_new('ggmap')
 
 biocLite()
 
