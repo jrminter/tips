@@ -34,6 +34,16 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 # Don't forget...
 
+## Key R-Markdown resources
+
+[R Notebooks](http://rmarkdown.rstudio.com/r_notebooks.html)
+
+[Beamer presentations](http://rmarkdown.rstudio.com/beamer_presentation_format.html#overview)
+
+[R Markdown v.2 home](http://rmarkdown.rstudio.com/index.html)
+
+## Other
+
 [datascienceriot](https://www.datascienceriot.com/how-to-install-r-in-linux-ubuntu-16-04-xenial-xerus/kris/) shows how to install R and R-Studion on Ubuntu 16.04 Xenial Xerus.
 
 RStudio - Tomorrow Night Bright theme is easy on the eyes. Monokai is somewhat better.
@@ -200,8 +210,10 @@ He notes:
 
 Hadley Wickham recommend [selector gadget](http://selectorgadget.com/) as an aid to web scraping.
 
-# xtable from knitr and Rmarkdown in RStudio
-This worked when using options to the R chunk
+# Tables from knitr and Rmarkdown in RStudio
+
+
+This used to work when using options to the R chunk
 of ` echo=FALSE, results='asis' `
 
 ```
@@ -212,6 +224,24 @@ dig  <- c(0,4,2,2,2)
 rownames(slope) <- c("Cu L", "Cu K")
 xt <- xtable(slope, digits=dig, display=disp)
 print(xt, type='html')
+```
+
+but it no longer does. The `pander` packages seems to work
+
+```
+n <- 100
+x <- rnorm(n)
+y <- 2*x + rnorm(n)
+out <- lm(y ~ x)
+library(pander)
+# panderOptions("digits", 2)
+pander(out)
+```
+as does this
+
+```
+df <- cars[1:4,]
+pander(df)
 ```
 
 # Using custom environment variables
