@@ -67,6 +67,12 @@ EDAX/EDAX.md
 EDAX/EDAX.html
 EDAX/figure/
 
+# ggplot2figure tips directory
+ggplot2figure/.DS_Store
+ggplot2figure/ggplot2-figure.md
+ggplot2figure/ggplot2-figure.html
+ggplot2figure/figure/
+
 # ggplot2Intro tips directory
 ggplot2Intro/.DS_Store
 ggplot2Intro/ggplot2Intro.md

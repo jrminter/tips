@@ -18,6 +18,15 @@ They were compiled from several web sources.
 
 # Simple tricks
 
+## Common characters
+
+| Character      | \LaTeX symbol | md...html/pkg |
+|:---------------|:--------------|:--------------|
+| plus/minus     | \\pm          | yes           |
+| degree in text | \\textdegree  | textcomp      |
+| mu  upright    | \\upmu        | upgreek       |
+
+
 ## HTML Colors
 These are frequently used in themes.
 [ColorPicker](http://www.w3schools.com/tags/ref_colorpicker.asp)

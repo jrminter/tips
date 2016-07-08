@@ -1,0 +1,272 @@
+---
+title: "How I build up a ggplot2 figure"
+author: "John Muschelli"
+date: "February 18, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+[Back to Index](../README.html)
+
+Based on [strictlystat](https://hopstat.wordpress.com/2016/02/18/how-i-build-up-a-ggplot2-figure/)
+
+Recently, Jeff Leek at Simply Statistics discussed [why he does not use ggplot2](http://simplystatistics.org/2016/02/11/why-i-dont-use-ggplot2/). He notes:
+
+> The bottom line is for production graphics, any system requires work.
+
+and describes a default plot that needs some work:
+
+```{r}
+library(ggplot2)
+ggplot(data = quakes, aes(x = lat,y = long,colour = stations)) + geom_point()
+```
+
+To break down what is going on, here is what R interprets (more or less):
+
+1. Make a container for data ggplot.
+2. Use the quakes data.frame: data = quakes.
+3. Map certain "aesthetics"" with the aes to three different aesthetics (x, y, z) to certain variables from the dataset lat, long, stations, respectively.
+4. Add a layer of geometric things, in this case points (geom_point).
+
+Implicitly, ggplot2 notes that all 3 aesthetics are continuous, so maps them onto the plot using a "continuous"" scale (color bar). If stations were a factor or character column, the plot would not have a color bar but a "discrete"" scale.
+
+Now, Jeff goes on to describe elements he believes required to make this plot "production ready":
+
+1. make the axes bigger
+2. make the labels bigger
+3. make the labels be full names (latitude and longitude, ideally with units when variables need them
+4. make the legend title be number of stations reporting
+
+As such, I wanted to go through each step and show how you can do each of these operations
+
+# Make the Axes/Labels Bigger
+
+First off, let's assign this plot to an object, called g:
+
+```{r}
+g <- ggplot(data = quakes,
+            aes(x = lat,y = long,colour = stations)) +
+     geom_point()
+```
+Now, you can simply call `print(g)` to show the plot, but the assignment will not do that by default. If you simply call g, it will print/show the object (as other R objects do), and plot the graph.
+
+# Theme – get to know it
+
+One of the most useful ggplot2 functions is theme. Read the documentation (?theme). There is a slew of options, but we will use a few of them for this and expand on them in the next sections.
+
+# Setting a global text size
+
+We can use the text argument to change ALL the text sizes to a value. Now this is where users who have never used ggplot2 may be a bit confused. The text argument (input) in the theme command requires that text be an object of class element_text. If you look at the theme help it says "all text elements (element_text)". This means you can't just say text = 5, you must specify text = element_text().
+
+As text can have multiple properties (size, color, etc.), element_text can take multiple arguments for these properties. One of these arguments is size:
+
+```{r}
+g + theme(text = element_text(size = 20))
+```
+
+Again, note that the text argument/property of theme changes all the text sizes. Let's say we want to change the axis tick text (axis.text), legend header/title (legend.title), legend key text (legend.text), and axis label text (axis.title) to each a different size:
+
+```{r}
+gbig <- g + theme(axis.text = element_text(size = 18),
+                  axis.title = element_text(size = 20),
+                  legend.text = element_text(size = 15),
+                  legend.title = element_text(size = 15))
+gbig
+```
+
+Now, we still have the plot g stored, but we make a new version of the graph, called gbig.
+
+# Make the Labels to be full names
+
+To change the x or y labels, you can just use the xlab/ylab functions:
+
+```{r}
+gbig <- gbig + xlab("Latitude") + ylab("Longitude")
+gbig
+```
+
+We want to keep these labels, so we overwrote gbig.
+
+# Maybe add a title
+
+Now, one may assume there is a main() function from ggplot2 to give the title of the graph, but that function is ggtitle(). Note, there is a title command in base R, so this was not overwritten. It can be used by just adding this layer:
+
+```{r}
+gbig + ggtitle("Spatial Distribution of Stations")
+```
+
+Note, the title is smaller than the specified axes label sizes by default. Again if we wanted to make that title bigger, we can change that using theme:
+
+```{r}
+gbig +
+  ggtitle("Spatial Distribution of Stations") +
+  theme(title = element_text(size = 30))
+```
+
+I will not reassign this to a new graph as in some figures for publications, you make the title in the figure legend and not the graph itself.
+
+# Making a better legend
+
+Now let's change the header/title of the legend to be number of stations. We can do this using the guides function:
+
+```{r}
+gbigleg_orig <- gbig + guides(colour=guide_colorbar(title = "Number of Stations Reporting"))
+gbigleg_orig
+```
+
+Here, guides takes arguments that are the same as the aesthetics from before in aes. Also note, that color and colour are aliased so that you can spell it either way you want.
+
+I like the size of the title, but I don't like how wide it is. We can put line breaks in there as well:
+
+```{r}
+gbigleg <- gbig +
+  guides(colour = guide_colorbar(title="Number\nof\nStations\nReporting"))
+gbigleg
+```
+
+Ugh, let's also adjust the horizontal justification, so the title is centered:
+
+```{r}
+gbigleg <- gbigleg +
+  guides(colour = guide_colorbar(title = "Number\nof\nStations\nReporting",
+                                 title.hjust = 0.5))
+gbigleg
+```
+That looks better for the legend, but we still have a lot of wasted space.
+
+# Legend IN the plot
+
+One of the things I believe is that the legend should be inside the plot. In order to do this, we can use the legend.position from the themes:
+
+```{r}
+gbigleg +
+  theme(legend.position = c(0.3, 0.35))
+```
+
+Now, there seems can be a few problems here:
+
+1. There may not be enough place to put the legend
+2. The legend may mask out points/data
+
+For problem 1., we can either 1) make the y-axis bigger or the legend smaller or a combination of both. In this case, we do not have to change the axes, but you can use ylim to change the y-axis limits:
+
+```{r}
+gbigleg +
+  theme(legend.position = c(0.3, 0.35)) +
+  ylim(c(160, max(quakes$long)))
+```
+
+I try to not do this as area has been added with no data information. We have enough space, but let's make the legend "transparent"" so we can at least see if any points are masked out and to make the legend look a more inclusive part of the plot.
+
+# Making a transparent legend
+
+I have a helper "function" transparent_legend that will make the box around the legend (legend.background) transparent and the boxes around the keys (legend.key) transparent as well. Like text before, we have to specify boxes/backgrounds as an element type, but these are rectangles (element_rect) compared to text (element_text).
+
+```{r}
+transparent_legend <-  theme(
+  legend.background = element_rect(fill = "transparent"),
+  legend.key = element_rect(fill = "transparent",
+                            color = "transparent")
+)
+```
+
+One nice thing is that we can save this as an object and simply "add" it to any plot we want a transparent legend. Let's add this to what we had and see the result:
+
+```{r}
+gtrans_leg = gbigleg +
+  theme(legend.position = c(0.3, 0.35)) +
+  transparent_legend
+gtrans_leg
+```
+
+# Moving the title of the legend
+
+Now, everything in gtrans_leg looks acceptable (to me) except for the legend title. We can move the title of the legend to the left hand side:
+
+```{r}
+gtrans_leg + guides(colour = guide_colorbar(title.position = "left"))
+```
+
+Damnit! Note, that if you respecify the guides, you must make sure you do it all in one shot (easiest way):
+
+```{r}
+gtrans_leg + guides(
+  colour=guide_colorbar(title = "Number\nof\nStations\nReporting",
+                          title.hjust = 0.5,
+                          title.position = "left"))
+```
+
+# A little more advanced
+
+The last statement is not entirely true, as we could dig into the ggplot2 object and assign a different title.position property to the object after the fact.
+
+```{r}
+gtrans_leg$guides$colour$title.position = "left"
+gtrans_leg
+```
+
+# "I don't like that theme"
+
+Many times, I have heard people who like the grammar of ggplot2 but not the specified theme that is default. The ggthemes package has some good extensions of theme from ggplot2, but there are also a bunch of themes included in ggplot2, which should be specified before changing specific elements of theme as done above:
+
+```{r}
+g + theme_bw()
+```
+
+```{r}
+g + theme_dark()
+```
+
+```{r}
+g + theme_minimal()
+```
+
+```{r}
+g + theme_classic()
+```
+
+# Conclusions
+
+I agree that ggplot2 can deceive new users by making graphs that look "good"-ish. This may be a detriment as they may believe they are good enough, when they truly need to be changed. The changes are available in base or ggplot2 and the overall goal was to show how the recommendations can be achieved using ggplot2 commands.
+
+Below, I discuss some other aspects of the post, where you can use ggplot2 to make quick-ish exploratory plots. I believe, however, that ggplot2 is not the fastest for quick basic exploratory plots. What is is better than base graphics is for making slightly more complex exploratory plots that are necessary for analysis, where base can take more code to do.
+
+# How to make quick exploratory plots
+
+I agree with Jeff that the purpose of exploratory plots should be done quickly and a broad range of plots done with minimal code.
+
+Now, I agree that plot is a great function. I do believe that you can create many quick plots using ggplot2 and can be faster than base in some instances. A specific case would be that you have a binary y variable and multiple continous x variables. Let's say I want to plot jittered points, a fit from a binomial glm (logistic regression), and one from a loess.
+
+Here we will use mtcars and say if the car is automatic or manual (am variable) is our outcome.
+
+```{r}
+g <- ggplot(aes(y = am), data = mtcars) +
+  geom_point(position = position_jitter(height = 0.2)) +
+  geom_smooth(method = "glm",
+              method.args = list(family = "binomial"), se = FALSE) +
+  geom_smooth(method = "loess", se = FALSE, col = "red")
+```
+
+Then we can simply add the x variables as aesthetics to look at each of these:
+
+```{r}
+g + aes(x = mpg)
+```
+
+```{r}
+g + aes(x = drat)
+```
+
+```{r}
+g + aes(x = qsec)
+```
+
+Yes, you can create a function to do the operations above in base, but that's 2 sides of the same coin: function versus ggplot2 object.
+
+
+All code is located on my [GitHub](https://github.com/muschellij2/HopStat/blob/gh-pages/How_I_build_up_a_ggplot2_figure/How_I_build_up_a_ggplot2_figure.R) for my blog
+
+[Back to Index](../README.html)
