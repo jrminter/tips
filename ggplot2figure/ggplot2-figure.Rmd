@@ -53,7 +53,7 @@ g <- ggplot(data = quakes,
 ```
 Now, you can simply call `print(g)` to show the plot, but the assignment will not do that by default. If you simply call g, it will print/show the object (as other R objects do), and plot the graph.
 
-# Theme – get to know it
+# Theme - get to know it
 
 One of the most useful ggplot2 functions is theme. Read the documentation (?theme). There is a slew of options, but we will use a few of them for this and expand on them in the next sections.
 
