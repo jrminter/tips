@@ -75,15 +75,40 @@ update.packages(ask=FALSE, checkBuilt = TRUE)
 # install_new('RMySQL')
 # install_new('RExcel')
 
+# Start with the tidyverse
 install_new('devtools')
-install_new('ggplot2')
-install_new('dplyr')
+install_new('readr')
+install_new('lubridate')
+install_new('stringr')
 install_new('tidyr')
+install_new('dplyr')
+install_new('rvest')
+install_new('ggplot2')
+install_new('ggvis')
+install_new('ggmap')
+install_new('testthat')
+install_new('roxygen2')
+install_new('Rd2roxygen')
 install_new('purrr')
 install_new('tibble')
+
+# Sweave and pandoc tools
+# install_new('cacheSweave') # not avail 3.2
+install_new('markdown')
+install_new('rmarkdown')
+install_new('knitr')
+install_new('knitcitations')
+install_new('pander')
+install_new('rtiff')
+install_new('raster')
+install_new('png')
+install_new('grid')
+install_new('gridExtra')
+
+
 install_new('pryr')
+install_new('plyr')
 install_new('nycflights13')
-install_new('readr')
 install_new('RODBC')
 install_new('Unicode')
 install_new('TeachingDemos')
@@ -91,11 +116,7 @@ install_new('plotGoogleMaps')
 install_new('tikzDevice') # now back on CRAN...
 install_new('mixtools')
 
-# Sweave and pandoc tools
-# install_new('cacheSweave') # not avail 3.2
-install_new('knitr')
-install_new('knitcitations')
-install_new('pander')
+
 
 # metrology packages
 install_new('metRology')
@@ -108,7 +129,7 @@ install_new('robCompositions')
 install_new('Cairo')
 install_new('beanplot')
 install_new('spatstat')
-install_new('rtiff')
+
 
 # for foreach
 install_new('foreach')
@@ -119,7 +140,7 @@ install_new('doSNOW')
 
 
 install_new('RGtk2')
-install_new('testthat')
+
 install_new('PerformanceAnalytics')
 install_new('quantmod')
 install_new('TTR')
@@ -127,7 +148,7 @@ install_new('RJSONIO')
 install_new('rgdal')
 install_new('filehash')
 install_new('sp')
-install_new('raster')
+
 install_new('fields')
 # install_new('h5r') # not avail 3.2
 install_new('rJava')
@@ -156,8 +177,6 @@ install_new('HSAUR2')
 install_new('moments')
 install_new('spc')
 install_new('xlsx')
-install_new('png')
-install_new('plyr')
 install_new('DMwR')
 install_new('fBasics')
 install_new('vcd')
@@ -193,23 +212,18 @@ install_new('SweaveListingUtils')
 install_new('memisc')
 install_new('mosaic')
 install_new('fastR')
-install_new('roxygen2')
-install_new('Rd2roxygen')
-install_new('markdown')
+
+
 install_new('lmtest')
-install_new('gridExtra')
-install_new('stringr')
 install_new('quantreg')
 install_new('zoo')
 install_new('lme4')
 install_new('plotGoogleMaps')
-install_new('devtools')
 install_new('latex2exp')
-install_new('ggvis')
 install_new('highcharter')
 install_new('RgoogleMaps')
 install_new('WDI')
-install_new('ggmap')
+
 
 biocLite()
 
