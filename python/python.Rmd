@@ -22,6 +22,12 @@ See also [Intermediate Python](http://book.pythontips.com/en/latest/)
 
 # Things that made me go "huh"...
 
+## installing theano on Anacond Py35
+
+```
+conda install -c jaikumarm theano=0.8.2
+```
+
 ## installing mayavi 4.4.0 on py35
 
 ```
