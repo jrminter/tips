@@ -26,6 +26,14 @@ They were compiled from several web sources.
 | degree in text | \\textdegree  | textcomp      |
 | mu  upright    | \\upmu        | upgreek       |
 
+## XeLaTeX slows down when it encounters a .fd file
+
+This is particularly bad on Windows. The solution came from [stackexchange](http://tex.stackexchange.com/questions/57204/different-compilation-times-with-different-operating-systems). The issue is the font cache. the solution is to run the following command from an **Administrator Command Prompt**
+
+```
+fc-cache -fv
+```
+
 
 ## HTML Colors
 These are frequently used in themes.
