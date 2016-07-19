@@ -16,6 +16,10 @@ vignette: >
 
 Some useful tips for windows
 
+# Clearing the Win 7  Windows Update cache
+
+[youtube](https://www.youtube.com/watch?v=5r-h5CMJp_A)
+
 # Connecting to Ubuntu Samba shares from Win7
 
 From [ubuntu forums](http://ubuntuforums.org/showthread.php?t=1942514)
