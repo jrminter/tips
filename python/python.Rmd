@@ -22,7 +22,7 @@ See also [Intermediate Python](http://book.pythontips.com/en/latest/)
 
 # Things that made me go "huh"...
 
-## installing theano on Anacond Py35
+## installing theano on Anaconda Py35
 
 ```
 conda install -c jaikumarm theano=0.8.2
