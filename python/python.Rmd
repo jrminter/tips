@@ -28,6 +28,8 @@ See also [Intermediate Python](http://book.pythontips.com/en/latest/)
 conda install -c jaikumarm theano=0.8.2
 ```
 
+**Note:** This worked on MacOSX but **not** Win7 x64...
+
 ## installing mayavi 4.4.0 on py35
 
 ```
