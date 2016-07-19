@@ -16,9 +16,14 @@ vignette: >
 
 Some useful tips for windows
 
-# Clearing the Win 7  Windows Update cache
+# Cleaning win 7
+
+## Clearing the Win 7  Windows Update cache
 
 [youtube](https://www.youtube.com/watch?v=5r-h5CMJp_A)
+
+## Cleanup tool
+[delete old folder](http://www.bleepingcomputer.com/tutorials/delete-windows-old-folder/)
 
 # Connecting to Ubuntu Samba shares from Win7
 
