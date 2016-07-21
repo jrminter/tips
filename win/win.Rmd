@@ -16,6 +16,18 @@ vignette: >
 
 Some useful tips for windows
 
+# Win 10 stuff
+
+## privacy
+
+[security/tips1](http://www.itpro.co.uk/operating-systems/25802/15-windows-10-problems-and-how-to-fix-them-5)
+
+[pc-world](http://www.pcworld.com/article/2971725/windows/how-to-reclaim-your-privacy-in-windows-10-piece-by-piece.html)
+
+## tuning
+
+[config](http://www.makeuseof.com/tag/speed-windows-10-boot-shut/)
+
 # Cleaning win 7
 
 ## Clearing the Win 7  Windows Update cache
