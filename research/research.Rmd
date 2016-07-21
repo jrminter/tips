@@ -45,7 +45,8 @@ Get the basic installer [here](https://msys2.github.io/). There are great packag
 3. Install base devel: `pacman -S base-devel`
 4. Install sqlite: `pacman -S sqlite`
 5. Install nano: `pacman -S nano`
-6. Install svn: `pacman -S svn`
+6. Install ruby: `pacman -S ruby` (optional dependency for svn)
+7. Install svn: `pacman -S svn`
 
 
 # Good advice from Neal Anderson
