@@ -28,6 +28,12 @@ Some useful tips for windows
 
 [config](http://www.makeuseof.com/tag/speed-windows-10-boot-shut/)
 
+## Getting a shortcut to run as an administrator
+
+Hat tip [cnet](http://www.cnet.com/how-to/always-run-a-program-in-administrator-mode-in-windows-10/)
+
+![](./png/shortcut-main-menu.png) ![](./png/run-as-administrator.png) 
+
 # Cleaning win 7
 
 ## Clearing the Win 7  Windows Update cache
