@@ -29,7 +29,7 @@ There is a [youtube](https://www.youtube.com/playlist?list=PLhFTuW7KWApwoo2DHzpW
 
 2. Write and test logical units thet fit the 7 $\pm$ 2 items one can keep in short term memory and assemble the into functions/blocks. **Note:** The shell history or iPython history can save typing and help.
 
-3. Test and debug as you go. This save time in the long run.
+3. Test and debug as you go. This saves time in the long run.
 
 4. Commit short, logical blocks to version control using meaningful commit messages to aid in later search.
 
