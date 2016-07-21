@@ -18,11 +18,25 @@ Some useful tips for windows
 
 # Win 10 stuff
 
+## Install gets stuck on 'Checking for updates'
+
+[HT http://alinirimia.com/](http://alinirimia.com/2016/04/widows-10-install-stuck-at-checking-for-updates/) was originally from [MS]( http://answers.microsoft.com/en-us/insider/forum/insider_wintp-insider_install/window-10-install-stuck-on-checking-for-updates/e294932f-149e-412b-b996-6f1253973399?auth=1).
+
+1. Go to Start – All Programs – Accessories – right click on Command Prompt and select "Run as administrator""
+2. Type net stop wuauserv  (this will stop windows update service)
+3. Wait till you get : The windows update service was stopped successfully.
+4. Type net start wuauserv  (this will start windows update service)
+5. Dont close the Command prompt window, you will need it later.
+
+After that the windows setup will go from Checking for updates to Getting information on your PC and then will go to Getting updates, if you are getting stuck again (I was) repeat 1, 2, 3, 4. After that the window will ask few install questions , if you want to keep apps and data etc , after selecting the options you want it will go again at getting updates and get stuck again.   Go in command prompt and type again **net stop wuauserv** , you will notice that when you type **net start wuauserv** a message will say the service is already started, that is ok . Now the install window will complete getting updates very fast and after the window will change to Ready to install.  Press install and from now on the installer wont get stuck and complete successfully.
+
 ## privacy
 
 [security/tips1](http://www.itpro.co.uk/operating-systems/25802/15-windows-10-problems-and-how-to-fix-them-5)
 
 [pc-world](http://www.pcworld.com/article/2971725/windows/how-to-reclaim-your-privacy-in-windows-10-piece-by-piece.html)
+
+[youtube - Barnacules](https://www.youtube.com/watch?v=u1kGMCfb2xw)
 
 ## tuning
 
