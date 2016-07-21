@@ -16,6 +16,27 @@ vignette: >
 
 These are tips on effective scientific research collected by John Minter from selected web sources.
 
+# Software Carpentry
+
+Greg Wilson is an excellent teacher.
+
+
+There is a [youtube](https://www.youtube.com/playlist?list=PLhFTuW7KWApwoo2DHzpWLhA19zenWF1LF) playlist from 2012.
+
+
+Getting the software set up on Windows can be a challenge. I like the Msys2 system
+
+
+Get the basic installer [here](https://msys2.github.io/). There are great packages on [github](https://github.com/Alexpux/MSYS2-packages). 
+
+1. Install msys2
+2. Update the pacman database: `pacman -Sy pacman`
+3. Install base devel: `pacman -S base-devel`
+4. Install sqlite: `pacman -S sqlite`
+5. Install nano: `pacman -S nano`
+6. Install svn: `pacman -S nano`
+
+
 # Good advice from Neal Anderson
 
 From [Practical Process Research and Development - A guide for Organic Chemists, Second Edition 2nd Edition, p. 19](http://www.amazon.com/dp/0123865379). Hat Tip [ChemJobber](http://chemjobber.blogspot.co.uk/2016/02/bonus-process-wednesday-life-tips-from.html).
