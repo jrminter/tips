@@ -23,6 +23,17 @@ Greg Wilson is an excellent teacher.
 
 There is a [youtube](https://www.youtube.com/playlist?list=PLhFTuW7KWApwoo2DHzpWLhA19zenWF1LF) playlist from 2012.
 
+## Key suggestions:
+
+1. Plan your work in approximately 45 to 60 minute segments where you have optimal focus.
+
+2. Write and test logical units thet fit the 7 $\pm$ 2 items one can keep in short term memory and assemble the into functions/blocks. **Note:** The shell history or iPython history can save typing and help.
+
+3. Test and debug as you go. This save time in the long run.
+
+4. Commit short, logical blocks to version control using meaningful commit messages to aid in later search.
+
+## Installing the software on Windows
 
 Getting the software set up on Windows can be a challenge. I like the Msys2 system
 
@@ -34,7 +45,7 @@ Get the basic installer [here](https://msys2.github.io/). There are great packag
 3. Install base devel: `pacman -S base-devel`
 4. Install sqlite: `pacman -S sqlite`
 5. Install nano: `pacman -S nano`
-6. Install svn: `pacman -S nano`
+6. Install svn: `pacman -S svn`
 
 
 # Good advice from Neal Anderson
