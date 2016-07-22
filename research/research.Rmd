@@ -18,7 +18,7 @@ These are tips on effective scientific research collected by John Minter from se
 
 # Software Carpentry
 
-Greg Wilson is an excellent teacher.
+Greg Wilson is an excellent teacher!
 
 Some files that we need are available [here](https://files.software-carpentry.org/). There is also a version of the course taught by Tiziano Zito at the [Berlin Institute of Technology](https://itb.biologie.hu-berlin.de/~zito/teaching/SC/) that has all the files we need (download the zipped archive and look in the `lec/inc/` directory) for all the files needed for the course from 2012 that was recorded by Greg for the [youtube](https://www.youtube.com/playlist?list=PLhFTuW7KWApwoo2DHzpWLhA19zenWF1LF) playlist.
 
