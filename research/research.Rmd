@@ -20,33 +20,158 @@ These are tips on effective scientific research collected by John Minter from se
 
 Greg Wilson is an excellent teacher.
 
+Some files that we need are available [here](https://files.software-carpentry.org/). There is also a version of the course taught by Tiziano Zito at the [Berlin Institute of Technology](https://itb.biologie.hu-berlin.de/~zito/teaching/SC/) that has all the files we need (download the zipped archive and look in the `lec/inc/` directory) for all the files needed for the course from 2012 that was recorded by Greg for the [youtube](https://www.youtube.com/playlist?list=PLhFTuW7KWApwoo2DHzpWLhA19zenWF1LF) playlist.
 
-There is a [youtube](https://www.youtube.com/playlist?list=PLhFTuW7KWApwoo2DHzpWLhA19zenWF1LF) playlist from 2012.
+
 
 ## Key suggestions:
 
-1. Plan your work in approximately 45 to 60 minute segments where you have optimal focus.
+1. Greg begins by noting that our work is really **'brain limited'**. Neuroscience research studies show that people can hold **7 $\pm$ 2** unrelated facts in short term memory. We then develop **'mental inter-relations'** between these to form patterns. **Example:** We do not recall the five dots on a dice as separate facts but as a pattern or unit. We call this **chunking**. Forming these interconnections is part of long term memory.  The **key take-away** is that we **work best** when we **accommodate our physiology**. For example, Write and test logical units that fit the 7 $\pm$ 2 items one can keep in short term memory and assemble the into functions/blocks. **Note:** The shell history or iPython history can save typing and help. 
 
-2. Write and test logical units thet fit the 7 $\pm$ 2 items one can keep in short term memory and assemble the into functions/blocks. **Note:** The shell history or iPython history can save typing and help.
+2. Plan your work in approximately **45 to 60 minute segments** where you have optimal focus. It is important to get up, walk around and get some oxygen to be refreshed. **Example:** Cadets at the U. S. Military Academies are taught to do push-ups to refresh their focus.
 
 3. Test and debug as you go. This saves time in the long run.
 
 4. Commit short, logical blocks to version control using meaningful commit messages to aid in later search.
 
+5. **The importance of peer instruction:** From Eric Mazur at Harvard. If we get a misconception, likely someone in the group will understand and explain the misconception. Recent learners are often much better at this than experts. I call this **the importance of a second pair of eyes**.
+
 ## Installing the software on Windows
 
-Getting the software set up on Windows can be a challenge. I like the Msys2 system
+Getting the software set up on Windows can be a challenge. I like the Msys2 system. 
 
+Get the basic installer [here](https://msys2.github.io/). There are great packages on [github](https://github.com/Alexpux/MSYS2-packages), and they are easily installed using **`pacman`**. 
 
-Get the basic installer [here](https://msys2.github.io/). There are great packages on [github](https://github.com/Alexpux/MSYS2-packages). 
-
-1. Install msys2
+1. Download and install the appropriate [**msys2 installer**](https://msys2.github.io/). I like to install it in **`C:/Apps/msys64/`**.
 2. Update the pacman database: `pacman -Sy pacman`
 3. Install base devel: `pacman -S base-devel`
 4. Install sqlite: `pacman -S sqlite`
 5. Install nano: `pacman -S nano`
 6. Install ruby: `pacman -S ruby` (optional dependency for svn)
 7. Install svn: `pacman -S svn`
+
+## An example of building up a workflow using a shell
+
+We will analyze the `fish.txt` file. Use the `up-arrow` key to reduce typing
+
+1. Remove the `Species` header
+
+```
+grep -v Species fish.txt
+```
+
+2. Extract just the species
+
+```
+up-arrow
+grep -v Species fish.txt | cut -d , -f 2 
+```
+
+3. sort the species
+
+```
+up-arrow
+grep -v Species fish.txt | cut -d , -f 2 | sort
+```
+
+4. Get just the species and count
+
+```
+up-arrow
+grep -v Species fish.txt | cut -d , -f 2 | sort | uniq -c
+```
+
+Note the development process$\ldots$ The shell history is our friend$\ldots$
+We have a command and trust it because we "grew it in stages".
+
+**This is a habit we need to develop (in all our software development and problem solving)**. Think in terms of cycles of build/assemble then test$\ldots$ We need to 'check our work' repeatedly along the way.
+
+You can tell a lot about whether a paper you are reviewing is likely to be correct by asking a few questions about the "how". Look at the build/test process. Is there a record (like saving the history$\ldots$)
+
+For example, use:
+
+```
+history > second-record.txt
+```
+
+**There is no way to check** the 'how' inside a GUI tool!
+
+Note we can search the history. Greg used
+
+```
+history | grep tail
+```
+
+to find this exemplar (at line 149):
+
+```
+cut -d , -f 2  fish.txt | sort | uniq -c | tail +2
+```
+
+which was the first way to count species. **Note:** we can re-run with 
+
+```
+!149
+```
+
+I tested with:
+
+```
+jrmFastMac [~/Documents/software-carpetry]
+jrminter 41: wc tail-at-the-end.txt grep-at-the-start.txt 
+       4       8      44 tail-at-the-end.txt
+       4       8      44 grep-at-the-start.txt
+       8      16      88 total
+
+jrmFastMac [~/Documents/software-carpetry]
+jrminter 42: diff tail-at-the-end.txt grep-at-the-start.txt 
+```
+
+## The Importance of using **predictable file names**
+
+
+`fish.txt` is a **really bad name** for a data file! After a while one gets a series of files that have unhelpful names... 
+
+Que PhD Comics cartoon$\ldots$
+
+![](./png/phd101212s.png)
+
+We need to use meaningful file-names and consistent data entry or data cleaning becomes a nightmare!
+
+**The more consistent the data and the file name**, the easier it is to extract data
+
+
+We can Use the `*` wildcard to get the shell to match for all characters!
+
+Consistent file names help. Can use mv to rename and move files to consistent names and directories.
+
+**This makes file selection and data cleaning easier!**
+
+
+**THE KEY IDEAs: **
+
+1. Use consistent file naming conventions
+2. Use consistent file content/structure
+3. Use the pattern matching from the shell and iPython terminal to reduce typing and errors.
+4. **Test early and incrementally** to minimize errors. 
+
+
+
+## Some key **`sqlite`** commands:
+
+### Create the database by
+
+```
+sqlite3 experiments.db < create-db.sql
+```
+
+### Do a query
+
+```
+sqlite3 experiments.db < project-hours.sql
+```
+
+
 
 
 # Good advice from Neal Anderson
