@@ -36,6 +36,45 @@ Some files that we need are available [here](https://files.software-carpentry.or
 
 5. **The importance of peer instruction:** From Eric Mazur at Harvard. If we get a misconception, likely someone in the group will understand and explain the misconception. Recent learners are often much better at this than experts. I call this **the importance of a second pair of eyes**.
 
+6. **Clarity is more important that brevity**. We are writing code with our **future selves in mind**. It is important that humans can quickly understand the algorithm behind the code. Consider these two solutions:
+
+```
+# add up the number of creatures in a data file
+reader = open('the-name.txt', 'r)
+total = 0
+for line in reader:
+    if not(line.startswith('#') or line.startswith('Date')):
+        temp = line.strip()
+        fields = temp.split(',')
+        count = int(fields[2])
+        total = total + count
+reader.close()
+print('total number of creatures seen', total)
+```
+
+compared to this version
+
+
+```
+# add up the number of creatures in a data file
+reader = open('the-name.txt', 'r)
+total = 0
+for line in reader:
+    if (line.startswith('#') or line.startswith('Date')):
+        pass # skip comments and data set title lines
+    else:
+        temp = line.strip()
+        fields = temp.split(',')
+        count = int(fields[2])
+        total = total + count
+reader.close()
+print('total number of creatures seen', total)
+```
+
+The second is more quickly understood.
+
+
+
 ## Installing the software on Windows
 
 Getting the software set up on Windows can be a challenge. I like the Msys2 system. 
@@ -154,6 +193,9 @@ Consistent file names help. Can use mv to rename and move files to consistent na
 2. Use consistent file content/structure
 3. Use the pattern matching from the shell and iPython terminal to reduce typing and errors.
 4. **Test early and incrementally** to minimize errors. 
+5. Encapsulation (the idea that objects contain data and methods, that is they contain things and know how to do things, is probably the most important idea when it comes to structuring large programs.
+6. Use pipelines.
+7. When changes are all localized, this is an indicator of good design. e.g. - we want to print in one place (function) so that format is consistent. Otherwise, sooner or later I will forget to change one... 
 
 
 
