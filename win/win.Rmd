@@ -18,6 +18,12 @@ Some useful tips for windows
 
 # Win 10 stuff
 
+## Compatibility Mode
+
+[Microsoft](https://support.microsoft.com/en-us/help/15078/windows-make-older-programs-compatible) has a page designed to help. So does [howtogeek](http://www.howtogeek.com/228689/how-to-make-old-programs-work-on-windows-10/).
+
+There is a [youtube](https://www.youtube.com/watch?v=1KNLP3T5cic) video.
+
 ## Install gets stuck on 'Checking for updates'
 
 [HT http://alinirimia.com/](http://alinirimia.com/2016/04/widows-10-install-stuck-at-checking-for-updates/) was originally from [MS]( http://answers.microsoft.com/en-us/insider/forum/insider_wintp-insider_install/window-10-install-stuck-on-checking-for-updates/e294932f-149e-412b-b996-6f1253973399?auth=1).
