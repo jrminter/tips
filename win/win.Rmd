@@ -20,6 +20,8 @@ Some useful tips for windows
 
 ## Compatibility Mode
 
+[tenforums.com](http://www.tenforums.com/tutorials/15523-compatibility-mode-settings-apps-change-windows-10-a.html) shows where this information is stored in the registry.
+
 [Microsoft](https://support.microsoft.com/en-us/help/15078/windows-make-older-programs-compatible) has a page designed to help. So does [howtogeek](http://www.howtogeek.com/228689/how-to-make-old-programs-work-on-windows-10/).
 
 There is a [youtube](https://www.youtube.com/watch?v=1KNLP3T5cic) video.
