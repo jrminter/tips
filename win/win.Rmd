@@ -26,6 +26,23 @@ Some useful tips for windows
 
 There is a [youtube](https://www.youtube.com/watch?v=1KNLP3T5cic) video.
 
+
+It turns out that the information is stored in the registry. The key is:
+
+```
+HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers
+```
+
+My current entries on crunch are:
+
+```
+"C:\\Apps\\GMRFilm\\GMRFILM.EXE"="WINXPSP2 RUNASADMIN"
+"C:\\Program Files (x86)\\ScanSoft\\OmniPagePro12.0\\OmniPage.exe"="$ WRPMitigation"
+"C:\\Program Files\\Oxford Instruments NanoAnalysis\\AZtec\\Aztec.exe"="^ WIN7RTM"
+```
+
+
+
 ## Install gets stuck on 'Checking for updates'
 
 [HT http://alinirimia.com/](http://alinirimia.com/2016/04/widows-10-install-stuck-at-checking-for-updates/) was originally from [MS]( http://answers.microsoft.com/en-us/insider/forum/insider_wintp-insider_install/window-10-install-stuck-on-checking-for-updates/e294932f-149e-412b-b996-6f1253973399?auth=1).
