@@ -40,7 +40,13 @@ My current entries on crunch are:
 "C:\\Program Files (x86)\\ScanSoft\\OmniPagePro12.0\\OmniPage.exe"="$ WRPMitigation"
 "C:\\Program Files\\Oxford Instruments NanoAnalysis\\AZtec\\Aztec.exe"="^ WIN7RTM"
 ```
+## Locations
 
+Start Menu Entries
+
+```
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs
+```
 
 
 ## Install gets stuck on 'Checking for updates'
