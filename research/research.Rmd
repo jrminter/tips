@@ -242,6 +242,39 @@ From pp. 100-106
 19. Ideas beget ideas
 20. Grind hard and smart
 
+Keep moving
+
+Have a THING to talk about.
+
+1. Start simple
+2. Look at raw data
+3. Be concrete
+4. Incremental results
+5. Find something interesting
+6. Push hard on clean signals
+7. Actionable. Refine choices...
+8. Comparative advantage is key
+9. Find solid levers to pull. 
+10. Document successes and failures- what worked and why/why not
+11. Inspect outliers - what do they tell you?
+12. Eliminate sources of bias. "Pointing out limitations"
+
+
+## [Email](http://www.pgbovine.net/email-tips.htm) strategy
+
+> Your main goal in crafting a professional email should be to allow your recipient to respond as quickly as possible (< 1 min). Otherwise your email will likely be ignored.
+
+- Clear/concise subject line
+- Appropriate greeting
+- Quick/short personal introduction (if needed)
+- First short sentence must summarize main point. First short paragraph must summarize. Final sentence must provide something concrete for reply.
+- A short, appropriate signature
+- reply with blocks of quited text
+- short address lists and clear indication of who whould reply
+- do not attach large files
+
+
+
 
 ## Real research is never done in a vacuum
 
