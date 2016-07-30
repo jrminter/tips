@@ -213,6 +213,95 @@ sqlite3 experiments.db < create-db.sql
 sqlite3 experiments.db < project-hours.sql
 ```
 
+# Good advice from Philip Guo
+
+The PDF is on [his website](http://www.pgbovine.net/PhD-memoir/pguo-PhD-grind.pdf) His github repository is at [pgbovine](https://github.com/pgbovine)
+
+## His summary 
+
+From pp. 100-106
+
+1. Results trump intentions
+2. Outputs trump inputs
+3. Find relevant information
+4. Create lucky opportunities
+5. Play the game
+6. Lead from below
+7. Professors are human
+8. Be well-liked
+9. Pay some dues
+10. Reject bad defaults
+11. Know when to quit
+12. Recover from failures
+13. Ally with insiders
+14. Give many talks
+15. Sell, sell, sell
+16. Generously provide help
+17. Ask for help
+18. Express true gratitude
+19. Ideas beget ideas
+20. Grind hard and smart
+
+
+## Real research is never done in a vacuum
+
+> Contrary to romanticized notions of a lone scholar sitting outside sipping a latte and doodling on blank sheets of notebook paper, real research is never done in a vacuum. (p. 18)
+
+Note: Guo describes his struggle with burnout and the consequences of isolation on p. 16 and 37. This also led to procrastination. He tried to read and think on his own. Gou's summary
+
+> But without proper guidance or context, I ended up wasting a lot of time and not extracting any meaningful insights from my readings. p. 16
+
+> We also experienced isolation and loneliness from spending day and night grinding on obscure, ultra-specialized problems that few people around us understood or even cared about. p. 37
+
+He also learned from his first year burn-out and changed his approach to work:
+
+> I now paced myself a lot better to remain healthy and avoid burnout. (p. 34).
+
+He also recognized that some projects are destined to fail because of **misaligned incentives**. (p. 35) This led him to later note:
+
+> These two opposing experiences taught me the importance of deeply understanding the motivations and incentives of one’s potential collaborators before working with them. (p. 36)
+
+**Inspiration** strikes at odd times (p. 52)
+
+**Having a good idea is necessary but nowhere near sufficient for producing publishable research.** Junior researchers - usually Ph.D. students - must spend anywhere from hundreds to thousands of hours "sweating the details"" to bring that idea to fruition. (p. 57)
+
+and
+
+> Even though I wasn’t in love with my previous research projects earlier in grad school and during college, the technical skills and judgment that I gained from those experiences made it possible for me to now implement my own ideas that I truly cared about. (p. 58)
+
+> I understood the importance of aligning with the subjective preferences of senior collaborators (and paper reviewers), even when doing research in supposedly objective technical fields. (p. 91)
+
+## Write for the audience
+
+> I had unwisely framed the pitch for IncPy in a way that led to my paper being reviewed by researchers in a subfield that wasn't as "friendly" to my research philosophy. In theory, technical papers should be judged on their merit alone, but in reality, reviewers each have their own unique subjective tastes and philosophical biases. So I drastically rewrote my introductory pitch with the aim of getting more amicable reviewers and then resubmitted to a second-tier conference to further improve its chances of acceptance. My plan worked. (p. 71)
+
+> I spent a lot of effort crafting new introductory and concluding chapters to turn my dissertation into more than merely a description of five separate tools that I had built over the past few years. Throughout the writing process, Jeff and Margo gave me great feedback on how to frame my research contributions in a more substantive intellectual light. (p. 95)
+
+## Key questions for an outline of a project pitch presentation
+
+Guo describes (p. 30) pitching ideas for a project. I think his outline is effective.
+
+1. What's the problem?
+2. What's my proposed solution?
+3. What compelling experiments can I run to demonstrate the effectiveness of my solution?
+
+## The importance of networking.
+
+He cites his experience applying for internsips at Microsoft Research
+
+> If I had blindly submitted my resume online like hundreds of other applicants, I would have probably not been able to attract Tom's attention. Most of my fellow interns also got their jobs through connections, although usually their advisors made a direct recommendation to a relevant MSR colleague. (p. 48)
+
+and
+
+> I learned about the importance of being endorsed by an influential person; simply doing good work isn’t enough to get noticed in a hyper-competitive field. (p. 48)
+
+and
+
+> Tom would drop by my office at 5pm each afternoon before he left work to check up on my progress. Although daily check-ups could potentially be stressful, I actually found them immensely helpful since Tom wasn't intimidating or judgmental at all. Getting immediate daily feedback made it easy for me to stay focused and motivated. The combination of a well-defined, short-term goal and continual helpful feedback made my internship workdays much more productive than those during my previous three years of grad school. The best part was that I worked only during normal office hours (9am to 6pm). (pp. 48-49)
+
+This reminded me of a Yogi Berra quote (You can see a lot just by looking around...) Greg Wilson would likely say that this is recognizing patterns and moving it into long-term memory:
+
+> Many refinements to my initial idea came from observing computational researchers at work and interviewing them about the challenges they faced in managing their multitude of experiment notes, code, and data files. (pp. 91 -92)
 
 
 
