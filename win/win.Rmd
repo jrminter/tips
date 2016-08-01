@@ -55,7 +55,7 @@ and
 ```
 +---------------------------+------------------------------------------+
 |   Environment Variable    |             Default Path                 |
------------------------------------------------------------------------|
++---------------------------+------------------------------------------+
 | %ALLUSERSPROFILE%         | C:\ProgramData                           |
 | %APPDATA%                 | C:\Users\{username}\AppData\Roaming      |
 | %COMMONPROGRAMFILES%      | C:\Program Files\Common Files            |
