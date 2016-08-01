@@ -215,6 +215,9 @@ sqlite3 experiments.db < project-hours.sql
 
 # Good advice from Philip Guo
 
+Prof Guo has both a blog and longer PDF document with a summary of what he learned doing a 6 year PhD in Computer Science at Stanford.
+
+
 The PDF is on [his website](http://www.pgbovine.net/PhD-memoir/pguo-PhD-grind.pdf) His github repository is at [pgbovine](https://github.com/pgbovine)
 
 ## His summary 
@@ -337,6 +340,51 @@ This reminded me of a Yogi Berra quote (You can see a lot just by looking around
 > Many refinements to my initial idea came from observing computational researchers at work and interviewing them about the challenges they faced in managing their multitude of experiment notes, code, and data files. (pp. 91 -92)
 
 
+## Engineers Must Master Strategizing and Selling
+
+From his blog, April 2012.
+
+To succeed in a science or engineering career, you must excel at repeatedly doing these three activities:
+
+**Strategizing** – Figuring out how to get yourself into a position to do your best work.
+
+**Executing** – Spending hours upon hours of intense focused labor doing your best work.
+
+**Selling** – Presenting your work to peers and superiors in a way that ensures you get properly recognized and rewarded for your efforts.
+
+As a scientist or engineer, you probably want to focus on executing, since that is the technically substantive portion of your work. You might view strategizing and selling as unintellectual, fluffy, business-like activities that are somehow beneath you.
+
+However, without proper strategizing, you cannot even get in a position to do the work you want to do. For instance, without proper strategic planning, you might get stuck in an organization or project that does not make the best use of your abilities.
+
+And without proper selling skills, you will not receive the credit you deserve. Even worse, your less deserving peers might take credit for your hard work! Note that selling has nothing to do with money; you are selling your abilities, ideas, and accomplishments.
+
+For over two decades, I have been learning science and engineering as a student. As I am finally about to begin my career, I need to reconcile the indulgent intellectual fantasies of studying science/engineering with the grimy realities of doing science/engineering as a full-time job. I realized that in order to keep experiencing some of the pure beauty that I cherish about these subjects, I will need to devote substantial energies to "less pure" acts of strategizing and selling during my work days.
+
+I'll now tell a sad story of what happens to smart technical people who are unable to effectively strategize and sell. Throughout my childhood, college, and graduate school years, I noticed a huge disconnect between the fantasy world of science/engineering ideas and the reality of working in those fields:
+
+- On one hand, learning these technical subjects from books, classes, and hands-on projects was fabulously stimulating.
+
+- On the other hand, I was exposed to overwhelming negativity and cynicism from people who work in science and engineering careers.
+
+The only scientists and engineers I knew throughout childhood were my parents' friends. I observed that none of them were enthused about their jobs. At holiday parties, they mostly complained about inept management and expressed worries about losing their jobs in the upcoming year. They never talked about the wonder of discovery or the joy of invention. It got to the point where I was embarrassed to even express my excitement about what I was learning in school, since I could sense their jadedness and cynicism.
+
+These people were the only scientist and engineer role models I had as a kid. From overhearing their conversations at family parties, I learned all about corporate restructuring, age discrimination in high-tech professions, office politics, and story after story of forced early retirement and layoffs. It was commonly-accepted that once you reached your fifties, you were going to get laid off and have a hard time finding another job. After all, that's what happened to many of my parents' friends. Even those who worked in university or government science labs weren't immune to layoffs, since their salaries were tied to grant funding. If they lost the political battles to keep their projects funded, then they were likely out of a job. The only people immune to layoffs were tenured professors and government bureaucrats.
+
+During college, I remember interning at a high-tech company where one of my parents' friends worked as a mechanical engineer (unrelated to my job). I would sometimes walk by his cubicle to say hello, and he would often shower me with grumbling unsolicited advice that basically amounted to the following: work a bit every day, lay low, and hope to survive the next round of layoffs. He told me that it wasn't worthwhile to work too hard and once proudly showed me how he had surrounded his computer monitor with file folders so that people walking by couldn't see that he was surfing the web at work. This mix of demoralized apathy and constant fear of layoffs was pervasive amongst his peers.
+
+**MOTIVATED BY FEAR**
+
+I deeply fear ending up like my parents' friends, with my technical skills and accomplishments undervalued like theirs are. Even though I am only in my twenties, I am afraid of being unemployed at age 50 and facing difficulties finding another comparable job. This fear has been reinforced by repeatedly seeing middle-aged scientists and engineers getting laid off throughout my childhood. That is why I am continually making proactive efforts to avoid such a fate. I am fiercely driven to improve my professional abilities both out of passion for my work and also out of fear of obsolescence.
+
+In particular, my technically-inclined peers and I need to focus on getting better at strategizing and selling. Improving these so-called "soft skills" will yield much better gains than continuing to improve our technical know-how. The idealized fantasy world of science/engineering is a meritocracy where the best ideas and execution always win, **but merit isn't nearly enough in the real world.**
+
+We must constantly fight to remain relevant, especially as we get older. The best way to ensure that we can continue doing the technical work we love is to:
+
+- **repeatedly pick the right battles and alliances** (strategizing),
+- **work passionately** (executing),
+- **and then make sure to get the recognition we deserve** (selling).
+
+
 
 # Good advice from Neal Anderson
 
@@ -351,7 +399,6 @@ From [Practical Process Research and Development - A guide for Organic Chemists,
 5. If an operation is extremely difficult, reconsider. Perhaps additional information will simplify the operation.
 6. Heed the advice of ecologists: "We're all in this together." Humor helps defuse the gravity of most difficult situations.
 7. During process introduction and scale-up boring situations can be good - that means there are no problems to address.
-
 
 
 # William Shockley on what makes an effective researcher
