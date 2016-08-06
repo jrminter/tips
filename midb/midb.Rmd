@@ -1,0 +1,62 @@
+---
+title: "MIDB Tips"
+author: "J. R. Minter"
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
+output:
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+---
+
+  
+[Back to Index](../README.html)
+
+These are tips on setting up `midb`.
+
+I will represent my favorite password with `my_pw`
+
+```
+GRANT ALL PRIVILEGES ON *.* TO 'jrminter'@'%' IDENTIFIED BY 'my_pw' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON *.* TO 'jrminter'@'localhost' IDENTIFIED BY 'my_pw' WITH GRANT OPTION;
+commit;
+create database midb;
+GRANT ALL ON midb.* TO 'jrminter'@'%';
+commit;
+```
+
+Older
+
+```
+// Create the midb database
+parrot 2: mysql -h localhost -u root -p
+(pw)
+mysql> create database midb;
+mysql> GRANT ALL ON midb.* TO 'jrminter'@'%';
+mysql> commit;
+mysql> quit;
+
+cryo 3: mysql -h localhost -u jrminter -p
+Enter password:
+
+mysql> SHOW DATABASES;
+mysql> use midb;
+mysql> SHOW TABLES;
+
+can do the rest in python...
+
+mysqldump -u root -p  midb > midb.sql
+
+restore
+
+mysql -u root -p midb < midb.sql
+
+
+mysqldump -u jrminter -p --opt midb projects > projects.sql
+
+mysql -u jrminter -p midb < samples.sql
+
+```
+
+
+[Back to Index](../README.html)
