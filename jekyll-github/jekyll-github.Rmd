@@ -1,0 +1,31 @@
+---
+title: "Jekyll on github.io"
+author: "J. R. Minter"
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
+output:
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+[Back to Index](../README.html)
+
+[Jekyll](https://jekyllrb.com/) is a Ruby package that makes it easy to design attractive blogs and web pages. It plays well with [github pages](https://pages.github.com/) that are hosted on `github.io`. I have been trying to get a new blog set up. 
+
+Here are some helpful links:
+
+[Jonathan McClone's](http://jmcglone.com/guides/github-pages/) extensive guide.
+
+[Barry Clark's](https://github.com/barryclark/jekyll-now) Jekyll-Now repository.
+
+[Andy South's](https://andysouth.github.io/blog-setup/) blog set-up. **Very helpful.**
+
+
+
+
+[Back to Index](../README.html)
