@@ -13,7 +13,38 @@ vignette: >
 ---
 [Back to Index](../README.html)
 
-# Getting Environment Variables loaded in elCapitan
+# Dealing with directory permissions in el Capitan
+
+```
+sudo chown -R $(whoami) /usr/local
+sudo chown -R $(whoami) /Library/Ruby
+```
+
+Then
+
+```
+gem install jekyll
+```
+
+works... Helps for TeXlive too!
+
+## Test Jekyll
+
+Instructions
+
+```
+cd 
+gem install jekyll
+jekyll new my-awesome-site
+cd my-awesome-site
+bundle install
+bundle exec jekyll serve
+
+# => Now browse to http://localhost:4000
+```
+
+
+# Getting Environment Variables loaded in el Capitan
 
 edit
 
@@ -355,10 +386,6 @@ During a recent install of the Yosemite release candidate, the intaller hung for
 
 Type ``⌘+l`` to see the log.
 
-### Fixing ``/usr/local`` permissions for ``homebrew`` and ``texlive``
-```
-sudo chown -R $(whoami) /usr/local
-```
 
 ## Some hints for SSDs
 From [alutam.com](http://blog.alutam.com/2012/04/01/optimizing-macos-x-lion-for-ssd/)
