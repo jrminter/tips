@@ -15,7 +15,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [Back to Index](../README.html)
 
-[Jekyll](https://jekyllrb.com/) is a Ruby package that makes it easy to design attractive blogs and web pages. It plays well with [github pages](https://pages.github.com/) that are hosted on `github.io`. I have been trying to get a new blog set up. 
+[**Jekyll**](https://jekyllrb.com/) is a Ruby package that makes it easy to design attractive blogs and web pages. It plays well with [github pages](https://pages.github.com/) that are hosted on `github.io`. I have been trying to get a new blog set up. Note that `github.io` only supports [**kramdown**](http://kramdown.gettalong.org/) - which describes itself as:
+
+> kramdown (sic, not Kramdown or KramDown, just kramdown) is a free MIT-licensed Ruby library for parsing and converting a superset of Markdown. It is completely written in Ruby, supports standard Markdown (with some minor modifications) and various extensions that have been made popular by the PHP Markdown Extra package and Maruku.
+
+kramdown has a helpful [**quick reference guide**](http://kramdown.gettalong.org/quickref.html).
 
 Here are some helpful links:
 
@@ -23,11 +27,11 @@ Here are some helpful links:
 
 [Barry Clark's](https://github.com/barryclark/jekyll-now) Jekyll-Now repository.
 
-[Andy South's](https://andysouth.github.io/blog-setup/) blog set-up. **Very helpful.**
+[**Andy South's**](https://andysouth.github.io/blog-setup/) blog set-up. **Very helpful.**  I have a basic blog set up now at [https://jrminter.github.io/](https://jrminter.github.io/). I'm starting to have some success with rmarkdown.
 
 This one looks closer to where I want to end up:
 
-[YvesCR github](https://github.com/YvesCR/yvescr.github.io) rendered as [day-laborer.edu](http://data-laborer.eu/)
+[**YvesCR github**](https://github.com/YvesCR/yvescr.github.io) rendered as [day-laborer.edu](http://data-laborer.eu/) this was discussed on [stackoverflow](http://stackoverflow.com/questions/34444843/blogging-with-jekyll-rmarkdown-and-github-how-to-display-images).
 
 
 
