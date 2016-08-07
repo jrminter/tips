@@ -25,6 +25,10 @@ Here are some helpful links:
 
 [Andy South's](https://andysouth.github.io/blog-setup/) blog set-up. **Very helpful.**
 
+This one looks closer to where I want to end up:
+
+[YvesCR github](https://github.com/YvesCR/yvescr.github.io) rendered as [day-laborer.edu](http://data-laborer.eu/)
+
 
 
 
