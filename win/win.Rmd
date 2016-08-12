@@ -81,6 +81,11 @@ Couldn't get the escape characters to work in rmarkdown...
 from [askvg.com](http://www.askvg.com/list-of-environment-variables-in-windows-xp-vista-and-7/)
 
 
+## Clear Windows Update cache
+
+From [www.404techsupport.com](https://www.404techsupport.com/2013/01/how-to-delete-cached-windows-updates-in-windows-78/)
+
+> To delete the downloaded updates in Windows Vista, 7, or 8, browse to C:\Windows\SoftwareDistribution\Download. (You may have to show hidden files to browse there.) Then select all the files (Ctrl+A) and delete them. Once the files are deleted, restart the computer.
 
 # Win 10 stuff
 

@@ -105,6 +105,7 @@ install_new('png')
 install_new('grid')
 install_new('gridExtra')
 
+install_new('RMySQL')
 
 install_new('pryr')
 install_new('plyr')
