@@ -16,6 +16,20 @@ vignette: >
 These are John Minter's tips for MS Office.
 They were compiled from several web sources.
 
+# Excel
+
+A VBA macro to convert selected dates to ISO format
+
+```
+Sub toIsoDate()
+'
+' Convert the selected data to the ISO date format
+'
+    Selection.NumberFormat = "yyyy-mm-dd;@"
+End Sub
+
+```
+
 # Skype for Business
 
 How do I use Skype for Business? 
