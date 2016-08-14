@@ -87,6 +87,18 @@ From [www.404techsupport.com](https://www.404techsupport.com/2013/01/how-to-dele
 
 > To delete the downloaded updates in Windows Vista, 7, or 8, browse to C:\Windows\SoftwareDistribution\Download. (You may have to show hidden files to browse there.) Then select all the files (Ctrl+A) and delete them. Once the files are deleted, restart the computer.
 
+
+## How to Install Windows 7-10 from a bootable USB
+
+See [Barnacules youtube](https://www.youtube.com/watch?v=f4e4HujCeg8) video.
+
+[Tool](http://wudt.codeplex.com/) referenced in video
+
+[Alternate tool](http://www.wintobootic.com/) that works with folders and media
+
+[Full end to end instructions](http://social.technet.microsoft.com/wiki/contents/articles/913.using-the-windows-7-usbdvd-download-tool.aspx) on obtaining image and deployment
+
+
 # Win 10 stuff
 
 ## Compatibility Mode
