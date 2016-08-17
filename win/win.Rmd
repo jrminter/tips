@@ -81,6 +81,21 @@ Couldn't get the escape characters to work in rmarkdown...
 from [askvg.com](http://www.askvg.com/list-of-environment-variables-in-windows-xp-vista-and-7/)
 
 
+## Turning off Cortana
+
+According to [zdnet.com](http://www.zdnet.com/article/windows-10-tip-turn-off-cortana-completely/),
+the Windows 10 Aniversary Update made it harder to turn off Cortana. Now we
+heed a registry hack on Windows 10 Home.
+
+Find (or create) the key
+
+```
+HKLM\Software\Policies\Microsoft\Windows\Windows Search
+```
+
+and set the `DWORD` value `AllowCortana` and set it to 0.
+
+
 ## Clear Windows Update cache
 
 From [www.404techsupport.com](https://www.404techsupport.com/2013/01/how-to-delete-cached-windows-updates-in-windows-78/)
