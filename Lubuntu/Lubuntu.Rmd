@@ -1,5 +1,5 @@
 ---
-title: "John Minter's Lubuntu Tips"
+title: "John Minter's (L)ubuntu Tips"
 author: "J. R. Minter"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
@@ -64,6 +64,7 @@ from [askubuntu]( http://askubuntu.com/questions/175172/how-do-i-configure-proxi
  Open the ``/etc/environment`` file with vi (or your favorite editor). This file stores the system-wide variables initialized upon boot. Add the following lines, modifying appropriately. You must duplicate in both upper-case and lower-case because (unfortunately) some programs only look for one or the other:
  
 ```
+PATH="/home/shared/texlive/2016/bin/x86_64-linux:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 http_proxy="http://proxy1.kodak.com:81/"    
 https_proxy="http://proxy1.kodak.com:81/"    
 ftp_proxy="http://proxy1.kodak.com:81/"    
@@ -72,6 +73,7 @@ HTTP_PROXY="http://proxy1.kodak.com:81/"
 HTTPS_PROXY="http://proxy1.kodak.com:81/"    
 FTP_PROXY="http://proxy1.kodak.com:81/"    
 NO_PROXY="localhost,127.0.0.1,localaddress,.kodak.com"    
+
 ``` 
  
  
@@ -92,7 +94,7 @@ See [Cran's Ubuntu page](http://cran.rstudio.com/bin/linux/ubuntu/)
 add to ``/etc/apt/sources``
 
 ```
-deb http://mirrors.rit.edu/CRAN/bin/linux/ubuntu trusty/
+deb http://mirrors.rit.edu/CRAN/bin/linux/ubuntu xenial/
 ```
 
 Then run
