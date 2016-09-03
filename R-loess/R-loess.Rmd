@@ -42,9 +42,9 @@ We want to use this to estimate the thickness of vacuum-deposited films of Al
 by attaching a small chip of Si to the surface of the coated material and then
 recording X-ray EDS spectra at 5 kV.
 
-Let's start by loading a dataframe from disk and compute the derived quantity we
+Let's start by loading a data-frame from disk and compute the derived quantity we
 need to plot. We want to use the LOESS algorithm to compute a smooth, monotonic
-curve. The values from this curve maty be used as a look-up table to compute
+curve. The values from this curve may be used as a look-up table to compute
 thickness from measured spectra.
 
 ```{r}
@@ -105,7 +105,7 @@ ggsave(altosiInt, file=fi, width=9.0, height=6.0, units="in", dpi=300 )
 ```
 
 
-# Earl F. Glynn tutoriel
+# Earl F. Glynn tutorial
 
 This section was published on the web on 2005-06-24 and preserved from [here](http://research.stowers-institute.org/efg/R/Statistics/loess.htm)
 with minor edits by J. R. Minter to be compatible with R-markdown.
@@ -214,7 +214,7 @@ legend (15,-0.4,
         lty=SOLID<-1, col=1:length(spanlist), bty="n", cex=0.8)
 ```
 
-7. Compare "noise" from a uniform distribution from -1 to 1 (above) to Gaussian noise, with mean 0 and standard deviation 1.0 (below). The original scripy is [here](http://research.stowers-institute.org/efg/R/Statistics/loess-sin+rnorm.R).
+7. Compare "noise" from a uniform distribution from -1 to 1 (above) to Gaussian noise, with mean 0 and standard deviation 1.0 (below). The original script is [here](http://research.stowers-institute.org/efg/R/Statistics/loess-sin+rnorm.R).
 
 ```{r, fig.width=7.25, fig.height=2*7.25/3, tidy=TRUE}
 # efg, 15 April 2005
