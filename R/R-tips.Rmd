@@ -7,9 +7,6 @@ output:
     css: ../theme/jm-mod-vignette.css
     number_sections: yes
     toc: yes
-vignette: >
-  %\VignetteIndexEntry{R Tips}
-  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 ```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
