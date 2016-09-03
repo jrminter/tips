@@ -1,23 +1,116 @@
 ---
-title: "R loess"
-author: "Earl F. Glynn"
-date: "2005-06-24"
+title: "R LOESS Information"
+author: "John Minter"
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-mod-vignette.css
     number_sections: yes
     toc: yes
-vignette: >
-  %\VignetteIndexEntry{R loess}
-  %\VignetteEngine{knitr::rmarkdown}
 ---
+
+```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
+# make this an external chunk that can be included in any file
+library(knitr)
+library(ggplot2)
+options(width = 72)
+opts_chunk$set(message = F, error = F, warning = F, comment = NA, fig.align = 'center', dpi = 100, tidy = F, cache.path = '.cache/', fig.path = 'figure/')
+
+options(xtable.type = 'html')
+knit_hooks$set(inline = function(x) {
+  if(is.numeric(x)) {
+    round(x, getOption('digits'))
+  } else {
+    paste(as.character(x), collapse = ', ')
+  }
+})
+knit_hooks$set(plot = knitr:::hook_plot_html)
+```
 
 [Back to Index](../README.html)
 
-This document was preserved from [here](http://research.stowers-institute.org/efg/R/Statistics/loess.htm)
-with minor edits by J. R. minter to be compatible with R-markdown.
+The [Wikipedia](https://en.wikipedia.org/wiki/Local_regression) article notes that the LOESS algorithm is a non-parametric regression method that: 
 
-# Purpose
+> combines multiple regression models in a k-nearest-neighbor-based meta-model.
+
+# J. Minter example using ggplot2
+
+Let's first illustrate the key methodology from a data set of the Al-K and Si-K
+X-ray peak intensities computed by Monte Carlo simulation of layers of selected
+thicknesses of Al on a Si substrate using the NIST DTSA-II X-ray EDS software.
+We want to use this to estimate the thickness of vacuum-deposited films of Al
+by attaching a small chip of Si to the surface of the coated material and then
+recording X-ray EDS spectra at 5 kV.
+
+Let's start by loading a dataframe from disk and compute the derived quantity we
+need to plot. We want to use the LOESS algorithm to compute a smooth, monotonic
+curve. The values from this curve maty be used as a look-up table to compute
+thickness from measured spectra.
+
+```{r}
+fi <-'./dat/Al-on-Si-5kV-10000-Traj.csv'
+df <- read.csv(fi, header=TRUE, as.is=TRUE)
+df$al.to.si.mu <- df$Al.Int.mu / df$Si.Int.mu
+df$al.to.si.unc <- sqrt((df$Al.Int.unc/df$Al.Int.mu)**2 + 
+                        (df$Si.Int.unc/df$Si.Int.mu)**2)
+```
+
+Now compute the LOESS, using the default span.
+
+```{r}
+y.loess <- loess(al.to.si.mu ~ t.Al.nm, span=0.75, data=df)
+```
+
+Next, we want to predict the smooth curve with high resolution
+
+```{r}
+t.Al.nm <- seq(from=0.5, to=100, by=0.5)
+df2 <- data.frame(t.Al.nm=t.Al.nm)
+df2$al.to.si.mu = round(predict(y.loess, newdata = df2), 5)
+```
+
+Next prepare a ggplot2 plot, named `altosiInt`:
+
+```{r}
+altosiInt <- ggplot(df, aes(x=t.Al.nm, y=al.to.si.mu)) + 
+    geom_errorbar(aes(ymin=al.to.si.mu - 1.96*al.to.si.unc,
+                      ymax=al.to.si.mu + 1.96*al.to.si.unc), width=.1) +
+    geom_line(color='red', size=1.25, aes(color="red"), data=df2) +
+    annotate("text", label = 'loess',
+             x = 80, y = 2.25,
+             size = 5, colour = "red") +
+    geom_point(color='black', size=2) +
+    xlab("Al thickness [nm]") +
+    ylab("Al-K/Si-K X-ray intensity ratio") +
+    ggtitle("Monte Carlo Model of Al on Si at 5 kV") +
+    theme(axis.text=element_text(size=12),
+          axis.title=element_text(size=14))# or ,face="bold")) +
+
+```
+
+and display the plot in RStudio
+
+```{r}
+print(altosiInt)
+```
+
+Note that the curve fits the monotonic nature of the data.
+
+Finally, we want to save the plot as a PDF
+
+```{r}
+fi <- './al-on-si-series-predict.pdf'
+ggsave(altosiInt, file=fi, width=9.0, height=6.0, units="in", dpi=300 )
+
+```
+
+
+# Earl F. Glynn tutoriel
+
+This section was published on the web on 2005-06-24 and preserved from [here](http://research.stowers-institute.org/efg/R/Statistics/loess.htm)
+with minor edits by J. R. Minter to be compatible with R-markdown.
+
+## Purpose
 
 This TechNote shows examples of loess (local polynomial regression fitting) smoothing for various "span" values. The online R documentation [?loess](http://www.maths.lth.se/help/R/.R/library/modreg/html/loess.html) says the default span value is 0.75, but doesn't give much guidance, nor visual examples, of how the span value affects smoothing.
 
@@ -25,7 +118,7 @@ In addition to simply smoothing a curve, the R loess function can be used to imp
 
 In addition to simply smoothing a curve, the R loess function can be used to impute missing data points. An example of data imputation with loess is shown.
 
-# Background
+## Background
 
 NIST Engineering Statistics Handbook:  [Loess (aka Lowess)](http://www.itl.nist.gov/div898/handbook/pmd/section1/pmd144.htm)
 
@@ -33,12 +126,12 @@ Mathworks: [Lowess and Loess: Local Regression Smoothing](http://www.mathworks.c
 
 SAS: [Fitting Curves](http://www.math.wpi.edu/saspdf/insight/chap13.pdf)
 
-# Software Requirements
+## Software Requirements
 
 [R](http://www.r-project.org/) 2.0.1 or later
 
 
-# Step-by-Step Procedure
+## Step-by-Step Procedure
 
 Let's take a sine curve, add some "noise" to it, and then see how the loess "span" parameter affects the look of the smoothed curve.
 
@@ -239,7 +332,7 @@ legend (0,-0.8,
         lty=SOLID<-1, col=1:length(spanlist), bty="n")
 ```
 
-# Discussion/Conclusion
+## Discussion/Conclusion
 
 Span values as small as 0.10 do not provide much smoothing and can result in a "jerky" curve. Span values as large as 2.0 provide perhaps too much smoothing, at least in the cases shown above. Overall, the default value of 0.75 worked fairly well in "finding" the sine curve.
 

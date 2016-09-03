@@ -7,9 +7,6 @@ output:
     css: ../theme/jm-mod-vignette.css
     number_sections: yes
     toc: yes
-vignette: >
-  %\VignetteIndexEntry{AZtec Tips}
-  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 This documents contains hints that I find helpful when using the Oxford AZtec 3.0 Software.

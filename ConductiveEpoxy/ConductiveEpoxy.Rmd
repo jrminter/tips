@@ -7,9 +7,6 @@ output:
     css: ../theme/jm-mod-vignette.css
     number_sections: yes
     toc: yes
-vignette: >
-  %\VignetteIndexEntry{Conductive Epoxies}
-  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 [Back to Index](../README.html)

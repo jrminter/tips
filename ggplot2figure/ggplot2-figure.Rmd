@@ -2,7 +2,11 @@
 title: "How I build up a ggplot2 figure"
 author: "John Muschelli"
 date: "February 18, 2016"
-output: html_document
+output:
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
 ---
 
 ```{r setup, include=FALSE}

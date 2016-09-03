@@ -7,9 +7,6 @@ output:
     css: ../theme/jm-mod-vignette.css
     number_sections: yes
     toc: yes
-vignette: >
-  %\VignetteIndexEntry{R: Things I wish I'd been told}
-  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 From [here](http://reganmian.net/blog/2014/10/14/starting-data-analysiswrangling-with-r-things-i-wish-id-been-told/)
