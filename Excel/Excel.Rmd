@@ -167,6 +167,6 @@ If Foo is a name that refers to a whole column, the formula =Foo*2 gets a single
 4. Create intermediate coumns and hide them
 5. Use ROUND() for values with cents
 6. Use **INDEX** and **MATCH**,  *never* **VLOOKUP**
-7.Why do you have **numbers** in your formulas? Create parameter entry cells and use them in formulas.
+7. Why do you have **numbers** in your formulas? Create parameter entry cells and use them in formulas.
 
 [Back to Index](../README.html)
