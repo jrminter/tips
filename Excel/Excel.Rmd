@@ -1,0 +1,172 @@
+---
+title: "Excel Tips"
+author: "J. R. Minter"
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
+output:
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+---
+[Back to Index](../README.html)
+
+```{r, echo=FALSE}
+library(png)
+library(grid)
+```
+
+# Tips from [Joel Spolsky](https://www.youtube.com/watch?v=0nbkaYsR94c)
+
+Joel noted:
+
+> The way you are using Excel causes errors, creates incomprehensible
+spaghetti spreadsheets, and makes me want to stab out my own eyes.
+
+## A1 vs R1C1
+
+> You have Excel set up in Baby Mode (A1), with ABC's across the top like some
+kind of children's educational song, and 123 down the left. You can also set
+it up in Big Boy Mode (R1C1), with numbers across the top and down the left.
+If you learn how to operate in R1C1 mode, it's easier to understand relative
+vs. absolute references.
+
+```{r fig.width=5.5, fig.height=4.485, echo=FALSE,fig.align='center', fig.cap="Set R1C1 mode for better relative references."}
+img <- readPNG("png/set-r1c1-mode.png")
+grid.raster(img)
+```
+
+In his example he made a formula that used the `&` for concatenation of strings,
+including values from two cells and a fixed string. Note how the use of relative
+references in **RC** notation makes the locations easy to understand.
+
+
+```{r fig.width=5.5, fig.height=1.557, echo=FALSE,fig.align='center', fig.cap="Set R1C1 mode for better relative reference with concatenation operator."}
+img <- readPNG("png/concatenation-rel-refs.png")
+grid.raster(img)
+```
+
+Joel makes frequent use of **Keyboard Shortcuts** -- such as **Ctl-C** for
+**copy**. He notes that most of the time when cleaning data scraped from
+the web (or other spreadsheets), you do **not** want to use **paste**, but
+instead **past values** because Excel gets the references wrong...
+
+Joel notes:
+
+> Every cell has a **formula**, a **value**, and **formatting**. It shows you
+the value. When you are cutting and pasting data from external sources, you
+generally just want the values.
+
+## Absolute vs. Relative reference
+
+### A1 mode
+
+```
+$ means absolute
+
+A1   - both the column and the row are relative
+$A1  - the column is absolute
+A$1  - the row is absolute
+$A$1 - both the column and the row are absolute
+```
+
+### R1C1 mode
+
+```
+[] means relative
+
+R1C1   - absolute position
+RC[-1] - same row, one column to the left
+R[3]C2 - absolute column, three rows down
+RC     - this cell
+```
+
+### Quick toggles
+
+1. There is a quick toggle from absolute and relative references. On Windows it
+is **F4**. On Mac OSX it is **Cmd+T**.
+2. **Cntrl+`** (backtick) - a toggle between displaying Formulas and Values
+
+## Data Entry shortcuts
+
+### Getting the right column width
+
+1. Double click between column headers to adjust to fit widest column
+2. Select multiple columns first to do this to all columns
+3. To make many columns the same width, select multiple columns first and
+adjust width
+
+### Ctrl-Enter
+
+1. **Enter** - enters your changes in active cell
+2. **Ctrl+Enter** - enters your changes in the entire selection
+
+### Fill Down/Fill Right
+
+1. **Ctrl+D** - fill down. Can also "pull down" the formula from the cell above
+2. **Ctrl+R** - fill right.
+
+### The handy fill-handle
+
+That little fill handle does a million things:
+
+- **Fill down** by dragging it
+- **Ride The Range** by double clicking it (riding the range is filling down until the cell to the left is empty)
+- **Give it a pattern** and it will continue it (Mon/Tue, Jan/Feb, 1/2/3, etc)
+- **Drag backwards** to erase
+- **Right-Drag** for linear and growth trends
+
+### Copy | Paste values
+
+- Cells have formulas and values.
+
+- If you don't need the formula any more, Copy | Paste Values.
+
+- This is also a good way to get rid of formatting. Remember: Formatting is for the weak.
+
+Other useful things are hiding behind the **Paste Special** menu. The most popular are add/subtract/multiply/divide, transpose, and skip blanks.
+
+
+```{r fig.width=4.5, fig.height=3.7, echo=FALSE,fig.align='center', fig.cap="The **Paste Special** menu."}
+img <- readPNG("png/paste-special.png")
+grid.raster(img)
+```
+
+### Paint Formats
+
+Learn how that dumb paintbrush works. You create a cell formatted the way you like, highlight it, click the paintbrush tool, and drag over your cells. This is especially helpful for tables...
+
+### Cntrl+A (Cmd+A MacOSX)
+
+Stop trying to select while scrolling. Cmd+A (Ctrl+A on Windows) selects the
+current region which means the largest island surrounded by white space.
+
+### Text values
+
+If your numbers are really codes (like ZIP codes) start them with apostrophe (') to prevent leading zeros from disappearing. Or use the TEXT number format.
+
+## Clean up your formats
+
+Seriously? I never want to see absolute or relative references. References are confusing, apt to screw up when you move things (or insert (or delete)), and the source of all bugs.
+
+**Tables should be surrounded by whitespace**
+
+**Always use named ranges**
+
+See also the **Create Names** feature to do this easily.
+
+In Excel2016 see the **Name Manager** under the **Formulas** menu.
+One may use this to change the ranges.
+
+Intersect with a named range
+
+If Foo is a name that refers to a whole column, the formula =Foo*2 gets a single value out of Foo that is in the same row as the formula and multiplies that by 2. This is important because you can always name your columns
+
+1. Name your columns
+2. Use formulas that intersect columms
+3. Just use Tables
+4. Create intermediate coumns and hide them
+5. Use ROUND() for values with cents
+6. Use **INDEX** and **MATCH**,  *never* **VLOOKUP**
+7.Why do you have **numbers** in your formulas? Create parameter entry cells and use them in formulas.
+
+[Back to Index](../README.html)

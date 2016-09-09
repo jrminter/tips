@@ -46,6 +46,8 @@ Topic
 
 [EDAX](./EDAX/EDAX.html)
 
+[Excel](./Excel/Excel.html)
+
 [Fitness](./fitness/fitness.html)
 
 [Building up a ggplot2 figure](./ggplot2figure/ggplot2-figure.html)

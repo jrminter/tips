@@ -67,6 +67,12 @@ EDAX/EDAX.md
 EDAX/EDAX.html
 EDAX/figure/
 
+# Excel tips directory
+Excel/.DS_Store
+Excel/Excel.md
+Excel/Excel.html
+Excel/figure/
+
 # ggplot2figure tips directory
 ggplot2figure/.DS_Store
 ggplot2figure/ggplot2-figure.md
