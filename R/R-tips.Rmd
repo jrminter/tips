@@ -39,6 +39,18 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 [R Markdown v.2 home](http://rmarkdown.rstudio.com/index.html)
 
+A cool tip from [A. Jonathan R. Godfrey](https://r-resources.massey.ac.nz/rmarkdown/):
+
+> Get rid of those hash/number signs on the R output by using `comment=""` for all chunks that generate output.
+
+For example, add it to the opening chunk
+
+```
+library(knitr)
+opts_chunk$set(comment="")
+```
+
+
 ## Other
 
 [datascienceriot](https://www.datascienceriot.com/how-to-install-r-in-linux-ubuntu-16-04-xenial-xerus/kris/) shows how to install R and R-Studion on Ubuntu 16.04 Xenial Xerus.
