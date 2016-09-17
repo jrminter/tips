@@ -15,7 +15,13 @@ See also [Intermediate Python](http://book.pythontips.com/en/latest/)
 
 # Youtube tutorials
 
-- **Michael Droettboom** (Continuum Analytics) - [Intro](https://www.youtube.com/watch?v=tWHiUk7PRyw) notebook from [GitHub](https://github.com/dmcdougall/strata-mpl-tutorial) - from PyData 2015 NYC. He references the tutorial by [Nicolas Rougier](http://www.labri.fr/perso/nrougier/teaching/matplotlib/) who also has the source on [GitHub](https://github.com/rougier/matplotlib-tutorial). Some of this was inspired by [Ten Simple Rules for Better Figures](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003833).
+- **Michael Droettboom** (Continuum Analytics) [Intro](https://www.youtube.com/watch?v=tWHiUk7PRyw)
+
+- notebook from [GitHub](https://github.com/dmcdougall/strata-mpl-tutorial)
+
+- from PyData 2015 NYC. He references the tutorial by [Nicolas Rougier](http://www.labri.fr/perso/nrougier/teaching/matplotlib/) who also has the source on [GitHub](https://github.com/rougier/matplotlib-tutorial). Some of this was inspired by [Ten Simple Rules for Better Figures](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003833).
+
+- Slides using reveal.js by [James Church](https://www.youtube.com/watch?v=EOpcxy0RA1A).
 
 # Things that made me go "huh"...
 
@@ -254,6 +260,7 @@ pip install --pre -e .
 jupyter notebook
 ```
 ## Polished jupyter notebooks
+
 
 ### Matplotlib tricks
 
