@@ -106,6 +106,9 @@ install_new('png')
 install_new('grid')
 install_new('gridExtra')
 
+# we want revealjs for presentations
+install_new('revealjs')
+
 install_new('RMySQL')
 
 install_new('pryr')
