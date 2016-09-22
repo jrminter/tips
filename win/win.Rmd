@@ -15,6 +15,28 @@ Some useful tips for windows
 
 # Win 7 and 10
 
+## Clean Installs
+
+Nice series from **techsupportalert.com**
+[Part 1](http://www.techsupportalert.com/partitioning-hard-drives-1.htm),
+[Part 2](http://www.techsupportalert.com/partitioning-hard-drives-2.htm),
+and [Part 3](http://www.techsupportalert.com/partitioning-hard-drives-3.htm).
+
+See also (pcadvisor)[http://www.pcadvisor.co.uk/how-to/windows/how-reinstall-windows-reinstall-windows-10-reinstall-windows-10-3535423/].
+
+[partition wizard](https://www.partitionwizard.com/faqvideo/how-to-build-free-bootable-partition-manager-with-pwfree91-iso.html) and dealing with the [missing os](https://www.partitionwizard.com/partitionmagic/missing-os-after-upgrading-windows-10.html) problem.
+
+
+Not to mention [How to completely clean install Windows 10 on a UEFI PC](https://petermeinl.wordpress.com/2015/09/06/how-to-really-do-a-clean-install-of-windows-10-on-a-uefi-pc/)....
+
+
+Consider [DriverMax](http://www.drivermax.com/)
+
+And the drivers for the [ASUS CM6870](https://www.asus.com/us/support/Download/14/11/6/19/kitfFCbsOpUyO2nz/30/)
+
+
+
+
 ## Locations
 
 Start Menu Entries
