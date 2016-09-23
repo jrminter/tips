@@ -37,6 +37,10 @@ Nice detailed instructions for Win7:
 
 4. [The Beginner Guide](https://www.youtube.com/watch?v=-V63GbpyNqs) has nice partioning example.
 
+5. [HowTo Geek](http://www.howtogeek.com/172580/how-to-create-a-separate-data-partition-for-windows/) has a nice article.
+
+6. **DIY PC Repairs** has a pair of short, videos demonstrating how to first reformat the drive and do a clean install of Win 7 and then split the drive into separate partitions. [Part 1](https://www.youtube.com/watch?v=mME9VLT7-xw) - the clean install with a single large partition. [Part 2](https://www.youtube.com/watch?v=i5_wI5YqMjI) - splitting the large partition.  
+
 
 Not to mention  [How to completely clean install Windows 10 on a UEFI PC](https://petermeinl.wordpress.com/2015/09/06/how-to-really-do-a-clean-install-of-windows-10-on-a-uefi-pc/)....
 
