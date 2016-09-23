@@ -22,17 +22,28 @@ Nice series from **techsupportalert.com**
 [Part 2](http://www.techsupportalert.com/partitioning-hard-drives-2.htm),
 and [Part 3](http://www.techsupportalert.com/partitioning-hard-drives-3.htm).
 
-See also (pcadvisor)[http://www.pcadvisor.co.uk/how-to/windows/how-reinstall-windows-reinstall-windows-10-reinstall-windows-10-3535423/].
+See also [pcadvisor](http://www.pcadvisor.co.uk/how-to/windows/how-reinstall-windows-reinstall-windows-10-reinstall-windows-10-3535423/).
 
 [partition wizard](https://www.partitionwizard.com/faqvideo/how-to-build-free-bootable-partition-manager-with-pwfree91-iso.html) and dealing with the [missing os](https://www.partitionwizard.com/partitionmagic/missing-os-after-upgrading-windows-10.html) problem.
 
 
-Not to mention [How to completely clean install Windows 10 on a UEFI PC](https://petermeinl.wordpress.com/2015/09/06/how-to-really-do-a-clean-install-of-windows-10-on-a-uefi-pc/)....
+Nice detailed instructions for Win7:
+
+1. [about.com](http://pcsupport.about.com/od/operatingsystems/ss/windows-7-clean-install-part-1.htm#step1), 
+
+2. The [Microsoft](https://support.microsoft.com/en-us/help/15088/windows-create-installation-media) how to download installation media, esp. [Win7](https://www.microsoft.com/en-us/software-download/windows7).
+
+3. [Barnacules](https://www.youtube.com/watch?v=k9EA4t3GHwk) video. Especially helpful because he deals with drivers needed at install time and the endless updates...
+
+
+Not to mention  [How to completely clean install Windows 10 on a UEFI PC](https://petermeinl.wordpress.com/2015/09/06/how-to-really-do-a-clean-install-of-windows-10-on-a-uefi-pc/)....
 
 
 Consider [DriverMax](http://www.drivermax.com/)
 
-And the drivers for the [ASUS CM6870](https://www.asus.com/us/support/Download/14/11/6/19/kitfFCbsOpUyO2nz/30/)
+And the drivers for the
+[ASUS CM6870](https://www.asus.com/us/support/Download/14/11/6/19/kitfFCbsOpUyO2nz/30/).
+Consider unzipping them and putting the on a USB drive (**DO NOT plug it into a USB 3 port!**).
 
 
 Win7 Antivirus - [AVG](http://www.avg.com/us-en/download-antivirus-for-windows)
