@@ -35,6 +35,8 @@ Nice detailed instructions for Win7:
 
 3. [Barnacules](https://www.youtube.com/watch?v=k9EA4t3GHwk) video. Especially helpful because he deals with drivers needed at install time and the endless updates...
 
+4. [The Beginner Guide](https://www.youtube.com/watch?v=-V63GbpyNqs) has nice partioning example.
+
 
 Not to mention  [How to completely clean install Windows 10 on a UEFI PC](https://petermeinl.wordpress.com/2015/09/06/how-to-really-do-a-clean-install-of-windows-10-on-a-uefi-pc/)....
 
