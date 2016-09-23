@@ -15,6 +15,16 @@ Some useful tips for windows
 
 # Win 7 and 10
 
+## Fix the MBR on Win 10
+
+From: [superuser.com](http://superuser.com/questions/949219/how-to-fix-windows-10-boot-loader-from-windows):
+
+from an administrator command prompt:
+
+```
+bootsect /nt60 C: /mbr
+```
+
 ## Clean Installs
 
 Nice series from **techsupportalert.com**
