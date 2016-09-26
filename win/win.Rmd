@@ -15,6 +15,16 @@ Some useful tips for windows
 
 # Win 7 and 10
 
+## Fix the MBR on Win 10
+
+From: [superuser.com](http://superuser.com/questions/949219/how-to-fix-windows-10-boot-loader-from-windows):
+
+from an administrator command prompt:
+
+```
+bootsect /nt60 C: /mbr
+```
+
 ## Clean Installs
 
 Nice series from **techsupportalert.com**
@@ -22,17 +32,34 @@ Nice series from **techsupportalert.com**
 [Part 2](http://www.techsupportalert.com/partitioning-hard-drives-2.htm),
 and [Part 3](http://www.techsupportalert.com/partitioning-hard-drives-3.htm).
 
-See also (pcadvisor)[http://www.pcadvisor.co.uk/how-to/windows/how-reinstall-windows-reinstall-windows-10-reinstall-windows-10-3535423/].
+See also [pcadvisor](http://www.pcadvisor.co.uk/how-to/windows/how-reinstall-windows-reinstall-windows-10-reinstall-windows-10-3535423/).
 
 [partition wizard](https://www.partitionwizard.com/faqvideo/how-to-build-free-bootable-partition-manager-with-pwfree91-iso.html) and dealing with the [missing os](https://www.partitionwizard.com/partitionmagic/missing-os-after-upgrading-windows-10.html) problem.
 
 
-Not to mention [How to completely clean install Windows 10 on a UEFI PC](https://petermeinl.wordpress.com/2015/09/06/how-to-really-do-a-clean-install-of-windows-10-on-a-uefi-pc/)....
+Nice detailed instructions for Win7:
+
+1. [about.com](http://pcsupport.about.com/od/operatingsystems/ss/windows-7-clean-install-part-1.htm#step1), 
+
+2. The [Microsoft](https://support.microsoft.com/en-us/help/15088/windows-create-installation-media) how to download installation media, esp. [Win7](https://www.microsoft.com/en-us/software-download/windows7).
+
+3. [Barnacules](https://www.youtube.com/watch?v=k9EA4t3GHwk) video. Especially helpful because he deals with drivers needed at install time and the endless updates...
+
+4. [The Beginner Guide](https://www.youtube.com/watch?v=-V63GbpyNqs) has nice partioning example.
+
+5. [HowTo Geek](http://www.howtogeek.com/172580/how-to-create-a-separate-data-partition-for-windows/) has a nice article.
+
+6. **DIY PC Repairs** has a pair of short, videos demonstrating how to first reformat the drive and do a clean install of Win 7 and then split the drive into separate partitions. [Part 1](https://www.youtube.com/watch?v=mME9VLT7-xw) - the clean install with a single large partition. [Part 2](https://www.youtube.com/watch?v=i5_wI5YqMjI) - splitting the large partition.  
+
+
+Not to mention  [How to completely clean install Windows 10 on a UEFI PC](https://petermeinl.wordpress.com/2015/09/06/how-to-really-do-a-clean-install-of-windows-10-on-a-uefi-pc/)....
 
 
 Consider [DriverMax](http://www.drivermax.com/)
 
-And the drivers for the [ASUS CM6870](https://www.asus.com/us/support/Download/14/11/6/19/kitfFCbsOpUyO2nz/30/)
+And the drivers for the
+[ASUS CM6870](https://www.asus.com/us/support/Download/14/11/6/19/kitfFCbsOpUyO2nz/30/).
+Consider unzipping them and putting the on a USB drive (**DO NOT plug it into a USB 3 port!**).
 
 
 Win7 Antivirus - [AVG](http://www.avg.com/us-en/download-antivirus-for-windows)
