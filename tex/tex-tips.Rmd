@@ -31,6 +31,9 @@ This is particularly bad on Windows. The solution came from [stackexchange](http
 fc-cache -fv
 ```
 
+**Note:** [This](http://tex.stackexchange.com/questions/325278/xelatex-runs-slow-on-windows-machine) thread on StackOverflow notes that it **really helps** to run XeLaTeX as an adminstrator. It helps to run make from an an **Administrator Command Prompt**.
+
+
 
 ## HTML Colors
 These are frequently used in themes.
