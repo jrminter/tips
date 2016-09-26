@@ -25,39 +25,36 @@ compiled from several web sources. Some helpful ones:
 
 ## Devices
 
-### Postscript
+### Use postscript to get both pdf and png output
 
-Use something like this
+The best png output comes via postscript. Make sure ImageMagick's
+``convert`` program is **ahead** of windows ``convert`` program in the
+path. Then use to produce **both** pdf and png plots at the sane time!
+
+Use something like this:
+
 ```
 # easy to comment out with #
-# set terminal postscript enhanced color "Arial" 16
-# set output "200nmNiOnCu15kV.ps"
-# proc-gnuplot.sh 200nmNiOnCu15kV
-# set terminal png
+set terminal postscript enhanced color "Arial" 14
+set output "foo.ps"
+# proc-gnuplot.sh foo
 # set terminal window
 ```
 
-Note the proc-gnuplot.sh script converts the file to pdf and crops the 
-margins like this:
+Where the `proc-gnuplot.sh` script (in C:/Apps/local/path) converts the file to
+pdf and crops the margins by using ps2pdf (from texlive) and convert (from ImageMagick) like this:
 
 ```
-ps2pdf 200nmNiOnCu15kV.ps temp.pdf
-pdfcrop --margins 4 temp.pdf 200nmNiOnCu15kV.pdf
+ps2pdf $1.ps temp.pdf
+pdfcrop --margins 4 temp.pdf $1.pdf
 rm -rf temp.pdf
+convert -density 150 -geometry 68.82% $1.pdf $1.png
 ```
-Cropping the margins is especailly helpful for inclusion
-in $\LaTeX$ documents.
+Cropping the margins is especially helpful for inclusion
+in $\LaTeX$ documents. This produces a 1024 pixel wide png image of the plot.
 
-### PNG
-The best png output comes via postscript. Make sure ImageMagick's
-``convert`` program is ahead of windows ``convert`` program in the
-path. Then use
 
-```
-convert -density 150 -geometry 100% plt.ps plt.png
-```
-
-One can so this manually using Fiji's "Import PDF" and chosing a 200 dpi from the dialog. This is nice because one can copy an image of a ROI from which an EDS spectrum was collected and paste it into the PNG of the spectrum to make a self-contained figure.
+One can also this manually using Fiji's "Import PDF" and choosing a 200 dpi from the dialog. This is nice because one can copy an image of a ROI from which an EDS spectrum was collected and paste it into the PNG of the spectrum to make a self-contained figure.
 
 
 # Useful DTSA Spectrum Plot hacks
