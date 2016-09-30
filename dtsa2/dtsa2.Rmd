@@ -11,16 +11,101 @@ output:
 
 [Back to Index](../README.html)
 
-# Defining a custom material
+# Key tricks
+
+## Defining a custom material
 
 It is important to add a name when one define a name when defining a
 custom material that will be used with the MC3 simulations. Here is an
-example for PET
+example for PET. **Note that the mass fractions are useful for complex materials.**
 
 ```
 pet = epq.Material(epq.Composition([epq.Element.C,epq.Element.H,epq.Element.O],[0.62502,0.04196,0.069042]),epq.ToSI.gPerCC(1.37))
 pet.setName("PET")
 ```
+
+The final step is **really important** - sometime the simple approach produces unicode characters in output file name generated automatically and these crash. Simple names are better!!!
+
+## File naming tricks
+
+For simulations, I often name files with a `compound-kV-nTraj` type syntax. Writing a helper function can mimimize repetition
+
+
+```
+def getSpecPath(baseName, baseDir, e0, nTraj):
+    sName = "%s-%g-kV-%g-Traj" % (baseName, e0, nTraj)
+    sPath = "%s/%s.msa" % (baseDir, sName)
+    return sPath
+```
+
+I should also wrap a sequence like this:
+
+```
+spcFile = getSpecPath("Al", outDir, e0, nTraj)
+al = wrap(readSpectrum(spcFile))
+sp = spc.getProperties()
+sp.setDetector(det)
+al.display()
+```
+
+Here is my work-in-progress for a quantification script
+
+
+```
+
+ff = epq.FilterFit(det, epq.ToSI.keV(e0))
+ff.addReference(element("Al"), al)
+ff.addReference(element("Zn"), zno)
+ff.addReference(element("O"), zno)
+kr  = ff.getKRatios(azo)
+kO  = kr.getKRatioU(epq.XRayTransition(epq.Element.O,epq.XRayTransition.KA1))
+kZn = kr.getKRatioU(epq.XRayTransition(epq.Element.Zn,epq.XRayTransition.LA1))
+kAl = kr.getKRatioU(epq.XRayTransition(epq.Element.Al,epq.XRayTransition.KA1))
+
+fs = "%g\t%g\t%g\t%g\t%g\t%g" 
+
+znoMat = epq.Material(epq.Composition([epq.Element.Zn,epq.Element.O],
+                                      [0.80349,0.19651]),
+                                      epq.ToSI.gPerCC(5.61))
+
+stds = { epq.Element.Zn : znoMat, epq.Element.O : znoMat }
+
+print (fs % (kO.doubleValue(), kO.uncertainty(),
+             kZn.doubleValue(), kZn.uncertainty(),
+             kAl.doubleValue(), kAl.uncertainty() ))
+
+
+qr = quant(kr, 35.0, e0, stds, None, False, None, None)
+
+print(qr)
+
+print(dir(qr))
+
+# print(qr.atomicPercentU(epq.Element.Al))
+# print(qr.atomicPercentU(epq.Element.Zn))
+# print(qr.atomicPercentU(epq.Element.O))
+
+print(dir(qr.atomicPercentU(epq.Element.Al)))
+
+# print(dir(epq.Element.Al))
+
+def formatElement(qr, el):
+    strLine  = "%s, " % el.toAbbrev()
+    strLine += "%.6f, " % qr.atomicPercentU(el).doubleValue()
+    strLine += "%.6f" % qr.atomicPercentU(el).uncertainty()
+    return(strLine)
+
+print("El, at.fra.mu, at.fra un")
+out = formatElement(qr, epq.Element.Al)
+print(out)
+out = formatElement(qr, epq.Element.Zn)
+print(out)
+out = formatElement(qr, epq.Element.O)
+print(out)
+
+
+```
+
 
 # System Admin
 
