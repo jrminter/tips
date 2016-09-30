@@ -68,8 +68,105 @@ set xlabel "Energy [eV]" font "Arial,16"
 set ylabel "Intensity" font "Arial,16"
 set format x "%g"
 set format y "%g"
+set key spacing 1.5
+
 unset label
 ```
+
+Note that one can split the plot line, like
+
+```
+plot "-" with lines lt 1 lw 2 lc rgb "#9ecae1" \
+     title "  0 nm Al on Si 5 kV", \
+     "-" with lines lt 1 lw 2 lc rgb "#6baed6" \
+     title " 20 nm Al on Si 5 kV", \
+     "-" with lines lt 1 lw 2 lc rgb "#4292c6" \
+     title " 40 nm Al on Si 5 kV", \
+     "-" with lines lt 1 lw 2 lc rgb "#2171b5" \
+     title " 60 nm Al on Si 5 kV", \
+     "-" with lines lt 1 lw 2 lc rgb "#08519c" \
+     title " 80 nm Al on Si 5 kV", \
+     "-" with lines lt 1 lw 2 lc rgb "#08306b" \
+     title "100 nm Al on Si 5 kV", \
+     "-" with impulses lw 2 lt -1 notitle
+
+```
+
+if one only has two elements in a DTSA plt, one can
+
+```
+unset label
+
+set label "Sn lines in black, Cl lines in red" at 400,20000
+
+plot "-" with lines lt 1 lw 2 lc rgb "#133463" title "Sn", \
+     "-" with lines lt 1 lw 2 lc rgb "#3A89C9" title "SnCl_{2}", \
+     "-" with impulses lw 2 lc rgb "red" lt -1 notitle, \
+     "-" with impulses lw 2 lc rgb "black" lt -1 notitle
+```
+
+followed by (at the end)
+
+```
+e
+# Cl
+2622.4, 34888.0
+# Cl
+2620.8, 17653.3
+# Cl
+2815.6, 1604.8
+# Cl
+2815.6, 3289.9
+e
+# Sn ***Note the split here...***
+619.9, 846.0
+# Sn
+3444.0, 23114.0
+# Sn
+577.9, 169.2
+# Sn
+3435.5, 2621.1
+# Sn
+3045.0, 961.5
+# Sn
+4067.5, 62.4
+# Sn
+3750.3, 3575.7
+# Sn
+3662.8, 10044.4
+# Sn
+4132.2, 1340.6
+# Sn
+690.5, 3384.0
+# Sn
+490.0, 16.9
+# Sn
+3971.4, 124.8
+# Sn
+3272.3, 365.2
+# Sn
+3708.3, 2191.2
+# Sn
+396.2, 1692.0
+# Sn
+732.5, 169.2
+# Sn
+4463.0, 37.0
+# Sn
+4376.1, 742.0
+# Sn
+404.7, 169.2
+# Sn
+4376.1, 44.6
+# Sn
+3904.9, 3395.2
+# Sn
+4019.6, 74.0
+e
+
+```
+
+
 
 # Color
 
