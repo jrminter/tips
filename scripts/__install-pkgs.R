@@ -93,6 +93,9 @@ install_new('Rd2roxygen')
 install_new('purrr')
 install_new('tibble')
 
+# gwt color right
+install_new('RColorBrewer')
+
 # Sweave and pandoc tools
 # install_new('cacheSweave') # not avail 3.2
 install_new('markdown')

@@ -19,6 +19,8 @@ See youtube [Git Foundation Playlist](https://www.youtube.com/playlist?list=PLg7
 
 # Recent changes
 
+Note some really helpful aliases [here](https://hackernoon.com/lesser-known-git-commands-151a1918a60).
+
 Now use
 
 ```
