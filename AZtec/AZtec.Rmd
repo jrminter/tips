@@ -241,6 +241,34 @@ Test specimen - flick a lighter flint onto Si. Flint has Ce.
 
 He thinks beam drift at. Drift was manageble. Also said let scope stabilize for an hour before drift correction.
 
+# Quantitative EDS Analysis using AZtec software platform: Good Practices
+
+Adapted from a PDF with a date of 2013-05-09, but the copyright on the slides is 2011.
+
+
+- **Step 1: Enter Project Notes and Specimen Notes for the sample** in "Describe Specimen"
+- **Step 2: Select "Ratemeter"** in the "Mini View" to verify the dead time and input count rate. 20kV and Process time 3 is recommended for unknown samples. For low kV analysis use Process Time 5. **At any given process time adjust the spot size (beam current) to yield a dead time around 45% on pure Cu (Cu tape is OK)**.
+- **Step 3:Perform a Beam Measurement** in "Optimize" Calibrate step (If interested in un-normalized quant). If you require accurate un-normalized quantitative analysis results, you must perform the Beam Measurement routine. Any change in the microscope settings such as accelerating voltage or lens control will lead to the change in the beam current. Under these circumstances you must perform the Beam Measurement routine before you do accurate quantitative analysis. Note that you do not need to perform the Beam Measurement routine if you are only interested qualitative analysis or normalized quantitative analysis.
+- **Step 4: Energy Calibration** For accurate identification of peaks, you need to perform the Energy Calibration. Energy Calibration measures the shift in the position of the spectral peaks and resolution of the system. As the system has very stable electronics, you may only need to calibrate the system once in several months, provided the environmental temperature of the laboratory is fairly stable. A few degrees change in the environmental temperature can cause a small shift in the position of peaks. The Energy Calibration routine is performed for representative Process times, available energy ranges and number of channels in one operation. This means if you change any of these settings soon after you perform the Energy Calibration, you will not need to re-calibrate the system.
+- **Step 5: Collect a reference image** in "Scan Image" step in Point&ID. Skip if not interested in collecting an image. **Note:** To collect multiple images (SE, BSE, InLens, etc.) in a given site of interest the acquired image can be locked to prevent overwriting. Hitting the Start button after locking an acquired image adds other images to the Current Site.
+
+![Lock-Image](img/lock-AZtec-image.png)
+
+- **Step 6: Start spectral acquisition** by selecting appropriate tool (spot, rectangular region, etc.) and clicking on the region
+of interest in Point & ID.
+- **Step 7: Use the Fitted Spectrum tool to verify peak identification** in "Confirm elements"
+
+![choose-fitted-spectrum](img/choose-fitted-spectrum.png)
+
+![check-peak-shape](img/check-peak-shape.png)
+
+- **Step 8:** Quant in Calculate Composition step. For Quant using Standards go to Step 9. Multiple spectra can be selected from
+the Data Tree by holding the "ctrl" button on the keyboard. These selected spectra can be added to the Quant Summary Table.
+- **Step 9:** Acquire a spectrum from a standard as defined above. Standardize the elements of interest in "Standardize" (located in Optimize). Data from custom standards can be collected and stored as databases. Spectra can be quantified by applying standard information from these databases.
+- **Step 10:** Re-quantify spectra from unknown samples using the updated standard database. Select the updated standard database and click "Requantify".
+
+
+
 
 # Alchemy...
 
