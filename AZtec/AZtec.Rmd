@@ -9,7 +9,7 @@ output:
     toc: yes
 ---
 
-This documents contains hints that I find helpful when using the Oxford AZtec 3.0 Software.
+This document contains hints that I find helpful when using the Oxford AZtec 3.0 Software.
 
 [Back to Index](../README.html)
 
