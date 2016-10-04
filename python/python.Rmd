@@ -25,6 +25,24 @@ See also [Intermediate Python](http://book.pythontips.com/en/latest/)
 
 # Things that made me go "huh"...
 
+
+## Latest Anaconda (4.2.0)
+
+1. Install the x64 installer
+
+2. install hyperspy
+
+```
+conda config --add channels conda-forge
+conda install hyperspy
+```
+
+3. Install jmToolsPy3
+
+```
+python setup.py install
+```
+
 ## installing theano on Anaconda Py35
 
 ```
