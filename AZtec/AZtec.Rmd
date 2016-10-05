@@ -209,6 +209,16 @@ Si is a good choice for the whole range. I measured the ``cps/nA`` for a range o
 
 ![AZtec-Si-Beam-Calibration](img/AZtec-Si-Beam-Calibration.png)
 
+Note that I repeated this on **2016-10-05** using the AZtec **Beam Calibration**
+procedure at a working distance of **4.0 mm**. The detector is more sensitive
+there thatn at 5 mm. I made a new sample holder with a Fataday cup by having
+Chuck Andre drill a hole in an Al stub to
+accomodate a 150 micron Pt top hat aperture. I coated the drilled hole with C
+paint and mounted the aperture with Ag paint. I added an Si chip and a piece
+of C tape. Note that AZtec the beam calibration procedure works doen to 5 kV.
+I fit the data using a LOESS to try to force the fit through the origin.
+
+![New fit](img/si-cps-per-nA-plt.png)
 
 
 Note the ``Beam Calibration Information`` section contains all we need:
