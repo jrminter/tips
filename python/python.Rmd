@@ -13,7 +13,7 @@ output:
 
 See also [Intermediate Python](http://book.pythontips.com/en/latest/)
 
-# Youtube tutorials
+# Youtube and other great tutorials
 
 - **Michael Droettboom** (Continuum Analytics) [Intro](https://www.youtube.com/watch?v=tWHiUk7PRyw)
 
@@ -22,6 +22,8 @@ See also [Intermediate Python](http://book.pythontips.com/en/latest/)
 - from PyData 2015 NYC. He references the tutorial by [Nicolas Rougier](http://www.labri.fr/perso/nrougier/teaching/matplotlib/) who also has the source on [GitHub](https://github.com/rougier/matplotlib-tutorial). Some of this was inspired by [Ten Simple Rules for Better Figures](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003833).
 
 - Slides using reveal.js by [James Church](https://www.youtube.com/watch?v=EOpcxy0RA1A).
+
+- [James Hetherington](http://rits.github-pages.ucl.ac.uk/doctoral-programming-intro/) of UCL has a really nice doctoral programming course in Python. He has prepared a [pdf](http://rits.github-pages.ucl.ac.uk/doctoral-programming-intro/notes.pdf) of the notes. And all the [Jupyter notebooks](http://rits.github-pages.ucl.ac.uk/doctoral-programming-intro/notebooks.zip) are available in a zip file. **One important hint: For Windows, append C:\\Program Files\\Git\\bin to the end of the path so it finds bash.exe**.
 
 # Things that made me go "huh"...
 
