@@ -36,7 +36,7 @@ C:\Users\Public\Documents\AZtec\Report Templates
 
 # Exporting maps and making montages
 
-I like tightly-stitched maps with the ability to crop regions of interest. Here is the current procedure I use. The export of the PNG files is kludgy - I need to try to write an Auto-IT to script. This keeps the raw images in the ``$EDS_ROOT/Oxford/QM14-nn-nnA-Client/reports/qm-nnnnn-sampleID/qm-nnnnn-sampleID-nnkV-map1/tif`` tree where I cannot use version control (AZtec projects fail to open...) and the python scripts and report images in the ``$HOME/work/proj/QM14-nn-nnA-Client/`` tree where I do use version control (``git``). **Note:** the scripts below use functions from ``jmFijiGen.py`` which must be in ``$FIJI_ROOT/jars/Lib/``.
+I like tightly-stitched maps with the ability to crop regions of interest. Here is the current procedure I use. The export of the PNG files is kludgey - I need to try to write an Auto-IT to script. This keeps the raw images in the ``$EDS_ROOT/Oxford/QM14-nn-nnA-Client/reports/qm-nnnnn-sampleID/qm-nnnnn-sampleID-nnkV-map1/tif`` tree where I cannot use version control (AZtec projects fail to open...) and the python scripts and report images in the ``$HOME/work/proj/QM14-nn-nnA-Client/`` tree where I do use version control (``git``). **Note:** the scripts below use functions from ``jmFijiGen.py`` which must be in ``$FIJI_ROOT/jars/Lib/``.
 
 1. **Set the maps to have consistent colors**. I have some suggestions below. This is most easily accomplished from the ``Summary View``. One may export these as '.png' files but the brightness/contrast/gain mapping are done with point and click. It is better to record a lists of names, hue values, and gammas for the newer scripts. An example is shown below. **Note:** the -1 value for hue is a flag not to run the LUT change routine.
 
@@ -163,7 +163,7 @@ My most recent reasonable set for a high resolution map below:
 
 ![AutoLock Set 2](img/map-3-autolock-settings.png)
 
-One annoying feature of Auto-Lock is that one cannot see the Auto-Lock settings on an offline version. I tend to do a screen print of the AutoLock History in the Mini View
+One annoying feature of Auto-Lock is that one cannot see the Auto-Lock settings on an off-line version. I tend to do a screen print of the AutoLock History in the Mini View
 
 ![Autolock History](img/map-3-autolock-meas.png)
 
@@ -216,11 +216,11 @@ Si is a good choice for the project **2014-09-12-Cu-Si** for the data and more i
 
 Note that I repeated this on **2016-10-05** using the AZtec **Beam Calibration**
 procedure at a working distance of **4.0 mm**. The detector is more sensitive
-there thatn at 5 mm. I made a new sample holder with a Fataday cup by having
+there than at 5 mm. I made a new sample holder with a Faraday cup by having
 Chuck Andre drill a hole in an Al stub to
-accomodate a 150 micron Pt top hat aperture. I coated the drilled hole with C
+accommodate a 150 micron Pt top hat aperture. I coated the drilled hole with C
 paint and mounted the aperture with Ag paint. I added an Si chip and a piece
-of C tape. Note that AZtec the beam calibration procedure works doen to 5 kV.
+of C tape. Note that AZtec the beam calibration procedure works down to 5 kV.
 After careful consideration, I decide the linear model was better than a fit
 using a LOESS to try to force the fit through the origin. See the AZtec project 
 **Beam-Meas-2016-10-15** for the data and more information.
