@@ -9,6 +9,11 @@ output:
     toc: yes
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(knitr)
+```
+
 This document contains hints that I find helpful when using the Oxford AZtec 3.0 Software.
 
 [Back to Index](../README.html)
@@ -195,7 +200,7 @@ One gets the required data from the ``Calculate Composition`` tab of ``Point & I
 
 ![AvailableTemplates](img/AvailableTemplates.png)
 
-Si is a good choice for the whole range. I measured the ``cps/nA`` for a range of voltages. See the project ``2014-09-12-Cu-Si`` for the data and more information. 
+Si is a good choice for the project **2014-09-12-Cu-Si** for the data and more information. 
 
 
 |e0  | mean    | std dev |
@@ -207,7 +212,7 @@ Si is a good choice for the whole range. I measured the ``cps/nA`` for a range o
 | 20 | 20305.2 | 261.3   |
 | 30 | 29843.4 | 383.9   |
 
-![AZtec-Si-Beam-Calibration](img/AZtec-Si-Beam-Calibration.png)
+![AZtec Si Beam Calibration 2014-09-12](img/AZtec-Si-Beam-Calibration.png)
 
 Note that I repeated this on **2016-10-05** using the AZtec **Beam Calibration**
 procedure at a working distance of **4.0 mm**. The detector is more sensitive
@@ -216,10 +221,18 @@ Chuck Andre drill a hole in an Al stub to
 accomodate a 150 micron Pt top hat aperture. I coated the drilled hole with C
 paint and mounted the aperture with Ag paint. I added an Si chip and a piece
 of C tape. Note that AZtec the beam calibration procedure works doen to 5 kV.
-I fit the data using a LOESS to try to force the fit through the origin.
+After careful consideration, I decide the linear model was better than a fit
+using a LOESS to try to force the fit through the origin. See the AZtec project 
+**Beam-Meas-2016-10-15** for the data and more information.
 
-![New fit](img/si-cps-per-nA-plt.png)
+![Si-Ka peak intensity calibration 2016-10-05](img/si-cps-per-nA-plt.png)
 
+These are the parameters from the fit:
+
+```{r, echo=FALSE}
+load('dat/si-cps-per-nA-coef.RData')
+kable(si.cps.per.Na.lm.coef)
+```
 
 Note the ``Beam Calibration Information`` section contains all we need:
 
