@@ -18,6 +18,18 @@ This document contains hints that I find helpful when using the Oxford AZtec 3.0
 
 [Back to Index](../README.html)
 
+
+# Basic Info
+
+| Info | Value |
+|------|-------|
+| Oxford S/N | **CZC4081PBM** |    
+| System No. | **37404** |  
+| MA svc phone | **(800) 447-4717** |    
+| MA svc email | **ccc.oia\@oxinst.com** |
+
+
+
 # Useful quick tips
 
 ## Naming standard spectra
@@ -304,11 +316,6 @@ Sometimes when image collection is stopped, the scan is offset and looks odd on 
 The Oxford logo is in a file ``logo.png`` in ``C:\Program Files\Oxford Instruments NanoAnalysis\AZtec\Reports``. It is ``150x71`` pixels. design a replacement with the same aspect ratio and rename the old one to ``logo-old.png``
 
 
-
-# Basic Info
-
-Oxford S/N: ``CZC4081PBM``     
-System NO:  ``37404``
 
 
 # A proposed SPI Standards Block
