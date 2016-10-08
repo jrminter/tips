@@ -28,7 +28,14 @@ This document contains hints that I find helpful when using the Oxford AZtec 3.0
 | MA svc phone | **(800) 447-4717** |    
 | MA svc email | **ccc.oia\@oxinst.com** |
 
+## The AZtec License manager
 
+Both AZtec and Inca have network licenses. The installer installs an **evaluation license** which expires in a few days. You have to change the licenses for **both** AZtec and Inca. The license manager looks like the image below. You need to press the red button and enter the appropriate license code and use a user ID (email address) and password (std) to authenticate.
+
+![**Change** the default licenses with the **red** arrow](img/AZtecLicMgr.png)
+
+
+The correct codes are stored in the system folder on the **QM Share**. It took me a **long** time to figure out why everything was grayed out. A real smack my head moment...
 
 # Useful quick tips
 
@@ -274,7 +281,7 @@ A webinar (2015-06-18) by Jens Rafaelsen, an applications engineer at EDAX. He h
 
 Test specimen - flick a lighter flint onto Si. Flint has Ce.
 
-He thinks beam drift at. Drift was manageble. Also said let scope stabilize for an hour before drift correction.
+He thinks beam drift at. Drift was manageable. Also said let scope stabilize for an hour before drift correction.
 
 # Quantitative EDS Analysis using AZtec software platform: Good Practices
 
