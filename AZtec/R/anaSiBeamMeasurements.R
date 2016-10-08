@@ -1,7 +1,7 @@
 # anaSiBeamMeasurements2.R
 rm(list=ls())
 
-library(ggplot2)
+library(rAnaLab)
 
 gitHome = Sys.getenv('GIT_HOME')
 relWrk = '/tips/AZtec/R'
@@ -10,30 +10,34 @@ oldWd = getwd()
 setwd(wd)
 print(oldWd)
 
-df <- read.csv('../csv/Si-K-beam-calibration-2016-10-05.csv', header=TRUE,
+df <- read.csv('../csv/Beam-Meas-SiK-100s-2016-10-15.csv', header=TRUE,
                 as.is=TRUE)
-df$eov <- df$e0 - 1.7397 # This did not help at all
-df$Si.cps.per.nA <- df$Si.K.cts/(df$live.time.s*df$pc.nA)
+
+si.mu <- round(df$si.ka.cts.mu/(df$lt.s*df$pc.na), 2)
+si.un <- round(df$si.ka.cts.s/(df$lt.s*df$pc.na), 2)
+e0    <- df$e0
+
+df <- data.frame(e0=e0, si.mu=si.mu, si.un=si.un)
 
 print(df)
 
-lin.model <- lm(Si.cps.per.nA ~ e0, data=df) 
-lin.sum  <- summary(lin.model)
+lin.model <- lm(si.mu ~ e0, data=df) 
+lin.sum   <- summary(lin.model)
 
 # print(str(lin.sum))
 print(lin.sum$coef)
 
 
-lm.b <- lin.sum$coef[1]
-lm.m <- lin.sum$coef[2]
+lm.b <- round(lin.sum$coef[1], 1)
+lm.m <- round(lin.sum$coef[2], 1)
 
-siCpsPerNa <- ggplot(df, aes(x=e0, y=Si.cps.per.nA)) + 
-                     scale_x_continuous(name="e0 [kV]", limits=c(0, 20)) +
-                     scale_y_continuous(name="Si-K cps/nA",
-                                        limits=c(0, 25000)) +
+siCpsPerNa <- ggplot(df, aes(x=e0, y=si.mu)) + 
+                     geom_point(color='black', size=2.0) +
                      geom_abline(intercept=lm.b, slope=lm.m,
                                  colour='blue', size=1.25) +
-                     geom_point(color='black', size=3.0) + 
+                     scale_x_continuous(name="e0 [kV]", limits=c(0, 20)) +
+                     scale_y_continuous(name="Si-K cps/nA", limits=c(0, 25000)) +
+                     
                      # xlab("e0 [kV]") +
                      # ylab("Si-K cps/nA") + 
                      annotate("text", label = '2016-10-05',
@@ -46,9 +50,9 @@ siCpsPerNa <- ggplot(df, aes(x=e0, y=Si.cps.per.nA)) +
 print(siCpsPerNa)
 
 # save the model
-si.cps.per.Na.lm.coef <- lin.sum$coef
-fi <- '../dat/si-cps-per-nA-coef.RData'
-save(si.cps.per.Na.lm.coef, file=fi)
+si.k.cps.per.na.lm.coef <- lin.sum$coef
+fi <- '../dat/si.k.cps.per.na.lm.coef.RData'
+save(si.k.cps.per.na.lm.coef, file=fi)
 
 
 fi <- '../img/si-cps-per-nA-plt.png'
