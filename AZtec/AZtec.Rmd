@@ -30,9 +30,9 @@ This document contains hints that I find helpful when using the Oxford AZtec 3.0
 
 ## The AZtec License manager
 
-Both AZtec and Inca have network licenses. The installer installs an **evaluation license** which expires in a few days. You have to change the licenses for **both** AZtec and Inca. The license manager looks like the image below. You need to press the red button and enter the appropriate license code and use a user ID (email address) and password (std) to authenticate.
+Both AZtec and Inca have network licenses. The installer installs an **evaluation license** which expires in a few days. You have to change the licenses for **both** AZtec and Inca. The license manager looks like the image below. You need to press the text above the red button and enter the appropriate license code in the dialog box that appears. Then use a user ID (email address) and password (std) to authenticate the codes. **After** you enter the new codes and autheticate with the userid/password, *then* the **Activate** button will become active. 
 
-![**Change** the default licenses with the **red** arrow](img/AZtecLicMgr.png)
+![**Change** the default licenses **shown here** by pressing the **red** arrow](img/AZtecLicMgr.png)
 
 
 The correct codes are stored in the system folder on the **QM Share**. It took me a **long** time to figure out why everything was grayed out. A real smack my head moment...
