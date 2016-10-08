@@ -32,20 +32,28 @@ See also [Intermediate Python](http://book.pythontips.com/en/latest/)
 
 1. Install the x64 installer
 
-2. install hyperspy
+2. Install mysql-connector and add conda forge
 
 ```
-conda config --add channels conda-forge
-conda install hyperspy
-```
-
-3. Install jmToolsPy3
-
-```
+conda install mysql-connector-python
+cd ~/Documents/git/ezwrappers
 python setup.py install
 ```
 
-## installing theano on Anaconda Py35
+3. create an environment for hyperspy
+
+```
+conda create -n py35qt4 python=3.5 qt=4 anaconda
+source activate py35qt4
+conda config --add channels conda-forge
+conda install mysql-connector-python
+conda install hyperspy
+cd ~/Documents/git/jmToolsPy3
+python setup.py install
+source deactivate
+```
+
+## possibly installing theano on Anaconda Py35
 
 ```
 conda install -c jaikumarm theano=0.8.2
