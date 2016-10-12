@@ -18,6 +18,25 @@ This document contains hints that I find helpful when using the Oxford AZtec 3.0
 
 [Back to Index](../README.html)
 
+
+# Basic Info
+
+| Info | Value |
+|------|-------|
+| Oxford S/N | **CZC4081PBM** |    
+| System No. | **37404** |  
+| MA svc phone | **(800) 447-4717** |    
+| MA svc email | **ccc.oia\@oxinst.com** |
+
+## The AZtec License manager
+
+Both AZtec and Inca have network licenses. The installer installs an **evaluation license** which expires in a few days. You have to change the licenses for **both** AZtec and Inca. The license manager looks like the image below. You need to press the text above the red button and enter the appropriate license code in the dialog box that appears. Then use a user ID (email address) and password (std) to authenticate the codes. **After** you enter the new codes and autheticate with the userid/password, *then* the **Activate** button will become active. 
+
+![**Change** the default licenses **shown here** by pressing the **red** arrow](img/AZtecLicMgr.png)
+
+
+The correct codes are stored in the system folder on the **QM Share**. It took me a **long** time to figure out why everything was grayed out. A real smack my head moment...
+
 # Useful quick tips
 
 ## Naming standard spectra
@@ -229,16 +248,40 @@ using a LOESS to try to force the fit through the origin. See the AZtec project
 
 These are the parameters from the fit:
 
+
 ```{r, echo=FALSE}
-load('dat/si-cps-per-nA-coef.RData')
-kable(si.cps.per.Na.lm.coef)
+load('dat/si.k.cps.per.na.lm.coef.RData')
+kable(si.k.cps.per.na.lm.coef)
 ```
 
-Note the ``Beam Calibration Information`` section contains all we need:
+
+These are the data for Cu (100 sec) from **2016-10-05** using the AZtec **Quant**
+(see below) for the data and more information.
+
+![CuLa peak intensity calibration 2016-10-05](img/cu-l-cps-per-nA-plt.png)
+
+Note the **second order polynomial** These are the parameters from the fit:
+
+```{r, echo=FALSE}
+load('dat/cu.l.cps.per.na.poly.coef.RData')
+kable(cu.l.cps.per.na.poly.coef)
+```
+
+
+
+
+Note the **Beam Calibration Information** section contains what we need:
 
 ![Beam Calibration Information](img/BeamCalibrationInfo.png)
 
-We can copy this information into a text document with a right click.
+We can copy this information into a text document with a right click. However, I found that
+we can also get what we want from the **Spectrum Processing** details from the **Calculate Composition** pane.
+
+![Si-Ka quant results](img/quant-results-si.png)
+
+Note that this is more important for Cu, where the beam measurement routine wants to use the K line and we want the L line. Note that we also get an estimate of the uncertainty.
+
+![Cu-La quant results](img/quant-results-cu.png)
 
 
 The Si peak is well-behaved with voltage. This is an analysis using DTSA-II to fit **just the characteristic peaks**. This is easily automated, given the spectra, using a Jython script.
@@ -262,7 +305,7 @@ A webinar (2015-06-18) by Jens Rafaelsen, an applications engineer at EDAX. He h
 
 Test specimen - flick a lighter flint onto Si. Flint has Ce.
 
-He thinks beam drift at. Drift was manageble. Also said let scope stabilize for an hour before drift correction.
+He thinks beam drift at. Drift was manageable. Also said let scope stabilize for an hour before drift correction.
 
 # Quantitative EDS Analysis using AZtec software platform: Good Practices
 
@@ -304,11 +347,6 @@ Sometimes when image collection is stopped, the scan is offset and looks odd on 
 The Oxford logo is in a file ``logo.png`` in ``C:\Program Files\Oxford Instruments NanoAnalysis\AZtec\Reports``. It is ``150x71`` pixels. design a replacement with the same aspect ratio and rename the old one to ``logo-old.png``
 
 
-
-# Basic Info
-
-Oxford S/N: ``CZC4081PBM``     
-System NO:  ``37404``
 
 
 # A proposed SPI Standards Block
