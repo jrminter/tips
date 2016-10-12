@@ -19,12 +19,39 @@ It is important to add a name when one define a name when defining a
 custom material that will be used with the MC3 simulations. Here is an
 example for PET. **Note that the mass fractions are useful for complex materials.**
 
+
 ```
 pet = epq.Material(epq.Composition([epq.Element.C,epq.Element.H,epq.Element.O],[0.62502,0.04196,0.069042]),epq.ToSI.gPerCC(1.37))
 pet.setName("PET")
 ```
 
+
 The final step is **really important** - sometime the simple approach produces unicode characters in output file name generated automatically and these crash. Simple names are better!!!
+
+**Get the mass fractions the easy way:** from the molecular formula.
+Here is an example for AZO, where we postulate 2% of Zn replaced with Al:
+
+
+```
+azo = material("Al2Zn98O100", density=5.61)
+
+wfAl = round(azo.weightFractionU(epq.Element.Al, True).doubleValue(), 5)
+wfZn = round(azo.weightFractionU(epq.Element.Zn, True).doubleValue(), 5)
+wfO  = round(azo.weightFractionU(epq.Element.O, True).doubleValue(), 5)
+
+AZO = {"Al" : wfAl, "Zn": wfZn, "O" : wfO}
+
+print(AZO)
+
+```
+
+which returns a dictionary
+
+```
+{'Al': 0.00669, 'O': 0.19841, 'Zn': 0.7949}
+```
+
+
 
 ## File naming tricks
 
