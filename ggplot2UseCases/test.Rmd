@@ -1,0 +1,42 @@
+---
+title: "Test"
+author: "J. R. Minter"
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
+output:
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+---
+
+# test
+
+```{r, echo=FALSE}
+
+fi <- './dat/Beam-Meas-SiK-100s-2016-10-15.csv'
+df <- read.csv(fi, header = TRUE, as.is=TRUE)
+e0 <- df$e0
+mu  <- round(df$si.ka.cts.mu/(df$lt.s*df$pc.na),2)
+un  <- round(mu*df$si.ka.cts.s/df$si.ka.cts.mu, 2)
+sca <- 7.0
+lcl <- (mu - sca*1.96*un)
+ucl <- (mu + sca*1.96*un)
+
+df
+
+df2 <- data.frame(e0=e0, mu=mu, lcl=lcl, ucl=ucl)
+df2
+```
+
+make a plot
+
+```{r}
+library(ggplot2)
+# pd <- position_dodge(0.1) # move them .05 to the left and right
+
+ggplot(df2, aes(x=e0, y=mu, colour='red')) + 
+    geom_errorbar(aes(ymin=lcl, ymax=ucl), width=.2, colour='red') +
+    geom_line(colour='blue') +
+    geom_point(colour='black')
+
+```
