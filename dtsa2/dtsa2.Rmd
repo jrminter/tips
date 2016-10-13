@@ -27,26 +27,26 @@ pet.setName("PET")
 ```
 
 
-The final step is **really important** - sometime the simple approach produces unicode characters in output file name generated automatically and these crash. Simple names are better!!!
+The final step is **really important** - sometime the simple approach produces unicode characters in output file name generated automatically and these crash. **Simple names are better!!!**
 
-**Get the mass fractions the easy way:** from the molecular formula.
-Here is an example for AZO, where we postulate 2% of Zn replaced with Al:
-
-
-```
-azo = material("Al2Zn98O100", density=5.61)
-
-wfAl = round(azo.weightFractionU(epq.Element.Al, True).doubleValue(), 5)
-wfZn = round(azo.weightFractionU(epq.Element.Zn, True).doubleValue(), 5)
-wfO  = round(azo.weightFractionU(epq.Element.O, True).doubleValue(), 5)
-
-AZO = {"Al" : wfAl, "Zn": wfZn, "O" : wfO}
-
-print(AZO)
+**Get the mass fractions from the molecular formula the easy way:** 
+I added a function to jmGen.py (v. 0.0.7) that wraps the utility functions in DTSA-II. The prototype is:
 
 ```
+getMassFractions(compound, elemList, iDigits)
+```
 
-which returns a dictionary
+that one uses like this for an AZO compound with 2\% Al substituted for Zn:
+
+```
+import gov.nist.microanalysis.EPQLibrary as epq
+import dtsa2.jmGen as jmg
+
+elements = [epq.Element.Al, epq.Element.Zn, epq.Element.O]
+massFra = jmg.getMassFractions("Al2Zn98O100", elements, 5)
+```
+
+which returns a dictionary with the mass fractions:
 
 ```
 {'Al': 0.00669, 'O': 0.19841, 'Zn': 0.7949}
@@ -56,7 +56,7 @@ which returns a dictionary
 
 ## File naming tricks
 
-For simulations, I often name files with a `compound-kV-nTraj` type syntax. Writing a helper function can mimimize repetition
+For simulations, I often name files with a **compound-kV-nTraj** type syntax. Writing a helper function can mimimize repetition
 
 
 ```
