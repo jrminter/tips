@@ -13,6 +13,37 @@ output:
 
 # Key tricks
 
+## A proposed standard
+
+Mark suggested I might be able to order this from
+[Ted Pella](https://www.tedpella.com/calibration_html/UHV-EL_Reference_Standards_for_EDS_WDS.htm)
+in Dec.
+
+```
+From Ted Pella
+
+A standard
+6075    UHV-EL 6 Rectangular Retainer, 9 x 12mm,
+        with 6 reference standards (select from list)  each    685.00  
+or
+6076    UHV-EL 9 Square Retainer, 13 x 12mm,
+        with 9 reference standards (select from list)  each    995.0
+
+1. Faraday Cup, for beam current measurement, is available for all of the
+   retainers and will take one of the spaces.
+2. 146. Zinc Oxide  ZnO HP  ?
+3. 102. Silicon Si  C   5N*
+4.   1. Aluminum    Al  F   3N* or 
+     3. Aluminum Oxide Al2O3 C 4N*
+5.  30. Copper  Cu  F   2N or 
+    31. Cupric Oxide    CuO P   3N
+6.  89. Palladium   Pd  P   3N
+7.  16. Boron Phosphide BP  P   3N
+8. 108. Silver  Ag  F   3N5
+9. 179. Rutile  TiO2
+
+```
+
 ## Defining a custom material
 
 It is important to add a name when one define a name when defining a
