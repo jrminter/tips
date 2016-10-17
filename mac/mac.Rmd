@@ -10,6 +10,46 @@ output:
 ---
 [Back to Index](../README.html)
 
+# Tips
+
+**1: Screenshot**
+
+```
+defaults write com.apple.screencapture type jpg
+```
+ 
+**2: Encrypt**
+
+```
+encrypt (change path): openssl enc -aes-256-cbc -e -in {path-in} -out {path-out}
+decrypt (change path): openssl enc -aes-256-cbc -d -in {path-in} -out {path-out}
+```
+
+
+**3: Updates**
+
+```
+defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
+```
+
+**4: Option-volume control on top bar**  lets get preferences
+ 
+**5: Prevent sleep**
+
+```
+caffeinate -i -t 3600
+```
+
+or just
+
+```
+caffinate
+```
+
+and don't close terminal. Just **ctl/c** to quit
+
+
+
 # Dealing with directory permissions in el Capitan
 
 ```
