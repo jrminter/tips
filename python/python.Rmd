@@ -19,10 +19,7 @@ I frequently need this list...
 - Activate an environment (**source** on Win) **activate envName**
 - Deactivate an environment (**source** on Win) **deactivate**
 - Get other help **conda --help**
-<<<<<<< HEAD
 - Clean all source fikes: **conda clean --all** Can save > 1 Gb of space...
-=======
->>>>>>> 5fd53eaec860c5627662506c6d10f2e17610302d
 
 
 # Youtube and other great tutorials
