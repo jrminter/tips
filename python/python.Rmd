@@ -11,9 +11,19 @@ output:
 
 [Back to Index](../README.html)
 
-See also [Intermediate Python](http://book.pythontips.com/en/latest/)
+# Key conda commands
+
+I frequently need this list...
+
+- List conda environments **conda info -e**
+- Activate an environment (**source** on Win) **activate envName**
+- Deactivate an environment (**source** on Win) **deactivate**
+- Get other help **conda --help**
+
 
 # Youtube and other great tutorials
+
+See also [Intermediate Python](http://book.pythontips.com/en/latest/)
 
 - **Michael Droettboom** (Continuum Analytics) [Intro](https://www.youtube.com/watch?v=tWHiUk7PRyw)
 
