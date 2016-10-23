@@ -47,17 +47,34 @@ pyinstaller --onefile makeOxfordAZtecIni.py
 
 ## Latest Anaconda (4.2.0)
 
-1. Install the x64 installer
+This will guarantee a **really clean** install. I discovered this by a lot of trial and error.
 
-2. Install mysql-connector and add conda forge
+1. On Windows do a **complete uninstall**!
+
+- Run the uninstaller
+- Reboot
+- From your user dir delete folders: **.anaconda, .ipython, .matplotlib, .spyder-xx**
+- Delete the **.condarc** file from **C:\\Users\\username**
+- Remove **C:\\Users\\userid\\AppData\\Local\\ContinuumIO**
+- Run regedit and delete the keys **HKEY_LOCAL_MACHINE\\SOFTWARE\\Python** and **HKEY_CURRENT_USER\\Software\\Python**
+- Run **ccleaner** and clean the registry
+- Log off and back on
+- Make sure nothing from Continuum shows up in the start menus
+
+2. Install the x64 installer (**Anaconda3-4.2.0-Windows-x86_64.exe**)
+
+3. Move `C:\Apps\Anaconda3;C:\Apps\Anaconda3\Scripts;C:\Apps\Anaconda3\Library\bin;` to right after R in `%PATH%`
+
+4. Install **mysql-connector**, **ezwrappers** and pip install **pyinstaller**
 
 ```
 conda install mysql-connector-python
+pip install pyinstaller
 cd ~/Documents/git/ezwrappers
 python setup.py install
 ```
 
-3. create an environment for hyperspy
+5. create an environment for **hyperspy**
 
 ```
 conda create -n py35qt4 python=3.5 qt=4 anaconda
@@ -68,6 +85,23 @@ conda install hyperspy
 cd ~/Documents/git/jmToolsPy3
 python setup.py install
 source deactivate
+```
+
+6. When updating environments with conda, make sure you have the correct **.condarc** file:
+
+For the **default** (root) environment:
+
+```
+channels:
+  - defaults
+```
+
+For the **py35qt4** (hyperspy) environment:
+
+```
+channels:
+  - conda-forge
+  - defaults
 ```
 
 ## possibly installing theano on Anaconda Py35
