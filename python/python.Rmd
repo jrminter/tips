@@ -115,6 +115,27 @@ channels:
   - defaults
 ```
 
+7. Manage channels from the command line like this:
+
+- To list:
+
+```
+conda config --get channels
+```
+
+- To **add** the **conda-forge** channel:
+
+```
+conda config --add channels conda-forge
+```
+
+- To **remove** the **conda-forge** channel:
+
+```
+conda config --remove channels conda-forge
+```
+
+
 ## possibly installing theano on Anaconda Py35
 
 ```
