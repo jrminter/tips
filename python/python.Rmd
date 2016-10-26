@@ -106,7 +106,7 @@ python setup.py install
 5. create an environment for **hyperspy**
 
 ```
-conda create -n py35qt4 python=3.5 qt=4 anaconda
+conda create -n py35qt4 python=3.5 qt=4
 source activate py35qt4
 conda config --add channels conda-forge
 conda install mysql-connector-python
