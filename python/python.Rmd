@@ -19,7 +19,25 @@ I frequently need this list...
 - Activate an environment (**source** on Win) **activate envName**
 - Deactivate an environment (**source** on Win) **deactivate**
 - Get other help **conda --help**
-- Clean all source fikes: **conda clean --all** Can save > 1 Gb of space...
+- Clean all source files: **conda clean --all** Can save > 1 Gb of space...
+- To list channels:
+
+```
+conda config --get channels
+```
+
+- To **add** the **conda-forge** channel:
+
+```
+conda config --add channels conda-forge
+```
+
+- To **remove** the **conda-forge** channel:
+
+```
+conda config --remove channels conda-forge
+```
+
 
 
 # Youtube and other great tutorials
@@ -115,25 +133,6 @@ channels:
   - defaults
 ```
 
-7. Manage channels from the command line like this:
-
-- To list:
-
-```
-conda config --get channels
-```
-
-- To **add** the **conda-forge** channel:
-
-```
-conda config --add channels conda-forge
-```
-
-- To **remove** the **conda-forge** channel:
-
-```
-conda config --remove channels conda-forge
-```
 
 
 ## possibly installing theano on Anaconda Py35
