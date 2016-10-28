@@ -12,13 +12,31 @@ output:
 
 # Tips
 
-**1: Screenshot**
+**1: Minimal Homebrew**
+
+I now just have:
+
+```
+jrminter 1: brew install gnuplot
+jrminter 2: brew install openssl
+jrminter 3: brew install mysql
+jrminter 4: brew install pandoc
+jrminter 5: brew install imagemagick
+
+jrminter 6: brew list
+fontconfig	imagemagick	libtool		pandoc
+freetype	jpeg		lua		readline
+gd		libpng		mysql		webp
+gnuplot		libtiff		openssl		xz
+```
+
+**2: Screenshot**
 
 ```
 defaults write com.apple.screencapture type jpg
 ```
  
-**2: Encrypt**
+**3: Encrypt**
 
 ```
 encrypt (change path): openssl enc -aes-256-cbc -e -in {path-in} -out {path-out}
@@ -26,15 +44,15 @@ decrypt (change path): openssl enc -aes-256-cbc -d -in {path-in} -out {path-out}
 ```
 
 
-**3: Updates**
+**4: Updates**
 
 ```
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 ```
 
-**4: Option-volume control on top bar**  lets get preferences
+**5: Option-volume control on top bar**  lets get preferences
  
-**5: Prevent sleep**
+**6: Prevent sleep**
 
 ```
 caffeinate -i -t 3600
