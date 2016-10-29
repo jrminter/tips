@@ -23,21 +23,9 @@ jrminter 2: brew install openssl
 jrminter 3: brew install mysql
 jrminter 4: brew install pandoc
 jrminter 5: brew install imagemagick
-
-jrminter 6: brew list
-autoconf    harfbuzz     pandoc
-automake    icu4c        pango
-cairo       imagemagick  pcre
-cvs         jpeg         pdflib-lite
-fontconfig  libffi       pixman
-freetype    libpng       pkg-config
-gd          libtiff      readline
-gettext     libtool			 webp
-glib        lua          xz
-gnuplot     mysql
-gobject-introspection    openssl
-
 ```
+
+**Note:** For R I need to use the gfortran4.8 from att. On my backup disk...
 
 **2: Screenshot**
 
