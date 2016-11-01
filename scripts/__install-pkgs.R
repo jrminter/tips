@@ -78,6 +78,7 @@ update.packages(ask=FALSE, checkBuilt = TRUE)
 
 # Start with the tidyverse
 install_new('devtools')
+install_new('tidyverse')
 install_new('readr')
 install_new('lubridate')
 install_new('stringr')
