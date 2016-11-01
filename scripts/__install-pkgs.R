@@ -2,6 +2,7 @@
 # 2015-04-26 Updated for R-3.2.1
 # 2016-05-09 Updated for R-3.3.0
 # 2016-06-23 Updated for R-3.3.1
+# 2016-11-01 Updated for R-3.3.2
 
 str.cran.repo <- 'http://cran.revolutionanalytics.com/'
 str.lib <- .Library
@@ -111,6 +112,7 @@ install_new('gridExtra')
 
 # we want revealjs for presentations
 install_new('revealjs')
+install_new('ReporteRs')
 
 install_new('RMySQL')
 
@@ -252,6 +254,10 @@ install_new_github('printr','yihui')
 
 install_new_github('rAnaLab','jrminter')
 install_new_github('rPeaks','jrminter')
+install_new_github('rEDP','jrminter')
+install_new_github('rEDS','jrminter')
+install_new_github('rFinFuncs','jrminter')
+install_new_github('rWrapStrataGem','jrminter')
 
 devtools::install_github("hadley/modelr") #still experimental
 devtools::install_github('WinVector/WVPlots',build_vignettes=TRUE)
