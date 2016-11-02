@@ -139,10 +139,18 @@ channels:
   - defaults
 ```
 
-7. I had an install fail to install the menus on my Kodak laptop. I have the shortcuts stored in my installer collection. They are all to be located in this folder:
+7. I had an install fail to install the menus on my Kodak laptop. I have the shortcuts stored in my installer collection. It later turned out that not everything installed. I fixed it by doing `conda install anaconda` from the command line. The shortcuts are all to be located in this folder:
+
+**for all user installs:**
 
 ```
-%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\Anaconda3 [or Anaconda3 (64-bit)]
+%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\Anaconda3 (32-bit)  [or (64-bit)]
+```
+
+**for individual user:**
+
+```
+%APPDATA%\Microsoft\Windows\Start Menu\Programs\Anaconda3 (32-bit)  [or (64-bit)]
 ```
 
 
