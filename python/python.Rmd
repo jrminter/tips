@@ -40,6 +40,8 @@ conda config --remove channels conda-forge
 
 
 
+
+
 # Youtube and other great tutorials
 
 See also [Intermediate Python](http://book.pythontips.com/en/latest/)
@@ -137,6 +139,11 @@ channels:
   - defaults
 ```
 
+7. I had an install fail to install the menus on my Kodak laptop. I have the shortcuts stored in my installer collection. They are all to be located in this folder:
+
+```
+%PROGRAMDATA%\Microsoft\Windows\Start Menu\Programs\Anaconda3 [or Anaconda3 (64-bit)]
+```
 
 
 ## possibly installing theano on Anaconda Py35
