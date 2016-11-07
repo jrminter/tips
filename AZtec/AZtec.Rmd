@@ -39,7 +39,17 @@ The correct codes are stored in the system folder on the **QM Share**. It took m
 
 # Useful quick tips
 
-## Naming standard spectra
+## Calibration
+
+We really want to do our calibration with **Cu** for high voltage anlysis and, **Mn** for low voltage. A BAM multielement standard would likely be more helpful where there are line overlaps over a range of voltages.
+
+I had noticed some systematic shifts in both ev/ch and zero offset values between calibrations done with the two different elements. On 2016-11-07, I did an experiment:
+
+1. I first ran an AZtec beam calibration and beam measurements using Cu.
+
+2. Next, I ran an AZtec beam measurement with each standard and saved the spectra. These were typically short (20-30 sec) with spot size 5 and 15 kV. So, I also collected spectra with 250 live sec. The dead time tended to be around 25-27%. I used these spectra as input to DTSA's elementsl calibration routine. The ev/ch was always slightly lower with Mn - but onky by around .15%. The zero offset had more significant deviation: -3.8% with 4K channels and -7.6% with 2K channels. Mn might be better for low voltage analysis. I probably will want to create DTSA-detector profiles for each combination of energy range, process time, and calib standard.
+
+## Naming standards.
 
 ```
 YYYY-MM-DD-xxkV-Cu-S4-P4-5eV-2K-UHR-x.ymm
