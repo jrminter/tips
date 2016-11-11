@@ -13,6 +13,26 @@ output:
 
 Some useful tips for windows
 
+# Command Line Fu
+
+## Install or remove a program
+
+To install:
+
+```
+  C:\> MSIEXEC /I /QB software-name.MSI
+```
+
+To remove:
+
+```
+  C:\> MSIEXEC /X /QB software-name.MSI
+```
+
+(`/QB` tells msiexec to install the app with the default options, and throw up no gui dialogs)
+
+**N. B.:** Consider the [Chocolatey](https://chocolatey.org/) package manager.
+
 # Win 7 and 10
 
 ## Fix the MBR on Win 10
