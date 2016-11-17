@@ -112,6 +112,8 @@ Topic
 
 [R-Packages](./R-packages/R-packages.html)
 
+[Reproducible Research](./ReproducibleResearch/ReproducibleResearch)
+
 [Research](./research/research.html)
 
 [SEM](./SEM/SEM.html)

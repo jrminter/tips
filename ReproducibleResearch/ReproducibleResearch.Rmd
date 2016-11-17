@@ -1,0 +1,62 @@
+---
+title: "Reproducible Research"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+---
+
+```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
+# make this an external chunk that can be included in any file
+library(knitr)
+options(width = 72)
+opts_chunk$set(message = F, error = F, warning = F, comment = NA, fig.align = 'center', dpi = 100, tidy = F, cache.path = '.cache/', fig.path = 'figure/')
+
+options(xtable.type = 'html')
+knit_hooks$set(inline = function(x) {
+  if(is.numeric(x)) {
+    round(x, getOption('digits'))
+  } else {
+    paste(as.character(x), collapse = ', ')
+  }
+})
+knit_hooks$set(plot = knitr:::hook_plot_html)
+```
+
+[Back to Index](../README.html)
+
+# Help from the Barba Group
+
+**The Lorena A. Barba group** has a helpful [Barbagroup reproducibility syllabus](http://lorenabarba.com/blog/barbagroup-reproducibility-syllabus/). It has a link to the **Reproducibility PI Manifesto** that she wrote while at BU and posted on [figshare](https://figshare.com/articles/Reproducibility_PI_Manifesto/104539/1). The key points are:
+
+1. I will teach my graduate students about reproducibility.
+2. All our research code (and writing) is under version control.
+3. We will always carry out verification and validation.
+4. For main results in a paper, we will share data, plotting script & figure under CC-BY.
+5. We will upload the preprint to arXiv at the time of submission of a paper.
+6. We will release code at the time of submission of a paper.
+7. We will add a "Reproducibility"" declaration at the end of each paper.
+8. I will keep an up-to-date web presence. Corollary: I will develop a consistent open science policy.
+
+Prof. Barba cites a helpful "Top-Ten" list taken from Sandve et al., [**Ten Simple Rules for Reproducible Computational Research **](http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1003285) \ (2013).
+
+1. For every result, keep track of how it was produced.
+2. Avoid manual data-manipulation steps.
+3. Archive the exact versions of all external programs used.
+4. Version-control all custom scripts.
+5. Record all intermediate results, when possible in standard formats.
+6. For analyses that include randomness, note underlying random seeds.
+7. Always store raw data behind plots.
+8. Generate hierarchical analysis output, allowing layers of increasing detail to be inspected.
+9. Connect textual statements to underlying results.
+10 Provide public access to scripts, runs, and results.
+
+# Other sources
+
+1. [Science Code Manifesto](http://sciencecodemanifesto.org/)
+
+
+
+[Back to Index](../README.html)
