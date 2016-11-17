@@ -11,8 +11,6 @@ output:
 
 [Back to Index](../README.html)
 
-# Making a histogram from particle diameter data
-
 First, let's load the packages we need.
 
 ```{r}
@@ -20,15 +18,85 @@ library(ggplot2)
 library(latex2exp)
 ```
 
-Now load the data and decide if we want to save plots
+
+# Plot/fit data from a Monte Carlo simulation of an EDS spectrum
+
+## Load the data
+
+```{r}
+fi <-'./dat/csv/C-ctd-Si-5-kV-10000-Traj.csv'
+df <- read.csv(fi, header=TRUE, as.is=TRUE)
+print(head(df))
+```
+
+## Compute the C/Si peak ratio and uncertainty
+
+```{r}
+df$c.to.si.mu <- df$C.Int.mu / df$Si.Int.mu
+df$c.to.si.unc <- sqrt((df$C.Int.unc/df$C.Int.mu)**2 + 
+                       (df$Si.Int.unc/df$Si.Int.mu)**2)
+```
+
+## Make our plot
+
+```{r}
+ctosiInt <- ggplot(df, aes(x=t.C.nm, y=c.to.si.mu)) + 
+    geom_errorbar(aes(ymin=c.to.si.mu - 1.96*c.to.si.unc,
+                      ymax=c.to.si.mu + 1.96*c.to.si.unc), width=.1) +
+    stat_smooth(method = "loess") +
+    annotate("text", label = 'loess smooth',
+             x = 70, y = 1.1,
+             size = 5, colour = "blue") +
+    geom_point(color='black', size=2) +
+    xlab("C thickness [nm]") +
+    ylab("C-K/Si-K X-ray intensity ratio") +
+    ggtitle("Monte Carlo Model of C-coatings on Si at 5 kV") +
+    theme(axis.text=element_text(size=12),
+          axis.title=element_text(size=14),
+          plot.title = element_text(hjust = 0.5)) # center the title
+
+print(ctosiInt)
+```
+
+## Compute LOESS interpolated predicted values
+
+```{r}
+t.C.nm <- seq(from=0.5, to=100, by=0.5)
+df2 <- data.frame(t.C.nm=t.C.nm, c.to.si.mu=t.C.nm)
+df2$c.to.si.mu = predict(loess(c.to.si.mu~t.C.nm, data=df2))
+```
+
+## Write some output
+
+```{r}
+
+fi <- './dat/pdf/c-ctd-si-series-plt-5kV.pdf'
+ggsave(ctosiInt, file=fi, width=9.0, height=6.0, units="in", dpi=300)
+
+fi <- './dat/png/c-ctd-si-series-plt-5kV.png'
+
+# we want the png to be close to 1024x768...
+ggsave(ctosiInt, file=fi, width=9.0, height=6.0, units="in", dpi=113.7778)
+
+fi <- './dat/csv/c-ctd-si-loess-pred-5kV.csv'
+write.csv(df2, file=fi, row.names=FALSE)
+
+```
+
+
+# Analyze particle size and shape data
+
+## Step 1
+
+Load the data and decide if we want to save plots
 
 ```{r, results='asis'}
-grains <- read.csv("./dat/grains.csv", header = TRUE, as.is=TRUE)
+grains <- read.csv("./dat/csv/grains.csv", header = TRUE, as.is=TRUE)
 print(names(grains))
 bSave <- FALSE
 ```
 
-# Step Three. Making Your Histogram With ggplot2
+## Step 2. Making a Histogram With ggplot2
 
 You have two options to make a histogram with ``ggplot2`` package. You can either use the ``qplot()`` function, which looks very much like the ``hist()`` function:
 
@@ -43,12 +111,13 @@ pHistoAgxDiam <- ggplot(grains, aes(ecd.nm)) +
   labs(x="diameter (nm)", y="Count") 
 
 if (bSave == TRUE) {
- ggsave("./dat/grain-ecd-histo.png", plot=pHistoAgxDiam, width=6, height=4, units="in", dpi=150)
+  ggsave("./dat/png/grain-ecd-histo.png", plot=pHistoAgxDiam,
+         width=6, height=4, units="in", dpi=150)
 }
 print(pHistoAgxDiam)
 ```
 
-Now make one for the aspect ratio
+## Step 3. Make a histogram for aspect ratio
 
 
 ```{r}
@@ -64,12 +133,13 @@ pHistoAgxAr <- ggplot(grains, aes(a.r)) +
   labs(x="diameter (nm)", y="Count") 
 
 if (bSave == TRUE) {
-  ggsave("./dat/grain-ecd-histo.png", plot=pHistoAgxAr, width=6, height=4, units="in", dpi=150)
+  ggsave("./dat/png/grain-ecd-histo.png", plot=pHistoAgxAr,
+         width=6, height=4, units="in", dpi=150)
 }
 print(pHistoAgxAr)
 ```
 
-So let's make some classes
+## Step 4. Make some classes and plot
 
 ```{r}
 equiAxial <- grains$ecd.nm[grains$a.r < 1.05]
@@ -87,11 +157,14 @@ pBoxPlotEcdAr <- ggplot(shapes, aes(x=shape, y=ecd)) +
   labs("equivalent circular diameter (nm)") 
 
 if (bSave == TRUE) {
-   ggsave("./dat/grain-ecd-shape-boxplot.png", plot=pBoxPlotEcdAr, width=6, height=4, units="in", dpi=150)
+   ggsave("./dat/png/grain-ecd-shape-boxplot.png",
+          plot=pBoxPlotEcdAr, width=6, height=4,
+          units="in", dpi=150)
 }
 print(pBoxPlotEcdAr)
 ```
-Let's try a scatter plot
+
+## Step 5. Make a scatter plot
 
 
 ```{r}
@@ -104,7 +177,8 @@ pScatterAgXArEcd <- ggplot(grains, aes(x=a.r, y=ecd.nm)) +
   # labs(x=TeX("diameter ($\\mu$m)"), y="Count")
   labs(x="aspect ratio", y="ecd [nm]") 
 if (bSave == TRUE) {
-  ggsave("./dat/grain-ecd-ar.png", plot=pScatterAgXArEcd, width=6, height=4, units="in", dpi=150)
+  ggsave("./dat/png/grain-ecd-ar.png", plot=pScatterAgXArEcd,
+         width=6, height=4, units="in", dpi=150)
 }
 print(pScatterAgXArEcd)
 ```
@@ -119,12 +193,13 @@ pScatterAgXCircEcd <- ggplot(grains, aes(x=circ, y=ecd.nm)) +
   # labs(x=TeX("diameter ($\\mu$m)"), y="Count")
   labs(x="circularity", y="ecd [nm]") 
 if (bSave == TRUE) {
-  ggsave("./dat/grain-ecd-circ.png", plot=pScatterAgXCircEcd, width=6, height=4, units="in", dpi=150)
+  ggsave("./dat/png/grain-ecd-circ.png", plot=pScatterAgXCircEcd,
+         width=6, height=4, units="in", dpi=150)
 }
 print(pScatterAgXCircEcd)
 ```
 
-So let's see the diameter distrbution of our dominant morphology
+## Step 5. Plot the diameter distrbution of our dominant morphology
 
 ```{r}
 dominant <- grains[grains$a.r <= 1.2, ]
@@ -144,12 +219,13 @@ pDomGrainDiam <- ggplot(dominant, aes(ecd.nm)) +
   labs(x="diameter (nm)", y="Count") 
 
 if (bSave == TRUE) {
- ggsave("./dat/dom-grain-ecd-histo.png", plot=pDomGrainDiam, width=6, height=4, units="in", dpi=150)
+ ggsave("./dat/png/dom-grain-ecd-histo.png", plot=pDomGrainDiam,
+        width=6, height=4, units="in", dpi=150)
 }
 print(pDomGrainDiam)
 ```
 
-Let's try a gaussian fit
+## Step 5. Make a plot of computed Gaussian data
 
 ```{r}
 
