@@ -11,6 +11,9 @@ output:
 
 [Back to Index](../README.html)
 
+See also the **ggplotExamples** project in your private jrm-solutions repo.
+
+
 First, let's load the packages we need.
 
 ```{r}

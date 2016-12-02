@@ -52,7 +52,82 @@ library(knitr)
 opts_chunk$set(comment="")
 ```
 
->>>>>>> 62103eadef7ebb21fa411a959bf2ae8c8f3c3713
+## How to use extra fonts
+
+From the **Revolution Analytics** [blog](http://blog.revolutionanalytics.com/2012/09/how-to-use-your-favorite-fonts-in-r-charts.html)
+
+
+1. Install the **extrafont** package
+
+```
+install.packages("extrafont")
+```
+
+2. Import the fonts into your system. This takes a few minutes... It loads the system fonts into extrafont's database
+
+```
+library(extrafont)
+font_import()
+```
+
+3. See what fonts we have. I like **Open Sans Semibold**
+
+```
+fonts()
+```
+
+4. Get more detailed info
+
+```
+fonttable()
+```
+
+5. Create a PDF with fonts
+
+```
+cairo_pdf("plot-open-sans.pdf", family="Open Sans Semibold", width=9.0, height=6.0)
+
+plot(mtcars$mpg, mtcars$wt, 
+     main = "Fuel Efficiency of 32 Cars",
+     xlab = "Weight (x1000 lb)",
+     ylab = "Miles per Gallon")
+
+dev.off()
+```
+
+
+or with **ggplot2**
+
+
+```
+library(extrafont)
+loadfonts()
+library(ggplot2)
+p <- ggplot(mtcars, aes(x=wt, y=mpg)) + geom_point() +
+     ggtitle("Fuel Efficiency of 32 Cars") +
+     xlab("Weight (x1000 lb)") + ylab("Miles per Gallon") +
+     theme_bw() +
+     theme(text=element_text(family="Open Sans Extrabold", size=14))
+
+ggsave("ggplot-open-sans-eb.pdf", p, width=9.0, height=6.0)
+
+p <- ggplot(mtcars, aes(x=wt, y=mpg)) + geom_point() +
+     ggtitle("Fuel Efficiency of 32 Cars") +
+     xlab("Weight (x1000 lb)") + ylab("Miles per Gallon") +
+     theme_bw() +
+     theme(text=element_text(family="Open Sans Semibold", size=14))
+
+ggsave("ggplot-open-sans-sb.pdf", p, width=9.0, height=6.0)
+```
+
+6. Embed the fonts in the PDF with **ghostscript**
+
+```
+Sys.setenv(R_GSCMD = "C:/Apps/gs/gs9.20/bin/gswin64c.exe")
+embed_fonts("ggplot-open-sans-sb.pdf", outfile="ggplot-open-sans-sb-embed.pdf")
+embed_fonts("ggplot-open-sans-eb.pdf", outfile="ggplot-open-sans-eb-embed.pdf")
+```
+
 
 ## Other
 

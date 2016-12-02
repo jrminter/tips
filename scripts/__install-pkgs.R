@@ -82,6 +82,10 @@ install_new('tidyverse')
 install_new('svglite')
 install_new('ggvis')
 install_new('ggmap')
+install_new('ggthemes')
+install_new('ggthemes')
+install_new('Quandl')
+install_new('extrafont')
 install_new('Rd2roxygen')
 
 # Sweave and pandoc tools
