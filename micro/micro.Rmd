@@ -13,11 +13,13 @@ output:
 
 # Storage of air-sensitive samples
 
-## [Hendrik O. Colijn](colijn.1@osu.edu) 2016-12-03
+## [Hendrik O. Colijn](mailto:colijn.1@osu.edu) 2016-12-03
 
 I repurposed an old glass desiccator that had a pump-out port in the lid as a low-O2 storage unit. Basically, I stuck a styrofoam coffee cup inside and filled it with LN2 and left the pumping port open to vent the boil-off. I figure that the N2 is generally going to be colder than the residual atmosphere and force the warmer air out the port. When the LN2 has evaporated, I just close the valve.
 
 We had some people put SEM mounts that were in the air-tight storage tubes in the desiccator. I'm not sure how much good that did!
+
+[Richard Ross](mailto:richard.ross@allisontransmission.com) suggested products by [Belart](https://www.belart.com/suggested-search/product/desiccators/gas-ported.html)
 
 
 # LaB6 Cathodes
