@@ -1,0 +1,110 @@
+---
+title: "R-markdown Tips"
+author: "J. R. Minter"
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
+output:
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+---
+
+[Back to Index](../README.html)
+
+# Overview
+
+**R-markdown** is a powerful light-weight formatting language that enables the
+author to generate attractive documents that are stored in plain text files
+that are compatible with version control. This works very well in the
+**RStudio** enviromment.
+
+Some key resources are the
+[RStudio Intro to rmarkdown](http://rmarkdown.rstudio.com/lesson-1.html), 
+the RStudio Intro to Pandoc
+[markdown](http://rmarkdown.rstudio.com/authoring_pandoc_markdown.html),
+and for $\LaTeX$ math, the
+[AOPS](http://artofproblemsolving.com/wiki/index.php/LaTeX:Commands) site.
+
+# YAML
+
+**YAML** is an abbreviation for "Yet Another Markup Language". 
+Rmarkdown uses YAML to encode information for later steps in the document
+generation process. Each document begins with a YAML header. 
+This is an example of a YAML header for an analysis
+
+```
+---
+title: "SEM/EDS analysis of qm-05000-SampleID"
+author: "J. R. Minter"
+date: "December 7, 2016"
+abstract: |
+  The particles were deposited on a Si chip and lightly C coated. The 
+  morpholgy appeared to be a mixture of small needles and small equiaxial
+  nanoparticles. Clumps seemed to be particles embedded in a film.
+  
+  Analysis of EDS spectra revealed an atomic fraction of $\dfrac{Al}{Al+Zn}$
+  of 3-4\%. The larger clumps appeared to have more C than the that from the
+  evaporated film on the Si chip.
+output:
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+---
+
+```
+
+Note that one can generate the date and time at document generation time by
+using an R chunk in the YAML header.
+
+```
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
+```
+
+
+# Custom themes
+
+The easiest way to make a custom theme is to modify an existing one.
+I modified the R vignette theme.
+
+# Controling image size
+
+We can get fine contol of image size like this:
+
+1. Start by adding thse packages to the first R chunk
+
+```
+library(png)
+library(grid)
+library(rEDS)
+```
+
+2. Include an image in a R chunk like this:
+
+```
+img <- readPNG("../path-to/foo.png")
+grid.raster(img)
+```
+
+3. The header for the R-chunk might include
+
+```
+r fig.width=7.5, fig.height=5.625, echo=FALSE, fig.align='center',
+fig.cap='ImgName. 7 kV 1,000X'
+```
+
+4. I compute the fig.height from the desired width (7.5 in) and the image
+   dimensions using R. For a 1024/768 image, one gets:
+   
+```
+> 7.5*768/1024
+[1] 5.625
+```
+
+
+
+
+
+
+
+[Back to Index](../README.html)
