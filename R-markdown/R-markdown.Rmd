@@ -16,7 +16,7 @@ output:
 **R-markdown** is a powerful light-weight formatting language that enables the
 author to generate attractive documents that are stored in plain text files
 that are compatible with version control. This works very well in the
-**RStudio** enviromment.
+**RStudio** environment.
 
 Some key resources are the
 [RStudio Intro to rmarkdown](http://rmarkdown.rstudio.com/lesson-1.html), 
@@ -28,9 +28,10 @@ and for $\LaTeX$ math, the
 # YAML
 
 **YAML** is an abbreviation for "Yet Another Markup Language". 
-Rmarkdown uses YAML to encode information for later steps in the document
+R-markdown uses YAML to encode information for later steps in the document
 generation process. Each document begins with a YAML header. 
-This is an example of a YAML header for an analysis
+This is an example of a YAML header for an analysis. Note how the \% 
+character is escaped. Also note the $\LaTeX$ expression.
 
 ```
 ---
@@ -39,12 +40,11 @@ author: "J. R. Minter"
 date: "December 7, 2016"
 abstract: |
   The particles were deposited on a Si chip and lightly C coated. The 
-  morpholgy appeared to be a mixture of small needles and small equiaxial
+  morphology appeared to be a mixture of small needles and small equiaxial
   nanoparticles. Clumps seemed to be particles embedded in a film.
   
   Analysis of EDS spectra revealed an atomic fraction of $\dfrac{Al}{Al+Zn}$
-  of 3-4\%. The larger clumps appeared to have more C than the that from the
-  evaporated film on the Si chip.
+  of 3-4\%.
 output:
   knitr:::html_vignette:
     css: ../theme/jm-mod-vignette.css
@@ -57,9 +57,15 @@ output:
 Note that one can generate the date and time at document generation time by
 using an R chunk in the YAML header.
 
-```
-date: "`r format(Sys.time(), '%Y-%m-%d')`"
-```
+by putting the R expression:
+
+    r format(Sys.time(), '%Y-%m-%d')
+    
+in the blank area below (I had to enter this way or it would compile...)
+
+    date: "`    `"
+
+to create the YAML entry...
 
 
 # Custom themes
@@ -67,11 +73,11 @@ date: "`r format(Sys.time(), '%Y-%m-%d')`"
 The easiest way to make a custom theme is to modify an existing one.
 I modified the R vignette theme.
 
-# Controling image size
+# Controlling image size
 
-We can get fine contol of image size like this:
+We can get fine control of image size like this:
 
-1. Start by adding thse packages to the first R chunk
+1. Start by adding these packages to the first R chunk
 
 ```
 library(png)
@@ -100,11 +106,6 @@ fig.cap='ImgName. 7 kV 1,000X'
 > 7.5*768/1024
 [1] 5.625
 ```
-
-
-
-
-
 
 
 [Back to Index](../README.html)
