@@ -14,7 +14,8 @@ output:
 
 **1: Logos**
 
-For ESV to have it read use `CMD R`
+For ESV to have it read use `CMD R`. (It is in the pull-down menu for the
+resource)
 
 **2: Minimal Homebrew**
 
