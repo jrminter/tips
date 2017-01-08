@@ -12,7 +12,7 @@ output:
 
 # Tips
 
-**1: Logos**
+## Logos
 
 For ESV to have it read use `CMD R`. (It is in the pull-down menu for the
 resource)
@@ -30,7 +30,7 @@ type:lect
 type:cal
 ```
 
-**2: Minimal Homebrew**
+## Minimal Homebrew
 
 I now just have:
 
@@ -45,13 +45,13 @@ jrminter 5: brew install imagemagick
 
 **Note:** For R I need to use the gfortran4.8 from att. On my backup disk...
 
-**3: Screenshot**
+## Screenshot
 
 ```
 defaults write com.apple.screencapture type jpg
 ```
  
-**4: Encrypt**
+## Encrypt
 
 ```
 encrypt (change path): openssl enc -aes-256-cbc -e -in {path-in} -out {path-out}
@@ -59,15 +59,17 @@ decrypt (change path): openssl enc -aes-256-cbc -d -in {path-in} -out {path-out}
 ```
 
 
-**5: Updates**
+## Updates
 
 ```
 defaults write com.apple.SoftwareUpdate ScheduleFrequency -int 1
 ```
 
-**6: Option-volume control on top bar**  lets get preferences
+## Option-volume control on top bar 
+
+lets get preferences
  
-**7: Prevent sleep**
+## Prevent sleep
 
 ```
 caffeinate -i -t 3600
