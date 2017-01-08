@@ -17,6 +17,19 @@ output:
 For ESV to have it read use `CMD R`. (It is in the pull-down menu for the
 resource)
 
+Some key helps in Library
+
+```
+
+type:bible AND lang:english
+type:ency
+type:comme
+type:lex
+
+type:lect
+type:cal
+```
+
 **2: Minimal Homebrew**
 
 I now just have:
