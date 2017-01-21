@@ -140,6 +140,11 @@ legacy/Legacy.md
 legacy/Legacy.html
 legacy/figure/
 
+# Logos directory
+Logos/.DS_Store
+Logos/Logos.md
+Logos/Logos.html
+
 # mac directory
 mac/.DS_Store
 mac/mac.md

@@ -1,0 +1,43 @@
+---
+title: "Logos Tips"
+author: "J. R. Minter"
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
+output:
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+---
+[Back to Index](../README.html)
+
+# Read ESV
+
+For ESV to have it read use `CMD R`. (It is in the pull-down menu for the
+resource)
+
+# Library helps
+
+## Searches
+
+### By type
+
+```
+type:bible AND lang:english
+type:ency
+type:comme
+type:lex
+type:lect
+type:cal
+```
+
+### Multiple
+```
+title:romans, subject:romans, tag:romans
+title:New Testament Survey
+```
+
+```
+Romans NEAR (occasion, purpose)
+```
+
+[Back to Index](../README.html)

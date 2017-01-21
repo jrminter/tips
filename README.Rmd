@@ -72,6 +72,8 @@ Topic
 
 [Jekyll on github.io](./jekyll-github/jekyll-github.html)
 
+[Logos Library System](./Logos/Logos.html)
+
 [Lubuntu](./Lubuntu/Lubuntu.html)
 
 [mac](./mac/mac.html)
