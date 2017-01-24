@@ -38,6 +38,7 @@ title:New Testament Survey
 
 ```
 Romans NEAR (occasion, purpose)
+Romans NEAR (theme, thematic, message)
 ```
 
 [Back to Index](../README.html)
