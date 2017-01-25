@@ -25,6 +25,17 @@ Send a message to ``imagej-devel@imagej.net``
 
 send message to ``imagej@list.nih.gov``
 
+# The script editor
+
+## Changing tabs
+
+From Curtis Rueden 2017-01-25
+
+> If you use ImageJ2's Script Editor [1], you can adjust the tab size in the
+Edit > Tab sizes menu.
+
+> [1] https://imagej.net/Script_Editor
+
 # Useful keyboard shortcuts
 
 `[` - Start the script editor. 
