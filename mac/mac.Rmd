@@ -84,6 +84,58 @@ caffinate
 and don't close terminal. Just **ctl/c** to quit
 
 
+# Hints on mac Sierra
+
+From the [win-vector blog](http://www.win-vector.com/blog/2017/01/upgrading-to-macos-sierra-nee-osx-for-r-users/)
+
+How does one update an existing Apple machine to macOS Sierra and then restore enough functionality to resume working? Please read on for my notes on the process.
+
+## Why to upgrade:
+
+I won’t really go too deeply into why one would want to update to macOS Sierra. My reasons were vain hopes the "OSX spinny" would go away, and having to interoperate with Keynote users themselves running macOS Sierra (which has a different version of Keynote). I haven’t really noticed that many differences (I think Grab can now export PNG, the volume control can now send system sound to networked devices), and the upgrade was fairly painless. As expected the upgrade broke a lot of software I use to actually work. This is why I upgrade a scratch machine first. Searching around on the web I think I found enough fixes to restore functionality.
+
+## Why to not upgrade (or why to wait):
+
+Cran seems to still build and test packages for OSX Mavericks, so moving to macOS Sierra puts you further out of sync with the primary R repository. Also Homebrew (a source of non-decade out of date Posix/Unix software) is likely still catching up to macOS Sierra.
+
+## List of issues and work-arounds found in upgrading.
+
+1. **ssh breaks:** ssh is needed to log in to remote systems and to share Git source control data securely requires a user password each and every time use use it after the upgrade, even if you have put the control password in OSX’s keychain. The fix is to add a file called "config" to your "~/.ssh" directory with the following contents. Then after you unlock your ssh credential once (oddly enough by using the ssh password, not the keychain password) it should remain available to the operating system.
+
+```
+Host *
+   UseKeychain yes
+   AddKeysToAgent yes
+   IdentityFile ~/.ssh/id_rsa
+```
+
+To add insult to injury the above config is not compatible with OS X El Capitan, so there is no config that works both before and after an operating system upgrade. Also, I have no good documentation on these features, I presume it is the "UseKeychain" argument doing all the work.
+
+2. **Java breaks:**  A current Java is needed for some R packages (such as rJava and rSymPy). Fixing Java seems to take some combination of all of the steps cobbled together from here and here. You re-install Java 8 from Oracle. And then:
+
+```
+# Fix Java Home in .profile or .bashrc, in my case add the line
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/
+# symlink a Java dynamic library, as some software looks the wrong place
+sudo ln -f -s $(/usr/libexec/java_home)/jre/lib/server/libjvm.dylib /usr/local/lib
+# Try to convince R where Java is
+sudo R CMD javareconf
+# Inside R re-install the rJava package
+install.packages("rJava",type='source')
+```
+
+After that you may also want to fix "legacy Java 6" (it turns out I need it for my XML editor OxygenAuthor). That is just a matter of downloading and installing from [Apple](https://support.apple.com/kb/dl1572) (despite it claiming not to be for Sierra).
+
+3. **Homebrew breaks:**  Homebrew is one of the currently available ways to get somewhat up to date Unix/Posix software on a Mac. I think Homebrew is not yet officially supporting macOS Sierra, but some combination of the following seemed to bring it back (the sudo commands were all suggested by "brew doctor", run at your own risk).
+
+```
+brew doctor
+sudo chown -R $(whoami):admin /usr/local
+brew update
+sudo chown root:wheel /usr/local
+```
+
+
 
 # Dealing with directory permissions in el Capitan
 
@@ -518,20 +570,20 @@ This forces OS X to recreate all network configuration files. This alone may res
 
 What we’re doing here is creating a new network location which is going to have a configuration different from the defaults. First, we’ll use a completely new network setup. Then, we’ll set DNS on the computer rather than waiting for OS X to get DNS details from the wi-fi router, which alone can resolve many issues with DNS lookups, since Yosemite seems to be finicky with some routers. Finally, we’re going to set a custom MTU size that is slightly smaller than the default, which will get rejected less often by a router, it’s an old netadmin trick that has long been used to fix network troubles.
 
-Open the  Apple menu and go to System Preferences, then choose “Network”
-Pull down the “Locations” menu and choose “Edit Locations”, then click the [+] plus button, give the new network location a name like “Yosemite WiFi” then click Done
+Open the  Apple menu and go to System Preferences, then choose "Network"
+Pull down the "Locations" menu and choose "Edit Locations", then click the [+] plus button, give the new network location a name like "Yosemite WiFi" then click Done
 
 ![connected-wifi-network](jpg/connected-wifi-network-osx-yosemite.jpg)
 
-Next to “Network Name” join your desired wifi network as usual
-Now click the “Advanced” button, and go to the “DNS” tab
+Next to "Network Name" join your desired wifi network as usual
+Now click the "Advanced" button, and go to the "DNS" tab
 Click the [+] plus button and specify a DNS server – we’re using 8.8.8.8 for Google DNS in this example but you should use the fastest DNS servers you can find for your location, it will vary. You can also use your own ISP DNS servers
-Now go to the “Hardware” tab and click on ‘Configure’ and choose “Manually”
-Click on MTU and change it to “Custom” and set the MTU number to 1453 (this is a networking secret from ancient times, and yes it still works!), then click on “OK”
+Now go to the "Hardware" tab and click on ‘Configure’ and choose "Manually"
+Click on MTU and change it to "Custom" and set the MTU number to 1453 (this is a networking secret from ancient times, and yes it still works!), then click on "OK"
 
 ![custom-mtu-setting-wifi](jpg/custom-mtu-setting-wifi.jpg)
 
-Now click on “Apply” to set your network changes
+Now click on "Apply" to set your network changes
 Quit and relaunch any apps that require network access, like Safari, Chrome, Messages, Mail, and your wireless connectivity should be flawless and back at full speed at this point.
 
 ### Unload & Reload discoveryd to Fix DNS & Wi-Fi Failures in OS X Yosemite
