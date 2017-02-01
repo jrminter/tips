@@ -11,6 +11,14 @@ output:
 
 [Back to Index](../README.html)
 
+# Sending email to Microscopy listserver
+
+1. First set Gmail to send **plain text** from the "Compose" window.
+
+![Check Plain Text](png/plain-text.png)
+
+2. Send to "Microscopy@microscopy.com"
+
 # Storage of air-sensitive samples
 
 ## [Hendrik O. Colijn](mailto:colijn.1@osu.edu) 2016-12-03
