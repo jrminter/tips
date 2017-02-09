@@ -19,6 +19,59 @@ output:
 
 2. Send to "Microscopy@microscopy.com"
 
+# Grounding
+
+Ground loops are a problem. Note this exchange from the microscopy listserver:
+
+> 
+> Email: hexi@missouri.edu Name: Xiaoqing He 
+> 
+> Organization: Universtiy of Missouri 
+> 
+> Title-Subject: [Filtered] Oxford INCA EDS detector dead time 100% 
+> 
+> We are having issues with our Oxford EDS detector on our F30. With no
+> electron beam on, the dead time stayed at 100% no matter which
+> dispersion rate we choose. Initially we thought the misconnection
+> between Oxford and TEM may be responsible. But the issue persists even
+> after we reboot Microscope PC, Oxford x-stream processor, software.
+> etc.
+> 
+> Any inputs are greatly appreciated!
+> 
+> Thanks.
+> 
+> Xiaoqing He
+
+
+Note the reply:
+
+> Email: mmoller@cicbiomagune.es Name: Marco Möller
+>
+> Organization: EM-Labs of CIC biomaGUNE (Spain)
+> 
+> Hello,
+> It could be that you have different grounding points in use, and an electric 
+> potential between them causing a ground current being the issue. You might 
+> want to check that your ground lines are correctly wired. 
+> 
+> The general recommendation is to use the frame of the TEM as the only grounding 
+> point for your TEM connected accessories, arranging a grounding bus at the 
+> frame and avoiding any ground loops between the accessories. 
+> 
+> For instance, do not use the house grounding line feeding to the power socket
+> which powers the EDX equipment and EDX computer. The house grounding line
+> stays disconnected from this power socket. This socket's grounding (not the
+> house grounding line) becomes linked to the frame of the TEM, instead. If I
+> remember correctly, then Oxford ships an accordingly manipulated distributor
+> with their equipment for easing such wiring. Don't forget to also connect the
+> chassis of the EDX computer to your grounding point at the frame of the TEM.
+> Consult a certified electrician for assuring electrics security in your setup!
+> 
+> Best greetings from the EM-Labs of CIC biomaGUNE (Spain),
+> 
+> Marco Möller
+
 # Storage of air-sensitive samples
 
 ## [Hendrik O. Colijn](mailto:colijn.1@osu.edu) 2016-12-03
