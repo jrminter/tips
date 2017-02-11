@@ -47,7 +47,7 @@ conda install numpy scipy matplotlib seaborn
 conda install jupyter
 conda install spyder
 conda install mysql-connector-python pymysql
-...
+conda install pandas xlwt scikit-image
 
 deactivate py36
 ```
