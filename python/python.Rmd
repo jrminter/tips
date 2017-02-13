@@ -49,6 +49,8 @@ conda install spyder
 conda install mysql-connector-python pymysql
 conda install pandas xlwt scikit-image
 
+# install modified pymorph-0.96-py3-src manually
+
 deactivate py36
 ```
 
