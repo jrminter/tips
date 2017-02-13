@@ -38,7 +38,7 @@ conda config --add channels conda-forge
 conda config --remove channels conda-forge
 ```
 
-# A test environment for Python 3.6
+# Two test environments for Python 3.6
 
 ```
 conda create -n py36 python=3.6
@@ -53,6 +53,20 @@ conda install pandas xlwt scikit-image
 # note: this works with my 'grains' exemplar
 
 deactivate py36
+```
+
+I needed an environment with the development version of scikit-image.
+I cloned the py36 environment, removed the production version of scikit-image,
+and installed from a fresh pull from a direct clone of the scikit-image git
+repo. Note that this also pulled down a couple of depencencies
+(PyWavelets-0.5.1, dask-013.0, olefile-0.44, and toolz-0.8.2).
+
+```
+conda create --name  py36-ski --clone py36
+activate py36-ski
+conda remove --name py36-ski scikit-image
+cd %HOME%/Documents/git/scikit-image
+pip install .
 ```
 
 
