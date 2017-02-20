@@ -65,6 +65,8 @@ repo. Note that this also pulled down a couple of depencencies
 conda create --name  py36-ski --clone py36
 activate py36-ski
 conda remove --name py36-ski scikit-image
+# needed this for latest build 2017-02-20
+conda install -c anaconda cython=0.25.2
 cd %HOME%/Documents/git/scikit-image
 pip install .
 ```
