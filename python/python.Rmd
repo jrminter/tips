@@ -4,7 +4,7 @@ author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
   knitr:::html_vignette:
-    css: ../theme/jm-mod-vignette.css
+    css: ../theme/jm-mod-blue-vignette.css
     number_sections: yes
     toc: yes
 ---
@@ -58,7 +58,7 @@ deactivate py36
 I needed an environment with the development version of scikit-image.
 I cloned the py36 environment, removed the production version of scikit-image,
 and installed from a fresh pull from a direct clone of the scikit-image git
-repo. Note that this also pulled down a couple of depencencies
+repo. Note that this also pulled down a couple of dependencies
 (PyWavelets-0.5.1, dask-013.0, olefile-0.44, and toolz-0.8.2).
 
 ```
@@ -87,6 +87,8 @@ See also [Intermediate Python](http://book.pythontips.com/en/latest/)
 
 - [James Hetherington](http://rits.github-pages.ucl.ac.uk/doctoral-programming-intro/) of UCL has a really nice doctoral programming course in Python. He has prepared a [pdf](http://rits.github-pages.ucl.ac.uk/doctoral-programming-intro/notes.pdf) of the notes. And all the [Jupyter notebooks](http://rits.github-pages.ucl.ac.uk/doctoral-programming-intro/notebooks.zip) are available in a zip file. **One important hint: For Windows, append C:\\Program Files\\Git\\bin to the end of the path so it finds bash.exe**.
 
+- [Frenando Perez](https://gist.githubusercontent.com/fperez/9716279/raw/69f78e7650a826b2806f83ac5275dea233aeefc9/ProgrammaticNotebook.ipynb) has a gist with a really great example of programatically creating a new Jupyter Notebook.
+
 # Things that made me go "huh"...
 
 ## pyinstaller for python 3.5
@@ -97,13 +99,17 @@ From [stackoverflow](http://stackoverflow.com/questions/33168229/how-to-create-s
 
 ```
 pip install pyinstaller
+
 ```
 
+
 To build **makeOxfordAZtecIni.exe**: First make sure you have the environment
-variable **EDS_ROOT** set. You want everything in **%EDS_ROOT%/Oxford/py**
+variable **EDS\_ROOT** set. You want everything in **EDS\_ROOT/Oxford/py** 
+
 
 ```
 pyinstaller --onefile makeOxfordAZtecIni.py
+
 ```
 
 
@@ -118,7 +124,7 @@ This will guarantee a **really clean** install. I discovered this by a lot of tr
 - From your user dir delete folders: **.anaconda, .ipython, .matplotlib, .spyder-xx**
 - Delete the **.condarc** file from **C:\\Users\\username**
 - Remove **C:\\Users\\userid\\AppData\\Local\\ContinuumIO**
-- Run regedit and delete the keys **HKEY_LOCAL_MACHINE\\SOFTWARE\\Python** and **HKEY_CURRENT_USER\\Software\\Python**
+- Run regedit and delete the keys **HKEY\_LOCAL\_MACHINE\\SOFTWARE\\Python** and **HKEY\_CURRENT\_USER\\Software\\Python**
 - Run **ccleaner** and clean the registry
 - Log off and back on
 - Make sure nothing from Continuum shows up in the start menus
@@ -250,12 +256,12 @@ Note that `.whl` files are just specially formatted `.zip` archives. Change the 
 anaconda login
 ```
 
-We will install the latest Anaconda Python 3.5 environment as a primary environment and use `conda` to create a Python 2.7 environment. This will provide a way to get whatever versiobn of python you want and have them all play nicely together. We want to start with a clean slate...
+We will install the latest Anaconda Python 3.5 environment as a primary environment and use **conda** to create a Python 2.7 environment. This will provide a way to get whatever version of python you want and have them all play nicely together. We want to start with a clean slate...
 
-1. Uninstall all system Pythons. Anaconda will replace them and let you set up environments with `conda`.
-2. Run `ccleaner` and clean out the leftover cruft from the registry.
-3. Install Anaconda3 2.5.0 in `C:\Apps\Anaconda3`
-4. Move `C:\Apps\Anaconda3;C:\Apps\Anaconda3\Scripts;C:\Apps\Anaconda3\Library\bin;` to right after R in `%PATH%`
+1. Uninstall all system Pythons. Anaconda will replace them and let you set up environments with *conda*.
+2. Run **ccleaner** and clean out the leftover cruft from the registry.
+3. Install Anaconda3 2.5.0 in **C:\\Apps\\Anaconda3**
+4. Move *C:\Apps\Anaconda3;C:\Apps\Anaconda3\Scripts;C:\Apps\Anaconda3\Library\bin;` to right after R in `%PATH%`
 5. Run `conda update conda`
 6. Run `conda update anaconda`   (does nothing at the moment, but can later...)
 7. Run `conda update --all`
@@ -697,8 +703,8 @@ $ pip install -e ./
 Following the hints below:
 
 1. I uninstalled all other installed py34 pgms. Uninstalled 3.4.1. Failed.
-2. Did a regedit search for ``Python 3.4.1`` and deleted all keys
-3. Did a ``Python`` search and deleted all keys
+2. Did a regedit search for **Python 3.4.1  **and deleted all keys
+3. Did a **Python  **search and deleted all keys
 4. Ran CCCleaner and cleaned all
 5. Deleted everything in Python34 except empty Scripts folder
 6. Restarted
@@ -753,7 +759,7 @@ On 8/29/2014 11:26 PM, Llelan D. wrote:
 
 From [stackoverflow](http://stackoverflow.com/questions/22490233/win32com-import-error-python-3-4)
 
-We need to re-run the install script to get ``import win32wnet`` to work.
+We need to re-run the install script to get **import win32wnet  **to work.
 
 ```
 python C:\Python34\Scripts\pywin32_postinstall.py -install
@@ -776,7 +782,7 @@ ipython profile create
 
 ## 2to3
 
-``2to3`` is a utility installed with python3 that helps convert. The documentation is [here](http://docs.python.org/2/library/2to3.html).
+**2to3  **is a utility installed with python3 that helps convert. The documentation is [here](http://docs.python.org/2/library/2to3.html).
 
 # Getting Python 2 and 3 to play well with Win7
 There was a great discussion on [StackOverflow](http://stackoverflow.com/questions/15912063/how-do-i-run-python-2-and-3-in-windows-7) that suggested the [Python launcher for Windows](http://www.python.org/dev/peps/pep-0397/) introduced in Python 3. The documentation is on [bitbucket](https://bitbucket.org/vinay.sajip/pylauncher/src/tip/Doc/launcher.rst).
@@ -792,16 +798,16 @@ the x64 redistributable package.
 
 ### Get the environment variables set
 
-The easiest way to do this is to use the ``Visual
-Studio x64 Win64 Command Prompt`` command window.
+The easiest way to do this is to use the **Visual
+Studio x64 Win64 Command Prompt  **command window.
 
 ### Example: compiling the 0.10 dev version of scikit-image
 
-1. I started the ``x64 Win64 Command Prompt``
+1. I started the **x64 Win64 Command Prompt**
 2. I downloaded the source from github.
-3. When I first tried ``python setup.py build`` it complained about missing the cython dependency.
-4. I did ``pip3 install cython`` from the command window.
-5. On my second attempt at ``python setup.py build`` I got an error complaining about undefined ``M_PI``. This should have been picked up by ``include math.h`` but was not. I placed this in the two affected files
+3. When I first tried **python setup.py build** it complained about missing the cython dependency.
+4. I did **pip3 install cython** from the command window.
+5. On my second attempt at **python setup.py build** I got an error complaining about undefined **M_PI**. This should have been picked up by **include math.h** but was not. I placed this in the two affected files
 
 ```
 #ifndef M_PI
@@ -815,9 +821,9 @@ This built and installed without further error messages.
 ## GUI
 ### Eclipse
 #### Install from PyDev
-Install from update site ``http://pydev.org/updates``
+Install from update site **http://pydev.org/updates``
 ### Color themes
-Install from update site ``http://eclipse-color-theme.github.io/update/``
+Install from update site **http://eclipse-color-theme.github.io/update/``
 
 They have a nice Sublime Text 2 theme
 
@@ -865,7 +871,7 @@ Let’s start with a simple list.
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ```
 
-Quite often, we’ll need to build a new list from the elements of an existing list. For example, let’s say we want to make a list containing all elements of ``my_list``, each multiplied by 2. 
+Quite often, we’ll need to build a new list from the elements of an existing list. For example, let’s say we want to make a list containing all elements of **my_list``, each multiplied by 2. 
 
 ### Using Python's List Comprehension
 Now let’s take a look at how to do this using Python’s list comprehension syntax.
@@ -876,26 +882,26 @@ Now let’s take a look at how to do this using Python’s list comprehension sy
 [2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
 ```
 ### Syntax
-The syntax for list comprehension is based on set builder notation. Given the form ``[Y for X in LIST]``, ``Y`` is commonly referred to as the ***output function*** , ``X`` is the ***variable***, and ``LIST`` is the ***input set***. This statement says to do ``Y`` on each ``X`` in ``LIST``.
+The syntax for list comprehension is based on set builder notation. Given the form **[Y for X in LIST]**, **Y** is commonly referred to as the **output function** , **X** is the ***variable***, and **LIST** is the **input set**. This statement says to do **Y** on each **X** in **LIST**.
 
-For an example of using a different output function, let’s say say we want a new list that contains each number in ``my_list`` as a string type…
+For an example of using a different output function, let’s say say we want a new list that contains each number in **my_list** as a string type…
 
 ```
 >>> [str(x) for x in my_list]
 ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
 ```
 
-You may be asking yourself why we wouldn't just use ``map()`` here:
+You may be asking yourself why we wouldn't just use **map()** here:
 
 ```
 >>> map(str, my_list)
 ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
 ```
 
-In this example, ``map`` looks like a good alternative. However, for slightly more complicated requirements, list comprehension can be a bit more concise. For example, when we’d like to specify a predicate .
+In this example, **map** looks like a good alternative. However, for slightly more complicated requirements, list comprehension can be a bit more concise. For example, when we’d like to specify a predicate .
 
 ### The predicate
-Consider our previous example, where we want to create a list of string types for each element in ``my_list``, except this time we only want the elements which are even numbers. A typical way to do this would be:
+Consider our previous example, where we want to create a list of string types for each element in **my_list``, except this time we only want the elements which are even numbers. A typical way to do this would be:
 
 ```
 >>> new_list = []
