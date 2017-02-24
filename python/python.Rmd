@@ -67,6 +67,8 @@ activate py36-ski
 conda remove --name py36-ski scikit-image
 # needed this for latest build 2017-02-20
 conda install -c anaconda cython=0.25.2
+# On windows note that pip cache is in
+# %USERPROFILE%\AppData\Local\pip
 cd %HOME%/Documents/git/scikit-image
 pip install .
 ```
