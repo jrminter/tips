@@ -27,6 +27,28 @@ End Sub
 
 ```
 
+# Excel charts
+
+I really find it annoying to do scatter plots in Excel when the data is separated columnns. One I get one right and need different ranges of rows (like diameter data for different classes) then the text editor is my friend. I needed multiple ranges likey and discovered:
+
+
+```
+=SERIES('qm-05111'!$G$1,'qm-05111'!$B$2:$B$11,'qm-05111'!$G$2:$G$11,1)
+
+=SERIES('qm-05111'!$H$1,'qm-05111'!$B$2:$B$11,'qm-05111'!$H$2:$H$11,1)
+
+
+=SERIES('qm-05111'!$G$1,'qm-05111'!$B$12:$B$20,'qm-05111'!$G$12:$G$20,1)
+
+=SERIES('qm-05111'!$H$1,'qm-05111'!$B$12:$B$20,'qm-05111'!$H$12:$H$20,1)
+
+
+=SERIES('qm-05111'!$G$1,'qm-05111'!$B$12:$B$20,'qm-05111'!$G$21:$G$30,1)
+
+=SERIES('qm-05111'!$H$1,'qm-05111'!$B$12:$B$20,'qm-05111'!$H$21:$H$30,1)
+
+```
+
 # Skype for Business
 
 How do I use Skype for Business? 
