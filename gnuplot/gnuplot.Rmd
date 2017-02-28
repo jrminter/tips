@@ -4,7 +4,7 @@ author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
   knitr:::html_vignette:
-    css: ../theme/jm-mod-vignette.css
+    css: ../theme/jm-mod-blue-vignette.css
     number_sections: yes
     toc: yes
 ---
@@ -28,8 +28,9 @@ compiled from several web sources. Some helpful ones:
 ### Use postscript to get both pdf and png output
 
 The best png output comes via postscript. Make sure ImageMagick's
-``convert`` program is **ahead** of windows ``convert`` program in the
-path. Then use to produce **both** pdf and png plots at the sane time!
+**convert** program is <span style="color:red">**ahead**</span> of windows **convert** program in the
+path. Then use this macro to produce <span style="color:red">**both**</span> **pdf** 
+<span style="color:red">**and**</span> **png** plots at the same time!
 
 Use something like this:
 
@@ -41,7 +42,7 @@ set output "foo.ps"
 # set terminal window
 ```
 
-Where the `proc-gnuplot.sh` script (in C:/Apps/local/path) converts the file to
+Where the **proc-gnuplot.sh** script (in C:/Apps/local/path) converts the file to
 pdf and crops the margins by using ps2pdf (from texlive) and convert (from ImageMagick) like this:
 
 ```
@@ -73,9 +74,14 @@ set key spacing 1.5
 unset label
 ```
 
-Note that one can split the plot line, like
+Note that one can add a title and split the plot line, like
+
 
 ```
+
+set title "Put key info here..." font "Arial,16"
+
+
 plot "-" with lines lt 1 lw 2 lc rgb "#9ecae1" \
      title "  0 nm Al on Si 5 kV", \
      "-" with lines lt 1 lw 2 lc rgb "#6baed6" \
