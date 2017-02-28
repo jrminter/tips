@@ -49,6 +49,12 @@ source activate py36-hs
 conda config --add channels conda-forge
 conda install hyperspy
 conda config --remove channels conda-forge
+
+# cd %HOME%/Documents/git/jmToolsPy3
+# cd $HOME/Documents/git/jmToolsPy3
+
+pip install .
+
 ```
 
 # Two test environments for Python 3.6
