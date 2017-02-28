@@ -38,6 +38,16 @@ conda config --add channels conda-forge
 conda config --remove channels conda-forge
 ```
 
+# A hyperspy 1.1.2 environment for Python 3.6
+
+```
+conda create -n py36-hs python=3.6
+source activate py36-hs
+conda config --add channels conda-forge
+conda install hyperspy
+conda config --remove channels conda-forge
+```
+
 # Two test environments for Python 3.6
 
 ```
