@@ -79,7 +79,7 @@ conda install numpy scipy matplotlib seaborn
 conda install jupyter
 conda install spyder
 conda install mysql-connector-python pymysql
-conda install pandas xlwt scikit-image bokeh nodejs
+conda install pandas xlwt scikit-image bokeh nodejs datashader
 
 # note if you install the bokeh tutorial, after you install bokeh
 # you need to run this from the command line:
