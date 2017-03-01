@@ -66,7 +66,7 @@ conda install numpy scipy matplotlib seaborn
 conda install jupyter
 conda install spyder
 conda install mysql-connector-python pymysql
-conda install pandas xlwt scikit-image
+conda install pandas xlwt scikit-image bokeh
 
 # install modified pymorph-0.96-py3-src manually
 # note: this works with my 'grains' exemplar
