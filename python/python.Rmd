@@ -79,13 +79,14 @@ conda install numpy scipy matplotlib seaborn
 conda install jupyter
 conda install spyder
 conda install mysql-connector-python pymysql
-conda install pandas xlwt scikit-image bokeh nodejs datashader
+conda install pandas xlwt scikit-image bokeh nodejs datashader holoviews
 
 # note if you install the bokeh tutorial, after you install bokeh
 # you need to run this from the command line:
 # > bokeh sampledata
 # install modified pymorph-0.96-py3-src manually
 # note: this works with my 'grains' exemplar
+# also ended up installing holoviews from sorce via github
 
 deactivate py36
 ```
