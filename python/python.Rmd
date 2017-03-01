@@ -38,6 +38,19 @@ conda config --add channels conda-forge
 conda config --remove channels conda-forge
 ```
 
+# Current conda environments
+
+```
+> conda info -e
+# conda environments:
+#
+py35qt4                  C:\Apps\Anaconda3\envs\py35qt4
+py36                     C:\Apps\Anaconda3\envs\py36
+py36-hs                  C:\Apps\Anaconda3\envs\py36-hs
+py36-ski                 C:\Apps\Anaconda3\envs\py36-ski
+root                  *  C:\Apps\Anaconda3
+```
+
 # A hyperspy 1.1.2 environment for Python 3.6
 
 This uses **qt4**!
