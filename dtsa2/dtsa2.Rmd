@@ -13,6 +13,17 @@ output:
 
 # Key tricks
 
+## Frequently needed scripts
+
+### In OSImageAnalysis git repository
+
+**In dtsa2/productionScripts directory:**
+
+- JmGen.py is the workhorse.
+- DumpMaterials.py and the **restore script** stds.py. Edit this last one to add new materials.
+- listDetCalibrations.py to see what calibrations we have
+- testGetMassFraction.py to aid adding new standards
+
 ## A proposed standard
 
 Mark suggested I might be able to order this from
