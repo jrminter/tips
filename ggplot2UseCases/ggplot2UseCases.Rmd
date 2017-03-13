@@ -11,6 +11,7 @@ output:
 
 [Back to Index](../README.html)
 
+
 See also the **ggplotExamples** project in your private jrm-solutions repo.
 
 
@@ -80,7 +81,6 @@ fi <- './dat/png/c-ctd-si-series-plt-5kV.png'
 
 # we want the png to be close to 1024x768...
 ggsave(ctosiInt, file=fi, width=9.0, height=6.0, units="in", dpi=113.7778)
-
 fi <- './dat/csv/c-ctd-si-loess-pred-5kV.csv'
 write.csv(df2, file=fi, row.names=FALSE)
 
