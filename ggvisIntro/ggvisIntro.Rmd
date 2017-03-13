@@ -4,7 +4,7 @@ author: "The DataCamp Blog"
 date: "2015-03-14"
 output:
   knitr:::html_vignette:
-    css: ../theme/jm-mod-vignette.css
+    css: ../theme/jm-blue-vignette.css
     number_sections: yes
     toc: yes
 ---

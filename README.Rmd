@@ -4,7 +4,7 @@ author: "J. R. Minter"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
   html_document:
-    css: ./theme/jm-mod-vignette.css
+    css: ./theme/jm-blue-vignette.css
 ---
 
 This repository contains the John Minter's useful tips in Rmarkdown

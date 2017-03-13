@@ -3,7 +3,7 @@ title: "ANOVA and R"
 date: "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
   knitr:::html_vignette:
-    css: ../theme/jm-mod-vignette.css
+    css: ../theme/jm-blue-vignette.css
     number_sections: yes
     toc: yes
 ---

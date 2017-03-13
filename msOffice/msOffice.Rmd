@@ -3,7 +3,7 @@ title: "MS Office Tips"
 author: "J. R. Minter"
 output:
   knitr:::html_vignette:
-    css: ../theme/jm-mod-blue-vignette.css
+    css: ../theme/jm-blue-vignette.css
     number_sections: yes
     toc: yes
 ---

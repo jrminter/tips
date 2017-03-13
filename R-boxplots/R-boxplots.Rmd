@@ -3,7 +3,7 @@ title: "Box Plots in R"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   knitr:::html_vignette:
-    css: ../theme/jm-mod-vignette.css
+    css: ../theme/jm-blue-vignette.css
     number_sections: yes
     toc: yes
 ---
