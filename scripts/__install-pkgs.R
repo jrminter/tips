@@ -3,6 +3,7 @@
 # 2016-05-09 Updated for R-3.3.0
 # 2016-06-23 Updated for R-3.3.1
 # 2016-11-01 Updated for R-3.3.2
+# 2017-03-13 Updated for R-3.3.3
 
 str.cran.repo <- 'http://cran.revolutionanalytics.com/'
 str.lib <- .Library
@@ -184,7 +185,7 @@ install_new_bioconductor("graph")
 install_new_github('slidify','ramnathv')
 install_new_github('slidifyLibraries','ramnathv')
 install_new_github('rCharts','ramnathv')
-install_new_github('bookdown','hadley')
+# install_new_github('bookdown','hadley')
 install_new_github('captioner','adletaw')
 install_new_github('choroplethrZip','arilamstein')
 install_new_github('printr','yihui')
