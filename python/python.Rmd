@@ -80,6 +80,7 @@ conda install jupyter
 conda install spyder
 conda install mysql-connector-python pymysql
 conda install pandas xlwt scikit-image bokeh nodejs datashader holoviews
+conda install -c conda-forge mahotas=1.4.3
 
 # note if you install the bokeh tutorial, after you install bokeh
 # you need to run this from the command line:
