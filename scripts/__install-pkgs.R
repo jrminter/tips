@@ -96,6 +96,7 @@ install_new('pander')
 
 install_new('rtiff')
 install_new('raster')
+install_new('imager')
 
 # we want revealjs and ReporteRs for presentations
 install_new('revealjs')
