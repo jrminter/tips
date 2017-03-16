@@ -90,6 +90,7 @@ ggplot2UseCases/.DS_Store
 ggplot2UseCases/ggplot2Intro.md
 ggplot2UseCases/ggplot2Intro.html
 ggplot2UseCases/dat/*.png
+ggplot2UseCases/dat/png/*.png
 ggplot2UseCases/dat/pdf/*.pdf
 ggplot2UseCases/figure/
 
