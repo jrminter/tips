@@ -82,6 +82,7 @@ conda install mysql-connector-python pymysql
 conda install pandas xlwt scikit-image bokeh nodejs datashader holoviews
 conda install -c conda-forge mahotas=1.4.3
 conda install sympy
+conda install -c conda-forge spglib
 
 # note if you install the bokeh tutorial, after you install bokeh
 # you need to run this from the command line:
