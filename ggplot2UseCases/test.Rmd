@@ -13,7 +13,7 @@ output:
 
 ```{r, echo=FALSE}
 
-fi <- './dat/Beam-Meas-SiK-100s-2016-10-15.csv'
+fi <- './dat/csv/Beam-Meas-SiK-100s-2016-10-15.csv'
 df <- read.csv(fi, header = TRUE, as.is=TRUE)
 e0 <- df$e0
 mu  <- round(df$si.ka.cts.mu/(df$lt.s*df$pc.na),2)
