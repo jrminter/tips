@@ -86,12 +86,11 @@ write.csv(df2, file=fi, row.names=FALSE)
 
 ```
 
-
 # Analyze particle size and shape data
 
-## Step 1
+## Step 1 - Load the data
 
-Load the data and decide if we want to save plots
+Load the data from a **.csv** file and decide if we want to save plots.
 
 ```{r, results='asis'}
 grains <- read.csv("./dat/csv/grains.csv", header = TRUE, as.is=TRUE)
@@ -120,7 +119,7 @@ if (bSave == TRUE) {
 print(pHistoAgxDiam)
 ```
 
-## Step 3. Make a histogram for aspect ratio
+## Step 3. Make a histogram for aspect ratio.
 
 
 ```{r}
@@ -142,7 +141,7 @@ if (bSave == TRUE) {
 print(pHistoAgxAr)
 ```
 
-## Step 4. Make some classes and plot
+## Step 4. Make some classes and plot.
 
 ```{r}
 equiAxial <- grains$ecd.nm[grains$a.r < 1.05]
@@ -167,7 +166,7 @@ if (bSave == TRUE) {
 print(pBoxPlotEcdAr)
 ```
 
-## Step 5. Make a scatter plot
+## Step 5. Make a scatter plot.
 
 
 ```{r}
@@ -202,7 +201,7 @@ if (bSave == TRUE) {
 print(pScatterAgXCircEcd)
 ```
 
-## Step 5. Plot the diameter distrbution of our dominant morphology
+## Step 6. Plot the diameter distribution of our dominant morphology.
 
 ```{r}
 dominant <- grains[grains$a.r <= 1.2, ]
@@ -228,7 +227,7 @@ if (bSave == TRUE) {
 print(pDomGrainDiam)
 ```
 
-## Step 5. Make a plot of computed Gaussian data
+## Step 7. Make a plot of computed Gaussian data.
 
 ```{r}
 
@@ -242,6 +241,131 @@ print(theoHistPlot)
   
 
 ```
+
+# Plotting PhiRhoZ curves from DTSA Monte Carlo simulations
+
+## Step 1 - Load the data.
+
+Use the helper function from package **rEDS** to load the data and explore
+the columns. This needs version **0.0.1.1** or later. Note: the **PhiRhoZ.csv**
+file outputted by DTSA-II is really **tab-delimited** and has two header
+lines (the headers we want and a second units line.) The **rEDS** package
+contains a wrapper function (**prepDataframeDtsaPhiRhoZ**) that cleans
+the data up and generates a dataframe from which we can choose the 
+features that we really want to plot.
+
+```{r, doRead,message=FALSE}
+library(rEDS)
+
+fi <- './dat/csv/PhiRhoZ.csv'
+df <- prepDataframeDtsaPhiRhoZ(fi)
+print(head(df))    
+```
+
+
+## Step 2 - Make a dataframe with the transitions we care about.
+
+While we are at it, let's change the dataframe headers to make
+it easier to make the plots... We are plotting the generated
+and emitted X-rays. Let's make simple mnemonics... 
+
+```{r makeVecs}
+                     
+z <- df[,1]
+okgen <- df[,8]
+okemi  <- df[,9]
+sikgen <- df[,12]
+sikemi  <- df[,13]
+
+df2 <- data.frame(Z.um=z,
+                 O.Gen=okgen, O.Emi=okemi,
+                 Si.Gen=sikgen, Si.Emi=sikemi)
+print(head(df2))
+
+```
+
+Isn't that more readable! 
+
+In this case we also want to remove the first line because it is the thin
+C coating that creates a discontinuity. If we remove this first line,
+the smooth works better...
+
+```{r removeStep, message=FALSE}
+df3 <- df2[-1, ]
+
+print(head(df3))
+```
+
+## Step 3: Plot the Si data.
+
+Note the use of the Unicode in the **xlab** string to create the mu...
+
+
+```{r plotSi, message=FALSE}
+library(ggplot2)
+plt <- ggplot(df3, aes(x = Z.um)) +
+              geom_point(aes(y = Si.Gen), colour="blue") +
+              geom_smooth(aes(x= Z.um, y=Si.Gen),
+                          span = 0.18, color = 'blue') +
+              annotate("text", label = 'Generated Si K-L3',
+                       x = .8, y = 2.25,
+                       size = 5, colour = "blue") +
+              geom_point(aes(y = Si.Emi), colour="red") +
+              geom_smooth(aes(x= Z.um, y=Si.Emi),
+                          span = 0.1, color='red') +
+              annotate("text", label = 'Emitted',
+                       x = .3, y = .75,
+                       size = 5, colour = "red") +
+              ylab(label="Si Intensity") +
+              # note the Unicode string for mu
+              xlab("depth [\U00B5m]") +
+              ggtitle("DTSA-II Monte Carlo PhiRhoZ Model 10 nm C on SiO2 at 10 kV") +
+              theme(axis.text=element_text(size=12),
+                    axis.title=element_text(size=14),
+                    plot.title = element_text(hjust = 0.5)) # center the title
+
+print(plt)
+
+```
+
+## Step 4: Plot the O data.
+
+
+```{r plotO, message=FALSE}
+library(ggplot2)
+
+df3 <- df2[-1, ]
+
+plt <- ggplot(df3, aes(x = Z.um)) +
+              geom_point(aes(y = O.Gen), colour="blue") +
+              geom_smooth(aes(x= Z.um, y=O.Gen),
+                          span = 0.18, color = 'blue') +
+              annotate("text", label = 'Generated O K-L3',
+                       x = .8, y = 2.25,
+                       size = 5, colour = "blue") +
+              geom_point(aes(y = O.Emi), colour="red") +
+              geom_smooth(aes(x= Z.um, y=O.Emi),
+                          span = 0.1, color='red') +
+              annotate("text", label = 'Emitted',
+                       x = .3, y = .75,
+                       size = 5, colour = "red") +
+              ylab(label="O Intensity") + 
+              # note the Unicode string for mu
+              xlab("depth [\U00B5m]") +
+              ggtitle("DTSA-II Monte Carlo PhiRhoZ Model 10 nm C on SiO2 at 10 kV") +
+              theme(axis.text=element_text(size=12),
+                    axis.title=element_text(size=14),
+                    plot.title = element_text(hjust = 0.5)) # center the title
+
+print(plt)
+
+```
+
+
+
+
+
+
 
 
 [Back to Index](../README.html)
