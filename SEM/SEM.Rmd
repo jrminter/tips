@@ -25,6 +25,8 @@ pander(df, split.cells = 25, split.table = Inf)
 
 ```
 
+Note: the solvent for Pella's colloidal is Dowanol PM. Here is Dow's
+[Data sheet](./dat/Dowanol-PM.pdf).
 
 
 # Cleaning SEM stubs
