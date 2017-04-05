@@ -32,7 +32,7 @@ This document contains hints that I find helpful when using the Oxford AZtec 3.0
 
 ## The AZtec License manager
 
-Both AZtec and Inca have network licenses. The installer installs an **evaluation license** which expires in a few days. You have to change the licenses for **both** AZtec and Inca. The license manager looks like the image below. You need to press the text above the red button and enter the appropriate license code in the dialog box that appears. Then use a user ID (email address) and password (std) to authenticate the codes. **After** you enter the new codes and autheticate with the userid/password, *then* the **Activate** button will become active. 
+Both AZtec and Inca have network licenses. The installer installs an **evaluation license** which expires in a few days. You have to change the licenses for **both** AZtec and Inca. The license manager looks like the image below. You need to press the text above the red button and enter the appropriate license code in the dialog box that appears. Then use a user ID (email address) and password (std) to authenticate the codes. **After** you enter the new codes and authenticate with the userid/password, *then* the **Activate** button will become active. 
 
 ![**Change** the default licenses **shown here** by pressing the **red** arrow](img/AZtecLicMgr.png)
 
@@ -43,13 +43,38 @@ The correct codes are stored in the system folder on the **QM Share**. It took m
 
 ## Calibration
 
-We really want to do our calibration with **Cu** for high voltage anlysis and, **Mn** for low voltage. A BAM multielement standard would likely be more helpful where there are line overlaps over a range of voltages.
+We really want to do our calibration with **Cu** for high voltage analysis and, **Mn** for low voltage. A BAM multi-element standard would likely be more helpful where there are line overlaps over a range of voltages.
 
 I had noticed some systematic shifts in both ev/ch and zero offset values between calibrations done with the two different elements. On 2016-11-07, I did an experiment:
 
 1. I first ran an AZtec beam calibration and beam measurements using Cu.
 
-2. Next, I ran an AZtec beam measurement with each standard and saved the spectra. These were typically short (20-30 sec) with spot size 5 and 15 kV. So, I also collected spectra with 250 live sec. The dead time tended to be around 25-27%. I used these spectra as input to DTSA's elementsl calibration routine. The ev/ch was always slightly lower with Mn - but onky by around .15%. The zero offset had more significant deviation: -3.8% with 4K channels and -7.6% with 2K channels. Mn might be better for low voltage analysis. I probably will want to create DTSA-detector profiles for each combination of energy range, process time, and calib standard.
+2. Next, I ran an AZtec beam measurement with each standard and saved the spectra. These were typically short (20-30 sec) with spot size 5 and 15 kV. So, I also collected spectra with 250 live sec. The dead time tended to be around 25-27%. I used these spectra as input to DTSA's elemental calibration routine. The ev/ch was always slightly lower with Mn - but only by around .15%. The zero offset had more significant deviation: -3.8% with 4K channels and -7.6% with 2K channels. Mn might be better for low voltage analysis. I probably will want to create DTSA-detector profiles for each combination of energy range, process time, and calib standard.
+
+### Current detector calibration info
+
+Output from:
+
+```
+listCalibrations(d6)
+
+Oxford p4 05eV 2K - FWHM[Mn Kα]=130.3 eV - 2017-04-05 00:00
+
+FWHM[Mn Kα]=129.7 eV - initial          think this was lower...
+FWHM[Mn Kα]=129.8 eV - 2016-05-25 00:00 think this was lower...
+FWHM[Mn Kα]=130.3 eV - 2017-02-24 12:00 done with S5 3.51 nA
+FWHM[Mn Kα]=130.3 eV - 2017-04-05 00:00 done with S5 3.48 nA
+
+
+listCalibrations(d7)
+
+Oxford p4 05eV 4K - FWHM[Mn Kα]=130.3 eV - 2017-04-05 00:00
+FWHM[Mn Kα]=129.6 eV - initial          think this was lower...
+FWHM[Mn Kα]=130.3 eV - 2016-05-25 00:00 think this was lower...
+FWHM[Mn Kα]=130.2 eV - 2017-02-24 12:00 done with S5 3.51 nA
+FWHM[Mn Kα]=130.3 eV - 2017-04-05 00:00 done with S5 3.48 nA
+```
+
 
 ## Naming standards.
 
