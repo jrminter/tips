@@ -10,6 +10,23 @@ output:
 ---
 [Back to Index](../README.html)
 
+# Key materials from Ted Pella
+
+Ted Pella is typically our first choice for EM supplies. These
+are some of our favorites:
+
+```{r, pellaTable, echo=FALSE, results='asis'}
+library(pander)
+fi <- './dat/Pella-products.csv'
+df <- read.csv(fi, header = TRUE, as.is=TRUE)
+row.names(df) <- NULL
+set.alignment('left', row.names = 'right')
+pander(df, split.cells = 25, split.table = Inf)
+
+```
+
+
+
 # Cleaning SEM stubs
 
 [Chris Holp](holpc@firstenergycorp.com) wrote:
