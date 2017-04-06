@@ -52,6 +52,12 @@ library(knitr)
 opts_chunk$set(comment="")
 ```
 
+## Changing dataframe column class
+
+```
+class(df$col) = "integer"
+```
+
 ## How to use extra fonts
 
 From the **Revolution Analytics** [blog](http://blog.revolutionanalytics.com/2012/09/how-to-use-your-favorite-fonts-in-r-charts.html)
