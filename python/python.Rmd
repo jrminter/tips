@@ -84,7 +84,7 @@ conda install -c conda-forge mahotas=1.4.3
 conda install sympy
 conda install -c conda-forge spglib
 conda install flake8 nose
-conda install -c conda-forge py4j=0.10.4
+
 
 # note if you install the bokeh tutorial, after you install bokeh
 # you need to run this from the command line:
