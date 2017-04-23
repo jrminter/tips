@@ -174,6 +174,7 @@ install_new('mosaic')
 install_new('latex2exp')
 install_new('highcharter')
 install_new('WDI')
+install_new('tigris')
 
 biocLite()
 
