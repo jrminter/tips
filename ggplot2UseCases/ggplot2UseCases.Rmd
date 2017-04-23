@@ -23,6 +23,8 @@ quickly. As Karl Broman noted:
 So this is for "future me" and anybody else who needs it. See also the
 **ggplotExamples** project in your private jrm-solutions repo.
 
+Also note [this](https://martinsbioblogg.wordpress.com/2017/04/23/using-r-a-function-that-adds-multiple-ggplot2-layers/) recent helpful example.
+
 
 First, let's load the packages we need.
 

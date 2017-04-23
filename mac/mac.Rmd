@@ -182,7 +182,15 @@ defaults write com.apple.dt.Xcode UseSanitizedBuildSystemEnvironment -bool NO
 
 From [how-to-geek](http://www.e-howtogeek.com/60745/setting-environment-variables-launchd-longer-yosemite-capitan)
 
-Create an environment.plist file in `~/Library/LaunchAgents/` with this content:
+A more recent similar reference: [Shotgun Support](https://support.shotgunsoftware.com/hc/en-us/articles/219042108-Setting-global-environment-variables-on-OS-X)
+
+this last article notes that we can activate environment.plist with
+
+```
+launchctl load ~/Library/LaunchAgents/environment.plist
+```
+
+Create an environment.plist file in `~/Library/LaunchAgents/` with this content: I have this content:
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
@@ -196,9 +204,10 @@ Create an environment.plist file in `~/Library/LaunchAgents/` with this content:
     <string>sh</string>
     <string>-c</string>
     <string>
-    launchctl setenv PRODUCTS_PATH /Users/mortimer/Projects/my_products
-    launchctl setenv ANDROID_NDK_HOME /Applications/android-ndk
-    launchctl setenv PATH $PATH:/Applications/gradle/bin
+    launchctl setenv IMAGE_ROOT /Users/jrminter/dat/images
+    launchctl setenv EDS_ROOT /Users/jrminter/dat/eds
+    launchctl setenv GIT_HOME  /Users/jrminter/Documents/git
+    launchctl setenv TMP  /Users/jrminter/tmp
     </string>
 
   </array>
