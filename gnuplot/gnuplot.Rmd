@@ -36,10 +36,12 @@ Use something like this:
 
 ```
 # easy to comment out with #
-set terminal postscript enhanced color "Arial" 14
-set output "foo.ps"
+# set terminal postscript enhanced color "Arial" 14
+# set output "foo.ps"
 # proc-gnuplot.sh foo
-# set terminal window
+# set terminal png
+set terminal window
+# set terminal aqua
 ```
 
 Where the **proc-gnuplot.sh** script (in C:/Apps/local/path) converts the file to
@@ -78,8 +80,8 @@ Note that one can add a title and split the plot line, like
 
 
 ```
-
-set title "Put key info here..." font "Arial,16"
+# Note LaTeX
+set title "Put key info here...Al_2O_3" font "Arial,16"
 
 
 plot "-" with lines lt 1 lw 2 lc rgb "#9ecae1" \
