@@ -84,7 +84,7 @@ The answer is given by the **quantile** function:  (`r quantile(stock_prices, c(
 
 We can see that in 9 900 (99%) scenarios the price is larger than ca. 67 \$; 95% of them were higher than ca. 77 \$. Which gives us needful assessment of how bad our investment could go.
 
-# The approximation of pi
+# The approximation of $\pi$
 
 Monte Carlo method can be applied also to problems that can be reformulated to have probabilistic interpretation. Very popular example is the approximation of the number Pi.
 
@@ -124,6 +124,8 @@ for (i in seq(simulations)){
 my_pi <- 4 * sum(pi_df$in_circle) / nrow(pi_df)
 
 ```
+
+And the approximation is: `r sprintf("%.7f",my_pi)` which differs by `r sprintf("%.7f", pi - my_pi)` from R's supplied value.
 
 ## Plot it
 
