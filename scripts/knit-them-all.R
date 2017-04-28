@@ -9,7 +9,8 @@ if(strGitHome=="") strGitHome="~/Documents/git"
 #if(strGitHome=="/Users/jrminter/git") strGitHome="/Users/jrminter/Documents/git"
 strRel     <- '/tips/scripts'
 
-names <- c("AccessToSqlite.Rmd", "automater.Rmd", "AZtec.Rmd",
+names <- c("Readme.Rmd",
+           "AccessToSqlite.Rmd", "automater.Rmd", "AZtec.Rmd",
            "C++11-Tips.Rmd",
            "chntpw.Rmd", "color.Rmd", "ConductiveEpoxy.Rmd",
            "DiffractionLimit.Rmd", "dtsa2.Rmd",
@@ -34,7 +35,8 @@ names <- c("AccessToSqlite.Rmd", "automater.Rmd", "AZtec.Rmd",
            "Sweave.Rmd", "tex-tips.Rmd","ubuntu.Rmd",
            "VS2010.Rmd","win.Rmd","workflow.Rmd", "README.Rmd")
 
-rPath <- c("../AccessToSqlite", "../automater", 
+rPath <- c("../",
+           "../AccessToSqlite", "../automater", 
            "../AZtec", "../C++11",
            "../chntpw", "../color", "../ConductiveEpoxy",
            "../DiffractionLimit", "../dtsa2",
