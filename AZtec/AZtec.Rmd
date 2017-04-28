@@ -28,7 +28,8 @@ This document contains hints that I find helpful when using the Oxford AZtec 3.0
 | MA svc phone | **(800) 447-4717** |    
 | MA svc email | **ccc.oia\@oxinst.com** |
 | Glenn Kinnear | 978-764-0747 |
-| Glenn Kinnear | glenn.kinnear@oxinst.com 
+| Glenn Kinnear | glenn.kinnear@oxinst.com |
+| Current software | 3.0SP1 |
 
 ## The AZtec License manager
 
