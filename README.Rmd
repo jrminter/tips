@@ -84,6 +84,8 @@ Topic
 
 [midb](./midb/midb.html)
 
+[Monte Carlo methods in R](./monteCarlo/monteCarlo.html)
+
 [MS Office](./msOffice/msOffice.html)
 
 [MySQL](./mysql/mysql.html)

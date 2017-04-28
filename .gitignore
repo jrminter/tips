@@ -159,6 +159,12 @@ micro/micro.md
 micro/micro.html
 micro/figure/
 
+# monteCarlo directory
+monteCarlo/.DS_Store
+monteCarlo/monteCarlo.md
+monteCarlo/monteCarlo.html
+monteCarlo/figure/
+
 # mysql directory
 mysql/.DS_Store
 mysql/mysql.md
