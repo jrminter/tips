@@ -68,6 +68,27 @@ pet = epq.Material(epq.Composition([epq.Element.C,epq.Element.H,epq.Element.O],
 pet.setName("PET")
 ```
 
+or
+
+```
+k412 = epq.Material(epq.Composition([epq.Element.O,
+                                     epq.Element.Mg,
+                                     epq.Element.Al,
+                                     epq.Element.Si,
+                                     epq.Element.Ca,
+                                     epq.Element.Fe],
+                                    [ 0.4276,
+                                      0.1166,
+                                      0.0491,
+                                      0.2120,
+                                      0.1090,
+                                      0.0774]
+                                      ),
+                                    epq.ToSI.gPerCC(2.600))
+k412.setName("K412")
+
+```
+
 
 The final step is **really important** - sometime the simple approach produces unicode characters in output file name generated automatically and these crash. **Simple names are better!!!**
 
