@@ -34,7 +34,7 @@ mu  &#x393; or &mu; Can use &Mu; for capital.
     
 phi &Phi; or &phi; or \U03D5 (lower) \U03A6 (upper)
 
-rho &Rho; or &rho; or \UO3C1 (lower) \U03A1 (upper)
+rho &Rho; or &rho; or \U03C1 (lower) \U03A1 (upper)
 
 A-ring: &#8491;  or \U212B
 
