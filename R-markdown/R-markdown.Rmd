@@ -25,7 +25,7 @@ the RStudio Intro to Pandoc
 and for $\LaTeX$ math, the
 [AOPS](http://artofproblemsolving.com/wiki/index.php/LaTeX:Commands) site.
 
-## Simple word to markdown
+## Simple Word to markdown
 
 From [rud.is](https://rud.is/b/2017/04/30/r%E2%81%B6-using-pandoc-from-r-a-neat-package-for-reading-subtitles/)
 
