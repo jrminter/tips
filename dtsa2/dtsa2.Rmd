@@ -15,9 +15,35 @@ output:
 
 ## Database
 
+see [vogella.com](http://www.vogella.com/tutorials/ApacheDerby/article.html)
+
+see [apache.org](https://db.apache.org/derby/papers/DerbyTut/install_software.html)
+
 Install derby. Use ij
 
-connect 'jdbc:derby:/Users/jrminter/DTSA/Database v2/'
+```
+connect 'jdbc:derby:/Users/jrminter/DTSA/Database v2/';
+
+show schemas;
+show tables in APP;
+show indexes in app;
+
+
+
+disconnect;
+```
+
+dump the schema
+
+```
+dump the schema
+
+dblook -d 'jdbc:derby:/Users/jrminter/DTSA/Database v2/' -z APP -o dtsa2-db.sql
+```
+
+looks like
+
+[ddlutils](http://db.apache.org/derby/integrate/db_ddlutils.html) can backup databases...
 
 ## Frequently needed scripts
 
