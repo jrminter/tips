@@ -19,14 +19,40 @@ see [vogella.com](http://www.vogella.com/tutorials/ApacheDerby/article.html)
 
 see [apache.org](https://db.apache.org/derby/papers/DerbyTut/install_software.html)
 
-Install derby. Use ij
+Install derby.
+
+On Windows, set environment variables
 
 ```
-connect 'jdbc:derby:/Users/jrminter/DTSA/Database v2/';
+DERBY_INSTALL    C:\Apps\derby
+
+CLASSPATH        %DERBY_INSTALL%\lib\derby.jar;%DERBY_INSTALL%\lib\derbytools.jar;.
+
+JAVA_HOME        C:\Apps\Java64\jdk1.8.0_121
+
+```
+
+then start ij from a command prompt with:
+
+```
+java org.apache.derby.tools.ij
+```
+
+
+Use ij
+
+```
+connect 'jdbc:derby:/path/to/DTSA/Database v2/';
+
+on Window
 
 show schemas;
 show tables in APP;
 show indexes in app;
+
+select * from APP.DETECTOR;
+
+
 
 
 
