@@ -116,8 +116,8 @@ features that we really want to plot.
 ```{r, doRead,message=FALSE}
 library(rEDS)
 
-fi <- './dat/csv/PhiRhoZ.csv'
-df <- prepDataframeDtsaPhiRhoZ(fi)
+inDir <- './dat/csv/'
+df <- prepDataframeDtsaMcPhiRhoZ(inDir)
 print(head(df))    
 ```
 
