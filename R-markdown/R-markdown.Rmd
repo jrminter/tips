@@ -49,6 +49,9 @@ A-ring: &#8491;  or \U212B
 
 degree &#176; or \U00B0
 
+superscript 2  <sup>2</sup>  \U0032
+superscript 3  <sup>3</sup>  \U0033
+
 ```
 
 # YAML
