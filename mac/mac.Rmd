@@ -12,6 +12,14 @@ output:
 
 # Tips
 
+## Unison
+
+Unison is a great file synch tool. The preference files on the mac are in:
+
+```
+/Users/userid/Library/Application Support/Unison
+```
+
 ## Logos
 
 For ESV to have it read use `CMD R`. (It is in the pull-down menu for the
