@@ -122,4 +122,133 @@ The result is show below. Save the result to **jrm-NiCr-on-FeGdPt-onSi-run.tff**
 
 ![Final results. Note how quickly the search converged. It did not change much after 3 iterations.](./img/final-result.png)
 
+# Stratagem Import File Format
+
+The Stratagem Import File is an ASCII file that contains different components,
+each component being introduced by a "key-record", a record beginning with
+the '$' sign.
+
+```
+
+# Comments
+#     Characters past (and including) '#' are comments
+#     Empty lines are ignored
+
+# File version
+
+$StrataImport_3
+#   File & version identifier. Must be 1st non-comment record.
+
+# Computation parameters definition
+
+$Comp PhiRhoZ  Fluo  NbIterations 
+
+#   PhiRhoZ is one of XPP or Para (for parabolic).
+#   Fluo is one of None, Line, Conti (for continuum).
+#   This record is optional, the default values in Stratagem will be used.
+
+# Layer definition
+
+$Layer Density  Thickness  State 
+
+#   Thickness is given in angstroms.
+#   State is one of k or u (for known or unknown).
+#   This record must be followed by element definitions. The first record is
+#       the upper layer, the last one is the substrate and should not set
+#       Density, Thickness nor State. This record is not relevant in case of
+#       importing experimental data only.
+
+# Element definition
+
+$Elt NrAtom  Weight  State 
+
+#   One line per element. State is one of k, u,  t, d, s (for known, unknown,
+#        trace, difference, stoichiometry).
+#   The weights will be normalized after getting all elements. Each
+#        element pertains to the last layer defined before its position in
+#        the file. This record has no meaning without a preceding layer
+#        definition.
+
+# Standard definition
+
+$Std name
+
+#    The first record is the standard tilt angle in degrees :
+
+     TiltAngle
+
+#    The following records (up to the next $-record) will describe the
+#        standard :
+
+    $$Layer Density  Thickness or $$Layer
+
+#        Thickness is given in angstroms.
+#        A layer with no information on density is considered as
+#             the substrate
+
+         $$Elt  NrAtom  WeightPercent
+
+#         Element name and composition within the layer
+#               The standard file name.tfs will be created with the
+#               given description
+#
+#         TiltAngle is optional and will be defaulted to 0 (in degrees).
+#
+#         The WeightPercent's will be normalized
+
+# Geometry definition
+
+$Geom TakeOff  Tilt  Azimuth 
+
+#    All angles are in degrees
+#   This record is optional, the default values in Stratagem will be used
+
+# Intensities
+
+$K NrAtom  Line  HVx HVstd StdName
+
+#    NrAtom	- he element atomic number
+#    Line - one of Ka, Kb, La, Lb, Ma, Mb
+
+#    HVx -   the sample voltage (kV)
+#    HVstd   - the standard voltage (kV)
+#    StdName - the standard name 
+#              If StdName is not present the the standard
+#              is a pure standard
+#
+#    The following records (up to the next $-record) will contain a
+#    list of K (= Ix/Istd). There can be any number of values per line,
+#    separated by one or more spaces
+```
+
+## An example
+
+```
+# Experimental Data Description
+$Geom 40 0 0            # 40 degree Take Off , no Tilt, nor Azimuth 
+
+
+$K 26 Ka 15 15 nife     # Fe measurements Ix/Istd (nife standard)
+0.7140  0.7086 0.7069  0.7082  0.7110
+
+$K 28 Ka 15 15 nini     # Ni measurements Ix/Istd (nife standard)
+0.8089  0.8142
+0.8120  0.8130  0.8102
+
+$K 24 Ka 15 15          # Cr measurements Ix/Istd (pure element)
+0.2867  0.2883
+
+# this is cut off the manual. My best guess. Doesn't work...
+# need to find out correct values
+$Std nife               # Definition of standard named nife
+0.0
+$$Layer
+$$Elt 26 0.5124
+$$Elt 28 0.4876
+
+
+
+```
+
+
 [Back to Index](../README.html)
