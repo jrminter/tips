@@ -1,0 +1,125 @@
+---
+title: "Stratagem"
+author: "J. R. Minter"
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
+output:
+  knitr:::html_vignette:
+    css: ../theme/jm-blue-vignette.css
+    csl: ../theme/american-chemical-society-with-titles-sentence-case-doi.csl
+    number_sections: yes
+    toc: yes
+bibliography: ./bib/Stratagem.bib
+---
+
+[Back to Index](../README.html)
+
+# Introduction
+
+[Stratagem](http://www.samx.com/microanalysis/products/stratagem_us.html) is
+a software package for analysis of X-ray EDS and electron microprobe analysis
+of **stratified thin films**. It was developed based upon the work of
+Jean-Louis Pouchou and his coworkers [@Pouchou1993a]. It is a close-source
+commercial package that requires a USB key to run. It can compute the layer
+thicknesses and compositions of stratified layers. It works because the
+electron penetration, X-ray generation and emission vary with composition
+and electron probe voltage.
+
+One needs the observed X-ray intensities relative to a standard. These
+are typically called **k-ratios**. Consider the elemental composition,
+density, and thickness of each layer as variables. Some are known, others
+are unknown. One needs at least one observed X-ray k-ratio for each unknown.
+These can and should come at multiple electron probe voltages.
+
+We really want the problem to be overdetermined - that is to have more
+observed k-ratios than unknowns to reduce the effect of uncertainty in
+the observed k-ratios on the model fit.
+
+**Important Initial Choices**
+
+Careful forethought is the key to an efficient and relatively painless
+analysis. We need to pose and answer the following questions. It helps
+to summarize these in a document or spread sheet when it comes time
+to enter data into the program.
+
+For each layer **and** the substrate:
+
+- **What is the composition of the layer?** Can we treat it as constant or
+do we need the program to calculate it? Do I have independent analyses that
+I trust or can at least use to set the starting conditions for the fit?
+- **What is the density of the layer?** Reasonable estimates are usually
+sufficient.
+- **What is the estimated thickness of the layer?** We will need to make
+certain that we measure the k-ratios at voltages where the probe does not
+fully penetrate the stack to voltages where it penetrates well into the
+substrate. Some inital Monte Carlo simulations can be helpful here.
+- **How precise are my k-ratios?** This depends upon many factors, one
+of which is the reliability of the measured probe current.
+
+# Steps to set up a new analysis
+
+The main menu looks like this:
+
+![The main menu](./img/main-menu.png)
+
+## Set the system parameters
+
+We want to set us a new analysis after a fresh start of Stratagem. Begin by
+choosing **Setup > Geometry Parameters...**. We need to set the take-off
+angle. For our example it will be **40.0** degrees.
+
+![Geometry Parameters, Access with **Setup > Geometry Parameters...**](./img/geometry.png)
+
+Next we want to set up the computational parameters by 
+choosing **Setup > Computational Parameters...**. We will choose **XPP**.
+`
+
+I save this basic setup as **jrm-start.tff**.
+
+## Set up the layers
+
+Next we want to set-up layers. We will actually do this manually
+for an analysis Stratagem supplies as a tff file in order to
+illustrate the process. First, open the **Sample description** window
+by clicking on the first icon from the left (red/green lines).
+
+![Starting Sample description dialog. Note the red-green lines (top blue arrow. Click on the +/- buttons to add or remover a layer. **Right-click** on the black "k" to get a composition menu. You can add Thickness and density estimates under those headings.)](./img/sample-desc-1.png)
+
+
+We first add and edit layers **from the bottom up**.
+
+In this case we enter the element **Si** for the substrate and then add a the
+middle layer with the **+** button on the **Layer** bar. Then we add three
+elements (**Fe, Gd, and Pt**) to that layer. Finally we add the top layer 
+with the **+** button on the **Layer** bar and add the **Ni and Cr** elements.
+I save this as **wip.tff** (a work in progress...)  This makes it easy to
+revert if something isn't right... We can then go through and right click
+on each black **k** and set it to a **red u** with a **right mouse click**.
+At the same time make sure all the weights are set to **0**.
+
+Then go enter the two densities (7.41 and 10.6) and save to **wip.tff**.
+Now our sample decription looks like:
+
+
+![Finished sample description.](./img/sample-desc-2.png)
+
+## Add the data
+
+Open the **Experimental Data** window using the second icon on the
+top menu bar.
+
+![Starting Experimental Data window. Note that all lines are set to be **Ka**](./img/starting-exp-data.png)
+
+**First** uncheck the **anal.** box on Si. We don't want to **analyze** for Si but we **do want** to iterate and show the Si. Then set the **Gd** to and **La** and the **Pt** to an **Ma**. Then add 2 addtional KVs to each line with the **+ HVstd** button. Set the values for **both** HVStd and HVx to **20, 25, and 30kV**. Our final window is shown below.
+
+![Final Experimental Data window. Note that the Pt and Gd lines have the correct trasitions and **only** the **Ix/Istd** values are entered.](./img/final-exp-data.png)
+
+**Save this to jrm-NiCr-on-FeGdPt-onSi-In.tff before running!**
+
+## Run the analysis
+
+Choose **Computation > Iterative** or **Ctl/T** to run the analysis. 
+The result is show below. Save the result to **jrm-NiCr-on-FeGdPt-onSi-run.tff**.
+
+![Final results. Note how quickly the search converged. It did not change much after 3 iterations.](./img/final-result.png)
+
+[Back to Index](../README.html)
