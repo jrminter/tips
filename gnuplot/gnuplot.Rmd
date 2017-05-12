@@ -174,6 +174,35 @@ e
 
 ```
 
+## A 2-up plot
+
+I got the idea from [here](http://stackoverflow.com/questions/10774646/gnuplot-how-to-put-two-figures-side-by-side).
+
+
+```
+set terminal postscript color enhanced size 10,5
+set output 'figure.ps'
+# proc-gnuplot.sh figure
+
+unset title
+
+set multiplot layout 1, 2
+unset logscale xy
+
+set title "Sin"
+set xlabel "x"
+set ylabel "y"
+plot(sin(x))
+
+set title "Cos"
+set xlabel "x"
+set ylabel "y"
+plot(cos(x))
+
+unset multiplot
+
+```
+
 
 
 # Color

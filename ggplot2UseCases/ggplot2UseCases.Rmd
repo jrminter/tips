@@ -31,8 +31,10 @@ First, let's load the packages we need.
 ```{r}
 library(ggplot2)
 library(latex2exp)
+library(pander)
 ```
 
+**Note:** For pander options see [rapporter.github.io](http://rapporter.github.io/pander/#pander-options).
 
 # Plot/fit data from processing EDS spectra
 
@@ -43,7 +45,9 @@ In this case the spectra were simulated using DTSA-II [@Ritchie2011b].
 ```{r}
 fi <-'./dat/csv/C-ctd-Si-5-kV-10000-Traj.csv'
 df <- read.csv(fi, header=TRUE, as.is=TRUE)
-print(head(df))
+panderOptions('table.alignment.default',
+              function(df) ifelse(sapply(df, is.numeric), 'right', 'left'))
+pander(head(df))
 ```
 
 ## Compute the C/Si peak ratio and uncertainty
@@ -115,10 +119,10 @@ features that we really want to plot.
 
 ```{r, doRead,message=FALSE}
 library(rEDS)
-
+panderOptions('round', 3)
 inDir <- './dat/csv/'
 df <- prepDataframeDtsaMcPhiRhoZ(inDir)
-print(head(df))    
+pander(head(df))    
 ```
 
 
@@ -139,7 +143,7 @@ sikemi  <- df[,13]
 df2 <- data.frame(Z.um=z,
                  O.Gen=okgen, O.Emi=okemi,
                  Si.Gen=sikgen, Si.Emi=sikemi)
-print(head(df2))
+pander(head(df2))
 
 ```
 
@@ -151,8 +155,9 @@ the smooth works better...
 
 ```{r removeStep, message=FALSE}
 df3 <- df2[-1, ]
+rownames(df3) <- NULL
 
-print(head(df3))
+pander(head(df3))
 ```
 
 ## Step 3: Plot the Si data.
@@ -198,9 +203,10 @@ print(plt)
 
 
 ```{r plotO, message=FALSE, warning=FALSE}
-library(ggplot2)
+
 span <- 0.25
 df3 <- df2[-1, ]
+rownames(df3) <- NULL
 
 plt <- ggplot(df3, aes(x = Z.um)) +
               geom_point(aes(y = O.Gen), colour="blue") +
