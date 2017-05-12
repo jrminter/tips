@@ -134,6 +134,8 @@ Topic
 
 [Sublime Text 3](./ST3/ST3.html)
 
+[Stratagem](./Stratagem/Stratagem.html)
+
 [Sweave](./Sweave/Sweave.html)
 
 [TeX](./tex/tex-tips.html)
