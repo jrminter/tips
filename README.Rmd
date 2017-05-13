@@ -123,7 +123,7 @@ Topic
 
 [R-Packages](./R-packages/R-packages.html)
 
-[Reproducible Research](./ReproducibleResearch/ReproducibleResearch)
+[Reproducible Research](./ReproducibleResearch/ReproducibleResearch.html)
 
 [Research](./research/research.html)
 
