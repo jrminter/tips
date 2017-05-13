@@ -10,6 +10,11 @@ output:
 This repository contains the John Minter's useful tips in Rmarkdown
 format.
 
+> Your closest colaborator is you, six months from now --
+> and you don't respond to email... 
+> - Karl Broman
+
+
 Add a quickie: I **hate** the new Chome bookmark manager. Happliy we can turn it off. Thanks to [Jeff Kitchen](https://productforums.google.com/forum/#!topic/chrome/TVHpStVuxSc)
 
 > If you have sync enabled and include your bookmarks then the Disable Enhanced Bookmarks should not be an issue. 
