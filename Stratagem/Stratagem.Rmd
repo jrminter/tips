@@ -223,32 +223,100 @@ $K NrAtom  Line  HVx HVstd StdName
 
 ## An example
 
+This one - straight from the manual crashes on me...
+
 ```
+# Sample input file for StrataGem
+$StrataImport_3         # required
+
+# Sample Description
+$Comp Para Conti 199    # Use Parabolic, fluo. cont., nb max steps 199
+
+$Layer 8.69 100 u       # Ni-Fe layer, unknown thickness
+$Elt 28 0.5 u           # unknown concentrations
+$Elt 26 0.5 u
+
+$Layer                  # Cr Substrate
+$Elt 24 1.0 k
+
 # Experimental Data Description
 $Geom 40 0 0            # 40 degree Take Off , no Tilt, nor Azimuth 
 
-
 $K 26 Ka 15 15 nife     # Fe measurements Ix/Istd (nife standard)
-0.7140  0.7086 0.7069  0.7082  0.7110
+0.7140 0.7086 0.7069
+0.7082 0.7110
 
-$K 28 Ka 15 15 nini     # Ni measurements Ix/Istd (nife standard)
-0.8089  0.8142
-0.8120  0.8130  0.8102
+$K 28 Ka 15 15 nini     # Ni measurements Ix/Istd (nini standard)
+0.8089 0.8142
+0.8120 0.8130 0.8102
 
 $K 24 Ka 15 15          # Cr measurements Ix/Istd (pure element)
 0.2867  0.2883
 
-# this is cut off the manual. My best guess. Doesn't work...
-# need to find out correct values
-$Std nife               # Definition of standard named nife
-0.0
-$$Layer
-$$Elt 26 0.5124
-$$Elt 28 0.4876
+$Std nife                # Definition of standard named nife
+0                        # tilt = 0
+$$Layer 2.67 100         # Coating Density, Thickness
+$$Elt 6 100              # C 100%
+$$Layer                  # Substrate
+$$Elt 26 20.0            # Fe 20%
+$$Elt 28 80.0            # Ni 80%
 
+$Std nini                # Definition of standard named nine
+0                        # tilt = 0
+$$Layer 19.4 100         # Coating Density, Thickness
+$$Elt 79 100             # Au 100%
+$$Layer                  # Substrate
+$$Elt 28 100.0           # Ni 100%
+
+# End of file
+
+```
+
+The one below - A C thickness estimate seems to work. I run it as follows:
+
+1. I start Stratagem and import the file. It displays the `Sample Description` and `Experimental Data` windows as expected.
+
+2. I **uncheck the anal box for the Si K-factor** in the `Experimental Data` window to have not analyze Si and Zero the unknowns. The display is shoen 
+below
+
+![Ready to run.](./img/ready-to-run.png)
+
+3. I run **Computation > Iterative (Ctl/T)** and get this result:
+
+![Ready to run.](./img/iteration-result.png)
+
+
+Finally, here is the script...
 
 
 ```
+# Sample input file for StrataGem
+$StrataImport_3         # required
+
+# Sample Description
+$Comp XPP Conti 199     # Use XPP, Conti, nb max steps 199
+
+$Layer 2.21 200 u       # C layer, 20 nm, unknown
+$Elt 6 1.0 k            # known concentrations
+
+$Layer                  # Si Substrate
+$Elt 14 1.0 k
+
+# Experimental Data Description
+$Geom 35 0 0            # 35 degree Take Off , no Tilt, nor Azimuth 
+
+
+$K 6 Ka 5 5             # C measurement Ix/Istd (C standard)
+0.0727
+
+$K 14 Ka 5 5            # Si measurements Ix/Istd (Si standard)
+0.9093                  # N.B. need to turn off anal for Si in exptl data
+
+
+```
+
+
+
 
 
 [Back to Index](../README.html)
