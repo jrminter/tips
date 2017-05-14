@@ -84,13 +84,11 @@ appropriate.
 1. Download **both** the 32 and 64 bit miniconda installers from
 [conda.io](https://conda.io/miniconda.html).
 
-2. Install 64 bit Anaconda to **C:\\Apps\\miniconda**  - check both
-checkboxes during the install (it writes the 64 bit python to the registry).
+2. Install 64 bit Anaconda to **C:\\Apps\\miniconda**
 
 3. Rename **C:\\Apps\\miniconda** to **C:\\Apps\\miniconda-64**
 
-4. Install 32 bit Anaconda to **C:\\Apps\\miniconda** - check both
-checkboxes during the install (it writes the 64 bit python to the registry).
+4. Install 32 bit Anaconda to **C:\\Apps\\miniconda**
 
 5. Rename **C:\\Apps\\miniconda** to **C:\\Apps\\miniconda-32**
 
