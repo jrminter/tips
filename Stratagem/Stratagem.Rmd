@@ -184,7 +184,6 @@ angle. For our example it will be **40.0** degrees.
 
 Next we want to set up the computational parameters by 
 choosing **Setup > Computational Parameters...**. We will choose **XPP**.
-`
 
 I save this basic setup as **jrm-start.tff**.
 
