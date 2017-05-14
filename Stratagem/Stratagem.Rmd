@@ -34,7 +34,122 @@ We really want the problem to be overdetermined - that is to have more
 observed k-ratios than unknowns to reduce the effect of uncertainty in
 the observed k-ratios on the model fit.
 
-**Important Initial Choices**
+# Installation
+
+I ended up installing from installer files on an original CD (2013) and then
+running an upgrade. This was a bit of a "learning experience." The software
+has developed over several years and changes in Windows operating system
+releases. These instructions have been tested under Windows 7 x64 on native
+hardware and under Windows 10 x64 in a Parallels VM under Mac OSX Sierra.
+
+0. If changing a standard install, uninstall **all** SamX software
+and restart the computer.
+
+1. Install the driver for the USB key. I used
+**Sentinel Protection Installer 7.6.3.exe** (2010-10-20).
+
+2. Install Stratagem to a directory that can have **read-write permissions**.
+Do **not** use the default directory
+(**C:\\Program Files (x86)\\Stratagem\\**).  On Windows boxes I have created
+a **C:\\Apps\\** directory for all my customized applications. I used the
+**StratagemSetup.exe** program (2013-08-09),
+
+3. Start the Stratagem and make sure it reads the key.
+
+4. Install the update **stratagemupd.exe** (2017-05-13). It should find
+Stratagem and do the update. Start the program. If you have previously
+updated the key is should work.
+
+5. If you get a key error, run **key.exe** (2017-05-14). The program should
+now work normally.
+
+My current banner when starting the software:
+
+![After upgrade 2017-05-14](./img/banner.png)
+
+## Optional: Install Phillipe Pinard's **stratagemtools** python package.
+
+Phillipe's [stratagemtools](http://stratagemtools.readthedocs.io/en/latest/)
+python package is a great way to script Stratagem. I have a Windows x64 box
+and typically run 64 bit python 3.6. Phillipe's package requires 32 bit 
+python. The [Anaconda Google Group](https://groups.google.com/a/continuum.io/forum/?fromgroups#!searchin/anaconda/both$2032$20and$2064$20bit/anaconda/bJgetQok1-I/QO_b7zDzGMoJ) to the rescue!
+
+The basic idea is to install **both** 32 and 64 bit **miniconda**
+distributions and switch them using a symbolic length. Here is the
+basic procedure. I edited it to use my path conventions... Change as
+appropriate.
+
+### Installation
+
+1. Download **both** the 32 and 64 bit miniconda installers from
+[conda.io](https://conda.io/miniconda.html).
+
+2. Install 64 bit Anaconda to **C:\\Apps\\miniconda**  - check both
+checkboxes during the install (it writes the 64 bit python to the registry).
+
+3. Rename **C:\\Apps\\miniconda** to **C:\\Apps\\miniconda-64**
+
+4. Install 32 bit Anaconda to **C:\\Apps\\miniconda** - check both
+checkboxes during the install (it writes the 64 bit python to the registry).
+
+5. Rename **C:\\Apps\\miniconda** to **C:\\Apps\\miniconda-32**
+
+### Enable 32 bit python (for strategemtools)
+
+
+```
+rmdir C:\Apps\miniconda
+mklink /J C:\Apps\miniconda C:\Apps\miniconda-64
+```
+
+
+### Enable 64-bit Version (for other needs...)
+
+In a command window
+
+```
+rmdir C:\Apps\miniconda
+mklink /J C:\Apps\miniconda C:\Apps\miniconda-64
+```
+
+### Installing **stratagemtools**
+
+1. Switch to the 32 bit python as shown above.
+
+2. Use **conda** to install the prerequisites. 
+
+```
+conda update --all
+conda install pyparsing nose
+```
+
+I usually install a couple of other useful packages (such as the IDE spyder
+and jupyter for the notebook)...
+
+```
+conda install numpy scipy matplotlib seaborn jupyter spyder
+```
+
+3. Install **stratagemtools**. You might as well use the latest 
+and greatest from github. From a git shell:
+
+```
+cd your/repository/directory
+git clone https://github.com/ppinard/stratagemtools.git
+```
+
+4. Install **stratagemtools** from a **cmd** window:
+
+```
+cd your/repository/directory/stratagemtools
+pip install .
+```
+
+See Philippe's [Tutorial](http://stratagemtools.readthedocs.io/en/latest/tutorial/tutorial.html) for examples. **This** is why we installed **spyder** (type 'spyder' from the command line to prototype in an IDE...) and jupyter (type 'jupyter notebook' from the command line to do a reproducible report...).
+
+
+
+# Important Initial Choices
 
 Careful forethought is the key to an efficient and relatively painless
 analysis. We need to pose and answer the following questions. It helps
@@ -51,7 +166,7 @@ sufficient.
 - **What is the estimated thickness of the layer?** We will need to make
 certain that we measure the k-ratios at voltages where the probe does not
 fully penetrate the stack to voltages where it penetrates well into the
-substrate. Some inital Monte Carlo simulations can be helpful here.
+substrate. Some initial Monte Carlo simulations can be helpful here.
 - **How precise are my k-ratios?** This depends upon many factors, one
 of which is the reliability of the measured probe current.
 
@@ -97,7 +212,7 @@ on each black **k** and set it to a **red u** with a **right mouse click**.
 At the same time make sure all the weights are set to **0**.
 
 Then go enter the two densities (7.41 and 10.6) and save to **wip.tff**.
-Now our sample decription looks like:
+Now our sample description looks like:
 
 
 ![Finished sample description.](./img/sample-desc-2.png)
@@ -109,9 +224,9 @@ top menu bar.
 
 ![Starting Experimental Data window. Note that all lines are set to be **Ka**](./img/starting-exp-data.png)
 
-**First** uncheck the **anal.** box on Si. We don't want to **analyze** for Si but we **do want** to iterate and show the Si. Then set the **Gd** to and **La** and the **Pt** to an **Ma**. Then add 2 addtional KVs to each line with the **+ HVstd** button. Set the values for **both** HVStd and HVx to **20, 25, and 30kV**. Our final window is shown below.
+**First** uncheck the **anal.** box on Si. We don't want to **analyze** for Si but we **do want** to iterate and show the Si. Then set the **Gd** to and **La** and the **Pt** to an **Ma**. Then add 2 additional KVs to each line with the **+ HVstd** button. Set the values for **both** HVStd and HVx to **20, 25, and 30kV**. Our final window is shown below.
 
-![Final Experimental Data window. Note that the Pt and Gd lines have the correct trasitions and **only** the **Ix/Istd** values are entered.](./img/final-exp-data.png)
+![Final Experimental Data window. Note that the Pt and Gd lines have the correct transitions and **only** the **Ix/Istd** values are entered.](./img/final-exp-data.png)
 
 **Save this to jrm-NiCr-on-FeGdPt-onSi-In.tff before running!**
 
@@ -122,11 +237,16 @@ The result is show below. Save the result to **jrm-NiCr-on-FeGdPt-onSi-run.tff**
 
 ![Final results. Note how quickly the search converged. It did not change much after 3 iterations.](./img/final-result.png)
 
+
 # Stratagem Import File Format
+
+The process above has a lot of **point/click/copy/paste**. It is reproducible 
+because one can save the '.tff' files. These are binary files which are 
+not the best choice for reproducible research with version control. 
 
 The Stratagem Import File is an ASCII file that contains different components,
 each component being introduced by a "key-record", a record beginning with
-the '$' sign.
+the '$' sign. This is available to anyone.
 
 ```
 
@@ -221,9 +341,10 @@ $K NrAtom  Line  HVx HVstd StdName
 #    separated by one or more spaces
 ```
 
-## An example
+## An example from the manual
 
-This one - straight from the manual crashes on me...
+This one - straight from the manual -- crashed when run in Stratagem
+Now the file works as expected.
 
 ```
 # Sample input file for StrataGem
@@ -272,11 +393,14 @@ $$Elt 28 100.0           # Ni 100%
 
 ```
 
-The one below - A C thickness estimate seems to work. I run it as follows:
+## A simple example - C thickness on Si
+
+I put this together because it is a common question I have.
+I run it as follows:
 
 1. I start Stratagem and import the file. It displays the `Sample Description` and `Experimental Data` windows as expected.
 
-2. I **uncheck the anal box for the Si K-factor** in the `Experimental Data` window to have not analyze Si and Zero the unknowns. The display is shoen 
+2. I **uncheck the anal box for the Si K-factor** in the `Experimental Data` window to have not analyze Si and Zero the unknowns. The display is shown 
 below
 
 ![Ready to run.](./img/ready-to-run.png)
