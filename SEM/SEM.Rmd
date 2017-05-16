@@ -20,7 +20,7 @@ library(pander)
 fi <- './dat/Pella-products.csv'
 df <- read.csv(fi, header = TRUE, as.is=TRUE)
 row.names(df) <- NULL
-set.alignment('left', row.names = 'right')
+set.alignment('left', row.names ='right')
 pander(df, split.cells = 25, split.table = Inf)
 
 ```
