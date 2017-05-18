@@ -13,6 +13,12 @@ output:
 
 I have collected these tips both from experience and from a very helpful user community.
 
+# Check the open image header for metadata
+
+```
+print(getMetadata("Info"));
+```
+
 
 
 # Mailing Lists
