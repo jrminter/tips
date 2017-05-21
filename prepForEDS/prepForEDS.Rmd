@@ -85,5 +85,52 @@ Once the mounted samples are polished, they are ready to be analyzed.
 
 Having to mount numerous small samples together is tricky, but having all these samples in the same mount, plus the standards, will certainly save time during analysis!
 
+# Tips on mounting/polishing from Indian Government EPMA Lab
+
+From: The Indian Government EPMA lab [portal.gsi.gov.in]([http://www.portal.gsi.gov.in/gsiDoc/pub/updated%20sop%20for%20epma%20lab%202014.pdf)
+
+EPMA requires preparation of flat well-polished epoxy mounted
+sections. A brief protocol is provided here:
+
+1. Nearly any solid material can be analyzed. In most cases, samples are prepared as standard-size thin–polished sections, 46-48mm in length and 25 mm width and 1mm thick. The solid blocks should be 25 mm in diameter (inner circle) and should not be more than 15mm thick. It must be perfectly rounded and may be mounted either in bakelite or in PVC. Rectangular sections of rock or similar materials are most often prepared as 30-micron-thick sections without cover slips. Alternatively, 1-inch 3 cores can be polished. Chips or grains can be mounted in epoxy disks, then polished half way through to expose a cross-section of the material.
+
+![Bakelite mounted thin section](./img/rect-mounts.png)
+
+![Grains mounted in epoxy disks](./img/round-mounts.png)
+
+2. The most critical step prior to analysis is giving the sample a fine polish so that surface imperfections do not interfere with electron-sample interactions. This is particularly important for samples containing minerals with different hardness; polishing should yield a flat surface of uniform smoothness (see polishing instructions below). Good polish means good results.
+
+3. Most silicate minerals are electrical insulators. Directing an electron beam at the sample can lead to electrical charging of the sample, which must be dissipated. Prior to analysis, samples are typically coated with a thin film of a conducting material (carbon, gold and aluminum are most common) by means of evaporative deposition. Once samples are placed in a holder, the coated sample surface must be put in electrical contact with the holder (typically done with a conductive paint or tape). Choice of coating depends on the type of analysis to be done; for example, most EPMA chemical analysis is done on samples coated by C, which is thin and light enough that interference with the electron beam and emitted X-rays is minimal. Samples are loaded into the sample chamber via a vacuum interlock and mounted on the sample holders The sample chamber is then pumped to obtain a high vacuum.
+
+![EPMA mounts](./img/epma-mounts.png)
+
+5. To begin a microprobe session, suitable analytical conditions must be selected, such as accelerating voltage and electron beam current, and the electron beam must be properly focused. If quantitative analyses are planned, the instrument first must be standardized for the elements desired.
+
+The steps followed for Sample preparation are
+
+Stage 1: After finishing with 1000-mesh carborundum powder, start polishing with chrome oxide for about 30 minutes. During polishing, sample should be checked intermittently and depending upon the condition of the, if required, timing should be reduced.
+
+Stage 2: Polish with 6-micron diamond paste (DP) for 20 minutes.
+
+Stage 3: Polish with 3-micron DP for 20 minutes.
+
+Stage 4: Polish with 1-micron DP for 20 minutes
+
+Stage 5: Finally polish with 1⁄4 micron DP for 5 minutes.
+
+After each stage wash the slide thoroughly. Use separate cloth for each stage. However the above steps are suitable for fresh and hard rocks. Depending on the nature of sample, the polishing time should be reduced.
+
+## Pre-AnalysisStudies:
+
+Detailed petrographic study of the thin sections or polished stubs to be carried out to define the objectives of the study. For P-T estimates, mineral assemblage in equilibrium is to be identified and marked with coloured circles on the backside of the slide using OHP markers. Reaction textures, the reacting minerals and the products provide useful information on the petrogenesis and metamorphic evolution and need to be demarcated for microanalysis. Unidentified phases, zoned grains, accessory minerals and minute inclusions should also be carefully studied and marked for analysis
+
+![Marked sample Side 1](./img/marked-1.png)
+
+![Marked sample Side 2](./img/marked-2.png)
+
+After petrographic study, the thin sections are carbon coated in the separate carbon coating units for better conductivity. The thickness of coating may be around 20 nm.
+
+
+
 
 [Back to Index](../README.html)
