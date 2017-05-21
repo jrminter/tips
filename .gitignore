@@ -183,6 +183,12 @@ plagiarism/plagiarism.md
 plagiarism/plagiarism.html
 plagiarism/figure/
 
+# prepForEDS die
+prepForEDS/.DS_Store
+prepForEDS/prepForEDS.md
+prepForEDS/prepForEDS.html
+prepForEDS/figure
+
 # python directory
 python/.DS_Store
 python/python.md

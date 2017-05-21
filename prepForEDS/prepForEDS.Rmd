@@ -1,7 +1,7 @@
 ---
-title: "How do you mount several tiny samples together? Very carefully..."
-author: "Vanessa Muros, Conservation Specialist, UCLA/Getty Program"
-date: "2014-04-29"
+title: "Mounting and Polishing for EDS"
+author: "John Minter"
+date:  "`r format(Sys.time(), '%Y-%m-%d')`"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-blue-vignette.css
@@ -13,7 +13,9 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-This tip is archived from [UCLA/Getty Conservation Program](https://uclagettyprogram.wordpress.com/2014/03/29/mounting-small-samples/). It may be helpful for sample preparation for EDS.
+# Tips from the UCLA/Getty Conservation Program
+
+This document is archived from [UCLA/Getty Conservation Program](https://uclagettyprogram.wordpress.com/2014/03/29/mounting-small-samples/). It may be helpful for sample preparation for EDS. The original author was **Vanessa Muros**, Conservation Specialist, UCLA/Getty Program. It was published on 2014-04-29.
 
 We are all aware of how difficult it is to be able to take a sample from an artifact (both permission-wise and logistically) and when we need to, more often than not, the samples we take are extremely small.  Once we have our precious sample, we try to use as many examination and analytical techniques we can that are non-destructive to get the greatest amount of information from that one sample.  We may reach the point, however, where we need to use an analytical technique that may require the sample to be mounted, cut up or consumed, and we need to find ways to have the samples extend as far as possible through all the stages of investigation.
 
