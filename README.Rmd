@@ -91,6 +91,8 @@ Topic
 
 [Monte Carlo methods in R](./monteCarlo/monteCarlo.html)
 
+[Mounting Small Samples](./mountSmallSamples/mountSmallSamples.html)
+
 [MS Office](./msOffice/msOffice.html)
 
 [MySQL](./mysql/mysql.html)

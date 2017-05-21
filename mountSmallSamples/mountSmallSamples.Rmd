@@ -1,0 +1,87 @@
+---
+title: "How do you mount several tiny samples together? Very carefully..."
+author: "Vanessa Muros, Conservation Specialist, UCLA/Getty Program"
+date: "2014-04-29"
+output:
+  knitr:::html_vignette:
+    css: ../theme/jm-blue-vignette.css
+    number_sections: yes
+    toc: yes
+---
+[Back to Index](../README.html)
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+This tip is archived from [UCLA/Getty Conservation Program](https://uclagettyprogram.wordpress.com/2014/03/29/mounting-small-samples/). It may be helpful for sample preparation for EDS.
+
+We are all aware of how difficult it is to be able to take a sample from an artifact (both permission-wise and logistically) and when we need to, more often than not, the samples we take are extremely small.  Once we have our precious sample, we try to use as many examination and analytical techniques we can that are non-destructive to get the greatest amount of information from that one sample.  We may reach the point, however, where we need to use an analytical technique that may require the sample to be mounted, cut up or consumed, and we need to find ways to have the samples extend as far as possible through all the stages of investigation.
+
+In our lab, we’ve been working on several projects (focusing on Egyptian blue pigments, as well as archaeological glass from the Mediterranean and China) that require taking very small samples from archaeological objects. Most of us are at the stage in our research that require the samples to be mounted in epoxy and polished for various types of instrumental analysis.  Because we can only take very small samples (about a few millimeters in size) and we need to use several techniques (SEM-EDS, EPMA, SIMS, Raman), we’ve been trying to figure out the best way to prepare our samples so that they can be used for all the techniques that will be applied.   Since the analytical methods we want to use will all work on polished samples mounted in resin blocks, we decided to try and mount the samples this way. In order to make it easier and faster to analyze several mounted samples, we decided to place several of our samples in the same resin block.  Arranging the samples all in one mount, documenting them in a way so you know which sample is which and embedding and polishing them successfully is challenging enough. When you are mounting 10-16 samples, about a few mm wide, in a 1 inch diameter sample holder, it’s even more difficult!
+
+Before you start, it’s good to have all the supplies you need out at your work area, along with your samples. Using a binocular microscope is key to mounting such small samples. The materials/supplies we had for mounting our samples were: 
+
+- **the sample holder** (we embedded our samples in 1 inch diameter disc of epoxy resin and used a Teflon ring cut from a longer Teflon tube) as our sample holder
+- **tweezers**
+- **double-sided tape** (at least 1 inch wide)
+- **Mylar** (2-3 mil polyester film),
+- **a pen**
+- **small, hard portable, surface for mounting** (we used a small tile or piece of glass).
+
+Steady hands of course are essential.  No sneezing is allowed, and holding your breath for a bit may also be helpful when dealing with such small samples.  Of course don’t forget to eventually breathe-just not on your samples!.
+
+![Materials for mounting](./img/glass-sample1.jpg)
+
+Once we had our supplies and samples at the microscope, we did the following:
+
+1. We took our hard portable surface (in this case a small tile) and attached a piece of Mylar to the top of the tile using double sided tape.  The Mylar will act as a barrier and prevent the epoxy we use for mounting from adhering to the tile (if not it will be impossible to remove the mounted samples from the surface of the tile).
+2. In the center of the Mylar covered tile, we placed 2 pieces of double sided tape, making sure the taped area was larger than 1 inch in diameter.  The tape will be used to hold the samples (and then the Teflon ring) in place during mounting.
+3. We took the Teflon ring and placed it over the two pieces of tape and drew a line to mark the interior diameter.  This would help guide us in placing our samples on the tape, making sure they are positioned in the center of the ring.
+
+
+Now it’s time to take your samples and place them on the double sided tape.  Since we’re going to mount several samples, we placed our in rows, and tried to position them so they would fall within the center of the Teflon ring when mounted.  We marked the top of the Mylar to indicate orientation.  We also took notes and made a drawing to map where we were positioning the samples. Because some of the analysis we will be conducting will require quantitative analysis and the use of standards, we mounted small samples taken from a set of Corning Museum glass standards (A-D) we had in the lab along side our archaeological samples.
+
+![Positioning the small samples](./img/glass-sample2.jpg)
+
+
+Once we placed all our samples on the tape, we positioned the Teflon ring around them, on the guide lines we drew earlier.  Because the ring is made of Teflon, we don’t need to add any release agent because the epoxy resin won’t stick to it.
+
+
+![Particles in the Teflon ring](./img/glass-sample-ring.jpg)
+
+
+Now we’re ready to mix up and pour in the epoxy resin to embed the samples.  **We use Struer’s Epofix epoxy resin for mounting**.
+
+Even though the Teflon ring is well adhered to the double sided tape, there is the possibility that some of the resin might leak out from the bottom edge of the ring.  One way to avoid this is to seal the bottom edge of the Teflon ring.
+
+A couple things we’ve tried are:
+
+- putting tape along the bottom exterior edge of the Teflon ring  (in the image above we used blue masking tape)
+- putting plasticine or modeling clay along the bottom edge
+- or sealing the exterior bottom edge with latex (This is the one that worked best for me.  I brushed Latex #74 molding compound from Douglas and Sturgess around the bottom edge.  Once the latex was set, I mixed together the epoxy resin and poured it into the ring and.... no leaks!)
+
+When embedding our samples in resin, **we like to put them in a vacuum chamber after pouring in the epoxy to remove any air from the resin and the pores of our samples.**  This will ensure the samples are completely impregnated with epoxy.  This is particularly important with porous samples, such as some of the very weathered glass samples I was going to analyze.
+
+![Vacuum infiltration apparatus](./img/glass-sample-vacuum.jpg)
+
+![Sample infiltratation](./img/glass-sample-vacuum2.jpg)
+
+
+After the epoxy cures, the pressure is released from the vacuum and the tile/ring/mounted samples removed.
+
+![The mounted sample](./img/glass-sample-vacuum2.jpg)
+
+The Teflon ring can now be lifted off the Mylar and the mounted samples removed from the ring.  The final step is to polish the samples. **We start off with very fine grit sand paper (ranging from 600-1200 grit)** and **finish with [Buehler MetaDi Diamond polishing suspension](https://shop.buehler.com/consumables/grinding-polishing/diamond-polishing-suspension-paste/metadi-diamond-suspensions-pastes)**, first with **6 micron suspension** followed by polishing with the **1 micron suspension** as the final step. We want to make sure that the samples are exposed and that there are no scratches on the surface.
+
+![POlishing the specimen](./img/glass-sample-polishing.jpg)
+
+Once the mounted samples are polished, they are ready to be analyzed.
+
+![The finished specimen](./img/glass-sample-polished.jpg)
+
+![The mounted grains](./img/lofkend-samples.jpg)
+
+Having to mount numerous small samples together is tricky, but having all these samples in the same mount, plus the standards, will certainly save time during analysis!
+
+
+[Back to Index](../README.html)
