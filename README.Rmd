@@ -91,8 +91,6 @@ Topic
 
 [Monte Carlo methods in R](./monteCarlo/monteCarlo.html)
 
-[Mounting Small Samples](./mountSmallSamples/mountSmallSamples.html)
-
 [MS Office](./msOffice/msOffice.html)
 
 [MySQL](./mysql/mysql.html)
@@ -100,6 +98,8 @@ Topic
 [OS Package Links](./osPkgs/osPkgs.html)
 
 [plagiarism](./plagiarism/plagiarism.html)
+
+[Preparation of samples for EDS](./prepForEDS/prepForEDS.html)
 
 [python](./python/python.html)
 
