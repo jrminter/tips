@@ -73,6 +73,43 @@ He also noted:
 
 > We only use colloidal alumina nowadays.  In think we found it works better on most materials.
 
+# Tips from the UMASS Geology Microprobe lab (Michael Jercinovic)
+
+## For Petrographic thin sections or polished sections:
+
+1. Use mounting epoxy with low vapor pressure
+	 - Buehler Epoxide, Epo-thin
+	 - Petropoxy 154
+	 - Struers EpoFix		
+
+2. Important to polish surface flat (minimum relief)
+      - Flatness generally achieved with diamond polishing on low-nap cloths
+
+3. Eliminate visible scratches and pits if possible
+	 - High polish: 0.3-0.05 μm 
+	 - Generally finish with alumina – low nap
+	 - Can use colloidal silica polishing (chemical-mechanical,essential for EBSD)
+
+## Electron Microprobe Samples (thick samples)
+
+1. Generally encapsulated in low vapor pressure, hard-curing epoxy
+  - Buehler Epo-Thin
+  - Struers EpoFix, SpeciFix(can use conductive fillers)
+  - cut, and polished as above
+  - Porous materials can be vacuum-impregnated with low-viscosity epoxy
+  
+## Cleaning
+
+All samples should be as clean and dry as possible
+
+  1. 2-stage ultrasonic cleaning in clean water followed by isopropyl alcohol preferable
+  2. Quick acetone rinse
+  3. Final rinse in methanol, be sure there is no residue 		(use lint-free cloth)
+  4. Dry in oven, on hot plate, or in vacuum
+
+
+	
+
 
 
 # Tips from the UCLA/Getty Conservation Program
