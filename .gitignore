@@ -93,6 +93,7 @@ ggplot2UseCases/dat/*.png
 ggplot2UseCases/dat/png/*.png
 ggplot2UseCases/dat/pdf/*.pdf
 ggplot2UseCases/figure/
+ggplot2UseCases/dat/csv/PhiRhoZ-final.csv
 
 # ggvisIntro tips directory
 ggvisIntro/.DS_Store
