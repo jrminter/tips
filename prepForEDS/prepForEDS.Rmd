@@ -13,6 +13,68 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+# Tips from the **Probe Software Forum**
+
+[John Donovan](http://probesoftware.com/smf/index.php?topic=169.msg737#msg737) notes:
+
+> Seriously, I made hundreds of thin sections by hand at UCB when I was investigating blueschist minerals about 20 years ago. 
+>
+> I used SiC and Al~2~O~3~ powders on glass plates with water for the grinding and polishing. The only thing I used a mechanical device for that would have been difficult by hand is the thin section cutoff operation, after the "chip" is glued to the slide, to get it roughly 1 mm thick prior to hand grinding.
+
+In reply, "Probeman" notes:
+
+> The glass plates are just for a flat surface that can be rinsed easily to remove the grinding/polishing material from the previous steps. **The key is to use your finger pressure on the back of the glass to increase the grinding action on various areas of the thin section glass (which will bend very, very slightly to allow this) to bring the thickness down evenly over the whole section, given that different hardness materials are often in the same section.**
+> 
+> To judge the thickness of the section one would normally use a petrographic microscope, however, this device here which we use, is much easier for all hand thin section grinding because one can see the crossed polarizer view from arms length!
+
+
+[Andrew Mott](http://probesoftware.com/smf/index.php?topic=580.msg3310#msg3310) posed the following question that produced helpful answers (below).
+
+> Does anyone have a particular company they would recommend when it comes to diamond polish? I'm looking to purchase some 1, 6, and 9 um suspension/slurry. Also, has anyone here experimented with mono-crystalline vs poly-crystalline products - is there a significant difference in the final polish?
+
+**Owen Neill** notes:
+
+> I've had a lot of success with the Buehler MetaDI diamond suspensions. They're kind of expensive, so there may be a "generic" brand knock-off out there, but they work very well. 
+> 
+> Never experimented with the mono- vs. polycrystalline thing, but I can't imagine there would be much difference unless the polycrystalline grit breaks down faster over time. 
+
+
+**Malcolm Roberts** notes:
+
+> I use the Struers stuff myself. I buff my standards on a stack of filter paper and find the buehler stuff destroys the filter paper faster than the struers. My experiences over the years have pointed to no significant differences in the performance between brands. However, delving deep into the dark recesses of my memory makes me recall that the best polishing I ever got was using diamond pastes rather than slurries on laps lubricated with meths... (**JM note** methanol?)
+
+[Nick Bulloss](http://probesoftware.com/smf/index.php?topic=741.0)
+asked: 
+
+> I have a few standard blocks (mineral and pure elements) that need to be re-polished, cleaned and carbon coated. What polishing and cleaning methods have worked best for people? I had a suggestion of 1um diamond suspension for polishing (Peter McSwiggen). How do you best clean samples/standards without leaving any residue?
+
+**Dan MacDonald** responded:
+
+> I have tried a 0.25 micron aluminum oxide suspension on a fine silk lap and had fairly good results, after which I ultra-sonicate the standard block for several minutes and finish with a light rinse with methanol.  This method seems to work well with silicate mounts, but it isn't necessarily the best method for metal standards (especially Ti and Mg).  I am running into the same issues as you are with metal standards (e.g., the JEOL metals block), having tried methanol or ethanol as a suspension and rinsing agent.  Using an organic that is too reactive towards epoxy-based mounts can be disastrous, so it is best to try some of the solvent on the back side of the standard block first, to see if the solvent softens the epoxy at all.  One method I am toying with is using a dry-polish method using fine lapping films from [Lee Valley](http://www.leevalley.com/en/wood/page.aspx?p=68943&cat=1,43072) - they have 0.5 and 0.1 um diamond lapping film  .  I think this would work well, and I am going to give it a try with a standard mount that I don't use anymore.  I use this type of film to polish my hand-carving tools at home. 
+
+
+**Concrete** can be a problem.
+[Owen Neil](http://probesoftware.com/smf/index.php?topic=800.0) asked:
+
+> I was wondering if anyone out there had experience with polishing cement/concrete. To my knowledge, the concrete we are trying to polish is a typical mix of Portland-type cement and mineral aggregates (mostly quartz and feldspar, although EDS suggests there are other minerals present as well). 
+> 
+> So far, we have tried alumina, diamond, and SiC polishing compound, on paper and felt/cloth pads with a variety of naps, using both oil or H2O as lubricants. The problem we've encountered with every attempt so far is that minerals polish well, but the cement matrix does not polish at all, and the cement matrix is what my customers are interested in both imaging (at fine scales, looking for features unfortunately similar to polish marks) and probing. Any advice would be much appreciated.
+
+**Probeman** replied:
+
+> The world's expert (that I know of) on preparing/polishing cement or concrete samples is Tim Teague at UCB.
+> 
+> But at the UofO we've run a number of cement samples for ODOT for EPMA and EBSD and the only method we found that works is to do a final polish with colloidial silica or alumina on a Vibropolisher lap with some weight on the sample.
+> 
+> This not only gives an excellent flat smooth surface for EPMA but even for EBSD.
+
+He also noted:
+
+> We only use colloidal alumina nowadays.  In think we found it works better on most materials.
+
+
+
 # Tips from the UCLA/Getty Conservation Program
 
 This document is archived from [UCLA/Getty Conservation Program](https://uclagettyprogram.wordpress.com/2014/03/29/mounting-small-samples/). It may be helpful for sample preparation for EDS. The original author was **Vanessa Muros**, Conservation Specialist, UCLA/Getty Program. It was published on 2014-04-29.
