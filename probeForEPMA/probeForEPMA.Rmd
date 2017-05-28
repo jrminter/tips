@@ -1,0 +1,64 @@
+---
+title: "Probe For EPMA"
+author: "John Minter"
+date:  "`r format(Sys.time(), '%Y-%m-%d')`"
+output:
+  knitr:::html_vignette:
+    css: ../theme/jm-blue-vignette.css
+    number_sections: yes
+    toc: yes
+---
+[Back to Index](../README.html)
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Probe for EPMA is a commercial EPMA software package with demo packages,
+especially CalcZAF. I have long term interest. These are tips for use and
+sysadmin.
+
+
+# Key directories in my install
+
+## preferred install dir
+
+```
+C:\Apps\CalcZAF
+```
+
+This has programs and some data
+
+## Windows ProgramData
+
+```
+C:\ProgramData\Probe Software\Probe for EPMA 
+```
+
+**standard.mdb** goes in here, as do update installers. John Donovan
+occasionaly updates this file.
+
+## User data
+
+```
+C:\UserData
+```
+
+Has the following tree with data files
+
+![UserData tree](./img/UserData-tree.png)
+ 
+
+## UserImages
+ 
+ This would have images from the system
+ 
+ ```
+ C:\UserImages
+ ```
+
+Currently empty in my installs
+
+
+
+[Back to Index](../README.html)

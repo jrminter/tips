@@ -101,6 +101,8 @@ Topic
 
 [Preparation of samples for EDS](./prepForEDS/prepForEDS.html)
 
+[Probe for EPMA](./probeForEPMA/probeForEPMA.html)
+
 [python](./python/python.html)
 
 [python image processing with skimage](./skimage/skimage.html)

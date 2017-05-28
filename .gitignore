@@ -184,11 +184,17 @@ plagiarism/plagiarism.md
 plagiarism/plagiarism.html
 plagiarism/figure/
 
-# prepForEDS die
+# prepForEDS dir
 prepForEDS/.DS_Store
 prepForEDS/prepForEDS.md
 prepForEDS/prepForEDS.html
 prepForEDS/figure
+
+# probeForEPMA dir
+probeForEPMA/.DS_Store
+probeForEPMA/probeForEPMA.md
+probeForEPMA/probeForEPMA.html
+probeForEPMA/figure
 
 # python directory
 python/.DS_Store
