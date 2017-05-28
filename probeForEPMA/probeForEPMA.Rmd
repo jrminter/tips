@@ -22,6 +22,14 @@ especially CalcZAF. I have long term interest.
 There is a good [Getting Started with CalcZAF](http://probesoftware.com/smf/index.php?topic=81.msg292#msg292)
 by John Donovan on the Probe Software Forum.
 
+
+**Getting help**: Access the the Probe for EPMA User Reference manual by hitting the **F1** key in CalcZAF. **Note:** Win 10 does **not** support
+the old style **.hlp** files. The easiest thing to do is to copy
+**win32help.exe** from an old WinXP box to someplace in your path.
+**Caution:** these .hlp files are not secure, so only use files from
+sources you trust.
+
+
 # Sysadmin
 
 These are tips for use and
