@@ -15,7 +15,16 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 Probe for EPMA is a commercial EPMA software package with demo packages,
-especially CalcZAF. I have long term interest. These are tips for use and
+especially CalcZAF. I have long term interest. 
+
+# Getting started
+
+There is a good [Getting Started with CalcZAF](http://probesoftware.com/smf/index.php?topic=81.msg292#msg292)
+by John Donovan on the Probe Software Forum.
+
+# Sysadmin
+
+These are tips for use and
 sysadmin.
 
 
