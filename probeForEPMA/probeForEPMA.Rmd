@@ -39,6 +39,24 @@ Note that one can write input files (.dat) for each of these modes.
 Examples are shown below. Note that **each** of these assumes the
 example is the **first entry** in the **.dat** file (hence the first 0).
 
+## Key definitions
+
+CalcZAF and Probe for EPMA use several versions of **k-factors**.
+Happily, they provide some succinct definitions:
+
+![Defintions for **k-factor** and **k-ratio** - hinting at the subtleties](./img/k-ratios.png)
+
+![raw k-ratios](./img/raw-k-ratio.png)
+
+
+![unknown k-ratio](./img/unknown-k-ratio.png)
+
+
+and finally...
+![ZAF that puts it all together...](./img/ZAF.png)
+
+
+
 ## Basic Input - Pseudo Code example
 
 First some hints:
@@ -120,7 +138,6 @@ next i%
 
 ## Mode 2 - Calculates concentrations from "raw" k-ratios
 
-
 ```
 0,3,15,40.,”Fe2SiO4”
 
@@ -133,6 +150,13 @@ next i%
 "o","ka",1,0,895,0.0,1.09972,0.
 
 ```
+
+This is what the results look like:
+
+I need a clear summary of the difference between **standard k-factors** and
+**k-raw**.
+
+![Mode 2](./img/example-2-ana.png)
 
 # Mode 3 - calculates concentrations from normalized k-ratios
 
@@ -169,7 +193,7 @@ C:\ProgramData\Probe Software\Probe for EPMA
 ```
 
 **standard.mdb** goes in here, as do update installers. John Donovan
-occasionaly updates this file.
+occasionally updates this file.
 
 ## User data
 
