@@ -44,12 +44,12 @@ example is the **first entry** in the **.dat** file (hence the first 0).
 CalcZAF and Probe for EPMA use several versions of **k-factors**.
 Happily, they provide some succinct definitions:
 
-![Defintions for **k-factor** and **k-ratio** - hinting at the subtleties](./img/k-ratios.png)
+![Defintions for **k-factor** and **standard k-ratio**. Note that the latter is **ZAF corrected**!](./img/k-ratios.png)
 
-![raw k-ratios](./img/raw-k-ratio.png)
+![Raw k-ratios. This is what I normally associate with the term **k-ratio**.](./img/raw-k-ratio.png)
 
 
-![unknown k-ratio](./img/unknown-k-ratio.png)
+![Note thay the **unknown k-ratio** is also ZAF-corrected](./img/unknown-k-ratio.png)
 
 
 and finally...
