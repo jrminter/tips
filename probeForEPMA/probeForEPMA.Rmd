@@ -29,6 +29,122 @@ the old style **.hlp** files. The easiest thing to do is to copy
 **Caution:** these .hlp files are not secure, so only use files from
 sources you trust.
 
+# Calculation optionss
+
+Note the main CalcZAF screen layout below.
+
+![The CalcZAF main screen. Note the four computation options in the radio buttons near the body of the screen.](./img/MainScreenCalcZAF.png)
+
+Note that one can write input files (.dat) for each of these modes.
+Examples are shown below. Note that **each** of these assumes the
+example is the **first entry** in the **.dat** file (hence the first 0).
+
+## Basic Input - Pseudo Code example
+
+First some hints:
+
+Note 1:
+
+```
+CalcMode% = 0 for calculation of k-ratios from concentrations
+CalcMode% = 1 for calculation of concentrations from unknown and standard intensities
+CalcMode% = 2 for calculation of concentrations from "raw" k-ratios (no standard intensities necessary)
+CalcMode% = 3 for calculation of concentrations from "normalized" k-ratios (no standards necessary)
+```
+
+Note 2:
+
+```
+OxideorElemental%=1 calculate oxide output based on stoichiometry
+OxideorElemental%=2 calculate as elemental output (default)
+```
+
+
+
+**Note 3:** all strings (element symbols, etc.) must be in double
+quotes, elements not analyzed (specified concentrations or calculated)
+are indicated by a blank (empty double quotes) x-ray line string. If
+the element is a specified concentration, be sure to give the
+concentration in elemental weight percent for the
+`"ElmPercents!(I%)"` parameter and leave the count intensity
+fields zero.
+
+
+**Now the pseudo code...**
+
+```
+' Read calculation mode (0, 1, 2, or 3), number of elements, 
+' kilovolts and takeoff, (optional sample name)
+Input #3, CalcMode%, LastChan%, Kilovolts!, Takeoff!, (SampleName$)
+
+
+' Read oxide/elemental mode, difference, stoichiometry, relative
+Input #3, OxideOrElemental%, DifferenceElement$, StoichiometryElement$,  StoichiometryRatio!, RelativeElement$, RelativeToElement$, RelativeRatio!
+
+
+' Loop on each element
+For i% = 1 To LastChan%
+   Input #3, Elsyms$(i%), Xrsyms$(i%), NumCat%(i%), NumOxd%(i%), StdAssigns%(i%), ElmPercents!(i%), UnkCounts!(i%), StdCounts!(i%)
+next i%
+
+```
+
+
+**Now the examples...**
+
+## Mode 0 - Calc Intensities from weight concentrations
+
+```
+0,2,15,40.,”MgO K-ratio""
+
+2,"","",0.0,"","",0.0
+
+"mg","ka",1,1,0,60.0,0.0,0.0
+
+"o","ka",1,0,0,40.0,0.0,0.0
+```
+
+## Mode 1 - (calculates concentrations from unk and std intensities)
+
+```
+0,3,15,40.,”Fe2SiO4”
+
+2,"","",0.0,"","",0.0
+
+"fe","ka",1,1,895,0.0,7568.1,10265.7
+
+"si","ka",1,2,14,0.0,1329.4,5268.2
+
+"o","ka",1,0,895,0.0,2519.6,2498.1
+```
+
+## Mode 2 - Calculates concentrations from "raw" k-ratios
+
+
+```
+0,3,15,40.,”Fe2SiO4”
+
+2,"","",0.0,"","",0.0
+
+"fe","ka",1,1,895,0.0,.96283,0.
+
+"si","ka",1,2,914,0.0,.00003,0.
+
+"o","ka",1,0,895,0.0,1.09972,0.
+
+```
+
+# Mode 3 - calculates concentrations from normalized k-ratios
+
+```
+0,2,20,40.,”MgO”
+
+2,"","",0.0,"","",0.0
+
+"mg","ka",1,1,0,0.,.418853,0.0
+
+"o","ka",1,0,0,0.,.190763,0.0
+```
 
 # Sysadmin
 
