@@ -29,7 +29,7 @@ the old style **.hlp** files. The easiest thing to do is to copy
 **Caution:** these .hlp files are not secure, so only use files from
 sources you trust.
 
-# Calculation optionss
+# Calculation options
 
 Note the main CalcZAF screen layout below.
 
@@ -44,7 +44,7 @@ example is the **first entry** in the **.dat** file (hence the first 0).
 CalcZAF and Probe for EPMA use several versions of **k-factors**.
 Happily, they provide some succinct definitions:
 
-![Defintions for **k-factor** and **standard k-ratio**. Note that the latter is **ZAF corrected**!](./img/k-ratios.png)
+![Definitions for **k-factor** and **standard k-ratio**. Note that the latter is **ZAF corrected**!](./img/k-ratios.png)
 
 ![Raw k-ratios. This is what I normally associate with the term **k-ratio**.](./img/raw-k-ratio.png)
 
@@ -170,7 +170,7 @@ I need a clear summary of the difference between **standard k-factors** and
 "o","ka",1,0,0,0.,.190763,0.0
 ```
 
-# Sysadmin
+# System Administration
 
 These are tips for use and
 sysadmin.
