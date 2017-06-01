@@ -249,6 +249,29 @@ And this is what I obtained. Note that if one wanted to compute K-ratios from sp
 
 ![Output from our example simulation from Corning X glass with 20,000 trajectories](./img/penepma-output.png)
 
+And this is the output after an hour on the VM on my MacBook
+
+![Output from our example simulation from Corning X glass after 1 hr on my MacBook VM (3.38e5 trajectories)](./img/penepma-output-1hr.png)
+
+Note that the spectrum was output in
+
+```
+C:\UserData\Penepma12\Penepma\pe-spect-01.dat
+```
+
+The columns are:
+
+```
+ #  Whole spectrum. Characteristic peaks and background.
+ #  1st column: photon energy (eV).
+ #  2nd column: probability density (1/(eV*sr*electron)).
+ #  3rd column: statistical uncertainty (3 sigma).
+
+```
+
+I'm not certain how to convert to a peak intensity...
+
+There is the **pe-intens-01.dat** file that has the intensity of the characteristic lines... Think I'd get k-ratios from that... 
 
 # System Administration
 
