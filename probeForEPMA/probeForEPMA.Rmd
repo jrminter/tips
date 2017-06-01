@@ -288,11 +288,11 @@ Has the following tree with data files
 
 ## UserImages
  
- This would have images from the system
+This would have images from the system
  
- ```
- C:\UserImages
- ```
+```
+C:\UserImages
+```
 
 Currently empty in my installs
 
