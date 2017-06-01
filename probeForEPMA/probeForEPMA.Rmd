@@ -190,8 +190,17 @@ The image below shows how to run a basic simulation using **penepma12**
 
 2. Select a geometry and your input parameters and then
 **create the PENEPMA Input file**.
+
+
+Note the default input parameters:
+
+![**Note the large number of default trajectories (2.0e9) and the long simulation time (1.0e5 sec = 27.8 hrs!)** You probably want to change these to something like 2.0e4 trajectories and 3600 sec (1 hr). Do this **before!!** you press **Create PENEPMA input file.**](./img/penepma-default-input-par.png)
+
+
+
 Note it has a **.in** extension. Note that this is a text file that is well
 commented.
+
 
 ```
 TITLE  Characteristic X-ray Production Model
@@ -223,10 +232,9 @@ RESUME dump1.dat               [Resume from this dump file, 20 chars]
 DUMPTO dump1.dat                  [Generate this dump file, 20 chars]
 DUMPP  120                                   [Dumping period, in sec]
        .
-NSIMSH 2.0e+09                  [Desired number of simulated showers]
+NSIMSH 2.0e+04                  [Desired number of simulated showers]
 RSEED  1 1                     [Seeds of the random-number generator]
-TIME   100000                      [Allotted simulation time, in sec]
-
+TIME   3600                        [Allotted simulation time, in sec]
 ```
 
 3. Run the file.  Wait - it gives progress reports. For a single
@@ -237,9 +245,9 @@ the **.mat** file whcih is a text result file.
 copy to the clipboard. I check this with ImageJ. **It would be
 really cool to output the file in .msa format.**
 
-And this is what I obtained.
+And this is what I obtained. Note that if one wanted to compute K-ratios from spectra, it might be worth computing more trajectories... It would also be nice to be able to export these to **.msa** spectrum files to plot in DTSA-II with markers and make publication quality graphics with gnuplot... I think Probe for EPMA uses Surfer... 
 
-![Output from our example simulation](./img/penepma-output.png)
+![Output from our example simulation from Corning X glass with 20,000 trajectories](./img/penepma-output.png)
 
 
 # System Administration
