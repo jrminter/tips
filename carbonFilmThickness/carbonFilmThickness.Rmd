@@ -11,9 +11,10 @@ output:
 
 [Back to Index](../README.html)
 
-This was adapted and extended from a document by Dale Callaham from the
-Central Microscopy Facility at UMASS. Much of the material was summarized
-from the Microscopy Listserver.
+This was adapted and extended from a
+[document](https://www.bio.umass.edu/microscopy/CarbonFilmThicknessMethods.pdf) 
+by Dale Callaham from the Central Microscopy Facility at UMASS. Dale had
+summarized and commented on material from the Microscopy Listserver.
 
 **To Do**: Get Rob to make me a few Gold slides to be cut into chips.
 
