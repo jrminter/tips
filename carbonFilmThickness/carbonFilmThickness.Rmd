@@ -1,0 +1,177 @@
+---
+title: "Carbon film thickness determination"
+author: "John Minter"
+date:  "`r format(Sys.time(), '%Y-%m-%d')`"
+output:
+  knitr:::html_vignette:
+    css: ../theme/jm-blue-vignette.css
+    number_sections: yes
+    toc: yes
+---
+
+[Back to Index](../README.html)
+
+This was adapted and extended from a document by Dale Callaham from the
+Central Microscopy Facility at UMASS. Much of the material was summarized
+from the Microscopy Listserver.
+
+**To Do**: Get Rob to make me a few Gold slides to be cut into chips.
+
+# Information from Dr. [Hans Heijligers](mailto:H.J.M.Heijligers@TUE.NL).
+
+> In the first edition of "Electron Microprobe Analysis" of S.B.J.
+> Reed	(Cambridge University Press 1975) you can find the next table.
+> 
+> For Carbon on polished brass:
+
+
+| t [nm] | Color |
+|-------:|:------|
+| 15 | Orange |
+| 20 | Indigo red |
+| 25 | Blue |
+| 30 | Bluish green |
+| 35 | Green blue |
+| 40 | Pale green |
+| 45 | Silver gold |
+
+**Dale Calahan**  notes:
+
+> Indigo is considered an archaeic. It descibes a
+> color between violet (~400-440nm) and blue (~440nm-490nm).
+> 
+> **He cites Wikipedia**:
+> 
+> Wikipedia [indigo]: Indigo is the color on the electromagnetic spectrum
+> between about 450 and 420 nm in wavelength, placing it between blue and
+> violet. Color scientists do not usually recognize indigo as a significant
+> color category, and generally classify wavelengths shorter than
+> about 450 nm as violet.
+>
+> Indigo and violet are different from purple, which cannot be seen on the
+> electromagnetic spectrum but can be achieved by mixing mostly blue and
+> part red light.
+> 
+> One can see spectral indigo by looking at the reflection of a fluorescent
+> tube in a non-recordable compact disc. This works because the CD functions
+> as a diffraction grating, and a fluorescent lamp generally has a peak at
+> 435.833 nm (from mercury), as is visible on the fluorescent lamp spectrum.
+
+**Dr. Heijligers** notes:
+
+> We determined the thickness with our thin layer program and
+> found out that the values were very good. The table is not
+> found in newer editions of Reed's book.
+
+
+# Information from [Alwyn Eades](mailto:jae5@lehigh.edu)
+
+>  I agree with Jim Darley when he says
+>
+> "However, for most applications it is rather more convenient to determine
+> thickness at the time of coating with fairly good accuracy."
+>
+> What I find hard to understand is the assumption he and other contributors
+> to this thread have made that the interference color method allows you to
+> evaporate carbon of only one thickness. The brass (or in the method I
+> gave, **gold** ) test sample has always the same thickness of carbon but
+> the thickness of carbon on the sample can be what you like.
+>
+> The idea is that the brass/gold test piece is placed at a distance from
+> the source which is different from the distance between the source and the
+> sample to be coated. Then the thickness on the sample can be calculated
+> from the inverse square law. When I first used this technique, I used
+> it to apply a coating only 1 nm thick.
+>
+> **Principle**
+>
+> When carbon is deposited onto gold, it forms interference colors that
+> are well defined. They can be used to determine the thickness of the
+> carbon.
+> 
+> **Colors**
+>
+> If carbon is evaporated onto gold, as the thickness of the carbon increases,
+> the color changes through the following sequence: **gold, orange, red, blue,
+> grey.**  The change of color from red to blue ** is particularly sharp and
+> clear. The change of color from red to blue occurs when** the thickness of
+> the carbon is 24.0 nm +/- 0.5nm. This result was obtained by people at
+> Balzers using a multibeam interference technique for calibration.
+>
+>
+> **Details**
+>
+> 
+> 1. Take a glass slide (or any other suitable substrate) and evaporate onto
+> it a layer of gold. The thickness is not critical as long as the gold is
+> thick enough to give an **opaque film that looks like gold.**
+> Alternatively, **freshly polished brass**
+> is a very good approximation of a true gold substrate.
+>
+> 2. Mount the slide in the same chamber with the specimen to be coated with
+> carbon. The thickness of the carbon on the slide will be 24 nm (at the
+> specified color transition) so arrange the distance of the slide and the
+> sample so that (by the inverse square law) the desired thickness on
+> the sample will occur when the thickness on the slide is 24 nm.
+>
+> 3. Evaporate the carbon.  Stop the evaporation as the color changes form
+> red to blue. If you are using a normal arc for the carbon evaporation,
+> the light from the arc will allow you to see the colors.
+> **The bell jar will need to be reasonably clean.**
+>
+> **Example**
+> Suppose you need to deposit a carbon film of thickness T nm. Let d be the
+> distance from the carbon arc to the gold slide. Let D be the distance from
+> the carbon arc to the specimen. Then [d/D]squared = T/24.
+>
+> **Reference**: My thesis (1967).
+
+
+**Dale Calahan**  notes:
+
+> The Eades equation can be re-worked to a more useful form giving the
+> distance of the sample (D*) **relative to**  the distance to the
+> indicator polished brass disk (d). Note that the 24 in the equation
+> is the specified indicator transition thickness (a constant), and T
+> is the desired sample coating thickness. The distance **d** can be any
+> reasonable distance, and D will then be relative to that distance.
+>
+> For instance, if d is set to 10 cm and this is taken as the
+> "unit distance" then solving for a desired thickness of 6 nm
+> yields a value of 2.0 for D, or 20 cm actual distance from the
+> source.
+>
+> d/D = (T/24)^-2^
+>
+> and since d is taken as a relative "1.0" distance units, let D* be the proportional distance to sample:
+>
+> 1/D* = (T/24)^-2^ , and D* = ((t/24)^-2^)^-1^
+>
+> Checking this formula:
+
+| T (nm) | d (arbitrary unit) | D* | D (for d = 5cm) |
+|-------:|:-------------------|----|-----------------|
+| 24 | 1 | 1 | 5 cm (for same thickness, same distance)|
+| 6 | 1 | 2 | 10 cm (for 0.25 thickness, double distance) |
+| 3 | 1 | 2.8 | 14.14 cm |
+
+> D* is dimensionless proportional value
+>
+> **Notes**:
+>
+> - With small evaporator chambers be cautious of reflections changing the
+> results expected from the basic geometric relationships of these equations.
+>
+> - A larger value of d will require more mass of carbon to be evaporated,
+> but too small a value of d will make the transition colors on the indicator
+> disc progress too fast to control the thickness easily.
+>
+> - Substrates can be placed on slightly varying heights near the distance (d*D)
+> so that small variations in T are achieved within a run.
+> 
+> - A small indicator strip of white paper partially covered by the sample or
+> other mask gives a permanent grayscale record that can be taped into a
+> lab notebook.
+
+
+[Back to Index](../README.html)

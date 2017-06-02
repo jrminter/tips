@@ -11,7 +11,7 @@ strRel     <- '/tips/scripts'
 
 names <- c("Readme.Rmd",
            "AccessToSqlite.Rmd", "automater.Rmd", "AZtec.Rmd",
-           "C++11-Tips.Rmd",
+           "C++11-Tips.Rmd", "carbonFilmThickness.Rmd",
            "chntpw.Rmd", "color.Rmd", "ConductiveEpoxy.Rmd",
            "DiffractionLimit.Rmd", "dtsa2.Rmd",
            "EDAX.Rmd", "Excel.Rmd","fitness.Rmd", 
@@ -37,7 +37,7 @@ names <- c("Readme.Rmd",
 
 rPath <- c("../",
            "../AccessToSqlite", "../automater", 
-           "../AZtec", "../C++11",
+           "../AZtec", "../C++11", "../carbonFilmThickness", 
            "../chntpw", "../color", "../ConductiveEpoxy",
            "../DiffractionLimit", "../dtsa2",
            "../EDAX", "../Excel", "../fitness",
