@@ -23,7 +23,8 @@ There is a good [Getting Started with CalcZAF](http://probesoftware.com/smf/inde
 by John Donovan on the Probe Software Forum.
 
 
-**Getting help**: Access the the Probe for EPMA User Reference manual by hitting the **F1** key in CalcZAF. **Note:** Win 10 does **not** support
+**Getting help**: Access the the Probe for EPMA User Reference manual by
+hitting the **F1** key in CalcZAF. **Note:** Win 10 does **not** support
 the old style **.hlp** files. The easiest thing to do is to copy
 **win32help.exe** from an old WinXP box to someplace in your path.
 **Caution:** these .hlp files are not secure, so only use files from
@@ -48,18 +49,17 @@ Happily, they provide some succinct definitions:
 
 ![Raw k-ratios. This is what I normally associate with the term **k-ratio**.](./img/raw-k-ratio.png)
 
-
-![Note thay the **unknown k-ratio** is also ZAF-corrected](./img/unknown-k-ratio.png)
-
+![Note that the **unknown k-ratio** is also ZAF-corrected](./img/unknown-k-ratio.png)
 
 and finally...
+
 ![ZAF that puts it all together...](./img/ZAF.png)
 
 ## Working with Standards
 
-Probe for EPMA maintains a standard satabase that is very convenient to
+Probe for EPMA maintains a standard database that is very convenient to
 use when the standards have been set up. I found setting them up a bit 
-confusing at first. CalcZAF makes use of these for the computaions and
+confusing at first. CalcZAF makes use of these for the computations and
 it reduces repetitive input.
 
 To work with standards, one uses **both** the 
@@ -72,23 +72,22 @@ We'll start with the **New** function...
 See the example below.
 
 
-
-
 ### Creating and modifying standards
 
-In one of our labs in the Lehigh Quantitative Microanalysis course we wanted
-to create three standards for Ir~X~Si~Y~ intermetallics and to use one that
-had been verified by wet chemistry as a standard to analyze an unknowns to
-see if we could properly identify the unknown. In this case, we will set up
-the standard for the **Ir~3~Si~5~** intermetallic that will be used as 
-a standard in our computations.
+In one of our labs in the Lehigh Quantitative Microanalysis course we
+wanted to create three standards for Ir~X~Si~Y~ inter-metallic compounds
+and to use one that had been verified by wet chemistry as a standard to
+analyze an unknown to see if we could properly identify the unknown.
+
+In this case, we will set up the standard for the **Ir~3~Si~5~**
+inter-metallic that will be used as a standard in our computations.
 
 We create the standard from the **Standard.exe** program. When we start
-that proigram we need to choose a standard file. In this case we use the
-default, **standard.mdb**. The top menu bar has a **Standard** button that
-displays the following menu. 
+that program we need to choose a standard file. In this case we use the
+default, **standard.mdb**. The top menu bar has a **Standard** button
+that displays the following menu. 
 
-This get's us a dialog box that we can fill in. The figure below shows a
+This presents a dialog box that we can fill in. The figure below shows a
 complete box. Under the bottom of the red arrow is what the blank fields
 looks like. **Note:**  Compositions are in **weight percent** not weight
 fractions.
@@ -101,11 +100,12 @@ is shown below.
 
 ![The Ir element dialog. Choose the element and line from the boxes and add the weight fraction. One could choose a crystal for the probe.  For these calculations we can ignore this.](./img/Ir3S5-ep-box.png)
 
-We repeat the process for Si and then I computed an estimate of the density
-that was in the completed dialog above.
+We repeat the process for Si and then I computed an estimate of the
+density that was in the completed dialog above.
 
-Standard numbering is systematic for Probe for EPMA. For our use with CalcZAF
-we can assign non-assigned numbers. I'll figure out the convention later...
+Standard numbering is systematic for Probe for EPMA. For our use with
+CalcZAF we can assign non-assigned numbers. I'll figure out the
+convention later...
 
 **We repeat the process for all our standards for the run**.
 
@@ -117,13 +117,12 @@ from **CalcZAF** to **Add Standards To/From Run**.
 
 ![**CalcZAF** Add standards to/from run menu.](./img/calczaf-add-stds-to-run.png)
 
-So we can set up our analysis of our unkown as follows:
+So we can set up our analysis of our unknown as follows:
 
-First add the information for the unknown for **both** ir and Si and assign the standard:
+First add the information for the unknown for **both** Ir and Si and
+assign the standard:
 
 ![Assign the standard to both samples](./img/unknown-both-stds.png)
-
-
 
 ![Now we are ready to calculate...](./img/unknown-ready-to-calculate.png)
 
@@ -155,7 +154,7 @@ SAMPLE: 0, TOA: 40, ITERATIONS: 3, Z-BAR: 66.20833
 
 ```
 
-The totals are not too bad... I don't rememeber f(chi) being that bad...
+The totals are not too bad... I don't remember f(&Chi;) being that bad...
 
 And we can test the effect of models
 
@@ -283,7 +282,7 @@ Note that one starts Monte Carlo simulations from the **Standards.exe** window
 
 The image below shows how to run a basic simulation using **penepma12**
 
-![The basic procedure to run a simulation. It realy is as easy as 1, 2, 3, 4, 5...](./img/penepma-input.png)
+![The basic procedure to run a simulation. It really is as easy as 1, 2, 3, 4, 5...](./img/penepma-input.png)
 
 1. Create an input file. One may do it three ways:
 
@@ -344,13 +343,17 @@ TIME   3600                        [Allotted simulation time, in sec]
 
 3. Run the file.  Wait - it gives progress reports. For a single
 run the program automatically plots the spectrum. This outputs
-the **.mat** file whcih is a text result file.
+the **.mat** file which is a text result file.
 
 4. You will typically want to select a log scale. You can then 
 copy to the clipboard. I check this with ImageJ. **It would be
 really cool to output the file in .msa format.**
 
-And this is what I obtained. Note that if one wanted to compute K-ratios from spectra, it might be worth computing more trajectories... It would also be nice to be able to export these to **.msa** spectrum files to plot in DTSA-II with markers and make publication quality graphics with gnuplot... I think Probe for EPMA uses Surfer... 
+And this is what I obtained. Note that if one wanted to compute K-ratios
+from spectra, it might be worth computing more trajectories... It would
+also be nice to be able to export these to **.msa** spectrum files to
+plot in DTSA-II with markers and make publication quality graphics with
+gnuplot... I think Probe for EPMA uses Surfer... 
 
 ![Output from our example simulation from Corning X glass with 20,000 trajectories](./img/penepma-output.png)
 
@@ -380,8 +383,7 @@ There is the **pe-intens-01.dat** file that has the intensity of the characteris
 
 # System Administration
 
-These are tips for use and
-sysadmin.
+These are tips for use and sys-admin.
 
 
 # Key directories in my install
