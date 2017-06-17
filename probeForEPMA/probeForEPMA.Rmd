@@ -126,35 +126,65 @@ assign the standard:
 
 ![Now we are ready to calculate...](./img/unknown-ready-to-calculate.png)
 
-And we get....
+Before we run the model, let's look at the results using elemental
+standards...
 
 ```
-CalcZAF Sample () at 40 degrees and 15 keV
+CalcZAF Sample () at 40 degrees and 20 keV
 
 STANDARD PARAMETERS (TOA= 40):
 
  ELEMENT  STDNUM STDCONC STDKFAC   Z-BAR  ABSCOR  FLUCOR  ZEDCOR  ZAFCOR                  
-   Ir La    2843  78.245   .6800 63.2944   .9937  1.0000  1.1580  1.1506
-   Si Ka    2843  21.755   .2136 63.2944  1.3168   .9924   .7793  1.0185
+   Ir La     577  99.700   .9956 76.7930   .9997   .9999  1.0019  1.0014
+   Si Ka     514 100.000  1.0000 14.0000  1.0000  1.0000  1.0000  1.0000
 
  ELEMENT STP-POW BKS-COR   F(x)e   F(x)s      Eo      Ec   Eo/Ec
-   Ir La  1.1893   .9737   .9735   .9797   15.00 11.2150  1.3375
-   Si Ka   .6033  1.2918   .9056   .6877   15.00  1.8390  8.1566
+   Ir La  1.0030   .9989   .9459   .9462   20.00 11.2150  1.7833
+   Si Ka  1.0000  1.0000   .8503   .8503   20.00  1.8390 10.8755
 
-SAMPLE: 0, TOA: 40, ITERATIONS: 3, Z-BAR: 66.20833
+SAMPLE: 0, TOA: 40, ITERATIONS: 3, Z-BAR: 67.79354
 
  ELEMENT  ABSCOR  FLUCOR  ZEDCOR  ZAFCOR STP-POW BKS-COR   F(x)u      Ec   Eo/Ec    MACs uZAF/sZAF
-   Ir la   .9948  1.0000  1.1242  1.1183  1.1486   .9787   .9786 11.2150  1.3375 120.085  .9719211
-   Si ka  1.3418   .9919   .7678  1.0219   .5812  1.3211   .6749  1.8390  8.1566 1267.54  1.003356
+   Ir la   .9910   .9999  1.0789  1.0691  1.1233   .9604   .9545 11.2150  1.7833 122.499  1.067533
+   Si ka  1.5826   .9907   .7777  1.2193   .5790  1.3433   .5373  1.8390 10.8755 1295.53  1.219305
 
  ELEMENT   K-RAW K-VALUE ELEMWT% OXIDWT% ATOMIC% FORMULA KILOVOL                                        
-   Ir la 1.07200  .72900  81.523   -----  41.416   3.313   15.00                                        
-   Si ka  .77200  .16490  16.851   -----  58.584   4.687   15.00                                        
-   TOTAL:                 98.375   ----- 100.000   8.000
+   Ir la  .78920  .78570  83.997   -----  46.058   3.685   20.00                        
+   Si ka  .11790  .11790  14.376   -----  53.942   4.315   20.00                        
+   TOTAL:                 98.373   ----- 100.000   8.000
+
 
 ```
 
-The totals are not too bad... I don't remember f(&Chi;) being that bad...
+And we get....
+
+```
+CalcZAF Sample () at 40 degrees and 20 keV
+
+STANDARD PARAMETERS (TOA= 40):
+
+ ELEMENT  STDNUM STDCONC STDKFAC   Z-BAR  ABSCOR  FLUCOR  ZEDCOR  ZAFCOR                  
+   Ir La    2843  80.415   .7355 64.6615   .9884   .9999  1.1062  1.0933
+   Si Ka    2843  19.585   .1628 64.6615  1.5380   .9914   .7892  1.2033
+
+ ELEMENT STP-POW BKS-COR   F(x)e   F(x)s      Eo      Ec   Eo/Ec
+   Ir La  1.1660   .9487   .9459   .9570   20.00 11.2150  1.7833
+   Si Ka   .6025  1.3099   .8503   .5529   20.00  1.8390 10.8755
+
+SAMPLE: 0, TOA: 40, ITERATIONS: 3, Z-BAR: 67.28297
+
+ ELEMENT  ABSCOR  FLUCOR  ZEDCOR  ZAFCOR STP-POW BKS-COR   F(x)u      Ec   Eo/Ec    MACs uZAF/sZAF
+   Ir la   .9905   .9999  1.0833  1.0730  1.1303   .9585   .9549 11.2150  1.7833 123.777  .9814445
+   Si ka  1.5752   .9908   .7796  1.2166   .5828  1.3377   .5398  1.8390 10.8755 1308.24  1.011044
+
+ ELEMENT   K-RAW K-VALUE ELEMWT% OXIDWT% ATOMIC% FORMULA KILOVOL                                        
+   Ir la 1.07200  .78850  84.605   -----  44.484   3.559   20.00                        
+   Si ka  .77920  .12682  15.429   -----  55.516   4.441   20.00                        
+   TOTAL:                100.034   ----- 100.000   8.000
+
+```
+
+The totals has improved.... I don't remember f(&Chi;) being that bad...
 
 And we can test the effect of models
 
