@@ -13,6 +13,22 @@ output:
 
 # Key tricks
 
+## Energies for low energy L-l lines (L_II.III_) from light elements 
+
+These are from Bearden (1967).
+
+| Element | eV |
+|:--------|---:|
+| Na | 30.45 |
+| Mg | 49.3 |
+| Al | 72.4 |
+| Si | 91.5 |
+| P | 119.4 |
+| S | 148.7 |
+
+
+
+
 ## Database
 
 see [vogella.com](http://www.vogella.com/tutorials/ApacheDerby/article.html)
