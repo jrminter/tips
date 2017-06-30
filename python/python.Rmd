@@ -13,6 +13,11 @@ output:
 
 # Key conda commands
 
+**Note:** Sometimes the **conda update conda** command overwrites the miniconda
+symbolic link I use to switch between 64 bit and 32 bit miniconda installs. The
+solution is to delete the miniconda directory in C:/Apps and use the cmd files
+to re-create the symbolic link...
+
 I frequently need this list...
 
 - List conda environments **conda info -e**
