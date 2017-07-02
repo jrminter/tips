@@ -411,6 +411,16 @@ I'm not certain how to convert to a peak intensity...
 
 There is the **pe-intens-01.dat** file that has the intensity of the characteristic lines... Think I'd get k-ratios from that... 
 
+## Bilayer simulations
+
+Note [this](http://probesoftware.com/smf/index.php?topic=57.0) thread on the Probe software forum. Seems there was a bug...
+
+John Donovan suggests that the finished product shoul look like this:
+
+![John Donovan's example thin film simulation](./img/Penepma-Thin-film-MC.png)
+
+
+
 # System Administration
 
 These are tips for use and sys-admin.
