@@ -419,7 +419,9 @@ John Donovan suggests that the finished product shoul look like this:
 
 ![John Donovan's example thin film simulation](./img/Penepma-Thin-film-MC.png)
 
+An my implementation...
 
+![My simulation of a thin film of N-doped ZnO on Si](./img/JRM-penepma-thin-film-mc.png)
 
 # System Administration
 
