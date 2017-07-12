@@ -12,6 +12,12 @@ output:
 
 # Tips
 
+## A nice tip to install R etc from Homebrew
+
+**2017-07-12**
+
+Use [this](https://gist.github.com/pachamaltese/a789eb3bc96f33b47e5a1499481c0f4b) gist. See the blog post [here](http://pacha.hk/2017-07-12_r_and_gnu_tools_via_homebrew.html).
+
 ## Unison
 
 Unison is a great file synch tool. The preference files on the mac are in:
