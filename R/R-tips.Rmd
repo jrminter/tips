@@ -31,6 +31,12 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 # Don't forget...
 
+## Avoid rJava woes
+
+Under windows, rJava needs to have **jvm.dll** in the path. On
+my systems, it is best to add
+**C:\\Apps\\Java64\\jre8\\bin\\server** to the path...
+
 ## Key R-Markdown resources
 
 [R Notebooks](http://rmarkdown.rstudio.com/r_notebooks.html)
