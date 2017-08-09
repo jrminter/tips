@@ -36,6 +36,67 @@ library(pander)
 
 **Note:** For pander options see [rapporter.github.io](http://rapporter.github.io/pander/#pander-options).
 
+# Plot series from different dataframes
+
+Generally, ggplot2 examples show how to plot different series
+by melting a data frame. This is problematic when our X and
+Y values are on differen scales. Here is an example from some
+CASINO data.
+
+## Step 1: Load the data
+
+
+```{r}
+fi <-'./dat/csv/20nm-C-10nm-Ag-On-SiO2-5kV.csv'
+df10 <- read.csv(fi, header=TRUE, as.is=TRUE)
+panderOptions('table.alignment.default',
+              function(df) ifelse(sapply(df, is.numeric), 'right', 'left'))
+pander(head(df10))
+```
+
+
+```{r}
+fi <-'./dat/csv/20nm-C-30nm-Ag-On-SiO2-5kV.csv'
+df30 <- read.csv(fi, header=TRUE, as.is=TRUE)
+panderOptions('table.alignment.default',
+              function(df) ifelse(sapply(df, is.numeric), 'right', 'left'))
+pander(head(df30))
+```
+
+Note that these have different X-axis scalings. I will also try to
+scale the data by the ratio of the BSE coefficients (the data ie
+reported as **normalized hits** so the sum of the BSE = 1.0). Note
+how the data series are specified from different dataframes...
+
+
+```{r}
+
+scale = 0.300835/0.190755
+
+plt <- ggplot() +
+       geom_point(data=df10, aes(x=Z.nm, y=Hits),  
+                  colour="darkblue") + 
+       geom_point(data=df30, aes(x=Z.nm, y=scale*Hits), 
+                  colour="red") +
+       xlab("Depth [nm]") +
+       ylab("BSE hits") +
+       scale_x_continuous(breaks = seq(from = 0, to = 150, by = 25),
+                          limits = c(0,150)) +
+       scale_y_continuous(breaks = seq(from = 0, to = 0.030, by = 0.005),
+                          limits = c(0,0.030)) +
+       ggtitle("Monte Carlo model of C-coated Ag on glass at 5 kV") +
+       theme(axis.text=element_text(size=12),
+       axis.title=element_text(size=12),
+       plot.title=element_text(hjust = 0.5)) # center the title
+
+print(plt)
+
+
+```
+
+
+
+
 # Plot/fit data from processing EDS spectra
 
 In this case the spectra were simulated using DTSA-II [@Ritchie2011b].
