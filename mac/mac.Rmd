@@ -12,6 +12,12 @@ output:
 
 # Tips
 
+## Sublime Text
+
+```
+ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+```
+
 ## A nice tip to install R etc from Homebrew
 
 **2017-07-12**
