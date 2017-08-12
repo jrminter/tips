@@ -38,7 +38,6 @@ I needed this:
 ```
 # Python 3.6
 PATH=/Users/jrminter/miniconda3/bin:/Library/TeX/texbin:/usr/local/bin:/Users/jrminter/scripts:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
-# PATH=/usr/local/texlive/2014/bin/x86_64-darwin
 LATEX=/usr/local/texlive/2016/bin/x86_64-darwin/pdflatex
 WORK=/Users/jrminter/Documents/work
 ```
