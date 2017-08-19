@@ -15,19 +15,29 @@ format.
 > - Karl Broman
 
 
-Add a quickie: I **hate** the new Chome bookmark manager. Happliy we can turn it off. Thanks to [Jeff Kitchen](https://productforums.google.com/forum/#!topic/chrome/TVHpStVuxSc)
+**First**, two quickies: 
 
-> If you have sync enabled and include your bookmarks then the Disable Enhanced Bookmarks should not be an issue. 
+1. Automatically download all files in a directory
 
-> Type in the url window:
+	Let's also exclude all the `index.html` files... 
 
-```
+	```
+wget -r --no-parent --reject "index.html*" http://my/url
+	```
+
+2. I **hate** the new Chome bookmark manager. Happliy we can turn it off. Thanks to [Jeff Kitchen](https://productforums.google.com/forum/#!topic/chrome/TVHpStVuxSc)
+
+	> If you have sync enabled and include your bookmarks then the Disable Enhanced Bookmarks should not be an issue. 
+
+	> Type in the url window:
+
+	```
 chrome://flags/#enhanced-bookmarks-experiment
-```
+	```
 
-> Select disable (from Default) 
+	> Select disable (from Default) 
 
-> Restart your browser
+	> Restart your browser
 
 Topic
 
