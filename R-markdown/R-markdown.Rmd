@@ -34,6 +34,34 @@ rmarkdown::pandoc_convert("simple.docx", "markdown", output="simple.md")
 
 ```
 
+# Using python chunks and conda environments
+
+1. We can pass a specific python conda environment by using
+the knitr **engine.path** argument.
+
+For example, to use the conda environment **r-tensorflow**,
+we would use the following argument for **knitr**:
+
+```
+engine.path="C:/Apps/miniconda/envs/r-tensorflow/python"
+```
+
+2. Get rid of comment characters during printing
+
+We would use the following argument for **knitr**:
+
+```
+comment=NA
+```
+
+3. Supress annoying messages from **tensorflow**: Set the
+following **environment variable**
+
+```
+TF_CPP_MIN_LOG_LEVEL=2
+```
+
+
 # Key HTML and Unicode characters
 
 
