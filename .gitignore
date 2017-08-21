@@ -190,6 +190,12 @@ plagiarism/plagiarism.md
 plagiarism/plagiarism.html
 plagiarism/figure/
 
+# portableMakefiles directory
+portableMakefiles/.DS_Store
+portableMakefiles/portableMakefiles.md
+portableMakefiles/portableMakefiles.html
+portableMakefiles/figure/
+
 # prepForEDS dir
 prepForEDS/.DS_Store
 prepForEDS/prepForEDS.md
