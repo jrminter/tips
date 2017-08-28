@@ -11,6 +11,36 @@ output:
 
 [Back to Index](../README.html)
 
+# Key unusual packages
+
+## iversions
+
+the **iversions** package is a small package that implements
+listing of versions loaded by extending ipython magic commands.
+
+1. clone from git repository from [here](https://github.com/iamaziz/iversions.git)
+2, cd to the './git/iversions/iversions' directory
+3. install with **pip install iversions**
+4. use in ipython console or notebook with:
+
+```
+In [1]: %load_ext iversions
+
+In [2]: import numpy as np
+   ...: import pandas as pd
+   ...: import tensorflow as tf
+   ...: import os
+   ...: import sys
+
+In [3]: %iversions
+numpy       1.13.1
+pandas      0.20.3
+tensorflow  1.3.0
+
+Python 3.6.2 [Sun Aug 27, 2017 13:50:43]
+```
+
+
 # Key conda commands
 
 **Note:** Sometimes the **conda update conda** command overwrites the miniconda
