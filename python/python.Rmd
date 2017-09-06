@@ -113,7 +113,7 @@ activate py36
 conda install numpy scipy matplotlib seaborn
 conda install jupyter
 conda install spyder
-conda install mysql-connector-python pymysql
+conda install mysql-connector-python pymysql sqlite
 conda install pandas xlwt scikit-image bokeh nodejs datashader holoviews
 conda install -c conda-forge mahotas=1.4.3
 conda install sympy
