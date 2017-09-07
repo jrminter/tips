@@ -17,50 +17,50 @@ output:
 
 From the factory operating instruction manual (1985-07)
 
-With sputter head positioned on the chamber:
+With **SPUTTER** head positioned on the chamber:
 
-1. Turn on main power. Mechanical pump starts. Vent closes. ETCH
+1. Turn on main power. Mechanical pump starts. Vent closes. **ETCH**
 
-2. Let the chamber pump down to 30 mtorr or less. Push ETCH button. A click indicates the gas inlet valve has opened. The pressure will rise momentarily as the pulse of gas between the shutoff valve and needle valve is purged through the line.
+2. Let the chamber pump down to 30 mtorr or less. Push **ETCH** button. A click indicates the gas inlet valve has opened. The pressure will rise momentarily as the pulse of gas between the shutoff valve and needle valve is purged through the line.
 
-3. After the system pumps down to 50 mtorr, adjust the gas flow control knot so pressure rises to 125-150 mtorr. This is proper etch pressure.
+3. After the system pumps down to 50 mtorr, adjust the gas flow control knot so pressure rises to 125-150 mtorr. This is proper **ETCH** pressure.
 
 4. Move shutter knob C.W. to spread shutter, then move it C.C.W. to cover pedestal.
 
-5. Push START button (manual or timed). Bring current up to desired level. (Etching to remove surface contamination can be done at 5 milliamps for 30 seconds. No more than two LEDs should be lit when using the ETCH mode.)
+5. Push START button (manual or timed). Bring current up to desired level. (Etching to remove surface contamination can be done at 5 milliamps for 30 seconds. No more than two LEDs should be lit when using the **ETCH** mode.)
 
-6. The power turns off automatically when using the timed mode. If in manual mode, push STOP botton when sufficient etch time has elapsed.
+6. The power turns off automatically when using the timed mode. If in manual mode, push STOP botton when sufficient **ETCH** time has elapsed.
 
 ## Sputter
 
-7. The SPUTTER botton can be pushed after the completion of an ETCH run or after the system has just been turned on and pumped down. Again, you should hear a click as the SPUTTER button is pushed and the gas inlet valve opens.
+7. The **SPUTTER** botton can be pushed after the completion of an **ETCH** run or after the system has just been turned on and pumped down. Again, you should hear a click as the **SPUTTER** button is pushed and the gas inlet valve opens.
 
 8. Pump down system pressure and stabilize at about 50 mtorr by adjusting the gas flow control knob.
 
 9. Open shutter.
 
-10. Push MANUAL START button. Bring current up to 40 milliamps. Sputtering gold at 50 mtorr and 40 milliamps for 30 seconds will give a coating of 100 angstroms on a smooth surface. A very rough surface can require twice this amount of time.
+10. Push **MANUAL START** button. Bring current up to 40 milliamps. Sputtering gold at 50 mtorr and 40 milliamps for 30 seconds will give a coating of 100 angstroms on a smooth surface. A very rough surface can require twice this amount of time.
 
 
-11. Push the MANUAL STOP button to terminate the sputtering.
+11. Push the **MANUAL STOP** button to terminate the sputtering.
 
-12. Push main power OFF. The mechanical pump stops and the vent valve opens automatically to prevent pump backstreaming.
+12. Push main power **OFF**. The mechanical pump stops and the vent valve opens automatically to prevent pump backstreaming.
 
 ## Timed mode
 
 Once you have settled in on your desired settings of time, current and gas flow, you can operate in the timed mode for either etching or sputtering:
 
-1. Push Main Power ON and pump down to less than 30 mtorr.
+1. Push Main Power **ON** and pump down to less than 30 mtorr.
 
-2. Push SPUTTER or ETCH and allow system pressure to stabilize at 50 or 125 mtorr, respectively.
+2. Push **SPUTTER** or **ETCH** and allow system pressure to stabilize at 50 or 125 mtorr, respectively.
 
-3. Push TIMED START. The process will begin as the timer counts down from the preset value.
+3. Push **TIMED START**. The process will begin as the timer counts down from the preset value.
 
-4. At completion, push Main Power OFF.
+4. At completion, push Main Power **OFF**.
 
 ## Servicing
 
-If the chamber does not pump below 50 mtorr, check the position of the sputter head. It must seat on the top chamber gasket. Check that the pyrex cylinder is centered in the countersink of the baseplate. Check cleanliness of top and bottom gaskets. Clean with acetone and lint-free cloth and regrease. Check pyrex cylinder for chipping.
+If the chamber does not pump below 50 mtorr, check the position of the **SPUTTER** head. It must seat on the top chamber gasket. Check that the pyrex cylinder is centered in the countersink of the baseplate. Check cleanliness of top and bottom gaskets. Clean with acetone and lint-free cloth and regrease. Check pyrex cylinder for chipping.
 
 Check oil level. Check oil condition. Pump oil is changed by opening the drain at left side rear of cabinet. Pour 250 cc's of mechanical pump oil into the exhaust port to refill. Oil level is read accurately only when the pump is operating and pressure is lower than one torr.
 
@@ -70,10 +70,10 @@ a. That the circuit breaker on the back panel is up;
 
 b. That the fuse on the high voltage board is good;
 
-c. That the wires from the sputter head are connected to the high voltage board.
+c. That the wires from the **SPUTTER** head are connected to the high voltage board.
 
 The chamber should be cleaned when heavily coated. Remove gaskets from chamber, and wipe clean. Wash chamber with soft cloth and Ajax or similar cleaner. Rinse well with warm water and dry. Wipe with acetone. Install gaskets, apply vacuum grease very lightly to seal area.
 
-To change the sputter target, remove four screws from clamping ring. Remove ring and used target. Wipe aluminum plate and ring with acetone and a clean lint-free cloth. Center new sputter disc on aluminum plate between screw holes. Replace clamp ring and screws. Curved tweezers are handy to position screws, and a rubber finger cot is useful in centering the gold.
+To change the **SPUTTER** target, remove four screws from clamping ring. Remove ring and used target. Wipe aluminum plate and ring with acetone and a clean lint-free cloth. Center new **SPUTTER** disc on aluminum plate between screw holes. Replace clamp ring and screws. Curved tweezers are handy to position screws, and a rubber finger cot is useful in centering the gold.
 
 [Back to Index](../README.html)
