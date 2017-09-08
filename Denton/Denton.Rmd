@@ -61,7 +61,7 @@ baseplate.
 
 2. Turn on main power. Mechanical pump starts. Vent closes.
 
-##ETCH##
+##Etch
 
 3. Let the chamber pump down to 30 mtorr or less. Push **ETCH** button. A click indicates the gas inlet valve has opened. The pressure will rise momentarily as the pulse of gas between the shutoff valve and needle valve is purged through the line.
 
