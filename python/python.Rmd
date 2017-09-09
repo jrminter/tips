@@ -111,9 +111,9 @@ pip install .
 conda create -n py36 python=3.6
 activate py36
 conda install numpy scipy matplotlib seaborn
-conda install jupyter spyder
-conda install sqlite
-conda install mysql-connector-python pymysql
+conda install jupyter
+conda install spyder
+conda install mysql-connector-python pymysql sqlite
 conda install pandas xlwt scikit-image bokeh nodejs datashader holoviews
 conda install -c conda-forge mahotas=1.4.3
 conda install sympy

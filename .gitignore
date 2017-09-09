@@ -56,6 +56,12 @@ ConductiveEpoxy/ConductiveEpoxy.md
 ConductiveEpoxy/ConductiveEpoxy.html
 ConductiveEpoxy/figure/
 
+# Denton directory
+Denton/.DS_Store
+Denton/Denton.md
+Denton/Denton.html
+Denton/figure/
+
 # DiffractionLimit tips directory
 DiffractionLimit/.DS_Store
 DiffractionLimit/DiffractionLimit.md

@@ -1,0 +1,173 @@
+---
+title: "Denton Tips"
+author: "J. R. Minter"
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
+output:
+  knitr:::html_vignette:
+    css: ../theme/jm-blue-vignette.css
+    number_sections: yes
+    toc: yes
+---
+
+[Back to Index](../README.html)
+
+# Denton Desk II
+
+From the factory operating instruction manual (1985-07) which came
+with our coater and updates from PDF manual dated 2004-01-21.
+
+## General description
+
+The Denton Vacuum DESK II Cold Sputter/Etch Unit is designed to clean the
+surface of SEM specimens and to deposit heavy metal conductive coating on
+the clean surface. A standard 6” diameter Pyrex cylinder with top and bottom
+gaskets sits on an aluminum baseplate. The cylinder is evacuated by a
+**2 cfm, two-stage direct-drive mechanical pump** mounted within the cabinet. An
+insulated specimen table with provision for height adjustment is mounted within
+the Pyrex cylinder. The sputter cathode (gold is standard, Kodak uses Au/Pd)
+is clamped to an insulated aluminum plate in the chamber cover.
+
+The cabinet contains a DC power supply rated 0-1200V, 0-50 milliamps. The front
+control panel, left to right, has the process control push buttons: **ETCH**,
+**SPUTTER** and **OFF**. The gas flow control knob is beneath the red LED bar
+pressure indicator. Next are the **START**/**STOP** buttons for manual
+operation. The current adjust knob is beneath the red LED bar power indicator.
+The preset timer controls the timed operation. In automatic mode, the numerical
+display shows time in seconds remaining. In manual mode, it shows time elapsed.
+The START/STOP buttons control the timed operation.
+
+The main power switch is on the lower right side of the cabinet. It controls
+power to the unit and also activates the vent valve. The vent valve closes when
+the mechanical pump starts and opens when the pump stops.
+
+When the **SPUTTER** or **ETCH** button is pushed, a gas bleed opens 
+automatically to flush the chamber and to prevent backstreaming. The bleed 
+is adjusted by a needle valve (the gas flow control knob). High voltage is
+available only when the sputter chamber pressure is less than one Torr.
+
+The gas connection is for 1/8" inside diameter high vacuum type hose at the
+upper rear right of the cabinet. **Argon is recommended**. The argon cylinder
+should have a pressure reducing regulator to provide **2 to 10 psig** to the
+unit. **Tygon tubing is suitable for use.**
+
+## Operation
+
+With **SPUTTER** head positioned on the chamber:
+
+1. Clean baseplate and gaskets using acetone and a lint free cloth. Grease
+gaskets very lightly if needed. Sufficient grease has been applied when a
+finger is barely able to slide around the gasket. Place the chamber on the
+baseplate.
+
+2. Turn on main power. Mechanical pump starts. Vent closes.
+
+##Etch
+
+3. Let the chamber pump down to 30 mtorr or less. Push **ETCH** button. A click indicates the gas inlet valve has opened. The pressure will rise momentarily as the pulse of gas between the shutoff valve and needle valve is purged through the line.
+
+4. After the system pumps down to 50 mtorr, adjust the gas flow control knot so pressure rises to 125-150 mtorr. This is proper **ETCH** pressure.
+
+5. Move shutter knob C.W. to spread shutter, then move it C.C.W. to cover pedestal.
+
+6. Push **START** button (manual or timed). Bring current up to desired level. (Etching to remove surface contamination can be done at 5 milliamps for 30 seconds. No more than two LEDs should be lit when using the **ETCH** mode.)
+
+7. The power turns off automatically when using the timed mode. If in manual mode, push STOP botton when sufficient **ETCH** time has elapsed.
+
+## Sputter
+
+7. The **SPUTTER** botton can be pushed after the completion of an **ETCH** run or after the system has just been turned on and pumped down. Again, you should hear a click as the **SPUTTER** button is pushed and the gas inlet valve opens.
+
+8. Pump down system pressure and stabilize at about 50 mtorr by adjusting the gas flow control knob.
+
+9. Open shutter.
+
+10. Push **MANUAL START** button. Bring current up to 40 milliamps. Sputtering gold at 50 mtorr and 40 milliamps for 30 seconds will give a coating of 100 angstroms on a smooth surface. A very rough surface can require twice this amount of time.
+
+
+11. Push the **MANUAL STOP** button to terminate the sputtering.
+
+12. Push main power **OFF**. The mechanical pump stops and the vent valve opens automatically to prevent pump backstreaming.
+
+## Timed mode
+
+Once you have settled in on your desired settings of time, current and gas flow, you can operate in the timed mode for either etching or sputtering:
+
+1. Push Main Power **ON** and pump down to less than 30 mtorr.
+
+2. Push **SPUTTER** or **ETCH** and allow system pressure to stabilize at 50 or 125 mtorr, respectively.
+
+3. Push **TIMED START**. The process will begin as the timer counts down from the preset value.
+
+4. At completion, push Main Power **OFF**.
+
+## Servicing
+
+If the chamber does not pump below 50 mtorr, check the position of the **SPUTTER** head. It must seat on the top chamber gasket. Check that the pyrex cylinder is centered in the countersink of the baseplate. Check cleanliness of top and bottom gaskets. Clean with acetone and lint-free cloth and regrease. Check pyrex cylinder for chipping.
+
+### Pump 
+
+Mechanical pump oil should be changed annually or whenever it becomes
+contaminated. Check oil level and condition. If the oil appears cloudy
+or brownish, it needs changing. The oil is changed by opening the drain
+at left side rear of cabinet.
+
+**Caution!** Do not attempt to re-align, or move drain valve in
+either direction. Metal casting will be damaged. Use plastic tubing
+if necessary to facilitate drawing.
+
+Pour 270 cc's of mechanical pump oil **into the exhaust port**  to refill.
+
+Oil level is read accurately only when the pump is operating and pressure
+is lower than one torr. The sight glass should be 3/4 full.
+
+### Cleaning
+
+The chamber should be cleaned when heavily coated. Remove gaskets from chamber, and wipe clean. Wash chamber with soft cloth and Ajax or similar cleaner. Rinse well with warm water and dry. Wipe with acetone. Install gaskets, apply vacuum grease very lightly to seal area.
+
+### Sputter target
+
+To change the sputter target, remove four screws from clamping ring.
+Remove ring and used target. Wipe aluminum plate and ring with acetone
+and a clean lint free cloth. Center new sputter disc on
+aluminum plate between screw holes. Replace clamp ring and screws.
+Curved tweezers are handy to position screws; a rubber finger cot is useful
+in centering the target.
+
+### Trouble shooting
+
+If you cannot get sputtering or etching current, check:
+
+a. That the circuit breaker on the back panel is up;
+
+b. That the fuse on the high voltage board is good;
+
+c. That the wires from the **SPUTTER** head are connected to the high
+voltage board.
+
+If the plasma is flickering during sputtering, the problem is a high
+voltage short in the system from coating across insulated areas.
+
+1. If during etching, then take the pedestal apart and clean the Teflon disc.
+2. If during sputtering, the sputterhead must be taken apart and the thin Teflon disc cleaned.
+
+Call the factory if guidance is needed in this area.
+
+## Suggested Spares
+
+| CLC PART NUMBER | DESCRIPTION |
+|:----------------|:------------|
+| OIL001-0007 | OIL |
+| TAR001-0026 | GOLD TARGET |
+| TAR001-0029 | GOLD-PALLADIUM TARGET | 
+| TAR001-0030 | PLATINUM TARGET |
+| VA0002-0016 | THERMOCOUPLE TUBE DV-23 |
+| FUS001-0023 | 5 AMP FUSE. SLOW BLOW |
+| FUS001-0049 | 2 AMP FUSE. SLOW BLOW |
+| FUS001-0022 | 10 AMP FUSE, SLOW BLOW |
+| PMP007-0016 | MIST FILTER |
+
+
+
+
+
+[Back to Index](../README.html)
