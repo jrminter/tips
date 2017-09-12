@@ -102,6 +102,7 @@ install_new('imager')
 install_new('revealjs')
 install_new('ReporteRs')
 
+install_new('RSQLite')
 install_new('RMySQL')
 install_new('pryr')
 install_new('nycflights13')
@@ -128,7 +129,8 @@ install_new('numbers')
 install_new('rbenchmark')
 install_new('doSNOW')
 
-install_new('RGtk2')
+# install_new('RGtk2')
+# see BFI for mac
 
 install_new('PerformanceAnalytics')
 
@@ -202,3 +204,4 @@ install_new_github('rWrapStrataGem','jrminter')
 devtools::install_github("hadley/modelr") #still experimental
 devtools::install_github('WinVector/WVPlots',build_vignettes=TRUE)
 devtools::install_github("rstudio/bookdown")
+devtools::install_github("ThinkR-open/remedy")
