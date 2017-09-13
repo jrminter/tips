@@ -9,34 +9,103 @@ output:
     toc: yes
 ---
 
-# test
+## Set packages and limits
 
-```{r, echo=FALSE}
+```{r, setLimits, warning=FALSE}
+library(ggplot2)
 
-fi <- './dat/csv/Beam-Meas-SiK-100s-2016-10-15.csv'
-df <- read.csv(fi, header = TRUE, as.is=TRUE)
-e0 <- df$e0
-mu  <- round(df$si.ka.cts.mu/(df$lt.s*df$pc.na),2)
-un  <- round(mu*df$si.ka.cts.s/df$si.ka.cts.mu, 2)
-sca <- 7.0
-lcl <- (mu - sca*1.96*un)
-ucl <- (mu + sca*1.96*un)
-
-df
-
-df2 <- data.frame(e0=e0, mu=mu, lcl=lcl, ucl=ucl)
-df2
+xMaxLim   <- 16
+yMaxLim   <- 3000
+xPredStep <- 0.02
+deltaX    <- 2
+deltaY    <- 1000
+savPlt    <- FALSE
+lSize     <- 1
 ```
 
-make a plot
+## Load data
 
-```{r}
-library(ggplot2)
-# pd <- position_dodge(0.1) # move them .05 to the left and right
 
-ggplot(df2, aes(x=e0, y=mu, colour='red')) + 
-    geom_errorbar(aes(ymin=lcl, ymax=ucl), width=.2, colour='red') +
-    geom_line(colour='blue') +
-    geom_point(colour='black')
+```{r, LoadData, echo=FALSE}
+fi <- './dat/csv/sample-1.csv'
+df1 <- read.csv(fi, header = TRUE, as.is=TRUE)
+fi <- './dat/csv/sample-2.csv'
+df2 <- read.csv(fi, header = TRUE, as.is=TRUE)
+```
+
+## Fit the Sample 1 Coulter data to a Gaussian and calculate a prediction
+
+```{r, fitS1}
+res1 <- nls( cts ~ k*exp(-1/2*(um-mu)^2/sigma^2),
+             start=c(mu=5,sigma=5,k=1000), data = df1)
+
+um <- seq(from=0.0, to=xMaxLim, by=xPredStep)
+df1P <- data.frame(um=um)
+df1P$cts <- predict(res1, newdat=df1P)
+```
+
+## Look at the results of the fit
+
+```{r, fitS1summary}
+
+v1 <- summary(res1)$parameters[,"Estimate"]
+print(v1)
+```
+
+## Fit the Sample 2 Coulter data to a Gaussian and calculate a prediction
+
+```{r, fitS2}
+res2 <- nls( cts ~ k*exp(-1/2*(um-mu)^2/sigma^2),
+             start=c(mu=5,sigma=5,k=1000), data = df2)
+
+um <- seq(from=0.0, to=xMaxLim, by=xPredStep)
+df2P <- data.frame(um=um)
+df2P$cts <- predict(res2, newdat=df2P)
+```
+
+## Look at the results of the fit
+
+```{r, fitS2summary}
+
+v2 <- summary(res2)$parameters[,"Estimate"]
+print(v2)
+```
+
+
+## Make a plot
+
+```{r, makePlot, warning=FALSE}
+maxCts = max(df1$cts, df2$cts)
+
+
+plt <- ggplot() +
+       geom_point(data=df1, aes(x=um, y=cts),  colour="darkblue") + 
+       geom_line(data=df1P, aes(x=um, y=cts),
+                 colour='darkblue', size=lSize) +
+       geom_point(data=df2, aes(x=um, y=cts),  colour="red") +
+       geom_line(data=df2P, aes(x=um, y=cts),
+                 colour='red', size=lSize) +
+       xlab("size [microns]") +
+       ylab("counts") +
+       scale_x_continuous(breaks = seq(from = 1, to = xMaxLim, by = deltaX),
+                          limits = c(1, xMaxLim)) +
+       scale_y_continuous(breaks = seq(from = 0, to = yMaxLim, by = deltaY),
+                          limits = c(0, yMaxLim)) +
+       ggtitle("Particle Size (Coulter)") +
+       annotate("text", label = 'Sample 1',
+                x = 13, y = 2800,
+                size = 5, colour = "darkblue") +
+       annotate("text", label = 'Sample 2',
+                 x = 13, y = 2500,
+                 size = 5, colour = "red") +
+       annotate("text", label = 'credit: Coworker',
+                 x = 15, y = 200,
+                 size = 3, colour = "black") +
+       theme(axis.text=element_text(size=12),
+       axis.title=element_text(size=12),
+       plot.title=element_text(hjust = 0.5)) # center the title
+
+
+print(plt)
 
 ```
