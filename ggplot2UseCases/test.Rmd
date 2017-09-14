@@ -52,6 +52,34 @@ v1 <- summary(res1)$parameters[,"Estimate"]
 print(v1)
 ```
 
+## Let's try a function
+
+This is the BF&I approach...
+
+```{r, fitS1function}
+mu <- v1[1]
+sigma <- v1[2]
+k <- v1[3]
+
+f <- function(x){
+	cts <- k*exp(-1/2*(x-mu)^2/sigma^2)
+	cts
+}
+
+um <- seq(from=0.0, to=xMaxLim, by=0.001)
+cts <- as.vector(sapply(um, f))
+
+dfFun <- data.frame(um=um, cts=cts)
+
+pf <- ggplot() +
+      geom_line(data=dfFun, aes(x=um, y=cts),  size=1.25, colour="darkblue")
+
+pf
+```
+
+
+
+
 ## Fit the Sample 2 Coulter data to a Gaussian and calculate a prediction
 
 ```{r, fitS2}
