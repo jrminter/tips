@@ -31,4 +31,21 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 # Vacuum Pump maintenance
 
+## Video resources
+
+[FlinnScientific](https://www.youtube.com/watch?v=bxALRiN1_Tk) has a helpful
+short You-Tube video on basic roughing pump maintenance.
+
+**Angus Willis**
+
+1. [Oil change](https://www.youtube.com/watch?v=hAXxhfei1SQ).
+2. [Finding leaks](https://www.youtube.com/watch?v=z87pe-NjS8k).
+3. [Shaft seal replacement](https://www.youtube.com/watch?v=gQ0rLPPDGqI).
+4. [Forced priming](https://www.youtube.com/watch?v=EmWvEeelps0).
+
+
+
+
+The [randombio](http://www.randombio.com/e2m30.html) written instructions.
+
 [Back to Index](../README.html)
