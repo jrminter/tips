@@ -1,0 +1,34 @@
+---
+title: "Vacuum Tips"
+author: "J. R. Minter"
+date: "`r format(Sys.time(), '%Y-%m-%d')`"
+output:
+  knitr:::html_vignette:
+    css: ../theme/jm-blue-vignette.css
+    number_sections: yes
+    toc: yes
+---
+
+```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
+# make this an external chunk that can be included in any file
+library(knitr)
+options(width = 72)
+opts_chunk$set(message = F, error = F, warning = F, comment = NA, fig.align = 'center', dpi = 100, tidy = F, cache.path = '.cache/', fig.path = 'figure/')
+
+options(xtable.type = 'html')
+knit_hooks$set(inline = function(x) {
+  if(is.numeric(x)) {
+    round(x, getOption('digits'))
+  } else {
+    paste(as.character(x), collapse = ', ')
+  }
+})
+knit_hooks$set(plot = knitr:::hook_plot_html)
+```
+
+
+[Back to Index](../README.html)
+
+# Vacuum Pump maintenance
+
+[Back to Index](../README.html)

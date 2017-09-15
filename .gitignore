@@ -350,11 +350,17 @@ tex/tex-tips.md
 tex/tex-tips.html
 tex/figure/
 
-# win tips directory
+# ubuntu tips directory
 ubuntu/.DS_Store
 ubuntu/ubuntu.md
 ubuntu/ubuntu.html
 ubuntu/figure/
+
+# vacuum tips directory
+vacuum/.DS_Store
+vacuum/vacuum.md
+vacuum/vacuum.html
+vacuum/figure/
 
 # tex tips directory
 VS2010/.DS_Store
