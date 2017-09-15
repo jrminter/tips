@@ -29,7 +29,20 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 [Back to Index](../README.html)
 
+# Edwards pump capacities
+
+| Model | speed (cfm) | ult. pressure (torr) |
+|------:|------------:|---------------------:|
+| E2M8 | 6 | 7.5 X 10^-4^ |
+| E2M12 | 8 | 7.5 X 10^-4^ |
+| E2M18 | 14.7 | 7.5 X 10^-4^ |
+| RV8 | 5.8 | 7.5 X 10^-4^ |
+| RV12 | 8.35| 7.5 X 10^-4^ |
+
+N.B.: The cubic meters per hour unit number 1.70 m3/h converts to 1 cu ft/min, one cubic foot per minute.
+
 # Vacuum Pump maintenance
+
 
 ## Video resources
 
@@ -47,6 +60,35 @@ short You-Tube video on (very) basic roughing pump maintenance.
 ## Written instructions
 
 
-The [randombio](http://www.randombio.com/e2m30.html) written instructions.
+1. The [randombio](http://www.randombio.com/e2m30.html) written instructions.
+2. A very detailed tear down by [pcmeiners](https://www.eevblog.com/forum/reviews/edwards-e2m12-vacuum-pump-rebuild-overhaul-cleanup/).
+3. A teardown of a [contaminated](https://www.eevblog.com/forum/reviews/tear-down-edwards-rv-8-dual-stage-vacuum-pump/) pump.
+
+
+## Service providers
+
+1. [Duniway Stockroom](https://www.duniway.com/catalog/mech-pumps/mechanical-pump-service) offers a mechanical pump rebuild service. Note the disclaimer: "Prices assume pumps require only minor rebuild. Upon inspection, we will notify customer if major rebuild is needed and quote accordingly." On 2017-09-15 the base cost for an E2M8 was \$675 and an E2M18 was \$750. Note that they had a rebuilt E2M18 for $1900. They also have a note that "For an additional charge, standard or chemical series pumps can be prepped for inert fluid."
+
+This is a full description of Duniway's service:
+
+> Duniway Stockroom Corporation performs repair and rebuilding services for a
+> wide variety of mechanical pumps. All pumps are rebuilt at our location in
+> Fremont, CA and each leaves with our one year warranty against defective
+> parts and workmanship. Pumps taken in for a complete rebuild undergo the
+> following process:
+>
+> - Disassembly, inspection and cleaning.
+> - Total replacement of all seals, gaskets, springs, o-rings and valves.
+> (Minor kit)
+> - All other parts replaced as required, with customer approval, for an extra
+> charge.
+> - Two or more changes of hydrocarbon oil.
+> - Complete test run for 24 hours.
+> - Thorough draining and cleaning.
+> - Exterior painting and a final tagging of rebuild information.
+> - For an additional charge, standard or chemical series pumps can be
+> prepped for inert fluid
+
+
 
 [Back to Index](../README.html)
