@@ -17,6 +17,10 @@ This is a work in progress.
 
 # Capture thoughts for enhancements at the top...
 
+## Designing conceptual plots
+
+This [example](https://github.com/andrewheiss/supply-demand-ggplot) by Andrew Heiss is excellent!
+
 ## Adding functions
 
 This is a work in progress. Some resources for later
