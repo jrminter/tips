@@ -205,3 +205,4 @@ devtools::install_github("hadley/modelr") #still experimental
 devtools::install_github('WinVector/WVPlots',build_vignettes=TRUE)
 devtools::install_github("rstudio/bookdown")
 devtools::install_github("ThinkR-open/remedy")
+devtools::install_github("crsh/citr")
