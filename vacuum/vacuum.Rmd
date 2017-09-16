@@ -39,7 +39,7 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 | RV8 | 5.8 | 7.5 X 10^-4^ |
 | RV12 | 8.35| 7.5 X 10^-4^ |
 
-N.B.: The cubic meters per hour unit number 1.70 m3/h converts to 1 cu ft/min, one cubic foot per minute.
+N.B.: The cubic meters per hour unit number 1.70 m^3^/h converts to 1 cu ft/min, one cubic foot per minute.
 
 # Vacuum Pump maintenance
 
