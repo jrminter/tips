@@ -11,7 +11,22 @@ output:
 
 [Back to Index](../README.html)
 
-# Key unusual packages
+# Hints for key packages
+
+## pandas
+
+Pandas provides a dataframe structure and is useful for
+many applications. There are some "gotchas". Here are
+some helpful links I want to keep...
+
+- [10 Minutes to pandas](https://pandas.pydata.org/pandas-docs/stable/10min.html)
+The official intro...
+
+- [Wei-Ching Lin's](http://www.elasticmining.com/post/2015-12-24/gochas-using-pandas.html)
+examples of unexpected behavior ("gotchas") encountered when using pandas.
+
+
+
 
 ## iversions
 
