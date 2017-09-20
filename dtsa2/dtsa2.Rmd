@@ -26,6 +26,37 @@ These are from Bearden (1967).
 | P | 119.4 |
 | S | 148.7 |
 
+## For spectrum rename
+
+| Symbol  | Description  |
+|:--------|:-------------|
+| \$I\$ | Index |
+| \$ACQ\$ | Acqusition date and time |
+| \$E0\$ | kV |
+| \$I0\$ | probe current |
+| \$CLIENT\$ | client |
+| \$SPOT\$ | spot size | 
+| \$DT\$ | dead time | 
+| \$DET\$ | detector |  
+| \$INST\$ | instrument | 
+| \$OPER\$ | operator | 
+| \$LT\$ | live time | 
+| \$COMP\$ | composition | 
+| \$OCR\$ | output count rate | 
+| \$PA\$ | | 
+| \$PROJ\$ | project | 
+| \$PPS\$ | | 
+| \$PPT\$ | | 
+| \$RT\$ | | 
+| \$RES\$ | resolution | 
+| \$SHAPE\$ | shape | 
+| \$MT\$ | | 
+| \$SPEC\$ | specimen | 
+| \$THICK\$ | thickness | 
+| \$POS\$ | position | 
+| \$PREV\$ | previous | 
+
+
 
 
 
