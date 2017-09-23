@@ -88,6 +88,7 @@ install_new('ggthemes')
 install_new('Quandl')
 install_new('extrafont')
 install_new('Rd2roxygen')
+install_new('tidyquant')
 
 # Sweave and pandoc tools
 # install_new('cacheSweave') # not avail 3.2
@@ -156,6 +157,7 @@ install_new('HSAUR2')
 install_new('moments')
 install_new('spc')
 install_new('xlsx')
+install_new('readxl')
 install_new('DMwR')
 
 install_new('CORElearn')
@@ -177,6 +179,9 @@ install_new('latex2exp')
 install_new('highcharter')
 install_new('WDI')
 install_new('tigris')
+install_new('xaringan')
+install_new('FinCal')
+install_new('hrbrthemes')
 
 biocLite()
 
