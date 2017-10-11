@@ -94,6 +94,7 @@ install_new('tidyquant')
 # install_new('cacheSweave') # not avail 3.2
 install_new('knitcitations')
 install_new('pander')
+install_new('rticles')
 
 install_new('rtiff')
 install_new('raster')
