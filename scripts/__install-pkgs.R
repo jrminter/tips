@@ -152,6 +152,7 @@ install_new('DAAG')
 install_new('fftw')
 
 install_new('fitdistrplus')
+install_new('mixdist')
 install_new('histogram')
 install_new('HSAUR2')
 install_new('moments')
