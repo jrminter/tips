@@ -31,6 +31,16 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 # Don't forget...
 
+## To browse vignettes
+
+```
+browseVignettes(package = NULL, lib.loc = NULL, all = TRUE)
+e.g.
+browseVignettes(package="rAnaLab")
+
+```
+
+
 ## Set the path in .Renviron on MacOSX
 
 I needed this:
