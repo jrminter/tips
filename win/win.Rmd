@@ -15,6 +15,14 @@ Some useful tips for windows
 
 # Command Line Fu
 
+## Register an OCX file
+
+From the directory: 
+
+```
+Regsvr32 /u foo.ocx
+```
+
 ## Install or remove a program
 
 To install:
