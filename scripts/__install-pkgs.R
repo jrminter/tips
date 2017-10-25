@@ -199,12 +199,13 @@ install_new_github('captioner','adletaw')
 install_new_github('choroplethrZip','arilamstein')
 install_new_github('printr','yihui')
 
-install_new_github('rAnaLab','jrminter')
 install_new_github('rPeaks','jrminter')
 install_new_github('rEDP','jrminter')
 install_new_github('rEDS','jrminter')
 install_new_github('rFinFuncs','jrminter')
 install_new_github('rWrapStrataGem','jrminter')
+
+devtools::install_github('jrminter/rAnaLab',build_vignettes=TRUE)
 
 devtools::install_github("hadley/modelr") #still experimental
 devtools::install_github('WinVector/WVPlots',build_vignettes=TRUE)
