@@ -1,10 +1,10 @@
 ---
 title: "Making a Histogram with ggvis in R"
 author: "The DataCamp Blog"
-date: "2015-03-14"
+date: "original: 2015-03-14, Entered: 2015-04-04, Last modified: 2017-10-28 "
 output:
   knitr:::html_vignette:
-    css: ../theme/jm-blue-vignette.css
+    css: ../theme/jm-gray-vignette.css
     number_sections: yes
     toc: yes
 ---

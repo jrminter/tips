@@ -1,10 +1,10 @@
 ---
 title: "How I build up a ggplot2 figure"
 author: "John Muschelli"
-date: "February 18, 2016"
+date: "Orig: 2016-02-18, 2016, Entered: 2016-07-07, Last modified: 2017-10-28"
 output:
   knitr:::html_vignette:
-    css: ../theme/jm-blue-vignette.css
+    css: ../theme/jm-gray-vignette.css
     number_sections: yes
     toc: yes
 ---

@@ -70,7 +70,7 @@ caption, .caption{
   width: 400px;
   border: 1px solid #CCCCCC;
   border-radius: 5px;
-  background-color: #f6f6f6;
+  background-color: #ebebeb; /*Note: ggplot2 lt gray bkg color */
   font-size: 16px;
   line-height: 1.3;
 }
@@ -121,11 +121,11 @@ table:not([class]), table:not([class]) th, table:not([class]) td {
   border-right-style: none;
 }
 table:not([class]) tr.odd {
-  background-color: #e0e8ef; /* was #f7f7f7*/
+  background-color: #f2f2f2; /* was #f7f7f7*/
 }
 
 tr:nth-child(even) {
-    background-color: #e0e8ef;
+    background-color: #f2f2f2;
 }
 
 p {
@@ -134,7 +134,7 @@ p {
 
 blockquote {
   font-size: 16px;
-  background-color: #f6f6f6;
+  background-color: #ebebeb;
   padding: 13px;
   padding-bottom: 1px;
 }
@@ -168,7 +168,7 @@ ul {
   }
 
 pre, code {
-  background-color: #e0e8ef; /* was #dde5ed (darker)*/
+  background-color: #ebebeb; /* was #dde5ed (darker)*/
   border-radius: 3px;
   color: #333;
 }
@@ -180,7 +180,7 @@ pre {
 }
 pre:not([class]) {
   background-color: white;
-  border: #e0e8ef 1px solid;
+  border: #f2f2f2 1px solid;
 }
 pre:not([class]) code {
   color: #444;

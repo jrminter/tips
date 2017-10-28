@@ -1,10 +1,10 @@
 ---
 title: "Starting data analysis/wrangling with R: Things I wish I'd been told"
-author: "Stian Håklev"
-date: "2014-10-14"
+author: "Stian Haklev"
+date: "Original: 2014-10-14, Entered: 2014-11-23, Last modified: 2017-10-28"
 output:
   knitr:::html_vignette:
-    css: ../theme/jm-blue-vignette.css
+    css: ../theme/jm-gray-vignette.css
     number_sections: yes
     toc: yes
 ---
@@ -15,7 +15,7 @@ From [here](http://reganmian.net/blog/2014/10/14/starting-data-analysiswrangling
 
 ***About the author***
 
-Stian Håklev is a PhD student at University of Toronto. He grew up in Norway, and have also spent significant time working and studying in Italy, Sweden, China, Indonesia and Mexico. His undergraduate degree was in International Development Studies at University of Toronto at Scarborough. He did a MA thesis in the Higher Education Program at OISE, with Dr. Ruth Hayhoe and Dr. Jim Slotta. His thesis focused on the Chinese National Top Level Courses project. In September 2010, he began a PhD in the Department of Curriculum, Teaching and Learning at OISE, with Dr. Jim Slotta. His PhD will focus on how to enable collaborative peer-based learning around Open Educational Resources.
+Stian Haklev is a PhD student at University of Toronto. He grew up in Norway, and have also spent significant time working and studying in Italy, Sweden, China, Indonesia and Mexico. His undergraduate degree was in International Development Studies at University of Toronto at Scarborough. He did a MA thesis in the Higher Education Program at OISE, with Dr. Ruth Hayhoe and Dr. Jim Slotta. His thesis focused on the Chinese National Top Level Courses project. In September 2010, he began a PhD in the Department of Curriculum, Teaching and Learning at OISE, with Dr. Jim Slotta. His PhD will focus on how to enable collaborative peer-based learning around Open Educational Resources.
 
 
 [R](http://www.r-project.org/) is a very powerful open source environment for data analysis, statistics and graphing, with thousands of [packages](http://cran.r-project.org/web/packages/) available. After my previous blog post about [likert-scales and metadata in R](http://reganmian.net/blog/2013/10/02/likert-graphs-in-r-embedding-metadata-for-easier-plotting), a few of my colleagues mentioned that they were learning R through [a Coursera course on data analysis](https://class.coursera.org/compdata-003/class). I have been working quite intensively with R for the last half year, and thought I'd try to document and share a few tricks, and things I wish I'd have known when I started out.

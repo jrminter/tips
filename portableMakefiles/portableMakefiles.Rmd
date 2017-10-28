@@ -2,7 +2,7 @@
 title: A Tutorial on Portable Makefiles
 author: Chris Wellons 
     (nullprogram.com) 
-date: 2017-08-20
+date: "Original: 2017-08-20, Entered: 2017-18-20, Last modified: 2017-10-28"
 abstract: |
   Chris Wellons wrote this for the null program blog. J. Minter
   wanted to preserve a local copy and reformatted to use Rmarkdown,
@@ -11,7 +11,7 @@ abstract: |
 
 output:
   html_document:
-    css: ../theme/jm-blue-vignette.css
+    css: ../theme/jm-gray-vignette.css
     toc: true
     number_sections: yes
 ---

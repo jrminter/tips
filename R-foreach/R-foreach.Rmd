@@ -1,12 +1,15 @@
 ---
-title: "R foreach Tips"
-date: "`r format(Sys.time(), '%Y-%m-%d')`"
+author: "Andrew B. Collier"
+date: "original, Started: 2013-08-25, Last modified: 2017-10-28"
 output:
   knitr:::html_vignette:
-    css: ../theme/jm-blue-vignette.css
+    css: ../theme/jm-gray-vignette.css
     number_sections: yes
     toc: yes
 ---
+
+From: [here](http://www.exegetic.biz/blog/2013/08/the-wonders-of-foreach/).
+
 
 ```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
 # make this an external chunk that can be included in any file

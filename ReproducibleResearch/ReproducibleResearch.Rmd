@@ -1,9 +1,10 @@
 ---
+author: "J. R. Minter"
 title: "Reproducible Research"
-date: "`r format(Sys.time(), '%d %B, %Y')`"
+date: "Started: 2016-11-17, Last modified: 2017-10-28"
 output:
   knitr:::html_vignette:
-    css: ../theme/jm-blue-vignette.css
+    css: ../theme/jm-gray-vignette.css
     number_sections: yes
     toc: yes
 ---

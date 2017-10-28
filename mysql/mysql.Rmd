@@ -1,18 +1,22 @@
 ---
 title: "MySQL Tips"
 author: "J. R. Minter"
-date: "`r format(Sys.time(), '%Y-%m-%d')`"
+date: "Started: 2013-07-16, Last modified: 2017-10-28"
 output:
   knitr:::html_vignette:
-    css: ../theme/jm-blue-vignette.css
+    css: ../theme/jm-gray-vignette.css
     number_sections: yes
     toc: yes
 ---
 
 [Back to Index](../README.html)
 
-These are John Minter's tips for a workflow using MySQL.
-They were compiled from several web sources.
+These are John Minter's tips for a workflow using **MySQL**.
+They were compiled from several web sources. Currently, this
+is **legacy information**. Corporate WWIS locked doen the ports
+on our Windows boxes so I cannot connect to a server on a Windows
+worksattion. I migrated MIDB to a **sqlite** database that lives on
+a network share...
 
 There is a handy list of commands at [pantz.org](https://www.pantz.org/software/mysql/mysqlcommands.html)
 

@@ -1,9 +1,10 @@
 ---
+author: "Digg Data"
 title: "Handling Geospatial Data in R"
-date: "`r format(Sys.time(), '%Y-%m-%d')`"
+date: "Original: 2013-05-26, Started: 2013-11-10, Last modified: 2017-10-28"
 output:
   knitr:::html_vignette:
-    css: ../theme/jm-blue-vignette.css
+    css: ../theme/jm-gray-vignette.css
     number_sections: yes
     toc: yes
 ---

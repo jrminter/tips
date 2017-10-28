@@ -1,11 +1,11 @@
 ---
 title: "The microscopist's use cases for ggplot2"
 author: "J. R. Minter"
-date: "`r format(Sys.time(), '%Y-%m-%d')`"
+date: "Started: 2016-01-20, Last modified: 2017-10-28"
 output:
   html_document:
     csl: ../inc/american-chemical-society-with-titles-sentence-case-doi.csl
-    css: ../theme/jm-blue-vignette.css
+    css: ../theme/jm-gray-vignette.css
     toc: true
     number_sections: yes
 bibliography: ../inc/tips.bib
