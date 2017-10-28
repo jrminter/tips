@@ -60,7 +60,7 @@ git push -u origin master
 
 # The cursed "no visible binding for global variable" error...
 
-Using LazyLoaded data often gives this error. The key is to explictly use the variable from the package namespace, eg:
+Using LazyLoaded data often gives this error. The key is to explicitly use the variable from the package namespace, eg:
 
 ```
 ret <- func(myPkg::var, other)

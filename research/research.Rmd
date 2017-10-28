@@ -270,7 +270,7 @@ Have a THING to talk about.
 - First short sentence must summarize main point. First short paragraph must summarize. Final sentence must provide something concrete for reply.
 - A short, appropriate signature
 - reply with blocks of quited text
-- short address lists and clear indication of who whould reply
+- short address lists and clear indication of who would reply
 - do not attach large files
 
 
@@ -320,9 +320,9 @@ Guo describes (p. 30) pitching ideas for a project. I think his outline is effec
 
 ## The importance of networking.
 
-He cites his experience applying for internsips at Microsoft Research
+He cites his experience applying for internships at Microsoft Research
 
-> If I had blindly submitted my resume online like hundreds of other applicants, I would have probably not been able to attract Tom's attention. Most of my fellow interns also got their jobs through connections, although usually their advisors made a direct recommendation to a relevant MSR colleague. (p. 48)
+> If I had blindly submitted my resume on-line like hundreds of other applicants, I would have probably not been able to attract Tom's attention. Most of my fellow interns also got their jobs through connections, although usually their advisors made a direct recommendation to a relevant MSR colleague. (p. 48)
 
 and
 
@@ -330,7 +330,7 @@ and
 
 and
 
-> Tom would drop by my office at 5pm each afternoon before he left work to check up on my progress. Although daily check-ups could potentially be stressful, I actually found them immensely helpful since Tom wasn't intimidating or judgmental at all. Getting immediate daily feedback made it easy for me to stay focused and motivated. The combination of a well-defined, short-term goal and continual helpful feedback made my internship workdays much more productive than those during my previous three years of grad school. The best part was that I worked only during normal office hours (9am to 6pm). (pp. 48-49)
+> Tom would drop by my office at 5 pm each afternoon before he left work to check up on my progress. Although daily check-ups could potentially be stressful, I actually found them immensely helpful since Tom wasn't intimidating or judgmental at all. Getting immediate daily feedback made it easy for me to stay focused and motivated. The combination of a well-defined, short-term goal and continual helpful feedback made my internship workdays much more productive than those during my previous three years of grad school. The best part was that I worked only during normal office hours (9 am to 6 pm). (pp. 48-49)
 
 This reminded me of a Yogi Berra quote (You can see a lot just by looking around...) Greg Wilson would likely say that this is recognizing patterns and moving it into long-term memory:
 

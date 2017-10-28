@@ -70,7 +70,7 @@ To view the quantitative results graphically in SEM / TEM Multi-point Analysis, 
 - Click on the P2 point in the image.
 - Click on the S in the toolbar area to save the P2 point.
 - Open the location table and verify the endpoints. Change the number of steps from 10 if desired.
-- Verify by having it draw all loctions on the image.
+- Verify by having it draw all locations on the image.
 
 # Fixes for annoying issues
 
@@ -82,7 +82,7 @@ larger Title bar.
 ***To Resolve this:***
 - Right click on the Windows desktop - Properties, Appearance,
 - Select from the Item Drop Down list "Menu". 
-- To the right of this dropdown there is a numerical up/down selection for the menu bars height.  If this set to 18, try around 29 for Small Font Mode and click on Apply.  Start the Genesis software by double clicking on the Genesis icon in the EDAX Genesis folder, or in the Windows explorer on the file "c:\edax32\genesis\GenTabs.exe", and you should see that the Genesis Spectrum software menu bar is not obscured by the EDAX tabbed window.
+- To the right of this drop down there is a numerical up/down selection for the menu bars height.  If this set to 18, try around 29 for Small Font Mode and click on Apply.  Start the Genesis software by double clicking on the Genesis icon in the EDAX Genesis folder, or in the Windows explorer on the file "c:\edax32\genesis\GenTabs.exe", and you should see that the Genesis Spectrum software menu bar is not obscured by the EDAX tabbed window.
 
 ## Dewar Vacuum
 

@@ -154,7 +154,7 @@ Seriously? I never want to see absolute or relative references. References are c
 
 See also the **Create Names** feature to do this easily.
 
-In Excel2016 see the **Name Manager** under the **Formulas** menu.
+In Excel 2016 see the **Name Manager** under the **Formulas** menu.
 One may use this to change the ranges.
 
 Intersect with a named range
@@ -162,9 +162,9 @@ Intersect with a named range
 If Foo is a name that refers to a whole column, the formula =Foo*2 gets a single value out of Foo that is in the same row as the formula and multiplies that by 2. This is important because you can always name your columns
 
 1. Name your columns
-2. Use formulas that intersect columms
+2. Use formulas that intersect columns
 3. Just use Tables
-4. Create intermediate coumns and hide them
+4. Create intermediate columns and hide them
 5. Use ROUND() for values with cents
 6. Use **INDEX** and **MATCH**,  *never* **VLOOKUP**
 7. Why do you have **numbers** in your formulas? Create parameter entry cells and use them in formulas.

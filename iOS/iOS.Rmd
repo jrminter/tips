@@ -18,7 +18,7 @@ From [moneysavingexpert.com](http://www.moneysavingexpert.com/news/protect/2014/
 Go to your phone's settings
 
 ```
-Settings > Facebook > Settings > Select 'Auto-play only on Wi-fi', or 'Off'.
+Settings > Facebook > Settings > Select 'Auto-play only on Wi-Fi', or 'Off'.
 ```
 
 [Back to Index](../README.html)

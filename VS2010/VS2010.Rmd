@@ -29,7 +29,7 @@ add a lot of size to a project.
 
 A very helpful solution from [StackOverflow](http://stackoverflow.com/questions/7706984/visual-studio-2010-c-project-remove-sdf-file)
 
-> You can safely delete the .sdf file and ipch folder but you can also stop VS from putting those files in the project folder in the first place. (Useful if you have your source in a SVN or other synchronised folder, or if you store your project on a small volume like a USB stick or SSD and you don't want those large files stored in the same folder).
+> You can safely delete the .sdf file and ipch folder but you can also stop VS from putting those files in the project folder in the first place. (Useful if you have your source in a SVN or other synchronized folder, or if you store your project on a small volume like a USB stick or SSD and you don't want those large files stored in the same folder).
 
 > Go to:
 

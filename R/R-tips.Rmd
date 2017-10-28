@@ -761,7 +761,7 @@ unlink("temp.pdf")
 ```
 Note that I had odd results with this from R-Studio as
 a function of window size. Especially when using Sweave,
-I found it helpful to just write a contolled pdf and
+I found it helpful to just write a controlled pdf and
 from an R script and load/plot from Sweave in the report.
 
 # An example from a R Script

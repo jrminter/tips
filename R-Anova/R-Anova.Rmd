@@ -32,7 +32,7 @@ Author: [Falk Scholer]
 Date: November 30, 2012
 
 # The ANOVA Controversy
-ANOVA is a statistical process for analysing the amount
+ANOVA is a statistical process for analyzing the amount
 of variance that is contributed to a sample by different
 factors. It was initially derived by R. A. Fisher in
 1925, for the case of balanced data (equal numbers of
@@ -155,7 +155,7 @@ interactions.
 However, it is often not interesting to interpret a main 
 effect if interactions are present (generally speaking, 
 if a significant interaction is present, the main 
-effects should not be further analysed).
+effects should not be further analyzed).
 
 If the interactions are not significant, type II gives a 
 more powerful test.
@@ -199,7 +199,7 @@ of the factors.
 
 For example, consider a data frame (search) for which 
 the response variable is the time that it takes users to 
-find a relevant answer with an information retreival 
+find a relevant answer with an information retrieval 
 system (time). The user is assigned to one of two 
 experimental search systems on which they run the test 
 (sys). They are also assigned a number of different 
@@ -225,7 +225,7 @@ results for sys from the second.
 
 This is slightly more involved than the type II results.
 First, it is necessary to set the contrasts option in R. 
-Because the multi-way ANOVA model is over-parameterised, 
+Because the multi-way ANOVA model is over-parametrized, 
 it is necessary to choose a contrasts setting that sums 
 to zero, otherwise the ANOVA analysis will give 
 incorrect results with respect to the expected
@@ -272,7 +272,7 @@ obtain sensible results (an explanation is given here).
 ## References
 
 [1] John Fox. "Applied Regression Analysis and
-Generlized Linear Models", 2nd ed., Sage, 2008.
+Generalized Linear Models", 2nd ed., Sage, 2008.
 
 [2] David G. Herr. "On the History of ANOVA in
 Unbalanced, Factorial Designs: The First 30 Years",

@@ -193,7 +193,7 @@ git checkout master
 git branch -d my-merged branch
 ```
 
-2. A non-fully megred branch
+2. A non-fully merged branch
 
 ```
 git checkout master

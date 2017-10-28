@@ -67,10 +67,10 @@ max.eig(5, 1)
 Since the data are random, each function call yields a different 
 result.
 
-# Vectorised
+# Vectorized
 
 It would be interesting to look at the distribution of these results. 
-We can produce a multitude of such results using vectorised multiple 
+We can produce a multitude of such results using vectorized multiple 
 invocations of the function.
 
 ```{r}
@@ -109,7 +109,7 @@ this point is being done serially.
 # Enter foreach
 
 At first sight, the foreach library provides a slightly different 
-interface for vectorisation. We’ll start off with simple repetition.
+interface for vectorization. We’ll start off with simple repetition.
 
 ```{r}
 library(foreach)
@@ -126,7 +126,7 @@ foreach(n = 1:5) %do% max.eig(n, 1)
 ```
 
 The results are returned as a list, which is actually more reminiscent 
-of the behaviour of lapply() than sapply(). But we can get something 
+of the behavior of lapply() than sapply(). But we can get something 
 more compact by using the .combine option.
 
 ```{r}
@@ -283,8 +283,7 @@ There is an improvement in performance, with the parallel job running
 roughly 3 times as quickly.
 
 How about a slightly more complicated example? We will try running 
-some bootstrap calculations. We start out with the serial implementati
-on.
+some bootstrap calculations. We start out with the serial implementation.
 
 ```
 random.data <- matrix(rnorm(1000000), ncol = 1000)

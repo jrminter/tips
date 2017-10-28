@@ -24,7 +24,7 @@ Stian Haklev is a PhD student at University of Toronto. He grew up in Norway, an
 
 I don't pretend to be a statistics whiz, “ I don't have a strong background in math, and much of my training in statistics was of the social science *"click here, then here in SPSS"* kind, using flowcharts to divine which tests to run, given the kinds of variables you wanted to compare. I'm eager to learn more, but the fact is that running complex statistical functions in R is typically quite easy. The difficult part is acquiring data, cleaning it up, combining different data sources, and preparing it for analysis (they say 90% of a data scientist's job is data wrangling). *Of course, knowing which tests to run, and how to analyze the results is also a challenge, but that is general statistical knowledge that applies to all statistics packages.*
 
-So here are some of my suggestions and "lessons learnt", in no particular order. Some will find the code samples scary, others will find the suggestion to use for-loops far too basic, but hopefully you will find something useful here.
+So here are some of my suggestions and "lessons learned", in no particular order. Some will find the code samples scary, others will find the suggestion to use for-loops far too basic, but hopefully you will find something useful here.
 
 <!-- more -->
 
@@ -245,7 +245,7 @@ The advantage is that I can now very easily experiment with different versions. 
 my_sideplot(db, "age", "region", "Regions")
 ```
 
-This makes my code much easier to read, since I see right away that this is doing exactly the same as the code above (otherwise you need to look very closely at the ggplot code to see what is different), and if I have a knitr report with 10-15 of these graphs, and I want them all to use `theme_bw()` â€“ a black-and-white theme â€“ I can simply modify the function, and rerun the graph.
+This makes my code much easier to read, since I see right away that this is doing exactly the same as the code above (otherwise you need to look very closely at the ggplot code to see what is different), and if I have a knitr report with 10-15 of these graphs, and I want them all to use `theme_bw()` (a black-and-white theme) I can simply modify the function, and rerun the graph.
 
 Functions can of course be much more advanced than this, with branches and sanity checks, etc. However, as a first approximation, just taking chunks of code that are repeated with very few changes, identifying the changes and making them into parameters, and turning the code chunk into a function, can already be very useful.
 

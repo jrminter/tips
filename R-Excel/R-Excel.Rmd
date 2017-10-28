@@ -58,7 +58,4 @@ df2
 ```
 
 
-
-
-
 [Back to Index](../README.html)

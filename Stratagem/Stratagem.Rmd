@@ -436,8 +436,4 @@ $K 14 Ka 5 5            # Si measurements Ix/Istd (Si standard)
 
 ```
 
-
-
-
-
 [Back to Index](../README.html)

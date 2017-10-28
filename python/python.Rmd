@@ -361,7 +361,7 @@ We will install the latest Anaconda Python 3.5 environment as a primary environm
 6. Run `conda update anaconda`   (does nothing at the moment, but can later...)
 7. Run `conda update --all`
 8. Run `conda install mysql-connector-python wheel dask`
-9. Install `VisualCppBuildTools_Full.exe` to get a minimal, but sufficent VS-2015 C++ compiler. This is **much** lighter weight than `Visual Studio 2015 Community Edition`. This step is essential to build many packages (such as `skimage`) from their source (to get newer features).
+9. Install `VisualCppBuildTools_Full.exe` to get a minimal, but sufficient VS-2015 C++ compiler. This is **much** lighter weight than `Visual Studio 2015 Community Edition`. This step is essential to build many packages (such as `skimage`) from their source (to get newer features).
 10. Copy `vcbuildtoolsJM.bat` into `C:\Program Files (x86)\Microsoft Visual C++ Build Tools`. Create a launcher with `C:\Windows\System32\cmd.exe /k ""C:\Program Files (x86)\Microsoft Visual C++ Build Tools\vcbuildtoolsJM.bat"" amd64` and edit so it starts in a convenient directory (e.g. `C:\Users\my-userid\Documents\work\py3`).
 11. Run `cd %GIT_HOME%\scikit-image`. Run `clean.sh`. Then run `python setup.py install` to install v.12-dev0 of scikit-image. All the tutorials use this. Not sure why they have not released it...
 12. Fix path in `startMIDB3.bat`.

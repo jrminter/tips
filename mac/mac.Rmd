@@ -118,7 +118,7 @@ I won’t really go too deeply into why one would want to update to macOS Sierra
 
 Cran seems to still build and test packages for OSX Mavericks, so moving to macOS Sierra puts you further out of sync with the primary R repository. Also Homebrew (a source of non-decade out of date Posix/Unix software) is likely still catching up to macOS Sierra.
 
-## List of issues and work-arounds found in upgrading.
+## List of issues and workarounds found in upgrading.
 
 1. **ssh breaks:** ssh is needed to log in to remote systems and to share Git source control data securely requires a user password each and every time use use it after the upgrade, even if you have put the control password in OSX’s keychain. The fix is to add a file called "config" to your "~/.ssh" directory with the following contents. Then after you unlock your ssh credential once (oddly enough by using the ssh password, not the keychain password) it should remain available to the operating system.
 

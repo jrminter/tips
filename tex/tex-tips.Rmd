@@ -32,7 +32,7 @@ This is particularly bad on Windows. The solution came from [stackexchange](http
 fc-cache -fv
 ```
 
-**Note:** [This](http://tex.stackexchange.com/questions/325278/xelatex-runs-slow-on-windows-machine) thread on StackOverflow notes that it **really helps** to run XeLaTeX as an adminstrator. It helps to run make from an an **Administrator Command Prompt**.
+**Note:** [This](http://tex.stackexchange.com/questions/325278/xelatex-runs-slow-on-windows-machine) thread on StackOverflow notes that it **really helps** to run XeLaTeX as an administrator. It helps to run make from an an **Administrator Command Prompt**.
 
 
 
@@ -62,7 +62,7 @@ Add the following at the top of the `*.tex` file, choosing the desired program (
 %!TEX encoding = UTF-8 Unicode
 ```
 
-The second line will let one use unicode characters in XeLaTeX.
+The second line will let one use Unicode characters in XeLaTeX.
 
 ## XeLaTeX resources
 
@@ -181,7 +181,7 @@ Another old but useful tip from
 For some unknown, mysterious reason you can’t put a ``\cite``
 command as an argument of the ``\caption`` statement. I stumbled
 upon this today when I was trying to attribute an image that I
-shamelessly snurched from the web.
+shamelessly 'snurched' from the web.
 
 Apparently, the cause is not as mysterious as I thought. If you
 want to know why this happens, do some research on

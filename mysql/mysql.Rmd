@@ -13,9 +13,9 @@ output:
 
 These are John Minter's tips for a workflow using **MySQL**.
 They were compiled from several web sources. Currently, this
-is **legacy information**. Corporate WWIS locked doen the ports
+is **legacy information**. Corporate WWIS locked down the ports
 on our Windows boxes so I cannot connect to a server on a Windows
-worksattion. I migrated MIDB to a **sqlite** database that lives on
+workstation. I migrated MIDB to a **sqlite** database that lives on
 a network share...
 
 There is a handy list of commands at [pantz.org](https://www.pantz.org/software/mysql/mysqlcommands.html)
@@ -53,7 +53,7 @@ exit
 
 ## Basic SQL commands
 
-These assume using thge command line. The statements work from Python or R with proper interfaces. Also assuming the MySQL binary directory is in the path...
+These assume using the command line. The statements work from Python or R with proper interfaces. Also assuming the MySQL binary directory is in the path...
 
 To login (from unix shell) use -h only if needed.
 

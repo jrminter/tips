@@ -191,7 +191,7 @@ From: The Indian Government EPMA lab [portal.gsi.gov.in]([http://www.portal.gsi.
 EPMA requires preparation of flat well-polished epoxy mounted
 sections. A brief protocol is provided here:
 
-1. Nearly any solid material can be analyzed. In most cases, samples are prepared as standard-size thin–polished sections, 46-48mm in length and 25 mm width and 1mm thick. The solid blocks should be 25 mm in diameter (inner circle) and should not be more than 15mm thick. It must be perfectly rounded and may be mounted either in bakelite or in PVC. Rectangular sections of rock or similar materials are most often prepared as 30-micron-thick sections without cover slips. Alternatively, 1-inch 3 cores can be polished. Chips or grains can be mounted in epoxy disks, then polished half way through to expose a cross-section of the material.
+1. Nearly any solid material can be analyzed. In most cases, samples are prepared as standard-size thin–polished sections, 46-48 mm in length and 25 mm width and 1 mm thick. The solid blocks should be 25 mm in diameter (inner circle) and should not be more than 15 mm thick. It must be perfectly rounded and may be mounted either in bakelite or in PVC. Rectangular sections of rock or similar materials are most often prepared as 30-micron-thick sections without cover slips. Alternatively, 1-inch 3 cores can be polished. Chips or grains can be mounted in epoxy disks, then polished half way through to expose a cross-section of the material.
 
 ![Bakelite mounted thin section](./img/rect-mounts.png)
 
@@ -221,7 +221,7 @@ After each stage wash the slide thoroughly. Use separate cloth for each stage. H
 
 ## Pre-AnalysisStudies:
 
-Detailed petrographic study of the thin sections or polished stubs to be carried out to define the objectives of the study. For P-T estimates, mineral assemblage in equilibrium is to be identified and marked with coloured circles on the backside of the slide using OHP markers. Reaction textures, the reacting minerals and the products provide useful information on the petrogenesis and metamorphic evolution and need to be demarcated for microanalysis. Unidentified phases, zoned grains, accessory minerals and minute inclusions should also be carefully studied and marked for analysis
+Detailed petrographic study of the thin sections or polished stubs to be carried out to define the objectives of the study. For P-T estimates, mineral assemblage in equilibrium is to be identified and marked with colored circles on the backside of the slide using OHP markers. Reaction textures, the reacting minerals and the products provide useful information on the petrogenesis and metamorphic evolution and need to be demarcated for microanalysis. Unidentified phases, zoned grains, accessory minerals and minute inclusions should also be carefully studied and marked for analysis
 
 ![Marked sample Side 1](./img/marked-1.png)
 

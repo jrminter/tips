@@ -30,7 +30,7 @@ End Sub
 
 # Excel charts
 
-I really find it annoying to do scatter plots in Excel when the data is separated columnns. One I get one right and need different ranges of rows (like diameter data for different classes) then the text editor is my friend. I needed multiple ranges likey and discovered:
+I really find it annoying to do scatter plots in Excel when the data is separated columns. Once I get one right and need different ranges of rows (like diameter data for different classes) then the text editor is my friend. I needed multiple ranges like these selected for the plot:
 
 
 ```

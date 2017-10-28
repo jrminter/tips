@@ -32,7 +32,7 @@ Ground loops are a problem. Note this exchange from the microscopy listserver:
 > 
 > We are having issues with our Oxford EDS detector on our F30. With no
 > electron beam on, the dead time stayed at 100% no matter which
-> dispersion rate we choose. Initially we thought the misconnection
+> dispersion rate we choose. Initially we thought the mis-connection
 > between Oxford and TEM may be responsible. But the issue persists even
 > after we reboot Microscope PC, Oxford x-stream processor, software.
 > etc.

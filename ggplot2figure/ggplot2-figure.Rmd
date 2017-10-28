@@ -25,7 +25,7 @@ and describes a default plot that needs some work:
 
 ```{r}
 library(ggplot2)
-ggplot(data = quakes, aes(x = lat,y = long,colour = stations)) + geom_point()
+ggplot(data = quakes, aes(x = lat,y = long, colour = stations)) + geom_point()
 ```
 
 To break down what is going on, here is what R interprets (more or less):

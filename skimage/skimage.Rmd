@@ -68,7 +68,7 @@ conda install dask wheel
 
 1. I updated the repo. Cleared all but `.git` directory and did `git reset --hard`.
 
-2. For some reason building from the VS2015_X64 commanbd prompt was problematic. Building from the git bash prompt worked. Go figure...
+2. For some reason building from the VS2015_X64 command prompt was problematic. Building from the git bash prompt worked. Go figure...
 
 3. The `dist` directory has `scikit_image-0.12.dev0-py3.5-win-amd64.egg`. I made a `.whl` by
 a tip from [here](http://stackoverflow.com/questions/21856048/can-i-convert-an-egg-to-wheel).
@@ -90,7 +90,7 @@ wheel convert ./scikit_image-0.12.dev0-py3.5-win-amd64.egg
 
 - [The SciPy Lecture Notes](http://www.scipy-lectures.org/) provide a lot of complementary information.
 
-- Tutorial notebooks on [GitHub](https://github.com/scikit-image/skimage-tutorials/tree/master/lectures). We owe Stéfan Van Der Walt, Emmanuelle Gouillart, and others a debt of gratitude for these.
+- Tutorial notebooks on [GitHub](https://github.com/scikit-image/skimage-tutorials/tree/master/lectures). We owe Stefan Van Der Walt, Emmanuelle Gouillart, and others a debt of gratitude for these.
 
 ## Individuals
 
@@ -129,7 +129,7 @@ plt.show();
 ### Others
 
 - Emmanuelle Gouillart and Juan Nunez Iglesias
-[Image Processing with Scikit Image](https://www.youtube.com/watch?v=SZvez2u-w9I) from EuroSciPy 2015. In the first half, Juan Iglesia had problems with the video projector. They fixed it before Emanuelle's presention, which was especially helpful. She has her tutorials on [github](https://github.com/emmanuelle/image-processing-tutorials). She processes SEM images as well and is a contributor to skimage...
+[Image Processing with Scikit Image](https://www.youtube.com/watch?v=SZvez2u-w9I) from EuroSciPy 2015. In the first half, Juan Iglesia had problems with the video projector. They fixed it before Emanuelle's presentation, which was especially helpful. She has her tutorials on [github](https://github.com/emmanuelle/image-processing-tutorials). She processes SEM images as well and is a contributor to skimage...
 
 
 - Juan Nunez Iglesia and Tony Yu, **Image analysis in Python with scipy and scikit image** [Part 1](https://www.youtube.com/watch?v=MP-MTiCETYg), [Part 2](https://www.youtube.com/watch?v=SE7h0IWD93Y), and [Part 3](https://www.youtube.com/watch?v=Yxpnvc4RHy4) from SciPy 2014.

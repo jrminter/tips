@@ -71,11 +71,11 @@ baseplate.
 
 6. Push **START** button (manual or timed). Bring current up to desired level. (Etching to remove surface contamination can be done at 5 milliamps for 30 seconds. No more than two LEDs should be lit when using the **ETCH** mode.)
 
-7. The power turns off automatically when using the timed mode. If in manual mode, push STOP botton when sufficient **ETCH** time has elapsed.
+7. The power turns off automatically when using the timed mode. If in manual mode, push STOP button when sufficient **ETCH** time has elapsed.
 
 ## Sputter
 
-7. The **SPUTTER** botton can be pushed after the completion of an **ETCH** run or after the system has just been turned on and pumped down. Again, you should hear a click as the **SPUTTER** button is pushed and the gas inlet valve opens.
+7. The **SPUTTER** button can be pushed after the completion of an **ETCH** run or after the system has just been turned on and pumped down. Again, you should hear a click as the **SPUTTER** button is pushed and the gas inlet valve opens.
 
 8. Pump down system pressure and stabilize at about 50 mtorr by adjusting the gas flow control knob.
 
@@ -102,7 +102,7 @@ Once you have settled in on your desired settings of time, current and gas flow,
 
 ## Servicing
 
-If the chamber does not pump below 50 mtorr, check the position of the **SPUTTER** head. It must seat on the top chamber gasket. Check that the pyrex cylinder is centered in the countersink of the baseplate. Check cleanliness of top and bottom gaskets. Clean with acetone and lint-free cloth and regrease. Check pyrex cylinder for chipping.
+If the chamber does not pump below 50 mtorr, check the position of the **SPUTTER** head. It must seat on the top chamber gasket. Check that the pyrex cylinder is centered in the countersink of the baseplate. Check cleanliness of top and bottom gaskets. Clean with acetone and lint-free cloth and regrease. Check Pyrex cylinder for chipping.
 
 ### Pump 
 
@@ -148,7 +148,7 @@ If the plasma is flickering during sputtering, the problem is a high
 voltage short in the system from coating across insulated areas.
 
 1. If during etching, then take the pedestal apart and clean the Teflon disc.
-2. If during sputtering, the sputterhead must be taken apart and the thin Teflon disc cleaned.
+2. If during sputtering, the sputter head must be taken apart and the thin Teflon disc cleaned.
 
 Call the factory if guidance is needed in this area.
 

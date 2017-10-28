@@ -241,7 +241,7 @@ for (i in 1:length(spanlist))
   # Plot the loess smoothed curve
   lines(x,y.predict,col=i)
 
-  # Find peak point on smooted curve
+  # Find peak point on smoothed curve
   peak <- optimize(function(x, model)
                     predict(model, data.frame(x=x)),
                             c(min(x),max(x)),

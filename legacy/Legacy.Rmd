@@ -11,7 +11,7 @@ output:
 
 [Back to Index](../README.html)
 
-Upgrading old instrumentation is often prohibitably expensive.
+Upgrading old instrumentation is often prohibitively expensive.
 Keeping these boat anchors working with newer computers is
 frequently a real challenge. These tips can make our lives
 easier.

@@ -36,7 +36,7 @@ print(xtable(Cohort, caption = 'My Title'), caption.placement = 'top', add.to.ro
 ```
 
 A simple wrapper that works... Note the renaming of columns
-and specificing digits. Rememeber there that there need to
+and specifying digits. Remember there that there need to
 be ``ncol+1`` entries in the digit vector. Still need to
 learn how to put a ``%`` in a label
 

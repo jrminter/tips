@@ -224,7 +224,7 @@ which returns a dictionary with the mass fractions:
 
 ## File naming tricks
 
-For simulations, I often name files with a **compound-kV-nTraj** type syntax. Writing a helper function can mimimize repetition
+For simulations, I often name files with a **compound-kV-nTraj** type syntax. Writing a helper function can minimize repetition
 
 
 ```
