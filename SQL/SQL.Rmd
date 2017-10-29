@@ -102,11 +102,10 @@ file `experiments.db`. We open the database from the command prompt.
 Note that we get a shell prompt.
 
 ```
->sqlite3 experiments.db
-SQLite version 3.19.3 2017-06-08 14:26:16
+$ sqlite3 experiments.db
+SQLite version 3.13.0 2016-05-18 10:57:30
 Enter ".help" for usage hints.
 sqlite> 
-
 ```
 
 Let's start with a query: `select` is a keyword. We want to grab some
@@ -119,7 +118,6 @@ skol|Sofia|Kovalevskaya
 mlom|Mikhail|Lomonosov
 dmitri|Dmitri|Mendeleev
 ivan|Ivan|Pavlov
-sqlite>
 ```
 
 The query returns all the records we ask for. We could select in a
@@ -132,9 +130,115 @@ Kovalevskaya|Sofia|skol
 Lomonosov|Mikhail|mlom
 Mendeleev|Dmitri|dmitri
 Pavlov|Ivan|ivan
-sqlite>
+sqlite> 
 ```
 
+To get **everything**, use `select *` to return **all of the records**.
+
+```
+sqlite> select * from Person;
+skol|Kovalevskaya|Sofia
+mlom|Lomonosov|Mikhail
+dmitri|Mendeleev|Dmitri
+ivan|Pavlov|Ivan
+```
+
+We can do more. We specify the **table** and the **condition** which 
+is called the **filter**. We only keep the records that pass the
+test.
+
+```
+sqlite> select * from Person where Login='skol';
+skol|Kovalevskaya|Sofia
+```
+
+The **order** is important. Consider the following which still works:
+
+```
+sqlite> select * from Person where Login='skol';
+skol|Kovalevskaya|Sofia
+```
+
+as does the query below, because we have all the rows and columns
+available to extract information. We filter on rows using the `where`
+keyword. This provides a way to zero in on particular records of
+interest.
+
+```
+sqlite> select LastName from Person where Login='skol';
+Kovalevskaya
+```
+
+Let's try a more complex query. Here it gets all the rows and columns
+from the Person table and keeps the ones where the Login is 'skol'
+or 'mlom' and outputs their LastNames.
+
+```
+sqlite> select LastName from Person where Login in ('skol', 'mlom');
+Kovalevskaya
+Lomonosov
+```
+
+what happens if I reverse the order of the Login? RDBMS systems work
+with sets. Sets aren't ordered. We always have to print the results.
+The database stores the information in a way to output the data the
+fastest. If you want to force a particular order, you have to do that.
+
+```
+sqlite> select LastName from Person where Login in ('mlom', 'skol');
+Kovalevskaya
+Lomonosov
+```
+
+Let's force an order... This is getting to be a long query. We
+can split lines. Note how sqlite3 continues the line until the
+query ends with a semicolon.
+
+```
+ssqlite> select LastName from Person
+   ...> where Login in ('mlom', 'skol')
+   ...> order by LastName;
+Kovalevskaya
+Lomonosov
+```
+
+Note how we can specify **descending** order with the `DESC` filter
+(`ASC` will give **ascending** order). The query must specified any
+required output order.
+
+```
+sqlite> select LastName from Person
+   ...> where Login in ('mlom', 'skol')
+   ...> order by LastName DESC;
+Lomonosov
+Kovalevskaya
+```
+
+
+If you forget the demicolon, the progam will wait until you supply one
+to continue.
+
+## [Part 2](https://www.youtube.com/watch?v=74ADpklXo9c)
+
+SQL is one of the few languages that is case insensitive. Fortran is
+another. We need to use case to make the code **readable**. The **data**
+is case sensitive but the commands **are not**.
+
+We could write:
+
+```
+sqlite> SELECT lastName frOM perSON
+   ...> where LoGiN in ('skol', 'mlom');
+Kovalevskaya
+Lomonosov
+```
+
+**DO NOT DO THIS**
+
+## [Part 3](https://www.youtube.com/watch?v=5u66tF5q3LA)
+
+
+## [Part 4](https://www.youtube.com/watch?v=JTN95fa_UrY)
 
 
 [Back to Index](../README.html)
