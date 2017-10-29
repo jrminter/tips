@@ -1,7 +1,7 @@
 ---
 title: "Windows Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2017-10-28"
+date: "Started: 2013-07-16, Last modified: 2017-10-29"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -14,6 +14,42 @@ output:
 Some useful tips for windows
 
 # Command Line Fu
+
+## Some tips from SoftwareCarpentry and elsewhere
+
+1. **Install the latest git**: Get the latest installer
+[here](https://git-for-windows.github.io/). Run with the steps
+below:
+
+- Click on "Next" twice.
+- **Keep "Use Git from the Windows Command Prompt" selected and click on "Next"**.
+If you forgot to do this programs that you need for the
+workshop will not work properly. If this happens rerun the installer
+and select the appropriate option.
+- Click on "Next".
+- **Keep "Use Windows' default console window" selected and click on "Next".**
+- Click on "Install"
+- Click on "Finish".
+
+2. Make sure your **HOME** environment is properly set.
+- Open command prompt (Open Start Menu then type **cmd** and press [Enter])
+- Type the following line into the command prompt window exactly as shown:
+
+> `setx HOME "%USERPROFILE%"`
+
+You should see:
+
+> `SUCCESS: Specified value was saved.`
+
+- Quit command prompt by typing `exit` then pressing [Enter]
+
+This will provide you with both Git and Bash in the Git Bash program.
+
+3. Add `C:\Program Files\Sublime Text 3` to your path. You will then
+be able to edit the python file `foo.py` by typing
+
+> `subl foo.py`
+
 
 ## Register an OCX file
 
