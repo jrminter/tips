@@ -157,6 +157,8 @@ Topic
 
 [Slidify](./Slidify/Slidify.html)
 
+[SQL](./SQL/SQL.html)
+
 [Sublime Text 3](./ST3/ST3.html)
 
 [Stratagem](./Stratagem/Stratagem.html)
