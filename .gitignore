@@ -340,6 +340,12 @@ Sweave/figure/
 # scripts dir
 scripts/.RData
 
+# SQL dir
+SQL/.DS_Store
+SQL/SQL.md
+SQL/SQL.html
+SQL/figure/
+
 # testMakefileBeamerSlideHandouts dir
 testMakefileBeamerSlideHandouts/.DS_Store
 testMakefileBeamerSlideHandouts/*.pdf

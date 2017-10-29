@@ -1,0 +1,140 @@
+---
+title: "SQL Tips"
+author: "J. R. Minter"
+date: "Started: 2017-10-28, Last modified: 2017-10-28"
+output:
+  knitr:::html_vignette:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+---
+
+[Back to Index](../README.html)
+
+# Software Carpentry Introduction
+
+The
+[Software Carpentry](https://swcarpentry.github.io/sql-novice-survey/)
+SQL material and the videos: Parts 
+[1](https://www.youtube.com/watch?v=Fw7s1qEfpn4),
+[2](https://www.youtube.com/watch?v=74ADpklXo9c),
+[3](https://www.youtube.com/watch?v=5u66tF5q3LA), and
+[4](https://www.youtube.com/watch?v=JTN95fa_UrY)
+are quite helpful, even though they are a bit dated (2012). Greg Wilson
+illustrates database use using **SQLite**. Here I summarize the main
+points.
+
+## [Part 1](https://www.youtube.com/watch?v=Fw7s1qEfpn4)
+
+Greg's objective is to explain why these systems are structured the way
+they are in order to use them effectively. He illustrates the concept
+using this test database. He suggests we refer frequently to this figure.
+
+![Database design](./inc/png/database_tables.png)
+
+Greg notes that he is conflating two concepts. A **database** is a pile
+of data. A **database manager** is is a program that manipulates data
+stored in that particular way. There are five such programs that were
+extant in 2012:
+
+1. Oracle
+2. IBM DB2
+
+These are expensive, powerful, complicated systems with tens of
+thousands of hours invested in development.
+
+There are two Opens Source systems in common usage.
+
+3. MySQL. Its status is a bit problematic these days so we are seeing
+people shift to another one that has been cleaner and better engineered.
+
+4. PostgreSQL. In 2012, Greg suggested that these days this should be
+our choice.
+
+All four of these are complicated to configure. The fifth choice is
+simpler.
+
+5. SQLite. SQL is the language. This is the smallest complete
+implementation of SQL. It is not really fast but it is small.
+Modern smart phones use it to store music play lists and contacts.
+It can still handle hundreds or thousands of operations per second
+and you can move databases from one machine to another by moving a
+single file rather than a complicated export process. 
+
+All five systems use a **relational model**. Technically they are
+**Relational Database Management Systems** (RDBMS). All of these
+systems store informations as a set of **rectangular tables**. The
+database is the collection of all the tables. Each table has a
+**fixed number of columns** but a **variable number of rows**.
+
+The columns are the **fields** in the records. There are ways
+tables can add columns but in general they are fixed at design time.
+The **records** contain the information. We can **add** and **delete**
+records any time we want. That is easy. Each record has the same shape
+as all the others in the table and each record is uniquely identified 
+by a name. 
+
+If I want to identify the records in the `Person` table by the 
+`LastName`, all the records in that table would have the `Person`
+entry of the same type (e.g. strings). In such a system each
+column will have a type designated at design time.
+
+All these systems have a solid theoretical design. This is one of the
+instances where computer science design and practice actually
+inform each other. There is a rich set of mathematics behind this that
+defines the relationships one can express. This model dominates
+commercial data processing.
+
+Today (2012) there has be a rise in alternatives to RDBMS systems.
+There are many different kinds of alternatives. They go under the name
+**NoSQL** (non SQL databases). Some are running places like Google
+because Google didn't think RDBMS scaled to that scale of transactions.
+Others are meant to handle unstructured documents. Others are designed
+to handle graphs and nodes, like friends on Facebook.
+
+We still don't know which of these will succeed or fail. Greg expects
+that later they will add one of the alternatives, but for now the 
+prudent choice is to wait and see which choices survive and are
+useful to a significant population of scientists.
+
+We will start with SQLite. The instructors supplied the database as a
+file `experiments.db`. We open the database from the command prompt.
+Note that we get a shell prompt.
+
+```
+>sqlite3 experiments.db
+SQLite version 3.19.3 2017-06-08 14:26:16
+Enter ".help" for usage hints.
+sqlite> 
+
+```
+
+Let's start with a query: `select` is a keyword. We want to grab some
+data. We then specify **which fields** we want and **which table**
+they are coming from:
+
+```
+sqlite> select Login, FirstName, LastName from Person;
+skol|Sofia|Kovalevskaya
+mlom|Mikhail|Lomonosov
+dmitri|Dmitri|Mendeleev
+ivan|Ivan|Pavlov
+sqlite>
+```
+
+The query returns all the records we ask for. We could select in a
+different order and the query would return the values in the order
+we specify:
+
+```
+sqlite> select LastName, FirstName, Login from Person;
+Kovalevskaya|Sofia|skol
+Lomonosov|Mikhail|mlom
+Mendeleev|Dmitri|dmitri
+Pavlov|Ivan|ivan
+sqlite>
+```
+
+
+
+[Back to Index](../README.html)

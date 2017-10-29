@@ -23,7 +23,7 @@ caption::before{
 
 .caption::before{
   counter-increment: figure;
-  content: "Figure " counter(figure) ":  ";
+  /*content: "Figure " counter(figure) ":  ";*/
 }
 
 caption, .caption{
