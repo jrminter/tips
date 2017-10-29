@@ -1,7 +1,7 @@
 ---
 title: "SQL Tips"
 author: "J. R. Minter"
-date: "Started: 2017-10-28, Last modified: 2017-10-28"
+date: "Started: 2017-10-28, Last modified: 2017-10-29"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -215,7 +215,7 @@ Kovalevskaya
 ```
 
 
-If you forget the demicolon, the progam will wait until you supply one
+If you forget the semicolon, the program will wait until you supply one
 to continue.
 
 ## [Part 2](https://www.youtube.com/watch?v=74ADpklXo9c)
@@ -232,13 +232,410 @@ sqlite> SELECT lastName frOM perSON
 Kovalevskaya
 Lomonosov
 ```
+The column names and queries can be written in any arbitrary case.
+**DO NOT DO THIS** Write the code to make it **readable**.
 
-**DO NOT DO THIS**
+A consistent style is more readable. Pick one and be **consistent**.
+```
+sqlite> SELECT lastname FROM person
+   ...> WHERE login IN ('skol', 'mlom');
+Kovalevskaya
+Lomonosov
+```
+
+We now have a way to select particular rows. Let's look at the 
+**Experiment** table. We would like to extract all the experiments
+with a positive number of hours. Two have negative numbers of
+hours. These are the time travel experiment. It must be going well :).
+But we want to exclude the data because we only want to bill positive
+hours to the funding agency.
+
+```
+sqlite> SELECT * FROM experiment;
+1214|1|1||1.5
+1214|2|1|1889-11-01|14.3
+1709|1|3|1891-01-22|7.0
+1709|2|1|1891-02-23|7.2
+1737|1|1|1900-07-05|-1.0
+1737|2|2|1900-07-05|-1.5
+```
+
+which we change to
+
+```
+sqlite> SELECT * FROM experiment
+   ...> WHERE hours >=0;
+1214|1|1||1.5
+1214|2|1|1889-11-01|14.3
+1709|1|3|1891-01-22|7.0
+1709|2|1|1891-02-23|7.2
+```
+
+### Dealing with missing data
+Compare 
+
+```
+sqlite> SELECT * FROM experiment
+   ...> where ExperimentDate >= '1900-00-00';
+1737|1|1|1900-07-05|-1.0
+1737|2|2|1900-07-05|-1.5
+```
+
+and
+
+```
+sqlite> SELECT * FROM experiment
+   ...> where ExperimentDate < '1900-00-00';
+1214|2|1|1889-11-01|14.3
+1709|1|3|1891-01-22|7.0
+1709|2|1|1891-02-23|7.2
+```
+
+Note that we only have a total of **5** experiments. The problem is
+the **NULL** value in the first entry of the table. This is both useful
+and infuriating when dealing with database systems. Note:
+
+```
+sqlite> SELECT NULL >= 0;
+
+sqlite> SELECT NULL < 0;
+
+sqlite> SELECT * FROM experiment WHERE experimentdate IS NOT NULL;
+1214|2|1|1889-11-01|14.3
+1709|1|3|1891-01-22|7.0
+1709|2|1|1891-02-23|7.2
+1737|1|1|1900-07-05|-1.0
+1737|2|2|1900-07-05|-1.5
+sqlite> SELECT * FROM experiment WHERE experimentdate IS NULL;
+1214|1|1||1.5
+```
+
+This is **not** a problem with the database. it **is** a problem
+with **missing data** For example, one might have a record of the month
+and day and be uncertain of the year because of the way the date was
+recorded. Some people may not have submitted and address. Or an 
+address may not include a postal code. These are not problems caused
+by the database. For example, homeless people do not have an address.
+Excluding them may easily skew the results. This is **no different**
+than having a piece of analytical equipment with a systematic
+bias. View this as a scientific problem to model and account for.
+
+For now wr want to get data from both the project and experiment
+tables. The **JOIN** operator creates the cross product between
+the tables. We get 3*6 or 18 rows in the resulting table.
+
+```
+sqlite> SELECT * FROM project JOIN experiment;
+1214|Antigravity|1214|1|1||1.5
+1214|Antigravity|1214|2|1|1889-11-01|14.3
+1214|Antigravity|1709|1|3|1891-01-22|7.0
+1214|Antigravity|1709|2|1|1891-02-23|7.2
+1214|Antigravity|1737|1|1|1900-07-05|-1.0
+1214|Antigravity|1737|2|2|1900-07-05|-1.5
+1709|Teleportation|1214|1|1||1.5
+1709|Teleportation|1214|2|1|1889-11-01|14.3
+1709|Teleportation|1709|1|3|1891-01-22|7.0
+1709|Teleportation|1709|2|1|1891-02-23|7.2
+1709|Teleportation|1737|1|1|1900-07-05|-1.0
+1709|Teleportation|1737|2|2|1900-07-05|-1.5
+1737|Time Travel|1214|1|1||1.5
+1737|Time Travel|1214|2|1|1889-11-01|14.3
+1737|Time Travel|1709|1|3|1891-01-22|7.0
+1737|Time Travel|1709|2|1|1891-02-23|7.2
+1737|Time Travel|1737|1|1|1900-07-05|-1.0
+1737|Time Travel|1737|2|2|1900-07-05|-1.5
+```
+
+So now I change the query to:
+
+```
+sqlite> SELECT * FROM project JOIN experiment
+   ...> WHERE Project.ProjectId = Experiment.ProjectID;
+1214|Antigravity|1214|1|1||1.5
+1214|Antigravity|1214|2|1|1889-11-01|14.3
+1709|Teleportation|1709|1|3|1891-01-22|7.0
+1709|Teleportation|1709|2|1|1891-02-23|7.2
+1737|Time Travel|1737|1|1|1900-07-05|-1.0
+1737|Time Travel|1737|2|2|1900-07-05|-1.5
+```
+
+Now we modify the query to:
+
+1. JOIN the Project and Experiment tables
+2. Filter cases WHERE Project.ProjectId = Experiment.ProjectID
+3. SELECT (and print) Project.ProjectName and Experiment.Hours
+
+```
+sqlite> SELECT Project.ProjectName, Experiment.Hours
+   ...> FROM Project JOIN Experiment
+   ...> WHERE Project.ProjectId = Experiment.ProjectID;
+Antigravity|1.5
+Antigravity|14.3
+Teleportation|7.0
+Teleportation|7.2
+Time Travel|-1.5
+Time Travel|-1.0
+```
+
+Note that ID numbers are often keys for these types of sorts.
+We want these types of identifiers to be immutable (unchanging).
+We may want to revise  project ID but **not** the underlying 
+key. A name might change (i.e. marriage) but we want a constant
+personal identifier that doesn't.
+
+The SQL we have seen thus far represents at least half the queries
+we will write. We can join queries from different tables, filter out
+the stuff we don't want and then keep only the next stage in the process.
+
 
 ## [Part 3](https://www.youtube.com/watch?v=5u66tF5q3LA)
 
+Let's try to make our query a little more efficient.
+
+We now go to a text file. Greg is using `svn` so the `$ID$` line
+is helpful. Not so much with github...
+
+Here is the first version of the **project-hours.sql** file.
+Note the comment lines starting with `--` and the use of the
+re-direct to the shell (`< project-hours.sql`)
+
+```
+-- Display project names and hours for each experiment
+-- sqlite3 experiments.db < project-hours.sql
+-- The following line would be helpful with svn...
+-- SELECT "$Id:$";
+SELECT Project.ProjectName, Experiment.Hours
+FROM Project JOIN Experiment
+WHERE Project.ProjectId = Experiment.ProjectID;
+```
+
+This produces the output:
+
+```
+Antigravity|1.5
+Antigravity|14.3
+Teleportation|7.0
+Teleportation|7.2
+Time Travel|-1.5
+Time Travel|-1.0
+```
+
+There are many more things on can do with **JOIN**. These are covered in
+their [on-line](https://swcarpentry.github.io/sql-novice-survey/)
+materials.
+
+The most important thing is to keep the process model in mind. The data
+are stored in rectangular tables. The tables have fixed columns with
+variable rows. One select fields of interest by joining tables and
+to get all possible combinations of data. Then you use filters such as
+WHERE to throw away things you don't want and you do the select to keep 
+just the columns you want.
+
+## Database Administration
+
+There are many commands in SQLite3 and other similar programs for
+DB admin. Each system is a bit different. In SQLite3 `.help` gives
+and extensive list:
+
+```
+jrmFastMac:sql jrminter$ sqlite3 experiments.db
+SQLite version 3.13.0 2016-05-18 10:57:30
+Enter ".help" for usage hints.
+sqlite> .help
+.auth ON|OFF           Show authorizer callbacks
+.backup ?DB? FILE      Backup DB (default "main") to FILE
+...
+```
+
+One of the choices is to ask for the **SCHEMA**:
+
+```
+sqlite> .schema
+CREATE TABLE Person(
+    Login        TEXT,
+    LastName    TEXT,
+    FirstName    TEXT
+);
+CREATE TABLE Project(
+    ProjectId    INTEGER,
+    ProjectName    TEXT
+);
+CREATE TABLE Experiment(
+    ProjectId    INTEGER,
+    ExperimentId    INTEGER,
+    NumInvolved    INTEGER,
+    ExperimentDate    DATE,
+    Hours        REAL
+);
+CREATE TABLE Involved(
+    ProjectId    INTEGER,
+    ExperimentId    INTEGER,
+    InvolvedId    INTEGER,
+    Login        TEXT
+);
+```
+
+The **schema** is the logical information for the database or its
+shape. This shows the commands to set up the database. It doesn't
+populate the database with any data.
+
+I could create a table
+
+```
+sqlite> CREATE TABLE Success(
+   ...> ProjectId integer,
+   ...> Status bool
+   ...> );
+```
+
+Note we were inconsistent with case
+
+```
+sqlite> .schema
+CREATE TABLE Person(
+    Login        TEXT,
+    LastName     TEXT,
+    FirstName    TEXT
+);
+CREATE TABLE Project(
+    ProjectId    INTEGER,
+    ProjectName  TEXT
+);
+CREATE TABLE Experiment(
+    ProjectId      INTEGER,
+    ExperimentId   INTEGER,
+    NumInvolved    INTEGER,
+    ExperimentDate DATE,
+    Hours          REAL
+);
+CREATE TABLE Involved(
+    ProjectId    INTEGER,
+    ExperimentId INTEGER,
+    InvolvedId   INTEGER,
+    Login        TEXT
+);
+CREATE TABLE Success(
+    ProjectId integer,
+    Status bool
+);
+```
+
+so we can **carefully** drop the table
+
+```
+sqlite> DROP TABLE Success;
+```
+
+And re-create and populate
+
+```
+sqlite> CREATE TABLE Success(
+   ...>     ProjectID INTEGER,
+   ...>     Status BOOL
+   ...> );
+
+sqlite> SELECT * from Project;
+1214|Antigravity
+1709|Teleportation
+1737|Time Travel
+sqlite> INSERT INTO Success VALUES(1214, 1);
+sqlite> INSERT INTO Success VALUES(1709, 0);
+sqlite> INSERT INTO Success VALUES(1737, 1);
+sqlite> SELECT * FROM Success;
+1214|1
+1709|0
+1737|1
+```
+
+This is bad database design. We have two tables that mirror
+each other row-for-row. We really should add a column to Project
+with the success. See the
+[on-line](https://swcarpentry.github.io/sql-novice-survey/)
+materials on table design.
+Badly designed data comes back to bite you.
 
 ## [Part 4](https://www.youtube.com/watch?v=JTN95fa_UrY)
+
+### Processing pipelines
+
+We can do something like this from the shell:
+
+```
+$ sqlite3 experiments.db < project-hours.sql | grep -v '$Id'
+Antigravity|1.5
+Antigravity|14.3
+Teleportation|7.0
+Teleportation|7.2
+Time Travel|-1.5
+Time Travel|-1.0
+$ sqlite3 experiments.db < project-hours.sql | grep -v '$Id' | wc
+       6       8     103
+```
+
+You will almost always use R or python.
+
+Here is a Python example (**all-names.py**). All the different 
+libraries try to provide the same set of function calls so that
+you can access the data the same way. In theory, only two parts
+change in your program as you change DBMS systems.
+
+1. Load the library.
+2. Connect to the database. Think of a connection like a 
+phone number. Just the name of a file. Others
+will be a URL and likely will need a userid and password.
+Large sites will have to manage many
+(thousands of) different connections, some that take a long time.
+3. Get a cursor from the connection. Think of this like an extension 
+during a phone call. This is the object that keeps track of the query.
+4. Use the cursor to send the query.
+5. Use the cursor to fetch requests - either one at a time or in batches
+depending upon the number I expect. Think of Amazon. Show books - send 20,
+the fetch more as needed. Here we fetch all.
+6. Process and print the results. In this case there will be two fields.
+7. Close the cursor.
+8. Close the connection. Polite thing to do to permit reuse.
+
+The [on-line](https://swcarpentry.github.io/sql-novice-survey/)
+material discusses the things that can go wrong during
+this process.
+
+```
+from sqlite3 import dbapi2 as sqlite
+
+connection = sqlite.connect("experiments.db")
+cursor = connection.cursor()
+cursor.execute("SELECT FirstName, Lastname FROM Person ORDER BY LastName;")
+results = cursor.fetchall();
+for r in results:
+    print(r[0], r[1])
+cursor.close();
+connection.close();
+```
+
+and the output
+
+```
+$ python all-names.py
+Sofia Kovalevskaya
+Mikhail Lomonosov
+Dmitri Mendeleev
+Ivan Pavlov
+jrmFastMac:sql jrminter$
+```
+
+### Why two programming languages?
+
+Why use SQL and R or Python? SQL is not a complete programming
+language. It enters and retrieves data. It does this fast and well.
+These tasks have been highly tuned, made reliable, and secure. We
+can't beat this.
+
+SQL doesn't do everything, so we need other domain specific processing.
+
+We will likely see NonSQL databases become more popular and useful.
+SQL will be around for a long time. SQLite is worth learning,
+
+
 
 
 [Back to Index](../README.html)
