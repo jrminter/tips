@@ -52,7 +52,7 @@ These are my notes and tips for the current version:
 ## Tools
 
 1. [sqlite](https://www.sqlite.org/)
-2. [SqLiteStudio v. 3.3.1](https://sqlitestudio.pl/index.rvt)
+2. [SQLiteStudio v. 3.3.1](https://sqlitestudio.pl/index.rvt)
 
 ## Create the schema
 
