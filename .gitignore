@@ -178,6 +178,12 @@ monteCarlo/monteCarlo.md
 monteCarlo/monteCarlo.html
 monteCarlo/figure/
 
+# msys dir
+msys/.DS_Store
+msys/msys.md
+msys/msys.html
+msys/figure/
+
 # mysql directory
 mysql/.DS_Store
 mysql/mysql.md
