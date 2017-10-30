@@ -38,6 +38,11 @@ the installer and select the appropriate option.
 and click on `Next` five times.
 - Click on `Install`
 - Click on `Finish`.
+- Download the
+[win32 nano](https://www.nano-editor.org/dist/win32-support/)
+`nano` executable, copy it to the
+`C:\Program Files\Git\usr\bin` folder and change the name to
+`nano.exe`.
 
 2. Make sure your **HOME** environment is properly set.
 - Open command prompt (Open Start Menu then type **cmd** and press [Enter])
