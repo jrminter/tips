@@ -17,38 +17,56 @@ Some useful tips for windows
 
 ## Some tips from SoftwareCarpentry and elsewhere
 
+### Install Git
+
 1. **Install the latest git**: Get the latest installer
 [here](https://git-for-windows.github.io/). Run with the steps
 below:
 
-- Click on "Next" twice.
-- **Keep "Use Git from the Windows Command Prompt" selected and click on "Next"**.
-If you forgot to do this programs that you need for the
-workshop will not work properly. If this happens rerun the installer
-and select the appropriate option.
-- Click on "Next".
-- **Keep "Use Windows' default console window" selected and click on "Next".**
-- Click on "Install"
-- Click on "Finish".
+- Click on `Next` two times.
+- Select: \
+`Use a TrueType font in all console windows.`
+- Click on `Next` two times.
+- Select: \
+`Use Git and optional Unix tools from the Windows Command Prompt` \
+and click on `Next`. If you forgot to do this programs that you
+need for the workshop will not work properly. If this happens rerun
+the installer and select the appropriate option.
+- Click on `Next`.
+- Select: \
+`Use Windows' default console window"` \
+and click on `Next` five times.
+- Click on `Install`
+- Click on `Finish`.
 
 2. Make sure your **HOME** environment is properly set.
 - Open command prompt (Open Start Menu then type **cmd** and press [Enter])
-- Type the following line into the command prompt window exactly as shown:
+- Type the following line into the command prompt window exactly as shown: \
+`setx HOME "%USERPROFILE%"` \
+You should see: \
+`SUCCESS: Specified value was saved.`
 
-> `setx HOME "%USERPROFILE%"`
-
-You should see:
-
-> `SUCCESS: Specified value was saved.`
-
-- Quit command prompt by typing `exit` then pressing [Enter]
-
+- Quit command prompt by typing `exit` then pressing [Enter] \
 This will provide you with both Git and Bash in the Git Bash program.
 
-3. Add `C:\Program Files\Sublime Text 3` to your path. You will then
-be able to edit the python file `foo.py` by typing
+3. Add \
+`C:\Program Files\Sublime Text 3` \
+to your path. You will then be able to edit the python file `foo.py`
+by typing \
+`subl foo.py`
 
-> `subl foo.py`
+### Work from the command line
+
+I tend to store source files on my network share in a subfolder: \
+`/src/sqlite` \
+and on my local computer in the `Documents` folder like \
+`C:/Users/userid\Documents/src/software-carpentry/2012/sql` \
+Note that Windows happily accepts `/` for `\`.
+These makes long paths are a pain when using the command window on
+Windows when working from the command line.
+It simplifies matters to work on files in `C:/tmp`
+
+
 
 
 ## Register an OCX file
