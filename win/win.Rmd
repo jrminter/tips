@@ -1,7 +1,7 @@
 ---
 title: "Windows Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2017-10-29"
+date: "Started: 2013-07-16, Last modified: 2017-10-31"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -14,6 +14,16 @@ output:
 Some useful tips for windows
 
 # Command Line Fu
+
+## Delete a directory from the command line
+
+This will bypass Trash! Make sure the directory is not being used.
+You may need to log out and back on. See the example below:
+
+> `rd /s C:\Apps\msys64`
+
+This was great. After removing MSYS2 with the installer, it took forever
+to remove what was left behind. Would be great of old TexLive installs.
 
 ## Some tips from SoftwareCarpentry and elsewhere
 
@@ -62,7 +72,7 @@ by typing \
 
 ### Work from the command line
 
-I tend to store source files on my network share in a subfolder: \
+I tend to store source files on my network share in a sub-folder: \
 `/src/sqlite` \
 and on my local computer in the `Documents` folder like \
 `C:/Users/userid\Documents/src/software-carpentry/2012/sql` \
@@ -132,7 +142,7 @@ Nice detailed instructions for Win7:
 
 3. [Barnacules](https://www.youtube.com/watch?v=k9EA4t3GHwk) video. Especially helpful because he deals with drivers needed at install time and the endless updates...
 
-4. [The Beginner Guide](https://www.youtube.com/watch?v=-V63GbpyNqs) has nice partioning example.
+4. [The Beginner Guide](https://www.youtube.com/watch?v=-V63GbpyNqs) has nice partitioning example.
 
 5. [HowTo Geek](http://www.howtogeek.com/172580/how-to-create-a-separate-data-partition-for-windows/) has a nice article.
 
@@ -218,7 +228,7 @@ from [askvg.com](http://www.askvg.com/list-of-environment-variables-in-windows-x
 ## Turning off Cortana
 
 According to [zdnet.com](http://www.zdnet.com/article/windows-10-tip-turn-off-cortana-completely/),
-the Windows 10 Aniversary Update made it harder to turn off Cortana. Now we
+the Windows 10 Anniversary Update made it harder to turn off Cortana. Now we
 heed a registry hack on Windows 10 Home.
 
 Find (or create) the key
@@ -281,9 +291,9 @@ My current entries on crunch are:
 2. Type net stop wuauserv  (this will stop windows update service)
 3. Wait till you get : The windows update service was stopped successfully.
 4. Type net start wuauserv  (this will start windows update service)
-5. Dont close the Command prompt window, you will need it later.
+5. Don't close the Command prompt window, you will need it later.
 
-After that the windows setup will go from Checking for updates to Getting information on your PC and then will go to Getting updates, if you are getting stuck again (I was) repeat 1, 2, 3, 4. After that the window will ask few install questions , if you want to keep apps and data etc , after selecting the options you want it will go again at getting updates and get stuck again.   Go in command prompt and type again **net stop wuauserv** , you will notice that when you type **net start wuauserv** a message will say the service is already started, that is ok . Now the install window will complete getting updates very fast and after the window will change to Ready to install.  Press install and from now on the installer wont get stuck and complete successfully.
+After that the windows setup will go from Checking for updates to Getting information on your PC and then will go to Getting updates, if you are getting stuck again (I was) repeat 1, 2, 3, 4. After that the window will ask few install questions , if you want to keep apps and data etc , after selecting the options you want it will go again at getting updates and get stuck again.   Go in command prompt and type again **net stop wuauserv** , you will notice that when you type **net start wuauserv** a message will say the service is already started, that is OK . Now the install window will complete getting updates very fast and after the window will change to Ready to install.  Press install and from now on the installer wont get stuck and complete successfully.
 
 ## privacy
 
@@ -358,7 +368,7 @@ Two suggestions:
 # Create a shortcut to switch between windows in Win 7
 Drag the shortcut from to ``%USERPROFILE%\AppData\Roaming\Microsoft\Internet Explorer\Quick Launch\Switch`` the quick launch bar.
 
-Creat a similar shortcut of the character map ``%windir%\system32\charmap.exe``
+Create a similar shortcut of the character map ``%windir%\system32\charmap.exe``
 
 # Use Imagemagick to convert png to pdf from the command line
 ```
