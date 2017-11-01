@@ -5,7 +5,12 @@
 # 2016-11-01 Updated for R-3.3.2
 # 2017-03-13 Updated for R-3.3.3
 
-Sys.setenv(JAVA_HOME="")
+if( Sys.info()['sysname'] == "Windows"){
+	
+	Sys.setenv(JAVA_HOME="")
+	print("unset JAVA_HOME for Windows")
+}
+
 
 str.cran.repo <- 'http://cran.revolutionanalytics.com/'
 str.lib <- .Library
