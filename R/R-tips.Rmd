@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2017-10-28"
+date: "Started: 2013-07-16, Last modified: 2017-11-01"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -30,6 +30,25 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 [Back to Index](../README.html)
 
 # Don't forget...
+
+## Get rJava packages to work
+
+Use a call like this to unset `JAVA_HOME` so that the values in 
+`R-3.4.x\etc\x64\Makeconf` and <br> 
+`R-3.4.x\etc\i386\Makeconf`
+are used:
+
+```
+if( Sys.info()['sysname'] == "Windows"){
+	
+	Sys.setenv(JAVA_HOME="")
+	print("unset JAVA_HOME for Windows")
+}
+
+```
+
+I had a terrible time getting `rcdk` to install....
+
 
 ## To browse vignettes
 

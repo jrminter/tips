@@ -4,6 +4,7 @@
 # 2016-06-23 Updated for R-3.3.1
 # 2016-11-01 Updated for R-3.3.2
 # 2017-03-13 Updated for R-3.3.3
+# 2017-11-01  fixed JAVA_HOME issue for R-3.4.2
 
 if( Sys.info()['sysname'] == "Windows"){
 	
