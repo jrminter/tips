@@ -5,6 +5,8 @@
 # 2016-11-01 Updated for R-3.3.2
 # 2017-03-13 Updated for R-3.3.3
 
+Sys.setenv(JAVA_HOME="")
+
 str.cran.repo <- 'http://cran.revolutionanalytics.com/'
 str.lib <- .Library
 
@@ -83,7 +85,6 @@ install_new('tidyverse')
 install_new('svglite')
 install_new('ggvis')
 install_new('ggmap')
-install_new('ggthemes')
 install_new('ggthemes')
 install_new('Quandl')
 install_new('extrafont')
