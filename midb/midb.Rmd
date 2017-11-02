@@ -105,8 +105,28 @@ this:
 
 If you have damaged the database, you can also use **SQLiteStudio** to
 load **.csv** files from your backups. I typically do this from python
-and make schema fixes from SQLiteStudio. Eventually I'll figure out how
-to get this right from the python script... I can get a fix to work from SQL...
+and make schema fixes from SQLiteStudio. I can get a fix to work from SQL...
+
+See the script in
+
+`%HOME%\Documents\work\midbSQLite3`
+
+```
+> sqlite3 midb.db < fix-midb-after-csv-import.sql
+```
+
+When you are finished, the tables should look like this:
+
+![Sample Table](./png/samples.png)
+
+![Projects Table](./png/projects.png)
+
+![Scientists Table](./png/scientists.png)
+
+
+Here is how you do it by hand... You need to check the schema as well.
+I haven't figured out how to pass the schema to pandas...
+
 
 ![The SQLite editor. Select the table from a **backup copy** of the database. Note that the **Primary Key** was not set by the import from .csv with  pandas. When you make a change, the grayed out box will become active and you press to commit the changes.](./png/sqlite-1.png)
 
