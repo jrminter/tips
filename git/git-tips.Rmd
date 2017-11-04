@@ -1,7 +1,7 @@
 ---
 title: "Git Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2017-10-28"
+date: "Started: 2013-07-16, Last modified: 2017-11-04"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -14,6 +14,42 @@ output:
 These are John Minter's tips for a workflow using git. They were
 compiled from several web sources.
 
+# Quick tips
+
+## Branches
+
+1. Create a new branch on local repo
+
+```
+git checkout -b table-names
+```
+
+Edit files and commit your changes. You can checkout the master again
+with 
+
+```
+git checkout master
+```
+
+later you can
+
+```
+git checkout table-names
+```
+
+2. Push/pull to the origin (github)
+
+```
+git push origin table-names
+```
+
+or
+
+```
+git pull origin table-names
+```
+
+## Useful videos
 
 See youtube [Git Foundation Playlist](https://www.youtube.com/playlist?list=PLg7s6cbtAD15G8lNyoaYDuKZSKyJrgwB-)
 
