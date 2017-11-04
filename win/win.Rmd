@@ -1,7 +1,7 @@
 ---
 title: "Windows Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2017-10-31"
+date: "Started: 2013-07-16, Last modified: 2017-11-03"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -14,6 +14,36 @@ output:
 Some useful tips for windows
 
 # Command Line Fu
+
+## Change the command line prompt.
+
+When running git bash from a Windows command window the long default
+path (the current directory) which is typically helpful
+
+
+
+These codes are availble (prompt/?)
+
+```
+  $A   & (Ampersand)
+  $B   | (pipe)
+  $C   ( (Left parenthesis)
+  $D   Current date
+  $E   Escape code (ASCII code 27)
+  $F   ) (Right parenthesis)
+  $G   > (greater-than sign)
+  $H   Backspace (erases previous character)
+  $L   < (less-than sign)
+  $N   Current drive
+  $P   Current drive and path
+  $Q   = (equal sign)
+  $S     (space)
+  $T   Current time
+  $V   Windows version number
+```
+
+I like prompt `$G $S` and set this in `sp.bat` in my local dir, so 
+`sp` (simple prompt) works from the command line.
 
 ## Delete a directory from the command line
 

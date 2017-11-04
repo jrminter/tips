@@ -1,7 +1,7 @@
 ---
 title: "MIDB Tips"
 author: "J. R. Minter"
-date: "Started: 2016-08-06, Last modified: 2017-10-28"
+date: "Started: 2016-08-06, Last modified: 2017-11-02"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -91,8 +91,52 @@ CREATE TABLE samples(
 );
 ```
 
+## Backup the database from the command line.
+
+I typically work on a copy in the the
+`%HOME%\Documents\work\midbSQLite3` directory. I backup like
+this:
+
+```
+> sqlite3 midb.db .dump > ./2017-11-02-midb.sql
+```
+
+## Fix database schema from SQLite
+
 If you have damaged the database, you can also use **SQLiteStudio** to
-load **.csv** files from your backups.
+load **.csv** files from your backups. I typically do this from python
+and make schema fixes from SQLiteStudio. I can get a fix to work from SQL...
+
+See the script in
+
+`%HOME%\Documents\work\midbSQLite3`
+
+```
+> sqlite3 midb.db < fix-midb-after-csv-import.sql
+```
+
+When you are finished, the tables should look like this:
+
+![Sample Table](./png/samples.png)
+
+![Projects Table](./png/projects.png)
+
+![Scientists Table](./png/scientists.png)
+
+
+Here is how you do it by hand... You need to check the schema as well.
+I haven't figured out how to pass the schema to pandas...
+
+
+![The SQLite editor. Select the table from a **backup copy** of the database. Note that the **Primary Key** was not set by the import from .csv with  pandas. When you make a change, the grayed out box will become active and you press to commit the changes.](./png/sqlite-1.png)
+
+![When you double click on the **Sample_ID** column header this dialog appears. Check the **Primary Key** box and then press  the **Configure** button. Hit **OK** after the next step.](./png/sqlite-2.png)
+
+
+
+![Check the **Autoincrement** box and the **Apply**. When you are back to the first level be sure to press the commit button.](./png/sqlite-3.png)
+
+## Environment variables help
 
 
 It helps to use **environment variables** to specify the directory
