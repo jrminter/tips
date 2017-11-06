@@ -15,6 +15,49 @@ Some useful tips for windows
 
 # Command Line Fu
 
+## Change a drive letter from the command line.
+
+Note this example where I change K to F
+
+1. Start `diskpart` and list the volumes
+
+```
+> diskpart
+
+Microsoft DiskPart version 6.1.7601
+Copyright (C) 1999-2008 Microsoft Corporation.
+On computer: CRUNCH
+
+DISKPART> list volume
+
+  Volume ###  Ltr  Label        Fs     Type        Size     Status     Info
+  ----------  ---  -----------  -----  ----------  -------  ---------  --------
+  Volume 0     E                       DVD-ROM         0 B  No Media
+  Volume 1     C                NTFS   Partition    936 GB  Healthy    Boot
+  Volume 2     D   Data         NTFS   Partition    926 GB  Healthy
+  Volume 3                      FAT32  Partition    100 MB  Healthy    System
+  Volume 4     L   JRM-DATA     NTFS   Partition    931 GB  Healthy
+  Volume 5     K   Sneaker64    exFAT  Removable     57 GB  Healthy
+  Volume 6     G                       Removable       0 B  No Media
+  Volume 7     H                       Removable       0 B  No Media
+  Volume 8     I                       Removable       0 B  No Media
+  Volume 9     J                       Removable       0 B  No Media
+```
+
+2. Select the volume to change. Make sure the desired letter is
+available. If so change it (in this case to `F`).
+
+```
+DISKPART> select volume 5
+
+Volume 5 is the selected volume.
+
+DISKPART> assign letter=F
+```
+
+
+
+
 ## Change the command line prompt.
 
 When running git bash from a Windows command window the long default
