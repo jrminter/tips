@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2017-10-28"
+date: "Started: 2013-07-16, Last modified: 2017-11-12"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -11,6 +11,73 @@ output:
 [Back to Index](../README.html)
 
 # Tips
+
+## Use disk utilty to check/repair
+
+From [osxdaily](http://osxdaily.com/2012/02/08/repair-boot-disk-mac-os-x-disk-utilit/)
+
+The trick is to boot the Mac into Recovery Mode first, and run the
+Repair function from there. Once booted into Recovery mode you’ll find
+the limitations on Disk Utility’s repair function has been removed, and
+you can go about repairing the boot disk as intended. We’ll cover
+exactly how to do this, step by step.
+
+1. Reboot the Mac and hold down Command+R to boot into Recovery, or hold
+down OPTION.
+2. Select "Recovery HD"" at the boot menu
+3. At the Mac OS X Utilities screen, select "Disk Utility""
+4. Select the boot volume or partition from the left menu and click on
+the "Repair"" tab.
+
+Repair Disk is now possible, click on "Repair Disk"" to repair the boot
+volume.
+
+[Repair disk](./jpg/repair-disk-boot-volume.jpg)
+
+## Disk check with `fsck`
+
+From [here](http://osxdaily.com/2013/08/07/how-to-repair-a-mac-disk-with-fsck-from-single-user-mode/)
+
+The fsck tool is bundled with every Mac, but because it’s accessible
+exclusively through the command line it may appear complex and sound
+more intimidating than it really is. Fear not though, because using
+fsck is actually quite simple, and there are several cases where it
+can repair a problem with a drive that Disk Utility was unable to.
+
+**How to use Single User Mode and fsck to repair a disk**
+
+1. Boot the Mac into Single User Mode by holding down Command+S during
+system boot after you hear the boot chime, you know you will have
+successfully entered Single User Mode because you will see a bunch
+of white text on a black background scroll by
+
+2. When the Single User boot sequence has finished, you'll find a small
+command prompt at the bottom of the screen prefixed by a hash sign (#),
+when you see that type the following command exactly:
+
+```
+fsck -fy
+```
+
+3. Once fsck completes, if you see a `File system was modified` message,
+then you should run `fsck -fy` again until you see a message stating
+`The volume (name) appears to be OK` – this is standard procedure of
+using fsck.
+
+4. Type `reboot` to leave Single User Mode and boot the Mac back into
+OS X as usual.
+
+Once OS X is booted again, it can be a good idea to confirm all is well
+by going back to Disk Utility and running the `Verify` tool to check on
+the drives health.
+
+Keep in mind that if the `fsck` tool continuously fails or reports
+errors and Disk Utility is a no go as well, the hard drive itself very
+well may be failing and on its last legs, so be sure to initiate a back
+up all of your critical data using Time Machine or your backup method of
+choice, and aim to get the drive replaced sooner than later.
+
+
 
 ## Sublime Text
 
