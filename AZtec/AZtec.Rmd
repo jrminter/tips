@@ -1,7 +1,7 @@
 ---
 title: "AZtec Tips"
 author: "J. R. Minter"
-date: "Started 2014-09-09, Last modified: 2017-10-28"
+date: "Started 2014-09-09, Last modified: 2017-11-13"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -14,7 +14,8 @@ knitr::opts_chunk$set(echo = TRUE)
 library(knitr)
 ```
 
-This document contains hints that I find helpful when using the Oxford AZtec 3.0 Software.
+This document contains hints that I find helpful when using the Oxford
+system with the AZtec 3.3SP1 Software.
 
 [Back to Index](../README.html)
 
@@ -408,6 +409,26 @@ There is a power strip mounted on the base of the Sirion on the bottom rail. It 
 One can shut the computer down and turn off the strip to turn everything off.
 
 Note: one can use the tidy-up program to reset everything.
+
+## Testing after the Steam Line break
+
+On 2017-11-06 I arrived in the building to discover a steam line had
+ruptured just inside the offices near the corridor. Building services
+turned off the steam before 8 a.m. The moisture condensed on the upper
+surfaces of the ceiling tiles and on the cold air ducts. Water was
+dripping on the table that held the computer. It did not appear that
+the detector got wet. I pulled the power to the scope, computers, and
+support boxes.
+
+After we got the mess cleaned up, we let everything dry with fans for
+2 days and cleaned up the surfaces. I replaced all mice and keyboards.
+
+I worked on the microscope PC and system the rest of that week. On
+2017-11-13 I turned my attention to the Oxford System. Dave McLaughlin
+suggested I open the cased on theb Compaq 8300 PC. There was no evidence
+of water damage inside. I blew N~2~ into the case for 30 min. Building
+services were working to replace tiles nearby so i closed everything up
+and waited.
 
 
 
