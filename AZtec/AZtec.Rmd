@@ -31,6 +31,8 @@ system with the AZtec 3.3SP1 Software.
 | Glenn Kinnear | 978-764-0747 |
 | Glenn Kinnear | glenn.kinnear@oxinst.com |
 | Current software | 3.0SP1 |
+| HP PC P/N | QV993AV |
+| HP PC S/N | CZC4081PBM |
 
 ## The AZtec License manager
 
