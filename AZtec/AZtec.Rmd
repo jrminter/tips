@@ -1,7 +1,7 @@
 ---
 title: "AZtec Tips"
 author: "J. R. Minter"
-date: "Started 2014-09-09, Last modified: 2017-11-13"
+date: "Started 2014-09-09, Last modified: 2017-11-28"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -36,12 +36,44 @@ system with the AZtec 3.3SP1 Software.
 
 ## The AZtec License manager
 
-Both AZtec and Inca have network licenses. The installer installs an **evaluation license** which expires in a few days. You have to change the licenses for **both** AZtec and Inca. The license manager looks like the image below. You need to press the text above the red button and enter the appropriate license code in the dialog box that appears. Then use a user ID (email address) and password (std) to authenticate the codes. **After** you enter the new codes and authenticate with the userid/password, *then* the **Activate** button will become active. 
+The AZtec license manager changed from V, 3.0 to 3.3SP1. The new system
+has a hardware key on the instrument PC and has license keys for our two
+off-line licenses. Our system was updated om 2017-08-10. We had issues
+because not all our features were turned on. To move an off-line
+license we would need to work with Customer Service. 
 
-![**Change** the default licenses **shown here** by pressing the **red** arrow](img/AZtecLicMgr.png)
+On a new installation, one would do these steps.
+
+On our last install, the product key was:
+
+```
+c6bfb128-6b24-4e4b-8c38-19e340408d1f
+```
+
+These licenses have been installed on John's laptop and desktop
+
+**Instructions:**
+
+On the PC where the licence is to be used: 
+
+1. Install the Oxford Instruments software from the DVD supplied 
+2. Start the License Product Tool from the Oxford Instruments NanoAnalysis folder 
+on the Start button of the PC.
+3. Review and if you agree, accept the Licence Agreement. 
+4. Copy the Product Key given above into the Product Key field. 
+5. Click the “Login” button. 
+6. Wait a few seconds for the licence activation server to be contacted over the internet. 
+7. The Activate Product Key screen is displayed. 
+8. Verify the licence information displayed is as expected. 
+9. Click the “Online Activation” button. 
+10. Wait a few seconds while the license activation server prepares the licence. 
+11. A message will be displayed when the licence has been successfully saved. 
+12. Click “Exit” to close the Product License Tool. 
+
+Patching a key is more difficult... I worked with Charlie Davis 
+in the UK (`na.techsupport@oxinst.com`)
 
 
-The correct codes are stored in the system folder on the **QM Share**. It took me a **long** time to figure out why everything was grayed out. A real smack my head moment...
 
 # Useful quick tips
 
