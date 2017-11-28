@@ -71,9 +71,8 @@ on the Start button of the PC.
 12. Click “Exit” to close the Product License Tool. 
 
 Patching a key is more difficult... I worked with Charlie Davis 
-in the UK (`na.techsupport@oxinst.com`)
-
-
+in the UK (**na.techsupport@oxinst.com**). In this case the patches are
+applied with **PKAct**.
 
 # Useful quick tips
 
