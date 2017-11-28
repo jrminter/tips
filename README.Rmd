@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2017-10-28"
+date: "Started: 2013-07-16, Last modified: 2017-11-21"
 output:
   html_document:
     css: ./theme/jm-gray-vignette.css
@@ -157,6 +157,8 @@ Topic
 
 [Slidify](./Slidify/Slidify.html)
 
+[Software Development](./software-dev/software-dev.html)
+
 [SQL](./SQL/SQL.html)
 
 [Sublime Text 3](./ST3/ST3.html)
@@ -177,8 +179,3 @@ Topic
 
 [Workflow](./workflow/workflow.html)
 
-
-
-
-
- 
