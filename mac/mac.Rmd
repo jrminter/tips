@@ -12,6 +12,58 @@ output:
 
 # Tips
 
+## The High-Sierra vulnerability
+
+### Helpful comments from [slashdot](https://news.ycombinator.com/item?id=15800676)
+
+**abritishguy**:
+
+> Just in case it is relevant for anyone here this is what our security
+> team have established thus far:
+>
+> - Can be mitigated by enabling the root user with a strong password
+> - Can be detected with `osquery` using: \
+`SELECT * FROM plist WHERE path = "/private/var/db/dslocal/nodes/Default/users/root.plist" AND key = "passwd" AND length(value) > 1;";`
+>- You can see what time the root account was enabled using \
+`SELECT * FROM plist WHERE path = "/private/var/db/dslocal/nodes/Default/users/root.plist" WHERE key = "accountPolicyData";` \
+> then base 64 decoding that into a file and then running \
+> `plutil -convert xml1` and looking at the `passwordLastSetTime` field.
+>
+> Note: `osquery` needs to be running with `sudo` but if you have it
+> deployed across a fleet of macs as a daemon then it will be running
+> with `sudo` anyway.
+
+**RJIb8RBYxzAMX9u**
+
+> `osquery` is not a built-in tool. You can get the same info with
+> `plutil(1)`: \
+> `$ sudo plutil -p /private/var/db/dslocal/nodes/Default/users/root.plist`
+>  If I understand OP correctly, if passwd is a lone asterisk, then
+> you haven't been exploited.
+>
+> Edit: trying a little harder to dump accountPolicyData:
+> `$ sudo defaults read /private/var/db/dslocal/nodes/Default/users/root.plist accountPolicyData | grep -oE '[[:xdigit:]]+' | xxd -r -p`
+
+
+**simias**
+
+> > if passwd is a lone asterisk, then you haven't been exploited.
+>
+>  At the risk of sounding a bit pedantic you can't really assume that,
+> it's possible that somebody used this vulnerability, installed some
+> sort of backdoor and then disabled the account to hide their tracks.
+reply
+    
+**abritishguy**
+
+> That's correct.
+
+    
+**timsutton**
+
+> `sudo dscl . -read Users/root accountPolicyData`
+
+
 ## Use disk utilty to check/repair
 
 From [osxdaily](http://osxdaily.com/2012/02/08/repair-boot-disk-mac-os-x-disk-utilit/)
