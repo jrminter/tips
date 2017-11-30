@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2017-11-28"
+date: "Started: 2013-07-16, Last modified: 2017-11-29"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -14,7 +14,7 @@ output:
 
 ## The High-Sierra vulnerability
 
-Note: Mac released a patch on 2
+Note: Mac released a patch on 2017-11-29
 
 ### Helpful comments from [slashdot](https://news.ycombinator.com/item?id=15800676)
 
