@@ -1,7 +1,7 @@
 ---
 title: "Microscopy Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2017-10-28"
+date: "Started: 2013-07-16, Last modified: 2017-12-02"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -18,6 +18,26 @@ output:
 ![Check Plain Text](png/plain-text.png)
 
 2. Send to "Microscopy@microscopy.com"
+
+# Bell Jars
+
+I clean mine with Soft Scrub and wipe a thin layer of Mr. Clean
+
+On 2017-12-02 John Nailon <jvnailon@gmail.com> wrote on the Microscopy
+Listserver
+
+> It is very simple and inexpensive, clean your bell jar, electrodes,
+> and insulators as best you can then wipe the inside with a piece of
+> paper towel that has had 5-10ml of dishwashing detergent applied to
+> it. Wipe the whole of the glass, metal and insulator surfaces so that
+> there is a very thin smear of detergent applied. Pump down the bell
+> jar to dry the system out. The system is ready to use!
+>
+> Next time you need to clean the system all you need do is wash all
+> surfaces with warm water, dry them off with paper towel, then apply
+> the detergent again.
+
+
 
 # Grounding
 
