@@ -13,6 +13,37 @@ output:
 
 # Hints for key packages
 
+## matplotlib-scalebar
+
+This is a helpful utility by Philippe Pinard. Install with
+
+```
+pip install matplotlib-scalebar
+```
+
+**Examples**:
+
+Here is an example how to add a scale bar:
+
+```
+import matplotlib.pyplot as plt
+import matplotlib.cbook as cbook
+from matplotlib_scalebar.scalebar import ScaleBar
+
+plt.figure()
+image = plt.imread(cbook.get_sample_data('grace_hopper.png'))
+plt.imshow(image)
+scalebar = ScaleBar(0.2) # 1 pixel = 0.2 meter
+plt.gca().add_artist(scalebar)
+plt.show()
+```
+The scale bar also works with reciprocal units,:
+
+```
+from matplotlib_scalebar.scalebar import SI_LENGTH_RECIPROCAL
+scalebar = ScaleBar(0.2, '1/cm', SI_LENGTH_RECIPROCAL) # 1 pixel = 0.2 1/cm
+```
+
 ## pandas
 
 Pandas provides a dataframe structure and is useful for
