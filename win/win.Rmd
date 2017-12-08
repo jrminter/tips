@@ -13,13 +13,26 @@ output:
 
 Some useful tips for windows
 
-# Easy access to command window
+# Windows tips from the [Probe Software Forum](http://probesoftware.com/smf/index.php?topic=996.0)
 
-John Donovan from the [Probe Software Forum](http://probesoftware.com/smf/index.php?topic=996.0;topicseen)
-noted that in Windows Explorer, when you hold the shift key and 
-right-click the mouse on a folder, you get this menu
+## Easy access to command window
+
+John Donovan noted that in Windows Explorer, when you hold the shift key
+and right-click the mouse on a folder, you get this menu
 
 ![Note the **Open command window here** selection.](./png/shift-right-click-menu.png)
+
+## An easy dated log file
+
+Mike Matthews responded with another helpful tip:
+
+> One tip I got told that I find particularly useful for keeping a
+> maintenance log file: open a new text file and put .LOG on it's own
+> on the first line. Every time you open the file thereafter the current
+> date and time is automatically appended to the end of the file. Put a
+> shortcut to the file on the desktop and it becomes super easy to add
+> date stamped log entries as and when you need.
+
 
 # Command Line Fu
 
