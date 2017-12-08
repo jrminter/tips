@@ -13,6 +13,14 @@ output:
 
 Some useful tips for windows
 
+# Easy access to command window
+
+John Donovan from the [Probe Software Forum](http://probesoftware.com/smf/index.php?topic=996.0;topicseen)
+noted that in Windows Explorer, when you hold the shift key and 
+right-click the mouse on a folder, you get this menu
+
+![Note the **Open command window here** selection.](./png/shift-right-click-menu.png)
+
 # Command Line Fu
 
 ## Change a drive letter from the command line.
