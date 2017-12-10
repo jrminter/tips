@@ -1,7 +1,7 @@
 ---
 title: "Microscopy Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2017-12-02"
+date: "Started: 2013-07-16, Last modified: 2017-12-10"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -36,6 +36,17 @@ Listserver
 > Next time you need to clean the system all you need do is wash all
 > surfaces with warm water, dry them off with paper towel, then apply
 > the detergent again.
+
+On 2017-12-10 he replied to a question from a user asking why to do
+this? John Nailon responded:
+
+> Every time you use the evaporator to coat a sample with carbon or
+> metal everything gets coated including the inside of the glass bell
+> jar, all of the electrodes and all of the insulated connections. If
+> you do not clean the system periodically then you will start to have
+> slow pump down times, inability to see inside the bell jar, and
+> potential short circuits across the insulated connections within the
+> bell jar.
 
 
 
