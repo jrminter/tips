@@ -1,7 +1,7 @@
 ---
 title: "Tips on Using DTSA-II"
 author: "J. R. Minter"
-date: "Started: 2015-05-19, Last modified: 2017-10-28"
+date: "Started: 2015-05-19, Last modified: 2017-12-11"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -12,6 +12,12 @@ output:
 [Back to Index](../README.html)
 
 # Key tricks
+
+## Sources for free microanalysis software
+
+DTSA-II is also included in
+[this](http://probesoftware.com/smf/index.php?topic=927)
+list from the Probe Software Forum!
 
 ## Energies for low energy L-l lines (L_II.III_) from light elements 
 
