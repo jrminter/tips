@@ -92,7 +92,7 @@ He also noted:
 
 > We only use colloidal alumina nowadays.  In think we found it works better on most materials.
 
-## Polish ater soluble samples
+## Polish water soluble samples
 
 A [question](http://probesoftware.com/smf/index.php?topic=993.0)
 was asked about how to polish water-soluble specimens.
