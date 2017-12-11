@@ -10,12 +10,41 @@ output:
 ---
 [Back to Index](../README.html)
 
+# N2 venting
+
+> From: John.Mardinly@asu.edu \
+> Date: April 26, 2011 1:24:59 PM EDT \
+> Subject: [Microscopy] RE: problem with compressed air \
+> \
+> My old advisor at Michigan, Wil Bigelow, had a unique and cost
+> effective method of capturing ultra high purity nitrogen gas for
+> venting microscopes. There was an added bonus in that no regulator
+> was required, and it could never overpressurize the chamber and
+> damage ultrathin detector windows.
+> 
+> The cost? Under $20! How?
+>
+> He would put a rubber stopper in the EDX dewar with a tube in it for
+> attaching a surgical rubber hose that ran to an extra large beach
+> ball. That hose was teed to another hose that ran to the microscope
+> vent inlet. A small slit in the surgical rubber hose provided
+> over-pressure protection. Boil-off from the EDX dewar would fill the
+> beach ball, and that nitrogen would be used to vent the microscope.
+>
+> The only disadvantage, is that some EDX systems have an alarm for
+> sensing low LN2 levels that goes through the fill opening, and that
+> would be difficult to accommodate. I might add that it made the lab
+> look a LOT more cheery and colorful, which was a nice thing to have
+> during the dreary Michigan winters.
+
+
+
+
 # Cryo-TEM
 
-> From: Hands-Portman, Ian <I.J.Portman@warwick.ac.uk> \
+> From: I.J.Portman@warwick.ac.uk \
 > Date: Mon, Feb 4, 2013 at 3:43 AM \
 > Subject: [3dem] Quality of Ethane \
-> To: "3dem@ncmir.ucsd.edu" <3dem@ncmir.ucsd.edu> \
 >  \
 > We used high purity ethane for years, it does freeze quite quickly but
 > it is easy enough to thaw with a touch from a screwdriver blade or a
