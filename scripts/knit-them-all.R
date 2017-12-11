@@ -35,7 +35,7 @@ names <- c("Readme.Rmd",
            "SEM.Rmd", "shell-tips.Rmd", "skills.Rmd",
            "skimage.Rmd", "Slidify.Rmd", "software-dev.Rmd", "SQL.Rmd",
 		   "ST3.Rmd", "Stratagem.Rmd", "Sweave.Rmd",
-		   "tex-tips.Rmd","ubuntu.Rmd",
+		   "TEM.Rmd", "tex-tips.Rmd", "ubuntu.Rmd",
            "vacuum.Rmd",
            "VS2010.Rmd","win.Rmd","workflow.Rmd", "README.Rmd")
 
@@ -65,7 +65,7 @@ rPath <- c("../",
            "../SEM", "../shell", "../skills",
            "../skimage", "../Slidify", "../software-dev", "../SQL",
 		   "../ST3", "../Stratagem", "../Sweave",
-		   "../tex", "../ubuntu",
+		   "../TEM","../tex", "../ubuntu",
 		   "../vacuum",
            "../VS2010","../win", "../workflow", "../")
 

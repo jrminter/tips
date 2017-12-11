@@ -87,52 +87,134 @@ that provides the best mix of signal and therefore performance.
 > I agree with what Steve had to say and have some additional comments.
 
 > - A sample of a square centimeter or so is probably not too large.
-The conductive media should make a continuous electrical connection
-between the bare metal stub and the upper surface and continuing onto
-the upper surface of the sample.  I often use Leit C carbon adhesive
-from my friendly microscopy supply house because it combines
-electrical conductivity with excellent mechanical strength that
-materials like colloidal graphite (DAG) and silver paint don't have.
-Silver paint can also be problematic in EDS analysis.
-
+> The conductive media should make a continuous electrical connection
+> between the bare metal stub and the upper surface and continuing onto
+> the upper surface of the sample.  I often use Leit C carbon adhesive
+> from my friendly microscopy supply house because it combines
+> electrical conductivity with excellent mechanical strength that
+> materials like colloidal graphite (DAG) and silver paint don't have.
+> Silver paint can also be problematic in EDS analysis.
+> 
 > -  The power that field emission SEM offers is incredibly bright
-source combined with a stable low voltage beam.  Secondary electron
-imaging (SEI) at low voltage provides the best topographical analysis
-of surface roughness.  Charge control in SEI is achieved by balancing
-the number of incident electrons entering the sample and electrons
-leaving as secondary and backscattered electrons.  I highly recommend
-the book "Scanning Electron Microscopy and X-ray Microanalysis", 3rd
-Edition by Goldstein et al., Springer, 2013.  The chapter on
-Procedures for Elimination of Charging in Nonconducting Specimens
-should be very helpful.
-
+> source combined with a stable low voltage beam.  Secondary electron
+> imaging (SEI) at low voltage provides the best topographical analysis
+> of surface roughness.  Charge control in SEI is achieved by balancing
+> the number of incident electrons entering the sample and electrons
+> leaving as secondary and backscattered electrons.  I highly recommend
+> the book "Scanning Electron Microscopy and X-ray Microanalysis", 3rd
+> Edition by Goldstein et al., Springer, 2013.  The chapter on
+> Procedures for Elimination of Charging in Nonconducting Specimens
+> should be very helpful.
+> 
 > -  My 25 years of experience in low voltage, field emission SEM of
-polymers leads me to believe that some of the imaging problems
-experienced with leather may be similar to those observed in polymers.
-Both are insulators and consist of low atomic weight elements.  Like
-Steve, I suggest you start at around 1 kV accelerating voltage.  Use
-the spot size that the service engineers use to check your spatial
-resolution at 1 kV: this spot size is a good place to start because
-the manufacturer knows it gives an excellence balance of resolution
-and signal-to-noise.
-
+> polymers leads me to believe that some of the imaging problems
+> experienced with leather may be similar to those observed in polymers.
+> Both are insulators and consist of low atomic weight elements.  Like
+> Steve, I suggest you start at around 1 kV accelerating voltage.  Use
+> the spot size that the service engineers use to check your spatial
+> resolution at 1 kV: this spot size is a good place to start because
+> the manufacturer knows it gives an excellence balance of resolution
+> and signal-to-noise.
+> 
 > -  For best results, I suggest you work with an uncoated sample.  You
-might start with a coated sample then move to the bare, uncoated
-sample.  Gold and gold-palladium coatings will obscure possibly
-important surface information.
-
+> might start with a coated sample then move to the bare, uncoated
+> sample.  Gold and gold-palladium coatings will obscure possibly
+> important surface information.
+> 
 > -  Faster scan rates produce less charging than longer scan rates.
-If a single scan allows you to control charging but is somewhat noisy,
-average several scans recorded using shorter scan rates.  Do a few
-quick tests on fresh areas of the sample to see how long a scan rate
-you can use without producing charging.  Be aware that your default
-image acquisition scan rate may be much longer than the ideal scan
-rate for your sample. If this happens, record your images at the
-preferred rate.
-
+> If a single scan allows you to control charging but is somewhat noisy,
+> average several scans recorded using shorter scan rates.  Do a few
+> quick tests on fresh areas of the sample to see how long a scan rate
+> you can use without producing charging.  Be aware that your default
+> image acquisition scan rate may be much longer than the ideal scan
+> rate for your sample. If this happens, record your images at the
+> preferred rate.
+> 
 > -  Fortunately, sub-micrometer surface texture and porosity (as I
 would expect to see in collagen-based leather surfaces) dissipate
 charging thus making imaging easier.
+
+# Voltage contrast
+
+A tip from Valery Ray on the microcopy Lis5erver 2012-06-25
+
+> There are two tricks that I have for stubborn passive voltage
+> contrast samples. One is for overall floating structures where
+> whole chain gets dark in a FIB - use black "Micron" 005 pen
+> from Sakura brand to ground one end of the chain - these pens
+> have fairly conductive trace with width about 200um and are
+> great for drawing long grounding lines under microscope - final
+> connection to chain is by FIB metal.
+> 
+> Another trick is for chains with "soft" disconnect - use
+> "HUGE" beam currents, up to nA range, to get enough voltage
+> drop to see location of the defect.
+> 
+> If you have a FIB with vented chamber (a-la FIB200 and all the
+> later variants) then with small hardware hack and a bit of sample
+> prep effort you can start doing active voltage contrast in about
+> an hour.
+> 
+> Disconnect stage current cable from the sample holder (it is
+> fairly useless for the originally-intended purpose anyway)
+> and hard-ground sample holder to the stage. Use the disconnected
+> cable and its feed-through to bring in voltage from regulated
+> DC power supply (+/- 10V range) - your FIB is ready. For the
+> sample preparation - attach short piece of a bonding wire to
+> the piece of wire-wrap wire, attach wire-wrap wire to the sample
+> by a drop of epoxy, bend bonding wire close to your
+> chain in question, trim end of the bonding wire with ophthalmic
+> scalpel, and fix it with drop of Ted Pelllas colloidal
+> silver - all this takes about 30min. under inspection microscope.
+> Almost done: load sample into your FIB, attache wire-wrap wire
+> to the and of the freed stage-current
+> cable, pump the chamber, make final connection of the chain to the
+> silver dot at the end of the bonding wire, and apply voltage from the
+> power supply :)
+> 
+> If for any reason none of the above works - any lab that has in-situ
+> manipulator on the FIB should be able to do active VC for... EAG in
+> Sunnyvale, or maybe even one of Universities next door?
+> 
+> Cheers :)
+> Valery
+> 
+> Valery Ray \
+> PBS&T, MEO Engineering Co., Inc. \
+> 290 Broadway, Suite 298 \
+> Methuen, MA 01844 USA \
+> Phone: +1-978-296-5063 - leave a message with call-back number \
+> US Mobile: +1-978-305-0479 \
+> Skype: pbstmeo \
+> E-mail: vray@partbeamsystech.com \
+
+# Cryo-TEM
+
+> From: Hands-Portman, Ian <I.J.Portman@warwick.ac.uk> \
+> Date: Mon, Feb 4, 2013 at 3:43 AM \
+> Subject: [3dem] Quality of Ethane \
+> To: "3dem@ncmir.ucsd.edu" <3dem@ncmir.ucsd.edu> \
+>  \
+> We used high purity ethane for years, it does freeze quite quickly but
+> it is easy enough to thaw with a touch from a screwdriver blade or a
+> quick blast of fresh ethane. We never had contamination issues with it
+> until the tank was almost empty but it was expensive to buy.
+>
+> When I heard about ethane/propane mixed I switched over to that -- for
+> ease of use I buy it ready mixed - I'm not allowed to store then tanks
+> in the lab so only want to have to move one around. It's considerably
+> cheaper than plain ethane, it gels slightly but never sets - I
+> wouldn't go back to using ethane.
+> 
+> Ian Hands-Portman \
+> Imaging Suite Manager \
+> School of Life Sciences \
+> University of Warwick \
+> Gibbet Hill Road \
+> Coventry \
+> CV47AL
+
+
 
 
 [Back to Index](../README.html)

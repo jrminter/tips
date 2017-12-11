@@ -1,0 +1,39 @@
+---
+title: "TEM Tips"
+author: "J. R. Minter"
+date: "Started: 2017-12-11, Last modified: 2017-12-11"
+output:
+  knitr:::html_vignette:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+---
+[Back to Index](../README.html)
+
+# Cryo-TEM
+
+> From: Hands-Portman, Ian <I.J.Portman@warwick.ac.uk> \
+> Date: Mon, Feb 4, 2013 at 3:43 AM \
+> Subject: [3dem] Quality of Ethane \
+> To: "3dem@ncmir.ucsd.edu" <3dem@ncmir.ucsd.edu> \
+>  \
+> We used high purity ethane for years, it does freeze quite quickly but
+> it is easy enough to thaw with a touch from a screwdriver blade or a
+> quick blast of fresh ethane. We never had contamination issues with it
+> until the tank was almost empty but it was expensive to buy.
+>
+> When I heard about ethane/propane mixed I switched over to that -- for
+> ease of use I buy it ready mixed - I'm not allowed to store then tanks
+> in the lab so only want to have to move one around. It's considerably
+> cheaper than plain ethane, it gels slightly but never sets - I
+> wouldn't go back to using ethane.
+> 
+> Ian Hands-Portman \
+> Imaging Suite Manager \
+> School of Life Sciences \
+> University of Warwick \
+> Gibbet Hill Road \
+> Coventry \
+> CV47AL
+
+[Back to Index](../README.html)

@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2017-12-08"
+date: "Started: 2013-07-16, Last modified: 2017-12-11"
 output:
   html_document:
     css: ./theme/jm-gray-vignette.css
@@ -171,6 +171,8 @@ Topic
 [Stratagem](./Stratagem/Stratagem.html)
 
 [Sweave](./Sweave/Sweave.html)
+
+[TEM](./TEM/TEM.html)
 
 [TeX](./tex/tex-tips.html)
 

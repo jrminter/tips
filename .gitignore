@@ -357,6 +357,12 @@ testMakefileBeamerSlideHandouts/.DS_Store
 testMakefileBeamerSlideHandouts/*.pdf
 
 # tex tips directory
+TEM/.DS_Store
+TEM/TEM.md
+TEM/TEM.html
+TEM/figure/
+
+# tex tips directory
 tex/.DS_Store
 tex/tex-tips.md
 tex/tex-tips.html
