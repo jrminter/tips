@@ -131,6 +131,12 @@ hacklev/hacklev.md
 hacklev/hacklev.html
 hacklev/figure/
 
+# homebrew directory
+homebrew/.DS_Store
+homebrew/homebrew.md
+homebrew/homebrew.html
+homebrew/figure/
+
 # hyperspy directory
 hyperspy/.DS_Store
 hyperspy/hyperspy.md

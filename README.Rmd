@@ -88,6 +88,8 @@ Topic
 
 [Haklev's tips on data wrangling with R](./hacklev/hacklev.html)
 
+[homebrew](./homebrew/homebrew.html)
+
 [hyperspy](./hyperspy/hyperspy.html)
 
 [Image-J](./ImageJ/ImageJ.html)
