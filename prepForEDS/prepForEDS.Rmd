@@ -1,7 +1,7 @@
 ---
 title: "Mounting and Polishing for EDS"
 author: "John Minter"
-date: "Started: 2017-05-21, Last modified: 2017-10-28"
+date: "Started: 2017-05-21, Last modified: 2017-12-10"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -16,7 +16,23 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Tips from the **Probe Software Forum**
 
-[John Donovan](http://probesoftware.com/smf/index.php?topic=169.msg737#msg737) notes:
+## Make a thin section without equipment
+
+From [here](http://probesoftware.com/smf/index.php?topic=169)
+
+**Philipp Poeml** asked:
+
+> I have some terribly radioactive material from the Chernobyl accident.
+> It is a silicate melt that formed from the molten core and structural
+> materials from the building. To do a thin section of this stuff would
+> be absolutely mega cool.
+> 
+> How can I make a thin section with the least possible equipment? Like,
+> manually, by hand? I think that should be possible. I can introduce
+> certain things into that glovebox (which are contaminated and lost
+> then) so I want to minimize waste, cost, and so on.
+
+**John Donovan** answered:
 
 > Seriously, I made hundreds of thin sections by hand at UCB when I was investigating blueschist minerals about 20 years ago. 
 >
@@ -44,8 +60,11 @@ In reply, "Probeman" notes:
 
 > I use the Struers stuff myself. I buff my standards on a stack of filter paper and find the buehler stuff destroys the filter paper faster than the struers. My experiences over the years have pointed to no significant differences in the performance between brands. However, delving deep into the dark recesses of my memory makes me recall that the best polishing I ever got was using diamond pastes rather than slurries on laps lubricated with meths... (**JM note** methanol?)
 
-[Nick Bulloss](http://probesoftware.com/smf/index.php?topic=741.0)
-asked: 
+## Clean and repolish standards
+
+From [here](http://probesoftware.com/smf/index.php?topic=741.0):
+
+**Nick Bulloss** asked: 
 
 > I have a few standard blocks (mineral and pure elements) that need to be re-polished, cleaned and carbon coated. What polishing and cleaning methods have worked best for people? I had a suggestion of 1um diamond suspension for polishing (Peter McSwiggen). How do you best clean samples/standards without leaving any residue?
 
@@ -72,6 +91,45 @@ asked:
 He also noted:
 
 > We only use colloidal alumina nowadays.  In think we found it works better on most materials.
+
+## Polish ater soluble samples
+
+A [question](http://probesoftware.com/smf/index.php?topic=993.0)
+was asked about how to polish water-soluble specimens.
+
+**Probeman** responded:
+
+> I learned from Tim Teague at UC Berkeley many years ago that the sharp
+> edge of epoxy around the edges of a polished grain can be eaten away
+> (at microscopic levels) by isopropyl alcohol (and even worse is
+> acetone), but that pure (*undenatured*) 190 proof ethanol works
+> excellently and does not damage epoxy.  The concern being that the
+> conductive coating might not "bridge" the "moat" you describe above.
+>
+> I also remember him telling me
+> 
+>> Always rub the excess ethanol off with a KimWipe (lint free and non
+>> scratching) until the surface is
+>> dry".
+>
+> The idea being, I think, that if one allows the ethanol to dry by
+> evaporation, the dissolved residues will be left deposited on the
+> surface.
+>
+> But it further occurs to me that Tim Teague's slow RPM oil based
+> polishing methods would be better for prepping such water soluble
+> materials as you mentioned above, but that's about all I know on that
+> subject.  Could one use hexane as a polishing lubricant for water
+> sensitive materials I wonder?
+
+**Anette von der Handt** also replied:
+
+> We have people dealing with water-soluble samples (carbonates and
+> carbonatites) and they simply polish their samples dry with diamond
+> powder on a soft polishing cloth.
+> 
+> I also know that people have good results by polishing with petroleum
+> ether as the lubricant.
 
 # Tips from the UMASS Geology Microprobe lab (Michael Jercinovic)
 
