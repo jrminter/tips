@@ -17,7 +17,9 @@ I have collected these tips both from experience and from a very helpful user co
 
 ## IJ_prefs.txt location
 
-**MacOSX**: /Users/jrminter/Library/Preferences/IJ_Prefs.txt
+**MacOSX**: /Users/jrminter/Library/Preferences/IJ_Prefs.txt \
+**Windows**: C:/Users/jrminter/.imagej/IJ_Prefs.txt
+
 
 
 ## Check the open image header for metadata
