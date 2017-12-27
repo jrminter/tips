@@ -1,3 +1,4 @@
+/* Last modified 2017-11-14 */
 body {
   background-color: #fff;
   margin: 1em auto;
@@ -23,7 +24,7 @@ caption::before{
 
 .caption::before{
   counter-increment: figure;
-  /*content: "Figure " counter(figure) ":  ";*/
+  /*content: "Figure " counter(figure) ":  "; */
 }
 
 caption, .caption{
@@ -67,7 +68,7 @@ caption, .caption{
   clear: both;
   margin: 0 0 10px 10px;
   padding: 4px;
-  width: 400px;
+  width: 650px;
   border: 1px solid #CCCCCC;
   border-radius: 5px;
   background-color: #ebebeb; /*Note: ggplot2 lt gray bkg color */
