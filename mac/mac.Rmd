@@ -15,8 +15,23 @@ output:
 ## Go to folder
 
 From Finder window, hit "**Command+Shift+G**". Note that
-this menu supports both **tab completion** and
+this menu supports both **tab completion**
 **drag and drop**.
+
+## Running CalcZAF under Parallels.
+
+1. Before starting the Win 10 VM, use CMD+Option to hide the dock.
+
+2. Start the Win 10 VM.
+
+3. Use Full Screen mode in the Win 10 VM from the view menu (or Shift-CMD-F).
+To exit FS mode, move the cursor to the **top left** of the screen and hit the
+green button.
+
+4. Run Standard and Configure and run PENEPMA.
+
+5. When done with the VM, exit FS mode and shut down. Use CMD+Option to
+restore the dock.
 
 ## Startup options
 
