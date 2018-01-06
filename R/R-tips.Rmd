@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-01-05"
+date: "Started: 2013-07-16, Last modified: 2018-01-06"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -74,8 +74,8 @@ I needed this:
 
 ```
 # Python 3.6
-PATH=/Users/jrminter/miniconda3/bin:/Library/TeX/texbin:/usr/local/bin:/Users/jrminter/scripts:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
-LATEX=/usr/local/texlive/2016/bin/x86_64-darwin/pdflatex
+PATH=/Users/jrminter/miniconda3/bin:/Library/TeX/texbin:/usr/local/bin:/Users/jrminter/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
+LATEX=/usr/local/texlive/2017/bin/x86_64-darwin/pdflatex
 WORK=/Users/jrminter/Documents/work
 ```
 
