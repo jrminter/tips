@@ -1,7 +1,7 @@
 ---
 title: "Windows Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2017-12-08"
+date: "Started: 2013-07-16, Last modified: 2018-01-08"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -118,6 +118,10 @@ You may need to log out and back on. See the example below:
 
 This was great. After removing MSYS2 with the installer, it took forever
 to remove what was left behind. Would be great of old TexLive installs.
+
+## Location of the backup drive letter in the registry
+
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsBackup\ScheduleParams\TargetDevice`
 
 ## Some tips from SoftwareCarpentry and elsewhere
 
