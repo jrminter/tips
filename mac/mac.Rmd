@@ -51,7 +51,14 @@ with an addition from [apple](https://support.apple.com/en-us/HT202731)
 | Command-Option-P-R | Reset PRAM |
 | T | Enable Target Disk Mode |
 
-**Explanations**
+**Options at the end of Apple Diagnostics**
+
+- To repeat the test, click "Run the test again"" or press Command-R.
+- For more information, including details about your service and support options, click "Get started"" or press Command-G.
+- To restart your Mac, click Restart or press R.
+- To shut down, click Shut Down or press S. 
+
+**Mode Explanations**
 
 - **Startup Manager**: choose from icons of bootable volumes
 - **Safe Boot**: start with minimal drivers and check integrity
@@ -59,6 +66,7 @@ with an addition from [apple](https://support.apple.com/en-us/HT202731)
 - **Verbose Mode**: see all the startup messages.
 - **Single User Mode**: see start up messages and boot to terminal. Can do hard drive repair from here.
 - **Target Disk Mode**: you can connect your Mac to another Mac via FireWire or Thunderbolt and see the contents of the Mac’s drive mounted on the second Mac as if the drive were an external FireWire or Thunderbolt device. This not only lets you easily access data on a Mac’s hard drive, it also lets you use one Mac’s hardware to boot another Mac’s operating system and data.
+
 
 ## External disks
 
