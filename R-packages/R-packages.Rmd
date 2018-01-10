@@ -1,7 +1,7 @@
 ---
 title: "R Package Tips"
 author: "J. R. Minter"
-date: "Started: 2015-05-08, Last modified: 2017-01-28"
+date: "Started: 2015-05-08, Last modified: 2017-01-10"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
