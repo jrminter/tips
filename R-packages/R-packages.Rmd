@@ -40,6 +40,24 @@ library(pkgName)
 browseVignettes("pkgName")
 ```
 
+## Issue on Windows
+
+The procedure above worked om mac for rEDS. On my Win 7 box I needed
+to do:
+
+```
+devtools::install_github("jrminter/rEDS", build_vignettes = TRUE, force = TRUE)
+```
+
+then the commands below worked
+
+```
+library(rEDS)
+browseVignettes('rEDS')
+```
+
+
+
 
 # Set up a new package `myPkg` that we plan to host on github
 
