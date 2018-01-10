@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-01-07"
+date: "Started: 2013-07-16, Last modified: 2018-01-09"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -20,7 +20,7 @@ this menu supports both **tab completion**
 
 ## Running CalcZAF under Parallels.
 
-1. Before starting the Win 10 VM, use CMD+Option to hide the dock.
+1. Before starting the Win 10 VM, use CMD+Option+D to hide the dock.
 
 2. Start the Win 10 VM.
 
@@ -30,7 +30,7 @@ green button.
 
 4. Run Standard and Configure and run PENEPMA.
 
-5. When done with the VM, exit FS mode and shut down. Use CMD+Option to
+5. When done with the VM, exit FS mode and shut down. Use CMD+Option+D to
 restore the dock.
 
 ## Startup options
