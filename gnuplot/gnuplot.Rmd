@@ -1,7 +1,7 @@
 ---
 title: "Gnuplot Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-20, Last modified: 2017-10-28"
+date: "Started: 2013-07-20, Last modified: 2018-01-10"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -19,6 +19,20 @@ compiled from several web sources. Some helpful ones:
 [Gnuplot tricks](http://gnuplot-tricks.blogspot.com/2009/05/gnuplot-tricks-many-say-that-it-is.html)
 
 [gnuplotting.org](http://www.gnuplotting.org/)
+
+# Installing and Running on MacOSX
+
+1, Install using [Homebrew](https://stackoverflow.com/questions/32421713/install-gnuplot-5-0-1-on-osx)
+
+```
+brew cask install aquaterm; brew install gnuplot --with-aquaterm
+```
+
+2. Set the terminal
+
+```
+set terminal aqua
+```
 
 
 # Hacking the .plt file
