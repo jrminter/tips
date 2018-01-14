@@ -1,7 +1,7 @@
 ---
 title: "Windows Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-01-10"
+date: "Started: 2013-07-16, Last modified: 2018-01-14"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -76,6 +76,46 @@ Volume 5 is the selected volume.
 DISKPART> assign letter=F
 ```
 
+## Create a USB Win 7 System Restore USB
+
+From [http://www.lazesoft.com/](http://www.lazesoft.com/windows-recovery/build-a-windows-7-usb-system-repair-disc.html)
+
+**Second Method: Manually create a Windows 7 USB bootable system**
+**recovery USB flash disk**
+
+You can also create a USB bootable system recovery USB flash disk under Windows 7. However, this process is somewhat complicated and you must burn a DVD to write a USB disk. Windows 7 cannot directly build a system recovery flash drive.
+
+1. Open 'Backup and Restore' by clicking the Windows 7 <Start> button, clicking <Control Panel>, clicking <System and Maintenance>, and then clicking <Backup and Restore>.
+
+2. In the left pane, click <Create a system repair disc>. (If you are prompted for an administrator password or confirmation when open the tool, type the password or provide confirmation.)
+
+3. Select your DVD drive. Insert a blank DVD into the DVD drive and then click the <Create disc> button to start creating a bootable DVD.
+
+4. Wait for the burning task to complete.
+
+5. When the Windows 7 repair DVD is ready, you can now create a Windows 7 recovery USB drive. Insert your USB flash drive into your computer and backup information files on it.
+
+6. Open 'Command Prompt' with administrator privileges. To do this, right click 'Command Prompt' and then select 'Run as administrator'. The 'Command Prompt' option is on the 'All programs -> Accessories' menu.
+
+7. Type 'DISKPART' and press <Enter>.
+
+8. Type 'SELECT DISK 1' and press <Enter>. (Replace '1' with your USB disk number)
+
+9. Type 'CLEAN' and press <Enter>.
+
+10. Type 'CREATE PARTITION PRIMARY' and press <Enter>.
+
+11. Type 'SELECT PARTITION 1' and press <Enter>.
+
+12. Type 'ACTIVE' and press <Enter>.
+
+13. Type 'FORMAT FS=NTFS' and press <Enter>.
+
+14. Type 'ASSIGN' and press <Enter>.
+
+15. Type 'EXIT' and press <Enter>.
+
+16. Now, copy all the files and folders (contains three items) on the previously created repair DVD to the USB flash drive. You can use your bootable USB disk now.
 
 
 
