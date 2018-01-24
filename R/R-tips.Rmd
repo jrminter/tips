@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-01-11"
+date: "Started: 2013-07-16, Last modified: 2018-01-24"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -30,6 +30,13 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 [Back to Index](../README.html)
 
 # Don't forget...
+
+## Special symbols...
+
+1. Use `demo(plotmath)` to see syntax for mathematical expressions.
+
+2. Also look at `latex2exp` on [github](https://github.com/stefano-meschiari/latex2exp).
+
 
 ## To start Rserve
 
