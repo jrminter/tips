@@ -1,7 +1,7 @@
 ---
 title: "Tips on Using DTSA-II"
 author: "J. R. Minter"
-date: "Started: 2015-05-19, Last modified: 2018-01-01"
+date: "Started: 2015-05-19, Last modified: 2018-01-20"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -12,6 +12,19 @@ output:
 [Back to Index](../README.html)
 
 # Key tricks
+
+## Using the **Simulation alien** to simulate individual spectrum components.
+
+In general, I prefer to use a script to do simulations, but the
+simulation alien has the ability to turn off/on different components.
+Note the dialog below:
+
+![Spectrum simulation options. Note how each type can be turned on or off (red arrows).](./png/simulation-alien-options.png)
+
+
+![This figure was prepared by simulating Admiralty Brass with all
+options on and then with single options turned on. This reproduces 
+Goldstein2018a Fig. 17.37 p. 257.](./png/admiralty-brass-sim-15kV.png)
 
 ## Sources for free microanalysis software
 
