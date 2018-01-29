@@ -1,0 +1,150 @@
+---
+title: "Sample Prep for Microscopy"
+author: "J. R. Minter"
+date: "Started: 2018-01-29, Last modified: 2018-01-28"
+output:
+  knitr:::html_vignette:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+---
+
+[Back to Index](../README.html)
+
+# SEM/FIB
+
+## Cu
+From John Mardinly 2013-06-10
+
+> When Intel first started copper, the TEM labs were borrowing time on
+> FIBs that were used for F/A, all with iodine or xenon difluoride. The
+> samples that came out of these FIBs tended to be covered with "fur"
+> by the time they got to the FIB. What we found was that whenever a
+> FIB had ever been used for enhanced etch, it was never again suitable
+> for use as a TEM prep tool for copper. This required purchasing new
+> FIBs dedicated to TEM prep, something that did not go down well
+> with management! However, it did solve the problem. The other
+> approach that helped a lot was vacuum storage of the specimens.
+> We purchased a Gatan unit, specially designed for specimen storage.
+> It used the vacuum system of the model 655 specimen holder.
+> You can see the design on their web page. This worked well
+> for some time. However, a word of caution: You MUST change the
+> rubber diaphragms annually, without fail. If the diaphragms
+> develop cracks, it will back stream sulphur containing motor
+> oil into the system, contaminating everything and corroding
+> the copper. Our $17,000 system had to be scrapped because
+> the molecular drag pump was contaminated, and it could not
+> be successfully cleaned.
+>
+> My experience with the nightmare of copper returned after
+> Intel closed in Santa Clara, and I moved to Western Digital
+> Media R&D. Some experimental disks contained a layer of
+> copper. Before we had our own FIB, we had all of our samples
+> prepared by a local vendor of TEM services. On a few
+> occasions, their weekend shift used an 855 (with enhanced
+> etch installed but not used) just to do the lift out
+> and glue the 1 micron lamellae to the copper grids. They
+> were then finished in a new Helios. By the time they
+> got to the TEM, they were destroyed. I knew what the
+> problem was right away, but nobody believed me.
+> Eventually, they came to accept the idea that copper
+> could never go into a FIB with enhanced etch installed,
+> whether it was being used or not. Unmeasurable traces
+> of that stuff just destroy copper TEM samples.
+> 
+> One other thought came to mind a and that was how we dealt with
+> wedge or dimpled and ion milled samples. As I recall, and it
+> has been a few years, we typically had corrosion problems if
+> the sample was not ion milled immediately after dimple or
+> wedge polish. This idea popped up after one technician
+> polished a batch of samples on a Friday, cleaned and dried
+> them, but then when they were milled on Monday, they all
+> corroded instantly after milling. One thought was that
+> something in the Syton was diffusing into the samples,
+> perhaps into the epoxy. One suggestion was that it was
+> the phosphoric acid in the Syton. In any event, when we
+> adopted the procedure that ion milling was done immediately
+> after polishing, the problem of copper corrosion on argon
+> milled samples faded into the background...until of course,
+> the rubber  diaphragms on our vacuum storage system
+> cracked. Remember, miniscule amounts of the wrong materials
+> seem to be able to have a catalytic effect on the
+> corrosion rate of copper.
+
+> John Mardinly, ASU
+
+# TEM
+
+## Powders for microscopy
+
+### Direct examination
+
+In response to a question regarding embedding pigments for microtoomy.
+[Allen Hall](mailto:ajhall@prairienanotech.com) of Prairie
+Nanotechnology wrote:
+
+> Powders and pigments likely do not require encapsulation.  It's
+> usually much easier to place them on a supporting grid directly for
+> imaging. This of course assumes that the size of the powder or pigment
+> is small enough for electron transmission.  Often it's worth it just
+> to check incase it is possible; which makes sample prep fairly easy.
+> 
+> There are a few methods that could be used to prepare these - one that
+> I've had some success with fine powders in the past is as follows:
+> place an amount of the powder into isopropanol, ultrasonicate to break
+> up agglomerations, dip a holy-carbon grid into the liquid, pull it
+> out, and allowing the grid to air dry.  If there was a small enough 
+> amount, but enough to be finely dispersed in the alcohol, you will
+> pick up some on the grid.  This grid, when dried, can then be imaged
+> with the powders suspended on the holy-carbon.  It may take a few
+> trials to get enough from the alcohol suspension.
+> 
+> Another method that has worked for me in the past (assuming the
+> powder is well separated) is a very light dusting of the powder
+> mid-air above the grid (allowing some of the powder to
+> fall down onto the grid on the table). This one is less likely to
+> obtain separated powders that are small enough to image, but I have
+> seen some success with it as well in the past.  (Use of a clean fine
+> artist paint brush to flick the powder into the air above the grid may
+> work here.)
+> 
+> **Please be careful not to allow the alcohol with the powder or the**
+> **powder in air to get on your skin or to be breathed in.**
+> Some solvents (acetone notably) allows chemicals to enter through the
+> skin, and we are learning that nanopowders are not healthy for you to
+> breathe in as well.
+> 
+> I hope this is helpful.  You'll likely get a number of great answers
+> from the list-serve and I'm looking forward to learning from their
+> answers also!
+
+
+
+# Staining
+
+## Substitutes for Uranyl Acetate
+
+From [Nakakoshi et al.](http://jmicro.oxfordjournals.org/content/60/6/401.abstract?etoc)
+
+> Aqueous uranyl acetate has been extensively used as a superb staining
+> reagent for transmission electron microscopy of biological materials.
+> However, recent regulation of nuclear fuel material severely restricts
+> its use even for purely scientific purposes. Since uranyl salts are
+> hazardous due to biological toxicity and remaining radioactivity,
+> development of safe and non-radioactive substitutes is greatly
+> anticipated.
+> 
+> We examined two lanthanide salts, samarium triacetate and gadolinium
+> triacetate, and found that 1–10% solution of these reagents was safe
+> but still possess excellent capability for staining thin sections of
+> plastic-embedded materials of animal and plant origin. Although
+> post-fixation with osmium tetroxide was essential for high-contrast
+> staining, post-staining with lead citrate could be eliminated if a
+> slow-scan CCD camera is available for observation. These lanthanide
+> salts can also be utilized as good negative-staining reagents to study
+> supramolecular architecture of biological macromolecules. They were
+> not as effective as a fixative of protein assembly, reflecting the
+> non-hazardous nature of the reagents.
+
+
+[Back to Index](../README.html)

@@ -108,6 +108,8 @@ Topic
 
 [microscopy](./micro/micro.html)
 
+[microscopy sample prep](./micro-sample-prep/micro-sample-prep.html)
+
 [midb](./midb/midb.html)
 
 [Monte Carlo methods in R](./monteCarlo/monteCarlo.html)

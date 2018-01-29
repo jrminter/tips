@@ -178,6 +178,12 @@ micro/micro.md
 micro/micro.html
 micro/figure/
 
+# micro-sample-prep directory
+micro-sample-prep/.DS_Store
+micro-sample-prep/micro-sample-prep.md
+micro-sample-prep/micro-sample-prep.html
+micro-sample-prep/figure/
+
 # monteCarlo directory
 monteCarlo/.DS_Store
 monteCarlo/monteCarlo.md
