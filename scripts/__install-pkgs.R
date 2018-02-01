@@ -99,6 +99,7 @@ install_new('Quandl')
 install_new('extrafont')
 install_new('Rd2roxygen')
 install_new('tidyquant')
+install_new('here') # by Kirill Muller recommended by HW and JB!
 
 # Sweave and pandoc tools
 # install_new('cacheSweave') # not avail 3.2
