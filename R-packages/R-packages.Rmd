@@ -1,7 +1,7 @@
 ---
 title: "R Package Tips"
 author: "J. R. Minter"
-date: "Started: 2015-05-08, Last modified: 2017-01-10"
+date: "Started: 2015-05-08, Last modified: 2017-02-07"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -47,6 +47,12 @@ to do:
 
 ```
 devtools::install_github("jrminter/rEDS", build_vignettes = TRUE, force = TRUE)
+```
+
+There is another way - from the package project:
+
+```
+devtools::install(build_vignettes = TRUE)
 ```
 
 then the commands below worked
