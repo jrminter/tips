@@ -13,6 +13,74 @@ output:
 
 Some useful tips for windows
 
+# See chkdsk output
+
+1. Run `chkdsk`. Note: on **crunch** it took a *long* time (about 20 hrs)...
+
+2. Press the Windows + R keys to open the Run dialog, type `eventvwr.msc`,
+and press Enter. If prompted by UAC, then click on Yes.
+
+![](./png/run-eventvwr.png)
+
+3. In the left pane of Event Viewer, double click on Windows Logs to expand it, then right click on Application and click on Find.
+
+![](./png/ev-application-find.png)
+4. The infoemation is in the `Details area`
+
+![](./png/chkdsk-info.png)
+
+My most recent was:
+
+```
+Checking file system on C:
+The type of the file system is NTFS.
+
+A disk check has been scheduled.
+Windows will now check the disk.                         
+
+CHKDSK is verifying files (stage 1 of 5)...
+  1194752 file records processed.                                          File verification completed.
+  1449 large file records processed.                                      0 bad file records processed.                                        2 EA records processed.                                              103 reparse records processed.                                       CHKDSK is verifying indexes (stage 2 of 5)...
+  1481876 index entries processed.                                         Index verification completed.
+  0 unindexed files scanned.                                           0 unindexed files recovered.                                       CHKDSK is verifying security descriptors (stage 3 of 5)...
+  1194752 file SDs/SIDs processed.                                         Cleaning up 819 unused index entries from index $SII of file 0x9.
+Cleaning up 819 unused index entries from index $SDH of file 0x9.
+Cleaning up 819 unused security descriptors.
+Security descriptor verification completed.
+  143563 data files processed.                                            CHKDSK is verifying Usn Journal...
+  34692312 USN bytes processed.                                             Usn Journal verification completed.
+CHKDSK is verifying file data (stage 4 of 5)...
+  1194736 files processed.                                                 File data verification completed.
+CHKDSK is verifying free space (stage 5 of 5)...
+  191685679 free clusters processed.                                         Free space verification is complete.
+CHKDSK discovered free space marked as allocated in the
+master file table (MFT) bitmap.
+CHKDSK discovered free space marked as allocated in the volume bitmap.
+Windows has made corrections to the file system.
+
+ 982185983 KB total disk space.
+ 213715412 KB in 819720 files.
+    401488 KB in 143564 indexes.
+         0 KB in bad sectors.
+   1326363 KB in use by the system.
+     65536 KB occupied by the log file.
+ 766742720 KB available on disk.
+
+      4096 bytes in each allocation unit.
+ 245546495 total allocation units on disk.
+ 191685680 allocation units available on disk.
+
+Internal Info:
+00 3b 12 00 ff b0 0e 00 0a 77 1a 00 00 00 00 00  .;.......w......
+a4 06 00 00 67 00 00 00 00 00 00 00 00 00 00 00  ....g...........
+00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+
+Windows has finished checking your disk.
+Please wait while your computer restarts.
+
+```
+
+
 # Windows tips from the [Probe Software Forum](http://probesoftware.com/smf/index.php?topic=996.0)
 
 ## Easy access to command window

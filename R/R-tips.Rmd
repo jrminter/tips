@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-01-24"
+date: "Started: 2013-07-16, Last modified: 2018-02-06"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -30,6 +30,27 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 [Back to Index](../README.html)
 
 # Don't forget...
+
+## Get the .gitignore right...
+
+[This](https://stackoverflow.com/questions/36185456/gitignored-files-still-shown-in-rstudio)
+post on StackOverflow was **very** helpful. We want to ignore all the files in
+`.Rproj.user` and the directories below. here is how you fix:
+
+1. Remove what was previously committed
+
+```
+git rm -r --cached .Rproj.user/**
+git commit -m "Removed files...."
+```
+
+2. Now add the right entry to **.gitignore**. Note the two asterics...
+
+```
+.Rproj.user/**
+```
+
+
 
 ## Special symbols...
 
