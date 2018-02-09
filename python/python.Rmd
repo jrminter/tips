@@ -13,6 +13,14 @@ output:
 
 # Hints for key packages
 
+## pandoc that will work with R-Studio
+
+There seem to be some issues with pandoc 1.1.1 with RStudio on Windows. This version works
+
+```
+conda install pandoc=1.19.2.1
+```
+
 ## matplotlib-scalebar
 
 This is a helpful utility by Philippe Pinard. Install with
