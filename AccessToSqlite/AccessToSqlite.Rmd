@@ -8,6 +8,7 @@ output:
     number_sections: yes
     toc: yes
     keep_md: true
+    variant: github_md
 ---
 
 [Back to Index](../README.html)
