@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-02-13"
+date: "Started: 2013-07-16, Last modified: 2018-02-16"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -406,6 +406,15 @@ this last article notes that we can activate environment.plist with
 launchctl load ~/Library/LaunchAgents/environment.plist
 ```
 
+If it is already loaded and you have modified the plist file, see your updates by running:
+
+```
+launchctl stop ~/Library/LaunchAgents/environment.plist
+launchctl unload ~/Library/LaunchAgents/environment.plist
+launchctl load ~/Library/LaunchAgents/environment.plist
+launchctl start ~/Library/LaunchAgents/environment.plist
+```
+
 Create an environment.plist file in `~/Library/LaunchAgents/` with this content: I have this content:
 
 ```
@@ -419,12 +428,10 @@ Create an environment.plist file in `~/Library/LaunchAgents/` with this content:
   <array>
     <string>sh</string>
     <string>-c</string>
-    <string>
+    <string>launchctl setenv HOME /Users/jrminter
     launchctl setenv IMAGE_ROOT /Users/jrminter/dat/images
     launchctl setenv EDS_ROOT /Users/jrminter/dat/eds
-    launchctl setenv GIT_HOME  /Users/jrminter/Documents/git
-    launchctl setenv TMP  /Users/jrminter/tmp
-    </string>
+    launchctl setenv GIT_HOME /Users/jrminter/Documents/git</string>
 
   </array>
   <key>RunAtLoad</key>
