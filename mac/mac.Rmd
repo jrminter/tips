@@ -12,6 +12,16 @@ output:
 
 # Tips
 
+## Stop indexing and searching USB keys
+
+From [osx-daily](http://osxdaily.com/2012/01/24/stop-spotlight-from-indexing-time-machine-backup-volumes-external-drives/)
+
+To stop `JRM-TO-GO`
+
+```
+mdutil -i off /Volumes/JRM-TO-GO
+```
+
 ## Toggle visibility of hidden files in Finder
 
 ```
