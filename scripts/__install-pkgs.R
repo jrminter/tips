@@ -102,6 +102,8 @@ install_new('tidyquant')
 install_new('here') # by Kirill Muller recommended by HW and JB!
 install_new('fs')
 
+install_new('ciTools')
+
 # Sweave and pandoc tools
 # install_new('cacheSweave') # not avail 3.2
 install_new('knitcitations')
