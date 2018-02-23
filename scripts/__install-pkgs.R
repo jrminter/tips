@@ -198,6 +198,7 @@ install_new('tigris')
 install_new('xaringan')
 install_new('FinCal')
 install_new('hrbrthemes')
+install_new('cowsay')
 
 biocLite()
 
