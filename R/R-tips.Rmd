@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-02-20"
+date: "Started: 2013-07-16, Last modified: 2018-02-23"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -30,6 +30,15 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 [Back to Index](../README.html)
 
 # Don't forget...
+
+## Supress startup messages
+
+I **really** like this one:
+
+```{r supress.startup.messages}
+suppressPackageStartupMessages(library("tidyverse"))
+```
+
 
 ## Get key version information
 
