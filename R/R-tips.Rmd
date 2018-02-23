@@ -39,6 +39,11 @@ I **really** like this one:
 suppressPackageStartupMessages(library("tidyverse"))
 ```
 
+Might as well read the rest of the post that gave the idea and
+learn the value of
+[quasi-quotation](http://blog.jalsalam.com/posts/2017/quasi-quotation-applications/)
+with the **tidyverse**.
+
 
 ## Get key version information
 
