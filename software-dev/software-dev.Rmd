@@ -1,7 +1,7 @@
 ---
 title: "Software Development"
 author: "J. R. Minter"
-date: "Started: 2017-11-21, Last modified: 2017-11-21"
+date: "Started: 2017-11-21, Last modified: 2018-03-12"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -33,6 +33,22 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 ![Tips from Julia Evans](./jpg/software-dev.jpg)
 
+# Team Tips
+
+## Ideas from [Kate Heddleston](https://kateheddleston.com/blog/becoming-a-10x-developer)
+
+**10 Ways to be a Better Teammate**
+
+1. Create an environment of psychological safety
+2. Encourage everyone to participate equally
+3. Assign credit accurately and generously
+4. Amplify unheard voices in meetings
+5. Give constructive, actionable feedback and avoid personal criticism
+6. Hold yourself and others accountable
+7. Cultivate excellence in an area that is valuable to the team
+8. Educate yourself about diversity, inclusivity, and equality in the workplace
+9. Maintain a growth mindset
+10. Advocate for companies policies that increase workplace equality
 
 [Back to Index](../README.html)
 
