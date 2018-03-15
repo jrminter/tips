@@ -1,7 +1,7 @@
 ---
 title: "TeXLive Hints"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2017-10-28"
+date: "Started: 2013-07-16, Last modified: 2018-03-15"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -435,6 +435,15 @@ install-tl -repository http://mirrors.rit.edu/CTAN/systems/texlive/tlnet/
 ## Pretest
 
 ### at home
+
+For mac
+
+```
+sudo tlmgr option repository http://ftp.math.utah.edu/pub/tlpretest/
+```
+
+
+Other
 
 ```
 cd /home/shared
