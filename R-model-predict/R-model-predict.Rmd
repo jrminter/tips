@@ -1,0 +1,176 @@
+---
+title: "R model prediction tips"
+author: "J. R. Minter"
+date: "Started: 2018-03-15, Last modified: 2018-03-15"
+output:
+  knitr:::html_vignette:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+---
+
+[Back to Index](../README.html)
+
+# Overview
+
+I frequently need use R's model fitting capabilities and then want to
+compute an interpolation for a smooth curve. This document contains
+some reproducible examples.
+
+# Fitting Misell and Burdett's data
+
+To prepare the data for modeling, we need to load and pre-process a
+dataset from Misell and Burdett. We need to do the following
+transformations:
+
+1. Convert $kV$ to $eV$ (using `fac1` below)
+2. Convert $m^2/mg$ to $cm^2/g$ (using `fac2` below)
+3. Take the natural log of each term. *N.B.* In R the natural log
+function is `log()` while the base 10 function is `log10()`.
+
+```{r loadAndPrepData, message=FALSE}
+suppressPackageStartupMessages(library(here))
+suppressPackageStartupMessages(library(pander))
+suppressPackageStartupMessages(library(tidyverse))
+fi <- here('R-model-predict/dat/Misell-Burdett.csv')
+df <- read_csv(fi)
+fac1 <- 1000 # kev to eV
+fac2 <- 10000000 # m2/mg to cm2/g 
+df.ln <- data.frame(ln.E0.eV=log(fac1*df[,1]),
+                    ln.alpha.05=log(fac2*df[,2]),
+                    ln.alpha.10=log(fac2*df[,3]),
+                    ln.alpha.15=log(fac2*df[,4]))
+names(df.ln) <- c("ln.e0.eV","ln.alpha.05",
+                  "ln.alpha.10","ln.alpha.15")
+pander(df.ln)
+```
+
+Next, let's fit the data to a linear model for the 5 mrad aperture.
+Note how we create a dataframe for the model and do the fit. We get
+the coefficients from the `summary()` function.
+
+```{r, fitAp05}
+df.05 <- data.frame(x=df.ln[,1], y=df.ln[,2])
+lm.05 <- lm(y~x, data=df.05)
+sum.05 <- summary(lm.05)
+coe.05 <- sum.05$coef
+pander(coe.05)
+```
+
+We now define a function to get the slope and intercept from the
+coefficients so we can tabulate them. We would re-use these functions
+to extract coefficients from fits to other apertures with different
+scattering angles.
+
+```{r, getCoef05}
+getInterceptFromCoef <- function(coe){
+  mu <- coe[1]
+  se <- coe[3]
+  ret <- c(mu,se)
+  names(ret) <- c("mu", "se")
+  return(ret)
+}
+
+getSlopeFromCoef <- function(coe){
+  mu <- coe[2]
+  se <- coe[4]
+  ret <- c(mu,se)
+  names(ret) <- c("mu", "se")
+  return(ret)
+}
+
+sl.05 <- getInterceptFromCoef(coe.05)
+in.05 <- getSlopeFromCoef(coe.05)
+```
+And compute the predicted values for the line.
+**Note how we define a vector of x-values**
+using the `seq()` function and insert it into our
+working dataframe (`df.05.p`). We then fill in the predicted values
+with the `predict()` function. The key is to pass the dataframe name
+to the function using the `newdat` parameter.
+
+```{r, predAp05}
+x.pred <- seq(from=9.90, to=11.6, by=0.01)
+df.05.p <- data.frame(x=x.pred)
+df.05.p$y <- predict(lm.05, newdat=df.05.p)
+```
+
+Next, we plot the data.
+
+```{r, makeLogPlot}
+
+plt <- ggplot() +
+       geom_point(data=df.ln, aes(x=ln.e0.eV, y=ln.alpha.05),
+                  colour="darkblue") +
+       geom_line(data=df.05.p, aes(x=x, y=y), colour="darkblue") +
+       xlab(label="ln(e0 [eV])") +
+       ylab(label="ln(Sp [cm2/g])") +
+       ggtitle("Misell-Burdett data") +
+       theme(axis.text=element_text(size=12),
+             axis.title=element_text(size=12),
+             # center the title
+             plot.title = element_text(hjust = 0.5))
+
+print(plt)
+```
+
+# Prediction using LOESS
+
+Let's first illustrate the key methodology from a data set of the Al-K
+and Si-K X-ray peak intensities computed by Monte Carlo simulation of
+layers of selected thicknesses of Al on a Si substrate using the NIST
+DTSA-II X-ray EDS software. We want to use this to estimate the
+thickness of vacuum-deposited films of Al by attaching a small chip of
+Si to the surface of the coated material and then recording X-ray EDS
+spectra at 5 kV.
+
+Let's start by loading a data-frame from disk and compute the derived
+quantity we need to plot. We want to use the LOESS algorithm to compute
+a smooth, monotonic curve. The values from this curve may be used as a
+look-up table to compute thickness from measured spectra.
+
+```{r, message=FALSE}
+fi <- here('R-loess/dat/Al-on-Si-5kV-10000-Traj.csv')
+df <- read_csv(fi)
+df$al.to.si.mu <- df$Al.Int.mu / df$Si.Int.mu
+df$al.to.si.unc <- sqrt((df$Al.Int.unc/df$Al.Int.mu)**2 + 
+                        (df$Si.Int.unc/df$Si.Int.mu)**2)
+```
+
+Now compute the LOESS, using the default span.
+
+```{r, computeLoess}
+y.loess <- loess(al.to.si.mu ~ t.Al.nm, span=0.75, data=df)
+```
+
+Next, we want to **predict the smooth curve with high resolution**.
+
+```{r, predictLoess}
+t.Al.nm <- seq(from=0.5, to=100, by=0.5)
+df2 <- data.frame(t.Al.nm=t.Al.nm)
+df2$al.to.si.mu = round(predict(y.loess, newdata = df2), 5)
+```
+
+Next prepare a ggplot2 plot, named `altosiInt`:
+
+```{r}
+altosiInt <- ggplot(df, aes(x=t.Al.nm, y=al.to.si.mu)) + 
+    geom_errorbar(aes(ymin=al.to.si.mu - 1.96*al.to.si.unc,
+                      ymax=al.to.si.mu + 1.96*al.to.si.unc), width=.1) +
+    geom_line(color='red', size=1.25, aes(color="red"), data=df2) +
+    annotate("text", label = 'loess',
+             x = 80, y = 2.25,
+             size = 5, colour = "red") +
+    geom_point(color='black', size=2) +
+    xlab("Al thickness [nm]") +
+    ylab("Al-K/Si-K X-ray intensity ratio") +
+    ggtitle("Monte Carlo Model of Al on Si at 5 kV") +
+    theme(axis.text=element_text(size=12),
+          axis.title=element_text(size=14),
+    	  plot.title = element_text(hjust = 0.5))# or ,face="bold")) +
+
+print(altosiInt)
+```
+
+
+[Back to Index](../README.html)

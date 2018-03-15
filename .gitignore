@@ -289,6 +289,21 @@ R-loess/*.htm
 R-loess/al-on-si-series-predict.pdf
 R-loess/Legend*.png
 
+# R-markdown directory
+R-markdown/.DS_Store
+R-markdown/figure/
+R-markdown/R-markdown.md
+R-markdown/*.html
+R-markdown/*.htm
+
+# R-model-predict directory
+R-model-predict/.DS_Store
+R-model-predict/figure/
+R-model-predict/R-model-predict.md
+R-model-predict/*.html
+R-model-predict/*.htm
+
+
 # R-packages directory
 R-packages/.DS_Store
 R-packages/R-packages.md

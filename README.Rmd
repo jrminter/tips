@@ -150,6 +150,8 @@ Topic
 
 [R-markdown](./R-markdown/R-markdown.html)
 
+[R-model-predict](./R-model-predict/R-model-predict.html)
+
 [R-Packages](./R-packages/R-packages.html)
 
 [Reproducible Research](./ReproducibleResearch/ReproducibleResearch.html)
