@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-02-23"
+date: "Started: 2013-07-16, Last modified: 2018-03-16"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -90,6 +90,58 @@ git commit -m "Removed files...."
 1. Use `demo(plotmath)` to see syntax for mathematical expressions.
 
 2. Also look at `latex2exp` on [github](https://github.com/stefano-meschiari/latex2exp).
+
+3. Use `bquote()`. Here are some tips based on a blog post
+by [Tyler Rinker](https://trinkerrstuff.wordpress.com/2018/03/15/2246/)
+
+- **Math notations require an expression or call**
+See [Advanced R](http://adv-r.had.co.nz/Expressions.html) for details.
+This [Stackoverflow](https://stackoverflow.com/questions/20355547/expression-vs-call)
+question explains the difference between the two.
+
+- **Use bquote:**  
+**Strings**: Require quotes wrapped w/ tilde separator (e.g., "my text"  ~).  
+**Math Expressions**: Unquoted & follow `?plotmath`.  
+**Numbers**: Unquoted when part of math notation.  
+**Variables**: Use `.()` (pass in string or numeric).
+
+- An example using base graphics
+
+```{r, bquoteBaseGraphics}
+## A variable to pass in
+cor <- -.321
+cor2 <- '-.321'
+ 
+par(mfrow = c(1, 2))
+plot(1:10, 1:10, main = bquote("Hello" ~ r[xy] == .(cor) ~ "and" ~ B^2))
+plot(1:10, 1:10, main = bquote("Hello" ~ r[xy] == .(cor2) ~ "and" ~ B^2))
+```
+
+
+- An example with `ggplot()`
+
+```{r, bquoteGGplot}
+library(ggplot2)
+cor2 <- '-.321'
+
+df <- data.frame(x=1:10, y=1:10) 
+plt <- ggplot() +
+       geom_point(data=df, aes(x=x, y=y),  colour="darkblue") +
+       scale_x_continuous(breaks = seq(from = 0, to = 10, by = 2),
+                          limits = c(0, 10)) +
+       scale_y_continuous(breaks = seq(from = 0, to = 10, by = 2),
+                          limits = c(0, 10)) +
+       xlab("x") +
+       ylab("y") +
+       ggtitle(bquote("Hello" ~ r[xy] == .(cor2) ~ "and" ~ B^2)) +
+       theme(axis.text=element_text(size=12),
+       axis.title=element_text(size=12),
+       plot.title=element_text(hjust = 0.5))
+
+print(plt)
+```
+
+
 
 
 ## To start Rserve
