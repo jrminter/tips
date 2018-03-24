@@ -40,7 +40,7 @@ cell like:
 and then generate the $\LaTeX$ by
 
 ```
-(%i7) tex("%i6);
+(%i7) tex(''%i6);
 ```
 then copy the output and paste into the $\LaTeX$ document as shown below.
 
