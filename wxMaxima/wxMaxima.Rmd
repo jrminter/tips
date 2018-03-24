@@ -23,6 +23,7 @@ helpful [website](http://andrejv.github.io/wxmaxima/index.html).
 Note that one can install this on MacOSX by
 
 ```
+brew tap homebrew/science
 brew install maxima wxmaxima
 ```
 
