@@ -16,7 +16,15 @@ output:
 `wxMaxima` is a gui version of the `maxima` computer algebra system. It has a
 nice notebook interface. There is a nice set of youtube videos by
 [Andrew Norman](https://www.youtube.com/playlist?list=PLEDEE2F7C6750729F)
-outlining its use. 
+outlining its use. The source code for `wxMaxima` is on
+[github](https://github.com/andrejv/wxmaxima). There is also a
+helpful [website](http://andrejv.github.io/wxmaxima/index.html). 
+
+Note that one can install this on MacOSX by
+
+```
+brew install maxima wxmaxima
+```
 
 # Exporting $\LaTeX$ output
 
