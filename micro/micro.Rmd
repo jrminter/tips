@@ -1,7 +1,7 @@
 ---
 title: "Microscopy Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-01-29"
+date: "Started: 2013-07-16, Last modified: 2018-03-27"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -10,6 +10,32 @@ output:
 ---
 
 [Back to Index](../README.html)
+
+# Dealing with old computers
+
+
+From [James Ehrman](mailto:jehrman@mta.ca):
+
+> 2018-03-26  
+> On a related note, our new (2016) Hitachi SEM and Oxford EDS are
+> banned from accepting Windows 7 updates (by Hitachi) - updates beyond
+> the Windows installation they provided will apparently break the
+> software. I have them connected together via a router, with both being
+> denied Internet access by giving them a bogus Default Gateway in the
+> Local Area Connection setup. Another computer (with Internet access
+> granted) is also connected to the router, and we get data from the two
+> instruments out to the real world through drive shares. Not elegant,
+> but it works. And I have to say that having two computers that never
+> nag about updates or suddenly become broken when M$ screws up some
+> driver file that the instrument depends on is quite refreshing!
+
+
+From [Reinhard Rachel](mailto:Reinhard.Rachel@biologie.uni-regensburg.de):
+
+> 2018-03-26  
+> the tricky thing is that even Windows 7 will not be supported (by MS)
+> any more in 1 or 2 years time ... we will not have fun with "old"
+> computer systems.
 
 # Sources for free microanalysis software
 
