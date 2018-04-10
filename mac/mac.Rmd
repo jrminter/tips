@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-02-16"
+date: "Started: 2013-07-16, Last modified: 2018-04-10"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -11,6 +11,22 @@ output:
 [Back to Index](../README.html)
 
 # Tips
+
+## Convert .webm to .mp4
+
+From [stack-overflow](https://stackoverflow.com/questions/18123376/webm-to-mp4-conversion-using-ffmpeg)
+
+1. Install `ffmpeg`
+
+```
+brew install ffmpeg
+```
+
+2. Convert `1.webm` to `1.mp4`
+
+```
+ffmpeg -fflags +genpts -i 1.webm -r 24 1.mp4
+```
 
 ## Stop indexing and searching USB keys
 
