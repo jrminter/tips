@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-03-16"
+date: "Started: 2013-07-16, Last modified: 2018-04-28"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -30,6 +30,23 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 [Back to Index](../README.html)
 
 # Don't forget...
+
+## Some hints on key packages
+
+### From [Steph Locke](https://twitter.com/SteffLocke/status/990251709531344896)
+
+My #rstats #datascience goto packages:
+
+**IO**: odbc readxl httr    
+**EDA**: DataExplorer    
+**Prep**: tidyverse     
+**Sampling**: rsample modelr    
+**Feature Engineering**: recipes    
+**Modelling**: glmnet h2o FFTrees    
+**Evaluation**: broom yardstick    
+**Deployment**: sqlrutils AzureML opencpu    
+**Monitoring**: flexdashboard    
+**Docs**: rmarkdown    
 
 ## Supress startup messages
 
