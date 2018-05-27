@@ -1,7 +1,7 @@
 ---
 title: "Probe For EPMA"
 author: "John Minter"
-date: "Started: 2017-05-27, Last modified: 2017-10-28"
+date: "Started: 2017-05-27, Last modified: 2018-05-26"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -15,7 +15,24 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 Probe for EPMA is a commercial EPMA software package with demo packages,
-especially CalcZAF. I have long term interest. 
+especially CalcZAF. I have long term interest.
+
+# Fast Tips
+
+## Using on a Mac Parallels VM
+
+1. Before starting the Win 10 VM, use CMD+Option+D to hide the dock.
+
+2. Start the Win 10 VM.
+
+3. Use Full Screen mode in the Win 10 VM from the view menu
+(or Shift-CMD-F). To exit FS mode, move the cursor to the **top left**
+of the screen and hit the green button.
+
+4. Run Standard and Configure and run PENEPMA.
+
+5. When done with the VM, exit FS mode and shut down. Use CMD+Option+D
+to restore the dock.
 
 # Getting started
 

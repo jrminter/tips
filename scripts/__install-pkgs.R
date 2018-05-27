@@ -103,6 +103,7 @@ install_new('here') # by Kirill Muller recommended by HW and JB!
 install_new('fs')
 
 install_new('ciTools')
+install_new('reticulate') # R-python interface
 
 # Sweave and pandoc tools
 # install_new('cacheSweave') # not avail 3.2
@@ -224,6 +225,7 @@ install_new_github('rWrapStrataGem','jrminter')
 
 devtools::install_github('jrminter/statshelpR',build_vignettes=TRUE)
 devtools::install_github('jrminter/rAnaLab',build_vignettes=TRUE)
+devtools::install_github('jrminter/statshelpR',build_vignettes=TRUE)
 
 devtools::install_github('ropensci/magick')
 devtools::install_github("hadley/modelr") #still experimental
@@ -235,3 +237,4 @@ devtools::install_github("benmarwick/rrtools")
 devtools::install_github("brodieG/diffobj")
 devtools::install_github("rorynolan/ijtiff")
 devtools::install_github("hrbrmstr/speedtest")
+devtools::install_github("lbusett/insert_table")

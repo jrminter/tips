@@ -1,0 +1,78 @@
+---
+title: "wxMaxima Tips"
+author: "J. R. Minter"
+date: "Started: 2018-03-23, Last modified: 2018-05-21"
+output:
+  knitr:::html_vignette:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+---
+
+[Back to Index](../README.html)
+
+# Introduction
+
+`wxMaxima` is a gui version of the `maxima` computer algebra system. It has a
+nice notebook interface. There is a nice set of YouTube videos by
+[Andrew Norman](https://www.youtube.com/playlist?list=PLEDEE2F7C6750729F)
+outlining its use. The source code for `wxMaxima` is on
+[github](https://github.com/andrejv/wxmaxima). There is also a
+helpful [website](http://andrejv.github.io/wxmaxima/index.html). 
+
+Note that one can install this on MacOSX by
+
+```
+brew tap homebrew/science
+brew install maxima wxmaxima
+```
+
+# Issues
+
+I had problems with gnuplot (2018-05-21). There is a bug that has not
+made it to homebrew. The fix was to add to **~/.maxima/wxmaxima-init**.
+This was from: [github](https://github.com/andrejv/wxmaxima/issues/973)
+
+```
+wxplot_old_gnuplot:false$
+``
+
+# File formats
+
+wxMaxima has two storage formats. `.wxmx` files contains results and plot
+images. `.wxm` files just contain the input / script.
+- From [here](http://maxima-discuss.narkive.com/RulbH7UD/how-do-i-use-file-wxmx).
+
+# Exporting $\LaTeX$ output
+
+I discovered that when one exports the notebook to html, the $\LaTeX$
+output has a lot of errors when used in a `.tex` document. The best way
+to export the output is to generate a cell like:
+
+```
+(%i6) solve(x^3−3*x+1,x);
+```
+
+and then generate the $\LaTeX$ by
+
+```
+(%i7) tex(''%i6);
+```
+then copy the output and paste into the $\LaTeX$ document as shown below.
+
+
+```
+$$\left[ x=\left({{\sqrt{3}\,i}\over{2}}-{{1}\over{2}}\right)^{{{2
+ }\over{3}}}+\left({{-1}\over{2}}-{{\sqrt{3}\,i}\over{2}}\right)\,
+ \left({{\sqrt{3}\,i}\over{2}}-{{1}\over{2}}\right)^{{{1}\over{3}}}
+  , x=\left({{\sqrt{3}\,i}\over{2}}-{{1}\over{2}}\right)^{{{4}\over{3
+ }}}+{{{{-1}\over{2}}-{{\sqrt{3}\,i}\over{2}}}\over{\left({{\sqrt{3}
+ \,i}\over{2}}-{{1}\over{2}}\right)^{{{1}\over{3}}}}} , x=\left({{
+ \sqrt{3}\,i}\over{2}}-{{1}\over{2}}\right)^{{{1}\over{3}}}+{{1
+ }\over{\left({{\sqrt{3}\,i}\over{2}}-{{1}\over{2}}\right)^{{{1
+ }\over{3}}}}} \right] $$
+```
+
+
+
+[Back to Index](../README.html)

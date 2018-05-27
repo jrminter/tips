@@ -192,3 +192,5 @@ Topic
 
 [Workflow](./workflow/workflow.html)
 
+[WxMaxima](./WxMaxima/WxMaxima.html)
+
