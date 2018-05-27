@@ -222,6 +222,7 @@ install_new_github('rEDS','jrminter')
 install_new_github('rFinFuncs','jrminter')
 install_new_github('rWrapStrataGem','jrminter')
 
+devtools::install_github('jrminter/statshelpR',build_vignettes=TRUE)
 devtools::install_github('jrminter/rAnaLab',build_vignettes=TRUE)
 
 devtools::install_github('ropensci/magick')
