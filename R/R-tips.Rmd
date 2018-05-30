@@ -236,7 +236,7 @@ devtools::install_github('jrminter/statshelpR',build_vignettes=TRUE)
 ```
 browseVignettes(package = NULL, lib.loc = NULL, all = TRUE)
 e.g.
-browseVignettes(package="rAnaLab")
+browseVignettes(package="statshelpR")
 
 ```
 
