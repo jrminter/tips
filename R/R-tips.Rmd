@@ -61,6 +61,25 @@ learn the value of
 [quasi-quotation](http://blog.jalsalam.com/posts/2017/quasi-quotation-applications/)
 with the **tidyverse**.
 
+## YAML for vignettes with numbered sections and a TOC
+
+```
+---
+title: "The catchy title"
+author: "John Minter"
+date: "Last updated: 2018-05-29"
+output:
+  rmarkdown::html_vignette:
+    number_sections: true
+    toc: true
+    toc_depth: 2
+vignette: >
+  %\VignetteIndexEntry{The catchy title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```
 
 ## Get key version information
 
