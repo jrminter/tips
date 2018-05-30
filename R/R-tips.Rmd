@@ -67,7 +67,7 @@ with the **tidyverse**.
 ---
 title: "The catchy title"
 author: "John Minter"
-date: "Last updated: 2018-05-29"
+date: "Started: 2018-05-01, Last updated: 2018-05-29"
 output:
   rmarkdown::html_vignette:
     number_sections: true
