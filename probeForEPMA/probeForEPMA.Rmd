@@ -461,8 +461,6 @@ This feature was added in May 2018. A nice example is
 [here](http://probesoftware.com/smf/index.php?topic=1070.msg7144#msg7144).
 Brian Joy implemented the computations for XPP and PAP models.
 
-## Select the model to use
-
 1. Start by using the Analytical menu to get to a dialog that permits
 setting the desired $\phi \rho z$ model.
 ![](./img/prz-plot-1-select-prz-corr.png)
