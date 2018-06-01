@@ -1,7 +1,7 @@
 ---
 title: "Probe For EPMA"
 author: "John Minter"
-date: "Started: 2017-05-27, Last modified: 2018-05-31"
+date: "Started: 2017-05-27, Last modified: 2018-06-01"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -471,7 +471,7 @@ setting the desired $\phi \rho z$ model.
 ![](./img/prz-plot-3-select-prz-method.png)
 
 
-4. Use the Calculation Options button tho set the `Calculation Options`
+4. Use the Calculation Options button to set the `Calculation Options`
 and the `Enter Composition` button to enter our compound (`al2o3`)
 ![](./img/prz-plot-4-menus.png)
 
