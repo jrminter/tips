@@ -1,0 +1,21 @@
+---
+title: "Inkscape"
+author: "John Minter"
+date: "Started: 2018-06-04, Last modified: 2018-06-04"
+output:
+  knitr:::html_vignette:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+---
+[Back to Index](../README.html)
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+[Inkscape](https://inkscape.org/en/) is a professional vector graphics
+editor for Windows, Mac OS X and Linux. It's free and open source.
+The current release is version `0.92.3`.
+
+# Fast Tips

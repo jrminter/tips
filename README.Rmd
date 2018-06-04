@@ -94,6 +94,8 @@ Topic
 
 [Image-J](./ImageJ/ImageJ.html)
 
+[Inkscape](./inkscape/inkscape.html)
+
 [iOS](./iOS/iOS.html)
 
 [Jekyll on github.io](./jekyll-github/jekyll-github.html)
