@@ -146,6 +146,12 @@ ImageJ/ImageJ.md
 ImageJ/ImageJ.html
 ImageJ/figure/
 
+# Inkscape directory
+inkscape/.DS_Store
+inkscape/inkscape.md
+inkscape/inkscape.html
+inkscape/figure/
+
 # iOS tips directory
 iOS/.DS_Store
 iOS/iOS.md

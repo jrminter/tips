@@ -7,6 +7,7 @@ output:
     css: ../theme/jm-gray-vignette.css
     number_sections: yes
     toc: yes
+    toc_depth: 2
 ---
 [Back to Index](../README.html)
 
@@ -19,3 +20,32 @@ editor for Windows, Mac OS X and Linux. It's free and open source.
 The current release is version `0.92.3`.
 
 # Fast Tips
+
+## Trouble with text not showing up.
+
+The site
+[www.inkscapeforum.com](http://www.inkscapeforum.com/viewtopic.php?t=25142)
+offered this helpful solution:
+
+> Flowed text won't show up on the internet. Convert back to regular text:    
+> **Text menu `>` Convert to text**. You might have to realign.
+
+This bit me when trying to make an svg for a presentation
+
+![](./img/convert-text.png)
+
+## Resetting preferences
+
+From
+[http://inkscape.13.x6.nabble.com](http://inkscape.13.x6.nabble.com/Reset-all-Inkscape-settings-td2884795.html)
+
+> I restarted Inkscape after deleting the file "preferences.xml".
+This file (according to
+[tavmjong.free.fr](http://tavmjong.free.fr/INKSCAPE/MANUAL/html/Customize-Files.html)) is located
+in the following directory:
+
+- On Linux:   `~/.config/.inkscape`    
+
+- On Windows: `%APPDATA%\Roaming\inkscape`    
+
+
