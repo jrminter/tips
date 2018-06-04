@@ -48,4 +48,29 @@ in the following directory:
 
 - On Windows: `%APPDATA%\Roaming\inkscape`    
 
+## Setting fill and stroke
+
+There is a helpful [Youtube](https://www.youtube.com/watch?v=o9fBSIwVvGs)
+
+1. select `Object > Fill and Stroke` from the top menu
+
+![](./img/object-fill-and-stroke.png)
+
+
+2. This reveals the `Fill and Stroke` dialog
+
+![](./img/fill-and-stroke-pane.png)
+
+3. set the `Fill`
+
+![](./img/set-fill.png)
+
+4. set the `Stroke`, if desired
+
+![](./img/set-stroke.png)
+
+6. You can also use the color wheel and drag...
+
+![](./img/set-stroke-wheel.png)
+
 
