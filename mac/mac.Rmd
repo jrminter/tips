@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-04-10"
+date: "Started: 2013-07-16, Last modified: 2018-06-09"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -11,6 +11,11 @@ output:
 [Back to Index](../README.html)
 
 # Tips
+
+## Key shortcuts
+
+**Shift-Command-4**: Screen shot a portion of your screen
+**Shift-Command-3**: Screen shot entire screen    
 
 ## Convert .webm to .mp4
 
