@@ -2,7 +2,7 @@
 .Rhistory
 .RData
 .cache/
-.Rproj.user
+.Rproj.user/**
 tab.tex
 *.html
 
