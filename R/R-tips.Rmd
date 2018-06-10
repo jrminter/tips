@@ -31,6 +31,21 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 # Don't forget...
 
+## Stop printing hashes
+
+Use a chunk like this
+
+```
+{r cars, comment=NA, echo = TRUE}
+summary(cars)
+```
+
+To not print hashes
+
+```{r cars, comment=NA, echo = TRUE}
+summary(cars)
+```
+
 ## Controlling images size in RMarkdown documents
 
 Use a chunk like this
