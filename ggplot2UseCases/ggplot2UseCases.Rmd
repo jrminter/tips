@@ -1,5 +1,5 @@
 ---
-title: "The microscopist's use cases for ggplot2"
+title: "ggplot2 Use Cases"
 author: "J. R. Minter"
 date: "Started: 2016-01-20, Last modified: 2018-06-11"
 output:
