@@ -51,13 +51,127 @@ Now get started
 
 First, let's load the packages we need.
 
-```{r}
+```{r, message=FALSE}
 library(ggplot2)
 library(latex2exp)
 library(pander)
+library(here)
 ```
 
 **Note:** For pander options see [rapporter.github.io](http://rapporter.github.io/pander/#pander-options).
+
+# Plot time dependent data
+
+This group of examples comes from 
+[www.statworx.com](https://www.statworx.com/de/blog/customizing-time-and-date-scales-in-ggplot2/).
+
+## Base plot
+
+We are using ggplot's **economics** data set. Our base plot looks like
+this:
+
+
+```{r ggplotDate, fig.width=9.5}
+library(ggplot2)
+
+base_plot <-	ggplot(data = economics) +
+				geom_line(aes(x = date, y = unemploy),
+						  color = "#09557f", alpha = 0.6, size = 0.6) +
+				labs(x = "Date", y = "US Unemployed in Thousands",
+					 title = "Base Plot") +
+				theme_minimal()
+print(base_plot)
+```
+
+## Scale types
+
+As of now, `ggplot2` supports three date and time classes: `POSIXct`,
+`Date` and `hms`.
+
+Depending on the class at hand, axis ticks and labels can be controlled
+by using `scale_*_date`, `scale_*_datetime` or `scale_*_time`,
+respectively. Depending on whether `scale_x_*` or not, it is
+`scale_y_*` to be used in a job. For the sake of simplicity, the
+examples only `scale_x_date` are used, but all are the same.
+
+## Minor Modification 1
+
+Let's start easy. With the argument limitsthe range of the displayed
+dates or time can be set. Two values of the correct date or time.
+
+```{r pltMod1, fig.width=9.5}
+
+plt_mod1 <- base_plot +
+			scale_x_date(limits = as.Date(c("1980-01-01",
+											"2000-01-01"))) +
+			ggtitle("limits = as.Date(c(\"1980-01-01\", \"2000-01-01\"))")
+
+print(plt_mod1)
+```
+
+The `expand`argument ensures there is some distance between the
+displayed data and the axes. The argument `expand`takes two numeric
+values, the first is the multiplicative expansion constant. The larger
+one of the two distances is employed in the plot, the multiplied
+constant is multiplied by the range of the displayed data. The resulting
+empty space is at the left and right end of the x-axis or the top and
+bottom of the y-axis.
+
+The `position`argument defines where the labels are displayed:
+Either "left" or "right" from the y-axis or on the "top" or
+"bottom" from the x-axis.
+
+## Axis Ticks and Grid Lines
+
+More essential than the cosmetic modifications. There are several ways
+to define the axis of ticks of dates and times. There are the labeled
+major breaks and the minor breaks , which are labeled but marked by
+grid lines. These can be customized with the arguments `breaks` and
+`minor_breaks`, respectively. The `breaks` as the well as `minor_breaks`
+can be defined by a numeric vector of exact positions or a function
+with the axis limits as inputs and breaks as outputs. Alternatively,
+the arguments may be `NULL` different.
+
+```{r pltMod2, fig.width=9.5}
+plt_mod2 <- base_plot +
+			scale_x_date(expand = c(0, 5000)) + #5000/365 = 13.69863 years
+			ggtitle("expand = c(0, 5000)")
+			
+print(plt_mod2)
+```
+
+Furthermore and very conveniently, the format of the labels can be
+controlled by the following `date_labels`. Note how the example
+**sets the default table alignment...**
+
+
+```{r readDataTD}
+fi <- here('ggplot2UseCases/dat/csv/date-time-codes.csv')
+panderOptions('table.alignment.default','left')
+df <- read.csv(fi)
+pander(df)
+```
+
+## Plot with modified time breaks
+
+```{r pltMod3, fig.width=9.5}
+plt_mod3 <- base_plot +
+			scale_x_date(date_breaks = "10 years",
+						 date_minor_breaks = "2 years") +
+			ggtitle("date_(minor_)breaks = \"x years\"")
+print(plt_mod3)
+```
+
+```{r pltMod4, fig.width=9.5}
+plt_mod4 <- base_plot +
+			scale_x_date(date_labels = "%Y (%b)") +
+			ggtitle("date_labels = \"%Y (%b)\"") 
+print(plt_mod4)
+```
+
+
+
+
 
 # Plot series from different dataframes
 
