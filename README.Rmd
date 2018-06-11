@@ -152,6 +152,8 @@ Topic
 
 [R-markdown](./R-markdown/R-markdown.html)
 
+[R-matrix-algebra](./R-matrix-algebra/R-matrix-algebra.html)
+
 [R-model-predict](./R-model-predict/R-model-predict.html)
 
 [R-Packages](./R-packages/R-packages.html)

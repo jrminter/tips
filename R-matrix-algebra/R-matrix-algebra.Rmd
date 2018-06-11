@@ -1,0 +1,85 @@
+---
+title: "R Matrix Algebra"
+author: "J. R. Minter"
+date: "Started: 2018-06-11, Last modified: 2018-06-11"
+output:
+  knitr:::html_vignette:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+---
+
+[Back to Index](../README.html)
+
+# Introduction
+
+R has operators and functions for efficient matrix algebra.
+
+# Vectors
+
+R lets us define vectors
+
+```{r DefineTwoVectors}
+a1 <- c(1,3,4,2,5)
+b1 <- c(2,1,3,5,4)
+```
+
+## Simple addition of vectors
+
+We can add a **constant to each element.**
+
+
+```{r, comment=NA}
+a5 <- a1 + 5
+print(a1)
+print(a5)
+```
+
+Note that if we add `a1` and `b1` together, they add
+**element by element**!
+
+
+```{r, comment=NA}
+ab <- a1 + b1
+print(ab)
+```
+
+## Simple multiplication of vectors
+
+```{r, comment=NA}
+print(a1)
+print(5*a1)  # multiplies by a scalar
+a_times_b <- a1*b1
+print(a_times_b) # element by element multiplication
+```
+
+Note how we select (and print) a **single element** of a vector.
+
+```{r, comment=NA}
+print(a_times_b[2]) # print the second element
+```
+
+# Matrices
+
+Note that R fills the matrix **column-by-column**.
+
+```{r, comment=NA}
+m1 <- matrix(seq(1:4), nrow=2, ncol=2)
+m2 <- matrix(c(4,3,2,1), nrow=2, ncol=2)
+print(m1)
+```
+
+## True matrix multiplication
+
+For true matrix multiplication, you need an `m x n` matrix times an
+`n x p` matrix.
+
+```{r, comment=NA}
+n1 <- matrix(seq(1:8), nrow=2, ncol=4)
+n2 <- matrix(seq(1:24), nrow=4, ncol=6)
+n1
+n2
+n1 %*% n2
+```
+
+[Back to Index](../README.html)

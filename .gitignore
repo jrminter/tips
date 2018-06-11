@@ -302,6 +302,13 @@ R-markdown/R-markdown.md
 R-markdown/*.html
 R-markdown/*.htm
 
+# R-markdown directory
+R-matrix-algebra/.DS_Store
+R-matrix-algebra/figure/
+R-matrix-algebra/R-matrix-algebra.md
+R-matrix-algebra/*.html
+R-matrix-algebra/*.htm
+
 # R-model-predict directory
 R-model-predict/.DS_Store
 R-model-predict/figure/
