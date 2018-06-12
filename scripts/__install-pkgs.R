@@ -101,6 +101,7 @@ install_new('Rd2roxygen')
 install_new('tidyquant')
 install_new('here') # by Kirill Muller recommended by HW and JB!
 install_new('fs')
+install_new('reprex')
 
 install_new('ciTools')
 install_new('reticulate') # R-python interface
