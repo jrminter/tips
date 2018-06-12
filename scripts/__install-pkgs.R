@@ -166,6 +166,7 @@ install_new('rattle')
 install_new('chemCal')
 install_new('DAAG')
 install_new('fftw')
+install_new(rafalib)
 
 install_new('fitdistrplus')
 install_new('mixdist')

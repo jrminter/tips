@@ -16,7 +16,7 @@ Load the required packages at the top...
 ```{r loadLibraries, message=FALSE, comment=NA}
 library(rafalib)
 library(ggplot2)
-
+library(UsingR)
 ```
 
 # Introduction
