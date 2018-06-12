@@ -553,7 +553,7 @@ summary(fit)
 
 Note that we obtain the same values as above.
 
-#### Summary
+# Summary
 
 We have shown how to write linear models using linear algebra. We are going to do this for several examples, many of which are related to designed experiments. We also demonstrated how to obtain least squares estimates. Nevertheless, it is important to remember that because $y$ is a random variable, these estimates are random as well. In a later section, we will learn how to compute standard error for these estimates and use this to perform inference.
 
