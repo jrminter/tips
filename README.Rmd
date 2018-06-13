@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-06-11"
+date: "Started: 2013-07-16, Last modified: 2018-06-13"
 output:
   html_document:
     css: ./theme/jm-gray-vignette.css
@@ -185,6 +185,8 @@ Topic
 [TEM](./TEM/TEM.html)
 
 [TeX](./tex/tex-tips.html)
+
+[Tidy Data](./tidyData/tidyData.html)
 
 [Ubuntu](./ubuntu/ubuntu.html)
 

@@ -1,0 +1,109 @@
+---
+title: "Tidy Data"
+author: "J. R. Minter"
+date: "Started: 2018-06-12, Last modified: 2018-06-13"
+output:
+  knitr:::html_vignette:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+---
+
+```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
+library(knitr)
+# make this an external chunk that can be included in any file
+options(width = 72)
+# opts_chunk$set(message = F, error = F, warning = F, comment = NA, fig.align = 'center', dpi = 100, tidy = F, cache.path = '.cache/', fig.path = 'figure/')
+
+options(xtable.type = 'html')
+knit_hooks$set(inline = function(x) {
+  if(is.numeric(x)) {
+    round(x, getOption('digits'))
+  } else {
+    paste(as.character(x), collapse = ', ')
+  }
+})
+knit_hooks$set(plot = knitr:::hook_plot_html)
+suppressWarnings(suppressMessages(suppressPackageStartupMessages(library(tidyverse))))
+```
+[Back to Index](../README.html)
+
+# Load Packages
+
+```{r loadPackages}
+library(tidyverse)
+library(here)
+```
+
+# Introduction
+
+This data set (`CyclerCPK.csv`) came from Ed Boone's Statistics 321
+[YouTube](https://www.youtube.com/watch?v=7j294A4dPlw)
+video on how to transform "wide" dataframes to "long" dataframes.
+It is available on his
+[shared Google Drive](https://drive.google.com/drive/folders/0B5AwHsCad1WCdkRJVHNtX296dW8).
+
+We will use Hadley Wickham's approach to prepare "tidy data"
+using `dplyr` (included in) the `tidyverse` meta package.
+
+# Read the data
+
+Read the `CyclerCPK` dataset. Use the `here` package to make path
+management easier.
+
+```{r readCsvFile, comment=NA}
+fi <- here("tidyData/dat/CyclerCPK.csv")
+df <- read.csv(fi, header=TRUE)
+head(df)
+```
+
+# Tidy the data
+
+Note how the replicate values of `CPK` are listed as columns
+`CPK1:CPK3`. We will **rename** those columns to make it easier
+to process and then use the function `gather` to make a long dataset
+with columns labeled `replicate` and `CPK`.
+
+
+```{r test}
+names(df) <- c("Subject","Age","Gender","TRT",
+			   "CPK.1", "CPK.2", "CPK.3", "CPK.4")
+dfTidy <-	df %>%
+			gather(replicate, CPK, CPK.1:CPK.4)
+head(dfTidy)
+```
+
+We will now write a function to extract **only the replicate number**.
+Let's test with a single value.
+
+```{r, comment=NA}
+extractReplicate <- function(x){
+	unlist(as.integer(unlist(strsplit(x, "[.]"))[2]))
+}
+extractReplicate("CPK.1")
+```
+
+Now we will use R's `lapply()` function to apply it to the whole
+vector of observations. This will return a **list**, that we need
+to use `unlist()` to transform into a vector. We will then replace
+the `replicate` variable with just the replicate **number** as a
+`factor` (categorical variable).
+
+We'll look at the top and bottom of the dataframe to see that we have
+a tidy dataframe.
+
+```{r prepForGather, comment=NA}
+test <- unlist(lapply(dfTidy$replicate,extractReplicate))
+head(test)
+dfTidy$replicate = as.factor(test)
+head(dfTidy)
+tail(dfTidy)
+```
+
+And finish with a summary
+
+```{r summary, comment=NA}
+summary(dfTidy)
+```
+
+[Back to Index](../README.html)
