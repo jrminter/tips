@@ -37,25 +37,23 @@ caption, .caption{
 
 #header {
   text-align: center;
-  border-bottom: none;
 }
 
 #header .title {
   text-align: center;
   font-size: 32px;
-  border-bottom: none;
 }
+
 
 #header .author {
   text-align: center;
   font-size: 24px;
-  border-bottom: none;
+  border: none;
 }
 
 #header .date {
   text-align: center;
   font-size: 18px;
-  border-bottom: none;
 }
 
 #header .abstract{
@@ -126,7 +124,7 @@ table:not([class]) tr.odd {
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 p {
@@ -232,7 +230,6 @@ h1 {
 
 h2 {
   color: #184481;
-  border-bottom: 3px solid #dedede;
   padding-top: 10px;
   padding-bottom: 2px;
   font-size: 145%;
@@ -240,20 +237,17 @@ h2 {
 }
 
 h3 {
-  border-bottom: 2px solid #dedede;
   padding-top: 10px;
   font-size: 120%;
 }
 
 h4 {
   /* h4 is used as a subtitle; let's not underline*/
-  border-bottom: 2px solid #dedede; 
   margin-left: 8px;
   font-size: 105%;
 }
 
 h5, h6 {
-  border-bottom: 2px solid #dedede;
   font-size: 105%;
 }
 
@@ -274,7 +268,6 @@ a {
 
 div.r-help-page {
   background-color: #f9f9f9;
-  border-bottom: #ddd 1px solid;
   margin-bottom: 10px;
   padding: 10px;
 }
