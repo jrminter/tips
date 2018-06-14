@@ -1,7 +1,7 @@
 ---
 title: "ggplot2 Use Cases"
 author: "J. R. Minter"
-date: "Started: 2016-01-20, Last modified: 2018-06-11"
+date: "Started: 2016-01-20, Last modified: 2018-06-14"
 output:
   html_document:
     csl: ../inc/american-chemical-society-with-titles-sentence-case-doi.csl
@@ -44,15 +44,12 @@ So this is for "future me" and anybody else who needs it. See also the
 
 Also note [this](https://martinsbioblogg.wordpress.com/2017/04/23/using-r-a-function-that-adds-multiple-ggplot2-layers/) recent helpful example.
 
-
-
-
 Now get started
 
 First, let's load the packages we need.
 
 ```{r, message=FALSE}
-library(ggplot2)
+library(tidyverse)
 library(latex2exp)
 library(pander)
 library(here)
@@ -99,8 +96,7 @@ examples only `scale_x_date` are used, but all are the same.
 Let's start easy. With the argument limitsthe range of the displayed
 dates or time can be set. Two values of the correct date or time.
 
-```{r pltMod1, fig.width=9.5}
-
+```{r pltMod1, fig.width=9.5, message=FALSE, error=FALSE}
 plt_mod1 <- base_plot +
 			scale_x_date(limits = as.Date(c("1980-01-01",
 											"2000-01-01"))) +
@@ -169,8 +165,42 @@ plt_mod4 <- base_plot +
 print(plt_mod4)
 ```
 
+# Box Plot with different factors
 
+## Read and process the data
 
+First we read the data and process into tidy form.
+See the `tidyData` tip for a detailed explanation.
+
+```{r readCycler, comment=NA}
+fi <- here("tidyData/dat/CyclerCPK.csv")
+df <- read.csv(fi, header=TRUE)
+names(df) <- c("Subject","Age","Gender","TRT",
+			   "CPK.1", "CPK.2", "CPK.3", "CPK.4")
+dfTidy <-	df %>%
+			gather(replicate, CPK, CPK.1:CPK.4)
+extractReplicate <- function(x){
+	unlist(as.integer(unlist(strsplit(x, "[.]"))[2]))
+}
+test <- unlist(lapply(dfTidy$replicate,extractReplicate))
+dfTidy$replicate = as.factor(test)
+summary(dfTidy)
+```
+
+## Make the plot
+
+```{r ggplotSeries}
+cyclerPlt <- ggplot(dfTidy, aes(x=TRT, y=CPK, fill=Gender)) +
+					geom_boxplot() +
+					xlab("Treatment Level") +
+					ggtitle("CPK as a function of treatment and gender") +
+					theme(axis.text=element_text(size=12),
+						  axis.title=element_text(size=12),
+						  plot.title=element_text(hjust = 0.5)) # ce
+
+print(cyclerPlt)
+
+```
 
 
 # Plot series from different dataframes
@@ -187,7 +217,7 @@ CASINO data.
 fi <-'./dat/csv/20nm-C-10nm-Ag-On-SiO2-5kV.csv'
 df10 <- read.csv(fi, header=TRUE, as.is=TRUE)
 panderOptions('table.alignment.default',
-              function(df) ifelse(sapply(df, is.numeric), 'right', 'left'))
+			  function(df) ifelse(sapply(df, is.numeric), 'right', 'left'))
 pander(head(df10))
 ```
 
@@ -196,7 +226,7 @@ pander(head(df10))
 fi <-'./dat/csv/20nm-C-30nm-Ag-On-SiO2-5kV.csv'
 df30 <- read.csv(fi, header=TRUE, as.is=TRUE)
 panderOptions('table.alignment.default',
-              function(df) ifelse(sapply(df, is.numeric), 'right', 'left'))
+			  function(df) ifelse(sapply(df, is.numeric), 'right', 'left'))
 pander(head(df30))
 ```
 
@@ -210,21 +240,21 @@ how the data series are specified from different dataframes...
 
 scale = 0.300835/0.190755
 
-plt <- ggplot() +
-       geom_point(data=df10, aes(x=Z.nm, y=Hits),  
-                  colour="darkblue") + 
-       geom_point(data=df30, aes(x=Z.nm, y=scale*Hits), 
-                  colour="red") +
-       xlab("Depth [nm]") +
-       ylab("BSE hits") +
-       scale_x_continuous(breaks = seq(from = 0, to = 150, by = 25),
-                          limits = c(0,150)) +
-       scale_y_continuous(breaks = seq(from = 0, to = 0.030, by = 0.005),
-                          limits = c(0,0.030)) +
-       ggtitle("Monte Carlo model of C-coated Ag on glass at 5 kV") +
-       theme(axis.text=element_text(size=12),
-       axis.title=element_text(size=12),
-       plot.title=element_text(hjust = 0.5)) # center the title
+plt <-	ggplot() +
+		geom_point(data=df10, aes(x=Z.nm, y=Hits),
+				   colour="darkblue") +
+		geom_point(data=df30, aes(x=Z.nm, y=scale*Hits),
+				   colour="red") +
+		xlab("Depth [nm]") +
+		ylab("BSE hits") +
+		scale_x_continuous(breaks = seq(from = 0, to = 150, by = 25),
+						   limits = c(0,150)) +
+		scale_y_continuous(breaks = seq(from = 0, to = 0.030, by = 0.005),
+						   limits = c(0,0.030)) +
+		ggtitle("Monte Carlo model of C-coated Ag on glass at 5 kV") +
+		theme(axis.text=element_text(size=12),
+			  axis.title=element_text(size=12),
+			  plot.title=element_text(hjust = 0.5)) # center the title
 
 print(plt)
 
@@ -262,8 +292,8 @@ df2 <- read.csv(fi, header = TRUE, as.is=TRUE)
 ## Fit the Sample 1 data to a Gaussian and calculate a prediction
 
 ```{r, fitCoulterS1}
-res1 <- nls( cts ~ k*exp(-1/2*(um-mu)^2/sigma^2),
-             start=c(mu=5,sigma=5,k=1000), data = df1)
+res1 <- nls(cts ~ k*exp(-1/2*(um-mu)^2/sigma^2),
+			start=c(mu=5,sigma=5,k=1000), data = df1)
 
 um <- seq(from=0.0, to=xMaxLim, by=xPredStep)
 df1P <- data.frame(um=um)
@@ -281,8 +311,8 @@ pander(v1)
 ## Fit the Sample 2 data to a Gaussian and calculate a prediction
 
 ```{r, fitCoulterS2}
-res2 <- nls( cts ~ k*exp(-1/2*(um-mu)^2/sigma^2),
-             start=c(mu=5,sigma=5,k=1000), data = df2)
+res2 <- nls(cts ~ k*exp(-1/2*(um-mu)^2/sigma^2),
+			start=c(mu=5,sigma=5,k=1000), data = df2)
 
 um <- seq(from=0.0, to=xMaxLim, by=xPredStep)
 df2P <- data.frame(um=um)
@@ -292,46 +322,43 @@ df2P$cts <- predict(res2, newdat=df2P)
 ## Look at the results of the fit
 
 ```{r, fitCoulterS2summary}
-
 v2 <- summary(res2)$parameters[,"Estimate"]
 pander(v2)
 ```
-
 
 ## Make a plot
 
 ```{r, makeCoulterPlot, warning=FALSE}
 maxCts = max(df1$cts, df2$cts)
 
-plt <- ggplot() +
-       geom_point(data=df1, aes(x=um, y=cts),  colour="darkblue") + 
-       geom_line(data=df1P, aes(x=um, y=cts),
-                 colour='darkblue', size=lSize) +
-       geom_point(data=df2, aes(x=um, y=cts),  colour="red") +
-       geom_line(data=df2P, aes(x=um, y=cts),
-                 colour='red', size=lSize) +
-       xlab("size [microns]") +
-       ylab("counts") +
-       scale_x_continuous(breaks = seq(from = 1, to = xMaxLim, by = deltaX),
-                          limits = c(1, xMaxLim)) +
-       scale_y_continuous(breaks = seq(from = 0, to = yMaxLim, by = deltaY),
-                          limits = c(0, yMaxLim)) +
-       ggtitle("Particle Size (Coulter)") +
-       annotate("text", label = 'Sample 1',
-                x = 13, y = 2800,
-                size = 5, colour = "darkblue") +
-       annotate("text", label = 'Sample 2',
-                 x = 13, y = 2500,
-                 size = 5, colour = "red") +
-       annotate("text", label = 'credit: Coworker',
-                 x = 15, y = 200,
-                 size = 3, colour = "black") +
-       theme(axis.text=element_text(size=12),
-       axis.title=element_text(size=12),
-       plot.title=element_text(hjust = 0.5)) # center the title
+plt <-	ggplot() +
+		geom_point(data=df1, aes(x=um, y=cts),  colour="darkblue") +
+		geom_line(data=df1P, aes(x=um, y=cts),
+				  colour='darkblue', size=lSize) +
+		geom_point(data=df2, aes(x=um, y=cts),  colour="red") +
+		geom_line(data=df2P, aes(x=um, y=cts),
+				  colour='red', size=lSize) +
+		xlab("size [microns]") +
+		ylab("counts") +
+		scale_x_continuous(breaks = seq(from = 1, to = xMaxLim, by = deltaX),
+						   limits = c(1, xMaxLim)) +
+		scale_y_continuous(breaks = seq(from = 0, to = yMaxLim, by = deltaY),
+						   limits = c(0, yMaxLim)) +
+		ggtitle("Particle Size (Coulter)") +
+		annotate("text", label = 'Sample 1',
+				 x = 13, y = 2800,
+				 size = 5, colour = "darkblue") +
+		annotate("text", label = 'Sample 2',
+				 x = 13, y = 2500,
+				 size = 5, colour = "red") +
+		annotate("text", label = 'credit: Coworker',
+				 x = 15, y = 200,
+				 size = 3, colour = "black") +
+		theme(axis.text=element_text(size=12),
+			  axis.title=element_text(size=12),
+			  plot.title=element_text(hjust = 0.5)) # center the title
 
 print(plt)
-
 ```
 
 
@@ -345,36 +372,35 @@ In this case the spectra were simulated using DTSA-II [@Ritchie2011b].
 fi <-'./dat/csv/C-ctd-Si-5-kV-10000-Traj.csv'
 df <- read.csv(fi, header=TRUE, as.is=TRUE)
 panderOptions('table.alignment.default',
-              function(df) ifelse(sapply(df, is.numeric), 'right', 'left'))
+			  function(df) ifelse(sapply(df, is.numeric), 'right', 'left'))
 pander(head(df))
 ```
 
 ## Compute the C/Si peak ratio and uncertainty
 
 ```{r}
-df$c.to.si.mu <- df$C.Int.mu / df$Si.Int.mu
-df$c.to.si.unc <- sqrt((df$C.Int.unc/df$C.Int.mu)**2 + 
-                       (df$Si.Int.unc/df$Si.Int.mu)**2)
+df$c.to.si.mu	<-	df$C.Int.mu / df$Si.Int.mu
+df$c.to.si.unc	<-	sqrt((df$C.Int.unc/df$C.Int.mu)**2 + 
+					   	(df$Si.Int.unc/df$Si.Int.mu)**2)
 ```
 
 ## Make our plot
 
 ```{r}
-ctosiInt <- ggplot(df, aes(x=t.C.nm, y=c.to.si.mu)) + 
-    geom_errorbar(aes(ymin=c.to.si.mu - 1.96*c.to.si.unc,
-                      ymax=c.to.si.mu + 1.96*c.to.si.unc), width=.1) +
-    stat_smooth(method = "loess") +
-    annotate("text", label = 'loess smooth',
-             x = 70, y = 1.1,
-             size = 5, colour = "blue") +
-    geom_point(color='black', size=2) +
-    xlab("C thickness [nm]") +
-    ylab("C-K/Si-K X-ray intensity ratio") +
-    ggtitle("Monte Carlo Model of C-coatings on Si at 5 kV") +
-    theme(axis.text=element_text(size=12),
-          axis.title=element_text(size=14),
-          plot.title = element_text(hjust = 0.5)) # center the title
-
+ctosiInt <-	ggplot(df, aes(x=t.C.nm, y=c.to.si.mu)) +
+			geom_errorbar(aes(ymin=c.to.si.mu - 1.96*c.to.si.unc,
+							  ymax=c.to.si.mu + 1.96*c.to.si.unc), width=.1) +
+			stat_smooth(method = "loess") +
+			annotate("text", label = 'loess smooth',
+					 x = 70, y = 1.1,
+					 size = 5, colour = "blue") +
+			geom_point(color='black', size=2) +
+			xlab("C thickness [nm]") +
+			ylab("C-K/Si-K X-ray intensity ratio") +
+			ggtitle("Monte Carlo Model of C-coatings on Si at 5 kV") +
+			theme(axis.text=element_text(size=12),
+				  axis.title=element_text(size=14),
+				  plot.title = element_text(hjust = 0.5)) # center the title
 print(ctosiInt)
 ```
 
@@ -382,8 +408,8 @@ print(ctosiInt)
 
 ```{r}
 t.C.nm <- seq(from=0.5, to=100, by=0.5)
-df2 <- data.frame(t.C.nm=t.C.nm, c.to.si.mu=t.C.nm)
-df2$c.to.si.mu = predict(loess(c.to.si.mu~t.C.nm, data=df2))
+df2P <- data.frame(t.C.nm=t.C.nm, c.to.si.mu=t.C.nm)
+df2P$c.to.si.mu <- predict(loess(c.to.si.mu~t.C.nm, data=df2P))
 ```
 
 ## Step 3: Write some output
@@ -440,10 +466,9 @@ sikgen <- df[,12]
 sikemi  <- df[,13]
 
 df2 <- data.frame(Z.um=z,
-                 O.Gen=okgen, O.Emi=okemi,
-                 Si.Gen=sikgen, Si.Emi=sikemi)
+				  O.Gen=okgen, O.Emi=okemi,
+				  Si.Gen=sikgen, Si.Emi=sikemi)
 pander(head(df2))
-
 ```
 
 Isn't that more readable! 
@@ -469,33 +494,30 @@ library(ggplot2)
 
 span <- 0.25
 
-plt <- ggplot(df3, aes(x = Z.um)) +
-              geom_point(aes(y = Si.Gen), colour="blue") +
-              geom_smooth(aes(x= Z.um, y=Si.Gen),
-                          span = span, color = 'blue') +
-              annotate("text", label = 'Generated Si K-L3',
-                       x = .8, y = 1.75,
-                       size = 5, colour = "blue") +
-              geom_point(aes(y = Si.Emi), colour="red") +
-              geom_smooth(aes(x= Z.um, y=Si.Emi),
-                          span = span, color='red') +
-              annotate("text", label = 'Emitted',
-                       x = .3, y = .75,
-                       size = 5, colour = "red") +
-              ylab(label="\U03D5(\U03C1z)") +
-              # note the Unicode string for mu
-              xlab("depth [\U00B5m]") +
-              ggtitle("DTSA-II Monte Carlo \U03D5(\U03C1z) Model 10 nm C on silica at 10 kV") +
-              scale_x_continuous(breaks = seq(from = 0, to = 1, by = 0.25),
-                                 limits = c(0,1)) +
-              scale_y_continuous(breaks = seq(from = 0, to = 2, by = 0.5),
-                                 limits = c(0,2)) +
-              theme(axis.text=element_text(size=12),
-                    axis.title=element_text(size=14),
-                    plot.title = element_text(hjust = 0.5)) # center the title
-
+plt <-	ggplot(df3, aes(x = Z.um)) +
+		geom_point(aes(y = Si.Gen), colour="blue") +
+		geom_smooth(aes(x= Z.um, y=Si.Gen),
+					span = span, color = 'blue') +
+		annotate("text", label = 'Generated Si K-L3',
+				 x = .8, y = 1.75,
+				 size = 5, colour = "blue") +
+		geom_point(aes(y = Si.Emi), colour="red") +
+		geom_smooth(aes(x= Z.um, y=Si.Emi),
+					span = span, color='red') +
+		annotate("text", label = 'Emitted',
+				 x = .3, y = .75,
+				 size = 5, colour = "red") +
+		ylab(label="\U03D5(\U03C1z)") + # note the Unicode string for mu
+		xlab("depth [\U00B5m]") +
+		ggtitle("DTSA-II Monte Carlo \U03D5(\U03C1z) Model 10 nm C on silica at 10 kV") +
+		scale_x_continuous(breaks = seq(from = 0, to = 1, by = 0.25),
+						   limits = c(0,1)) +
+		scale_y_continuous(breaks = seq(from = 0, to = 2, by = 0.5),
+						   limits = c(0,2)) +
+		theme(axis.text=element_text(size=12),
+			  axis.title=element_text(size=14),
+			  plot.title = element_text(hjust = 0.5)) # center the title
 print(plt)
-
 ```
 
 ## Step 4: Plot the O data.
@@ -507,33 +529,26 @@ span <- 0.25
 df3 <- df2[-1, ]
 rownames(df3) <- NULL
 
-plt <- ggplot(df3, aes(x = Z.um)) +
-              geom_point(aes(y = O.Gen), colour="blue") +
-              geom_smooth(aes(x= Z.um, y=O.Gen),
-                          span = span, color = 'blue') +
-              annotate("text", label = 'Generated O K-L3',
-                       x = .8, y = 2.25,
-                       size = 5, colour = "blue") +
-              geom_point(aes(y = O.Emi), colour="red") +
-              geom_smooth(aes(x= Z.um, y=O.Emi),
-                          span = span, color='red') +
-              annotate("text", label = 'Emitted',
-                       x = .3, y = .75,
-                       size = 5, colour = "red") +
-              ylab(label="\U03D5(\U03C1z)") + 
-              # note the Unicode string for mu
-              xlab("depth [\U00B5m]") +
-              ggtitle("DTSA-II Monte Carlo \U03D5(\U03C1z) Model 10 nm C on silica at 10 kV") +
-              scale_x_continuous(breaks = seq(from = 0, to = 1, by = 0.25),
-                                 limits = c(0,1)) +
-              scale_y_continuous(breaks = seq(from = 0, to = 2.5, by = 0.5),
-                                 limits = c(0,2.5)) +
-              theme(axis.text=element_text(size=12),
-                    axis.title=element_text(size=14),
-                    plot.title = element_text(hjust = 0.5)) # center the title
-
+plt <-	ggplot(df3, aes(x = Z.um)) +
+		geom_point(aes(y = O.Gen), colour="blue") +
+		geom_smooth(aes(x= Z.um, y=O.Gen),
+					span = span, color = 'blue') +
+		annotate("text", label = 'Generated O K-L3',
+				 x = .8, y = 2.25,
+				 size = 5, colour = "blue") +
+		geom_point(aes(y = O.Emi), colour="red") +
+		geom_smooth(aes(x= Z.um, y=O.Emi),
+					span = span, color='red') +
+		annotate("text", label = 'Emitted', x = .3, y = .75, size = 5,
+				 colour = "red") +
+		ylab(label="\U03D5(\U03C1z)") + # note the Unicode string for mu
+		xlab("depth [\U00B5m]") +
+		ggtitle("DTSA-II Monte Carlo \U03D5(\U03C1z) Model 10 nm C on silica at 10 kV") +
+		scale_x_continuous(breaks = seq(from = 0, to = 1, by = 0.25), limits = c(0,1)) +
+		scale_y_continuous(breaks = seq(from = 0, to = 2.5, by = 0.5), limits = c(0,2.5)) +
+		theme(axis.text=element_text(size=12), axis.title=element_text(size=14),
+			  plot.title = element_text(hjust = 0.5)) # center the title
 print(plt)
-
 ```
 
 
@@ -555,20 +570,17 @@ bSave <- FALSE
 You have two options to make a histogram with ``ggplot2`` package. You can either use the ``qplot()`` function, which looks very much like the ``hist()`` function:
 
 ```{r}
-pHistoAgxDiam <- ggplot(grains, aes(ecd.nm)) +
-  geom_histogram(binwidth = 5) +
-  # scale_x_continuous(breaks = seq(from = 7, to = 20, by = 1)) +
-  # scale_y_discrete(breaks = c(0, 2, 4, 6, 8, 10, 12, 14, 16)) +
-  ggtitle("Grain Equivalent Circular Diameter") +
-  theme(plot.title = element_text(lineheight=2, size=12)) +
-  # labs(x=TeX("diameter ($\\mu$m)"), y="Count")
-  labs(x="diameter (nm)", y="Count") 
+pHD <-	ggplot(grains, aes(ecd.nm)) +
+		geom_histogram(binwidth = 5) +
+		ggtitle("Grain Equivalent Circular Diameter") +
+		theme(plot.title = element_text(lineheight=2, size=12)) +
+		labs(x="diameter (nm)", y="Count") 
 
 if (bSave == TRUE) {
-  ggsave("./dat/png/grain-ecd-histo.png", plot=pHistoAgxDiam,
-         width=6, height=4, units="in", dpi=150)
+	ggsave("./dat/png/grain-ecd-histo.png", plot=pHistoAgxDiam,
+		   width=6, height=4, units="in", dpi=150)
 }
-print(pHistoAgxDiam)
+print(pHD)
 ```
 
 ## Step 3: Make a histogram for aspect ratio.
@@ -577,20 +589,16 @@ print(pHistoAgxDiam)
 ```{r}
 print(summary(grains$a.r))
 
-pHistoAgxAr <- ggplot(grains, aes(a.r)) +
-  geom_histogram(bins=50) +  # binwidth = 5) +
-  # scale_x_continuous(breaks = seq(from = 7, to = 20, by = 1)) +
-  # scale_y_discrete(breaks = c(0, 2, 4, 6, 8, 10, 12, 14, 16)) +
-  ggtitle("Grain Aspect Ratio") +
-  theme(plot.title = element_text(lineheight=2, size=12)) +
-  # labs(x=TeX("diameter ($\\mu$m)"), y="Count")
-  labs(x="diameter (nm)", y="Count") 
-
+pHAR <-	ggplot(grains, aes(a.r)) +
+		geom_histogram(bins=50) +
+		ggtitle("Grain Aspect Ratio") +
+		theme(plot.title = element_text(lineheight=2, size=12)) +
+		labs(x="diameter (nm)", y="Count") 
 if (bSave == TRUE) {
-  ggsave("./dat/png/grain-ecd-histo.png", plot=pHistoAgxAr,
-         width=6, height=4, units="in", dpi=150)
+	ggsave("./dat/png/grain-ecd-histo.png", plot=pHistoAgxAr,
+		   width=6, height=4, units="in", dpi=150)
 }
-print(pHistoAgxAr)
+print(pHAR)
 ```
 
 ## Step 4: Make some classes and plot.
@@ -603,54 +611,41 @@ df2 <- data.frame(ecd=elongated,shape='elonganted')
 shapes <- rbind(df1,df2)
 rm(df1, df2)
 
-pBoxPlotEcdAr <- ggplot(shapes, aes(x=shape, y=ecd)) +
-  geom_boxplot(aes(fill = shape)) +
-  # scale_y_continuous(breaks = seq(from = 10, to = 20, by = 1)) +
-  # ggtitle(TeX("Beads $\\geq 10\\mu$m\n from Class 837 Support")) +
-  # theme(plot.title = element_text(lineheight=2, size=12)) +
-  labs("equivalent circular diameter (nm)") 
+pBPECDAR <-	ggplot(shapes, aes(x=shape, y=ecd)) +
+			geom_boxplot(aes(fill = shape)) +
+			labs("equivalent circular diameter (nm)") 
 
 if (bSave == TRUE) {
-   ggsave("./dat/png/grain-ecd-shape-boxplot.png",
-          plot=pBoxPlotEcdAr, width=6, height=4,
-          units="in", dpi=150)
+	ggsave("./dat/png/grain-ecd-shape-boxplot.png",
+		   plot=pBPECDAR, width=6, height=4,
+		   units="in", dpi=150)
 }
-print(pBoxPlotEcdAr)
+print(pBPECDAR)
 ```
 
 ## Step 5: Make a scatter plot.
 
 
 ```{r}
-pScatterAgXArEcd <- ggplot(grains, aes(x=a.r, y=ecd.nm)) +
-  geom_point(colour="blue") + 
-  # scale_x_continuous(breaks = seq(from = 7, to = 20, by = 1)) +
-  # scale_y_discrete(breaks = c(0, 2, 4, 6, 8, 10, 12, 14, 16)) +
-  # ggtitle("Grain Aspect Ratio") +
-  # theme(plot.title = element_text(lineheight=2, size=12)) +
-  # labs(x=TeX("diameter ($\\mu$m)"), y="Count")
-  labs(x="aspect ratio", y="ecd [nm]") 
+pSPECDAR <-	ggplot(grains, aes(x=a.r, y=ecd.nm)) +
+			geom_point(colour="blue") +
+			labs(x="aspect ratio", y="ecd [nm]") 
 if (bSave == TRUE) {
-  ggsave("./dat/png/grain-ecd-ar.png", plot=pScatterAgXArEcd,
-         width=6, height=4, units="in", dpi=150)
+	ggsave("./dat/png/grain-ecd-ar.png", plot=pSPECDAR,
+		   width=6, height=4, units="in", dpi=150)
 }
-print(pScatterAgXArEcd)
+print(pSPECDAR)
 ```
 
 ```{r}
-pScatterAgXCircEcd <- ggplot(grains, aes(x=circ, y=ecd.nm)) +
-  geom_point(colour="blue") + 
-  # scale_x_continuous(breaks = seq(from = 7, to = 20, by = 1)) +
-  # scale_y_discrete(breaks = c(0, 2, 4, 6, 8, 10, 12, 14, 16)) +
-  # ggtitle("Grain Aspect Ratio") +
-  # theme(plot.title = element_text(lineheight=2, size=12)) +
-  # labs(x=TeX("diameter ($\\mu$m)"), y="Count")
-  labs(x="circularity", y="ecd [nm]") 
+pSPCECD <-	ggplot(grains, aes(x=circ, y=ecd.nm)) +
+			geom_point(colour="blue") +
+			labs(x="circularity", y="ecd [nm]") 
 if (bSave == TRUE) {
-  ggsave("./dat/png/grain-ecd-circ.png", plot=pScatterAgXCircEcd,
-         width=6, height=4, units="in", dpi=150)
+	ggsave("./dat/png/grain-ecd-circ.png", plot=pSPCECD,
+		   width=6, height=4, units="in", dpi=150)
 }
-print(pScatterAgXCircEcd)
+print(pSPCECD)
 ```
 
 ## Step 6: Plot the diameter distribution of our dominant morphology.
@@ -663,20 +658,17 @@ ecd.mu <- mean(dominant$ecd.nm)
 ecd.sd <- sd(dominant$ecd.nm)
 
 
-pDomGrainDiam <- ggplot(dominant, aes(ecd.nm)) +
-  geom_histogram(binwidth = 5) +
-  # scale_x_continuous(breaks = seq(from = 7, to = 20, by = 1)) +
-  # scale_y_discrete(breaks = c(0, 2, 4, 6, 8, 10, 12, 14, 16)) +
-  ggtitle("Dominant Population Equivalent Circular Diameter") +
-  theme(plot.title = element_text(lineheight=2, size=12)) +
-  # labs(x=TeX("diameter ($\\mu$m)"), y="Count")
-  labs(x="diameter (nm)", y="Count") 
+pDGD <-	ggplot(dominant, aes(ecd.nm)) +
+		geom_histogram(binwidth = 5) +
+		ggtitle("Dominant Population Equivalent Circular Diameter") +
+		theme(plot.title = element_text(lineheight=2, size=12)) +
+		labs(x="diameter (nm)", y="Count") 
 
 if (bSave == TRUE) {
- ggsave("./dat/png/dom-grain-ecd-histo.png", plot=pDomGrainDiam,
-        width=6, height=4, units="in", dpi=150)
+	ggsave("./dat/png/dom-grain-ecd-histo.png", plot=pDGD,
+		   width=6, height=4, units="in", dpi=150)
 }
-print(pDomGrainDiam)
+print(pDGD)
 ```
 
 ## Step 7: Make a plot of computed Gaussian data.
@@ -685,9 +677,9 @@ print(pDomGrainDiam)
 
 ecd <- rnorm(100000, mean=ecd.mu, sd=ecd.sd)
 df <- data.frame(ecd=ecd)
-theoHistPlot <- ggplot(df, aes(ecd)) +
-  geom_histogram(binwidth = .1) +
-  labs(x="diameter (nm)", y="Count") 
+theoHistPlot <-	ggplot(df, aes(ecd)) +
+				geom_histogram(binwidth = .1) +
+				labs(x="diameter (nm)", y="Count") 
 
 print(theoHistPlot)
 ```
