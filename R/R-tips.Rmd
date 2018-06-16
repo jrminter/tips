@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-06-09"
+date: "Started: 2013-07-16, Last modified: 2018-06-16"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -30,6 +30,33 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 [Back to Index](../README.html)
 
 # Don't forget...
+
+## Key RStudio Project Settings
+
+Tabs and spaces can be a **big** problem. The **tidyverse** and similar
+projects use spaces for tabs and a 2 space equivalent. Below are my
+current favorite project settings:
+
+```
+Version: 1.0
+
+RestoreWorkspace: No
+SaveWorkspace: No
+AlwaysSaveHistory: Yes
+
+EnableCodeIndexing: Yes
+UseSpacesForTab: Yes
+NumSpacesForTab: 2
+Encoding: UTF-8
+
+RnwWeave: knitr
+LaTeX: XeLaTeX
+
+BuildType: Package
+PackageUseDevtools: Yes
+PackageInstallArgs: --no-multiarch --with-keep.source
+```
+
 
 ## Stop printing hashes
 
