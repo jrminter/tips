@@ -1,7 +1,7 @@
 ---
 title: "ggplot2 Use Cases"
 author: "J. R. Minter"
-date: "Started: 2016-01-20, Last modified: 2018-06-14"
+date: "Started: 2016-01-20, Last modified: 2018-06-15"
 output:
   html_document:
     csl: ../inc/american-chemical-society-with-titles-sentence-case-doi.csl
@@ -196,7 +196,7 @@ cyclerPlt <- ggplot(dfTidy, aes(x=TRT, y=CPK, fill=Gender)) +
 					ggtitle("CPK as a function of treatment and gender") +
 					theme(axis.text=element_text(size=12),
 						  axis.title=element_text(size=12),
-						  plot.title=element_text(hjust = 0.5)) # ce
+						  plot.title=element_text(hjust = 0.5)) # center the title...
 
 print(cyclerPlt)
 
