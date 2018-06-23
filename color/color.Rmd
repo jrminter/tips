@@ -1,7 +1,7 @@
 ---
 title: "Tips on Using Color"
 author: "J. R. Minter"
-date: "Started: 2013-07-23, Last modified: 2017-10-28"
+date: "Started: 2013-07-23, Last modified: 2018-06-23"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -31,17 +31,21 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 Color palettes need to be chosen carefully.
 
-Resources
+# Resources
 
-[Zach Holman](http://zachholman.com/posts/slide-design-for-developers/)
+- **Creating corporate color palettes for ggplot2** by [\@drsimonj](https://drsimonj.svbtle.com/creating-corporate-colour-palettes-for-ggplot2) 
 
-[ColorBrewer](http://colorbrewer2.org/)
+- **Slide design** by [Zach Holman](http://zachholman.com/posts/slide-design-for-developers/)
 
-[colourlovers](http://www.colourlovers.com)
+- Color palettes from [ColorBrewer](http://colorbrewer2.org/)
 
-[Kuler](https://kuler.adobe.com/create/color-wheel/)
+- Color palettes from [colourlovers](http://www.colourlovers.com)
 
-[efg's handy R-Color PDF](pdf/RColorChart.pdf)
+- Color palettes from [color-hex.com](http://www.color-hex.com/color-palettes/)
+
+- Color palettes from [Kuler](https://kuler.adobe.com/create/color-wheel/)
+
+- [efg's handy R-Color PDF](pdf/RColorChart.pdf)
 
 
 # My favorite desktop background
@@ -165,7 +169,7 @@ image(matrix(1:5), col = pal, axes = FALSE)
 par(mar=std.mar)
 ```
 
-[Blown Entreprneur](http://www.colourlovers.com/palette/59867/Blown_Entrepreneur)
+[Blown Entrepreneur](http://www.colourlovers.com/palette/59867/Blown_Entrepreneur)
 
 ```{r,fig.height=1}
 pal <- c("#44749D","#C6D4E1", "#FFFFFF", "#EBE7E0", "#BDB8AD")
