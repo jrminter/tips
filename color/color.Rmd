@@ -1,7 +1,7 @@
 ---
 title: "Tips on Using Color"
 author: "J. R. Minter"
-date: "Started: 2013-07-23, Last modified: 2018-06-23"
+date: "Started: 2013-07-23, Last modified: 2018-06-27"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -38,6 +38,11 @@ Color palettes need to be chosen carefully.
 - **Slide design** by [Zach Holman](http://zachholman.com/posts/slide-design-for-developers/)
 
 - Color palettes from [ColorBrewer](http://colorbrewer2.org/)
+**Note:** To find those suitable for those who are colorblind use
+
+```{r findPalletesForColorblind}
+subset(RColorBrewer::brewer.pal.info , colorblind)
+```
 
 - Color palettes from [colourlovers](http://www.colourlovers.com)
 
