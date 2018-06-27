@@ -8,6 +8,7 @@
 # 2017-11-28 added magick from github
 #            https://datascienceplus.com/image-processing-and-manipulation-with-magick-in-r/
 # 2018-06-13 Added rafalib and UsingR to buld matrix algebra and R-3.5.0
+# 2018-06-27 add github r-libs/styler to install
 
 
 if( Sys.info()['sysname'] == "Windows"){
