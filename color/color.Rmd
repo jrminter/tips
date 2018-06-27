@@ -37,12 +37,18 @@ Color palettes need to be chosen carefully.
 
 - **Slide design** by [Zach Holman](http://zachholman.com/posts/slide-design-for-developers/)
 
-- Color palettes from [ColorBrewer](http://colorbrewer2.org/)
+- Color palettes from [ColorBrewer](http://colorbrewer2.org/)    
 **Note:** To find those suitable for those who are colorblind use
 
 ```{r findPalletesForColorblind}
 subset(RColorBrewer::brewer.pal.info , colorblind)
 ```
+
+Remember it can be used with `gglot2` via `scale_color_brewer()` and
+`scale_fill_brewer()`.    
+**Credit:**
+[K. Vitting-Seerup](https://twitter.com/KVittingSeerup/status/1011898955477774336)
+(2018-06-27).
 
 - Color palettes from [colourlovers](http://www.colourlovers.com)
 
