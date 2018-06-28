@@ -25,21 +25,24 @@ From [Wei Yang Tham](https://twitter.com/wytham88/status/1012085073368272903)
 > `@R4DScommunity` Slack group: add `NULL` to the end of your ggplot
 > chain so you can comment out a command without ending with a `+`.
 
-His example had problems, so here is mine where I comment out a title...
+His example had problems, so I made one based on 
+[this](http://www.sthda.com/english/wiki/ggplot2-density-plot-quick-start-guide-r-software-and-data-visualization) example.
 
 ```{r endWithANull, fig.width=9.5}
 library(ggplot2)
-fi <-'./dat/csv/20nm-C-10nm-Ag-On-SiO2-5kV.csv'
-df10 <- read.csv(fi, header=TRUE, as.is=TRUE)
-plt <- ggplot() +
-       geom_point(data=df10, aes(x=Z.nm, y=Hits),
-                  colour="darkblue") +
-       xlab("Depth [nm]") +
-       ylab("BSE hits") +
-       # ggtitle("Monte Carlo model of C-coated Ag on glass at 5 kV") +
+set.seed(42)
+df <- data.frame(gender = factor(rep(c("F", "M"), each = 200)),
+                 weight = round(c(rnorm(200, mean = 55, sd=5),
+                                  rnorm(200, mean = 65, sd=5))))
+
+plt <- ggplot(df, aes(x=weight, fill=gender)) +
+       geom_density(alpha=0.5) +
+       geom_hline(yintercept = 0, colour='white') +
+       ggtitle("Weight as a function of gender") +
        theme(axis.text=element_text(size=12),
              axis.title=element_text(size=12),
-             plot.title=element_text(hjust = 0.5)) + # center the title
+             plot.title=element_text(hjust = 0.5)) +
+       # geom_histogram() +
        NULL
 print(plt)
 ```
