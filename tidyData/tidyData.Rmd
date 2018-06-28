@@ -1,7 +1,7 @@
 ---
 title: "Tidy Data"
 author: "J. R. Minter"
-date: "Started: 2018-06-12, Last modified: 2018-06-13"
+date: "Started: 2018-06-12, Last modified: 2018-06-28"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -60,16 +60,25 @@ head(df)
 # Tidy the data
 
 Note how the replicate values of `CPK` are listed as columns
-`CPK1:CPK3`. We will **rename** those columns to make it easier
-to process and then use the function `gather` to make a long dataset
-with columns labeled `replicate` and `CPK`.
+`CPK1:CPK3`. We will first **rename** those columns to make it easier
+to process.
 
 
-```{r test}
+```{r fixHeaders, comment=NA}
 names(df) <- c("Subject","Age","Gender","TRT",
-			   "CPK.1", "CPK.2", "CPK.3", "CPK.4")
-dfTidy <-	df %>%
-			gather(replicate, CPK, CPK.1:CPK.4)
+               "CPK.1", "CPK.2", "CPK.3", "CPK.4")
+```
+
+Now we use the function `gather()` to make a long dataset
+with columns labeled `replicate` and `CPK`. Note that the use of
+`identity()` at the end of the pipe lets one comment out parts
+if we need to test. **Credit:** a tweet by 
+[Mikhail Popov](https://twitter.com/bearloga/status/1012226410830655488).
+
+```{r tidyTheData, comment=NA}
+dfTidy <- df %>%
+          gather(replicate, CPK, CPK.1:CPK.4) %>%
+          identity()
 head(dfTidy)
 ```
 
