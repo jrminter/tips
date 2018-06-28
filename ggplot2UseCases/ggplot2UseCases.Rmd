@@ -1,7 +1,7 @@
 ---
 title: "ggplot2 Use Cases"
 author: "J. R. Minter"
-date: "Started: 2016-01-20, Last modified: 2018-06-16"
+date: "Started: 2016-01-20, Last modified: 2018-06-28"
 output:
   html_document:
     csl: ../inc/american-chemical-society-with-titles-sentence-case-doi.csl
@@ -16,6 +16,35 @@ bibliography: ../inc/tips.bib
 This is a work in progress.
 
 # Capture thoughts for enhancements at the top...
+
+## Make it easy to comment out parts
+
+From [Wei Yang Tham](https://twitter.com/wytham88/status/1012085073368272903)
+
+> One of my favorite ggplot2 tricks, which I learned on the
+> `@R4DScommunity` Slack group: add `NULL` to the end of your ggplot
+> chain so you can comment out a command without ending with a `+`.
+
+His example had problems, so here is mine where I comment out a title...
+
+```{r endWithANull, fig.width=9.5}
+library(ggplot2)
+fi <-'./dat/csv/20nm-C-10nm-Ag-On-SiO2-5kV.csv'
+df10 <- read.csv(fi, header=TRUE, as.is=TRUE)
+plt <- ggplot() +
+       geom_point(data=df10, aes(x=Z.nm, y=Hits),
+                  colour="darkblue") +
+       xlab("Depth [nm]") +
+       ylab("BSE hits") +
+       # ggtitle("Monte Carlo model of C-coated Ag on glass at 5 kV") +
+       theme(axis.text=element_text(size=12),
+             axis.title=element_text(size=12),
+             plot.title=element_text(hjust = 0.5)) + # center the title
+       NULL
+print(plt)
+```
+
+
 
 ## Designing conceptual plots
 
