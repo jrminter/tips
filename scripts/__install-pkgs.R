@@ -9,7 +9,8 @@
 #            https://datascienceplus.com/image-processing-and-manipulation-with-magick-in-r/
 # 2018-06-13 Added rafalib and UsingR to buld matrix algebra and R-3.5.0
 # 2018-06-27 add github r-libs/styler to install
-# 2018-07-05 added ropenscilabs/icon, emitanaka/anicon, and  yihui/xaringan" from github
+# 2018-07-05 added ropenscilabs/icon, emitanaka/anicon, yihui/xaringan
+#            and tpoisot/digitize from github
 
 
 if( Sys.info()['sysname'] == "Windows"){
@@ -254,4 +255,5 @@ devtools::install_github("r-lib/styler")
 devtools::install_github("ropenscilabs/icon")
 devtools::install_github("emitanaka/anicon")
 devtools::install_github("yihui/xaringan")
+devtools::install_github("tpoisot/digitize")
 
