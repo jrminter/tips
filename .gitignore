@@ -405,6 +405,12 @@ tex/tex-tips.md
 tex/tex-tips.html
 tex/figure/
 
+# tv-bluetooth directory
+tv-bluetooth/.DS_Store
+tv-bluetooth/tv-bluetooth.md
+tv-bluetooth/tv-bluetooth.html
+tv-bluetooth/figure/
+
 # ubuntu tips directory
 ubuntu/.DS_Store
 ubuntu/ubuntu.md

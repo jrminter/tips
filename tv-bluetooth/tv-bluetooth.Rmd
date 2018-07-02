@@ -1,0 +1,64 @@
+---
+title: "TV-Bluetooth Connection"
+author: "J. R. Minter"
+date: "Started: 2013-07-01, Last modified: 2018-07-02"
+output:
+  knitr:::html_vignette:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+---
+
+[Back to Index](../README.html)
+
+# Operation
+
+## Blue tooth transmitter/receiver
+
+1. Power on: Press and hold top MFB for 3 sec. Should flash blue 2X
+2. Power off: Press and hold top MFB for 3 sec. Should flash red 2X.
+
+## Blue tooth headphones
+
+1. Turn on:  Press and hold for 1 sec. Should flash blue once.
+2. Turn off: Press and hold for 3 sec. Should flash red once.
+
+# Information
+
+Paper manuals are stored in the top dresser drawer under the TV. 
+
+## Blue tooth headphones
+
+**Soundcore Vortex** Wireless Headphones
+[Manual](./dat/A3031-english.pdf).
+
+## Bluetooth Transmitter
+
+- **Select Working Mode** Slide the TX/RX to the TX position
+**while powered off.**
+
+- **Power ON** Press and hold the **MFB** for 3 sec. Indicator flashes
+**blue** twice.
+
+- **Power OFF** Press and hold the **MFB** for 3 sec. Indicator flashes
+**red** twice and then **turns off.**.  If the battery is low, the
+indicator will flash red slowly.
+
+- **Pairing** Double to the **MFB** to enter the pairing mode after
+the adapter is turned on. **Indicator flashes blue quickly**. 
+If it is not paired to any devices, GA-BA08 will enter pairing mode
+automatically soon after it is powered on. **Once suceesfully paired**
+**the indicator will turn solid blue.** Turn on Bluetooth funbction 
+headphones and speakers and activate the pairing mode. Usually by
+holding the power button for several seconds, Bluetooth devices will
+automatically go into pairing mode. **Pin codes if required**: 0000,
+1111, 1234, 8888.
+
+- **When the battery is low** the LED flashes red continuously, once the
+battery voltage is below 3.1 V, the GA-BA08 will turn itself off.
+
+
+
+
+[Back to Index](../README.html)
+
