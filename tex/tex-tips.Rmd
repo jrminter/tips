@@ -1,7 +1,7 @@
 ---
 title: "TeXLive Hints"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-05-29"
+date: "Started: 2013-07-16, Last modified: 2018-07-02"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -21,6 +21,26 @@ They were compiled from several web sources.
 See [Yihui's write-up](https://yihui.name/tinytex/) and the
 [github repository](https://github.com/yihui/tinytex). On Windows,
 TinyTeX installs to the user's `%APPDATA%/TinyTeX` folder.
+
+### Paths on Windows
+
+I have both TinyTex (TL2018) and a full TL2018 installation on my Win10 VM.
+I can switch them by changing the path in my environment string...
+
+The binary paths are:
+
+1. TinyTeX
+
+```
+%APPDATA%\TinyTeX\bin\win32
+```
+
+2. TexLive2018
+
+```
+C:\Apps\texlive\2018\bin\win32
+```
+
 
 ### Set the repository
 
