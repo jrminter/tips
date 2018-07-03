@@ -1,0 +1,31 @@
+---
+title: "gfortran"
+author: "J. R. Minter"
+date: "Started: 2013-07-03, Last modified: 2018-07-03"
+output:
+  knitr:::html_vignette:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+---
+
+[Back to Index](../README.html)
+
+# Changing fortran compilers on MacOSX
+
+The current fortran compiler for MacOSX is
+`gfortran-6.1.pkg`.  There is an older version that
+may work better for `gmrfilm`.
+
+To remove a package,
+[Slashdot](https://stackoverflow.com/questions/17564543/how-to-uninstall-gfortran-compiler-on-mac-osx-10-7)
+recommends 
+
+```
+sudo rm -r /usr/local/gfortran /usr/local/bin/gfortran
+```
+
+
+
+[Back to Index](../README.html)
+
