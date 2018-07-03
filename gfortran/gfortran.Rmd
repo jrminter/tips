@@ -13,9 +13,11 @@ output:
 
 # Changing fortran compilers on MacOSX
 
-The current fortran compiler for MacOSX is
-`gfortran-6.1.pkg`.  There is an older version that
-may work better for `gmrfilm`.
+The current fortran compiler for R on MacOSX is
+`gfortran-6.1`.  There is an older version    
+(`gfortran-5.2-Yosemite.dmg`)
+that I thought may might better for `gmrfilm`,
+but it did not.
 
 To remove a package,
 [Slashdot](https://stackoverflow.com/questions/17564543/how-to-uninstall-gfortran-compiler-on-mac-osx-10-7)
