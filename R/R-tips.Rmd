@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-06-16"
+date: "Started: 2013-07-16, Last modified: 2018-07-03"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -23,7 +23,12 @@ knit_hooks$set(inline = function(x) {
     paste(as.character(x), collapse = ', ')
   }
 })
+
+
 knit_hooks$set(plot = knitr:::hook_plot_html)
+
+library(statshelpR)
+install_new("scales")
 ```
 
 
@@ -71,6 +76,21 @@ To not print hashes
 
 ```{r cars, comment=NA, echo = TRUE}
 summary(cars)
+```
+
+## Easier Rounding
+
+The brute force approach...
+
+```{r bruteForce, comment=NA}
+paste0(round(0.20394 * 100, 1), '%')
+```
+
+Use the `scales` package
+
+```{r rounding, comment=NA}
+library(scales)
+percent(0.20394)
 ```
 
 ## Controlling images size in RMarkdown documents

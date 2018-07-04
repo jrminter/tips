@@ -19,78 +19,10 @@ if( Sys.info()['sysname'] == "Windows"){
 	print("unset JAVA_HOME for Windows")
 }
 
-
-str.cran.repo <- 'http://cran.revolutionanalytics.com/'
-str.lib <- .Library
-
-source("http://bioconductor.org/biocLite.R")
-
-
-ensure_devtools <- function(){
-  if ("devtools" %in% installed.packages()){
-    print("devtools already installed")
-  }else{
-    print("Installing devtools")
-    install.packages("devtools",repos=str.cran.repo,
-                     dep=TRUE,lib=str.lib)
-    
-  }
-}
-ensure_devtools()
-
-install_new<-function(mypkg){
-  if (mypkg %in% installed.packages()){
-    str.line <- paste0("Package ", mypkg, " already installed \n")
-    cat(str.line)
-  }else{
-    str.line <- paste0("Package ", mypkg, " not found, so installing with dependencies... \n")
-    cat(str.line)
-    cat("Press CTRL C to abort.\n")
-    cat()
-    Sys.sleep(5)
-    install.packages(mypkg,repos=str.cran.repo,dep=TRUE,lib=str.lib)
-  }
-}
-
-install_new_bioconductor<-function(mypkg){
-  if (mypkg %in% installed.packages()){
-    str.line <- paste0("Package ", mypkg, " already installed \n")
-    cat(str.line)
-  }else{
-    str.line <- paste0("Package ", mypkg, " not found, so installing with dependencies... \n")
-    cat(str.line)
-    cat("Press CTRL C to abort.\n")
-    cat()
-    Sys.sleep(5)
-    biocLite(mypkg, dep=TRUE, lib=str.lib)
-  }
-}
-
-install_new_github<-function(mypkg, repo){
-  library(devtools)
-  theCmd <- paste0(repo,'/', mypkg)
-  if (mypkg %in% installed.packages()){
-    str.line <- paste0("Package ", mypkg, " already installed \n")
-    cat(str.line)
-  }else{
-    str.line <- paste0("Package ", mypkg, " not found, so installing with dependencies... \n")
-    cat(str.line)
-    cat("Press CTRL C to abort.\n")
-    cat()
-    Sys.sleep(5)
-
-    install_github(theCmd)
-  }
-}
-
 # first update anything not built with your current version of R.
 update.packages(ask=FALSE, checkBuilt = TRUE)
 
-
-
-# Problem packages for R-3.1.0
-# install_new('RMySQL')
-# install_new('RExcel')
+library(statshelpR)
 
 # Start with the tidyverse
 install_new('devtools')
@@ -117,7 +49,7 @@ install_new('pander')
 install_new('rticles')
 
 # matrix algebra
-install_new('rafalib')
+# install_new('rafalib')
 install_new('UsingR')
 
 
@@ -177,8 +109,8 @@ install_new('rattle')
 install_new('chemCal')
 install_new('DAAG')
 install_new('fftw')
-install_new(rafalib)
-install_new(UsingR)
+install_new('rafalib')
+install_new('UsingR')
 
 install_new('fitdistrplus')
 install_new('mixdist')
@@ -197,7 +129,7 @@ install_new('googleVis')
 install_new('lasso2')
 install_new('RXKCD')
 install_new('ChemometricsWithR')
-install_new('ChemometricsWithRData')
+# install_new('ChemometricsWithRData')
 install_new('chemometrics')
 install_new('lspls')
 install_new('FITSio')
@@ -214,20 +146,19 @@ install_new('FinCal')
 install_new('hrbrthemes')
 install_new('cowsay')
 
-biocLite()
 
-install_new_bioconductor("BiocStyle")
+install_new_bioconductor("BiocStyle", TRUE)
 #install_new_bioconductor("RCurl") # avail from CRAN
-install_new_bioconductor("EBImage")
-install_new_bioconductor("gpls")
-install_new_bioconductor("graph")
+install_new_bioconductor("EBImage", FALSE)
+install_new_bioconductor("gpls", FALSE)
+install_new_bioconductor("graph", FALSE)
 
 install_new_github('slidify','ramnathv')
 install_new_github('slidifyLibraries','ramnathv')
 install_new_github('rCharts','ramnathv')
 # install_new_github('bookdown','hadley')
 install_new_github('captioner','adletaw')
-install_new_github('choroplethrZip','arilamstein')
+# install_new_github('choroplethrZip','arilamstein')
 install_new_github('printr','yihui')
 
 install_new_github('rPeaks','jrminter')
