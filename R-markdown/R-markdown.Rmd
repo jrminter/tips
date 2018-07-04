@@ -1,7 +1,7 @@
 ---
-title: "R-markdown Tips"
+title: "R-Markdown Tips"
 author: "J. R. Minter"
-date: "Started: 2016-12-08, Last modified: 2018-04-13"
+date: "Started: 2016-12-08, Last modified: 2018-07-04"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -33,6 +33,19 @@ package. This inspired my
 
 - A nice html template in the [epuRate](https://github.com/holtzy/epuRate) package by Holtz Yan.
 
+## Using the `out.extra` argument to apply styles to a single chunk.
+
+From [zevross.com](http://www.zevross.com/blog/2017/06/19/tips-and-tricks-for-working-with-images-and-figures-in-r-markdown-documents/#bonus-knitr-and-r-markdown-functionality)
+
+The code below uses this argument:
+
+```
+out.extra='style="background-color: #9ecff7; padding:10px; display: inline-block;"'
+```
+
+```{r useOutExtra, out.width="50%", out.extra='style="background-color: #9ecff7; padding:10px; display: inline-block;"'}
+plot(10:1, pch=21, bg="red")
+```
 
 
 ## Simple Word to markdown
@@ -64,7 +77,7 @@ We would use the following argument for **knitr**:
 comment=NA
 ```
 
-3. Supress annoying messages from **tensorflow**: Set the
+3. Suppress annoying messages from **tensorflow**: Set the
 following **environment variable**
 
 ```
@@ -105,7 +118,7 @@ character is escaped. Also note the $\LaTeX$ expression.
 ---
 title: "SEM/EDS analysis of qm-05000-SampleID"
 author: "J. R. Minter"
-date: "December 7, 2016"
+date: "Started: 2016-12-07, Last Modified: 2018-07-04"
 abstract: |
   The particles were deposited on a Si chip and lightly C coated. The 
   morphology appeared to be a mixture of small needles and small equiaxial
@@ -161,10 +174,11 @@ img <- readPNG("../path-to/foo.png")
 grid.raster(img)
 ```
 
-3. The header for the R-chunk might include
+3. The header for the R-chunk might include. **Note**: Use **unique**
+chunk names
 
 ```
-r fig.width=7.5, fig.height=5.625, echo=FALSE, fig.align='center',
+r includeImg1, fig.width=7.5, fig.height=5.625, echo=FALSE, fig.align='center',
 fig.cap='ImgName. 7 kV 1,000X'
 ```
 
