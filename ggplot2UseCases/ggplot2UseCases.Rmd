@@ -1,7 +1,7 @@
 ---
 title: "ggplot2 Use Cases"
 author: "J. R. Minter"
-date: "Started: 2016-01-20, Last modified: 2018-06-28"
+date: "Started: 2016-01-20, Last modified: 2018-07-04"
 output:
   html_document:
     csl: ../inc/american-chemical-society-with-titles-sentence-case-doi.csl
@@ -16,6 +16,48 @@ bibliography: ../inc/tips.bib
 This is a work in progress.
 
 # Capture thoughts for enhancements at the top...
+
+## Testing ggplot2 version 3
+
+This just came out (2018-07-04). Here is a nice example from
+[johnmackintosh.com](https://www.johnmackintosh.com/2018-07-04-tidily-evaluated-ggplot2/)
+
+```{r testTidyEval, message=FALSE}
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+library(tibble)
+
+data <- list(fdeaths,mdeaths,ldeaths) # time series data. Needs prep
+names(data)[1:3] <- c("fdeaths","mdeaths","ldeaths")
+data <- as_tibble(data)
+startdate <- as.Date('1974-1-1')
+data$date <- seq.Date(startdate,by = 'month',length.out = 72)
+newdata <- tidyr::gather(data, key = key, value = value,-date)
+newdata$value <- as.numeric(newdata$value)
+
+# create generic function
+gtest <- function(df,x,y, group) {
+  x_quo <- enquo(x)
+  y_quo <- enquo(y)
+  group_quo <- enquo(group)
+  p <- ggplot(df,aes(x = !!x_quo, y = !!y_quo)) +   #bangin'   
+  geom_line(colour = "blue", group = 1) + 
+  geom_point(colour = "blue") +
+  facet_wrap(group_quo, ncol = 3) #look Ma, no need to bang bang here!
+  p <- p + ggtitle(label = "Easy Tidy Eval in ggplot 3.0.0",
+                   subtitle = "ggplot with tidy evaluation & facetting with no strings")
+  p <- p + labs(x = NULL, y = NULL, caption = "") +
+  theme_bw()
+  p
+}
+```
+
+Now test it
+
+```{r plotNewTidyEval, fig.width=9.5}
+gtest(newdata,date,value,key)
+```
 
 ## Make it easy to comment out parts
 
