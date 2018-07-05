@@ -13,7 +13,8 @@ bibliography: ../inc/tips.bib
 
 [Back to Index](../README.html)
 
-This is a work in progress.
+This is a work in progress. it also requires
+**ggplot2 version 3.0**.
 
 # Capture thoughts for enhancements at the top...
 
