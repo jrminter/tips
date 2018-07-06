@@ -1,7 +1,7 @@
 ---
 title: "TeXLive Hints"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-07-02"
+date: "Started: 2013-07-16, Last modified: 2018-07-06"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -16,11 +16,34 @@ They were compiled from several web sources.
 
 # Simple tricks
 
-## TinyTex
+## Encoding
+
+Herb Schulz noted the directive for Unicode at the top of a file
+
+```
+% !TEX encoding = UTF-8 Unicode
+```
+
+
+## TinyTex and BasicTex
 
 See [Yihui's write-up](https://yihui.name/tinytex/) and the
 [github repository](https://github.com/yihui/tinytex). On Windows,
 TinyTeX installs to the user's `%APPDATA%/TinyTeX` folder.
+
+Note Bob Rudis and Noam Ross recommended BasicTex.
+It can be installed on a Mac with `homebrew`. Note how one can
+install a few packages manually. Keeps the footprint down...
+
+```
+brew install gnupg
+brew cask install basictex # suggested by @noamross
+# plus the following, provided by Kras.Pten
+# read why here: http://rud.is/b/2015/10/22/installing-r-on-os-x-100-homebrew-edition/#comment-10603
+sudo tlmgr update –-self 
+sudo tlmgr update –-all 
+sudo tlmgr install titling framed inconsolata
+```
 
 ### Paths on Windows
 
