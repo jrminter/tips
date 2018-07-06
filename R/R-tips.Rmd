@@ -117,6 +117,9 @@ grid.raster(manySampImg)
 
 ## Building R on Ubuntu 16.04
 
+See [building from source](https://support.rstudio.com/hc/en-us/articles/218004217-Building-R-from-source)
+and [changing versions](https://support.rstudio.com/hc/en-us/articles/200486138-Changing-R-versions-for-RStudio-desktop).
+
 1. Need to enable source packages (edit  `/etc/apt/sources.list`). Then
 run `sudo apt-get update`.
 
