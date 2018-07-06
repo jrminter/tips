@@ -1,7 +1,7 @@
 ---
 title: "Git Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2017-11-04"
+date: "Started: 2013-07-16, Last modified: 2018-07-06"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -48,6 +48,18 @@ or
 ```
 git pull origin table-names
 ```
+
+3. Using git credentials
+
+From [stackoverflow](https://stackoverflow.com/questions/1595848/configuring-git-over-ssh-to-login-once)
+
+For the `tip` project:
+
+```
+git config -l
+git config remote.origin.url git@github.com:jrminter/tips.git
+```
+
 
 ## Useful videos
 
