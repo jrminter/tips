@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-06-09"
+date: "Started: 2013-07-16, Last modified: 2018-07-06"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -279,13 +279,47 @@ type:cal
 
 ## Minimal Homebrew
 
+### A major annoyance on High Sierra
+
+This [stackoverflow](https://stackoverflow.com/questions/46459152/cant-chown-usr-local-for-homebrew-in-osx-10-13-high-sierra)
+discussion notes a major issue:
+
+From **Uri Meirav** : The problem kept occurring... after digging deeper
+I found that only uninstalling Homebrew and then re-installing it solved
+this issue.
+
+**Uninstall Homebrew**:
+
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/uninstall)"
+```
+
+**Then re-install it**:
+
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+
+### Some examples
+
+Start with this from [ilovezfs](https://github.com/Homebrew/brew/issues/3228):
+
+```
+sudo chown -R $(whoami) $(brew --prefix)/*
+cd /usr/local
+mkdir Frameworks
+sudo chown -R $(whoami) $(brew --prefix)/*
+sudo chmod a+w Frameworks
+```
+
 I now just have:
 
 ```
 jrminter 1: brew install gnuplot --with-cairo --with-pdflib-lite \ 
                                  --with-tex --with-x11 --HEAD
 jrminter 2: brew install openssl
-jrminter 3: brew install mysql
+jrminter 3: brew install sqlite
 jrminter 4: brew install pandoc
 jrminter 5: brew install imagemagick
 ```
