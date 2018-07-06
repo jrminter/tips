@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-07-03"
+date: "Started: 2013-07-16, Last modified: 2018-07-06"
 output:
   html_document:
     css: ./theme/jm-gray-vignette.css
@@ -107,6 +107,8 @@ Topic
 [Lubuntu](./Lubuntu/Lubuntu.html)
 
 [mac](./mac/mac.html)
+
+[mac-for-data-science](./mac-for-data-science/mac-for-data-science.html)
 
 [maintaining legacy equipment](./legacy/Legacy.html)
 

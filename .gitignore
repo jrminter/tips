@@ -175,6 +175,12 @@ mac/mac.md
 mac/mac.html
 mac/figure/
 
+# mac-for-data-science directory
+mac-for-data-science/.DS_Store
+mac-for-data-science/mac-for-data-science.md
+mac-for-data-science/mac-for-data-science.html
+mac-for-data-science/figure/
+
 # micro directory
 micro/.DS_Store
 micro/micro.md

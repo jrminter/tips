@@ -1,0 +1,44 @@
+---
+title: "Setting up a Mac for Data Science"
+author: "J. R. Minter"
+date: "Started: 2018-07-06, Last modified: 2018-07-06"
+output:
+  knitr:::html_vignette:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+---
+[Back to Index](../README.html)
+
+# Introduction
+
+There has been a lot of recent discussion on how to effectively
+set up and maintain a MacOS system with R, Python, and other
+packages for data science. The consensus seems to be to use the
+[homebrew](https://brew.sh/) package manager. In October 2015,
+[Bob Rudis](https://rud.is/b/2015/10/22/installing-r-on-os-x-100-homebrew-edition/)
+wrote a very helpful post explaining how to do this and included a
+detailed procedure. On June 18, 2018
+[Yihui Xie](https://community.rstudio.com/t/a-cran-extras-repository-for-the-hombrew-cask-version-of-r-experimental/9907)
+began a spirited, helpful discussion on how to best do this.
+In that discussion, Jim Hester noted that using the 
+`brew cask install r-app` approach had the significant benefit that it
+__*retains compatibility with the CRAN package binaries*__. The
+[homebrew cask](https://github.com/Homebrew/homebrew-cask)
+documentation is helpful.
+
+Yihui's conclusion was:
+
+> I have switched to `brew cask install r-app`, so that the number of
+> binary packages I need to build has become significantly smaller.
+> CRAN seems to be building `sf` well, so I won't build it in my repo.
+
+He implemented this [cranextra-macos](https://yihui.name/en/2018/07/cranextra-macos/).
+
+# Status
+
+So far I dodged the bullet. The new `R-3.5.1.pkg` from CRAN installed
+nicely over `R-3.5.0`, so I can continue to monitor...
+
+
+[Back to Index](../README.html)
