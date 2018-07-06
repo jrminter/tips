@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-07-03"
+date: "Started: 2013-07-16, Last modified: 2018-07-05"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -113,6 +113,27 @@ library(png)
 library(grid)
 manySampImg <- readPNG('inc/many-samples.png')
 grid.raster(manySampImg)
+```
+
+## Building R on Ubuntu 16.04
+
+1. Need to enable source packages (edit  `/etc/apt/sources.list`). Then
+run `sudo apt-get update`.
+
+2. Install build dependencies. Run `sudo apt-get build-dep r-base`.
+
+3. Build
+
+```
+./configure --prefix=/home/jrminter/apps/R/3.5.1/ --enable-R-shlib --with-blas --with-lapack
+make
+make install
+```
+
+4. Make available to RStudio
+
+```
+export RSTUDIO_WHICH_R="/home/jrminter/apps/R/3.5.1/bin/R"
 ```
 
 
