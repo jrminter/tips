@@ -9,7 +9,7 @@ if(strGitHome=="") strGitHome="~/Documents/git"
 #if(strGitHome=="/Users/jrminter/git") strGitHome="/Users/jrminter/Documents/git"
 strRel     <- '/tips/scripts'
 
-names <- c("Readme.Rmd",
+names <- c("README.Rmd",
            "AccessToSqlite.Rmd", "automater.Rmd", "AZtec.Rmd",
            "C++11-Tips.Rmd", "carbonFilmThickness.Rmd",
            "chntpw.Rmd", "color.Rmd", "ConductiveEpoxy.Rmd",
