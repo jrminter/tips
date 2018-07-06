@@ -135,16 +135,20 @@ make install
 
 4. Make available to RStudio
 
-In .bashrc
+From [here](https://askubuntu.com/questions/261760/setting-global-environment-variable-for-everyone)
+
+In `.bashrc`
 
 ```
 export RSTUDIO_WHICH_R="/home/jrminter/apps/R/3.5.1/bin/R"
 ```
 
-In .profile
+In `/etc/environment` to make it system wide... I found I 
+needed to set the TEMP environment too...
 
 ```
 RSTUDIO_WHICH_R="/home/jrminter/apps/R/3.5.1/bin/R"
+TEMP="/home/jrminter/tmp"
 ```
 
 
