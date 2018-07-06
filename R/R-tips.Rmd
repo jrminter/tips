@@ -125,7 +125,7 @@ run `sudo apt-get update`.
 
 2. Install build dependencies. Run `sudo apt-get build-dep r-base`.
 
-3. Build
+3. Build R
 
 ```
 ./configure --prefix=/home/jrminter/apps/R/3.5.1/ --enable-R-shlib --with-blas --with-lapack
