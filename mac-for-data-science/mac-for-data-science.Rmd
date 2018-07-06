@@ -44,15 +44,37 @@ nicely over `R-3.5.0`, so I can continue to monitor...
 
 1. One can search
 
-```{sh searchRapp, comment=NA}
+Note chunks are moved to backtick block for cross platform
+viewing...
+
+```
+{sh searchRapp, comment=NA}
 brew search r-app
 ```
 
+```
+==> Searching local taps...
+==> Searching taps on GitHub...
+dnscrypt-wrapper
+pyenv-virtualenvwrapper
+homebrew/cask/r-app
+```
 and
 
-```{sh searchChrome, comment=NA}
+```
+{sh searchChrome, comment=NA}
 brew search google-chrome
 ```
+
+```
+==> Searching local taps...
+==> Searching taps on GitHub...
+homebrew/cask-versions/google-chrome-beta
+homebrew/cask-versions/google-chrome-canary
+homebrew/cask-versions/google-chrome-dev
+homebrew/cask/google-chrome
+```
+
 
 
 [Back to Index](../README.html)
