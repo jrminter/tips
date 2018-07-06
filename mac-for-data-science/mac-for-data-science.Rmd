@@ -40,5 +40,19 @@ He implemented this [cranextra-macos](https://yihui.name/en/2018/07/cranextra-ma
 So far I dodged the bullet. The new `R-3.5.1.pkg` from CRAN installed
 nicely over `R-3.5.0`, so I can continue to monitor...
 
+# Some observations
+
+1. One can search
+
+```{sh searchRapp, comment=NA}
+brew search r-app
+```
+
+and
+
+```{sh searchChrome, comment=NA}
+brew search google-chrome
+```
+
 
 [Back to Index](../README.html)
