@@ -79,6 +79,12 @@ sudo launchctl unload -w /Library/LaunchDaemons/nothrottle.plist
 ```
 and reboot.
 
+To check verification from the terminal
+
+```
+ps aux | grep fsck
+```
+
 
 
 ## Key shortcuts
