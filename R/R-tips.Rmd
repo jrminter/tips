@@ -36,6 +36,24 @@ install_new("scales")
 
 # Don't forget...
 
+## Some great entries for the setup chunk
+
+Add these to the `{r setup, include=FALSE}` chunk.
+I learned this from an example by [drsimonj](https://github.com/drsimonj/tidyverse_tutorial-useR2018)
+from the 2018 UseR tutorial on the `tidyverse`.
+
+```
+knitr::opts_chunk$set(echo=TRUE,
+  comment = NA,
+  fig.align = "centre",
+  fig.height = 4,
+  message = FALSE,
+  warning = FALSE,
+  error = FALSE)
+
+```
+
+
 ## Key RStudio Project Settings
 
 Tabs and spaces can be a **big** problem. The **tidyverse** and similar
