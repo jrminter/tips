@@ -50,6 +50,10 @@ and is set to start in
 **MacOSX**: /Users/jrminter/Library/Preferences/IJ_Prefs.txt \
 **Windows**: C:/Users/jrminter/.imagej/IJ_Prefs.txt
 
+Note: I wrote a Python script (`getPrefsDirImageJ.py`) that will find
+the the directory that contains `IJ_Prefs.txt`. It is in the
+**OSImageAnalysis** github repository
+[here](https://github.com/jrminter/OSImageAnalysis/tree/master/ImageJ/macros/py).
 
 
 ## Check the open image header for metadata
