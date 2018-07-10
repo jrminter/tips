@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-07-06"
+date: "Started: 2013-07-16, Last modified: 2018-07-10"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -11,6 +11,75 @@ output:
 [Back to Index](../README.html)
 
 # Tips
+
+## Speed up time machine
+
+From [here](http://www.mackungfu.org/massively-speed-up-time-capsule-time-machine-backups)
+
+> Time Machine and its network-equipped brother, Time Capsule, are
+> superb innovations. They make backup seamless, invisible and easy.
+> They’re also slow. Really slow. I’ve had to wait before I put my
+> MacBook Pro to sleep sometimes while a backup finishes and, of
+> course, the initial backup can literally take days.
+> 
+> Here’s how to fix that.
+> 
+> Open a Terminal window
+>
+> `sudo sysctl debug.lowpri_throttle_enabled=0`
+> 
+> This command prevents Time Machine’s backup process assuming a
+> low CPU priority, allowing backups to complete insanely quickly
+> In fact, you’ll see MB and GBs tick past on the Time Capsule
+> progress display in a second-by-second fashion (provided your
+> Mac isn’t very busy with some other task).
+> 
+> , this command is forgotten when you reboot. If you want it to
+> stick around when you reboot, you’ll need to add a launch-time script,
+> as > follows.
+
+I changed this a bit
+
+1. In terminal, type
+
+```
+sudo subl /Library/LaunchDaemons/nothrottle.plist
+```
+2. Paste the following code:
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+<key>Label</key>
+<string>nothrottle</string>
+<key>ProgramArguments</key>
+<array>
+<string>/usr/sbin/sysctl</string>
+<string>debug.lowpri_throttle_enabled=0</string>
+</array>
+<key>RunAtLoad</key>
+<true/>
+</dict>
+</plist>
+```
+Save the file.
+
+3. In the Terminal window
+
+```
+sudo chown root /Library/LaunchDaemons/nothrottle.plist;sudo launchctl load /Library/LaunchDaemons/nothrottle.plist
+```
+
+4. if you want to thurn this off:
+
+```
+sudo launchctl unload -w /Library/LaunchDaemons/nothrottle.plist
+```
+and reboot.
+
+
 
 ## Key shortcuts
 
