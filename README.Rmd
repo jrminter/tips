@@ -46,9 +46,7 @@ wget -r --no-parent --reject "index.html*" http://my/url
 > 
 > Type in the url window:
 >
-> ```
-> chrome://flags/#enhanced-bookmarks-experiment
-> ```
+> `chrome://flags/#enhanced-bookmarks-experiment`
 >
 > Select disable (from Default) 
 >
