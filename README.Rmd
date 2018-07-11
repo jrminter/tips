@@ -19,7 +19,7 @@ format.
 > ... and you don't respond to email     
 > - Karl Broman
 
-> DRY (do not repeat yourself) vs WET (waste everyones time) coding    
+> DRY (do not repeat yourself) vs WET (waste everyones time) coding styles    
 > - Peter Baker (UseR 2018)
 
 2. Getting started with data science
