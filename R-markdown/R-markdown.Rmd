@@ -1,7 +1,7 @@
 ---
 title: "R-Markdown Tips"
 author: "J. R. Minter"
-date: "Started: 2016-12-08, Last modified: 2018-07-04"
+date: "Started: 2016-12-08, Last modified: 2018-07-11"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -47,6 +47,94 @@ out.extra='style="background-color: #9ecff7; padding:10px; display: inline-block
 plot(10:1, pch=21, bg="red")
 ```
 
+
+# My typical YAML for an HTML document
+
+**YAML** is an abbreviation for "Yet Another Markup Language". 
+R-markdown uses YAML to encode information for later steps in the document
+generation process. Each document begins with a YAML header. 
+This is an example of a YAML header for an analysis. Note how the \% 
+character is escaped. Also note the $\LaTeX$ expression.
+
+```
+---
+title: "SEM/EDS analysis of qm-05000-SampleID"
+author: "J. R. Minter"
+date: "Started: 2016-12-07, Last Modified: 2018-07-04"
+abstract: |
+  The particles were deposited on a Si chip and lightly C coated. The 
+  morphology appeared to be a mixture of small needles and small equiaxial
+  nanoparticles. Clumps seemed to be particles embedded in a film.
+  
+  Analysis of EDS spectra revealed an atomic fraction of $\dfrac{Al}{Al+Zn}$
+  of 3-4\%.
+output:
+  knitr:::html_vignette:
+    css: ../theme/jm-mod-vignette.css
+    number_sections: yes
+    toc: yes
+    bibliography: bibliography.bib
+---
+
+```
+
+Note that one can generate the date and time at document generation time by
+using an R chunk in the YAML header.
+
+by putting the R expression:
+
+    r format(Sys.time(), '%Y-%m-%d')
+    
+in the blank area below (I had to enter this way or it would compile...)
+
+    date: "`    `"
+
+to create the YAML entry...
+
+# YAML for a PDF document.
+
+PDF documents can have some **really complicated** YAML.
+I spent a couple of hours getting this example to work well.
+I don't want **future me** to have to repeat the process...
+
+```
+---
+title: "My title"
+author: "John Minter"
+date: "Started: 2018-07-10, Last modified: 2018-07-11"
+geometry: "left=0.5in,right=0.5in,top=0.5in,bottom=0.5in"
+output:
+  pdf_document:
+    # fig_caption: yes
+    number_sections: yes
+    latex_engine: xelatex
+    fig_width: 5
+    fig_height: 5
+bibliography: inc/viridis.bib
+csl: inc/acs.csl
+fontsize: 12pt
+header-includes:
+  - \usepackage{fontspec}
+  - \usepackage{chngcntr}
+  - \setmainfont[BoldItalicFont={Times New Roman Bold Italic}]{DejaVu Sans}
+  - \counterwithin{figure}{section}
+  - \counterwithin{table}{section}
+---
+```
+followed by this chunk. **Note:** I moved the chunk name int the block
+so it will not execute here...
+
+```
+{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=TRUE,
+  comment = NA,
+  fig.align = "center",
+#  fig.height = 6,
+#  fig.width = 7,
+  message = FALSE,
+  warning = FALSE,
+  error = FALSE)
+```
 
 ## Simple Word to markdown
 
@@ -105,50 +193,6 @@ subscript 2    <sub>2</sub>  \U2082
 superscript 3  <sup>3</sup>  \U0033
 
 ```
-
-# YAML
-
-**YAML** is an abbreviation for "Yet Another Markup Language". 
-R-markdown uses YAML to encode information for later steps in the document
-generation process. Each document begins with a YAML header. 
-This is an example of a YAML header for an analysis. Note how the \% 
-character is escaped. Also note the $\LaTeX$ expression.
-
-```
----
-title: "SEM/EDS analysis of qm-05000-SampleID"
-author: "J. R. Minter"
-date: "Started: 2016-12-07, Last Modified: 2018-07-04"
-abstract: |
-  The particles were deposited on a Si chip and lightly C coated. The 
-  morphology appeared to be a mixture of small needles and small equiaxial
-  nanoparticles. Clumps seemed to be particles embedded in a film.
-  
-  Analysis of EDS spectra revealed an atomic fraction of $\dfrac{Al}{Al+Zn}$
-  of 3-4\%.
-output:
-  knitr:::html_vignette:
-    css: ../theme/jm-mod-vignette.css
-    number_sections: yes
-    toc: yes
-    bibliography: bibliography.bib
----
-
-```
-
-Note that one can generate the date and time at document generation time by
-using an R chunk in the YAML header.
-
-by putting the R expression:
-
-    r format(Sys.time(), '%Y-%m-%d')
-    
-in the blank area below (I had to enter this way or it would compile...)
-
-    date: "`    `"
-
-to create the YAML entry...
-
 
 # Custom themes
 
