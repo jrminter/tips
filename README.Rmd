@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-07-10"
+date: "Started: 2013-07-16, Last modified: 2018-07-11"
 output:
   html_document:
     css: ./theme/jm-gray-vignette.css
@@ -10,24 +10,29 @@ output:
 This repository contains the John Minter's useful tips in Rmarkdown
 format.
 
-> Your closest colaborator is you, six months from now --
-> and you don't respond to email... 
-> - Karl Broman
-
 
 **First**, some quickies: 
 
-1. Getting started with data science
+1. Fun snippets
+
+> Your closest colaborator is you, six months from now    
+> ... and you don't respond to email     
+> - Karl Broman
+
+> DRY (do not repeat yourself) vs WET (waste everyones time) coding    
+> - Peter Baker (UseR 2018)
+
+2. Getting started with data science
 
 - A very helpful article from
 [Datacamp](https://www.datacamp.com/community/tutorials/setup-data-science-environment).
 
-2. Clear the Chrome Cache
+3. Clear the Chrome Cache
 
 - Press "CTRL" + "Shift" + "Delete" keys in Windows or Linux
 - Press "Command" + "Shift" + "Delete"" keys on MacOS.
 
-3. Automatically download all files in a directory
+4. Automatically download all files in a directory
 
 	Let's also exclude all the `index.html` files... 
 
@@ -35,7 +40,7 @@ format.
 wget -r --no-parent --reject "index.html*" http://my/url
 	```
 
-4. I **hate** the new Chome bookmark manager. Happliy we can turn it off. Thanks to [Jeff Kitchen](https://productforums.google.com/forum/#!topic/chrome/TVHpStVuxSc)
+5. I **hate** the new Chome bookmark manager. Happliy we can turn it off. Thanks to [Jeff Kitchen](https://productforums.google.com/forum/#!topic/chrome/TVHpStVuxSc)
 
 	> If you have sync enabled and include your bookmarks then the Disable Enhanced Bookmarks should not be an issue. 
 
