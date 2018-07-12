@@ -1,7 +1,7 @@
 ---
 title: "Microscopy Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-03-27"
+date: "Started: 2013-07-16, Last modified: 2018-07-12"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -10,6 +10,79 @@ output:
 ---
 
 [Back to Index](../README.html)
+
+# Microscopy databases
+
+## Thomas Philips 2018-07-12
+
+Reply to **Alexandre Bastien**
+
+> I'm looking for a laboratory information management system (LIMS) for
+> microscopy. I don't need all the online analysis provided by OMERO,
+> and I'm looking for something simpler. Many of our students 
+> just save their data on our server with **stupid names like test123**.
+> I'm looking for a way to stick a protocol next to every image taken in
+> a clean searchable way. For example, if the image is immunofluo of a
+> bovine embryo, I would want the user to select from a list of
+> protocols, then enter specie, cell type, antibody, wavelength, etc.
+> The actual microscope settings are not so important because they are
+> already stored in the metadata. The best solution would be something
+> open source that we could run locally on our servers.
+
+**Thomas Philips** replied:
+
+> Alexandre - Just saw your posting from last month. You hit on a big
+> pet peeve of my own - **students who use meaningless names for their**
+> **images**. One of the most brilliant decisions I ever made 
+> (possibly the only brilliant decision I ever made in lab management)
+> was to **insist** all my students number every embedded tissue block
+> or whole mount with a number from a consecutive list used by the
+> entire lab.
+>
+> For example, if you embedded a rat ileal biopsy in Lowicryl, it would
+> get the next number in the list (e.g., 8321). These numbers correspond
+> to a Filemaker Database and I can find any embedding or whole mount
+> prep we have done in the last 20 years by searching for any
+> combination of species, fixative, embedding medium, investigator, or
+> antibody used. Each block number entry has a short protocol
+> description. This sounds tedious but when you are entering an
+> experiment you only do this once and then copy to all the rest of the
+entries. It takes minutes at most.
+>
+> Next we have a separate database for every section or whole mount
+> stained and photographed that uses another set of consecutive numbers.
+> Once again I can search for any combination of block number, species,
+> fixative, embedding medium, investigator, or antibody used. If your
+> section was slide 5642, all images taken using that slide would be
+> consecutively numbered 5642.01, 5642.02, etc. 
+>
+> Our confocal images come with metadata but for widefield fluorescence
+> and brightfield, we often add the magnification to the name
+> (e.g., 5642.01 40x). All raw images are stored in one database that
+> is routinely backed up. Students are free to move "working copies"
+> of any image to their own files so they can crop, manipulate or
+> otherwise modify without destroying the integrity of the original.
+>
+> This method prevents anyone from maliciously inserting manipulated
+> images into a data set at a later time. All my primary and secondary
+> antibodies are numbered (e.g., P122 = mouse anti-human LAMP,
+> S232 = goat anti-mouse conjugated to Alexa488).
+> 
+> This means I find any image a student or other lab member has ever
+> generated in my lab in about 30 seconds. I can search the slide
+> database for every slide ever stained with P122 and see which types
+> of tissues it worked on and what the images looked like without ever
+> pouring through my students hard to decipher notebooks. The slide
+> log shows any antigen retrieval protocol they used and what dilution
+> and staining time worked best for the resin they used.
+>
+> **Every student bitches about having to use this numbering system**
+> **at first** but then **falls in love with it when writing their**
+> **thesis** or trying to **repeat someone's earlier use** of a
+> particular antibody.
+>
+> **This is a low cost, highly effective solution.**
+
 
 # Dealing with old computers
 
