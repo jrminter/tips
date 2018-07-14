@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-07-10"
+date: "Started: 2013-07-16, Last modified: 2018-07-14"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -53,6 +53,20 @@ knitr::opts_chunk$set(echo=TRUE,
 
 ```
 
+## How to understand the pipe (`%>%`) operator
+
+The `tidyverse` pulls the pipe (`%>%`) operator from the `magritter`
+package. Understanding it is often difficult at first. The best way
+to read a sequence is to read the operator as **and then**. Note that
+RStudio defines a keyboard shortcut `Ctrl+Shift+M` (Win) and  `CMD+Shift+M`
+(Mac).
+
+```
+bookings %>%
+  filter(price-per_night) %>% 
+  select(room_nights, revie_score) %>% 
+  head(2)
+```
 
 ## Key RStudio Project Settings
 
