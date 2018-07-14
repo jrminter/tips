@@ -68,6 +68,9 @@ bookings %>%
   head(2)
 ```
 
+Pipes are not news. Note that the Linux/Unix shell has been piping
+commands for decades...
+
 ## Key RStudio Project Settings
 
 Tabs and spaces can be a **big** problem. The **tidyverse** and similar
