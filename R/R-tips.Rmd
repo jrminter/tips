@@ -78,7 +78,7 @@ bookings %>%
   head(2)
 ```
 
-Pipes are not news. Note that the Linux/Unix shell has been piping
+Pipes are not new. Note that the Linux/Unix shell has been piping
 commands for decades...
 
 We don't need to create multiple objects and we can read the sequence
