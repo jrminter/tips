@@ -101,7 +101,7 @@ bookings %>%
 [drsimonj](https://drsimonj.svbtle.com/five-simple-tricks-to-improve-your-r-code)
 has some great ways to improve R code. These include
 
-1. More fun to sequence from 1
+### More fun to sequence from 1
 
 - Sequence a vector
 
@@ -116,7 +116,7 @@ seq(x)
 seq(nrow(mtcars))
 ```
 
-2. `vector()` what you `c()`
+### `vector()` what you `c()`
 
 Next time you create an empty vector with `c()`, try to replace it with
 `vector("type", length)`.
@@ -176,7 +176,7 @@ system.time(for(i in seq(n)) x_zeros[i] <- i)
 
 That should be convincing enough!
 
-3. Ditch the which()
+### Ditch the which()
 
 Next time you use `which()`, try to ditch it! People often use `which()`
 to get indices from some boolean condition, and then select values at
@@ -271,7 +271,7 @@ print(system.time(x[which(x > .5)]))
 print(system.time(x[x > .5]))
 ```
  
-4. Factor that factor!
+### Factor that factor!
 
 Ever removed values from a factor and found you're stuck with old levels
 that don't exist anymore? I see all sorts of creative ways to deal with
@@ -324,7 +324,7 @@ publication of this article and mentioned `droplevels()`. Check it out
 if this is a problem for you!
 
  
-5. First you get the `$`, then you get the power
+### First you get the `$`, then you get the power
 
 Next time you want to extract values from a data.frame column where the
 rows meet a condition, specify the column with `$` before the rows with
