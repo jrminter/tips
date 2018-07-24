@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-07-10"
+date: "Started: 2013-07-16, Last modified: 2018-07-24"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -11,6 +11,22 @@ output:
 [Back to Index](../README.html)
 
 # Tips
+
+## tar from the command line
+
+1. Tar a directory
+
+```
+tar -czvf compile.tar.gz compile
+```
+
+2. Uncompress a tarred gzip file
+
+```
+tar -zxvf compile.tar.gz
+
+```
+
 
 ## Speed up time machine
 
