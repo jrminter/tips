@@ -21,15 +21,37 @@ but it did not. Note that this is accompanied by
 `clang6` (clang-6.0.0.pkg).
 
 To remove a package,
-[Slashdot](https://stackoverflow.com/questions/17564543/how-to-uninstall-gfortran-compiler-on-mac-osx-10-7)
-recommends 
+[Slashdot](https://stackoverflow.com/questions/17564543/how-to-uninstall-gfortran-compiler-on-mac-osx-10-7) and
+[thecoatlessprofessor.com](https://thecoatlessprofessor.com/programming/r-compiler-tools-for-rcpp-on-macos/)
+recommend:
 
 ```
-sudo rm -r /usr/local/gfortran /usr/local/bin/gfortran
-sudo rm -r /usr/local/clang6 /usr/local/bin/clang6
+# Delete the clang6 binary
+sudo rm -rf /usr/local/clang6
+
+# Delete the prior version of gfortran installed
+sudo rm -rf /usr/local/gfortran
+sudo rm -rf /usr/local/bin/gfortran
+
+# Remove the install receipts that indicate a package is present
+
+# Remove the gfortran install receipts (run after the above commands)
+sudo rm -rf /private/var/db/receipts/com.gnu.gfortran.bom
+sudo rm -rf /private/var/db/receipts/com.gnu.gfortran.plist
+
+# Remove the clang6 installer receipt
+sudo rm -rf /private/var/db/receipts/com.rbinaries.clang6.bom
+sudo rm -rf /private/var/db/receipts/com.rbinaries.clang6.plist
+
+# Remove the Makevars file
+sudo rm -rf ~/.R/Makevars
 ```
 
 Then reinstall if need be...
+
+However, none of this seems to solve my problem 
+compiling PenGeomJar... The gcc compiler still can't find
+`libgfortran`...
 
 
 
