@@ -1,7 +1,7 @@
 ---
 title: "gfortran"
 author: "J. R. Minter"
-date: "Started: 2013-07-03, Last modified: 2018-07-03"
+date: "Started: 2013-07-03, Last modified: 2018-07-26"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -17,7 +17,8 @@ The current fortran compiler for R on MacOSX is
 `gfortran-6.1`.  There is an older version    
 (`gfortran-5.2-Yosemite.dmg`)
 that I thought may might better for `gmrfilm`,
-but it did not.
+but it did not. Note that this is accompanied by
+`clang6` (clang-6.0.0.pkg).
 
 To remove a package,
 [Slashdot](https://stackoverflow.com/questions/17564543/how-to-uninstall-gfortran-compiler-on-mac-osx-10-7)
@@ -25,7 +26,10 @@ recommends
 
 ```
 sudo rm -r /usr/local/gfortran /usr/local/bin/gfortran
+sudo rm -r /usr/local/clang6 /usr/local/bin/clang6
 ```
+
+Then reinstall if need be...
 
 
 
