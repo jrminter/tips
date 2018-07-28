@@ -21,7 +21,8 @@ Type `cmd` to **location bar**. That's it. It will start a new command
 prompt in current path. This solution was confirmed to work in Windows XP,
 Vista, 7, 8 and 10 (including Creators Update).
 
-**Shortcut** to move focus to the location bar: `Alt-D` in English,
+**Shortcut** to move focus to the location bar: `Alt-D` in English, so the
+quick way is `Alt-D cmd`.
 
 
 
