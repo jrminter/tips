@@ -21,7 +21,7 @@ Type `cmd` to **location bar**. That's it. It will start a new command
 prompt in current path. This solution was confirmed to work in Windows XP,
 Vista, 7, 8 and 10 (including Creators Update).
 
-**Shortcut** to move focus o the location bar: `Alt-D` in English,
+**Shortcut** to move focus to the location bar: `Alt-D` in English,
 
 
 
@@ -44,7 +44,7 @@ and press Enter. If prompted by UAC, then click on Yes.
 3. In the left pane of Event Viewer, double click on Windows Logs to expand it, then right click on Application and click on Find.
 
 ![](./png/ev-application-find.png)
-4. The infoemation is in the `Details area`
+4. The information is in the `Details area`
 
 ![](./png/chkdsk-info.png)
 
@@ -213,7 +213,7 @@ path (the current directory) which is typically helpful
 
 
 
-These codes are availble (prompt/?)
+These codes are available (prompt/?)
 
 ```
   $A   & (Ampersand)
@@ -445,7 +445,7 @@ and
 +---------------------------+------------------------------------------+
 ```
 
-Couldn't get the escape characters to work in rmarkdown...
+Couldn't get the escape characters to work in Rmarkdown...
 
 from [askvg.com](http://www.askvg.com/list-of-environment-variables-in-windows-xp-vista-and-7/)
 
