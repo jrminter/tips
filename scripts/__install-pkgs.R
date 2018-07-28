@@ -168,6 +168,10 @@ install_new_github('rEDS','jrminter')
 install_new_github('rFinFuncs','jrminter')
 install_new_github('rWrapStrataGem','jrminter')
 
+# needed for vignettes for ggstatsplot
+install_new('ordinal')
+install_new('robust')
+devtools::install_github('IndrajeetPatil/ggstatsplot',build_vignettes=TRUE)
 devtools::install_github('jrminter/statshelpR',build_vignettes=TRUE)
 devtools::install_github('jrminter/rAnaLab',build_vignettes=TRUE)
 devtools::install_github('jrminter/statshelpR',build_vignettes=TRUE)
