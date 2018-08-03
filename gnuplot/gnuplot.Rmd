@@ -1,7 +1,7 @@
 ---
 title: "Gnuplot Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-20, Last modified: 2018-07-23"
+date: "Started: 2013-07-20, Last modified: 2018-08-03"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -36,6 +36,26 @@ set terminal aqua
 
 
 # Hacking the .plt file
+
+## Adding a marker line
+
+This came from [stackoverflow](https://stackoverflow.com/questions/4457046/how-do-i-draw-a-vertical-line-in-gnuplot) from user `Throwback1986`.
+
+The syntax to draw a line (an arrow with no head...) is:
+
+```
+set arrow from x1,y1 to x2,y2 nohead lw 2 lc rgb 'red'
+```
+
+The example below is to draw a red vertical line on a `penepma` simulation of amorphous c for the line marker:
+
+```
+set arrow from 0.277,1e-11 to 0.277,1e-8 nohead lw 2 lc rgb 'red'
+```
+
+
+
+
 
 ## Changing (scaling) data for a plot
 
