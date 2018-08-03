@@ -1,7 +1,7 @@
 ---
 title: "R-Markdown Tips"
 author: "J. R. Minter"
-date: "Started: 2016-12-08, Last modified: 2018-07-11"
+date: "Started: 2016-12-08, Last modified: 2018-08-03"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -46,6 +46,37 @@ out.extra='style="background-color: #9ecff7; padding:10px; display: inline-block
 ```{r useOutExtra, out.width="50%", out.extra='style="background-color: #9ecff7; padding:10px; display: inline-block;"'}
 plot(10:1, pch=21, bg="red")
 ```
+
+# Use default css and custom css file in html_vignette()
+
+There was an interesting discussion on how to include both the default css file and a custom css file in a `html_vignette` document in the **rmarkdown** [issues](https://github.com/rstudio/rmarkdown/issues/732) on `github`. J. J. Allaire offered some great options below.
+
+A few options here:
+
+1. Use `!expr` to execute R code to determine the path of the default CSS, e.g.
+
+<tt>
+```
+css:
+  - !expr system.file("rmarkdown/templates/html_vignette/resources/vignette.css", package = "rmarkdown")
+  - styles.css
+
+```
+</tt>
+
+Create an inline CSS chunk at the end of your document with your custom styles, e.g.
+
+<tt>
+
+```{css}
+p {
+color: gray;
+}
+```
+</tt>
+
+Use the include `-> in_header` option to include an HTML file that contains a style element with the styles you want.
+
 
 
 # My typical YAML for an HTML document
