@@ -65,7 +65,7 @@ $HOME/.rstudio-desktop/monitored/lists
 on macOS and in 
 
 ```
-%APPDATA%\Local\RStudio-Desktop\monitored\lists
+%HOME%\AppData\Local\RStudio-Desktop\monitored\lists
 ```
 on Windows(7).  These are **plain text files** and are easily edited.
 
