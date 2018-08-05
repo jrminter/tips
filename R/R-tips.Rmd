@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-07-15"
+date: "Started: 2013-07-16, Last modified: 2018-08-05"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -53,6 +53,22 @@ knitr::opts_chunk$set(echo=TRUE,
   error = FALSE)
 
 ```
+
+## Key RStudio list files
+
+RStudio keeps some very helpful lists. These are in the directory
+
+```
+/Users/jrminter/.rstudio-desktop/monitored/lists
+```
+
+on macOS. These are **plain text files** and are easily edited.
+
+- **project_mru**: text file with links to projects
+- **file_mru**: list of recent files
+- **help_history_links**: list of help queries
+- **user_dictionary**:  list of terms not to flag in spell checker.
+
 
 ## How to understand the pipe (`%>%`) operator
 
