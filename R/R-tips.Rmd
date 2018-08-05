@@ -59,13 +59,13 @@ knitr::opts_chunk$set(echo=TRUE,
 RStudio keeps some very helpful lists. These are in the directory
 
 ```
-/Users/jrminter/.rstudio-desktop/monitored/lists
+$HOME/.rstudio-desktop/monitored/lists
 ```
 
 on macOS and in 
 
 ```
-C:\Users\jrminter\AppData\Local\RStudio-Desktop\monitored\lists
+%APPDATA%\Local\RStudio-Desktop\monitored\lists
 ```
 on Windows(7).  These are **plain text files** and are easily edited.
 
