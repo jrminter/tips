@@ -34,7 +34,7 @@ format.
 
 4. **Delete Specific Cookies in Chrome for Mac OS X**
 
-    You can remove a specific website cookie from Chrome by doing the following:
+    From [osxdaily.com](http://osxdaily.com/2016/07/02/delete-cookies-chrome-browser/): You can remove a specific website cookie from Chrome by doing the following:
 
 - Open Chrome if you have not done so already, then pull down the "Chrome" menu and select "Preferences to open.
 
