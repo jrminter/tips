@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-08-05"
+date: "Started: 2013-07-16, Last modified: 2018-08-07"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -36,6 +36,10 @@ suppressPackageStartupMessages(library("tidyverse"))
 [Back to Index](../README.html)
 
 # Don't forget...
+
+## Pandoc on macosx
+
+The current version of R works besr with `pandoc-2.2.1`. I had that installed with miniconda but had some path issues. I created a copy in  $HOME/bin and put it first in the path in the `.Renviron` file. I have scripts to copy to/from Dropbox.
 
 ## Some great entries for the setup chunk
 
