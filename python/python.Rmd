@@ -1,7 +1,7 @@
 ---
 title: "Python Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-02-08"
+date: "Started: 2013-07-16, Last modified: 2018-08-07"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -10,6 +10,55 @@ output:
 ---
 
 [Back to Index](../README.html)
+
+# Setup using miniconda
+
+`2018-08-07`: Had an issue on my Win 7 box that made me uninstall my
+`Miniconda-64` miniconda environment. I had migrated to this approach
+on Win 7  when installing P. Pinard's `stratgem tools` where I need to
+switch environments. Note that the Avast anti-virus really slows down installs.
+Rebuilt the 64 bit environment. Wanted to record the the steps.
+
+1. Get rid of the old `Miniconda-64` environment. Use the command line
+(see below) This takes a while and gives some notifications that directories
+are not empty. Delete those from the File Manager at the end of the (long)
+process.
+
+    ```
+    rd /s /q C:\Apps\Miniconda-64
+    ```
+
+2. Install the `Miniconda3-latest-Windows-x86_64.exe` base install of
+`miniconda`. I install into `C:\Apps\miniconda`. At the end of the process
+**rename the directory** to `Miniconda-64`. At the end of the process we will
+create a link named `miniconda` in the `C:\Apps` directory using the batch file
+named `setPy64.cmd` which is in the `C:\Apps\local\path` directory.
+
+3. After the installation finishes and the link has been created, try to start
+python from the command path. You should see:
+
+    ```
+    C:\Users\jrminter>python
+    Python 3.6.5 |Anaconda, Inc.| (default, Mar 29 2018, 13:32:41) ... on win32
+    Type "help", "copyright", "credits" or "license" for more information.
+    >>>
+    ```
+
+4. Install the core python packages we will need. Add others to the list
+as needed. Add others to the list (and note the date with a comment below)
+
+    ```
+    conda install numpy scipy matplotlib seaborn jupyter spyder
+    conda install sqlite pandas xlwt scikit-image
+    conda config --add channels conda-forge
+    conda install mahotas
+    conda install sympy
+    ```
+
+
+
+
+
 
 # Hints for key packages
 
@@ -555,7 +604,7 @@ desired folder.
 
 Jupyter must be installed separately. See [jupyter github](https://github.com/jupyter/notebook)
 
-An easy way to update aftet **the big split** from [blog.jupyter.org](http://blog.jupyter.org/2015/08/12/first-release-of-jupyter/)
+An easy way to update after **the big split** from [blog.jupyter.org](http://blog.jupyter.org/2015/08/12/first-release-of-jupyter/)
 
 ```
 pip install --upgrade ipython[all]  
