@@ -55,7 +55,11 @@ as needed. Add others to the list (and note the date with a comment below)
     conda install sympy
     ```
 
+5. To clean up (removing all the `.bz2` files), run
 
+    ```
+    conda clean --all
+    ```
 
 
 
