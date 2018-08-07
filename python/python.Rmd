@@ -53,6 +53,8 @@ as needed. Add others to the list (and note the date with a comment below)
     conda config --add channels conda-forge
     conda install mahotas
     conda install sympy
+    conda install cython
+    pip install iversions
     ```
 
 5. To clean up (removing all the `.bz2` files), run
