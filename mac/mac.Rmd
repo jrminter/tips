@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-07-24"
+date: "Started: 2013-07-16, Last modified: 2018-08-08"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -11,6 +11,14 @@ output:
 [Back to Index](../README.html)
 
 # Tips
+
+## Change all files in a directory to lower case
+
+From [stackoverflow.com](https://stackoverflow.com/questions/7787029/how-do-i-rename-all-files-to-lowercase).
+
+```
+for f in *; do mv "$f" "$f.tmp"; mv "$f.tmp" "`echo $f | tr "[:upper:]" "[:lower:]"`"; done
+```
 
 ## tar from the command line
 
