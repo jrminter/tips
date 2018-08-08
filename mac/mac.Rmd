@@ -20,6 +20,12 @@ From [stackoverflow.com](https://stackoverflow.com/questions/7787029/how-do-i-re
 for f in *; do mv "$f" "$f.tmp"; mv "$f.tmp" "`echo $f | tr "[:upper:]" "[:lower:]"`"; done
 ```
 
+Note: to change file extensions from `.for` to `.f`, use
+
+```
+for file in *.for; do mv "$file" "${file%.for}.f"; done
+```
+
 ## tar from the command line
 
 1. Tar a directory
