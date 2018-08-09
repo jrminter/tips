@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-08-05"
+date: "Started: 2013-07-16, Last modified: 2018-08-09"
 output:
   html_document:
     css: ./theme/jm-gray-vignette.css
@@ -36,19 +36,9 @@ format.
 
     From [osxdaily.com](http://osxdaily.com/2016/07/02/delete-cookies-chrome-browser/): You can remove a specific website cookie from Chrome by doing the following:
 
-- Open Chrome if you have not done so already, then pull down the "Chrome" menu and select "Preferences to open.
+This skips several steps from original article!
 
-```
-    chrome://settings/ as a URL
-```
-
-- Scroll down and choose `down arrow` **Advanced** at bottom.
-
-- Scroll to the `Privacy and security` section and click **right** on `Content setting`...
-
-- Click **right** on `Cookies` section
-
-- Scroll down and click **right** on `See all cookies and site data...`
+- Open `chrome://settings/siteData` as a URL
 
 - Scroll to look at the list or use the `Search` box if you want to quickly find a specific site URL.
 
