@@ -11,6 +11,8 @@
 # 2018-06-27 add github r-libs/styler to install
 # 2018-07-05 added ropenscilabs/icon, emitanaka/anicon, yihui/xaringan
 #            and tpoisot/digitize from github
+# 2018-08-15 Added DescTools package for numeric fomatting.
+#
 
 
 if( Sys.info()['sysname'] == "Windows"){
@@ -52,7 +54,8 @@ install_new('rticles')
 # install_new('rafalib')
 install_new('UsingR')
 
-
+# better number formatting
+install_new('DescTools')
 
 install_new('rtiff')
 install_new('raster')
