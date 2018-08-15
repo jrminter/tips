@@ -1,7 +1,7 @@
 ---
 title: "TeXLive Hints"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-07-09"
+date: "Started: 2013-07-16, Last modified: 2018-08-12"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -15,6 +15,21 @@ These are John Minter's tips for a workflow using TeXlive.
 They were compiled from several web sources.
 
 # Simple tricks
+
+## Spacing in math mode
+
+From [emerson.emory.edu](http://www.emerson.emory.edu/services/latex/latex_119.html):
+
+In a **math environment**, $\LaTeX$ ignores the spaces you type and puts in
+the spacing that it thinks is best. $\LaTeX$ formats mathematics the way
+it's done in mathematics texts. If you want different spacing, $\LaTeX$
+provides the following four commands for use in math mode:
+
+
+1. `\;` - a thick space
+2. `\:` - a medium space
+3. `\,` - a thin space
+4. `\!` - a negative thin space
 
 ## Encoding
 
