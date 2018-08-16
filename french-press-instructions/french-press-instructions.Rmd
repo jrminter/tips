@@ -1,8 +1,11 @@
 ---
 title: "KONA French Press Instructions"
-author: "Idylic Homes. Edited: John Minter"
-date: "Started: 2018-08-15, Last modified: 2018-08-15"
+author: 'Idylic Homes. Edited: John Minter'
+date: 'Started: 2018-08-15, Last modified: 2018-08-15'
 output:
+  pdf_document:
+    toc: yes
+    number_sections: yes
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
     number_sections: yes
