@@ -1,0 +1,53 @@
+---
+title: "KONA French Press Instructions"
+author: "Idylic Homes. Edited: John Minter"
+date: "Started: 2018-08-15, Last modified: 2018-08-15"
+output:
+  knitr:::html_vignette:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+---
+[Back to Index](../README.html)
+
+# Basic Instructions
+
+1. Place pot on a dry, flat, non-slip surface. Hold the handle firmly, then pull the plunger unit straight up and out of the pot.
+
+2. For each 6 oz cup of water, put 1 rounded tablespoon of coarsely grounded coffee into the pot.
+
+3. Slowly pour your hot water into the pot. Completely saturate the grounds and leave a minimum of 1 inch space at the top.
+
+4. Stir the coffee with a plastic spoon to agitate the brew. Please **beware** of using metal spoons that can chip or scratch the glass. Then place the plunger into the pot with the knob handle fully extended up. At this point do not push down on the plunger yet. Leave it to steep for about 4 minutes.
+
+5. Once ready, press the plunger down slowly with minimal pressure for best results (about 30 seconds). If it becomes difficult to press down due to a clogged filter. Remove the plunger. Rinse it under hot running water to remove fine grinds left in between the filter. Stir the brew and place the plunger back in then slowly press down.
+
+6. Please **use caution** while pressing down, excessive pressure too quickly may cause the hot coffee to spurt out.
+
+7. To ensure the quality of your coffee, immediately decant your coffee after brewing. Serve and Enjoy!
+
+# Guidelines for a better product experience.
+
+## Scald Hazard
+- Excessive plunging force can cause scalding hot liquid to shoot out of pot.
+- Do not plunge with force.
+-Turn lid to close spout.
+- Use only coarse ground coffee.
+
+## Safety Instructions
+
+- Not for stove top use.
+- Not for microwave use.
+- Check glass beaker for scratches, cracks or chips.
+- Do not use a pot which is scratched, chipped or cracked.
+- Keep children away while using.
+- Hot water is a hazard to small children!
+- Do not allow children to use this coffee maker.
+
+## Care and Cleaning
+- For best results, rinse filter before each brewing.
+- Unscrew the filter assembly and clean the plunger unit after each use.
+- Glass carafe and BPA-free lid are dishwasher safe.
+
+
+[Back to Index](../README.html)
