@@ -1,7 +1,7 @@
 ---
 title: "John Minter's (L)ubuntu Tips"
 author: "J. R. Minter"
-date: "Started: 2014-11-07, Last modified: 2017-10-28"
+date: "Started: 2014-11-07, Last modified: 2018-08-17"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -36,6 +36,13 @@ Install
 sudo dpkg -i DEB_PACKAGE
 ```
 
+or 
+
+```
+sudo apt install path-to-deb
+```
+
+
 Remove
 
 ```
@@ -49,6 +56,45 @@ Run in terminal
 
 ```
 lxshortcut -o ~/Desktop/myLauncher
+```
+
+# RStudio CRAN mirror
+
+For `bionic beaver` add an entry
+
+```
+deb https://cran.rstudio.com/bin/linux/ubuntu bionic/
+```
+
+to your /etc/apt/sources.list file. By using https://cloud.r-project.org,
+you will be automatically be redirected to a nearby CRAN mirror. See
+https://cran.r-project.org/mirrors.html for the current list of CRAN
+mirrors.
+
+
+You will need the key... The Ubuntu archives on CRAN are signed with the
+key of "Michael Rutter marutter@gmail.com" with key ID E084DAB9. To add
+the key to your system with one command use (thanks to Brett Presnell
+for the tip):
+
+```
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
+```
+
+
+To install the complete R system, use
+
+```
+sudo apt-get update
+sudo apt-get install r-base
+```
+
+Users who need to compile R packages from source [e.g. package
+maintainers, or anyone installing packages with install.packages()]
+should also install the r-base-dev package:
+
+```
+sudo apt-get install r-base-dev
 ```
 
 # Configuring proxy servers
