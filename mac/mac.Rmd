@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-08-15"
+date: "Started: 2013-07-16, Last modified: 2018-08-19"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -11,6 +11,20 @@ output:
 [Back to Index](../README.html)
 
 # Tips
+
+## Removing java
+
+For all
+
+```
+sudo rm -rf /Library/Internet Plug-Ins/JavaAppletPlugin.plugin
+sudo rm -fr /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin
+sudo rm -rf /Library/PreferencePanes/JavaControlPanel.prefPane
+sudo rm -rf ~/Library/Application Support/Java
+sudo rm -rf /Library/Java/JavaVirtualMachines/jdk*
+```
+
+Then install the JDK that you want...
 
 ## Screen print. Works with Parallels on too...
 
