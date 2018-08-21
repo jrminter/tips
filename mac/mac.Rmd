@@ -61,6 +61,42 @@ tar -zxvf compile.tar.gz
 
 ```
 
+## Fixing DTSA-II
+
+Problem on Mac getting to preferences. Below
+are entries for quantitative algorithms from Linux version
+
+```
+1. CorrectionAlgorithm
+
+XPP - Pouchou &amp; Pichoir Simplified (Non-normal)
+Proza96 - Bastin et al. (Non-normal)
+PAP - Pouchou &amp; Pichoir's Full φ(ρz)
+ZAF-Style
+One-to-one (ZA=1.0)
+Armstrong CITZAF - Particle
+
+2. Mass Absorption
+NIST-Chantler 2005
+Heinrich IXCOM 11 (DTSA)
+Heinrich IXCOM
+Bastin & Heijligers (1985, 1988, 1989)
+DTSA CitZAF
+Henke 1982
+Henke (1993)
+Pouchou & Pichoir 1991
+
+3. Brehmstrallung Angular
+Acosta 2002 (Cubic)
+Acosta 2002 (Linear)
+
+4. Ionization Cross-section
+Bote/Salvat-2008
+Casnati 1982
+
+```
+
+
 
 ## Speed up time machine
 
