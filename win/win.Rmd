@@ -15,6 +15,45 @@ Some useful tips for windows
 
 # Backup in safe mode
 
+## Key Comments
+
+**Note**: I could never get this to work on `crunch`. Further research suggests that
+these cannot be easily restored see [this](https://lennox-it.uk/a-complete-guide-to-wbadmin-windows-backups)
+article.
+
+The problem that started all this was that my backups
+would fail with a crypic error (`0x8007002`). I ultimately deleted my backups and
+started a clean backup with just the `L:` drive loaded. 
+
+
+## Another search
+
+This [comment](https://social.technet.microsoft.com/Forums/en-US/6d84b1aa-956c-4216-9e56-e776e4bbf5c4/statuswait2-0x80070002-error-when-using-windows-7-style-backup-in-windows-10?forum=win10itprogeneral) from 2018-02-28 was interesting. Might be worth trying if the current attempt fails...
+
+**The suggestion**:
+
+Please try the following steps and check the result.
+
+1. In `Control Panel`, open `Backup and Restore`.
+
+2. In the `Backup` section, click `Change settings`. In the `Set up backup` dialog box, click `Next`.
+
+3. In the **What do you want to back up** dialog box, click `Let me choose`, and then click `Next`.
+
+4. Expand `Data Files`, expand `<your user name> Libraries`.
+
+5. Expand `Additional` Locations, and then click to clear the `AppData` folder, `Contacts`, and `Searches` check boxes.
+
+6. Expand `Computer`, expand the item for your system drive (for example, expand `Local Disk (C:)`), Expand `Users`, expand `<your user name>`, and then click to select the `AppData`, `Contacts`, and `Searches` check boxes if they exist. Click `Next`, and then click `Save` settings and exit.
+
+7. In `Backup and Restore`, click `Back up now` to perform a new backup. The backup operation should complete without errors.
+
+If the problem still persists, I suppose that there might be something wrong with your system, you may need to perform a clean install.
+
+
+
+## Main tip
+
 From [www.easeus.com](https://www.easeus.com/todo-backup-resource/backup-files-in-safe-mode.html)
 
 Lots of things can cause your system fail to boot. If you can load Windows 10/8/7 successfully, you can try Windows recovery options to restore your system back. If you cannot boot Windows normally, you should handle this situation carefully.
