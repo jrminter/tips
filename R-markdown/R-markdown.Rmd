@@ -1,7 +1,7 @@
 ---
 title: "R-Markdown Tips"
 author: "J. R. Minter"
-date: "Started: 2016-12-08, Last modified: 2018-08-03"
+date: "Started: 2016-12-08, Last modified: 2018-08-23"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -203,6 +203,26 @@ following **environment variable**
 TF_CPP_MIN_LOG_LEVEL=2
 ```
 
+# Splitting an ordered list
+
+Works with a single page/slide or across slides
+
+```
+## Slide
+
+<ol>
+<li> Sed ut perspiciatis unde omnis iste natus error...
+<li> Nemo enim ipsam voluptatem quia voluptas sit...
+</ol>
+
+This is an interrupting block of text...
+
+<ol start=3>
+<li> Neque porro quisquam est, qui dolorem ipsum quia..
+<li> Quis autem vel eum iure reprehenderit qui in ea voluptate...
+</ol>
+
+```
 
 # Key HTML and Unicode characters
 
