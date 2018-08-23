@@ -13,7 +13,11 @@ output:
 
 Some useful tips for windows
 
-# Backup in safe mode
+# Backup fails with `0x8007002`
+
+## If all else fails...
+
+PC recommends [AOMEI Backupper](https://www.aomeitech.com/download.html)...
 
 ## Key Comments
 
@@ -51,8 +55,25 @@ Please try the following steps and check the result.
 If the problem still persists, I suppose that there might be something wrong with your system, you may need to perform a clean install.
 
 
+## Similar advice from 2009-06-11
 
-## Main tip
+From [here](https://social.technet.microsoft.com/Forums/windows/en-US/148b768b-4a25-4c05-a333-447a487d0a44/windows-backup-error-code-0x8100002f?forum=w7itprogeneral).
+
+Looks like the updated locations of your folders are not getting reflected in your libraries. We will investigate on the issue. Meanwhile, as a workaround, please try the following:
+
+
+1. Click on `Change backup settings` from troubleshoot dialog
+2. Expand the `user node` whose libraries are getting reported as skipped.
+3. Deselect the library that is causing the issue.
+4. Expand the `Computer`  node in the treeview and select the redirected location of the folders. 
+5. Save settings.
+
+You should not hit the skipped files issue after this.  Hope this helps.
+
+Thanks,
+Sneha [MSFT]
+
+## Backup in safe mode
 
 From [www.easeus.com](https://www.easeus.com/todo-backup-resource/backup-files-in-safe-mode.html)
 
