@@ -1,7 +1,7 @@
 ---
 title: "Windows Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-08-09"
+date: "Started: 2013-07-16, Last modified: 2018-08-23"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -12,6 +12,35 @@ output:
 [Back to Index](../README.html)
 
 Some useful tips for windows
+
+# Backup in safe mode
+
+From [www.easeus.com](https://www.easeus.com/todo-backup-resource/backup-files-in-safe-mode.html)
+
+Lots of things can cause your system fail to boot. If you can load Windows 10/8/7 successfully, you can try Windows recovery options to restore your system back. If you cannot boot Windows normally, you should handle this situation carefully.
+
+To prevent data loss in the process of restoring the system, you need to backup files in Safe Mode in advance. Generally, when your system is unable to boot Windows normally, you can enter Safe Mode.
+
+However, most of the backup program will not work in Safe Mode. Luckily, no matter you are running Windows 7, Windows 8 or Windows 10, you can always use WBadmin commands to backup your computer data.
+
+Steps to Backup Files in Safe Mode with the Help of Command Prompt
+
+1. Start your computer, and press the F8 key repeatedly before showing the Windows logo.
+
+2. It will lead you to Advanced Boot Options. From there, select Safe Mode with Command Prompt.
+
+![](./png/safe-mode-with-command-prompt.png)
+
+select safe mode with command prompt
+
+3. Within the command prompt, you can enter a WBadmin command to backup your data. For example, if you want to backup all the data saved on C: drive to F: drive, then you can type:
+
+```
+Wbadmin start backup -backuptarget:L: -include:C:
+```
+
+If you can't boot into you cannot even boot into Safe Mode, you can still backup your files without any requirements for Windows system.
+
 
 # File times on Win 7
 
