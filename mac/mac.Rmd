@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-08-22"
+date: "Started: 2013-07-16, Last modified: 2018-08-27"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -11,6 +11,30 @@ output:
 [Back to Index](../README.html)
 
 # Tips
+
+## Add autocomplete to terminal
+
+I adapted this example by [Tim Leland](https://timleland.com/how-to-enable-autocomplete-in-mac-terminal/)
+below. Tim used the `nano` editor; I used the `subl` shortcut to use 
+Sublime Text 3.
+
+1. Type in terminal
+
+    ```
+    subl ~/.inputrc
+    ```
+
+2. Add the lines below and save the file
+
+    ```
+    set completion-ignore-case on
+    set show-all-if-ambiguous on
+    TAB: menu-complete
+    ```
+
+3. Open a new Terminal window or tab to open a new session with autocomplete enabled
+
+4. Type the beginning of a command and hit the tab key
 
 ## Removing java
 
