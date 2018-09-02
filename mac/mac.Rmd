@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-08-27"
+date: "Started: 2013-07-16, Last modified: 2018-09-04"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -11,6 +11,10 @@ output:
 [Back to Index](../README.html)
 
 # Tips
+
+## Toggle the dock
+
+The `CMD+Option+D` command toggles hiding and showing the dock.
 
 ## Add autocomplete to terminal
 
@@ -63,11 +67,23 @@ From [stackoverflow.com](https://stackoverflow.com/questions/7787029/how-do-i-re
 ```
 for f in *; do mv "$f" "$f.tmp"; mv "$f.tmp" "`echo $f | tr "[:upper:]" "[:lower:]"`"; done
 ```
+## Change file extensions 
 
 Note: to change file extensions from `.for` to `.f`, use
 
 ```
 for file in *.for; do mv "$file" "${file%.for}.f"; done
+```
+This tip from
+[stackoverflow.com](https://stackoverflow.com/questions/14887275/changing-file-extensions-for-all-files-in-a-directory-osx)
+was easier. HT `Renaud`.
+
+Install the `ren` (rename) utility. I used this to change file
+extensions
+
+```
+brew install ren
+ren '*.for' '#1.f'
 ```
 
 ## tar from the command line
@@ -263,7 +279,7 @@ this menu supports both **tab completion**
 
 ## Running CalcZAF under Parallels.
 
-1. Before starting the Win 10 VM, use CMD+Option+D to hide the dock.
+1. Before starting the Win 10 VM, use `CMD+Option+D` to hide the dock.
 
 2. Start the Win 10 VM.
 
@@ -273,8 +289,8 @@ green button.
 
 4. Run Standard and Configure and run PENEPMA.
 
-5. When done with the VM, exit FS mode and shut down. Use CMD+Option+D to
-restore the dock.
+5. When done with the VM, exit FS mode and shut down. Use `CMD+Option+D`
+to restore the dock.
 
 ## Startup options
 
