@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-08-27"
+date: "Started: 2013-07-16, Last modified: 2018-09-02"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -63,11 +63,23 @@ From [stackoverflow.com](https://stackoverflow.com/questions/7787029/how-do-i-re
 ```
 for f in *; do mv "$f" "$f.tmp"; mv "$f.tmp" "`echo $f | tr "[:upper:]" "[:lower:]"`"; done
 ```
+## Change file extensions 
 
 Note: to change file extensions from `.for` to `.f`, use
 
 ```
 for file in *.for; do mv "$file" "${file%.for}.f"; done
+```
+This tip from
+[stackoverflow.com](https://stackoverflow.com/questions/14887275/changing-file-extensions-for-all-files-in-a-directory-osx)
+was easier. HT `Renaud`.
+
+Install the `ren` (rename) utility. I used this to change file
+extensions
+
+```
+brew install ren
+ren '*.for' '#1.f'
 ```
 
 ## tar from the command line
