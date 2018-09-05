@@ -1,7 +1,7 @@
 ---
 title: "TeXLive Hints"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-08-12"
+date: "Started: 2013-07-16, Last modified: 2018-09-05"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -512,6 +512,10 @@ on Windows, which has horrible quoting rules.
 
 ```
 tlmgr option location http://mirrors.rit.edu/CTAN/systems/texlive/tlnet/
+```
+
+```
+tlmgr option location  http://ctan.math.washington.edu/tex-archive/systems/texlive/tlnet/
 ```
 
 ## Initial Install
