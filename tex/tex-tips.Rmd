@@ -1,7 +1,7 @@
 ---
 title: "TeXLive Hints"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-09-05"
+date: "Started: 2013-07-16, Last modified: 2018-09-06"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -15,6 +15,19 @@ These are John Minter's tips for a workflow using TeXlive.
 They were compiled from several web sources.
 
 # Simple tricks
+
+## tlmgr complains about gpg key
+
+See [www.preining.info](http://www.preining.info/tlgpg/) for details.
+
+On Windows, one can do a one-time install:
+
+```
+tlmgr --repository http://www.preining.info/tlgpg/ install tlgpg
+```
+
+Note: Avast complains...
+
 
 ## Spacing in math mode
 
