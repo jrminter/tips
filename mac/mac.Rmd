@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-09-04"
+date: "Started: 2013-07-16, Last modified: 2018-09-07"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -15,6 +15,23 @@ output:
 ## Toggle the dock
 
 The `CMD+Option+D` command toggles hiding and showing the dock.
+
+## Change the icon on a file/alias.
+
+I never remember how to do this, so here it is...
+
+1. For both the source file and the file with the icon, right click
+and select `Get Info`.
+
+2. On the Info Window from the file with the icon you want to copy,
+double click on the icon and select `Copy` from the `File` menu.
+
+3. On the Info Window from the file with the icon you want to replace,
+double click on the icon and select `Paste` from the `File` menu.
+
+An example is shown below
+
+![](./png/change-mac-file-icon.png)
 
 ## Add autocomplete to terminal
 
