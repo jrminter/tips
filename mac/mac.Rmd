@@ -33,6 +33,8 @@ An example is shown below
 
 ![](./png/change-mac-file-icon.png)
 
+You can turn a png file into an icon [here](https://iconverticons.com/online/).
+
 ## Add autocomplete to terminal
 
 I adapted this example by [Tim Leland](https://timleland.com/how-to-enable-autocomplete-in-mac-terminal/)
