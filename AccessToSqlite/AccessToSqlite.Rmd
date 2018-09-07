@@ -11,7 +11,7 @@ output:
 
 [Back to Index](../README.html)
 
-Old Access databases are a real pain. One idea iss to convert them to
+Old Access databases are a real pain. One idea is to convert them to
 sqlite. Below is an example from
 [Google Code](https://code.google.com/p/mdb-sqlite/).
 Need to try this for wipe tests...
