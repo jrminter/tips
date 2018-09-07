@@ -84,6 +84,7 @@ Excel/figure/
 
 # french-press-instructions directory
 french-press-instructions/french-press-instructions.html
+french-press-instructions/french-press-instructions.pdf
 
 # ggplot2figure tips directory
 ggplot2figure/.DS_Store
@@ -294,6 +295,13 @@ R-GeoSpatial/R-GeoSpatial.md
 R-GeoSpatial/*.html
 R-GeoSpatial/*.htm
 R-GeoSpatial/Legend*.png
+
+# R-loess directory
+R-lm/.DS_Store
+R-lm/figure/*.*
+R-lm/R-lm.md
+R-lm/*.html
+R-lm/*.htm
 
 # R-loess directory
 R-loess/.DS_Store

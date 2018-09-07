@@ -1,0 +1,106 @@
+---
+title: "R Linear Models"
+author: "John Minter"
+date: "Started: 2018-09-07, Last modified: 2017-09-07"
+output:
+  knitr:::html_vignette:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+---
+
+```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
+# make this an external chunk that can be included in any file
+library(knitr)
+library(ggplot2)
+options(width = 72)
+opts_chunk$set(message = F, error = F, warning = F, comment = NA,
+               fig.align = 'center', dpi = 100, tidy = F,
+               cache.path = '.cache/', fig.path = 'figure/')
+
+options(xtable.type = 'html')
+knit_hooks$set(inline = function(x) {
+  if(is.numeric(x)) {
+    round(x, getOption('digits'))
+  } else {
+    paste(as.character(x), collapse = ', ')
+  }
+})
+knit_hooks$set(plot = knitr:::hook_plot_html)
+```
+
+[Back to Index](../README.html)
+
+
+# Fitting a linear model to DTSA-II simulation data
+
+Load the data
+
+```{r loadDtsaData}
+load('./dat/dt2_c_on_si_7kv.rda')
+print(dt2_c_on_si_7kv)
+```
+
+Set constants
+
+```{r setConstants}
+e0 <-7
+```
+
+Plot the C data
+
+
+```{r plotDTSAcK}
+plt_ti <- sprintf("DTSA-II simulation of C on Si at %g kV", e0)
+plt <- ggplot(dt2_c_on_si_7kv) +
+       geom_point(aes(x = t.C.nm, y = k.C.mu), color='blue', size=2) +
+       geom_smooth(aes(x = t.C.nm, y = k.C.mu), color='red') +
+       xlab(label="C thickness [nm]") +
+       ylab(label="kC") +
+       ggtitle(plt_ti) +
+       theme(axis.text=element_text(size=12),
+             axis.title=element_text(size=12),
+             # center the title
+             plot.title = element_text(hjust = 0.5))
+print(plt)
+```
+
+Plot the Si data
+
+```{r plotDTSAsiK}
+plt_ti <- sprintf("DTSA-II simulation of C on Si at %g kV", e0)
+plt <- ggplot(dt2_c_on_si_7kv) +
+       geom_point(aes(x = t.C.nm, y = k.Si.mu), color='blue', size=2) +
+       geom_smooth(aes(x = t.C.nm, y = k.Si.mu), color='red') +
+       xlab(label="C thickness [nm]") +
+       ylab(label="kSi") +
+       ggtitle(plt_ti) +
+       theme(axis.text=element_text(size=12),
+             axis.title=element_text(size=12),
+             # center the title
+             plot.title = element_text(hjust = 0.5))
+print(plt)
+```
+
+
+These plots look pretty linear. Let's fit linear models with constrained
+intercepts. In the case of the kC, **we force the intercept to be zero.**
+In the case of kSi,
+**we set an offset of 1.0 and set the model to zero intercept**.
+This means **we will add 1.0 to the negative slope** output by
+the linear model. Hat Tip to
+[Michael Bedward](https://stat.ethz.ch/pipermail/r-help/2010-December/262126.html)
+for the correct way to do this in R.
+
+```{r linMod}
+
+lin.mod.k.C  <- lm(k.C.mu  ~ 0 + t.C.nm, data = dt2_c_on_si_7kv)
+lin.mod.k.Si <- lm(k.Si.mu ~ 0 + t.C.nm,
+                   offset=rep(1.0, length(t.C.nm)),
+                   data = dt2_c_on_si_7kv)
+# print(mod$coefficients)
+print(lin.mod.k.C)
+print(lin.mod.k.Si)
+```
+
+[Back to Index](../README.html)
