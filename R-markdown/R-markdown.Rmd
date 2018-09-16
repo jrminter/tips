@@ -1,7 +1,7 @@
 ---
 title: "R-Markdown Tips"
 author: "J. R. Minter"
-date: "Started: 2016-12-08, Last modified: 2018-08-23"
+date: "Started: 2016-12-08, Last modified: 2018-09-16"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -25,7 +25,18 @@ the RStudio Intro to Pandoc
 and for $\LaTeX$ math, the
 [AOPS](http://artofproblemsolving.com/wiki/index.php/LaTeX:Commands) site.
 
-## Some template examples
+## Some helpful template examples
+
+- Lucy McGowan's [dissertation toolkit](https://github.com/LucyMcGowan/dissertation-toolkit)
+github repository. Lucy wrote her disseration using
+[bookdown](https://bookdown.org/yihui/bookdown/) and it is very well
+structured. She has a great
+[blogpost](https://livefreeordichotomize.com/2018/09/14/one-year-to-dissertate/)
+describing her strategy. It has many helpful tips.
+
+- Emi Tanaka's [xaringen ninja theme](https://github.com/emitanaka/ninja-theme)
+that is based on Yihui Xie's [xaringan](https://github.com/yihui/xaringan)
+package.
 
 - The [sorensonimpact](https://github.com/Sorenson-Impact/sorensonimpact)
 package. This inspired my
