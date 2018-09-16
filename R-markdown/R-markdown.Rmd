@@ -120,6 +120,35 @@ output:
 
 ```
 
+and a second header for when I speak at Northgate. My `speak.css` renders
+a nice size to keep me on track...
+
+```
+---
+title: "My Title<br>yyyy-mm-dd"
+# author: "John Minter"
+date: "Started: yyyy-mm-yy, Last updated: yyyy-mm-dd"
+abstract: |
+  This morning we will examine **passage** where...    
+  A second line
+  and some HTML
+  <span style="color:#b30000">**today**</span>?" 
+
+output:
+  html_document:
+    csl: ./inc/american-chemical-society-with-titles-sentence-case-doi.csl
+    css: ./inc/speak.css
+    toc: true
+    toc_depth: 3
+    number_sections: yes
+# bibliography: ./inc/jrm.bib
+---
+
+```
+
+
+
+
 Note that one can generate the date and time at document generation time by
 using an R chunk in the YAML header.
 
