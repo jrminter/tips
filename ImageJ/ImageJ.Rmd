@@ -1,7 +1,7 @@
 ---
 title: "Image-J Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-07-09"
+date: "Started: 2013-07-16, Last modified: 2018-09-16"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -14,6 +14,23 @@ output:
 I have collected these tips both from experience and from a very helpful user community.
 
 # Quick tips
+
+## Menu bar positions
+
+These are in `IJ_Prefs.txt`.
+
+### Mac
+
+Use:
+
+```
+ij.x=86
+ij.y=23
+
+.actionbarIMCF\ toolbar.xloc=660
+.actionbarIMCF\ toolbar.yloc=23
+```
+
 
 ## Fix an error
 
@@ -182,7 +199,18 @@ Check out the [Action Bar](http://imagejdocu.tudor.lu/doku.php?id=plugin:utiliti
 
 # Sources of plugins
 
+## Stowers
+
 [Stowers Research Institute](http://research.stowers.org/imagejplugins/)
+
+Note: This adds a lot to the IJ prefs file. Entries like
+
+```
+.recent.command1=register jay readers jru v1
+```
+
+Reinstall if needed...
+
 
 ## Plugin performance
 
