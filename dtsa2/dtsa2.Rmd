@@ -1,7 +1,7 @@
 ---
 title: "Tips on Using DTSA-II"
 author: "J. R. Minter"
-date: "Started: 2015-05-19, Last modified: 2018-01-20"
+date: "Started: 2015-05-19, Last modified: 2018-09-19"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -339,6 +339,13 @@ On MacOSX, preferences are stored in a `.plist` file...
 ~/Library/Preferences/gov.nist.microanalysis.plist
 ```
 Edit this using XCode.
+
+To force reloading from the cache file see [here](https://nethack.ch/2014/03/30/quick-tip-flush-os-x-mavericks-plist-file-cache/
+), use the following from the terminal
+
+```
+defaults read gov.nist.microanalysis.plist
+```
 
 
 # Getting NISTMonte Monte Carlo packages to work with Iona and Jupiter

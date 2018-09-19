@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-09-07"
+date: "Started: 2013-07-16, Last modified: 2018-09-19"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -229,7 +229,7 @@ Save the file.
 sudo chown root /Library/LaunchDaemons/nothrottle.plist;sudo launchctl load /Library/LaunchDaemons/nothrottle.plist
 ```
 
-4. if you want to thurn this off:
+4. if you want to turn this off:
 
 ```
 sudo launchctl unload -w /Library/LaunchDaemons/nothrottle.plist
