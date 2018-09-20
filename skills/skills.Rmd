@@ -1,7 +1,7 @@
 ---
 title: "Skills"
 author: "J. R. Minter"
-date: "Started: 2016-02-14, Last modified: 2017-10-28"
+date: "Started: 2016-02-14, Last modified: 2018-09-20"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -10,6 +10,60 @@ output:
 ---
 
 [Back to Index](../README.html)
+
+# Ten things I've learned about learning a new skill
+
+From [Katherine Firth](https://researchinsiders.blog/2018/09/20/ten-things-ive-learned-about-learning-a-new-skill/) from the University of Melbourne.
+
+**Summary**
+
+A PhD takes 3+ years to do because we expect it to take you that long to really nail some of the new skills you are learning (and then to keep learning as an early career and mid-career researcher!)
+
+## When you start, you will be really rubbish at the new thing.
+
+This is the thing I found hardest to get my head around–I was used to finding new techniques a gentle learning curve. When I started lifting weights, I could only lift the 1kg dumbbells. I couldn't do a lot of the exercises because my muscles were so weak. I was really rubbish at fitness.
+
+## This is the most important thing
+
+Being terrible at something the first time you try it has zero (ZERO!!!!!) correlation to whether this is a thing you can finally master.
+
+It might mean you need to work a bit harder, stick at it a bit longer, or get a bit more expert advice to get there. But not being 'naturally good' at something doesn't mean you won't be great (or competent) at it in the end. (I can now lift quite heavy weights, and am working towards really heavy weights!)
+
+## Keep the costs of failure small.
+
+Like in a video game, where failing just means playing the game again, keep the stakes low while you are getting better at a skill. Try things out on your own, or with a group of people you trust. That might mean giving yourself time to rehearse with a trusted friend or mentor; or letting yourself sit down with some spare materials and mess up that procedure a few times when the lab is quiet.
+
+## Give yourself permission to try and fail.
+
+Try saying that difficult word out loud. Plant those seedlings you aren't sure are going to make it through the summer. Have a go making that bread dough. Try a generative writing technique.  Have a hack at R. Try to have that difficult conversation.
+
+## Have a couple of goes before you take a break.
+
+Stick at the new task for 25 minutes or a couple of hours. Really give it a good attempt. Try again a few times. Sometimes it just takes trying more than once for it all to 'click' into place. If it doesn't click, don't get discouraged.
+
+## Take a break between attempts.
+
+Trying and failing 24/7 is exhausting and depressing. After having a good go, give yourself a break. Go for lunch, sleep on it, maybe leave it for a few days or a week.
+
+## Don't take too long of a break!
+
+To build up a new skill, you need to repeat it. So come back to it before the week is out and try again. Sometimes your brain or body has worked it out in that time, and you wonder why you found it hard last time. Sometimes it's still hard, and goes on being hard for months or years, but each time will get a tiny bit better.
+
+## Celebrate that you turned up and had a go.
+
+The other day I turned up to yoga class and it was a disaster. I couldn't get into any of the poses, I just flailed all over the mat. But I still left class respecting myself for turning up. (I did have to learn to do this too, and it was hard at first, but I'm getting better at it!)
+
+## Recognise your successes, however small!
+
+Can you do something incrementally better than last time you tried? Has part of the new thing become easier, even as you still struggle with another part? Recognise those things and give yourself a gold star for progress! You don't have to wait to be a world expert to recognise that you are improving.
+
+## Persist.
+
+As I said in point (1), it's taken me years to build up my fitness. It's also taken me years to get my head around high theory, to keep a vegetable garden alive through the Australian summer, to learn how to code, to speak Italian in public, to write a decent book proposal.
+
+
+
+
 
 # Don't outsource your thinking
 
