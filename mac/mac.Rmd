@@ -100,6 +100,13 @@ sudo rm -rf /Library/Java/JavaVirtualMachines/jdk*
 
 Then install the JDK that you want...
 
+Next, make sure you reconfigure Java for R and RStudio
+
+```
+sudo R CMD javareconf
+```
+
+
 ## Screen print. Works with Parallels on too...
 
 - **Shift+Command+3**: take a screenshot of the entire screen, and saves it directly to the clipboard for pasting elsewhere
