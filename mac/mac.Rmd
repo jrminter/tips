@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-09-25"
+date: "Started: 2013-07-16, Last modified: 2018-09-26"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -15,6 +15,33 @@ output:
 ## Toggle the dock
 
 The `CMD+Option+D` command toggles hiding and showing the dock.
+
+## C compilation after upgrade to macOS Mojave
+
+This was a head banger... 
+
+After installing XCode and the Command Line tools, I got errors like
+this:
+
+```
+fatal error: 'stdlib.h' file not found. include <stdlib.h>
+/* Not used by R itself, but widely assumed in packages */
+```
+
+The answer was on [forums.developer.apple.com](https://forums.developer.apple.com/thread/104296#317543).
+
+```
+The Command Line Tools package installs the macOS system headers
+inside the macOS SDK. Software that compiles with the installed
+tools will search for macOS headers at the standard include path:
+
+/Applications/Xcodebeta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.1 4.sdk/usr/include
+For legacy software that looks for the macOS headers in the base system
+under /usr/include, please install the package file located at:
+
+/Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg
+```
+
 
 ## Change the icon on a file/alias.
 
