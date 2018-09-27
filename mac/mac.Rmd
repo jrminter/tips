@@ -1256,8 +1256,14 @@ testdb=# \c testdb;
 [Reports](https://discussions.apple.com/message/23505531#23505531) of battery life issue after upgrade to Mavericks. Note that [Apple](http://www.apple.com/batteries/notebooks.html) has some tips about batteries.
 
 ## Startup items
-### my favorite color for desktop
+
+### my favorite color for desktop - pre Mojave
+
 RGB: 0,34,64
+
+### my favorite color for desktop - Mojave Dark Mode
+
+RGB: 53,53,53
 
 ## global environment variables
 If one has global environment variables to set at
