@@ -1,7 +1,7 @@
 ---
 title: "Tips on Using DTSA-II"
 author: "J. R. Minter"
-date: "Started: 2015-05-19, Last modified: 2018-09-19"
+date: "Started: 2015-05-19, Last modified: 2018-10-02"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -11,7 +11,66 @@ output:
 
 [Back to Index](../README.html)
 
+Note that Nicholas Ritchie has released some helpful videos on
+[YouTube](https://www.youtube.com/channel/UCt4nKyhfFQ8xecHyuTnCvIA).
+He tries to put out a new release yearly and bug-fix releases as
+needed.
+
 # Key tricks
+
+- The mouse wheel zooms in and out on intensity. Can also click and drag
+by the counts on the left side.
+
+- Right mouse button - displays a context sensitive menu with helpful
+tools or options to set. Can also copy status text to the clipboard
+from this menu. Can select how lines are labeled. IUPAC is preferrred
+or element abbreviation for an uncluttered look.
+
+- Copy as bitmap produces a high resolution bitmap. Scaling is a bit
+counterintuative. Lettering size is a function of size on the screen.
+N. Ritchie typically drags window to 800x250 pixels. On the Mac I can't
+get below 270, so I tried 900x300.
+
+- When using the material editor, start with a throw-away name like
+"Unknown" to prevent overwriting something in the database by accident.
+
+- There are two "Composition" values. There is the accepted or standard
+value that we enter through the material editor and the measured 
+composition from spectra.
+
+- Spectra list also has a context-sensitive menu accessed by right click
+
+- Report tab has summary of the experiment. Because it is HTML it is
+searchable using the OS. The Report menu has a "Report Note" button that
+lets you add comments or notes to the report. You can also add the 
+spectrum display to the report.
+
+- The command line is useful for repetitive tasks. The `tabulate()`
+function is helpful. For example, one might seclect a range of values
+and enter
+
+  ```
+  tabulate(selcted())
+  ```
+
+  and then copy the results to the clipboard to go into Excel or
+a Rmarkdown table.
+
+- Entering the detector parameters permits us to simulate
+**dose-correct** spectra. One can also tune the parameters by
+running a series of simulations. The manufacturer's values may
+not be correct. I discovered this with the Oxford detector on the
+Sirion because the solid angle appeared to be lower than claimed.
+
+
+- If the material is in the database (e.g. K240), type the name in the
+element dialog and type control-enter and it will add all the lines.
+
+- The analytical simulation uses XPP - the simplified model of
+Pouchou (Ritchie pronounces as "Pooshoo") and Pichoir
+(Ritchie pronounces as "Poushwar"). My French has always sounded
+awful...
+
 
 ## Using the **Simulation alien** to simulate individual spectrum components.
 
