@@ -18,6 +18,53 @@ This is a work in progress. it also requires
 
 # Capture thoughts for enhancements at the top...
 
+## Limits and clipping
+
+This was explained on 
+[stackoverflow](https://stackoverflow.com/questions/25685185/limit-ggplot2-axes-without-removing-data-outside-limits-zoom).
+
+Start with a simple plot...
+
+```{r testCart1}
+library(ggplot2)
+d <-  data.frame(x=c(1,4,7,2,9,7),
+                 y=c(2,5,4,10,5,3),
+                 grp=c('a','a','b','b','c','c'))
+
+plt <- ggplot(d, aes(x, y, group=grp)) + geom_line()
+print(plt)
+```
+
+Note how this next one is clipped
+
+```{r testCart2}
+
+plt2 <- ggplot(d, aes(x, y, group=grp)) +
+        geom_line() +
+        scale_y_continuous(limits=c(0,7))
+print(plt2)
+```
+
+As is this one...
+
+```{r testCart3}
+
+plt3 <- ggplot(d, aes(x, y, group=grp)) +
+        geom_line() + ylim(0,7)
+print(plt3)
+```
+
+But using `coord_cartesian(ylim=c(0, 7))` fixes it...
+
+```{r testCart4}
+
+plt4 <- ggplot(d, aes(x, y, group=grp)) +
+        geom_line() + 
+        coord_cartesian(ylim=c(0, 7))
+print(plt4)
+```
+
+
 ## Testing ggplot2 version 3
 
 This just came out (2018-07-04). Here is a nice example from
