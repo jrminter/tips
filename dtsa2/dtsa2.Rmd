@@ -21,18 +21,39 @@ needed.
 - The mouse wheel zooms in and out on intensity. Can also click and drag
 by the counts on the left side.
 
-- Right mouse button - displays a context sensitive menu with helpful
+- **Right mouse button** - displays a context sensitive menu with helpful
 tools or options to set. Can also copy status text to the clipboard
 from this menu. Can select how lines are labeled. IUPAC is preferrred
 or element abbreviation for an uncluttered look.
 
-- Copy as bitmap produces a high resolution bitmap. Scaling is a bit
+- **Copy as bitmap** produces a high resolution bitmap. Scaling is a bit
 counterintuative. Lettering size is a function of size on the screen.
 N. Ritchie typically drags window to 800x250 pixels. On the Mac I can't
 get below 270, so I tried 900x300.
 
-- When using the material editor, start with a throw-away name like
+- When using the **material editor**, start with a throw-away name like
 "Unknown" to prevent overwriting something in the database by accident.
+This permits storage and re-use. A good name begins with a letter and
+has only letters and numbers. Do not use spaces or odd characters like
+`+` or `-` because they can be interpreted as a formulas or sum of
+fractions.    
+    
+    We can type `SiO2` and it will parse the formula. Then all we need
+    do is add the density. Be **careful** with capitalization. Only
+    capitalize the forst letter of each element's abbreviation or you
+    will get unexpected results. It can parse the formula for
+    fluoroapatite (`Ca5(PO4)3F`)≥ It will also parse sums of mass
+    fractions....    
+    
+    We can also do oxide fractions like this for eagleXG:
+
+  ```
+  0.6447825*SiO2+0.1702057*Al2O3+0.1051482*B2O3+0.0542376*CaO+0.0128153*MgO+0.0082368*SrO+0.0015215*SnO2+0.0012188*BaO+0.0005078*Fe2O3+0.0004635*Sb2O3+0.0003145*As2O3+0.0002938*ZrO2+0.0002540*TiO2
+  ```
+Type the string above into the empty dialog and press "add". We can then
+add the density (2.36) and change the name to '**EagleXG**' and save the
+results.
+
 
 - There are two "Composition" values. There is the accepted or standard
 value that we enter through the material editor and the measured 
@@ -70,6 +91,42 @@ element dialog and type control-enter and it will add all the lines.
 Pouchou (Ritchie pronounces as "Pooshoo") and Pichoir
 (Ritchie pronounces as "Poushwar"). My French has always sounded
 awful...
+
+- Simulations. Monte Carlo is more flexible. Knowing the density is more
+critical for specimens that are not flat. 
+
+- **Peak shape references**. All quantitative EDS measurements involve
+comparing the intensity of the peak in the unknown to that from a
+standard measured under (or corrected to) the same conditions. This
+process usually involves spectrum fitting. The unknown specimen is fit
+to spectra from the various elements from standard specimens. The 
+composition of the unknown is determined from the results from those
+fits.
+
+    Consider an example of analysis of a complex glass, K-240, where we
+    will focus on the elements Ba and Ti. In the region around 4.5 kVe Ba
+    and Ti have a particularly nasty overlap. A good strategy in 
+    qunatitative analysis is to choose a standard similar in composition
+    to what you expect for the unknown. This minimizes the magnitude of
+    the matrix corrections and reduces the uncertainty of our results.
+    
+    In this case we choose Benitioite. The relative intensity in the
+    region of interest is similar. The K-240 differs in that it has 
+    additional Zr, Mg, and Zn.
+    
+    Benitoite has a problem as a standard for K-240: There is a
+    significant overlap between Ba and Ti near 4.5 keV. To extract the
+    information about Ba and Ti is challenging. We can fit a pure Ti
+    spectrum and a pure Ba spectrum without other interferences in this
+    region to the peak shape of our unknown. We can extract with good
+    precision the intensities from Ba and Ti in this region. We might
+    use a pure Ti sample and a sample of Sanbornite which is Ba silicate
+    and does not contain Ti. We will treat Ti and Sanbornite as peak
+    references. Reference spectra are only required if the standard has
+    interferences.
+    
+    Use the Make Standard Bundle. Specify the material. For Benitoite,
+    see [webmineral.com](http://webmineral.com/data/Benitoite.shtml#.W7Pw2BNKg_V).
 
 
 ## Using the **Simulation alien** to simulate individual spectrum components.
