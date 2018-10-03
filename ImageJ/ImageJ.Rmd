@@ -1,7 +1,7 @@
 ---
 title: "Image-J Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-09-16"
+date: "Started: 2013-07-16, Last modified: 2018-10-03"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
