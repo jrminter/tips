@@ -18,6 +18,8 @@ needed.
 
 # Key tricks
 
+## Notes from Nicholas Ritchie's videos
+
 - **The mouse wheel** zooms in and out on intensity. Can also click and
 drag by the counts on the left side.
 
