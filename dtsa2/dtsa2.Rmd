@@ -1,7 +1,7 @@
 ---
 title: "Tips on Using DTSA-II"
 author: "J. R. Minter"
-date: "Started: 2015-05-19, Last modified: 2018-10-02"
+date: "Started: 2015-05-19, Last modified: 2018-10-03"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -18,20 +18,20 @@ needed.
 
 # Key tricks
 
-- The mouse wheel zooms in and out on intensity. Can also click and drag
-by the counts on the left side.
+- **The mouse wheel** zooms in and out on intensity. Can also click and
+drag by the counts on the left side.
 
 - **Right mouse button** - displays a context sensitive menu with helpful
 tools or options to set. Can also copy status text to the clipboard
-from this menu. Can select how lines are labeled. IUPAC is preferrred
+from this menu. Can select how lines are labeled. IUPAC is preferred
 or element abbreviation for an uncluttered look.
 
 - **Copy as bitmap** produces a high resolution bitmap. Scaling is a bit
-counterintuative. Lettering size is a function of size on the screen.
+counterintuitive. Lettering size is a function of size on the screen.
 N. Ritchie typically drags window to 800x250 pixels. On the Mac I can't
 get below 270, so I tried 900x300.
 
-- When using the **material editor**, start with a throw-away name like
+- **When using the material editor**, start with a throw-away name like
 "Unknown" to prevent overwriting something in the database by accident.
 This permits storage and re-use. A good name begins with a letter and
 has only letters and numbers. Do not use spaces or odd characters like
@@ -40,7 +40,7 @@ fractions.
     
     We can type `SiO2` and it will parse the formula. Then all we need
     do is add the density. Be **careful** with capitalization. Only
-    capitalize the forst letter of each element's abbreviation or you
+    capitalize the first letter of each element's abbreviation or you
     will get unexpected results. It can parse the formula for
     fluoroapatite (`Ca5(PO4)3F`)≥ It will also parse sums of mass
     fractions....    
@@ -55,44 +55,50 @@ add the density (2.36) and change the name to '**EagleXG**' and save the
 results.
 
 
-- There are two "Composition" values. There is the accepted or standard
-value that we enter through the material editor and the measured 
+- **There are two "Composition" values**. There is the accepted or
+standard value that we enter through the material editor and the measured 
 composition from spectra.
 
-- Spectra list also has a context-sensitive menu accessed by right click
+- **Spectra list** also has a context-sensitive menu accessed by right click
 
-- Report tab has summary of the experiment. Because it is HTML it is
-searchable using the OS. The Report menu has a "Report Note" button that
-lets you add comments or notes to the report. You can also add the 
-spectrum display to the report.
+- **The Report tab** has summary of the experiment. Because it is HTML it
+is search-able using the OS. The Report menu has a "Report Note" button
+that lets the user add comments or notes to the report. One can also add the 
+spectrum display to the report. I find it helpful to type the comments in a
+text editor with a spell checker before entering into the report. DTSA's report
+functions are looking more favorable each time I use them. **To do:** Consider
+what best practices would look like in syncing these between computers. It
+also looks like DTSA overwrites the report each time. Too bad because one
+cannot keep it open in an editor with a spell checker and have it correct
+spelling.
 
-- The command line is useful for repetitive tasks. The `tabulate()`
-function is helpful. For example, one might seclect a range of values
+- **The command line** is useful for repetitive tasks. The `tabulate()`
+function is helpful. For example, one might select a range of values
 and enter
 
   ```
-  tabulate(selcted())
+  tabulate(selected())
   ```
 
   and then copy the results to the clipboard to go into Excel or
 a Rmarkdown table.
 
-- Entering the detector parameters permits us to simulate
+- **Entering the detector parameters** permits us to simulate
 **dose-correct** spectra. One can also tune the parameters by
 running a series of simulations. The manufacturer's values may
 not be correct. I discovered this with the Oxford detector on the
 Sirion because the solid angle appeared to be lower than claimed.
 
 
-- If the material is in the database (e.g. K240), type the name in the
+- **If the material is in the database** (e.g. K240), type the name in the
 element dialog and type control-enter and it will add all the lines.
 
-- The analytical simulation uses XPP - the simplified model of
+- **The analytical simulation uses XPP** - the simplified model of
 Pouchou (Ritchie pronounces as "Pooshoo") and Pichoir
 (Ritchie pronounces as "Poushwar"). My French has always sounded
 awful...
 
-- Simulations. Monte Carlo is more flexible. Knowing the density is more
+- **Simulations** Monte Carlo is more flexible. Knowing the density is more
 critical for specimens that are not flat. 
 
 - **Peak shape references**. All quantitative EDS measurements involve
@@ -106,11 +112,11 @@ fits.
     Consider an example of analysis of a complex glass, K-240, where we
     will focus on the elements Ba and Ti. In the region around 4.5 kVe Ba
     and Ti have a particularly nasty overlap. A good strategy in 
-    qunatitative analysis is to choose a standard similar in composition
+    quantitative analysis is to choose a standard similar in composition
     to what you expect for the unknown. This minimizes the magnitude of
     the matrix corrections and reduces the uncertainty of our results.
     
-    In this case we choose Benitioite. The relative intensity in the
+    In this case we choose Benitoite. The relative intensity in the
     region of interest is similar. The K-240 differs in that it has 
     additional Zr, Mg, and Zn.
     
@@ -127,6 +133,32 @@ fits.
     
     Use the Make Standard Bundle. Specify the material. For Benitoite,
     see [webmineral.com](http://webmineral.com/data/Benitoite.shtml#.W7Pw2BNKg_V).
+    
+    We start with this dialog
+    
+    ![](./png/build-std-bundle-standard.png)
+    
+    When we set reference spectrum, we need to **list all the elements** in the
+    spectrum. Only the specified element will be highlighted when we start. We
+    need to supply the rest by checking the box in the dialog.
+    
+    ![](./png/build-std-bundle-reference.png)
+    
+    We really only need to know the elements present in the reference. It is
+    only being used for the **peak shape** information to fit the overlapped
+    peaks in the unknown (and perhaps the standard as in this case).
+    
+    The software is looking for a "sufficient separation" of peaks so that 
+    background regions can be defined. This requires a separation from other
+    peaks of about one full width at half maximum on each side. We need to
+    know the background to get the peak intensity. In DTSA-II's filter fit,
+    this requires this 1 FWHM on each side to make a sufficiently precise
+    measurement of the background. The **Standard Bundler** makes this easier
+    for the user.
+    
+    After working through the K240 example from the Advanced Quant video, it
+    seems that one should generate a standard bundle for each of the standards
+    one will use and use those `.zstd` files for the quantification.
 
 
 ## Using the **Simulation alien** to simulate individual spectrum components.
@@ -166,7 +198,7 @@ These are from Bearden (1967).
 | Symbol  | Description  |
 |:--------|:-------------|
 | \$I\$ | Index |
-| \$ACQ\$ | Acqusition date and time |
+| \$ACQ\$ | Acquisition date and time |
 | \$E0\$ | kV |
 | \$I0\$ | probe current |
 | \$CLIENT\$ | client |
@@ -274,10 +306,10 @@ in Dec.
 From Ted Pella
 
 A standard
-6075    UHV-EL 6 Rectangular Retainer, 9 x 12mm,
+6075    UHV-EL 6 Rectangular Retainer, 9 x 12 mm,
         with 6 reference standards (select from list)  each    685.00  
 or
-6076    UHV-EL 9 Square Retainer, 13 x 12mm,
+6076    UHV-EL 9 Square Retainer, 13 x 12 mm,
         with 9 reference standards (select from list)  each    995.0
 
 1. Faraday Cup, for beam current measurement, is available for all of the
@@ -299,7 +331,8 @@ or
 
 It is important to add a name when one define a name when defining a
 custom material that will be used with the MC3 simulations. Here is an
-example for PET. **Note that the mass fractions are useful for complex materials.**
+example for PET.
+**Note that the mass fractions are useful for complex materials.**
 
 
 ```
@@ -330,7 +363,7 @@ k412.setName("K412")
 ```
 
 
-The final step is **really important** - sometime the simple approach produces unicode characters in output file name generated automatically and these crash. **Simple names are better!!!**
+The final step is **really important** - sometime the simple approach produces Unicode characters in output file name generated automatically and these crash. **Simple names are better!!!**
 
 **Get the mass fractions from the molecular formula the easy way:** 
 I added a function to jmGen.py (v. 0.0.7) that wraps the utility functions in DTSA-II. The prototype is:
@@ -438,7 +471,7 @@ print(out)
 ```
 
 
-# System Admin
+# System Administration
 
 ## Preferences
 
