@@ -1,7 +1,7 @@
 ---
 title: "Windows Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-08-23"
+date: "Started: 2013-07-16, Last modified: 2018-10-09"
 output:
   knitr:::html_vignette:
     css: ../theme/jm-gray-vignette.css
@@ -12,6 +12,21 @@ output:
 [Back to Index](../README.html)
 
 Some useful tips for windows
+
+# Fix multiple reinstall of win10 updates
+
+1. run admin command prompt
+
+```
+    sfc /scannow
+```
+
+2. Check log
+
+```
+    subl  C:\Windows\Logs\CBS\CBS.log
+```
+    
 
 # Backup fails with `0x8007002`
 
