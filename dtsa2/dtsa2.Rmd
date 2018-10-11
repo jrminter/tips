@@ -45,7 +45,7 @@ fractions.
     do is add the density. Be **careful** with capitalization. Only
     capitalize the first letter of each element's abbreviation or you
     will get unexpected results. It can parse the formula for
-    fluoroapatite (`Ca5(PO4)3F`)≥ It will also parse sums of mass
+    fluoroapatite (`Ca5(PO4)3F`). It will also parse sums of mass
     fractions....    
     
     We can also do oxide fractions like this for eagleXG:
