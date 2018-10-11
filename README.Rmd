@@ -1,10 +1,13 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-09-07"
+date: "Started: 2013-07-16, Last modified: 2018-10-11"
 output:
   html_document:
     css: ./theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
 ---
 
 This repository contains the John Minter's useful tips in Rmarkdown
