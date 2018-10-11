@@ -1,12 +1,13 @@
 ---
 title: "How I build up a ggplot2 figure"
 author: "John Muschelli"
-date: "Orig: 2016-02-18, 2016, Entered: 2016-07-07, Last modified: 2017-10-28"
+date: "Orig: 2016-02-18, 2016, Entered: 2016-07-07, Last modified: 2018-10-11"
 output:
-  knitr:::html_vignette:
+  html_document:
     css: ../theme/jm-gray-vignette.css
     number_sections: yes
     toc: yes
+    toc_depth: 3
 ---
 
 ```{r setup, include=FALSE}

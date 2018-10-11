@@ -3,10 +3,11 @@ title: "Carbon film thickness determination"
 author: "John Minter"
 date:  "Started: 2017-06-11, Last modified: 2017-10-28"
 output:
-  knitr:::html_vignette:
+  html_document:
     css: ../theme/jm-gray-vignette.css
     number_sections: yes
     toc: yes
+    toc_depth: 3
 ---
 
 [Back to Index](../README.html)

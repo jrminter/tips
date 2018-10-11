@@ -1,12 +1,13 @@
 ---
 title: "R Matrix Algebra and Linear Algebra"
 author: "J. R. Minter (editor)"
-date: "Started: 2018-06-11, Last modified: 2018-06-11"
+date: "Started: 2018-06-11, Last modified: 2018-10-11"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
     number_sections: yes
-    toc: true
+    toc: yes
+    toc_depth: 3
 ---
 
 [Back to Index](../README.html)

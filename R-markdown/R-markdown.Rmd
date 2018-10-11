@@ -1,12 +1,13 @@
 ---
 title: "R-Markdown Tips"
 author: "J. R. Minter"
-date: "Started: 2016-12-08, Last modified: 2018-09-16"
+date: "Started: 2016-12-08, Last modified: 2018-10-11"
 output:
-  knitr:::html_vignette:
+  html_document:
     css: ../theme/jm-gray-vignette.css
     number_sections: yes
     toc: yes
+    toc_depth: 3
 ---
 
 [Back to Index](../README.html)
@@ -111,11 +112,12 @@ abstract: |
   Analysis of EDS spectra revealed an atomic fraction of $\dfrac{Al}{Al+Zn}$
   of 3-4\%.
 output:
-  knitr:::html_vignette:
-    css: ../theme/jm-mod-vignette.css
+  html_document:
+    css: jm-gray-vignette.css
     number_sections: yes
     toc: yes
     bibliography: bibliography.bib
+    toc_depth: 2
 ---
 
 ```

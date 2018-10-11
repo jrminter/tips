@@ -1,13 +1,13 @@
 ---
 title: "ggplot2 Use Cases"
 author: "J. R. Minter"
-date: "Started: 2016-01-20, Last modified: 2018-10-03"
+date: "Started: 2016-01-20, Last modified: 2018-10-11"
 output:
   html_document:
-    csl: ../inc/american-chemical-society-with-titles-sentence-case-doi.csl
     css: ../theme/jm-gray-vignette.css
-    toc: true
     number_sections: yes
+    toc: yes
+    toc_depth: 3
 bibliography: ../inc/tips.bib
 ---
 

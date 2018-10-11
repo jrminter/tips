@@ -1,12 +1,13 @@
 ---
 title: "Software Development"
 author: "J. R. Minter"
-date: "Started: 2017-11-21, Last modified: 2018-03-12"
+date: "Started: 2017-11-21, Last modified: 2018-10-11"
 output:
-  knitr:::html_vignette:
+  html_document:
     css: ../theme/jm-gray-vignette.css
     number_sections: yes
     toc: yes
+    toc_depth: 3
 ---
 ```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
 # make this an external chunk that can be included in any file

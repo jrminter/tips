@@ -1,12 +1,13 @@
 ---
 title: "Making a histogram with ggplot2"
 author: "The DataCamp Blog"
-date: "Original: 2015-03-14, Entered: 2015-04-04, Last modified: 2017-10-28"
+date: "Original: 2015-03-14, Entered: 2015-04-04, Last modified: 2018-10-11"
 output:
-  knitr:::html_vignette:
+  html_document:
     css: ../theme/jm-gray-vignette.css
     number_sections: yes
     toc: yes
+    toc_depth: 3
 ---
 
 [Back to Index](../README.html)
