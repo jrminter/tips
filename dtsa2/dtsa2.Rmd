@@ -163,7 +163,7 @@ fits.
     seems that one should generate a standard bundle for each of the standards
     one will use and use those `.zstd` files for the quantification.
 
-## Saving spectra as XML
+## Saving and reading spectra as XML
 
 DTSA-II has a function to store and read spectra in `.xml` format
 which stores much more metadata than the `.msa` format. We can do
@@ -182,6 +182,60 @@ Save the file from the command line:
 ```
 s2.toXML("/Users/jrminter/Desktop/Cu-2017-12-14-5eV-ch-2K.xml")
 ```
+
+Read the spectrum from the command line with:
+
+```
+spc = spectrumFromXML("/Users/jrminter/Desktop/simulated-EagleXG.xml")
+spc.display()
+```
+
+## X-ray transitions from the command line
+
+1. Define a transition using the IUPAC name
+
+    ```
+    tra = transition('Si K-L3')
+    ```
+
+2. Print the Siegbahn name
+
+   We print to render the unicode...
+
+    ```
+    print(tra.getSiegbahnName())
+    Si Kα1
+    ```
+    Compare to IUPAC name
+    
+    ```
+    print(tra.getIUPACName())
+    Si K-L3
+    ```
+3. Get the relative weight
+
+    ```
+    tra.getWeight(0)
+    1.0
+    ```
+    
+    Compare to normalized
+    
+    ```
+    tra.getWeight(1)
+    0.6441638752898737
+    ```
+    
+    Now compare to K-L2
+    
+    ```
+    tra = transition('Si K-L2')
+    tra.getWeight(0)
+    0.505
+    print(tra.getSiegbahnName())
+    Si Kα2
+    ```
+    
 
 
 ## Using the **Simulation alien** to simulate individual spectrum components.
