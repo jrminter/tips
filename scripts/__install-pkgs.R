@@ -50,6 +50,8 @@ install_new('knitcitations')
 install_new('pander')
 install_new('rticles')
 
+install_new('binb')
+
 # matrix algebra
 # install_new('rafalib')
 install_new('UsingR')
