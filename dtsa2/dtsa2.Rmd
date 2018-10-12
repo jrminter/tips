@@ -163,6 +163,26 @@ fits.
     seems that one should generate a standard bundle for each of the standards
     one will use and use those `.zstd` files for the quantification.
 
+## Saving spectra as XML
+
+DTSA-II has a function to store and read spectra in `.xml` format
+which stores much more metadata than the `.msa` format. We can do
+this from the command line. After reading in (or simulating) a
+spectrum, set the composition (if appropriate). Then go to the
+command and list the spectra with
+
+```
+ls()
+```
+
+Spectra will be labeled `s1`, `s2`, ... Note the spectrum identifier 
+associated with the spectrum you want to store as an XML file.
+Save the file from the command line:
+
+```
+s2.toXML("/Users/jrminter/Desktop/Cu-2017-12-14-5eV-ch-2K.xml")
+```
+
 
 ## Using the **Simulation alien** to simulate individual spectrum components.
 
