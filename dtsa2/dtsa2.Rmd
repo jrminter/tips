@@ -1,7 +1,7 @@
 ---
 title: "Tips on Using DTSA-II"
 author: "J. R. Minter"
-date: "Started: 2015-05-19, Last modified: 2018-10-11"
+date: "Started: 2015-05-19, Last modified: 2018-10-12"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
