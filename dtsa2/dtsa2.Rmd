@@ -577,6 +577,9 @@ To force reloading from the cache file see [here](https://nethack.ch/2014/03/30/
 defaults read gov.nist.microanalysis.plist
 ```
 
+I added the alias `read-dtsa-plist` to my `.bash_profile` file to
+make this easy.
+
 
 # Getting NISTMonte Monte Carlo packages to work with Iona and Jupiter
 
