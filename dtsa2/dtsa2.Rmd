@@ -552,6 +552,8 @@ print(out)
 
 ## Preferences
 
+### Windows
+
 On Windows, preferences are stored in the registry. The base key is:
 
 ```
@@ -559,7 +561,9 @@ On Windows, preferences are stored in the registry. The base key is:
 ```
 It is always useful to export this as a `.reg` file.
 
-On MacOSX, preferences are stored in a `.plist` file...
+### MacOS
+
+On MacOS, preferences are stored in a `.plist` file...
 
 ```
 ~/Library/Preferences/gov.nist.microanalysis.plist
