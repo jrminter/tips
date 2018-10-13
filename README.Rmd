@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-10-11"
+date: "Started: 2013-07-16, Last modified: 2018-10-12"
 output:
   html_document:
     css: ./theme/jm-gray-vignette.css
@@ -212,7 +212,7 @@ This skips several steps from original article!
 
 [Tidy Data](./tidyData/tidyData.html)
 
-[TV-bluetooth](./tv-bluetooth/tv-bluetooth.html)
+[TV](./TV/Tv.html)
 
 [Ubuntu](./ubuntu/ubuntu.html)
 

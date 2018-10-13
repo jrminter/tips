@@ -423,10 +423,10 @@ tex/tex-tips.html
 tex/figure/
 
 # tv-bluetooth directory
-tv-bluetooth/.DS_Store
-tv-bluetooth/tv-bluetooth.md
-tv-bluetooth/tv-bluetooth.html
-tv-bluetooth/figure/
+TV/.DS_Store
+TV/TV.md
+TV/TV.html
+TV/figure/
 
 # ubuntu tips directory
 ubuntu/.DS_Store
