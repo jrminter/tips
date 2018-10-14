@@ -21,20 +21,28 @@ needed.
 
 ## Notes from Nicholas Ritchie's videos
 
-- **The mouse wheel** zooms in and out on intensity. Can also click and
+### The mouse wheel
+
+**The mouse wheel** zooms in and out on intensity.Can also click and
 drag by the counts on the left side.
 
-- **Right mouse button** - displays a context sensitive menu with helpful
+### Right mouse button menus
+
+**Right mouse button** - displays a context sensitive menu with helpful
 tools or options to set. Can also copy status text to the clipboard
 from this menu. Can select how lines are labeled. IUPAC is preferred
 or element abbreviation for an uncluttered look.
 
-- **Copy as bitmap** produces a high resolution bitmap. Scaling is a bit
+### Copy as bitmap
+
+**Copy as bitmap** produces a high resolution bitmap. Scaling is a bit
 counterintuitive. Lettering size is a function of size on the screen.
 N. Ritchie typically drags window to 800x250 pixels. On the Mac I can't
 get below 270, so I tried 900x300.
 
-- **When using the material editor**, start with a throw-away name like
+### The Material Editor
+
+**When using the material editor**, start with a throw-away name like
 "Unknown" to prevent overwriting something in the database by accident.
 This permits storage and re-use. A good name begins with a letter and
 has only letters and numbers. Do not use spaces or odd characters like
@@ -57,25 +65,43 @@ Type the string above into the empty dialog and press "add". We can then
 add the density (2.36) and change the name to '**EagleXG**' and save the
 results.
 
+I frequently need to be reminded of the material names for the materials
+that I have in the database. Happily, DTSA-II provides the function
+`listMaterials()` from the command line.
 
-- **There are two "Composition" values**. There is the accepted or
+
+### DTSA's two "Composition" values
+
+**There are two "Composition" values**. There is the accepted or
 standard value that we enter through the material editor and the measured 
 composition from spectra.
 
-- **Spectra list** also has a context-sensitive menu accessed by right click
+### Spectrum List functions
 
-- **The Report tab** has summary of the experiment. Because it is HTML it
-is search-able using the OS. The Report menu has a "Report Note" button
-that lets the user add comments or notes to the report. One can also add the 
-spectrum display to the report. I find it helpful to type the comments in a
-text editor with a spell checker before entering into the report. DTSA's report
-functions are looking more favorable each time I use them. **To do:** Consider
+**Spectra list** also has a context-sensitive menu accessed by right click
+
+### Report Tab Functions
+
+**The Report tab** has summary of the experiment. Because it is HTML these
+reports are search-able using the OS.
+
+The Report menu has a "Report Note" button that lets the user add
+comments or notes to the report. One can also add the 
+spectrum display to the report.
+
+I find it helpful to type the comments in a text editor with a spell
+checker before entering into the report. DTSA's report functions are
+looking more favorable each time I use them.
+
+**To do:** Consider
 what best practices would look like in syncing these between computers. It
 also looks like DTSA overwrites the report each time. Too bad because one
 cannot keep it open in an editor with a spell checker and have it correct
 spelling.
 
-- **The command line** is useful for repetitive tasks. The `tabulate()`
+### The command Line
+
+**The command line** is useful for repetitive tasks. The `tabulate()`
 function is helpful. For example, one might select a range of values
 and enter
 
@@ -83,28 +109,39 @@ and enter
   tabulate(selected())
   ```
 
-  and then copy the results to the clipboard to go into Excel or
+and then copy the results to the clipboard to go into Excel or
 a Rmarkdown table.
 
-- **Entering the detector parameters** permits us to simulate
+### Detector Parameters
+
+**Entering the detector parameters** permits us to simulate
 **dose-correct** spectra. One can also tune the parameters by
 running a series of simulations. The manufacturer's values may
 not be correct. I discovered this with the Oxford detector on the
 Sirion because the solid angle appeared to be lower than claimed.
 
 
-- **If the material is in the database** (e.g. K240), type the name in the
+### Element Dialog tips
+
+**If the material is in the database** (e.g. K240), type the name in the
 element dialog and type control-enter and it will add all the lines.
 
-- **The analytical simulation uses XPP** - the simplified model of
+### Analytical Simulations
+
+**The analytical simulation uses XPP** - the simplified model of
 Pouchou (Ritchie pronounces as "Pooshoo") and Pichoir
 (Ritchie pronounces as "Poushwar"). My French has always sounded
 awful...
 
-- **Simulations** Monte Carlo is more flexible. Knowing the density is more
-critical for specimens that are not flat. 
+### Monte Carlo Simulations
 
-- **Peak shape references**. All quantitative EDS measurements involve
+**Monte Carlo Simulations** are more flexible. Knowing the density is
+more critical for specimens that are not flat.
+
+### Peak Shape References
+
+
+All quantitative EDS measurements involve
 comparing the intensity of the peak in the unknown to that from a
 standard measured under (or corrected to) the same conditions. This
 process usually involves spectrum fitting. The unknown specimen is fit
@@ -112,56 +149,58 @@ to spectra from the various elements from standard specimens. The
 composition of the unknown is determined from the results from those
 fits.
 
-    Consider an example of analysis of a complex glass, K-240, where we
-    will focus on the elements Ba and Ti. In the region around 4.5 kVe Ba
-    and Ti have a particularly nasty overlap. A good strategy in 
-    quantitative analysis is to choose a standard similar in composition
-    to what you expect for the unknown. This minimizes the magnitude of
-    the matrix corrections and reduces the uncertainty of our results.
+Consider an example of analysis of a complex glass, K-240, where we
+will focus on the elements Ba and Ti. In the region around 4.5 kVe Ba
+and Ti have a particularly nasty overlap. A good strategy in 
+quantitative analysis is to choose a standard similar in composition
+to what you expect for the unknown. This minimizes the magnitude of
+the matrix corrections and reduces the uncertainty of our results.
     
-    In this case we choose Benitoite. The relative intensity in the
-    region of interest is similar. The K-240 differs in that it has 
-    additional Zr, Mg, and Zn.
+In this case we choose Benitoite. The relative intensity in the
+region of interest is similar. The K-240 differs in that it has 
+additional Zr, Mg, and Zn.
     
-    Benitoite has a problem as a standard for K-240: There is a
-    significant overlap between Ba and Ti near 4.5 keV. To extract the
-    information about Ba and Ti is challenging. We can fit a pure Ti
-    spectrum and a pure Ba spectrum without other interferences in this
-    region to the peak shape of our unknown. We can extract with good
-    precision the intensities from Ba and Ti in this region. We might
-    use a pure Ti sample and a sample of Sanbornite which is Ba silicate
-    and does not contain Ti. We will treat Ti and Sanbornite as peak
-    references. Reference spectra are only required if the standard has
-    interferences.
+Benitoite has a problem as a standard for K-240: There is a
+significant overlap between Ba and Ti near 4.5 keV. To extract the
+information about Ba and Ti is challenging. We can fit a pure Ti
+spectrum and a pure Ba spectrum without other interferences in this
+region to the peak shape of our unknown. We can extract with good
+precision the intensities from Ba and Ti in this region. We might
+use a pure Ti sample and a sample of Sanbornite which is Ba silicate
+and does not contain Ti. We will treat Ti and Sanbornite as peak
+references. Reference spectra are only required if the standard has
+interferences.
+
+### The Make Standard Bundle
+
+Use the Make Standard Bundle. Specify the material. For Benitoite,
+see [webmineral.com](http://webmineral.com/data/Benitoite.shtml#.W7Pw2BNKg_V).
     
-    Use the Make Standard Bundle. Specify the material. For Benitoite,
-    see [webmineral.com](http://webmineral.com/data/Benitoite.shtml#.W7Pw2BNKg_V).
+We start with this dialog
     
-    We start with this dialog
+![](./png/build-std-bundle-standard.png)
     
-    ![](./png/build-std-bundle-standard.png)
+When we set reference spectrum, we need to **list all the elements** in
+the spectrum. Only the specified element will be highlighted when we
+start. We need to supply the rest by checking the box in the dialog.
     
-    When we set reference spectrum, we need to **list all the elements** in the
-    spectrum. Only the specified element will be highlighted when we start. We
-    need to supply the rest by checking the box in the dialog.
+![](./png/build-std-bundle-reference.png)
     
-    ![](./png/build-std-bundle-reference.png)
+We really only need to know the elements present in the reference. It is
+only being used for the **peak shape** information to fit the overlapped
+peaks in the unknown (and perhaps the standard as in this case).
     
-    We really only need to know the elements present in the reference. It is
-    only being used for the **peak shape** information to fit the overlapped
-    peaks in the unknown (and perhaps the standard as in this case).
+The software is looking for a "sufficient separation" of peaks so that 
+background regions can be defined. This requires a separation from other
+peaks of about one full width at half maximum on each side. We need to
+know the background to get the peak intensity. In DTSA-II's filter fit,
+this requires this 1 FWHM on each side to make a sufficiently precise
+measurement of the background. The **Standard Bundler** makes this easier
+for the user.
     
-    The software is looking for a "sufficient separation" of peaks so that 
-    background regions can be defined. This requires a separation from other
-    peaks of about one full width at half maximum on each side. We need to
-    know the background to get the peak intensity. In DTSA-II's filter fit,
-    this requires this 1 FWHM on each side to make a sufficiently precise
-    measurement of the background. The **Standard Bundler** makes this easier
-    for the user.
-    
-    After working through the K240 example from the Advanced Quant video, it
-    seems that one should generate a standard bundle for each of the standards
-    one will use and use those `.zstd` files for the quantification.
+After working through the K240 example from the Advanced Quant video, it
+seems that one should generate a standard bundle for each of the standards
+one will use and use those `.zstd` files for the quantification.
 
 ## Saving and reading spectra as XML
 
@@ -364,7 +403,7 @@ looks like
 
 ## Frequently needed scripts
 
-### In OSImageAnalysis git repository
+### The OSImageAnalysis git repository
 
 **In dtsa2/productionScripts directory:**
 
@@ -372,6 +411,25 @@ looks like
 - DumpMaterials.py and the **restore script** stds.py. Edit this last one to add new materials.
 - listDetCalibrations.py to see what calibrations we have
 - testGetMassFraction.py to aid adding new standards
+
+### The dtsa2Scripts git repository
+
+This repository has many examples
+
+- jmGen.py is in the `jmGen` folder
+
+- jmMC3.py is in the `jmMC3` folder
+
+- The `materials` folder has code to create the materials database
+
+- the `rplScripts` folder has some examples of creating and processing
+data cubes
+
+- The `utility` folder has many test scripts
+
+
+
+
 
 ## A proposed standard
 
