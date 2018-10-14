@@ -1,7 +1,7 @@
 ---
-title: "Proper matrix correction"
+title: "Proper matrix correction in Probe for EPMA"
 author: "John Donovan"
-date: "Started: 2018-10-13, Last Modified: 2018-10-13"
+date: "Started: 2018-10-13, Last Modified: 2018-10-14"
 abstract: |
   Inclusion of unanalyzed elements affects the totals in analyzed
   elements as they are added to the matrix correction of a hydrous
@@ -21,6 +21,150 @@ output:
 
 [Back to Index](../README.html)
 
+# Part 1
+
+**Specifying Unanalyzed Elements For a Proper Matrix Correction**
+
+From [here](https://probesoftware.com/smf/index.php?topic=92.msg7697#msg7697),
+
+This topic is entitled "Specifying Unanalyzed Elements For a Proper Matrix Correction", but it could just as well have been titled "Including unanalyzed elements for proper quantification of analyzed elements".
+
+I recently responded to a question on the JEOL Listserver about how to add the carbonate molecule to a carbonate analysis using the JEOL software. I don't know the JEOL software, but then it was suggested performing the calculation off-line perhaps using Excel.  This is **_not_** a good idea as most of you know, **because the matrix correction will be significantly wrong and the quantification of the analyzed elements will be significantly wrong**.
+
+**If the total of the elements in the matrix correction is significantly under 100%, the matrix correction physics will be significantly wrong in most cases**.  For example carbonates.
+
+Here is an analysis of a standard dolomite where because the software knows that it is a standard, it can automatically specify the unanalyzed elements to get a correct quantification for the elements that were acquired:
+
+```
+St  141 Set   1 Dolomite (Harvard #105064), Results in Elemental Weight Percents
+ 
+ELEM:       Ca      Mn       P      Mg      Fe       C       O
+TYPE:     ANAL    ANAL    ANAL    ANAL    ANAL    SPEC    SPEC
+BGDS:      LIN     LIN     LIN     LIN     LIN
+TIME:    10.00   10.00   10.00   10.00   10.00     ---     ---
+BEAM:    30.01   30.01   30.01   30.01   30.01     ---     ---
+
+ELEM:       Ca      Mn       P      Mg      Fe       C       O   SUM  
+    43  21.796    .081   -.040  13.417    .145  12.986  52.021 100.406
+    44  21.698    .036    .025  13.332    .145  12.986  52.021 100.243
+    45  21.876    .105    .024  13.396    .168  12.986  52.021 100.576
+    46  22.000    .068   -.014  13.224    .145  12.986  52.021 100.430
+
+AVER:   21.843    .073   -.001  13.342    .151  12.986  52.021 100.414
+SDEV:     .128    .029    .032    .087    .011    .000    .000    .136
+SERR:     .064    .014    .016    .043    .006    .000    .000
+%RSD:      .58   39.60-2300.07     .65    7.43     .00     .00
+
+PUBL:   21.841    .015    n.a.  13.195    .062  12.986  52.021 100.120
+%VAR:      .01  383.93     ---    1.12  143.23     .00     .00
+DIFF:     .001    .058     ---    .147    .089    .000    .000
+STDS:      138     140     285     139     145     ---     ---
+
+STKF:    .3789   .3969   .1600   .1957   .4258     ---     ---
+STCT:   128.18  134.89   56.49   65.78  142.56     ---     ---
+
+UNKF:    .2030   .0006   .0000   .0853   .0012     ---     ---
+UNCT:    68.66     .20     .00   28.69     .42     ---     ---
+UNBG:      .14     .77    1.00     .06     .49     ---     ---
+
+ZCOR:   1.0763  1.2369  1.2287  1.5634  1.2161     ---     ---
+KRAW:    .5356   .0015  -.0001   .4362   .0029     ---     ---
+PKBG:   484.48    1.27    1.00  473.26    1.85     ---     ---
+```
+
+Note that carbon and oxygen were automatically loaded from the standard database into Probe for EPMA, because the software knows that it is a standard.  But what if this was an unknown carbonate?  Here is the same material (dolomite standard), but this time acquired as an unknown:
+
+```
+Un    6 Dolomite (Harvard #105064), Results in Elemental Weight Percents
+ 
+ELEM:       Ca      Mn       P      Mg      Fe       C
+TYPE:     ANAL    ANAL    ANAL    ANAL    ANAL    SPEC
+BGDS:      LIN     LIN     LIN     LIN     LIN
+TIME:    10.00   10.00   10.00   10.00   10.00     ---
+BEAM:    29.99   29.99   29.99   29.99   29.99     ---
+
+ELEM:       Ca      Mn       P      Mg      Fe       C   SUM  
+    47  21.220    .033   -.006  11.758    .135    .000  33.140
+    48  21.136    .021    .010  11.939    .150    .000  33.258
+    49  21.296    .055    .013  12.068    .164    .000  33.596
+    50  21.292    .080    .067  12.059    .128    .000  33.626
+    51  21.237    .066    .026  11.925    .117    .000  33.371
+    52  21.278    .090    .017  11.796    .156    .000  33.337
+    53  20.925    .121    .084  11.887    .161    .000  33.178
+
+AVER:   21.198    .067    .030  11.919    .145    .000  33.358
+SDEV:     .132    .034    .033    .119    .018    .000    .191
+SERR:     .050    .013    .012    .045    .007    .000
+%RSD:      .62   51.24  108.72    1.00   12.32     .00
+STDS:      138     140     285     139     145     ---
+
+STKF:    .3789   .3969   .1600   .1957   .4258     ---
+STCT:   128.18  134.89   56.49   65.78  142.56     ---
+
+UNKF:    .2047   .0006   .0002   .0852   .0012     ---
+UNCT:    69.26     .19     .08   28.63     .41     ---
+UNBG:      .13     .78     .97     .05     .51     ---
+
+ZCOR:   1.0354  1.2003  1.2679  1.3995  1.1694     ---
+KRAW:    .5403   .0014   .0015   .4353   .0029     ---
+PKBG:   529.78    1.25    1.09  606.24    1.81     ---
+```
+
+**First note the very low total (about 33 wt.%)**. Because the software does not know that this is a carbonate, it cannot automatically specify the unanalyzed carbon and oxygen. And note that although Ca (Ka) isn't so affected (21.2 wt.% in the unknown vs. 21.8 wt.% in the standard), the Mg (Ka) is very much affected (11.9 wt.% in the unknown vs. 13.3 wt.% in the standard!).
+
+**Observe the differences in the magnitude of the matrix corrections for Ca (Ka) and Mg (Ka), in the line labeled ZCOR, and you will understand why.**
+
+So how to add in the missing carbonate molecule?  For the JEOL software Pete McSwiggen's suggestion is good because I assume that the JEOL software is including the specified unanalyzed elements in the matrix correction.
+
+In Probe for EPMA one can do the same thing by first adding carbon as a unanalyzed element in the Elements/Cations dialog, then simply checking the Calculate with Stoichiometric Oxygen option, and finally specify 0.333 atoms of carbon per oxygen molecule as seen here:
+
+![](./inc/stoichiometry.png)
+
+Once that is done, the analysis proceeds as follows:
+
+```
+Un    6 Dolomite (Harvard #105064), Results in Elemental Weight Percents
+ 
+ELEM:       Ca      Mn       P      Mg      Fe       C       O
+TYPE:     ANAL    ANAL    ANAL    ANAL    ANAL    STOI    CALC
+BGDS:      LIN     LIN     LIN     LIN     LIN
+TIME:    10.00   10.00   10.00   10.00   10.00     ---     ---
+BEAM:    29.99   29.99   29.99   29.99   29.99     ---     ---
+
+ELEM:       Ca      Mn       P      Mg      Fe       C       O   SUM  
+    47  22.060    .034   -.006  13.130    .141  12.959  52.019 100.336
+    48  21.965    .022    .010  13.349    .156  12.955  52.136 100.594
+    49  22.130    .057    .012  13.486    .171  12.925  52.228 101.008
+    50  22.123    .082    .065  13.482    .133  12.929  52.298 101.113
+    51  22.071    .068    .025  13.327    .122  12.945  52.160 100.719
+    52  22.122    .092    .016  13.162    .162  12.942  52.071 100.567
+    53  21.748    .125    .081  13.286    .167  12.970  52.172 100.549
+
+AVER:   22.031    .069    .029  13.318    .150  12.946  52.155 100.698
+SDEV:     .137    .035    .032    .140    .019    .016    .093    .274
+SERR:     .052    .013    .012    .053    .007    .006    .035
+%RSD:      .62   51.26  108.66    1.05   12.33     .13     .18
+STDS:      138     140     285     139     145     ---     ---
+
+STKF:    .3789   .3969   .1600   .1957   .4258     ---     ---
+STCT:   128.18  134.89   56.49   65.78  142.56     ---     ---
+
+UNKF:    .2047   .0006   .0002   .0852   .0012     ---     ---
+UNCT:    69.26     .19     .08   28.63     .41     ---     ---
+UNBG:      .13     .78     .97     .05     .51     ---     ---
+
+ZCOR:   1.0761  1.2369  1.2276  1.5637  1.2160     ---     ---
+KRAW:    .5403   .0014   .0015   .4353   .0029     ---     ---
+PKBG:   529.78    1.25    1.09  606.24    1.81     ---     ---
+```
+
+**Note that now the concentrations and matrix corrections for Ca and Mg are correct.** 
+
+By the way, the same calculation options will work for any carbonate such as calcite, magnesite, siderite, etc.
+
+
+# Part 2
+
 From [here](https://probesoftware.com/smf/index.php?topic=92.msg7701#msg7701).
 
 
@@ -30,7 +174,7 @@ correction of a hydrous glass. For a publication reference see
 [this](https://link.springer.com/article/10.1007%2Fs00445-005-0003-z) paper.
 
 In this example I selected an experimental glass from Withers, which nominally contains 4.9 wt.% H~2~O, but FTIR showed 5.06 wt%.
-Here is the analysis of this glass as an unknown with nothing but the analyzed elements:
+**Here is the analysis of this glass as an unknown with nothing but the analyzed elements**:
 
 ```
 Un   17 Withers-N5, Results in Elemental Weight Percents
@@ -74,7 +218,7 @@ PKBG:    18.14   52.35    6.39    1.00    1.77    3.03   18.90    1.61    3.79  
 INT%:     ----    ----    ----   -3.80    ----    -.02    ----    ----    ----    ----    ----    ----     ---     ---     ---
 ```
 
-If we calculate the above elemental analysis as oxide formulas (but still without oxygen included in the matrix correction), we get
+If we calculate the above elemental analysis as oxide formulas (**but still without oxygen included in the matrix correction**), we get
 the following results:
 
 ```
@@ -101,7 +245,7 @@ SERR:     .012    .018    .009    .012    .004    .010    .011    .006    .007  
 STDS:      336     374     285     835     835      22     395      25     358     162     336      12     ---     ---     ---
 ```
 
-Note that total is much better, but the SiO~2~ concentration is only 65.8 wt.%.  Now we will recalculate the glass but this time include
+Note that total is much better, **but the SiO~2~ concentration is only 65.8 wt.%**.  Now we will recalculate the glass but this time include
 stoichiometric oxygen in the matrix correction:
 
 ```
@@ -128,13 +272,10 @@ SERR:     .016    .017    .009    .012    .008    .010    .011    .006    .006  
 STDS:      336     374     285     835     835      22     395      25     358     162     336      12     ---     ---     ---
 ```
 
-Please note that by including the stoichiometric oxygen in the matrix correction the SiO~2~ concentration went from 65.8 wt.% to 70.09 wt.%.
-This is because oxygen absorbs Si Ka more than Si.  So without stoichiomtric oxygen in the matrix correction, the matrix is anomalously
-high in Si, which again, does not absorb Si Ka as much as oxygen, so the matrix correction for Si is underestimated.
+**Please note that by including the stoichiometric oxygen in the matrix correction the SiO~2~ concentration went from 65.8 wt.% to 70.09 wt.%**.
+This is because **oxygen absorbs Si Ka more than Si**. So **without stoichiomtric oxygen in the matrix correction, the matrix is anomalously high in Si, which again, does not absorb Si Ka as much as oxygen, so the matrix correction for Si is underestimated**.
 
-But we still have a total of only 91.1 wt.%, so one might be forgiven to estimate the water by difference as 8.9 wt.%.  But one would be
-wrong because we haven't provided a correction for the ion migration of Na and the effect on the other elements. The TDI correction for
-Na in this glass is around 100% as seen here in this plot of log intensity vs. time:
+But we still have a total of only 91.1 wt.%, so one might be forgiven to estimate the water by difference as 8.9 wt.%. **But one would be wrong because we haven't provided a correction for the ion migration of Na and the effect on the other elements**. The **TDI correction** for Na in this glass is around 100% as seen here in this plot of log intensity vs. time:
 
 ![](./inc/tdi-cor.png)
 
@@ -164,11 +305,9 @@ SERR:     .083    .029    .009    .012    .007    .010    .011    .006    .006  
 STDS:      336     374     285     835     835      22     395      25     358     162     336      12     ---     ---     ---
 ```
 
-Note that the Na concentration went from around 2.2 wt% to 4.4 wt.%, but the Si dropped slightly because the TDI effect on Si is usually
-an increase in intensity as the Na intensity drops due to ion migration under the electron beam.
+**Note that the Na concentration went from around 2.2 wt% to 4.4 wt.%**, but the **Si dropped slightly because the TDI effect on Si is usually an increase in intensity as the Na intensity drops due to ion migration under the electron beam**.
 
-Now based on our totals of around 93.4 wt.%, our water by difference estimate would be around 6.6 wt.%, but that isn't very close to the
-FTIR H~2~O measurement of 5.06 wt.%. So what's going on?  Well we have not yet included the water by difference into the matrix correction.
+Now based on our totals of around 93.4 wt.%, **our water by difference estimate would be around 6.6 wt.%, but that isn't very close to the FTIR H~2~O measurement of 5.06 wt.%**. So what's going on?  Well **we have not yet included the water by difference into the matrix correction**.
 
 Once we do that we obtain these results:
 
@@ -196,11 +335,8 @@ SERR:     .083    .029    .009    .012    .008    .010    .011    .006    .006  
 STDS:      336     374     285     835     835      22     395      25     358     162     336      12     ---     ---     ---
 ```
 
-Note that our SiO~2~ concentration went up slightly because we added additional oxygen (from H~2~O) into the matrix calculation, and so now our
-water by difference is around 5.7 wt.% which is quite close to our FTIR value of 5.06 wt.%.  If we had included other trace elements in the
-analysis, we would get even closer.
+**Note that our SiO~2~ concentration went up slightly because we added additional oxygen (from H~2~O) into the matrix calculation**, and so now our water by difference is around 5.7 wt.% which is quite close to our FTIR value of 5.06 wt.%.  **If we had included other trace elements in the analysis, we would get even closer**.
 
-So, the lesson is, always include all the unanalyzed elements into the matrix correction, or you will have significant errors in the analyzed
-elements.  Excel is great, but it doesn't know physics!  Please let me know if anyone has any questions.
+**So, the lesson is, always include all the unanalyzed elements into the matrix correction, or you will have significant errors in the analyzed elements**.  **Excel is great, but it doesn't know physics!**  Please let me know if anyone has any questions.
 
 [Back to Index](../README.html)
