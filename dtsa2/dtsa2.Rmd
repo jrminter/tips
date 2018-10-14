@@ -1,7 +1,7 @@
 ---
 title: "Tips on Using DTSA-II"
 author: "J. R. Minter"
-date: "Started: 2015-05-19, Last modified: 2018-10-12"
+date: "Started: 2015-05-19, Last modified: 2018-10-14"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -469,25 +469,9 @@ which returns a dictionary with the mass fractions:
 
 ## File naming tricks
 
-For simulations, I often name files with a **compound-kV-nTraj** type syntax. Writing a helper function can minimize repetition
+For simulations, I often name files with a **compound-kV-nTraj** type syntax. Writing a helper function can minimize repetition.
+I added getSpecPath(baseName, baseDir, e0, nTraj) to jmMC3.py
 
-
-```
-def getSpecPath(baseName, baseDir, e0, nTraj):
-    sName = "%s-%g-kV-%g-Traj" % (baseName, e0, nTraj)
-    sPath = "%s/%s.msa" % (baseDir, sName)
-    return sPath
-```
-
-I should also wrap a sequence like this:
-
-```
-spcFile = getSpecPath("Al", outDir, e0, nTraj)
-al = wrap(readSpectrum(spcFile))
-sp = spc.getProperties()
-sp.setDetector(det)
-al.display()
-```
 
 Here is my work-in-progress for a quantification script
 
