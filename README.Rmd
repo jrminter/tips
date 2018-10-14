@@ -86,6 +86,8 @@ This skips several steps from original article!
 
 [EDAX](./EDAX/EDAX.html)
 
+[EPMA Matrix Correction](./epma-matrix-corr/epma-matrix-corr.html)
+
 [Excel](./Excel/Excel.html)
 
 [Fitness](./fitness/fitness.html)
