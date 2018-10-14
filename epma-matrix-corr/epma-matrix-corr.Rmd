@@ -21,16 +21,13 @@ output:
 
 [Back to Index](../README.html)
 
-Probe for EPMA / Re: Specifying Unanalyzed Elements For a Proper Matrix Correction
-
-From: https://probesoftware.com/smf/index.php?topic=92.msg7701#msg7701
+From [here](https://probesoftware.com/smf/index.php?topic=92.msg7701#msg7701).
 
 
 Since I mentioned the effect of not including water by difference as it affects the matrix correction in my JEOL Listserver post,
 I will "show my work" as to how the various unanalyzed elements affects the analyzed elements, as they are added to the matrix
-correction of a hydrous glass. For a publication reference see this paper:
-
-https://link.springer.com/article/10.1007%2Fs00445-005-0003-z
+correction of a hydrous glass. For a publication reference see
+[this](https://link.springer.com/article/10.1007%2Fs00445-005-0003-z) paper.
 
 In this example I selected an experimental glass from Withers, which nominally contains 4.9 wt.% H~2~O, but FTIR showed 5.06 wt%.
 Here is the analysis of this glass as an unknown with nothing but the analyzed elements:
