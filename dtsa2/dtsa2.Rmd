@@ -105,12 +105,57 @@ spelling.
 function is helpful. For example, one might select a range of values
 and enter
 
-  ```
-  tabulate(selected())
-  ```
+```
+tabulate(selected())
+```
 
 and then copy the results to the clipboard to go into Excel or
 a Rmarkdown table.
+
+One can also get information about materials.
+The two key functions are:
+
+1. `listMaterials()` and 
+2. `describe()`.
+
+Here is an example:
+
+```
+1> listMaterials()
+[AZO2, AZO5, AdmiraltyBrass, Ag, Al, Al2O3, AlFe, AuPd, Benitoite, C, C2F4, Ca(OH)2,
+ CaCO3, CaCl2, Co, Cu, Cu standard, CuAl2, EDOT, EagleXG, Epon828, Fe, Fe standard,
+ Fe2O3, Fe3O4, FeNi, Henoc, K240, K411, K412, K496, KBr, KCl, Kapton, Mg, Mn,
+ Mn standard, NaCl, Ni, Orthoclase, PAN, PET, PMMA, Pd, SRM484, SS309, SS316,
+ Sanborite, Si, SiO, SiO2, Ta, TiB2, TiO2, V2O5, Zn, Zn standard, ZnO, nbsNiFe]
+```
+
+followed by
+
+```
+2> describe("AdmiraltyBrass")
+AdmiraltyBrass
+Density 8 g/cm³
+Element Z          Mass Frac  Norm Mass Atom Frac
+Copper 29          0.69       0.69      0.699224
+Zinc   30          0.3        0.3       0.295351
+Tin    50          0.01       0.01      0.0054246
+--     29.51       1          1.0       1.0
+```
+
+and
+
+```
+3> describe("AZO5")
+AZO5
+Density    6 g/cm³
+Element    Z        Mass Frac Norm Mass Atom Frac
+Oxygen     8        0.20128   0.201282  0.499999
+Aluminum  13        0.01697   0.0169702 0.024997
+Zinc      30        0.78174   0.781748  0.475004
+--        25.2831   0.99999   1.0       1.0
+35>
+```
+
 
 ### Detector Parameters
 
