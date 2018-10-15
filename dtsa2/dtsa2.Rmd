@@ -156,6 +156,24 @@ Zinc      30        0.78174   0.781748  0.475004
 35>
 ```
 
+For `tabulate(selected())` I tried an experiment where I simulated a
+SiO~2~ standard at 4 kV with 12,000 trajectories. I then simulated
+two SiO "unknowns" : The first with 3,000 trajectories and the second
+with 12,000 trajectories. I then used the `Quantification Alien` to 
+measure the composition of each spectrum. I selected the two unknown
+spectra from the Spectrum window and went to the command line and ran
+
+```
+1> tabulate(selected())
+Name                    O       Si      Total
+sim-SiO-4kV-3k-traj     36.7215 63.9725 100.6939
+sim-SiO-4kV-12k-traj    36.7516 63.8028 100.5544
+Average                 36.7365 63.8876
+```
+
+This might make an interesting problem for scripting spectra with more
+noise...
+
 
 ### Detector Parameters
 
