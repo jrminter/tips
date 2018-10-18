@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-10-11"
+date: "Started: 2013-07-16, Last modified: 2018-10-18"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -12,6 +12,12 @@ output:
 [Back to Index](../README.html)
 
 # Tips
+
+## Make ~/Library visible
+
+From Herb Schulz on TeXLive mailing list:
+
+> One more thing... You can easily make `~/Library` permanently visible in your `HOME` folder. Open your `HOME` folder (`Shft-Cmd-H` in Finder). Then open` View->Show View Options` (`Cmd-J`). Check the `Show Library Folder` box and then close the View Options window. That Library folder is now permanently visible.
 
 ## Toggle the dock
 
