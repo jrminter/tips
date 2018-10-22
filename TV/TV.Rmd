@@ -1,7 +1,7 @@
 ---
-title: "TV-Bluetooth Connection"
+title: "TV"
 author: "J. R. Minter"
-date: "Started: 2013-07-01, Last modified: 2018-10-11"
+date: "Started: 2018-10-01, Last modified: 2018-10-12"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -12,7 +12,15 @@ output:
 
 [Back to Index](../README.html)
 
-# Operation
+
+# Programs I like
+
+1. **Magnum PI** - Monday 9 p.m. CBS (Channel 8)
+
+2. **Bull** - Monday 10 p.m. (Channel 8)
+
+
+# Blue Tooth
 
 ## Blue tooth transmitter/receiver
 

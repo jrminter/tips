@@ -1,7 +1,7 @@
 ---
 title: "Git Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-10-11"
+date: "Started: 2013-07-16, Last modified: 2018-10-22"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -17,9 +17,38 @@ compiled from several web sources.
 
 # Quick tips
 
+## Rendering Rmarkdown on Github
+
+Yihui Xie made a convincing argument for not rendering .Rmd files on github
+as plain markdown. He explains the reasoning
+[here](http://yihui.name/en/2018/10/rmd-github/). 
+
+He recommends installing the
+[Stylebot](https://chrome.google.com/webstore/detail/stylebot/oiaejidbmkiecgbjeifoejpgmdaleoha)
+add in. He also recommends adding the code below to the global stylesheet
+to wrap Rmd code
+
+```
+.type-rmarkdown .blob-code-inner {
+  white-space: pre-wrap;
+}
+```
+
+Current version
+
+1. Click on "css" button on upper right
+2. Select `Styles` from left menu.
+3. Select `Edit Global Stylesheet`
+4. Paste the code from above.
+5. Press `Save`
+6. Close the window.
+7. Reload your github page with .Rmd file to check
+
+
+
 ## Branches
 
-1. Create a new branch on local repo
+1. Create a new branch on local repository
 
 ```
 git checkout -b table-names
@@ -130,7 +159,7 @@ git config --global alias.lol "log --oneline --graph --all --decorate"
 git ls-files --others --ignored --exclude-standard
 ```
 
-## Note this procedure after changing line endings in a repo
+## Note this procedure after changing line endings in a repository
 
 1. Save your current files in Git, so that none of your work is lost.
 
@@ -177,7 +206,7 @@ My new favorite command...
 git whatchanged
 ```
 
-# Synching a fork
+# Syncing a fork
 
 From [GitHub Help](https://help.github.com/articles/syncing-a-fork/)
 
@@ -251,7 +280,7 @@ git branch -D my-merged branch
 
 ## Check out and track a remote branch
 
-From [stackoverflow](http://stackoverflow.com/questions/379081/track-all-remote-git-branches-as-local-branches/6300386#6300386) answer to inital question
+From [stackoverflow](http://stackoverflow.com/questions/379081/track-all-remote-git-branches-as-local-branches/6300386#6300386) answer to initial question
 
 ```
 git checkout --track origin/branchname
@@ -286,7 +315,7 @@ git log --oneline --decorate --tags
 git checkout <OTHER_BRANCH> -- path/to/file
 ```
 
-## Synching a fork
+## Syncing a fork
 
 Here is github's official document on [Syncing a fork][1]:
 
@@ -298,18 +327,18 @@ Here is github's official document on [Syncing a fork][1]:
 
 >     $ git remote -v
     # List the current remotes
-    origin  https://github.com/user/repo.git (fetch)
-    origin  https://github.com/user/repo.git (push)
+    origin  https://github.com/user/repository.git (fetch)
+    origin  https://github.com/user/repository.git (push)
     
->     $ git remote add upstream https://github.com/otheruser/repo.git
+>     $ git remote add upstream https://github.com/otheruser/repository.git
     # Set a new remote
     
 >     $ git remote -v
     # Verify new remote
-    origin    https://github.com/user/repo.git (fetch)
-    origin    https://github.com/user/repo.git (push)
-    upstream  https://github.com/otheruser/repo.git (fetch)
-    upstream  https://github.com/otheruser/repo.git (push)
+    origin    https://github.com/user/repository.git (fetch)
+    origin    https://github.com/user/repository.git (push)
+    upstream  https://github.com/otheruser/repository.git (fetch)
+    upstream  https://github.com/otheruser/repository.git (push)
 
 ### Syncing
 
@@ -325,7 +354,7 @@ Here is github's official document on [Syncing a fork][1]:
     remote: Compressing objects: 100% (53/53), done.
     remote: Total 62 (delta 27), reused 44 (delta 9)
     Unpacking objects: 100% (62/62), done.
-    From https://github.com/otheruser/repo
+    From https://github.com/otheruser/repository
      * [new branch]      master     -> upstream/master
 
 > We now have the upstream's master branch stored in a local branch, upstream/master

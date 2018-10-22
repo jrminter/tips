@@ -1,0 +1,35 @@
+/* Last modified 2018-10-13 */
+
+body{ /* Normal  */
+      font-size: 14px;
+  }
+td {  /* Table  */
+  font-size: 10px;
+}
+h1.title {
+  font-size: 38px;
+  color: #184481;
+}
+h1 { /* Header 1 */
+  font-size: 28px;
+  color: #184481;
+}
+h2 { /* Header 2 */
+  font-size: 22px;
+  color: #184481;
+}
+h3 { /* Header 3 */
+  font-size: 22px;
+  font-family: "Times New Roman", Times, serif;
+  color: #184481;
+}
+a {
+  color: #0033dd;
+  text-decoration: none;
+}
+.r{
+    font-size: 11px;
+}
+pre {
+    font-size: 11px;
+}

@@ -1,7 +1,7 @@
 ---
 title: "Tips on Using DTSA-II"
 author: "J. R. Minter"
-date: "Started: 2015-05-19, Last modified: 2018-10-11"
+date: "Started: 2015-05-19, Last modified: 2018-10-14"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -21,20 +21,28 @@ needed.
 
 ## Notes from Nicholas Ritchie's videos
 
-- **The mouse wheel** zooms in and out on intensity. Can also click and
+### The mouse wheel
+
+**The mouse wheel** zooms in and out on intensity.Can also click and
 drag by the counts on the left side.
 
-- **Right mouse button** - displays a context sensitive menu with helpful
+### Right mouse button menus
+
+**Right mouse button** - displays a context sensitive menu with helpful
 tools or options to set. Can also copy status text to the clipboard
 from this menu. Can select how lines are labeled. IUPAC is preferred
 or element abbreviation for an uncluttered look.
 
-- **Copy as bitmap** produces a high resolution bitmap. Scaling is a bit
+### Copy as bitmap
+
+**Copy as bitmap** produces a high resolution bitmap. Scaling is a bit
 counterintuitive. Lettering size is a function of size on the screen.
 N. Ritchie typically drags window to 800x250 pixels. On the Mac I can't
 get below 270, so I tried 900x300.
 
-- **When using the material editor**, start with a throw-away name like
+### The Material Editor
+
+**When using the material editor**, start with a throw-away name like
 "Unknown" to prevent overwriting something in the database by accident.
 This permits storage and re-use. A good name begins with a letter and
 has only letters and numbers. Do not use spaces or odd characters like
@@ -57,54 +65,146 @@ Type the string above into the empty dialog and press "add". We can then
 add the density (2.36) and change the name to '**EagleXG**' and save the
 results.
 
+I frequently need to be reminded of the material names for the materials
+that I have in the database. Happily, DTSA-II provides the function
+`listMaterials()` from the command line.
 
-- **There are two "Composition" values**. There is the accepted or
+
+### DTSA's two "Composition" values
+
+**There are two "Composition" values**. There is the accepted or
 standard value that we enter through the material editor and the measured 
 composition from spectra.
 
-- **Spectra list** also has a context-sensitive menu accessed by right click
+### Spectrum List functions
 
-- **The Report tab** has summary of the experiment. Because it is HTML it
-is search-able using the OS. The Report menu has a "Report Note" button
-that lets the user add comments or notes to the report. One can also add the 
-spectrum display to the report. I find it helpful to type the comments in a
-text editor with a spell checker before entering into the report. DTSA's report
-functions are looking more favorable each time I use them. **To do:** Consider
+**Spectra list** also has a context-sensitive menu accessed by right click
+
+### Report Tab Functions
+
+**The Report tab** has summary of the experiment. Because it is HTML these
+reports are search-able using the OS.
+
+The Report menu has a "Report Note" button that lets the user add
+comments or notes to the report. One can also add the 
+spectrum display to the report.
+
+I find it helpful to type the comments in a text editor with a spell
+checker before entering into the report. DTSA's report functions are
+looking more favorable each time I use them.
+
+**To do:** Consider
 what best practices would look like in syncing these between computers. It
 also looks like DTSA overwrites the report each time. Too bad because one
 cannot keep it open in an editor with a spell checker and have it correct
 spelling.
 
-- **The command line** is useful for repetitive tasks. The `tabulate()`
+### The command Line
+
+**The command line** is useful for repetitive tasks. The `tabulate()`
 function is helpful. For example, one might select a range of values
 and enter
 
-  ```
-  tabulate(selected())
-  ```
+```
+tabulate(selected())
+```
 
-  and then copy the results to the clipboard to go into Excel or
+and then copy the results to the clipboard to go into Excel or
 a Rmarkdown table.
 
-- **Entering the detector parameters** permits us to simulate
+One can also get information about materials.
+The two key functions are:
+
+1. `listMaterials()` and 
+2. `describe()`.
+
+Here is an example:
+
+```
+1> listMaterials()
+[AZO2, AZO5, AdmiraltyBrass, Ag, Al, Al2O3, AlFe, AuPd, Benitoite, C, C2F4, Ca(OH)2,
+ CaCO3, CaCl2, Co, Cu, Cu standard, CuAl2, EDOT, EagleXG, Epon828, Fe, Fe standard,
+ Fe2O3, Fe3O4, FeNi, Henoc, K240, K411, K412, K496, KBr, KCl, Kapton, Mg, Mn,
+ Mn standard, NaCl, Ni, Orthoclase, PAN, PET, PMMA, Pd, SRM484, SS309, SS316,
+ Sanborite, Si, SiO, SiO2, Ta, TiB2, TiO2, V2O5, Zn, Zn standard, ZnO, nbsNiFe]
+```
+
+followed by
+
+```
+2> describe("AdmiraltyBrass")
+AdmiraltyBrass
+Density 8 g/cm³
+Element Z          Mass Frac  Norm Mass Atom Frac
+Copper 29          0.69       0.69      0.699224
+Zinc   30          0.3        0.3       0.295351
+Tin    50          0.01       0.01      0.0054246
+--     29.51       1          1.0       1.0
+```
+
+and
+
+```
+3> describe("AZO5")
+AZO5
+Density    6 g/cm³
+Element    Z        Mass Frac Norm Mass Atom Frac
+Oxygen     8        0.20128   0.201282  0.499999
+Aluminum  13        0.01697   0.0169702 0.024997
+Zinc      30        0.78174   0.781748  0.475004
+--        25.2831   0.99999   1.0       1.0
+35>
+```
+
+For `tabulate(selected())` I tried an experiment where I simulated a
+SiO~2~ standard at 4 kV with 12,000 trajectories. I then simulated
+two SiO "unknowns" : The first with 3,000 trajectories and the second
+with 12,000 trajectories. I then used the `Quantification Alien` to 
+measure the composition of each spectrum. I selected the two unknown
+spectra from the Spectrum window and went to the command line and ran
+
+```
+1> tabulate(selected())
+Name                    O       Si      Total
+sim-SiO-4kV-3k-traj     36.7215 63.9725 100.6939
+sim-SiO-4kV-12k-traj    36.7516 63.8028 100.5544
+Average                 36.7365 63.8876
+```
+
+This might make an interesting problem for scripting spectra with more
+noise...
+
+
+### Detector Parameters
+
+**Entering the detector parameters** permits us to simulate
 **dose-correct** spectra. One can also tune the parameters by
 running a series of simulations. The manufacturer's values may
 not be correct. I discovered this with the Oxford detector on the
 Sirion because the solid angle appeared to be lower than claimed.
 
 
-- **If the material is in the database** (e.g. K240), type the name in the
+### Element Dialog tips
+
+**If the material is in the database** (e.g. K240), type the name in the
 element dialog and type control-enter and it will add all the lines.
 
-- **The analytical simulation uses XPP** - the simplified model of
+### Analytical Simulations
+
+**The analytical simulation uses XPP** - the simplified model of
 Pouchou (Ritchie pronounces as "Pooshoo") and Pichoir
 (Ritchie pronounces as "Poushwar"). My French has always sounded
 awful...
 
-- **Simulations** Monte Carlo is more flexible. Knowing the density is more
-critical for specimens that are not flat. 
+### Monte Carlo Simulations
 
-- **Peak shape references**. All quantitative EDS measurements involve
+**Monte Carlo Simulations** are more flexible. Knowing the density is
+more critical for specimens that are not flat.
+
+### Peak Shape References
+
+
+All quantitative EDS measurements involve
 comparing the intensity of the peak in the unknown to that from a
 standard measured under (or corrected to) the same conditions. This
 process usually involves spectrum fitting. The unknown specimen is fit
@@ -112,56 +212,132 @@ to spectra from the various elements from standard specimens. The
 composition of the unknown is determined from the results from those
 fits.
 
-    Consider an example of analysis of a complex glass, K-240, where we
-    will focus on the elements Ba and Ti. In the region around 4.5 kVe Ba
-    and Ti have a particularly nasty overlap. A good strategy in 
-    quantitative analysis is to choose a standard similar in composition
-    to what you expect for the unknown. This minimizes the magnitude of
-    the matrix corrections and reduces the uncertainty of our results.
+Consider an example of analysis of a complex glass, K-240, where we
+will focus on the elements Ba and Ti. In the region around 4.5 kVe Ba
+and Ti have a particularly nasty overlap. A good strategy in 
+quantitative analysis is to choose a standard similar in composition
+to what you expect for the unknown. This minimizes the magnitude of
+the matrix corrections and reduces the uncertainty of our results.
     
-    In this case we choose Benitoite. The relative intensity in the
-    region of interest is similar. The K-240 differs in that it has 
-    additional Zr, Mg, and Zn.
+In this case we choose Benitoite. The relative intensity in the
+region of interest is similar. The K-240 differs in that it has 
+additional Zr, Mg, and Zn.
     
-    Benitoite has a problem as a standard for K-240: There is a
-    significant overlap between Ba and Ti near 4.5 keV. To extract the
-    information about Ba and Ti is challenging. We can fit a pure Ti
-    spectrum and a pure Ba spectrum without other interferences in this
-    region to the peak shape of our unknown. We can extract with good
-    precision the intensities from Ba and Ti in this region. We might
-    use a pure Ti sample and a sample of Sanbornite which is Ba silicate
-    and does not contain Ti. We will treat Ti and Sanbornite as peak
-    references. Reference spectra are only required if the standard has
-    interferences.
+Benitoite has a problem as a standard for K-240: There is a
+significant overlap between Ba and Ti near 4.5 keV. To extract the
+information about Ba and Ti is challenging. We can fit a pure Ti
+spectrum and a pure Ba spectrum without other interferences in this
+region to the peak shape of our unknown. We can extract with good
+precision the intensities from Ba and Ti in this region. We might
+use a pure Ti sample and a sample of Sanbornite which is Ba silicate
+and does not contain Ti. We will treat Ti and Sanbornite as peak
+references. Reference spectra are only required if the standard has
+interferences.
+
+### The Make Standard Bundle
+
+Use the Make Standard Bundle. Specify the material. For Benitoite,
+see [webmineral.com](http://webmineral.com/data/Benitoite.shtml#.W7Pw2BNKg_V).
     
-    Use the Make Standard Bundle. Specify the material. For Benitoite,
-    see [webmineral.com](http://webmineral.com/data/Benitoite.shtml#.W7Pw2BNKg_V).
+We start with this dialog
     
-    We start with this dialog
+![](./png/build-std-bundle-standard.png)
     
-    ![](./png/build-std-bundle-standard.png)
+When we set reference spectrum, we need to **list all the elements** in
+the spectrum. Only the specified element will be highlighted when we
+start. We need to supply the rest by checking the box in the dialog.
     
-    When we set reference spectrum, we need to **list all the elements** in the
-    spectrum. Only the specified element will be highlighted when we start. We
-    need to supply the rest by checking the box in the dialog.
+![](./png/build-std-bundle-reference.png)
     
-    ![](./png/build-std-bundle-reference.png)
+We really only need to know the elements present in the reference. It is
+only being used for the **peak shape** information to fit the overlapped
+peaks in the unknown (and perhaps the standard as in this case).
     
-    We really only need to know the elements present in the reference. It is
-    only being used for the **peak shape** information to fit the overlapped
-    peaks in the unknown (and perhaps the standard as in this case).
+The software is looking for a "sufficient separation" of peaks so that 
+background regions can be defined. This requires a separation from other
+peaks of about one full width at half maximum on each side. We need to
+know the background to get the peak intensity. In DTSA-II's filter fit,
+this requires this 1 FWHM on each side to make a sufficiently precise
+measurement of the background. The **Standard Bundler** makes this easier
+for the user.
     
-    The software is looking for a "sufficient separation" of peaks so that 
-    background regions can be defined. This requires a separation from other
-    peaks of about one full width at half maximum on each side. We need to
-    know the background to get the peak intensity. In DTSA-II's filter fit,
-    this requires this 1 FWHM on each side to make a sufficiently precise
-    measurement of the background. The **Standard Bundler** makes this easier
-    for the user.
+After working through the K240 example from the Advanced Quant video, it
+seems that one should generate a standard bundle for each of the standards
+one will use and use those `.zstd` files for the quantification.
+
+## Saving and reading spectra as XML
+
+DTSA-II has a function to store and read spectra in `.xml` format
+which stores much more metadata than the `.msa` format. We can do
+this from the command line. After reading in (or simulating) a
+spectrum, set the composition (if appropriate). Then go to the
+command and list the spectra with
+
+```
+ls()
+```
+
+Spectra will be labeled `s1`, `s2`, ... Note the spectrum identifier 
+associated with the spectrum you want to store as an XML file.
+Save the file from the command line:
+
+```
+s2.toXML("/Users/jrminter/Desktop/Cu-2017-12-14-5eV-ch-2K.xml")
+```
+
+Read the spectrum from the command line with:
+
+```
+spc = spectrumFromXML("/Users/jrminter/Desktop/simulated-EagleXG.xml")
+spc.display()
+```
+
+## X-ray transitions from the command line
+
+1. Define a transition using the IUPAC name
+
+    ```
+    tra = transition('Si K-L3')
+    ```
+
+2. Print the Siegbahn name
+
+   We print to render the unicode...
+
+    ```
+    print(tra.getSiegbahnName())
+    Si Kα1
+    ```
+    Compare to IUPAC name
     
-    After working through the K240 example from the Advanced Quant video, it
-    seems that one should generate a standard bundle for each of the standards
-    one will use and use those `.zstd` files for the quantification.
+    ```
+    print(tra.getIUPACName())
+    Si K-L3
+    ```
+3. Get the relative weight
+
+    ```
+    tra.getWeight(0)
+    1.0
+    ```
+    
+    Compare to normalized
+    
+    ```
+    tra.getWeight(1)
+    0.6441638752898737
+    ```
+    
+    Now compare to K-L2
+    
+    ```
+    tra = transition('Si K-L2')
+    tra.getWeight(0)
+    0.505
+    print(tra.getSiegbahnName())
+    Si Kα2
+    ```
+    
 
 
 ## Using the **Simulation alien** to simulate individual spectrum components.
@@ -290,7 +466,7 @@ looks like
 
 ## Frequently needed scripts
 
-### In OSImageAnalysis git repository
+### The OSImageAnalysis git repository
 
 **In dtsa2/productionScripts directory:**
 
@@ -298,6 +474,25 @@ looks like
 - DumpMaterials.py and the **restore script** stds.py. Edit this last one to add new materials.
 - listDetCalibrations.py to see what calibrations we have
 - testGetMassFraction.py to aid adding new standards
+
+### The dtsa2Scripts git repository
+
+This repository has many examples
+
+- jmGen.py is in the `jmGen` folder
+
+- jmMC3.py is in the `jmMC3` folder
+
+- The `materials` folder has code to create the materials database
+
+- the `rplScripts` folder has some examples of creating and processing
+data cubes
+
+- The `utility` folder has many test scripts
+
+
+
+
 
 ## A proposed standard
 
@@ -395,25 +590,9 @@ which returns a dictionary with the mass fractions:
 
 ## File naming tricks
 
-For simulations, I often name files with a **compound-kV-nTraj** type syntax. Writing a helper function can minimize repetition
+For simulations, I often name files with a **compound-kV-nTraj** type syntax. Writing a helper function can minimize repetition.
+I added getSpecPath(baseName, baseDir, e0, nTraj) to jmMC3.py
 
-
-```
-def getSpecPath(baseName, baseDir, e0, nTraj):
-    sName = "%s-%g-kV-%g-Traj" % (baseName, e0, nTraj)
-    sPath = "%s/%s.msa" % (baseDir, sName)
-    return sPath
-```
-
-I should also wrap a sequence like this:
-
-```
-spcFile = getSpecPath("Al", outDir, e0, nTraj)
-al = wrap(readSpectrum(spcFile))
-sp = spc.getProperties()
-sp.setDetector(det)
-al.display()
-```
 
 Here is my work-in-progress for a quantification script
 
@@ -478,6 +657,8 @@ print(out)
 
 ## Preferences
 
+### Windows
+
 On Windows, preferences are stored in the registry. The base key is:
 
 ```
@@ -485,7 +666,9 @@ On Windows, preferences are stored in the registry. The base key is:
 ```
 It is always useful to export this as a `.reg` file.
 
-On MacOSX, preferences are stored in a `.plist` file...
+### MacOS
+
+On MacOS, preferences are stored in a `.plist` file...
 
 ```
 ~/Library/Preferences/gov.nist.microanalysis.plist
@@ -498,6 +681,9 @@ To force reloading from the cache file see [here](https://nethack.ch/2014/03/30/
 ```
 defaults read gov.nist.microanalysis.plist
 ```
+
+I added the alias `read-dtsa-plist` to my `.bash_profile` file to
+make this easy.
 
 
 # Getting NISTMonte Monte Carlo packages to work with Iona and Jupiter

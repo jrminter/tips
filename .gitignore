@@ -76,6 +76,12 @@ EDAX/EDAX.md
 EDAX/EDAX.html
 EDAX/figure/
 
+# epma-matric-corr dir
+epma-matric-corr/.DS_Store
+epma-matric-corr/epma-matric-corr.md
+epma-matric-corr/epma-matric-corr.html
+epma-matric-corr/figure/
+
 # Excel tips directory
 Excel/.DS_Store
 Excel/Excel.md
@@ -423,10 +429,10 @@ tex/tex-tips.html
 tex/figure/
 
 # tv-bluetooth directory
-tv-bluetooth/.DS_Store
-tv-bluetooth/tv-bluetooth.md
-tv-bluetooth/tv-bluetooth.html
-tv-bluetooth/figure/
+TV/.DS_Store
+TV/TV.md
+TV/TV.html
+TV/figure/
 
 # ubuntu tips directory
 ubuntu/.DS_Store
