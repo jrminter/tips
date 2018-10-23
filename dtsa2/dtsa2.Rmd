@@ -101,22 +101,106 @@ spelling.
 
 ### The command Line
 
-**The command line** is useful for repetitive tasks. The `tabulate()`
+**The command line** is useful for repetitive tasks.
+
+**Generic Python Utility Methods**
+
+- `dir()` Displays a list of global functions, classes and variables
+- `dir(obj)` Displays a list of methods and properties of the object obj
+- `help()` Displays global help
+- `help(obj)` Displays help on the object obj
+
+**DTSA-II Specific Utility Methods**
+
+- `ls()` Displays a list of all spectra in the Spectrum List with aliases
+(`s?` here `?` is an integer)
+- `spectra()` Returns a list object containing the spectra in the
+Spectrum List. `spectra(True)` returns only the selected spectra.
+- `listDetectors()` Displays a list of all available detectors with
+aliases ('d?' where ? is an integer)
+- `listEdges("Pb")` - List absorption edges for an element
+- `listTransitions("Fe")` - list the X-ray Transitions
+- `listData("Si")` - list the X-ray data for an element
+- `getElement()` Opens a GUI to delect a single element
+- `getElements()` Opens a GUI to delect multiple elements
+- `createMaterial()` Opens a GUI to select or create a new Composition
+or Material
+- `display(getMac("S310"))` - display the mass absorption for a material
+- `mac("S310","Fe")`
+
+    ```
+Density = 7.89 g/cm^3
+XRT         MAC    u(MAC)   Range
+	       (cm^2/g)	(cm^2/g)   (um)
+Fe K-L3   163.226  11.6626  7.76486
+Fe K-L2   164.145  11.7284  7.72137
+Fe K-M3	  132.804  9.07225  9.54362
+Fe K-M2	  132.804  9.07225  9.54362
+Fe K-M5   135.127  24.8619  9.3795
+Fe L3-M5  5974.97  1219.93  0.212123
+Fe L3-M4  5974.97  1219.93  0.212123
+Fe L3-M1  7167.91  1519.88  0.17682
+Fe L2-M4  10903.4  4982.74  0.116241
+Fe L2-M3  6238.73  1245.58  0.203155
+Fe L2-N1  10885.2  4974.14  0.116436
+Fe L2-M1  6821.43  1442.1   0.185801
+Fe L1-M3  10674.6	2169.09	0.118733
+Fe L1-M2  10674.6	2169.09	0.118733
+
+    ```
+- **Useful Objects**
+
+    ```
+    elm = element("Fe")
+    shell = atomicShell("Fe L3")
+    xrt = transition("Fe L3-M5")
+    comp = material("Fe2O3")
+    mat = material("Fe2O3", 5.23)
+
+    ```
+- **Common Aliases**
+
+    ```
+import gov.nist.microanalysis.Utility as epu
+import gov.nist.microanalysis.EPQLibrary as epq
+import gov.nist.microanalysis.Utility as epu
+import gov.nist.microanalysis.EPQTools as ept
+import gov.nist.microanalysis.EPQLibrary.Detector as epd
+import java.util as ju
+    ```
+
+
+
+
+- **Spectrum Math:** Given spectrum `s1` = Fe, `s2` = Cr and `s3` = Ni,
+we can write an expression with operations `+`, `-`, `*`, and `abs()`:
+
+    ```
+    1> res = (0.6*s6+0.25*s4+0.15*s10)
+    2> res.rename("Name")
+    3> res.display()
+    ```
+
+
+- The `tabulate()`
 function is helpful. For example, one might select a range of values
 and enter
 
-```
-tabulate(selected())
-```
+    ```
+    1> tabulate(selected())
+   ```
 
-and then copy the results to the clipboard to go into Excel or
-a Rmarkdown table.
+    and then copy the results to the clipboard to go into Excel or
+    a Rmarkdown table.
 
-One can also get information about materials.
-The two key functions are:
+    One can also get information about materials and detectors.
 
-1. `listMaterials()` and 
-2. `describe()`.
+- Get key functions are:
+
+1. `listMaterials()`
+2. `describe()`
+3. listDetectors()
+4. findDetector("name")
 
 Here is an example:
 
