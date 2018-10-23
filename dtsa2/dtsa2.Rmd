@@ -1,7 +1,7 @@
 ---
 title: "Tips on Using DTSA-II"
 author: "J. R. Minter"
-date: "Started: 2015-05-19, Last modified: 2018-10-14"
+date: "Started: 2015-05-19, Last modified: 2018-10-23"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -711,13 +711,8 @@ print(qr)
 
 print(dir(qr))
 
-# print(qr.atomicPercentU(epq.Element.Al))
-# print(qr.atomicPercentU(epq.Element.Zn))
-# print(qr.atomicPercentU(epq.Element.O))
-
 print(dir(qr.atomicPercentU(epq.Element.Al)))
 
-# print(dir(epq.Element.Al))
 
 def formatElement(qr, el):
     strLine  = "%s, " % el.toAbbrev()
