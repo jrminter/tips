@@ -156,6 +156,8 @@ Fe L1-M2  10674.6	2169.09	0.118733
     xrt = transition("Fe L3-M5")
     comp = material("Fe2O3")
     mat = material("Fe2O3", 5.23)
+    xrts = epq.XRayTransitionSet(epq.Element.Fe,
+                                 epq.XRayTransitionSet.K_FAMILY)
 
     ```
 - **Common Aliases**
@@ -421,6 +423,20 @@ spc.display()
     print(tra.getSiegbahnName())
     Si Kα2
     ```
+    
+    Now specify explicitly. This gives us granular control.
+    The class defines many strings...
+    
+    ```
+    xrts = epq.XRayTransitionSet(epq.Element.Fe,
+                                 epq.XRayTransitionSet.K_FAMILY)
+    xrts = epq.XRayTransitionSet(epq.Element.Fe,
+                                 epq.XRayTransitionSet.L_FAMILY)
+    xrts = epq.XRayTransitionSet(epq.Element.Fe,
+                                 epq.XRayTransitionSet.K_ALPHA)
+    
+    ```
+    
     
 
 
