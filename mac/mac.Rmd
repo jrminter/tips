@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-10-18"
+date: "Started: 2013-07-16, Last modified: 2018-10-24"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -119,6 +119,32 @@ sudo R CMD javareconf
 - **Shift+Command+3**: take a screenshot of the entire screen, and saves it directly to the clipboard for pasting elsewhere
 
 - **Shift+Command+4**: Draw a box for screenshot
+
+- **Shift+Command+5**: New in Mojave. It calls up a small panel at the
+bottom of your display with your screen capture options. There are three
+screenshot buttons that let you capture the entire screen, a window or
+a selection of your screen. Likewise, the two video-recording buttons
+let you record your entire screen or a selection of it. On the left is
+an X button to close the screenshot panel, but you can also just hit the
+Escape key to exit out.    
+    
+    On the right side is an Options button. It lets you choose where to save
+    your screenshot -- Desktop, Documents, Clipboard, Mail, Messages or
+    Preview -- and set a 5- or 10-second delay so you can line up items that
+    might otherwise disappear when you engage your screenshot tool.
+    
+    By default, the Show Floating Thumbnail option is enabled, which puts a
+    little preview thumbnail of your just-capture screenshot in the
+    lower-right corner of your screen, similar to the screenshot procedure
+    introduced with iOS 11 (and with which you are intimately familiar
+    should you own and operate an iPhone X). Unlike your iPhone, you can
+    turn off this preview thumbnail on your Mac. Lastly, you can choose
+    to show your mouse pointer in a screenshot or video.
+    
+    If the screenshot panel is in your way, you can grab its left edge and
+    drag it to a new spot on your screen.
+
+
 
 ## Change all files in a directory to lower case
 
