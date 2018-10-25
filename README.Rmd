@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-10-13"
+date: "Started: 2013-07-16, Last modified: 2018-10-25"
 output:
   html_document:
     css: ./theme/jm-gray-vignette.css
@@ -93,6 +93,8 @@ This skips several steps from original article!
 [Fitness](./fitness/fitness.html)
 
 [French Press Instructions](./french-press-instructions/french-press-instructions.html)
+
+[generator](./generator/generator.html)
 
 [gfortran](./gfortran/gfortran.html)
 

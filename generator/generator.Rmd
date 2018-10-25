@@ -1,0 +1,44 @@
+---
+title: "Generator Tips"
+author: "J. R. Minter"
+date: "Started: 2018-10-25, Last modified: 2018-10-25"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+
+[Back to Index](../README.html)
+
+These are John Minter's tips for our whole house generator.
+Purchased from and serviced by Isaac.
+
+# Quick tips
+
+## Rust
+
+The fittings are painted gray and develop rust. Service technician
+recommended painting with Rustoleum.
+
+## Turning off to work on outlets in house
+
+We turn the generator off using at the generator outside the house.
+We use the controls in the panel on the right side as we face the
+house.
+
+1. There are 3 small square buttons labelled : `auto`, `on`, and `off`.
+
+2. To turn the generator off, press and hold the `off` button until the
+generator turns off. The green text on the LED should turn off. To be
+sure you can flip the switch on the small rectangular breaker at the 
+bottom (to the right is `off`). Nothing should be lit.
+
+3. To turn the generator back to normal mode, make sure the breaker
+on the bottom is turned on (left) and press the `auto` button. Green 
+text should scroll across the LED. 
+
+4. Be sure the access panel is closed when you finish.
+
+[Back to Index](../README.html)

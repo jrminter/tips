@@ -92,6 +92,12 @@ Excel/figure/
 french-press-instructions/french-press-instructions.html
 french-press-instructions/french-press-instructions.pdf
 
+# generator
+generator/generator.html
+
+# gfortran 
+gfortran/gfortran.html
+
 # ggplot2figure tips directory
 ggplot2figure/.DS_Store
 ggplot2figure/ggplot2-figure.md
