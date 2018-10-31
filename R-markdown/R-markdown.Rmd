@@ -1,7 +1,7 @@
 ---
 title: "R-Markdown Tips"
 author: "J. R. Minter"
-date: "Started: 2016-12-08, Last modified: 2018-10-11"
+date: "Started: 2016-12-08, Last modified: 2018-10-31"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -25,6 +25,15 @@ the RStudio Intro to Pandoc
 [markdown](http://rmarkdown.rstudio.com/authoring_pandoc_markdown.html),
 and for $\LaTeX$ math, the
 [AOPS](http://artofproblemsolving.com/wiki/index.php/LaTeX:Commands) site.
+
+## Quickly preview any Rmarkdown document in RStudio's viewer
+
+From [Colin Fay](https://twitter.com/_ColinFay/status/1057598724342456321)
+
+```
+xaringan:::inf_mr() 
+```
+
 
 ## Some helpful template examples
 
