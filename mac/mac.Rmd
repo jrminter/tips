@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-10-24"
+date: "Started: 2013-07-16, Last modified: 2018-11-02"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -12,6 +12,12 @@ output:
 [Back to Index](../README.html)
 
 # Tips
+
+## Installing R on MacOSX
+
+- There is a great explanation of how to install R on MacOSX [here](https://github.com/tidyverse/tidyverse/issues/154). This solves many problems and works on MacOS Mojave.
+
+- [rud.is](http://rud.is/b/2015/10/20/installing-r-on-os-x/) has a nice guide to installation on Mac OSX.
 
 ## Make ~/Library visible
 
@@ -900,9 +906,7 @@ sudo chown $(whoami):admin /usr/local && sudo chown -R $(whoami):admin /usr/loca
   `csrutil enable`
 * Reboot back into OS X & you'll be able to write to `/usr/local` & install Homebrew.
 
-# Installing R
 
-[rud.is](http://rud.is/b/2015/10/20/installing-r-on-os-x/) has a nice guide to installation on Mac OSX.
 
 
 # Command line tips
