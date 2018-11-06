@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-10-11"
+date: "Started: 2013-07-16, Last modified: 2018-11-05"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -37,6 +37,22 @@ suppressPackageStartupMessages(library("tidyverse"))
 [Back to Index](../README.html)
 
 # Don't forget...
+
+## OCR
+
+From [here](https://ropensci.org/technotes/2018/11/06/tesseract-40/)
+
+```{r tesseract}
+library(magick)
+library(tesseract)
+
+image_read("https://jeroen.github.io/images/birds.jpg") %>%
+  image_crop('1200x300+100+1700') %>%
+  image_ocr() %>%
+  cat()
+
+```
+
 
 ## Pandoc on macosx
 
