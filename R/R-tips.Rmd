@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-11-05"
+date: "Started: 2013-07-16, Last modified: 2018-11-18"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -37,6 +37,36 @@ suppressPackageStartupMessages(library("tidyverse"))
 [Back to Index](../README.html)
 
 # Don't forget...
+
+## Issue with `-fopenmp`
+
+See [nsaunders.wordpress.com](https://nsaunders.wordpress.com/2018/11/19/using-osx-compiling-an-r-package-from-source-issues-with-fopenmp-try-this/)
+
+If you see an error like this
+
+```
+clang: error: unsupported option '-fopenmp'
+make: *** [external_metis.o] Error 1
+ERROR: compilation failed for package ‘TMB’
+```
+And you use Homebrew – first, do this:
+
+```
+brew install llvm
+```
+
+Then create the file `~/.R/Makevars`, if it does not exist and edit its
+contents to look like this:
+
+```
+C=/usr/local/opt/llvm/bin/clang
+CXX=/usr/local/opt/llvm/bin/clang++
+```
+
+Your R package should now compile without error. If it works as it
+did for me :)
+
+
 
 ## OCR
 
