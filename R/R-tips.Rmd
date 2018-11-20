@@ -75,8 +75,11 @@ From [here](https://ropensci.org/technotes/2018/11/06/tesseract-40/)
 ```{r tesseract}
 library(magick)
 library(tesseract)
+library(here)
 
-image_read("https://jeroen.github.io/images/birds.jpg") %>%
+fi <- here("R/inc/birds.jpg")
+
+image_read(fi) %>%
   image_crop('1200x300+100+1700') %>%
   image_ocr() %>%
   cat()
