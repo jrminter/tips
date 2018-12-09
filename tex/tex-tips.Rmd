@@ -1,7 +1,7 @@
 ---
 title: "TeXLive Hints"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-10-11"
+date: "Started: 2013-07-16, Last modified: 2018-12-09"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -542,6 +542,10 @@ Set up update (normal)
 
 ```
 tlmgr option repository http://mirrors.rit.edu/CTAN/systems/texlive/tlnet/
+```
+
+```
+tlmgr option repository http://ctan.math.washington.edu/tex-archive/systems/texlive/tlnet/
 ```
 
 Set up update for pretest
