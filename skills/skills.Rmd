@@ -1,7 +1,7 @@
 ---
 title: "Skills"
 author: "J. R. Minter"
-date: "Started: 2016-02-14, Last modified: 2018-10-11"
+date: "Started: 2016-02-14, Last modified: 2018-12-13"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -11,6 +11,27 @@ output:
 ---
 
 [Back to Index](../README.html)
+
+# Everyone here is is smart, so distinguish yourself by being kind
+
+I think Jesus put it like this (my paraphrase in contemporary Englise): **treat others like you would like to be treated**. I actually believe **everybody counts** even if we don't agree on everything. I think the topic includes and is greater than the boorish behavior described below.
+
+From [thingsweholddear.blogspot.com](https://thingsweholddear.blogspot.com/2015/06/everyone-here-is-is-smart-so.html)
+
+> Tim Hunt reckons that women ruin labs with their crying, and, to be honest, I have to admit that tears are usually my response to the minor and major incidences of sexism that permeate academia.
+
+> I’m not crying today. I am incandescent with rage, hands shaking as I try to type this. A woman I know – a woman I love and respect, who works incredibly hard and whose contribution to her discipline, and to science at large, is immense. This woman is quitting. She has been hounded out by bullying, childish petty behaviour, and sexism. She has been failed by those whose positions within her institution mean that they are responsible for the pastoral care of staff. People have turned a blind eye to the way her colleagues and senior staff have treated her. People have told her to ‘harden up’, that it ‘comes with the territory’, that she should be quiet and not draw attention to herself. She has availed herself of the accepted routes for complaint or raising issues and these have been ignored or pushed back. She is not leaving science, but she is leaving academia, and academia’s culture is fully culpable for this. The institution she is leaving needs to step back and reflect on the organisational culture that has allowed for a toxic environment both on a local and global level – sexist slides at a faculty meeting pass without comment, a head of department refuses to speak to a member their department for more than a year without a single colleague complaining.
+
+> I walked to work this morning carrying a cake box filled with a selection of slices and cakes for a morning tea to farewell a female PhD student who is heading off overseas for 3 months.
+
+
+> Many of us enact these kinds of acts within our local academic cultures – trying to embody, with our presence and our behaviour, a kindness that is sorely lacking within universities (or science, or academia) as a whole. But I am furious today – does my kindness mean anything in the face of systemic and personal sexism that seeks to destroy women and dehumanise men?
+
+> Today I’m warmed by my fury – I’m channelling my tears into action. In writing this, I’m drawing a line. If you work in academia, in science, especially if you have a management role in a department or school or centre or institute or faculty, you are responsible for the culture of that small part of the swirling mass of academic life. You set the tone.
+
+> And if you aren’t actively acknowledging the systemic and personal and malign and benevolent examples of sexism that your colleagues are experiencing, if you are not actively working to both counter those experiences and support those who are living them, then you ARE the problem.
+
+> A woman I know who gives her all for science, for research, for teaching, for service, for others – she’s leaving because of all the times you didn’t speak when you should have. All the awkward silences that were left to fester after an inappropriate comment. All the snide remarks you didn’t challenge, all the acts of sabotage you witnessed and ignored. You. Men, women, those who are fortunate enough to have seniority in academia – remember: everyone here is smart, so distinguish yourself by being kind.
 
 # Ten things I've learned about learning a new skill
 
