@@ -1,7 +1,7 @@
 ---
 title: "R Package Tips"
 author: "J. R. Minter"
-date: "Started: 2015-05-08, Last modified: 2018-10-11"
+date: "Started: 2015-05-08, Last modified: 2019-01-12"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -85,6 +85,29 @@ then the commands below worked
 library(rEDS)
 browseVignettes('rEDS')
 ```
+
+
+## Add a static PDF vignette
+
+From [Mark van der Loo](http://www.markvanderloo.eu/yaRb/2019/01/11/add-a-static-pdf-vignette-to-an-r-package/)
+
+The idea is very simple: vignettes can be in LaTeX, and it is possible to include pdf documents in LaTeX using the pdfpages package. So here’s the step-by-step recipe:
+
+If you do not already have it, create the vignettes folder in your package directory.
+Put your static pdf there. Let’s call it mypaper.pdf for now.
+Create a .Rnw file with the following content.
+
+```
+\documentclass{article}
+\usepackage{pdfpages}
+%\VignetteIndexEntry{author2019mypaper}
+
+\begin{document}
+\includepdf[pages=-, fitpaper=true]{mypaper.pdf}
+\end{document}
+```
+
+That's it.
 
 
 
