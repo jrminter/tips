@@ -16,6 +16,23 @@ I have collected these tips both from experience and from a very helpful user co
 
 # Quick tips
 
+## Fonts too small
+
+Wayne Rasband wrote (2019-01-16):
+
+> Set "GUI scale" to 1.5 or higher in the Edit>Options>Appearance dialog in the ImageJ 1.52k30 daily build, restart ImageJ, and the "ImageJ" window will double in size. Set "GUI scale" to 2.5 and it will triple in size. On Linux, the font size of the menu bar and menus also double or triple on size. Weirdly, on Windows 10, the menu bar font size does not change. "GUI scale" replaces the "Text scale" option that was in previous 1.52k daily builds.
+
+Curtis Rueden wrote (2019-01-16):
+
+> The following JavaScript code will resize the main window directly:
+>
+>  importClass(Packages.ij.IJ)    
+>  importClass(Packages.java.awt.Dimension)    
+>  IJ.getInstance().setSize(new Dimension(850, 350))
+> 
+> You can run it with Plugins > New > Javascript, or the Script Editor, or Script Interpreter, or whatever code execution method you like.
+
+
 ## Image Processing Resources
 
 - Image processing with machine learning resources by [Emmanuelle Gouillart 2019-01-06](https://twitter.com/EGouillart/status/1082030252900143104)

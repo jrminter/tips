@@ -1,7 +1,7 @@
 ---
 title: "ggplot2 Use Cases"
 author: "J. R. Minter"
-date: "Started: 2016-01-20, Last modified: 2018-10-11"
+date: "Started: 2016-01-20, Last modified: 2019-01-16"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -17,6 +17,10 @@ This is a work in progress. it also requires
 **ggplot2 version 3.0**.
 
 # Capture thoughts for enhancements at the top...
+
+## Build up plot in slides
+
+See [Garrick Aden-Buie's blog](https://www.garrickadenbuie.com/blog/2018/08/16/decouple-code-and-output-in-xaringan-slides/).
 
 ## Limits and clipping
 
