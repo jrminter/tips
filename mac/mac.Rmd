@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-12-13"
+date: "Started: 2013-07-16, Last modified: 2019-01-22"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -12,6 +12,25 @@ output:
 [Back to Index](../README.html)
 
 # Tips
+
+## Upgrading bash
+
+From [itnext.io](https://itnext.io/upgrading-bash-on-macos-7138bd1066ba).
+
+The problem: 
+
+```
+> Johns-MacBook-Pro:~ jrminter$ bash --version    
+GNU bash, version 3.2.57(1)-release (x86_64-apple-darwin18)    
+Copyright (C) 2007 Free Software Foundation, Inc.    
+```
+
+The solution:
+
+```
+brew install bash
+```
+
 
 ## Change your Family Sharing payment method
 
