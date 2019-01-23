@@ -31,6 +31,58 @@ The solution:
 brew install bash
 ```
 
+Since you want to use the newly installed Bash shell as the default shell,
+it must be able to act as a login shell. That means, you have to add it to 
+the `/etc/shells` file. You can edit this file as the root user:
+
+```
+$ sudo subl /etc/shells
+```
+
+And add the /usr/local/bin/bash shell to its content, so that the file looks something like this:
+
+```
+/bin/bash
+/bin/csh
+/bin/ksh
+/bin/sh
+/bin/tcsh
+/bin/zsh
+/usr/local/bin/bash
+```
+
+### Set Default Shell
+
+At this point, if you opened a new terminal window, you would still be using
+Bash 3.2. This is because `/bin/bash` is still set as the default shell.
+To change this to your new shell, execute the following command:
+
+```
+$ chsh -s /usr/local/bin/bash
+```
+
+That's it! The default shell for your current user is now set to the new version
+of Bash. If you close and reopen the terminal window, you should now be using the
+new version already. You can verify this as follows:
+
+```
+$ echo $BASH_VERSION
+5.0.0(1)-release
+```
+
+The chsh command changes the default shell only for the user who executes
+the command. If you want to change the default shell for other users too,
+you can repeat this command by assuming another user’s identity (e.g. with su).
+Most importantly perhaps you might want to change the default shell for the
+root user, which you can do as follows:
+
+```
+$ sudo chsh -s /usr/local/bin/bash
+```
+
+In this way, if you use sudo su to open a shell as the root user, it will
+also use the new Bash version.
+
 
 ## Change your Family Sharing payment method
 
