@@ -1,7 +1,7 @@
 ---
 title: "Python Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-12-13"
+date: "Started: 2013-07-16, Last modified: 2019-02-08"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -11,6 +11,39 @@ output:
 ---
 
 [Back to Index](../README.html)
+
+# conda
+
+## Squeaky Clean Anaconda Environments
+
+> To delete packages, caches, and other files that aren't being used in
+> any of your environments run:
+
+```
+conda clean -a -y
+```
+
+# Remove PyCharm
+
+From [blog.yinkos.com](http://blog.yinkos.com/2018/02/how-to-completely-uninstall-pycharm-on-macos/)
+
+
+1. Go to Applications > right click PyCharm > move to trash
+
+2. Open a terminal and run the following:
+
+```
+find ~/Library/ -iname "*pycharm*"
+```
+
+Verify that all of the results are in fact related to PyCharm and
+not something else important you need to keep. Then, remove them
+all using the command:
+
+```
+find ~/Library -iname "*pycharm*" -exec rm -r "{}" \;
+```
+
 
 # Get debug info on python installation
 
