@@ -23,6 +23,30 @@ output:
 conda clean -a -y
 ```
 
+## Fixing Spyder on Python 3.7.2 miniconda x64 MacOSX
+
+The problem:
+
+```
+$ spyder
+/Users/jrminter/miniconda3/bin/pythonw: line 3: /Users/jrminter/miniconda3/python.app/Contents/MacOS/python: No such file or directory
+Johns-MacBook-Pro:~ jrminter$ 
+```
+
+The check:
+
+```
+$ which python
+/Users/jrminter/miniconda3/bin/python
+```
+
+The solution:
+
+```
+ln -s /Users/jrminter/miniconda3/bin/python /Users/jrminter/miniconda3/python.app/Contents/MacOS/python
+```
+
+
 # Remove PyCharm
 
 From [blog.yinkos.com](http://blog.yinkos.com/2018/02/how-to-completely-uninstall-pycharm-on-macos/)
