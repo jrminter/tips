@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-01-22"
+date: "Started: 2013-07-16, Last modified: 2019-02-10"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -12,6 +12,16 @@ output:
 [Back to Index](../README.html)
 
 # Tips
+
+## Set default browser
+
+1. Open Safari
+
+2. From the Safari Menus, open Preferences.
+
+3. Click the General tab
+
+4. Choose the default browser
 
 ## Upgrading bash
 
