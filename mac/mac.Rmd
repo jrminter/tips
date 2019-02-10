@@ -15,13 +15,11 @@ output:
 
 ## Set default browser
 
-1. Open Safari
+1. Open System Preferences
 
-2. From the Safari Menus, open Preferences.
+2. Choose the General tab
 
-3. Click the General tab
-
-4. Choose the default browser
+3. Choose the default browser from the drop down menu
 
 ## Upgrading bash
 
