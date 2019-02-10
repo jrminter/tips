@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-11-20"
+date: "Started: 2013-07-16, Last modified: 2019-02-10"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -38,6 +38,11 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 # Don't forget...
 
+## RStudio crashes on opening project
+
+Seems to help to delete the `.Rproj.user` folder before opening. RStudio creates a 
+new one as needed...
+
 ## Issue with `-fopenmp`
 
 See [nsaunders.wordpress.com](https://nsaunders.wordpress.com/2018/11/19/using-osx-compiling-an-r-package-from-source-issues-with-fopenmp-try-this/)
@@ -65,26 +70,6 @@ CXX=/usr/local/opt/llvm/bin/clang++
 
 Your R package should now compile without error. If it works as it
 did for me :)
-
-
-
-## OCR
-
-From [here](https://ropensci.org/technotes/2018/11/06/tesseract-40/)
-
-```{r tesseract}
-library(magick)
-library(tesseract)
-library(here)
-
-fi <- here("R/inc/birds.jpg")
-
-image_read(fi) %>%
-  image_crop('1200x300+100+1700') %>%
-  image_ocr() %>%
-  cat()
-
-```
 
 
 ## Pandoc on macosx
@@ -216,7 +201,8 @@ work both of these things out. So help give it a boost with `vector()`!
 A good example of this value is in a for loop. People often write loops
 by declaring an empty vector and growing it with `c()` like this:
 
-```{r slowVec, comment=NA}
+```
+{r slowVec, comment=NA}
 x <- c()
 for (i in seq(5)) {
   x <- c(x, i)
@@ -236,7 +222,8 @@ for (i in seq(n)) {
 
 Here's a quick speed comparison:
 
-```{r slowComp, comment=NA}
+```
+{r slowComp, comment=NA}
 
 n <- 1e5
 
