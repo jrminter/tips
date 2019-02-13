@@ -43,6 +43,12 @@ suppressPackageStartupMessages(library("tidyverse"))
 Seems to help to delete the `.Rproj.user` folder before opening. RStudio creates a 
 new one as needed...
 
+This is tracked in RStudio's [github](https://github.com/rstudio/rstudio/issues/4034)
+repository. Kevin Ushey wrote me and suggested I **uncheck** two boxes in the
+`Advanced General` pane.
+
+![Solution suggested by Kevin Ushey](inc/Fix-Rstudio-Crash.png)
+
 ## Issue with `-fopenmp`
 
 See [nsaunders.wordpress.com](https://nsaunders.wordpress.com/2018/11/19/using-osx-compiling-an-r-package-from-source-issues-with-fopenmp-try-this/)
