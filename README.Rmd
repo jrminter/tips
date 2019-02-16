@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-10-25"
+date: "Started: 2013-07-16, Last modified: 2019-02-16"
 output:
   html_document:
     css: ./theme/jm-gray-vignette.css
@@ -77,6 +77,8 @@ This skips several steps from original article!
 [Color](./color/color.html)
 
 [Conductive Epoxies](./ConductiveEpoxy/ConductiveEpoxy.html)
+
+[DataScience-linux64](./DataScience-linux64/DataScience-linux64.html)
 
 [Denton Coaters](./Denton/Denton.html)
 
