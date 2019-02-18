@@ -121,6 +121,8 @@ tlmgr install srcltx standalone stmaryrd sttools subfig subfigure symbol
 tlmgr install tabu tex textcase threeparttable thumbpdf times titlesec
 tlmgr install tufte-latex ucs ulem units varwidth vmargin wallpaper
 tlmgr install wrapfig xargs xcolor xstring xwatermark
+# found these later to work with TexWorks...
+tlmgr install tocloft tocloft
 ```
 
 ### Fixing errors
