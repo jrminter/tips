@@ -53,6 +53,17 @@ Herb Schulz noted the directive for Unicode at the top of a file
 % !TEX encoding = UTF-8 Unicode
 ```
 
+## Spell Check for TexWorks
+
+From [tex.stackexchange.com](https://tex.stackexchange.com/questions/235313/how-to-add-spell-checker-to-texworks-on-windows)
+
+1. Download the dictionary corresponding to your desired language from the OpenOffice.org extensions [site](https://extensions.openoffice.org/en/search?f%5B0%5D=field_project_tags%3A157).
+2. Change the file extension of the downloaded file from .oxt to .zip and extract the files with your archive utility of choice.
+3. Open TeXworks and select `Settings and Resources` from the Help menu. A dialog window will open with a link to the TeXworks resources folder.
+4. Click the link to open the resources folder. If there is no dictionaries subfolder there yet, then create it now. Open the (possibly newly created) dictionaries subfolder.
+5. Copy the `.dic` and `.aff` files from the downloaded .zip file to the dictionaries subfolder.
+6. Close and reopen TeXworks. The dictionaries should be listed under the Spelling item in the Edit menu.
+
 
 ## TinyTex and BasicTex
 
