@@ -38,6 +38,12 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 # Don't forget...
 
+## Fixing pandoc access error on Windows
+
+Use RStudio version `1.2.1186` (2018-12-10)
+Thus uses Pandoc 
+
+
 ## RStudio crashes on opening project
 
 Seems to help to delete the `.Rproj.user` folder before opening. RStudio creates a 
