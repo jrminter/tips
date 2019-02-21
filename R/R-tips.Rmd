@@ -48,18 +48,6 @@ On my Win10
 Pro VM in Parallels 1.2.1280 pandoc gives me the access error.
 There RStudio 1.2.1186 works.
 
-```
-C:\Program Files\RStudio\bin\pandoc>pandoc --version
-pandoc 2.5
-Compiled with pandoc-types 1.17.5.4, texmath 0.11.1.2, skylighting 0.7.4
-Default user data directory: C:\Users\jrminter\AppData\Roaming\pandoc
-Copyright (C) 2006-2018 John MacFarlane
-Web:  http://pandoc.org
-This is free software; see the source for copying conditions.
-There is no warranty, not even for merchantability or fitness
-for a particular purpose.
-```
-
 
 ## RStudio crashes on opening project
 
