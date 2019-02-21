@@ -40,13 +40,15 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 ## RStudio pandoc access error on Windows
 
-Odd. I can run the latest RStudio (1.2.1280)
-on my Win7 box (after cleaning out all the files in Appdata and
-my home directory and running ccleaner on the registry).
+On my Win7 box and Win10 VM on Mac, RStudio 1.2.1280 seems to cause
+access violations. So does RStudio-1.2.1293. These two versions use
+the same version of pandoc...
 
-On my Win10
-Pro VM in Parallels 1.2.1280 pandoc gives me the access error.
-There RStudio 1.2.1186 works.
+RStudio 1.2.1186 seems to work. It uses the previous version of
+pandoc.
+
+To be safe, remove previous versions, restart, install the desired
+to test version, and log out and log back in.
 
 
 ## RStudio crashes on opening project
