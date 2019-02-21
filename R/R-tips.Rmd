@@ -38,7 +38,7 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 # Don't forget...
 
-## RStudio pandoc access error on Windows
+## Fixing pandoc access error on Windows
 
 On my Win7 box and Win10 VM on Mac, RStudio 1.2.1280 seems to cause
 access violations. So does RStudio-1.2.1293. These two versions use
@@ -53,8 +53,8 @@ to test version, and log out and log back in.
 
 ## RStudio crashes on opening project
 
-Seems to help to delete the `.Rproj.user` folder before opening. RStudio creates a 
-new one as needed...
+Seems to help to delete the `.Rproj.user` folder before opening. RStudio
+creates a new one as needed...
 
 This is tracked in RStudio's [github](https://github.com/rstudio/rstudio/issues/4034)
 repository. Kevin Ushey wrote me and suggested I **uncheck** two boxes in the
@@ -93,7 +93,10 @@ did for me :)
 
 ## Pandoc on macosx
 
-The current version of R works besr with `pandoc-2.2.1`. I had that installed with miniconda but had some path issues. I created a copy in  $HOME/bin and put it first in the path in the `.Renviron` file. I have scripts to copy to/from Dropbox.
+The current version of R works besr with `pandoc-2.2.1`. I had that
+installed with miniconda but had some path issues. I created a copy in
+`$HOME/bin` and put it first in the path in the `.Renviron` file. I have
+scripts to copy to/from Dropbox.
 
 ## Some great entries for the setup chunk
 
@@ -229,7 +232,8 @@ for (i in seq(5)) {
 
 ```
 
-Instead, pre-define the type and length with vector(), and reference positions by index, like this:
+Instead, pre-define the type and length with vector(), and reference
+positions by index, like this:
 
 ```{r fastVec, comment=NA}
 n <- 5
@@ -655,8 +659,8 @@ versionInfo()
 ## Get the .gitignore right...
 
 [This](https://stackoverflow.com/questions/36185456/gitignored-files-still-shown-in-rstudio)
-post on StackOverflow was **very** helpful. We want to ignore all the files in
-`.Rproj.user` and the directories below. here is how you fix:
+post on StackOverflow was **very** helpful. We want to ignore all the
+files in `.Rproj.user` and the directories below. here is how you fix:
 
 1. Remove what was previously committed
 
@@ -918,11 +922,14 @@ embed_fonts("ggplot-open-sans-eb.pdf", outfile="ggplot-open-sans-eb-embed.pdf")
 
 [datascienceriot](https://www.datascienceriot.com/how-to-install-r-in-linux-ubuntu-16-04-xenial-xerus/kris/) shows how to install R and R-Studion on Ubuntu 16.04 Xenial Xerus.
 
-RStudio - Tomorrow Night Bright theme is easy on the eyes. Monokai is somewhat better.
+RStudio - Tomorrow Night Bright theme is easy on the eyes. Monokai is
+somewhat better.
 
-[rud.is](http://rud.is/b/2015/10/20/installing-r-on-os-x/) has a nice guide to installation on Mac OSX.
+[rud.is](http://rud.is/b/2015/10/20/installing-r-on-os-x/) has a nice
+guide to installation on Mac OSX.
 
-[Google](http://google-styleguide.googlecode.com/svn/trunk/Rguide.xml) has a nice R style guide.
+[Google](http://google-styleguide.googlecode.com/svn/trunk/Rguide.xml)
+has a nice R style guide.
 
 R can be **really** frustrating at time. These are some
 tips on matters that made me go *hmmm...*
@@ -931,13 +938,15 @@ tips on matters that made me go *hmmm...*
 
 # Adjustments for El Capitan
 
-1. **Make changes to .Renviron** . This makes sure R (esp. RStudio) can find what it needs. Mine is:
+1. **Make changes to .Renviron** . This makes sure R (esp. RStudio) can
+find what it needs. Mine is:
 
 ```
 PATH= /Library/TeX/texbin:/usr/local/bin:/Users/jrminter/scripts:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin
 LATEX=/usr/local/texlive/2015/bin/x86_64-darwin/pdflatex
 ```
-2. **Make changes to .profile** This makes sure we can run make. Path is key. Mine uses environment variables and includes:
+2. **Make changes to .profile** This makes sure we can run make. Path
+is key. Mine uses environment variables and includes:
 
 ```
 export PATH=/Library/TeX/texbin:/Library/Frameworks/R.framework/Versions/3.2/Resources/bin:/usr/local/bin:~/scripts:$PATH
@@ -955,18 +964,26 @@ alias instR="R CMD INSTALL *.gz; rm -rf *.gz"
 
 # Cool R-markdown Examples
 
-[João Neto](http://www.di.fc.ul.pt/~jpn/r/) has some really nice examples. They plot as `.html` but one can change the extension to `.Rmd` to get the source.
+[João Neto](http://www.di.fc.ul.pt/~jpn/r/) has some really nice
+examples. They plot as `.html` but one can change the extension to
+`.Rmd` to get the source.
 
 # Speeding up compile on 64 bit R
 
 From [here](http://www.rexamine.com/2015/07/speeding-up-r-package-installation-process/)
 
-On many R installations, the build process is set up so that only one C/C++ source file is compiled at a time. Yet, there is a simple solution for that — we may ask GNU make to allow more than one job to be submitted at once. In order to do so, we edit the `/lib64/R/etc/Renviron` file (where `/lib64/R/etc/`) is the result to a call to the R.home() function in R) and set:
+On many R installations, the build process is set up so that only one
+C/C++ source file is compiled at a time. Yet, there is a simple solution
+for that — we may ask GNU make to allow more than one job to be submitted
+at once. In order to do so, we edit the `/lib64/R/etc/Renviron` file
+(where `/lib64/R/etc/`) is the result to a call to the R.home() function
+in R) and set:
 
 ```
 MAKE='make -j 8' # submit 8 jobs at once
 ```
-instead of previously used settings. This significantly decreases the time needed to compile.
+instead of previously used settings. This significantly decreases the
+time needed to compile.
 
 # Configuring local soft on Windows.
 
@@ -976,17 +993,21 @@ See [this](http://www.stats.ox.ac.uk/pub/Rtools/libs.html) for how
 to configure `LOCAL_SOFT`.
 
 I created `C:/Apps/R/local/local320` and unzipped `local320.zip` and
-`spatial320.zip` there and set `LOCAL_SOFT` in `etc/{i386,x64}/Makeconf` (line 30)
-files in the binary distribution. This means I could add other versions
-accordingly.
+`spatial320.zip` there and set `LOCAL_SOFT` in `etc/{i386,x64}/Makeconf`
+(line 30) files in the binary distribution. This means I could add other
+versions accordingly.
 
 # git2r for WinXP
 
 HT [stewid](https://github.com/ropensci/git2r/issues/139#issuecomment-101176755)
 
-> git2r is an interface to the libgit2 library. Since libgit2 dropped support for Windows XP with the v0.21.0 release, git2r can not support Windows XP.
+> git2r is an interface to the libgit2 library. Since libgit2 dropped
+>support for Windows XP with the v0.21.0 release, git2r can not support
+> Windows XP.
 
-> @jrminter you only need zlib on Windows, no need for openssl. If you have installed Rtools and configured LOCAL_SOFT, it should work to install with:
+> @jrminter you only need zlib on Windows, no need for openssl. If you
+> have installed Rtools and configured LOCAL_SOFT, it should work to
+> install with:
 
 ```
 git clone https://github.com/ropensci/git2r.git
@@ -997,7 +1018,11 @@ make
 
 # Using Hmisc LaTeX functions without Miktex
 
-TexLive does not include the expected Windows dvi viewer `yap` which is standard with Miktex and is expected on Windows with Hmisc. The workaround is to use the `option` command. Try this solution that will write a tex file in the `$TEMP` directory. *Note:* one must manually close the `dviout` window for the script to continue.
+TexLive does not include the expected Windows dvi viewer `yap` which
+is standard with Miktex and is expected on Windows with Hmisc. The
+workaround is to use the `option` command. Try this solution that will
+write a tex file in the `$TEMP` directory. *Note:* one must manuall
+close the `dviout` window for the script to continue.
 
 ```{r, message=FALSE}
 library(Hmisc)
@@ -1075,15 +1100,30 @@ From [John Myles White](http://www.johnmyleswhite.com/notebook/2014/01/29/data-c
 
 He notes:
 
-> It may be old news to some, but I just recently discovered that the automatic type inference system that R uses when parsing CSV files assumes that data sets will never contain 64-bit integer values.
+> It may be old news to some, but I just recently discovered that the
+> automatic type inference system that R uses when parsing CSV files
+> assumes that data sets will never contain 64-bit integer values.
 
-> Specially, if an integer value read from a CSV file is too large to fit in a 32-bit integer field without overflow, the column of data that contains that value will be automatically converted to floating point. This conversion will take place without any warnings, even though it may lead to data corruption.
+> Specially, if an integer value read from a CSV file is too large to
+> fit in a 32-bit integer field without overflow, the column of data
+> that contains that value will be automatically converted to floating
+> point. This conversion will take place without any warnings, even
+> though it may lead to data corruption.
 
-> The reason that the automatic conversion of 64-bit integer-valued data to floating point is problematic is that floating point numbers lack sufficient precision to exactly represent the full range of 64-bit integer values. As a consequence of the lower precision of floating point numbers, two unequal integer values in the input file may be converted to two equal floating point values in the data.frame R uses to represent that data. Subsequent analysis in R will therefore treat unequal values as if they were equal, corrupting any downstream analysis that assumes that the equality predicate can be trusted.
+> The reason that the automatic conversion of 64-bit integer-valued data
+> to floating point is problematic is that floating point numbers lack
+> sufficient precision to exactly represent the full range of 64-bit
+> integer values. As a consequence of the lower precision of floating
+> point numbers, two unequal integer values in the input file may be
+> converted to two equal floating point values in the data.frame R uses
+> to represent that data. Subsequent analysis in R will therefore treat
+> unequal values as if they were equal, corrupting any downstream
+> analysis that assumes that the equality predicate can be trusted.
 
 # Web scraping
 
-Hadley Wickham recommend [selector gadget](http://selectorgadget.com/) as an aid to web scraping.
+Hadley Wickham recommend [selector gadget](http://selectorgadget.com/)
+as an aid to web scraping.
 
 # Tables from knitr and Rmarkdown in RStudio
 
@@ -1141,8 +1181,8 @@ And on win32, I change
 ```
 TEMP c:\Temp\tmp
 ```
-Because the usual ``Documents and Settings\\username\\...`` path gets too 
-long for building some R packages (like tikzDevice).
+Because the usual ``Documents and Settings\\username\\...`` path gets
+too long for building some R packages (like tikzDevice).
 
 Note the windows path format (I hate backslashes.)
 What were you thinking, Bill Gates??? BTW - what is wrong with short
@@ -1185,9 +1225,12 @@ print(Sys.getenv("IMG_ROOT"))
 
 ## latexexp
 
-This is from [here](http://www.magesblog.com/2015/07/adding-mathematical-notations-to-r-plots.html) and was accessed 2015-07-07.
+This is from
+[here](http://www.magesblog.com/2015/07/adding-mathematical-notations-to-r-plots.html)
+and was accessed 2015-07-07.
 
-One needs to remember to escape the `"\"` character, that is write `"\\"` instead of `"\"`.
+One needs to remember to escape the `"\"` character, that is write `"\\"`
+instead of `"\"`.
 
 ```{r, fig.width=7.5, fig.height=7.5}
 library(latex2exp)
@@ -1568,17 +1611,26 @@ Then from LaTeX (e.g. in a beamer template)
 
 From [rforwork.info](http://rforwork.info/2013/08/15/sapply-is-my-new-friend/)
 
-There are a couple of cases so far where I've found that sapply really comes in handy for me:
+There are a couple of cases so far where I've found that sapply really
+comes in handy for me:
 
-1. If I want to quickly see some descriptive stats for multiple columns in my dataframe. For example, the following would show me the medians of columns 10 through 20, displaying the column names above each median value.
+1. If I want to quickly see some descriptive stats for multiple columns
+in my dataframe. For example, the following would show me the medians of
+columns 10 through 20, displaying the column names above each median value.
 
-    ```
+```
 sapply(mydf[,10:20], median, na.rm=true)
 ```
 
 
 
-2. If I want to apply the same function to multiple vectors in my dataframe, modifying them in place. I oftentimes have count variables that have NA values in place of zeros. I made a "zerofy" function to add zeros into a vector that lacks them. So, if I want to use my function to modify these count columns, I can do the following, Which then replaces the original data in columns 30 through 40 with the modified data! Handy! 
+2. If I want to apply the same function to multiple vectors in my
+dataframe, modifying them in place. I oftentimes have count variables
+that have NA values in place of zeros. I made a "zerofy" function to
+add zeros into a vector that lacks them. So, if I want to use my
+function to modify these count columns, I can do the following, Which
+then replaces the original data in columns 30 through 40 with the
+modified data! Handy! 
 
     ```
 mydf[,30:40] = sapply(mydf[,30:40], zerofy)
@@ -1619,6 +1671,7 @@ hist(rnorm(100, x_mean, x_sd),
 # Polygons
 
 From [Daniel Marcelino](http://danielmarcelino.com/advanced-graphics/)
+
 ```{r}
 # Generate standard normal distribution data for (-5,5)
 x = seq(-5,5, length=250)
@@ -1648,23 +1701,42 @@ text(2.5, 0.115, expression(alpha==0.05))
 ```
 
 # Drawing 95% Confidence intervals
+
 [Natan Lemoine](http://climateecology.wordpress.com/2013/08/05/drawing-a-95-confidence-interval-in-r/) notes:
 
-I'm writing a post on how to draw a in 95% confidence interval in R by hand. I spent an hour or so trying to figure this out, and most message threads point someone to the ellipse() function. However, I wanted to know how it works.
+I'm writing a post on how to draw a in 95% confidence interval in R by
+hand. I spent an hour or so trying to figure this out, and most message
+threads point someone to the ellipse() function. However, I wanted to
+know how it works.
 
-The basic problem was this. Imagine two random variables with a bivariate normal distribution, called y, which is an n x 2 matrix with n rows and 2 columns. The random variables are described by a mean vector mu and covariance matrix S. The equation for an ellipse is:
+The basic problem was this. Imagine two random variables with a
+bivariate normal distribution, called y, which is an n x 2 matrix with
+n rows and 2 columns. The random variables are described by a mean vector
+mu and covariance matrix S. The equation for an ellipse is:
 
 $(y – mu) S^1 (y – mu)' = c^2$
 
-The number $c^2$ controls the radius of the ellipse, which we want to extend to the 95% confidence interval, which is given by a chi-square distribution with 2 degrees of freedom. The ellipse has two axes, one for each variable. The axes have half lengths equal to the square-root of the eigenvalues, with the largest eigenvalue denoting the largest axis. A further description of this can be found in any multivariate statistics book (or online).
+The number $c^2$ controls the radius of the ellipse, which we want to
+extend to the 95% confidence interval, which is given by a chi-square
+distribution with 2 degrees of freedom. The ellipse has two axes, one
+for each variable. The axes have half lengths equal to the square-root
+of the eigenvalues, with the largest eigenvalue denoting the largest
+axis. A further description of this can be found in any multivariat
+statistics book (or online).
 
 To calculate the ellipse, we need to do a few things:
 1. convert the variables to polar coordinates,
-2. extend the new polar variables by the appropriate half lengths (using eigenvalues),
+2. extend the new polar variables by the appropriate half lengths (using
+eigenvalues),
 3. rotate the coordinates based on the variances and covariances, and 
-4. move the location of the new coordinates back to the original means. This will make more sense when we do it by hand.
+4. move the location of the new coordinates back to the original means.
+This will make more sense when we do it by hand.
 
-First, generate some data, plot it, and use the ellipse() function to make the 95% confidence interval. This is the target interval (I use it to check myself. If my calculations match, hooray. If not, I screwed up).
+First, generate some data, plot it, and use the ellipse() function to
+make the 95% confidence interval. This is the target interval (I use
+it to check myself. If my calculations match, hooray. If not,
+I screwed up).
+
 
 ```{r}
 library(mvtnorm) # References rmvnorm()
@@ -1697,7 +1769,8 @@ evals <- eigen(P)$values
 evecs <- eigen(P)$vectors
 ```
 
-Third, make a vector of coordinates for a full circle, from 0 to 2*pi and get the critical value ($c^2$).
+Third, make a vector of coordinates for a full circle, from 0 to 2*pi
+and get the critical value ($c^2$).
 
 ```{r}
 # Angles of a circle
@@ -1708,7 +1781,11 @@ c2 <- qchisq(0.95, 2)
 c <- sqrt(c2)
 ```
 
-The vector A above are angles that describe a unit circle. The coordinates of a unit circle are found by $x = cos(a)$ and $y = sin(a)$ (use trigonometry of a triangle to get this, where the hypotenuse = 1). We need to extend the unit circle by the appropriate lengths based on the eigenvalues and then even more by the critical value.
+The vector A above are angles that describe a unit circle. The
+coordinates of a unit circle are found by $x = cos(a)$ and $y = sin(a)$
+(use trigonometry of a triangle to get this, where the hypotenuse = 1).
+We need to extend the unit circle by the appropriate lengths based on
+the eigenvalues and then even more by the critical value.
 
 ```{r}
 # Get the distances
@@ -1718,7 +1795,12 @@ yT <- c * sqrt(evals[2]) * sin(a)
 M <- cbind(xT, yT)
 ```
 
-If you plot M, you'll get an ellipse of the appropriate axes lengths, but centered on 0 and unrotated. Rotate the ellipse using the eigenvectors, which describe the relationships between the variables (more appropriately, they give the directions for the vectors of the major axes of variation). Use the equation u*M' (write this out to see why this works).
+If you plot M, you'll get an ellipse of the appropriate axes lengths,
+but centered on 0 and unrotated. Rotate the ellipse using the
+eigenvectors, which describe the relationships between the variables
+(more appropriately, they give the directions for the vectors of the
+major axes of variation). Use the equation u*M' (write this out to see 
+this works).
 
 ```{r}
 # Covert the coordinates
@@ -1726,15 +1808,18 @@ transM <- evecs %*% t(M)
 transM <- t(transM)
 ```
 
-The final step is to move the rotated ellipse back to the original scale (centered around the original means) and plot the data.
+The final step is to move the rotated ellipse back to the original
+scale (centered around the original means) and plot the data.
 
 ```(r)
 lines(transM + mu)
 ```
 
-This gives the following plot, with the red line being the output from the ellipse() function.
+This gives the following plot, with the red line being the output from
+the ellipse() function.
 
-And that's that! Hopefully this helps someone like me who spent hours looking but couldn't find anything.
+And that's that! Hopefully this helps someone like me who spent hours
+looking but couldn't find anything.
 
 
 
@@ -1936,15 +2021,20 @@ system.time(convolve(x, y, type = "open"))
 # Parse arguments of an R script
 By [Gregor Gorjanc](http://ggorjan.blogspot.com/2013/07/parse-arguments-of-r-script.html)
 
-R can be used also as a scripting tool. We just need to add shebang in the first line of a file (script):
+R can be used also as a scripting tool. We just need to add shebang in
+the first line of a file (script):
 
 ```
+
 #!/usr/bin/Rscript
 ```
 
 and then the R code should follow.
 
-Often we want to pass arguments to such a script, which can be collected in the script by the commandArgs() function. Then we need to parse the arguments and conditional on them do something. I came with a rather general way of parsing these arguments using simply these few lines:
+Often we want to pass arguments to such a script, which can be collected
+in the script by the commandArgs() function. Then we need to parse the
+arguments and conditional on them do something. I came with a rather
+general way of parsing these arguments using simply these few lines:
 
 ```
 # Collect arguments
@@ -1997,6 +2087,8 @@ if(is.null(args$arg3)) {
 
 ```
 
-It is some work, but I find it pretty neat and use it for quite a while now. I do wonder what others have come up for this task. I hope I did not miss some very general solution.
+It is some work, but I find it pretty neat and use it for quite a while
+now. I do wonder what others have come up for this task. I hope I did
+not miss some very general solution.
 
 [Back to Index](../README.html)
