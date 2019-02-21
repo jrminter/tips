@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-02-10"
+date: "Started: 2013-07-16, Last modified: 2019-02-20"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
