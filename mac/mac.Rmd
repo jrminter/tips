@@ -21,6 +21,16 @@ output:
 
 3. Choose the default browser from the drop down menu
 
+## Browser Cache locations
+
+Plan is to not back these up to timemachine
+
+```
+/Users/jrminter/Library/Caches/Google/Chrome/Default
+/Users/jrminter/Library/SafariTechnologyPreview
+```
+
+
 ## Upgrading bash
 
 From [itnext.io](https://itnext.io/upgrading-bash-on-macos-7138bd1066ba).
