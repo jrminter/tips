@@ -40,9 +40,12 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 ## Fixing pandoc access error on Windows
 
-Use RStudio version `1.2.1186` (2018-12-10)
-uses Pandoc 2.5. RStudio `1.2.1280` (2019-02-03)
-which has an access error for long files.
+- Used RStudio version `1.2.1186` (2018-12-10)
+uses Pandoc 2.5. Pandoc worked on Win 7 x64 box and
+Win 10 Pro x64 Parallels VM.
+
+- RStudio `1.2.1280` (2019-02-03) has an access error for long files.
+This uses Pandoc 2.6.
 
 
 ## RStudio crashes on opening project
