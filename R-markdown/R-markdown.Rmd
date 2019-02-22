@@ -1,7 +1,7 @@
 ---
 title: "R-Markdown Tips"
 author: "J. R. Minter"
-date: "Started: 2016-12-08, Last modified: 2018-10-31"
+date: "Started: 2016-12-08, Last modified: 2019-02-21"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -25,6 +25,17 @@ the RStudio Intro to Pandoc
 [markdown](http://rmarkdown.rstudio.com/authoring_pandoc_markdown.html),
 and for $\LaTeX$ math, the
 [AOPS](http://artofproblemsolving.com/wiki/index.php/LaTeX:Commands) site.
+
+# Rmarkdown Kung Fu
+
+## Selective page break for PDF document
+
+Use a chunk that looks like this to only break for PDF...
+
+```
+{r, results='asis', echo=FALSE, eval=(knitr::opts_knit$get('rmarkdown.pandoc.to') == 'latex')}
+cat('\\pagebreak')
+```
 
 ## Quickly preview any Rmarkdown document in RStudio's viewer
 
