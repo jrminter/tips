@@ -28,6 +28,14 @@ and for $\LaTeX$ math, the
 
 # Rmarkdown Kung Fu
 
+## Jenny Bryan's hint
+
+[Jenny Bryan](https://twitter.com/JennyBryan/status/1098104289279365120)
+
+Replying to @S_Owla:
+
+![.R, then feel free to knit/render it anyway!](./png/jenny-bryan-knit-r.png)
+
 ## Selective page break for PDF document
 
 Use a chunk that looks like this to only break for PDF...
