@@ -55,7 +55,8 @@ install_new('binb')
 
 # matrix algebra
 # install_new('rafalib')
-install_new('UsingR')
+install_new('UsingR') # data including basic Galton
+install_new('HistData') # Has Galton Families
 
 # better number formatting
 install_new('DescTools')
