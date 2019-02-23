@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-02-20"
+date: "Started: 2013-07-16, Last modified: 2019-02-23"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -30,6 +30,10 @@ Plan is to not back these up to timemachine
 /Users/jrminter/Library/SafariTechnologyPreview
 ```
 
+## Setup tips
+
+18 setup tips from
+[cnet.com](https://www.cnet.com/how-to/things-to-tweak-when-setting-up-a-new-macbook/).
 
 ## Upgrading bash
 
