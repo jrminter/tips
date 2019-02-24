@@ -1,7 +1,7 @@
 ---
 title: "TeXLive Hints"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-02-23"
+date: "Started: 2013-07-16, Last modified: 2019-02-24"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -158,10 +158,6 @@ fmtutil-sys --all
 ```
 
 
-
-
-
-
 ## Common characters
 
 | Character      | \LaTeX symbol | md...html/pkg |
@@ -169,6 +165,16 @@ fmtutil-sys --all
 | plus/minus     | \\pm          | yes           |
 | degree in text | \\textdegree  | textcomp      |
 | mu  upright    | \\upmu        | upgreek       |
+
+## Beamer Hints
+
+From: Amanda Agan on [twitter](https://twitter.com/amandayagan/status/1099370188884062209)
+[2019-02-23]:
+
+> Beamer peeps: we really do **not** need the constant reminder of your name/title/date
+> at the bottom of slides (slide nums I like though!)    
+> \\setbeamertemplate{footline}[frame number]    
+> \\setbeamertemplate{navigation symbols}{}    
 
 ## XeLaTeX slows down when it encounters a .fd file
 
