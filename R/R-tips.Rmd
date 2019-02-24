@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-02-13"
+date: "Started: 2013-07-16, Last modified: 2019-02-23"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -49,6 +49,13 @@ pandoc.
 
 To be safe, remove previous versions, restart, install the desired
 to test version, and log out and log back in.
+
+**Note**: Yihui Xie shows how to get the pandoc version:
+
+```{r get-pandoc-version, echo=TRUE}
+rmarkdown::pandoc_version()
+```
+
 
 
 ## RStudio crashes on opening project
