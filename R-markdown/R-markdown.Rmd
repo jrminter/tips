@@ -399,6 +399,8 @@ You can also write an in-text citation, as follows:
 @smith04 [p. 33] says blah.
 ```
 
-
+```{r}
+sessionInfo()
+```
 
 [Back to Index](../README.html)
