@@ -1,7 +1,7 @@
 ---
 title: "R-Markdown Tips"
 author: "J. R. Minter"
-date: "Started: 2016-12-08, Last modified: 2019-02-22"
+date: "Started: 2016-12-08, Last modified: 2019-02-27"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -19,12 +19,20 @@ author to generate attractive documents that are stored in plain text files
 that are compatible with version control. This works very well in the
 **RStudio** environment.
 
-Some key resources are the
-[RStudio Intro to rmarkdown](http://rmarkdown.rstudio.com/lesson-1.html), 
-the RStudio Intro to Pandoc
-[markdown](http://rmarkdown.rstudio.com/authoring_pandoc_markdown.html),
-and for $\LaTeX$ math, the
+Some key resources are:
+
+1. The [RStudio](http://rmarkdown.rstudio.com/lesson-1.html)
+introduction to Rmarkdown.
+
+2. The
+[RStudio](http://rmarkdown.rstudio.com/authoring_pandoc_markdown.html)
+introduction to pandoc
+
+3. For $\LaTeX$ math, the
 [AOPS](http://artofproblemsolving.com/wiki/index.php/LaTeX:Commands) site.
+
+4. The `Liberate Science` [rmarkdown workshop](https://github.com/libscie/rmarkdown-workshop)
+repository on github.
 
 # Rmarkdown Kung Fu
 
