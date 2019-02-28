@@ -53,7 +53,7 @@ root user password. You will then be the root user.
 4. Using the editor, add
 
    ```
-   username        ALL=(ALL)      ALL
+   username (tab) ALL=(ALL) (tab) ALL
    ```
 
    to the sudoers file. Save (`write out`) and `exit`.
