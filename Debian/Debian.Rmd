@@ -61,5 +61,31 @@ root user password. You will then be the root user.
 This was adapted from the answer by by Shrikant Khawale on 
 [stackexchange](https://unix.stackexchange.com/questions/179954/username-is-not-in-the-sudoers-file-this-incident-will-be-reported).
 
+## Adding minicondaa
+
+1. Download the latest [installer](https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh).
+
+2. Make the shell script executable (`chmod +x *.sh`).
+
+3. Install to `/home/jrminter/Apps/miniconda3`.
+
+4. Answer `yes` to initialize in `.bashrc`.
+
+5. Open a new terminal.
+
+    Add:
+    
+    ```
+    conda install numpy scipy matplotlib seaborn jupyter spyder
+    conda install sqlite pandas xlwt scikit-image
+    conda config --add channels conda-forge
+    conda install mahotas
+    conda install sympy
+    conda install cython
+    pip install iversions
+    
+    ```
+
+
 
 [Back to Index](../README.html)
