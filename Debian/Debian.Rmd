@@ -37,6 +37,18 @@ To update the distribution
 apt-get dist-upgrade
 ```
 
+# Admin tasks
+
+## Add a user to sudo
+
+From the command line:
+
+```
+su -
+(enter password)
+adduser username sudo
+
+```
 
 
 
