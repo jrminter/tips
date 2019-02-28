@@ -20,6 +20,23 @@ related to Ubuntu. Most common hardware is supported. Get it
 [**here**](https://www.debian.org/doc/). Installation guides are
 [**here**](https://www.debian.org/releases/stable/installmanual).
 
+# Updates
+
+## From the command line
+
+See `man apt-get`.
+
+```
+apt-get update
+apt-get upgrade
+```
+
+To update the distribution
+
+```
+apt-get dist-upgrade
+```
+
 
 
 
