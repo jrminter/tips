@@ -43,10 +43,10 @@ apt-get dist-upgrade
 
 From the command line:
 
-1. Go to home directory by running command `cd -`
+1. Go to home directory by running command `cd $HOME`
 
-2. Type `su -`. It will ask you for password. Type your
-login password you will be in root user.
+2. Type `su -`. It will ask you for password. Type the
+root user password. You will then be the root user.
 
 3. Type `visudo`
 
@@ -58,6 +58,7 @@ login password you will be in root user.
 
    to the sudoers file. Save (`write out`) and `exit`.
 
-
+This was from the answer by on 
+[stackexchange](https://unix.stackexchange.com/questions/179954/username-is-not-in-the-sudoers-file-this-incident-will-be-reported)
 
 [Back to Index](../README.html)
