@@ -58,7 +58,8 @@ root user password. You will then be the root user.
 
    to the sudoers file. Save (`write out`) and `exit`.
 
-This was from the answer by on 
-[stackexchange](https://unix.stackexchange.com/questions/179954/username-is-not-in-the-sudoers-file-this-incident-will-be-reported)
+This was adapted from the answer by by Shrikant Khawale on 
+[stackexchange](https://unix.stackexchange.com/questions/179954/username-is-not-in-the-sudoers-file-this-incident-will-be-reported).
+
 
 [Back to Index](../README.html)
