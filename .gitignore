@@ -53,6 +53,12 @@ ConductiveEpoxy/ConductiveEpoxy.md
 ConductiveEpoxy/ConductiveEpoxy.html
 ConductiveEpoxy/figure/
 
+# Debian directory
+Debian/.DS_Store
+Debian/Debian.md
+Debian/Debian.html
+Debian/figure/
+
 # Denton directory
 Denton/.DS_Store
 Denton/Denton.md
