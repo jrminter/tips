@@ -20,6 +20,22 @@ related to Ubuntu. Most common hardware is supported. Get it
 [**here**](https://www.debian.org/doc/). Installation guides are
 [**here**](https://www.debian.org/releases/stable/installmanual).
 
+# Mirrors
+
+I like columbia best - much faster than rit.
+The two choices I have in
+`/etc/apt/sources.list` are:
+
+```
+# deb http://mirror.rit.edu/debian/ stretch main
+# deb-src http://mirror.rit.edu/debian/ stretch main
+
+deb http://mirror.cc.columbia.edu/debian/ stretch main
+deb-src http://mirror.cc.columbia.edu/debian/ stretch main
+
+```
+
+
 # Updates
 
 ## From the command line
