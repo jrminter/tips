@@ -47,6 +47,13 @@ apt-get update
 apt-get upgrade
 ```
 
+To overide mirror warnings
+
+```
+sudo apt-get -o Acquire::Check-Valid-Until=false update
+sudo apt-get -o Acquire::Check-Valid-Until=false upgrade
+```
+
 To update the distribution
 
 ```
