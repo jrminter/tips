@@ -40,19 +40,14 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 ## Fixing pandoc access error on Windows
 
-On my Win7 box and Win10 VM on Mac, RStudio 1.2.1280 seems to cause
-access violations. So does RStudio-1.2.1293. These two versions use
-the same version of pandoc...
-
-RStudio 1.2.1186 seems to work. It uses the previous version of
-pandoc. Had trouble later. Turns out pandoc 2.5 32 bit seems to
-work on Win7 even with 1.2.1303. Go figure. Had some help
-from comments from
+On my Win7 box and Parallels Win10 VM on Mac with RStudio 1.2.1302
+has pandoc access errors. It turns out that pandoc 2.5 32 bit seems
+to work on both systems. Had some help from comments from
 [here](https://github.com/rstudio/rstudio/issues/3661). Some had
-better success with x64 version. Seems OS dependent...
+better success with x64 version. Go figure...
 
-To be safe, remove previous versions, restart, install the desired
-to test version, and log out and log back in.
+Install the desired binaries in the RStudio pandoc directory,
+log out and log back in.
 
 **Note**: Yihui Xie shows how to get the pandoc version:
 
