@@ -30,8 +30,13 @@ The two choices I have in
 # deb http://mirror.rit.edu/debian/ stretch main
 # deb-src http://mirror.rit.edu/debian/ stretch main
 
+# Columbia does not seem to be updating 2019-03-02
 deb http://mirror.cc.columbia.edu/debian/ stretch main
 deb-src http://mirror.cc.columbia.edu/debian/ stretch main
+
+# Binghamton updated as of 2019-03-02
+deb http://debian.cs.binghamton.edu/debian/ stretch main
+deb-src http://debian.cs.binghamton.edu/debian/ stretch main
 
 ```
 
