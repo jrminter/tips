@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Debian Tips"
 author: "J. R. Minter"
-date: "Started: 2019-02-28, Last modified: 2019-02-28"
+date: "Started: 2019-02-28, Last modified: 2019-03-02"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -21,6 +21,8 @@ related to Ubuntu. Most common hardware is supported. Get it
 [**here**](https://www.debian.org/releases/stable/installmanual).
 
 # Mirrors
+
+Mirror status: [here](https://mirror-master.debian.org/status/mirror-status.html)
 
 I like columbia best - much faster than rit.
 The two choices I have in
