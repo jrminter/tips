@@ -12,6 +12,7 @@
 # 2018-07-05 added ropenscilabs/icon, emitanaka/anicon, yihui/xaringan
 #            and tpoisot/digitize from github
 # 2018-08-15 Added DescTools package for numeric fomatting.
+# 2019-03-03 Add rdformats
 #
 
 
@@ -50,6 +51,7 @@ install_new('reticulate') # R-python interface
 install_new('knitcitations')
 install_new('pander')
 install_new('rticles')
+install_new('rdformats')
 
 install_new('binb')
 

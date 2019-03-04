@@ -178,6 +178,8 @@ This skips several steps from original article!
 
 [R-GeoSpatial](./R-GeoSpatial/R-GeoSpatial.html)
 
+[R-knitrBootstrap](./R-knitrBootstrap/R-knitrBootstrap.html)
+
 [R-lm](./R-lm/R-lm.html)
 
 [R-loess](./R-loess/R-loess.html)
