@@ -96,7 +96,8 @@ My favorites are:
 3. **Cerulean**
 ![](inc/3-Cerulean.png)
 
-There are also highlight themes. I like `GoogleCode`, `Github`, `Xcode`, `Monokai`.
+There are also highlight themes. I like `GoogleCode`, `Github`, `Xcode`,
+`Monokai`, and `Sunburst`.
 
 
 [Back to Index](../README.html)
