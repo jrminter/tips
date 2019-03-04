@@ -99,5 +99,6 @@ My favorites are:
 There are also highlight themes. I like `GoogleCode`, `Github`, `Xcode`,
 `Monokai`, and `Sunburst`.
 
+See the example file [here](testKnitrBootstrap.Rmd).
 
 [Back to Index](../README.html)
