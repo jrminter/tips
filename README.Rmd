@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-02-28"
+date: "Started: 2013-07-16, Last modified: 2019-03-04"
 output:
   html_document:
     css: ./theme/jm-gray-vignette.css
