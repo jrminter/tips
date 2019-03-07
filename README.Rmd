@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-03-04"
+date: "Started: 2013-07-16, Last modified: 2019-03-06"
 output:
   html_document:
     css: ./theme/jm-gray-vignette.css
@@ -14,9 +14,16 @@ This repository contains the John Minter's useful tips in Rmarkdown
 format.
 
 
-**First**, some quickies: 
+**First**, some quickies:
 
-1. **Fun snippets**
+1. **Symbolic links**. I always get this confused
+
+    ```
+       file     link
+ln -s source destination
+    ```
+
+2. **Fun snippets**
 
 > Your closest colaborator is you, six months from now    
 > ... and you don't respond to email     
@@ -25,17 +32,17 @@ format.
 > DRY (do not repeat yourself) vs WET (waste everyones time) coding styles    
 > - Peter Baker (UseR 2018)
 
-2. **Getting started with data science**
+3. **Getting started with data science**
 
 - A very helpful article from
 [Datacamp](https://www.datacamp.com/community/tutorials/setup-data-science-environment).
 
-3. **Clear the Chrome Cache**
+4. **Clear the Chrome Cache**
 
 - Press "CTRL" + "Shift" + "Delete" keys in Windows or Linux
 - Press "Command" + "Shift" + "Delete"" keys on MacOS.
 
-4. **Delete Specific Cookies in Chrome for Mac OS X**
+5. **Delete Specific Cookies in Chrome for Mac OS X**
 
     From [osxdaily.com](http://osxdaily.com/2016/07/02/delete-cookies-chrome-browser/): You can remove a specific website cookie from Chrome by doing the following:
 
@@ -51,7 +58,7 @@ This skips several steps from original article!
 
 - Avoid cookie placement and cache generation in the first place by using the Chrome `Incognito Mode` private browsing feature.
 
-5. **Automatically download all files in a directory**
+6. **Automatically download all files in a directory**
 
    Let's also exclude all the `index.html` files... 
 
