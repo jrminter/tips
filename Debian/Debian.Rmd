@@ -74,6 +74,43 @@ apt-get dist-upgrade
 
 # Admin tasks
 
+## Removing old kernels
+
+From
+[tecmint.com](https://www.tecmint.com/remove-old-kernel-in-debian-and-ubuntu/).
+
+1. Check the current kernel:
+
+    ```
+    jrminter@DebianSid:~$ uname -sr
+    Linux 4.19.0-3-amd64
+    ```
+
+2. List all kernels:
+
+    ```
+    jrminter@DebianSid:~$ dpkg -l | grep linux-image | awk '{print$2}'
+    linux-image-4.19.0-3-amd64
+    linux-image-4.9.0-8-amd64
+    linux-image-amd64
+    ```
+3. Delete the obsolete kernels & update grub:
+
+    ```
+    jrminter@DebianSid:~$ sudo apt remove --purge linux-image-4.9.0-8-amd64
+    jrminter@DebianSid:~$ sudo apt remove --purge linux-image-amd64
+    jrminter@DebianSid:~$ sudo update-grub2
+    ```
+
+4. Reboot the system:
+
+    ```
+    jrminter@DebianSid:~$ sudo reboot
+    ```
+
+
+
+
 ## Add a user to sudo
 
 ### The easy way
@@ -122,9 +159,8 @@ This was adapted from the answer by by Shrikant Khawale on
 
 4. Answer `yes` to initialize in `.bashrc`.
 
-5. Open a new terminal.
-
-    Add:
+5. Open a new terminal. Add the packages using `conda` from the
+command line:
     
     ```
     conda install numpy scipy matplotlib seaborn jupyter spyder
@@ -141,32 +177,35 @@ This was adapted from the answer by by Shrikant Khawale on
 
 Install Sublime Text 3 via the official apt repository:
 
+0. Add the required package
+
+    ```
+    sudo apt install apt-transport-https
+    ```
+
 1. Open terminal via Ctrl+Alt+T or by searching for `Terminal`
-from desktop app launcher. When it opens, run command to install
+from desktop app launcher. When it opens, run the command to install
 the key:
 
-```
-wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-```
+    ```
+    wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -sublimetext-apt-key
+    ```
 
+2. Then add the apt repository via the command:
 
-sublimetext-apt-key
-
-2. Then add the apt repository via command:
-
-echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-
-sublime text apt repository
+    ```
+    echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+    ```
 
 3. Finally check updates and install sublime-text via your system package manager:
 
-install-sublime-text
-or by running commands:
-
-sudo apt-get update
-
-sudo apt-get install sublime-text
-Once installed, launch it from your desktop app launcher and enjoy!
+    ```
+    sudo apt-get update
+    sudo apt-get install sublime-text
+    ```
+    
+    Once installed, launch it from your desktop app launcher and enter your
+    license.
 
 
 # Cleanup
