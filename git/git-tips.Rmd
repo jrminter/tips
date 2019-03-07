@@ -107,7 +107,7 @@ git pull origin table-names
     git config --global credential.helper wincred
     ```
     
-    **Mac*:*
+    **Mac:**
 
     Find out if the credential helper is already installed. In the shell, enter:
     
