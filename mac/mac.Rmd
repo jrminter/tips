@@ -15,7 +15,7 @@ output:
 
 ## The global `.gitignore_global` file
 
-It should contain:
+It should contain: 
 
 ```
 *~
