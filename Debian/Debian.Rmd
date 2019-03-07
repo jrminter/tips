@@ -71,6 +71,22 @@ apt-get dist-upgrade
 
 ## Add a user to sudo
 
+### The easy way
+
+Complements of [linuxpanda](https://linuxpanda.wordpress.com/2016/12/31/things-to-do-after-installing-debian-stretch/)
+
+```
+apt-get install sudo
+usermod -a -G sudo <username>
+```
+
+Replace `<username>` with your username to which you want to grant sudo access.
+
+Now logout & login to get sudo access to those users.
+
+
+### The hard way...
+
 From the command line:
 
 1. Go to home directory by running command `cd $HOME`
