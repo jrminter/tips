@@ -142,8 +142,6 @@ git pull origin table-names
     for a semester...
 
 
-
-
 ## Useful videos
 
 See youtube [Git Foundation Playlist](https://www.youtube.com/playlist?list=PLg7s6cbtAD15G8lNyoaYDuKZSKyJrgwB-)
