@@ -20,11 +20,16 @@ related to Ubuntu. Most common hardware is supported. Get it
 [**here**](https://www.debian.org/doc/). Installation guides are
 [**here**](https://www.debian.org/releases/stable/installmanual).
 
+Useful sites:
+
+- Raphael Hertzog's
+[Mastering Debian](https://raphaelhertzog.com/mastering-debian/) .
+
 # Mirrors
 
 Mirror status: [here](https://mirror-master.debian.org/status/mirror-status.html)
 
-I like columbia best - much faster than rit.
+I like Columbia best - much faster than RIT.
 The two choices I have in
 `/etc/apt/sources.list` are:
 
@@ -54,7 +59,7 @@ apt-get update
 apt-get upgrade
 ```
 
-To overide mirror warnings
+To override mirror warnings
 
 ```
 sudo apt-get -o Acquire::Check-Valid-Until=false update
@@ -107,7 +112,7 @@ root user password. You will then be the root user.
 This was adapted from the answer by by Shrikant Khawale on 
 [stackexchange](https://unix.stackexchange.com/questions/179954/username-is-not-in-the-sudoers-file-this-incident-will-be-reported).
 
-## Adding minicondaa
+# Adding miniconda
 
 1. Download the latest [installer](https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh).
 
@@ -162,5 +167,18 @@ sudo apt-get update
 
 sudo apt-get install sublime-text
 Once installed, launch it from your desktop app launcher and enjoy!
+
+
+# Cleanup
+
+1. Remove unneeded config files
+
+    From: [raphaelhertzog.com](https://raphaelhertzog.com/2011/01/31/debian-cleanup-tip-1-get-rid-of-useless-configuration-files/).
+
+    ```
+    sudo apt-get install aptitude
+    sudo aptitude purge ?config-files
+    
+    ```
 
 [Back to Index](../README.html)
