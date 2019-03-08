@@ -108,7 +108,9 @@ From
     jrminter@DebianSid:~$ sudo reboot
     ```
 
+## Creating GPG keys
 
+See [https://keyring.debian.org](https://keyring.debian.org/creating-key.html)
 
 
 ## Add a user to sudo
