@@ -1,7 +1,7 @@
 ---
 title: "Git Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-10-22"
+date: "Started: 2013-07-16, Last modified: 2019-03-07"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -79,16 +79,67 @@ or
 git pull origin table-names
 ```
 
-3. Using git credentials
+## Using git credentials
 
-From [stackoverflow](https://stackoverflow.com/questions/1595848/configuring-git-over-ssh-to-login-once)
+1. From [stackoverflow](https://stackoverflow.com/questions/1595848/configuring-git-over-ssh-to-login-once).
 
-For the `tip` project:
+    For the `tip` project:
 
-```
-git config -l
-git config remote.origin.url git@github.com:jrminter/tips.git
-```
+    ```
+    git config -l
+    git config remote.origin.url git@github.com:jrminter/tips.git
+    ```
+
+2. Jenny Bryan's credential helper tips from
+[happygitwithr.com](https://happygitwithr.com/credential-caching.html).
+
+    **Windows:**
+
+    Plan A: 
+    
+    ```
+    git config --global credential.helper manager
+    ```
+    
+    Plan B (deprecated):
+    
+    ```
+    git config --global credential.helper wincred
+    ```
+    
+    **Mac:**
+
+    Find out if the credential helper is already installed. In the shell, enter:
+    
+    ```
+    git credential-osxkeychain
+    ```
+    
+    and look for this output:
+    
+    ```
+    usage: git credential-osxkeychain <get|store|erase>
+    ```
+    
+    If you don’t get this output, it means you need a more recent version
+    of Git, either via command line developer tools or Homebrew.
+    
+    Once you’ve confirmed you have the credential helper, enter:
+    
+    ```
+    git config --global credential.helper osxkeychain
+    ```
+    
+    **Linux:**
+
+    In the shell, enter:
+    
+    ```
+    git config --global credential.helper 'cache --timeout=10000000'
+    ```
+    
+    to store your password for ten million seconds or around 16 weeks, enough
+    for a semester...
 
 
 ## Useful videos
