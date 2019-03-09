@@ -14,16 +14,33 @@ output:
 
 # Introduction
 
-[Debian](https://www.debian.org/) is a free Linux operating system that is
-related to Ubuntu. Most common hardware is supported. Get it
-[**here**](https://www.debian.org/distrib/). Documentation is
-[**here**](https://www.debian.org/doc/). Installation guides are
+## Key Debian Sites
+
+- [**Debian**](https://www.debian.org/) is a free Linux operating system that
+is related to Ubuntu. Most common hardware is supported.
+
+- Get it
+[**here**](https://www.debian.org/distrib/).
+
+- Documentation is
+[**here**](https://www.debian.org/doc/).
+
+- Installation guides are
 [**here**](https://www.debian.org/releases/stable/installmanual).
 
-Useful sites:
+## Other Useful sites:
 
 - Raphael Hertzog's
-[Mastering Debian](https://raphaelhertzog.com/mastering-debian/) .
+[Mastering Debian](https://raphaelhertzog.com/mastering-debian/).
+
+- HowTooForge
+[debian-minimal-server](https://www.howtoforge.com/tutorial/debian-minimal-server/).
+
+- TogaWare
+[Linux Survivor](https://www.togaware.com/linux/survivor/).
+
+- securitynewspaper.com
+[critical vulnerability](https://www.securitynewspaper.com/2019/01/24/critical-vulnerability-on-linux-apt-get-in-debian-ubuntu-and-mint-distros/).
 
 # Mirrors
 
