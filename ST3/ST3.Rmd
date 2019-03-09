@@ -23,6 +23,7 @@ From [Marius Schulz](https://blog.mariusschulz.com/2014/12/16/how-to-set-up-subl
 
 
 # Spell Checking
+
 One can set the dictionary from the ``View`` menu. One can toggle spell checking either from the ``View`` menu or with ``F6``. For more information, see [here](https://www.sublimetext.com/docs/3/spell_checking.html).
 
 # Setting file associations
