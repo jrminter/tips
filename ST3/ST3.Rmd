@@ -471,8 +471,15 @@ to be quite helpful.
 On Windows, this is in file `Preferences.sublime-settings` in:
 
 ```
-C:\Users\userName\AppData\Roaming\Sublime Text 3\Packages\User
+C:\Users\jrminter\AppData\Roaming\Sublime Text 3\Packages\User
 ```
+
+On Mac this is in:
+
+```
+"/Users/jrminter/Library/Application Support/Sublime Text 3/Packages/User"
+```
+
 
 
 # Using Sublime Text 3 with git
