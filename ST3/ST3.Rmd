@@ -1,7 +1,7 @@
 ---
 title: "Sublime Text 3 Tips"
 author: "J. R. Minter"
-date: "Started: 2015-02-13, Last modified: 2019-03-10"
+date: "Started: 2015-02-13, Last modified: 2019-03-11"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -480,6 +480,7 @@ On Mac this is in:
 "/Users/jrminter/Library/Application Support/Sublime Text 3/Packages/User"
 ```
 
+**Note**: unzip manual packages in here...
 
 
 # Using Sublime Text 3 with git
