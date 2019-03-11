@@ -1,7 +1,7 @@
 ---
 title: "wxMaxima Tips"
 author: "J. R. Minter"
-date: "Started: 2018-03-23, Last modified: 2018-10-11"
+date: "Started: 2018-03-23, Last modified: 2019-03-10"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -27,6 +27,16 @@ Note that one can install this on MacOSX by
 brew tap homebrew/science
 brew install maxima wxmaxima
 ```
+
+One can also download `Maxima-5.42.2-VTK-macOS.dmg` from
+[Source Forge](https://sourceforge.net/projects/maxima/files/Maxima-MacOS/5.42.2-MacOSX/).
+This was released `2019-02-05`.
+
+I use the wxMaxima App included in the package (look inside `Maxima.app`).
+I configured gnuplot in the `.maxima` folder and zipped up the folder
+and put it in Dropbox. This fixed my inital problem when `wxMaxima` got stuck
+in full sceen mode. Sometimes it does not like to shut down...
+
 
 # Issues
 
