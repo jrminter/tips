@@ -479,8 +479,14 @@ On Mac this is in:
 ```
 "/Users/jrminter/Library/Application Support/Sublime Text 3/Packages/User"
 ```
+## Packages
 
-**Note**: unzip manual packages in here...
+Package Control does not seem to work.
+Available packages are cataloged on
+[packagecontrol.io](https://packagecontrol.io/).
+
+**Note**: unzip manual packages in the `User` folder shown above...
+
 
 
 # Using Sublime Text 3 with git
