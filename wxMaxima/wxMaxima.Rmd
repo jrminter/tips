@@ -1,7 +1,7 @@
 ---
 title: "wxMaxima Tips"
 author: "J. R. Minter"
-date: "Started: 2018-03-23, Last modified: 2019-03-10"
+date: "Started: 2018-03-23, Last modified: 2019-03-11"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -40,13 +40,18 @@ in full sceen mode. Sometimes it does not like to shut down...
 
 # Issues
 
-I had problems with gnuplot (2018-05-21). There is a bug that has not
+1. I had problems with gnuplot (2018-05-21). There is a bug that has not
 made it to homebrew. The fix was to add to **~/.maxima/wxmaxima-init**.
 This was from: [github](https://github.com/andrejv/wxmaxima/issues/973)
 
-```
-wxplot_old_gnuplot:false$
-``
+    ```
+    wxplot_old_gnuplot:false$
+    ```
+2. I have had problems on MacOS with the app getting stuck in full screen
+mode if I enter something other than `CMD + Return`. The solution is to
+remove the `wxMaxima Preferences` file from
+`/Users/jrminter/Library/Preferences`. I saved a good one in my 
+`Desktop/shortcuts/Maxima` folder.
 
 # File formats
 
