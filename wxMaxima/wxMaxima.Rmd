@@ -21,6 +21,17 @@ outlining its use. The source code for `wxMaxima` is on
 [github](https://github.com/andrejv/wxmaxima). There is also a
 helpful [website](http://andrejv.github.io/wxmaxima/index.html). 
 
+# Key Info
+
+1. Use `Shift + Return` to enter a command into a cell.
+
+2. Different types of cells are in the `Cell` menu. On Mac
+`CMD+0` creates an input cell, `CMD+1` creates a text cell.
+Other types are best chosen from the menu...
+
+
+# Installation
+
 Note that one can install this on MacOSX by
 
 ```
