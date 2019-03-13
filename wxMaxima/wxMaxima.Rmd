@@ -1,7 +1,7 @@
 ---
 title: "wxMaxima Tips"
 author: "J. R. Minter"
-date: "Started: 2018-03-23, Last modified: 2019-03-11"
+date: "Started: 2018-03-23, Last modified: 2019-03-13"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
