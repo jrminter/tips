@@ -25,9 +25,12 @@ helpful [website](http://andrejv.github.io/wxmaxima/index.html).
 
 1. Use `Shift + Return` to enter a command into a cell.
 
-2. Different types of cells are in the `Cell` menu. On Mac
-`CMD+0` creates an input cell, `CMD+1` creates a text cell.
-Other types are best chosen from the menu...
+2. Different types of cells are in the `Cell` menu. Key shortuts:
+
+    - Mac `CMD+0`, PC `CTL+0` creates an input cell
+    - Mac `CMD+1`, PC `CTL+1` creates a text cell
+
+    Other types are best chosen from the menu...
 
 
 # Installation
