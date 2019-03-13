@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-03-02"
+date: "Started: 2013-07-16, Last modified: 2019-03-12"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -54,7 +54,7 @@ log out and log back in.
 ```{r get-pandoc-version, echo=TRUE}
 rmarkdown::pandoc_version()
 ```
-
+Currently running with pandoc32 on My win7 box
 
 
 ## RStudio crashes on opening project
