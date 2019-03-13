@@ -54,7 +54,7 @@ log out and log back in.
 ```{r get-pandoc-version, echo=TRUE}
 rmarkdown::pandoc_version()
 ```
-Currently running with pandoc32 on My win7 box
+Currently running with pandoc32 on My win7 box and my Win10 64 VM on Mac
 
 
 ## RStudio crashes on opening project
