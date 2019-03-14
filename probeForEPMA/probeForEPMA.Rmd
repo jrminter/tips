@@ -1,7 +1,7 @@
 ---
 title: "Probe For EPMA"
 author: "John Minter"
-date: "Started: 2017-05-27, Last modified: 2018-10-11"
+date: "Started: 2017-05-27, Last modified: 2019-03-14"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -34,6 +34,28 @@ of the screen and hit the green button.
 
 5. When done with the VM, exit FS mode and shut down. Use CMD+Option+D
 to restore the dock.
+
+## Fix a Win 7 problem
+
+From [here](https://probesoftware.com/smf/index.php?topic=76.msg2289#msg2289)
+
+We now have a fix for the Windows Installer issues that I have been seeing on some Win7 64 computers. The steps are amazingly easy, so here they are, but do let me know if you have trouble with them.
+
+1. Open the command prompt in administrator mode by typing "cmd" in the Start button "Search Programs and Files field, then once the Cmd.exe app appears in the file list, right click the Cmd.exe app and select "Run As Administrator" from the menu. 
+
+2. Then navigate to “C:\Windows\System32” folder using the DOS cd command and type following command line:
+
+```
+regsvr32 msi.dll
+```
+
+3. Now , navigate to “C:\Windows\SysWow64” folder and again type same command line:
+
+```
+regsvr32 msi.dll
+```
+
+That fixed all the Windows installer and update issues on all the computers I've tried it on so far.
 
 # Getting started
 
