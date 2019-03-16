@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-03-12"
+date: "Started: 2013-07-16, Last modified: 2019-03-15"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -40,14 +40,10 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 ## Fixing pandoc access error on Windows
 
-On my Win7 box and Parallels Win10 VM on Mac with RStudio 1.2.1302
-has pandoc access errors. It turns out that pandoc 2.5 32 bit seems
-to work on both systems. Had some help from comments from
-[here](https://github.com/rstudio/rstudio/issues/3661). Some had
-better success with x64 version. Go figure...
-
-Install the desired binaries in the RStudio pandoc directory,
-log out and log back in.
+Kevin Ushey sent me a script to replace the RStudio pandoc with
+pandoc 2.7.1 built with ghc-8.6.4. It worked great on my Win7 x64
+box and on my Win 10 parallels VM. On the Win 10 box, I need to run
+RStudio as an Administrator.
 
 **Note**: Yihui Xie shows how to get the pandoc version:
 

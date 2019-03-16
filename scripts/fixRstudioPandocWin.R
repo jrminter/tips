@@ -14,7 +14,7 @@ local({
 	version <- "2.7.1"
 	
 	# Create and move to the requested directory.
-	dir.create(dir, showWarnings = FALSE, recursive = TRUE)
+	dir.create(dir, showWarnings = TRUE, recursive = TRUE)
 	owd <- setwd(dir)
 	on.exit(setwd(owd), add = TRUE)
 	
