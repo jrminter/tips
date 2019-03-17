@@ -1,7 +1,7 @@
 ---
 title: "TeXLive Hints"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-02-24"
+date: "Started: 2013-07-16, Last modified: 2019-03-17"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -16,6 +16,11 @@ These are John Minter's tips for a workflow using TeXlive.
 They were compiled from several web sources.
 
 # Simple tricks
+
+## A dark theme for TexWorks
+
+There is an interesting article on
+[tex.stackexchange.com](https://tex.stackexchange.com/questions/383271/how-can-i-set-a-dark-theme-in-texworks).
 
 ## delete texlive backups
 
