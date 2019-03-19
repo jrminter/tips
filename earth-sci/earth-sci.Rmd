@@ -1,0 +1,122 @@
+---
+title: "Earth Science Tips"
+author: "J. R. Minter"
+date: "Started: 2019-03-19, Last modified: 2019-03-19"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+
+[Back to Index](../README.html)
+
+# Introduction
+
+This document contains tips to help Beth build equipment for her Earth Science
+class.
+
+# Wave table
+
+Beth wanted to build a wave table for her class. From 2019-03-16 to 2019-03-19
+we tried a prototype we decided to name `Slosh`. It was an experience. Beth
+bought the material with a plan in mind. The table was based on a piece of
+2x12 pine (1.75x11.75 in) cut to 6 feet long. This was a sturdy but heavy base.
+We had some nice Dutch plywood from a TEM crate that served as sides.
+
+Beth had purchased two pieces of plexiglass 36x12x0.125 in for the front.
+She purchased a 2x4 pine board from which we cut upright cleats (2x42)
+for the ends to which we could fasten the plywood using 2 in drywall screws.
+The drywall screws were hard to completely countersink.  In the future, I think
+0.75 in marine grade plywood would be better. We could cut dados in the ends and
+use waterproof wood glue and finishing nails from our nail gun to assemble the
+tank carcass.
+
+I mounted the plexiglass on the front by first drilling pilot holes and then
+using drywall screws. The 1/8 in plexiglass had a tendency to crack. The drywall
+screws protruded. I think it would be better to have a marine plywood frame with
+a cutout for the plexiglass (I'd prefer a single sheet) that could be mounted in
+dados in the plywood cutout. The plexiglass could be held in by small wooden
+cleats screwed into the face frame.
+
+We made inserts for each end: 1) a "beach" for the waves to hit and then a board
+mounted on the other end to be used to generate waves.
+
+We sealed all the wood with a wood stai/sealer and caulked all the joints and
+screws with silicone caulk.
+
+# Other ideas
+
+1. [oceanservice.noaa.gov](https://oceanservice.noaa.gov/education/pd/tidescurrents/applications/oilspill_model_lesson.html)
+has a plan for a simple wave table in `Appendix A`.
+
+They suggest:
+
+> **Easy build / view Ocean table**
+> 
+> **Materials**
+> 
+> 1. Large rectangular clear plastic tray/tub ~2' x 3' though other larger size
+> may be substituted (the tray should be at least 1' deep).    
+> 2. Hose and coupling to attach to tray
+> 3. Water source - a tap is best though water can be added through a funnel
+> and buckets of water.
+> 4. One 20 lb bag of white aquarium sand
+> 5. Small mesh screens or cheese cloth
+> 6. Bucket or sink to collect drained water
+> 7. Grease pencils
+> 8. Video-still camera
+>
+> Large rectangular clear plastic tub - one that is ~2' x 3' x 1' deep works
+> well. Hoses for running water can be attached at both ends to help facilitate
+> constant water flow. The down stream hose should be attached 1" from the
+> bottom on one end of the plastic tub. A fine mesh screen or cheesecloth should
+> be placed over the opening on the "out" hose to prevent sand from being washed
+> out.
+> 
+> 1. Fill tub with white sand along one of the short ends, as deep as possible
+> (the sand will have a tendency to slide down. This will serve as the shoreline
+> beach.
+> 
+> 2. Use toy houses, cars, boats, or an oil rig for authenticity.
+> Hint: a stream will form outward from the "in flow" hose.
+>
+>
+> 3. Fill the bottom with 6 inches of water. The ocean end can be placed on a board
+> that acts as a lever and allows you to lift the ocean end to simulate tides on
+> the beach.
+> 
+> 4. Slowly turn on hose and allow it to trickle water through the system. You
+> can monitor the flow rate by observing how much water flows out of the system.
+> The flow rate should be fast enough not to disturb the beach sand too much.
+>
+> 5. Once the tub is filled, use a dropper, filled with vegetable oil and red
+> food coloring in one spot in the middle of the ocean. A clear plastic tub will
+> allow students to view the side distribution of the pollution plume.
+> 
+> 6. Dispersal of pollutants can be viewed through the side of clear plastic
+> tubs, and marked with grease pencil. If the stream table is visible form the
+> bottom then dispersal of pollutants can be viewed from that angle. Or a video
+> camera or can be used to display the bottom of the tub.
+> 
+> 7. A current will naturally be created by the water flow from the in flow to
+> the out flow hose but to add additional currents a board, or even a dust pan
+> can be used to circulate the pollution plume in other directions. The
+> pollution will eventually reach the beach through eddy currents forming on
+> the sides of the tube induced by the natural current but an artificial long
+> shore current can also be added by carefully pushing surface water parallel
+> to the shoreline. Long shore currents can also be created by attaching an
+> additional in flow hose on one side of the tub near the beach.
+> 
+> 8. To generate waves that strike the beach, an additional floating piece of
+> 2" x 4" wood in the ocean can be used. Note the additional changes that this
+> action produces on dispersing the pollutants.
+>
+> 9. This model is a one-time use model. Once the sand and water become largely
+> discolored and the water changes tint, you should empty, rinse and clean the
+> sand (or replace) to get the same visual effects in subsequent experiments.
+> Video-photographs-sketches of the progression of the pollutants will help pos
+
+
+[Back to Index](../README.html)

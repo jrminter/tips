@@ -15,7 +15,7 @@ names <- c("README.Rmd",
            "chntpw.Rmd", "color.Rmd", "ConductiveEpoxy.Rmd",
            "DataScience-linux64.Rmd", "Debian.Rmd","Denton.Rmd",
            "DiffractionLimit.Rmd", "dtsa2.Rmd",
-           "EDAX.Rmd", "Excel.Rmd",
+           "earth-sci.Rmd","EDAX.Rmd", "Excel.Rmd",
            "epma-matrix-corr.Rmd", "fitness.Rmd",
            "french-press-instructions.Rmd", "generator.Rmd","gfortran.Rmd",
            "ggplot2-figure.Rmd", "ggplot2Intro.Rmd",
@@ -49,7 +49,7 @@ rPath <- c("../",
            "../AZtec", "../C++11", "../carbonFilmThickness", 
            "../chntpw", "../color", "../ConductiveEpoxy",
            "../DataScience-linux64", "../Debian","../Denton",
-           "../DiffractionLimit", "../dtsa2",
+           "../DiffractionLimit", "../dtsa2","../earth-sci",
            "../EDAX", "../Excel", "../epma-matrix-corr",
            "../fitness", "../french-press-instructions","../generator",
            "../gfortran", "../ggplot2figure" , "../ggplot2Intro",
@@ -78,7 +78,7 @@ rPath <- c("../",
            '../TV', "../ubuntu",
            "../vacuum",
            "../VS2010","../win", "../workflow", 
-		   "../wxMaxima", "../")
+           "../wxMaxima", "../")
 
 knitIt <- function(wrkPath, scrPath, theName){
   print(wrkPath)
