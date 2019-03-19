@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-03-15"
+date: "Started: 2013-07-16, Last modified: 2019-03-19"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -37,6 +37,22 @@ suppressPackageStartupMessages(library("tidyverse"))
 [Back to Index](../README.html)
 
 # Don't forget...
+
+## Combining csv files into one dataframe
+
+From [Patrick Stoltz](https://twitter.com/PatrickStotz/status/1107964762305036293)
+on Twitter...
+
+```
+# find all file names ending in .csv 
+files = dir(pattern = "*.csv")
+
+# read and reduce to one dataframe
+data = files %>%
+       map(read_csv) %>%
+       reduce(rbind)
+```
+
 
 ## Fixing pandoc access error on Windows
 
