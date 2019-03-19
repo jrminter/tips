@@ -41,7 +41,8 @@ suppressPackageStartupMessages(library("tidyverse"))
 ## Combining csv files into one dataframe
 
 From [Patrick Stoltz](https://twitter.com/PatrickStotz/status/1107964762305036293)
-on Twitter...
+on Twitter... The idea originated
+[here](https://serialmentor.com/blog/2016/6/13/reading-and-combining-many-tidy-data-files-in-R).
 
 ```
 # find all file names ending in .csv 
