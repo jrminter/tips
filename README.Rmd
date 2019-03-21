@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-03-19"
+date: "Started: 2013-07-16, Last modified: 2019-03-21"
 output:
   html_document:
     css: ./theme/jm-gray-vignette.css
@@ -158,6 +158,8 @@ This skips several steps from original article!
 [MS Office](./msOffice/msOffice.html)
 
 [MySQL](./mysql/mysql.html)
+
+[Octave](./Octave/Octave.html)
 
 [OS Package Links](./osPkgs/osPkgs.html)
 
