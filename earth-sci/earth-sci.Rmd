@@ -1,7 +1,7 @@
 ---
 title: "Earth Science Tips"
 author: "J. R. Minter"
-date: 'Started: 2019-03-19, Last modified: 2019-03-19'
+date: 'Started: 2019-03-19, Last modified: 2019-03-20'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -20,7 +20,7 @@ output:
 This document contains tips to help Beth build equipment for her Earth Science
 class.
 
-# Wave table
+# Wave table construction
 
 Beth wanted to build a wave table for her class. From 2019-03-16 to 2019-03-19
 we tried a prototype we decided to name `Slosh`. It was an experience. Beth
@@ -28,7 +28,7 @@ bought the material with a plan in mind. The table was based on a piece of
 2x12 pine (1.75x11.75 in) cut to 6 feet long. This was a sturdy but heavy base.
 We had some nice Dutch plywood from a TEM crate that served as sides.
 
-Beth had purchased two pieces of plexiglass 36x12x0.125 in for the front.
+Beth had purchased two pieces of Plexiglas 36x12x0.125 in for the front.
 She purchased a 2x4 pine board from which we cut upright cleats (2x42)
 for the ends to which we could fasten the plywood using 2 in drywall screws.
 The drywall screws were hard to completely countersink.  In the future, I think
@@ -36,18 +36,28 @@ The drywall screws were hard to completely countersink.  In the future, I think
 use waterproof wood glue and finishing nails from our nail gun to assemble the
 tank carcass.
 
-I mounted the plexiglass on the front by first drilling pilot holes and then
-using drywall screws. The 1/8 in plexiglass had a tendency to crack. The drywall
+I mounted the Plexiglas on the front by first drilling pilot holes and then
+using drywall screws. The 1/8 in Plexiglas had a tendency to crack. The drywall
 screws protruded. I think it would be better to have a marine plywood frame with
-a cutout for the plexiglass (I'd prefer a single sheet) that could be mounted in
-dados in the plywood cutout. The plexiglass could be held in by small wooden
+a cutout for the Plexiglas (I'd prefer a single sheet) that could be mounted in
+dados in the plywood cutout. The Plexiglas could be held in by small wooden
 cleats screwed into the face frame.
 
 We made inserts for each end: 1) a "beach" for the waves to hit and then a board
 mounted on the other end to be used to generate waves.
 
-We sealed all the wood with a wood stai/sealer and caulked all the joints and
+We sealed all the wood with a wood stain/sealer and caulked all the joints and
 screws with silicone caulk.
+
+# 2019-03-20
+
+It was a bit cold this morning for the class when they tried out the tank for
+the first time (outside). It worked well. The students didn't want to get wet.
+They simulated an earthquake, created a tsunami, and destroyed their mock village.
+
+The students enjoyed that... They will get more opportunities to use it later in
+the year when it is warmer. Beth hopes to get pictures when they aren't all
+shivering...
 
 # Other ideas
 
@@ -119,7 +129,8 @@ They suggest:
 > 9. This model is a one-time use model. Once the sand and water become largely
 > discolored and the water changes tint, you should empty, rinse and clean the
 > sand (or replace) to get the same visual effects in subsequent experiments.
-> Video-photographs-sketches of the progression of the pollutants will help pos
+> Video-photographs-sketches of the progression of the pollutants will help
+> post analysis.
 
 
 [Back to Index](../README.html)
