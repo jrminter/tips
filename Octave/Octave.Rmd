@@ -18,8 +18,10 @@ output:
 # Introduction
 
 Gnu Octave is an Open Source program similar to Matlab.
+Binaries are availabe [here](https://www.gnu.org/software/octave/).
 
-As of 2019-03-21, the current release is `Octave 5.1.0.0`.
+As of 2019-03-21, the current release is `Octave 5.1.0.0` which was
+released on 2019-03-01.
 
 There is extensive documentation
 [online](https://octave.org/doc/interpreter/index.html#SEC_Contents).
