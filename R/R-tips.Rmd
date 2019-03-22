@@ -52,6 +52,9 @@ output:
 ---
 ```
 
+She provides an example
+[here](https://elastic-lovelace-155848.netlify.com/gallery/themes/flatly.html).
+
 The user may download the `.Rmd` file. Very helpful for reproducible
 analyses.
 
