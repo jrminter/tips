@@ -23,6 +23,11 @@ Binaries are availabe [here](https://www.gnu.org/software/octave/).
 As of 2019-03-21, the current release is `Octave 5.1.0.0` which was
 released on 2019-03-01.
 
+On the Mac, we install via Homebrew. This installs Octave 4.4.1.
+
+Developer MacOSX App downloads are available
+[here](http://octave-app.org/Developer-Downloads.html)
+
 There is extensive documentation
 [online](https://octave.org/doc/interpreter/index.html#SEC_Contents).
 
