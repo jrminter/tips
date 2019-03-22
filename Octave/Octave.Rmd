@@ -18,7 +18,7 @@ output:
 # Introduction
 
 Gnu Octave is an Open Source program similar to Matlab.
-Binaries are availabe [here](https://www.gnu.org/software/octave/).
+Binaries are available [here](https://www.gnu.org/software/octave/).
 
 As of 2019-03-21, the current release is `Octave 5.1.0.0` which was
 released on 2019-03-01.
@@ -30,6 +30,15 @@ Developer MacOSX App downloads are available
 
 There is extensive documentation
 [online](https://octave.org/doc/interpreter/index.html#SEC_Contents).
+
+## Publish
+
+Octave has a nice `publish` feature. To publish the `pub_example.m`
+file, one would enter from the command line (in the correct directory...)
+
+> publish("pub_example.m");
+
+This creates a nice HTML file with a notebook-like format.
 
 
 
