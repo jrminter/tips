@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-03-19"
+date: "Started: 2013-07-16, Last modified: 2019-03-22"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -37,6 +37,23 @@ suppressPackageStartupMessages(library("tidyverse"))
 [Back to Index](../README.html)
 
 # Don't forget...
+
+## Code download in Rmarkdown HTML file
+
+Hat Tip [Alison Hill](https://twitter.com/apreshill/status/1108925218850893832)
+
+Use YAML like this
+
+```
+---
+output:
+  html_document:
+    code_download: true
+---
+```
+
+The user may download the `.Rmd` file. Very helpful for reproducible
+analyses.
 
 ## Combining csv files into one dataframe
 
