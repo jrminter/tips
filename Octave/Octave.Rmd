@@ -1,7 +1,7 @@
 ---
 title: "Octave Tips"
 author: "J. R. Minter"
-date: 'Started: 2019-03-21, Last modified: 2019-03-21'
+date: 'Started: 2019-03-21, Last modified: 2019-03-23'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -62,8 +62,10 @@ This is n annoyance... Adapted from
    [maxval, row] = max(max(A,[],2));
    [maxval, col] = max(max(A,[],1));
    ```
+   I coded these into functions: `max_val_pos` and `min_val_pos`. 
    
-   
+   **Note:** These are maintained under version control (`git`) in the
+   `global` respository in the `octave/functions` folder.
 
 # Functions
 
