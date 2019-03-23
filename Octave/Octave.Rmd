@@ -41,6 +41,34 @@ file, one would enter from the command line (in the correct directory...)
 This creates a nice HTML file with a notebook-like format.
 
 
+# Min and Max value for a matrix
+
+This is n annoyance... Adapted from
+[here](https://gist.github.com/Atlas7/6e03676da65bf467cb22d1ca42f20695).
+
+1. Octave matrix indices start with `1` not `0`.
+
+2. To find the minum value of the matrix and its index, one can use
+   this function of the matrix `A`:
+  
+   ```
+   [minval, row] = min(min(A,[],2));
+   [minval, col] = min(min(A,[],1));
+   ```
+   
+   and for the maximum value:
+   
+   ```
+   [maxval, row] = max(max(A,[],2));
+   [maxval, col] = max(max(A,[],1));
+   ```
+   
+   
+
+
+
+
+
 # FFTs
 
 There is a video tutorial by Ashwith Rego (2012-11-28) on
