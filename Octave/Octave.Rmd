@@ -65,7 +65,9 @@ This is n annoyance... Adapted from
    
    
 
+# Functions
 
+1. do `addpath("~/Octave")` and put functions there...
 
 
 
