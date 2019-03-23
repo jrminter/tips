@@ -67,8 +67,12 @@ This is n annoyance... Adapted from
 
 # Functions
 
-1. do `addpath("~/Octave")` and put functions there...
+I ripped hair out until I discovered one function per `.m` file...
 
+1. Run `addpath("~/Octave")` and put functions there...
+2. savepath () to save to above
+3. Functions must be in `individual` files with extension `.m`
+4. Test the path with `path()`
 
 
 # FFTs
