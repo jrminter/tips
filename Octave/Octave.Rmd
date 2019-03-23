@@ -43,6 +43,9 @@ This creates a nice HTML file with a notebook-like format.
 
 # FFTs
 
+There is a video tutorial by Ashwith Rego (2012-11-28) on
+[YouTube](https://www.youtube.com/watch?v=XofmaKJ8RnA).
+
 There is a decent tutorial
 [here](https://matlabgeeks.com/tips-tutorials/how-to-do-a-2-d-fourier-transform-in-matlab/).
 
