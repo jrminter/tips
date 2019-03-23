@@ -69,11 +69,11 @@ This is n annoyance... Adapted from
 
 # Functions
 
-I ripped hair out until I discovered one function per `.m` file...
+I struggled until I discovered one can have **only one function per .m file**...
 
 1. Run `addpath("~/Octave")` and put functions there...
 2. savepath () to save to above
-3. Functions must be in `individual` files with extension `.m`
+3. Functions must be in **individual** files with extension `.m`
 4. Test the path with `path()`
 
 
