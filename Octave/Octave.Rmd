@@ -87,6 +87,8 @@ There is a decent tutorial
 
 # Using Octave in Jupyter Notebook.
 
+This is **awesome**!
+
 See: [Calysto's](https://github.com/Calysto/octave_kernel) Readme.rst file
 for installation instructions.
 
