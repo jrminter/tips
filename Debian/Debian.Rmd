@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Debian Tips"
 author: "J. R. Minter"
-date: "Started: 2019-02-28, Last modified: 2019-03-07"
+date: "Started: 2019-02-28, Last modified: 2019-03-24"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -64,6 +64,12 @@ deb-src http://debian.cs.binghamton.edu/debian/ stretch main
 
 ```
 # System Kung Fu
+
+## Set the default web browser
+
+```
+xdg-settings set default-web-browser chromium.desktop
+```
 
 ## Stop auto suspend
 
