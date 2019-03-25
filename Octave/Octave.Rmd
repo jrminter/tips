@@ -70,7 +70,8 @@ This does not work automatically. I found a workaround
    
    There are items to add to the .tex file
    
-       Under `\title{}`:
+       Under `\title{}` (perhaps change):
+       \title{Octave \textit{Vade Mecum}}
        \author{Mike James (Modified by J. R. Minter)}
        \date{2019-03-25}
 
