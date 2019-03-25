@@ -66,6 +66,14 @@ This does not work automatically. I found a workaround
 
 2. Use LaTeX to render the notebook. `TeXworks` worked fine...
 
+   In general, I am pleased with the rendering...
+   
+   There are items to add to the .tex file
+   
+       Under `\title{}`:
+       \author{Mike James (Modified by J. R. Minter)}
+       \date{2019-03-25}
+
 
 
 # Min and Max value for a matrix
