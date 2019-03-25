@@ -1,7 +1,7 @@
 ---
 title: "Octave Tips"
 author: "J. R. Minter"
-date: 'Started: 2019-03-21, Last modified: 2019-03-24'
+date: 'Started: 2019-03-21, Last modified: 2019-03-25'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -39,6 +39,33 @@ file, one would enter from the command line (in the correct directory...)
 > publish("pub_example.m");
 
 This creates a nice HTML file with a notebook-like format.
+
+## PDF output from jupyter notebook w/ Octave kernel
+
+This does not work automatically. I found a workaround
+[here](https://nbconvert.readthedocs.io/en/latest).
+
+0. Install what we need from python
+
+    See the
+    [installation section](https://nbconvert.readthedocs.io/en/latest/install.html).
+
+    ```
+    conda install nbconvert
+    conda install pandoc
+    ```
+
+1. use as a command line tool
+
+    See the
+    [useage section](https://nbconvert.readthedocs.io/en/latest/usage.html).
+
+    ```
+    jupyter nbconvert --to latex notebook.ipynb
+    ```
+
+2. Use LaTeX to render the notebook. `TeXworks` worked fine...
+
 
 
 # Min and Max value for a matrix

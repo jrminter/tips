@@ -1,7 +1,7 @@
 ---
 title: "Python Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-02-08"
+date: "Started: 2013-07-16, Last modified: 2019-03-25"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -45,6 +45,34 @@ The solution:
 ```
 ln -s /Users/jrminter/miniconda3/bin/python /Users/jrminter/miniconda3/python.app/Contents/MacOS/python
 ```
+
+# Render obstinate `.ipynb` files to PDF
+
+
+This does not work automatically. I found a workaround
+[here](https://nbconvert.readthedocs.io/en/latest).
+
+0. Install what we need from python
+
+    See the
+    [installation section](https://nbconvert.readthedocs.io/en/latest/install.html).
+
+    ```
+    conda install nbconvert
+    conda install pandoc
+    ```
+
+1. use as a command line tool
+
+    See the
+    [useage section](https://nbconvert.readthedocs.io/en/latest/usage.html).
+
+    ```
+    jupyter nbconvert --to latex notebook.ipynb
+    ```
+
+2. Use LaTeX to render the notebook. `TeXworks` worked fine...
+
 
 
 # Remove PyCharm
