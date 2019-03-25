@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-03-07"
+date: "Started: 2013-07-16, Last modified: 2019-03-25"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -12,6 +12,22 @@ output:
 [Back to Index](../README.html)
 
 # Tips
+
+## Clear Preview recent files
+
+From [here](https://discussions.apple.com/thread/7567153).
+
+1. Open Preview
+
+2. File > Open Recent > Clear Menu
+
+3. Quit Preview
+
+4. Drag Preview icon from Dock (goes poof) or option remove from Dock
+
+5. Open Preview from Applications folder or Launch Pad  option>Keep in Dock
+
+Scroll to the bottom to see the clear menu option
 
 ## The global `.gitignore_global` file
 
