@@ -1,7 +1,7 @@
 ---
 title: "ggplot2 Use Cases"
 author: "J. R. Minter"
-date: "Started: 2016-01-20, Last modified: 2019-01-16"
+date: "Started: 2016-01-20, Last modified: 2019-03-27"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -17,6 +17,16 @@ This is a work in progress. it also requires
 **ggplot2 version 3.0**.
 
 # Capture thoughts for enhancements at the top...
+
+## Add a branding caption
+
+Insert this in the code:
+
+```
+labs(caption = 'jrminter@gmail.com / @jrminter') +
+```
+
+Credit: [Michael Toth](https://michaeltoth.me/you-need-to-start-branding-your-graphs-heres-how-with-ggplot.html)
 
 ## Build up plot in slides
 
@@ -546,6 +556,7 @@ panderOptions('table.alignment.default',
 pander(head(df10))
 ```
 
+## Step 2: Make the plot (with a branding caption...)
 
 ```{r}
 fi <-'./dat/csv/20nm-C-30nm-Ag-On-SiO2-5kV.csv'
@@ -577,9 +588,12 @@ plt <-  ggplot() +
         scale_y_continuous(breaks = seq(from = 0, to = 0.030, by = 0.005),
                            limits = c(0,0.030)) +
         ggtitle("Monte Carlo model of C-coated Ag on glass at 5 kV") +
+        labs(caption = 'jrminter@gmail.com / @jrminter') +
         theme(axis.text=element_text(size=12),
               axis.title=element_text(size=12),
-              plot.title=element_text(hjust = 0.5)) # center the title
+              # center the title
+              plot.title=element_text(hjust = 0.5)) +
+        NULL
 
 print(plt)
 ```
@@ -671,6 +685,7 @@ plt <-  ggplot() +
         annotate("text", label = 'Sample 1', x = 13, y = 2800, size = 5, colour = "darkblue") +
         annotate("text", label = 'Sample 2', x = 13, y = 2500, size = 5, colour = "red") +
         annotate("text", label = 'credit: Coworker', x = 15, y = 200, size = 3, colour = "black") +
+        labs(caption = 'jrminter@gmail.com / @jrminter') +
         theme(axis.text=element_text(size=12),
               axis.title=element_text(size=12),
               plot.title=element_text(hjust = 0.5)) # center the title
