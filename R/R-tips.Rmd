@@ -46,6 +46,16 @@ Show the directory tree. Great for R project directories...
 fs::dir_tree(".")
 ```
 
+Consider this approach to view a project directory.
+
+From the project directory, type this:
+
+```
+> sink(file="~/Desktop/proj_name.txt")
+> fs::dir_tree(".")
+> sink()
+```
+
 ## Code download in Rmarkdown HTML file
 
 Hat Tip [Alison Hill](https://twitter.com/apreshill/status/1108925218850893832)
