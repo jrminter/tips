@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-03-22"
+date: "Started: 2013-07-16, Last modified: 2019-03-27"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -37,6 +37,14 @@ suppressPackageStartupMessages(library("tidyverse"))
 [Back to Index](../README.html)
 
 # Don't forget...
+
+## fs::dir_tree()
+
+Show the directory tree. Great for R project directories...
+
+```{r showDirTree}
+fs::dir_tree(".")
+```
 
 ## Code download in Rmarkdown HTML file
 
