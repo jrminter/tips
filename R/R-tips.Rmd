@@ -47,6 +47,9 @@ Periodically run...
 brew update && brew upgrade && brew cleanup
 ```
 
+abd consider updating your 📦/modules/et. al. that depend on any libraries
+from them.
+
 
 ## fs::dir_tree()
 
