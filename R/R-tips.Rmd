@@ -38,6 +38,16 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 # Don't forget...
 
+## For mac rstats folks...
+
+From [Bob Rudis](https://twitter.com/hrbrmstr/status/1111046690872705025)
+Periodically run...
+
+```
+brew update && brew upgrade && brew cleanup
+```
+
+
 ## fs::dir_tree()
 
 Show the directory tree. Great for R project directories...
