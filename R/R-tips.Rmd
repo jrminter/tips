@@ -55,8 +55,8 @@ from them.
 
 Show the directory tree. Great for R project directories...
 
-```{r showDirTree}
-fs::dir_tree(".")
+```
+fs::dir_tree(here::here())
 ```
 
 Consider this approach to view a project directory.
