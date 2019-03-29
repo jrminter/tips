@@ -340,6 +340,7 @@ R-markdown/figure/
 R-markdown/R-markdown.md
 R-markdown/*.html
 R-markdown/*.htm
+R-markdown/R-markdown_files/*
 
 # R-markdown directory
 R-matrix-algebra/.DS_Store
