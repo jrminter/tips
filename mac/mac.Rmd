@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-03-25"
+date: "Started: 2013-07-16, Last modified: 2019-03-29"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -12,6 +12,20 @@ output:
 [Back to Index](../README.html)
 
 # Tips
+
+## Get/Use iTerm2
+
+1. Get it from [here](https://www.iterm2.com/).
+
+2. [Dale Roberts](https://github.com/daleroberts/itermplot) has created an
+awesome iTerm2 backend for Matplotlib, so you can plot directly in your
+terminal.
+
+3. Documentation is [here](https://www.iterm2.com/faq.html).
+
+4. : Preferences, including profiles, are stored in     `~/Library/Preferences/com.googlecode.iterm2.plist`. Not particualrly
+useful...
+
 
 ## Clear Preview recent files
 
