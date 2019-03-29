@@ -1,7 +1,7 @@
 ---
 title: "Homebrew Tips"
 author: "J. R. Minter"
-date: "Started: 2017-12-11, Last modified: 2018-10-11"
+date: "Started: 2017-12-11, Last modified: 2019-03-29"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -16,6 +16,18 @@ output:
 # Introduction
 
 [Homebrew](https://brew.sh/) is a package manager for MacOSX.
+
+## For mac rstats folks...
+
+From [Bob Rudis](https://twitter.com/hrbrmstr/status/1111046690872705025)
+Periodically run...
+
+```
+brew update && brew upgrade && brew cleanup
+```
+
+and consider updating your 📦/modules/et. al. that depend on any libraries
+from them.
 
 # Package Notes
 

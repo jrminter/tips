@@ -13,6 +13,19 @@ output:
 
 # Tips
 
+## For mac rstats folks...
+
+From [Bob Rudis](https://twitter.com/hrbrmstr/status/1111046690872705025)
+Periodically run...
+
+```
+brew update && brew upgrade && brew cleanup
+```
+
+and consider updating your 📦/modules/et. al. that depend on any libraries
+from them.
+
+
 ## Get/Use iTerm2
 
 1. Get it from [here](https://www.iterm2.com/).
