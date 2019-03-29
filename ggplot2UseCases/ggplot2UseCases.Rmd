@@ -1,7 +1,7 @@
 ---
 title: "ggplot2 Use Cases"
 author: "J. R. Minter"
-date: "Started: 2016-01-20, Last modified: 2019-03-27"
+date: "Started: 2016-01-20, Last modified: 2019-03-29"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -17,6 +17,32 @@ This is a work in progress. it also requires
 **ggplot2 version 3.0**.
 
 # Capture thoughts for enhancements at the top...
+
+## Ideas to remember
+
+Start with the [reference](https://ggplot2.tidyverse.org/reference/)
+documentation...
+
+### Dates are a real pain...
+
+[This](https://stackoverflow.com/questions/30015926/difficulty-annotating-plot-when-x-axis-values-are-dates)
+helped.
+
+### Colors...
+
+[changing colors](http://www.sthda.com/english/wiki/ggplot2-colors-how-to-change-colors-automatically-and-manually)
+
+### Plotting multiple series
+
+[sixhat.net](https://www.sixhat.net/how-to-plot-multpile-data-series-with-ggplot.html)
+was helpful.
+
+### Legends
+
+These can be fun. [Stackoverflow](https://stackoverflow.com/questions/17148679/construct-a-manual-legend-for-a-complicated-plot)
+helped...
+
+
 
 ## Add a branding caption
 
