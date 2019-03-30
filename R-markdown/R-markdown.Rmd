@@ -1,7 +1,7 @@
 ---
 title: "R-Markdown Tips"
 author: "J. R. Minter"
-date: "Started: 2016-12-08, Last modified: 2019-02-27"
+date: "Started: 2016-12-08, Last modified: 2019-03-30"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -43,6 +43,22 @@ repository on github.
 Replying to @S_Owla:
 
 ![.R, then feel free to knit/render it anyway!](./png/jenny-bryan-knit-r.png)
+
+## Cool Rmarkdown rendering trick
+
+From [Thea Knowles](https://twitter.com/theaknowles/status/1112125615174385664):
+
+```
+Just learned that with kableExtra you can do:
+
+df %>% kable("latex") %>% as_image()
+
+which will render the kable output as an image and happily show up across all platforms✨
+
+```
+
+
+
 
 ## Selective page break for PDF document
 
