@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-03-29"
+date: "Started: 2013-07-16, Last modified: 2019-03-30"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -24,6 +24,32 @@ brew update && brew upgrade && brew cleanup
 
 and consider updating your 📦/modules/et. al. that depend on any libraries
 from them.
+
+## Issues with building R packages
+
+1. Download and install the command line tools from
+[developer.apple.com](https://developer.apple.com/download/more/)
+
+2. Install the macOS SDK headers 
+
+    From a comment by clason [here](https://github.com/neovim/neovim/issues/9050).
+
+    > Starting with Mojave, the headers are no longer installed under
+    > `/usr/include/` by default -- look under `Command Line Tools -> New Features`
+    > in the release notes.
+    >
+    > Running:
+    >
+    >```
+    > open /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg
+    >```
+    > from the command line fixes the issue (at least for me and using `brew`).
+    > 
+    > The release notes also states that this compatibility package will no longer
+    > be provided in the near future, so the build system on macOS will have to be
+    > adapted to look for headers in the SDK, making this (at that future point)
+    > indeed an nvim issue (if you do not want to punt this to homebrew). @jamessan
+
 
 
 ## Get/Use iTerm2
