@@ -1,7 +1,7 @@
 ---
 title: "Tips on pandoc"
 author: "J. R. Minter"
-date: "Started 2019-03-32, Last modified: 2019-03-31"
+date: "Started 2019-03-32, Last modified: 2019-04-01"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -22,6 +22,9 @@ output:
     Run Pandoc on the current document via the Command Palette (`Command+Shift+P`
     on OS X, `Control+Shift+P` on Linux/Windows) by selecting "Pandoc". You will
     be presented with output formats to choose from.
+    
+    Use the [Packages](https://github.com/sublimehq/Packages.git) git
+    repository.
 
 - [ST3 markdown to Word](http://plaintext-productivity.net/2-05-how-to-set-up-sublime-text-for-markdown-export-to-word.html)
 
