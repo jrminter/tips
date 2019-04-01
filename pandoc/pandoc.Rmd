@@ -1,0 +1,32 @@
+---
+title: "Tips on pandoc"
+author: "J. R. Minter"
+date: "Started 2019-03-32, Last modified: 2019-03-31"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+[Back to Index](../README.html)
+
+# Basics
+
+- [pandoc releases](http://pandoc.org/releases.html#pandoc-2.7.1-14-march-2019)
+
+- [Pandoc Extras](https://github.com/jgm/pandoc/wiki/Pandoc-Extras)
+
+- [ST3 Pandoc package](https://packagecontrol.io/packages/Pandoc)
+
+    Run Pandoc on the current document via the Command Palette (`Command+Shift+P`
+    on OS X, `Control+Shift+P` on Linux/Windows) by selecting "Pandoc". You will
+    be presented with output formats to choose from.
+
+- [ST3 markdown to Word](http://plaintext-productivity.net/2-05-how-to-set-up-sublime-text-for-markdown-export-to-word.html)
+
+- [ST3 Pandoc plug-in](https://github.com/tbfisher/sublimetext-Pandoc/blob/master/README.md)
+
+
+[Back to Index](../README.html)
+

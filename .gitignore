@@ -243,6 +243,12 @@ osPkgs/osPkgs.md
 osPkgs/osPkgs.html
 osPkgs/figure/
 
+# pandoc directory
+pandoc/.DS_Store
+pandoc/pandoc.md
+pandoc/pandoc.html
+pandoc/figure/
+
 # plagiarism directory
 plagiarism/.DS_Store
 plagiarism/plagiarism.md

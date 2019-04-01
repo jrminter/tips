@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-03-21"
+date: "Started: 2013-07-16, Last modified: 2019-03-31"
 output:
   html_document:
     css: ./theme/jm-gray-vignette.css
@@ -162,6 +162,8 @@ This skips several steps from original article!
 [Octave](./Octave/Octave.html)
 
 [OS Package Links](./osPkgs/osPkgs.html)
+
+[pandoc](./pandoc/pandoc.html)
 
 [plagiarism](./plagiarism/plagiarism.html)
 
