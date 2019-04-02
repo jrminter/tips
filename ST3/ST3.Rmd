@@ -27,7 +27,14 @@ A. Documentation
    - [Installing via Homebrew](https://www.code2bits.com/how-to-install-sublime-text-on-macos-using-homebrew/)
       using the [homebrew cask](https://github.com/Homebrew/homebrew-cask/blob/master/Casks/sublime-text.rb)
       
-
+   - [Package Control](https://packagecontrol.io/installation) (original...)
+   
+   - [Stackoverflow Package Control](https://stackoverflow.com/questions/46651785/package-control-install-package-missing-in-sublime-text-3)
+   
+   - [ST3](https://forum.sublimetext.com/t/package-control-not-working-at-all/29219)
+     package control troubleshooting...
+   
+   
 # Better Markdown
 
 From [Marius Schulz](https://blog.mariusschulz.com/2014/12/16/how-to-set-up-sublime-text-for-a-vastly-better-markdown-writing-experience)
