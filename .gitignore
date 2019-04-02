@@ -6,6 +6,9 @@
 tab.tex
 *.html
 
+# Don't track these types of directories...
+*/*_files
+
 # AccessToSqlite directory
 AccessToSqlite/.DS_Store
 AccessToSqlite/AccessToSqlite.html
