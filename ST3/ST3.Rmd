@@ -33,7 +33,27 @@ A. Documentation
    
    - [ST3](https://forum.sublimetext.com/t/package-control-not-working-at-all/29219)
      package control troubleshooting...
-   
+     
+# Revert to a freshly installed state
+
+From [here](http://www.sublimetext.com/docs/3/revert.html)
+
+Sublime Text can be reverted to a freshly installed state by removing
+your data folder. Depending on your operating system, this folder is
+located in:
+
+- OS X: `~/Library/Application Support/Sublime Text 3`
+
+- Windows: `%APPDATA%\Sublime Text 3`
+
+- Linux: `~/.config/sublime-text-3`
+
+To revert to a freshly installed state, you can:
+
+1. Exit Sublime Text
+2. Move the data folder to a backup location
+3. Start Sublime Text
+
    
 # Better Markdown
 

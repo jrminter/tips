@@ -9,12 +9,14 @@ tab.tex
 # AccessToSqlite directory
 AccessToSqlite/.DS_Store
 AccessToSqlite/AccessToSqlite.html
+AccessToSqlite/AccessToSqlite_fi*
 
 # automater directory
 automater/.DS_Store
 automater/automater.md
 automater/automater.html
 automater/figure/
+R/R-tips_fi*
 
 
 # AZtec directory
@@ -119,6 +121,7 @@ ggplot2Intro/.DS_Store
 ggplot2Intro/ggplot2Intro.md
 ggplot2Intro/ggplot2Intro.html
 ggplot2Intro/figure/
+ggplot2Intro/ggplot2Intro_fi*
 
 # ggplotUseCases directory
 ggplot2UseCases/.DS_Store
@@ -129,6 +132,8 @@ ggplot2UseCases/dat/png/*.png
 ggplot2UseCases/dat/pdf/*.pdf
 ggplot2UseCases/figure/
 ggplot2UseCases/dat/csv/PhiRhoZ-final.csv
+ggplot2UseCases/.DS_Store
+ggplot2UseCases/ggplot2UseCases_fi*
 
 # ggvisIntro tips directory
 ggvisIntro/.DS_Store
@@ -285,6 +290,7 @@ R/R-tips.md
 R/R-tips.html
 R/figure/
 R/*.pdf
+R/R-tips_fi*
 
 # R-Anova directory
 R-Anova/.DS_Store
