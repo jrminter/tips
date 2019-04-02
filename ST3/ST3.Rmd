@@ -90,7 +90,7 @@ to be quite helpful.
 
 # My current preferences
 
-**Default**
+## Default
 
 ```
 {
@@ -465,9 +465,7 @@ to be quite helpful.
 
 ```
 
-
-
-**User**
+## User defaults
 
 ```
 {
@@ -527,11 +525,9 @@ On Mac this is in:
 ```
 ## Packages
 
-Package Control does not seem to work.
 Available packages are cataloged on
 [packagecontrol.io](https://packagecontrol.io/).
 
-**Note**: unzip manual packages in the `User` folder shown above...
 
 
 
