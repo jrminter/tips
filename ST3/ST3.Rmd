@@ -58,7 +58,7 @@ To make sure Package Control works
 
 1. Open the User settings
 2. Make certain `PackageControl` is **not** in the excluded packages.
-Only `Vintage` should be in the list...
+**_Only_** `Vintage` should be in the list...
 
    
 # Better Markdown
