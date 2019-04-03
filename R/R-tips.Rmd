@@ -42,6 +42,8 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 - CMD+Shift+M gives `%>%` (the pipe operator)
 
+- alt + "-" in RStudio for `<-` (assignment operator)
+
 ## For mac rstats folks...
 
 From [Bob Rudis](https://twitter.com/hrbrmstr/status/1111046690872705025)
