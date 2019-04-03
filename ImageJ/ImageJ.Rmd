@@ -561,10 +561,8 @@ ImagePlus imp = IJ.getImage();
 > is the ImageJ java api documentation. `ImagePlus` has a
 > `getProcessor()` method that returns (a reference to) an
 > instance of `ImageProcessor`, and `ImageProcessor` has a
-> `resize()` method that
-> 
-> > returns a new ImageProcessor containing
-> > a scaled copy of this image...
+> `resize()` method that returns a new ImageProcessor containing
+> a scaled copy of this image...
 
 ```
 from ij import IJ
@@ -623,7 +621,6 @@ img = img.getProcessor().resize(2048)
 > `ImageProcessor (ImagePlus (String title, ImageProcessor ip))`.
 > 
 > Let’s upsize your downsized image and display it:
->
 
 ```
 from ij import IJ
@@ -637,7 +634,6 @@ imp2 = ImagePlus ('upsized image', ip2)
 imp2.show()
 ```
 
->
 > So you don’t convert between `ImageProcessors` and
 > ImagePluss, _per se_ – the former is wrapped by the latter.
 > 
