@@ -1,7 +1,7 @@
 ---
 title: "Image-J Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-03-24"
+date: "Started: 2013-07-16, Last modified: 2019-04-03"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -498,6 +498,156 @@ An alternative: Read only part of the video (the AVI import dialog has an option
 - Various color ('chroma') subsampling types, because frame grabbers or cameras often deliver these as raw format (Y422, YUYV, I420, NV12, and the like) 
 - PNG or JPEG compression of individual frames (the latter is also known as MJPG). 
 
+# A nice example from the ImageJ Forum
+
+From [MountainMan](https://forum.image.sc/u/mountain_man) responding to
+a question by [holastello](https://forum.image.sc/u/holastello):
+
+
+> Let me answer your last question first.
+> 
+> > More generally, does anyone have any advice on translating the java docs
+> > for use with python? Everyone seems to refer to these docs but it’s not
+> > obvious to me how to use them for python.
+> 
+> Unlike, for example, the ImageJ Macro (IJM) language, jython
+> (a flavor of python) doesn’t know anything specific about
+> ImageJ. Instead, jython is powerful because it knows about
+> java. Specifically, jython has hooks that let it access java
+> classes and call their methods. Since ImageJ is written
+> (nearly entirely) in java, you can use jython to script ImageJ
+> by instantiating ImageJ classes and manipulating them with
+> their methods.
+> 
+> So ImageJ’s java api documentation is pretty much precisely
+> the documentation you want for scripting ImageJ with jython.
+> 
+> (The division of labor is that you use jython syntax for the
+> “glue” – for loops, if / else, basic lists, and so on. And the
+> real image processing is done by the ImageJ java classes.)
+> 
+> First you need to poke around to get the lay of the land.
+> Let’s say that you’ve figured out that ImageJ has an IJ
+> class – a utility class with a bunch of static methods.
+> 
+> I’ll cheat by telling you that you can open a sample image
+> with the `IJ.run()` method:
+
+```
+from ij import IJ
+IJ.run ('Blobs (25K)')
+```
+
+> But the rest you can get pretty straightforwardly from the
+> documentation.
+> 
+> Looking at the IJ.getImage() documentation, we see that
+> you can get your hands on the open image:
+
+```
+from ij import IJ
+IJ.run ('Blobs (25K)')
+imp = IJ.getImage()
+```
+> `imp` is a jython variable that now refers to an instance of
+> the java class `ImagePlus`. This is essentially the same as
+> saying (in java):
+
+```
+ImagePlus imp = IJ.getImage();
+ ```
+
+> The “glue” (syntax) is jython, but the relevant documentation
+> is the ImageJ java api documentation. `ImagePlus` has a
+> `getProcessor()` method that returns (a reference to) an
+> instance of `ImageProcessor`, and `ImageProcessor` has a
+> `resize()` method that
+> 
+> > returns a new ImageProcessor containing
+> > a scaled copy of this image...
+
+```
+from ij import IJ
+IJ.run ('Blobs (25K)')
+imp = IJ.getImage()
+ip = imp.getProcessor().resize (128, 127)
+```
+
+> So, `ip` is not `imp`'s `ImageProcessor` – it’s a new instance.
+> We can now assign the new ip to imp, modifying the image:
+
+```
+from ij import IJ
+IJ.run ('Blobs (25K)')
+imp = IJ.getImage()
+ip = imp.getProcessor().resize (128, 127)
+imp.setProcessor (ip)
+```
+
+> > Can someone explain how ImagePlus and ImageProcessor objects interact?
+> > Do I need to convert the ImageProcessor object to an ImagePlus object?
+> > If so, how?
+> 
+> In general, the `ImageProcessor` is the actual image – it
+> holds the pixels. (In fact, there are specific subclasses,
+> `ByteProcessor`, `ShortProcessor`, etc., that hold the pixel
+> values stored as java arrays of java primitive types.)
+> 
+> `ImagePlus` is a wrapper for `ImageProcessor` that knows
+> things like how to display an image, and has various kinds
+> of metadata like the image’s title. (It can also wrap fancier
+> things like image stacks.) More concretely, `ImagePlus` has
+> an `ImageProcessor` data member.
+> 
+> In between the downsizing and upsizing below I want to do other stuff,
+> which I think requires conversion back to an ImagePlus object. Here’s
+> what I have so far:
+
+```
+from ij import IJ
+
+# Opening the image
+img = IJ.openImage('path/to/image.tif')
+
+# Downsize image
+img = img.getProcessor().resize(200)
+
+# convert img to ImagePlus
+# do other stuff (e.g. apply Weka classifier)
+        
+# Upsize image
+img = img.getProcessor().resize(2048)
+```
+
+> Not surprisingly, you can construct an `ImagePlus` from an
+> `ImageProcessor (ImagePlus (String title, ImageProcessor ip))`.
+> 
+> Let’s upsize your downsized image and display it:
+>
+
+```
+from ij import IJ
+IJ.run ('Blobs (25K)')
+imp = IJ.getImage()
+ip = imp.getProcessor().resize (128, 127)
+imp.setProcessor (ip)
+ip2 = ip.resize (512, 508)
+from ij import ImagePlus
+imp2 = ImagePlus ('upsized image', ip2)
+imp2.show()
+```
+
+>
+> So you don’t convert between `ImageProcessors` and
+> ImagePluss, _per se_ – the former is wrapped by the latter.
+> 
+> Depending on what you are doing, to modify an image you
+> can construct a new ImagePlus that wraps a new or modified
+> `ImageProcessor`, you can assign a new or modified
+> `ImageProcessor` to an existing `ImagePlus`, or you can
+> modify the pixel values of an `ImageProcessor` **in place**,
+> without instantiating a new `ImageProcessor` or
+> `ImagePlus`.
 
 
 [Back to Index](../README.html)
