@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-03-30"
+date: "Started: 2013-07-16, Last modified: 2019-04-04"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -37,6 +37,10 @@ suppressPackageStartupMessages(library("tidyverse"))
 [Back to Index](../README.html)
 
 # Don't forget...
+
+## Keybord short cuts. Use CMD for Mac, CTL for PC..
+
+- CMD+Shift+M gives `%>%` (the pipe operator)
 
 ## For mac rstats folks...
 
