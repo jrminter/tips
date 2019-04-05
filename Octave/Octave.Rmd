@@ -28,6 +28,20 @@ Developer MacOSX App downloads are available
 There is extensive documentation
 [online](https://octave.org/doc/interpreter/index.html#SEC_Contents).
 
+
+## Getting the path right
+
+1. Run `addpath ("~/Octave")` to add an Octave folder for functions
+
+2. Save the path with `savepath ()`. This will write to `~/.octaverc`.
+
+
+## Install packages from Octave Forge
+
+```
+pkg install -forge image
+```
+
 ## Publish
 
 Octave has a nice `publish` feature. To publish the `pub_example.m`
