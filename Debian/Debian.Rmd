@@ -14,6 +14,18 @@ output:
 
 # Introduction
 
+## Key tips
+
+**Finding items**:
+
+1. Click **Activities** in the upper left corner.
+
+2. A **Search** dialog opens at the top center of the screen.
+
+3. Type what you want - like "_tips.html" for a link to my **Tips** html index...
+
+ 
+
 ## Key Debian Sites
 
 - [**Debian**](https://www.debian.org/) is a free Linux operating system that
