@@ -1,7 +1,7 @@
 ---
 title: "Octave Tips"
 author: "J. R. Minter"
-date: 'Started: 2019-03-21, Last modified: 2019-03-25'
+date: 'Started: 2019-03-21, Last modified: 2019-04-05'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -27,6 +27,20 @@ Developer MacOSX App downloads are available
 
 There is extensive documentation
 [online](https://octave.org/doc/interpreter/index.html#SEC_Contents).
+
+
+## Getting the path right
+
+1. Run `addpath ("~/Octave")` to add an Octave folder for functions
+
+2. Save the path with `savepath ()`. This will write to `~/.octaverc`.
+
+
+## Install packages from Octave Forge
+
+```
+pkg install -forge image
+```
 
 ## Publish
 
@@ -72,6 +86,39 @@ This does not work automatically. I found a workaround
        \author{Mike James (Modified by J. R. Minter)}
        \date{2019-03-25}
 
+# Using Octave with Rmarkdown
+
+RStudio's `Rmarkdown` supports code chunks in languages other than `R`,
+including `Octave`! Here are the details in how I configured it on both
+MacOS and Windows.
+
+On `crunch`, I set the environment variable `OCTAVE_PATH` to:
+
+```
+C:/Apps/Octave-5.1.0.0/mingw64/bin/octave-cli-5.1.0.exe
+```
+
+On `jrmFastMac`, I set `OCTAVE_PATH` to:
+
+```
+/usr/local/bin/octave
+```
+
+in Renviron in the `jrm_dotfiles` git repository. This
+is symlinked to `.Renviron`
+
+Here is an example code chunk. Since I don't want this to execute
+here, note that the configurarion has been moved to inside the
+block of triple backticks...
+
+```
+{octave, engine.path=octavePath}
+   A=[1,2,3;4,5,6]
+   [minval, row] = min(min(A,[],2));
+   [minval, col] = min(min(A,[],1));
+   [minval, row, col]
+
+```
 
 
 # Min and Max value for a matrix
@@ -85,16 +132,21 @@ This is n annoyance... Adapted from
    this function of the matrix `A`:
   
    ```
+   A=[1,2,3;4,5,6]
    [minval, row] = min(min(A,[],2));
    [minval, col] = min(min(A,[],1));
+   [minval, row, col]
    ```
    
    and for the maximum value:
    
    ```
+   A=[1,2,3;4,5,6]
    [maxval, row] = max(max(A,[],2));
    [maxval, col] = max(max(A,[],1));
+   [maxval, row, col]
    ```
+
    I coded these into functions: `max_val_pos` and `min_val_pos`. 
    
    **Note:** These are maintained under version control (`git`) in the
