@@ -1,7 +1,7 @@
 ---
 title: "Octave Tips"
 author: "J. R. Minter"
-date: 'Started: 2019-03-21, Last modified: 2019-03-25'
+date: 'Started: 2019-03-21, Last modified: 2019-04-05'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -72,6 +72,39 @@ This does not work automatically. I found a workaround
        \author{Mike James (Modified by J. R. Minter)}
        \date{2019-03-25}
 
+# Using Octave with Rmarkdown
+
+RStudio's `Rmarkdown` supports code chunks in languages other than `R`,
+including `Octave`! Here are the details in how I configured it on both
+MacOS and Windows.
+
+On `crunch`, I set the environment variable `OCTAVE_PATH` to:
+
+```
+C:/Apps/Octave-5.1.0.0/mingw64/bin/octave-cli-5.1.0.exe
+```
+
+On `jrmFastMac`, I set `OCTAVE_PATH` to:
+
+```
+/usr/local/bin/octave
+```
+
+in Renviron in the `jrm_dotfiles` git repository. This
+is symlinked to `.Renviron`
+
+Here is an example code chunk. Since I don't want this to execute
+here, note that the configurarion has been moved to inside the
+block of triple backticks...
+
+```
+{octave, engine.path=octavePath}
+   A=[1,2,3;4,5,6]
+   [minval, row] = min(min(A,[],2));
+   [minval, col] = min(min(A,[],1));
+   [minval, row, col]
+
+```
 
 
 # Min and Max value for a matrix
