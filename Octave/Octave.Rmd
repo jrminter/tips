@@ -85,16 +85,21 @@ This is n annoyance... Adapted from
    this function of the matrix `A`:
   
    ```
+   A=[1,2,3;4,5,6]
    [minval, row] = min(min(A,[],2));
    [minval, col] = min(min(A,[],1));
+   [minval, row, col]
    ```
    
    and for the maximum value:
    
    ```
+   A=[1,2,3;4,5,6]
    [maxval, row] = max(max(A,[],2));
    [maxval, col] = max(max(A,[],1));
+   [maxval, row, col]
    ```
+
    I coded these into functions: `max_val_pos` and `min_val_pos`. 
    
    **Note:** These are maintained under version control (`git`) in the
