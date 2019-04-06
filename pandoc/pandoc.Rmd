@@ -1,7 +1,7 @@
 ---
 title: "Tips on pandoc"
 author: "J. R. Minter"
-date: "Started 2019-03-32, Last modified: 2019-04-01"
+date: "Started 2019-03-32, Last modified: 2019-04-06"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -30,6 +30,22 @@ output:
 
 - [ST3 Pandoc plug-in](https://github.com/tbfisher/sublimetext-Pandoc/blob/master/README.md)
 
+- [A pandoc LaTeX template](https://github.com/Wandmalfarbe/pandoc-latex-template): These authors mention the concept of a **_pandoc templates folder_**. I used environment variables to shorten the path...
+
+    > Unix, Linux, macOS: `~/.pandoc/templates/`
+    > 
+    > Windows XP: `%USERPROFILE%/Application Data/pandoc/templates`
+    > 
+    > Windows Vista or later: `%APPDATA%/Roaming/pandoc/templates`
+
+# Pandoc from the command line
+
+I have shell scripts that make this easy. This one converts Markdown to Word:
+
+    ```
+    #!/bin/bash
+    pandoc $1.md -s -o $1.docx
+    ```
 
 [Back to Index](../README.html)
 
