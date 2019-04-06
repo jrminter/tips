@@ -54,13 +54,13 @@ From [Cderv](https://community.rstudio.com/t/how-to-set-a-variable-in-renviron/5
 
 - `usethis::edit_r_environ("project")` will open the one in your project
 
-He suggests learning abour how R's
+He suggests learning about how R's
 [startup](https://rviews.rstudio.com/2017/04/19/r-for-enterprise-understanding-r-s-startup/)
 works...
 
 The link has this helpful graphic
 
-![The R Startup in a nuthsell](./inc/R_Startup.jpg)
+![The R Startup in a nutshell](./inc/R_Startup.jpg)
 
 ## For mac rstats folks...
 
