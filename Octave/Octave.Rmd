@@ -92,13 +92,13 @@ RStudio's `Rmarkdown` supports code chunks in languages other than `R`,
 including `Octave`! Here are the details in how I configured it on both
 MacOS and Windows.
 
-On `crunch`, I set the environment variable `OCTAVE_PATH` to:
+On `crunch`, I set the environment variable `OCTAVE_EXECUTABLE` to:
 
 ```
 C:/Apps/Octave-5.1.0.0/mingw64/bin/octave-cli-5.1.0.exe
 ```
 
-On `jrmFastMac`, I set `OCTAVE_PATH` to:
+On `jrmFastMac`, I set `OCTAVE_EXECUTABLE` to:
 
 ```
 /usr/local/bin/octave
@@ -194,7 +194,7 @@ for installation instructions.
    setenv("GNUTERM","qt");
    ```
    
-   2. Add to `.bashrc`
+   2. Add to `.bash_profile`
    
    ```
    OCTAVE_EXECUTABLE="/Applications/Octave-5.1.0.app/Contents/Resources/usr/Cellar/octave-octave-app@5.1.0/5.1.0/bin/octave-5.1.0"
