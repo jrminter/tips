@@ -1,7 +1,7 @@
 ---
 title: "Ubuntu Tips"
 author: "J. R. Minter"
-date: "Started: 2014-01-17, Last modified: 2018-10-11"
+date: "Started: 2014-01-17, Last modified: 2019-04-08"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -47,6 +47,15 @@ aptitude safe-upgrade
 which does install new kernels. You should probably prefer
 ``aptitude`` in general to ``apt-get`` anyway, unless
 you specifically need something in ``apt-get``.
+
+# Remove a user
+
+This will remove a user and their home directory from the command line:
+
+```
+sudo deluser --remove-home username
+```
+
 
 # Managing software - From Distrowatch
 

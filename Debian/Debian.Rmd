@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Debian Tips"
 author: "J. R. Minter"
-date: "Started: 2019-02-28, Last modified: 2019-03-24"
+date: "Started: 2019-02-28, Last modified: 2019-04-05"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -76,6 +76,54 @@ deb-src http://debian.cs.binghamton.edu/debian/ stretch main
 
 ```
 # System Kung Fu
+
+## Using an experimental package
+
+We will use the example of the `Octave 5.1.0` installed on `Debian Sid`
+
+1. Configure `apt`
+
+    Add the entry below to `/etc/apt/sources.list`:
+    
+    ```
+    deb http://deb.debian.org/debian experimental main
+    ```
+    
+    using
+    
+    ```
+    sudo subl /etc/apt/sources.list
+    ```
+    
+2. Update  the sources
+
+    ```
+    sudo apt-get update
+    ```
+    
+3. Install the update
+
+   ```
+   sudo apt-get -t experimental install octave
+   ```
+   
+   Note: old octave packages will be removed...
+   
+4. Install packages needed from octave forge
+
+    ```
+    pkg install -forge image
+    pkg install -forge io
+    pkg install -forge statistics
+    pkg install -forge general
+    pkg install -forge symbolic
+    pkg install -forge linear-algebra (problems)
+    
+    some issues with `octave/config.h`. These are
+    being fixed upstream...
+    
+    ```
+
 
 ## Set the default web browser
 
