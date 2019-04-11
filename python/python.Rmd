@@ -14,6 +14,29 @@ output:
 
 # conda
 
+## Managing channels
+
+I often want to add or remove the `conda-forge` channel...
+
+1. Add 
+
+    ```
+    conda config --add channels conda-forge
+    ```
+
+2. List
+
+    ```
+    conda config --show channels
+    ```
+    
+3. Remove
+
+    ```
+    conda config --remove channels conda-forge
+    ```
+    
+
 ## A clean install of python with conda.
 
 I prefer **a clean install** when key updates are needed
