@@ -35,7 +35,17 @@ I often want to add or remove the `conda-forge` channel...
     ```
     conda config --remove channels conda-forge
     ```
+## Activating/Deactivating environments
+
+1. Activate
+
+    `conda activate scijava`
     
+2. Deactivate
+
+    `conda deactivate`
+
+   
 
 ## A clean install of python with conda.
 
