@@ -1,7 +1,7 @@
 ---
 title: "Image-J Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-04-03"
+date: "Started: 2013-07-16, Last modified: 2019-04-11"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -15,6 +15,12 @@ output:
 I have collected these tips both from experience and from a very helpful user community.
 
 # Quick tips
+
+## Tutorials
+
+See these ImageJ tutorials that use an ipython notebook. Clone
+[this](https://github.com/imagej/tutorials) github repository
+and follow the instructions.
 
 ## Start a new macro/script
 
