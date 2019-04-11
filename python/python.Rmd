@@ -115,6 +115,20 @@ below.
         
     e. In the browser, click into notebooks, then click on the
        `ImageJ-Tutorials-and-Demo.ipynb` notebook to open it.
+       
+    f. Fix issue on Windows 10
+    
+       See [stackoverflow](https://stackoverflow.com/questions/16428098/groovy-shell-warning-could-not-open-create-prefs-root-node)
+       regarding an issue where Win10 cannot write preferences.
+       
+       - Go into your Start Menu and type `regedit` into the search field.
+       
+       - Navigate to path `HKEY_LOCAL_MACHINE\Software\JavaSoft`
+       (Windows 10 may have this here:
+        `HKEY_LOCAL_MACHINE\Software\WOW6432Node\JavaSoft`)
+        
+       - Right click on the `JavaSoft folder` and click on `New -> Key`
+         Name the new Key `Prefs` and everything should work.
 
 ## Squeaky Clean Anaconda Environments
 
@@ -146,7 +160,7 @@ This does not work automatically. I found a workaround
 1. use as a command line tool
 
     See the
-    [useage section](https://nbconvert.readthedocs.io/en/latest/usage.html).
+    [usage section](https://nbconvert.readthedocs.io/en/latest/usage.html).
 
     ```
     jupyter nbconvert --to latex notebook.ipynb
