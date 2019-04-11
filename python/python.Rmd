@@ -20,6 +20,9 @@ I prefer **a clean install** when key updates are needed
 instead of accumulating many unused
 packages that are not removed by `conda clean -a -y`.
 
+This will run the `Fiji/ImageJ` tutorials using a `Groovy` kernel
+in a `jupyter` notebook. This is **way cool**...
+
 Do this periodically:
 
 1. Download the latest miniconda installer from
@@ -54,7 +57,31 @@ below.
     # clean up
     conda clean -a -y
     ```
+5. Set up to work with Fiji/ImageJ Tutorials
+
+    a. Clone this [imagej/tutorials](https://github.com/imagej/tutorials)
+       repository.
+       
+    b. Open a console and cd to your cloned working copy.
     
+    c. Run:
+    
+        ```
+        conda env create -f environment.yml
+        ```
+        to create a conda environment with the dependencies these
+        notebooks need. type `source activate scijava`
+        (or `activate scijava` on Windows) to activate the 
+        
+    d. Run:
+    
+        ```
+        jupyter notebook
+        ```
+        to launch Jupyter Notebook in a web browser window.
+        
+    e. In the browser, click into notebooks, then click on the
+       `ImageJ-Tutorials-and-Demo.ipynb` notebook to open it.
 
 ## Squeaky Clean Anaconda Environments
 
