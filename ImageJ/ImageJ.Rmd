@@ -22,6 +22,18 @@ See these ImageJ tutorials that use an ipython notebook. Clone
 [this](https://github.com/imagej/tutorials) github repository
 and follow the instructions.
 
+To activate this environment, use
+
+    ```
+    conda activate scijava
+    ```
+    
+To deactivate an active environment, use
+    ```
+    conda deactivate
+    ```
+
+
 ## Start a new macro/script
 
 The tool bar has changed (2019-03-24). This had me searching...
