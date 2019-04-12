@@ -30,12 +30,43 @@ Developer MacOSX App downloads are available
 There is extensive documentation
 [online](https://octave.org/doc/interpreter/index.html#SEC_Contents).
 
-## Key Tips
+## Using Octave in Rmarkdown
+
+### Code chunks must be self-contained
+
+We need to set the path to the Octave executable to run Octave chunks
+in Rmarkdown. **_N.B._ Octave code chunks must be _self-contained_**
+**unlike** R code chunks.
+
+```{r setup, include=TRUE}
+knitr::opts_chunk$set(echo = TRUE)
+octaveExe <- Sys.getenv("OCTAVE_EXECUTABLE")
+octaveExe
+```
+
+### Setting up for working with opertors
 
 1. element by element operators are the operator with a preceeding `.`.
 For example:
 
-    `A .* B`
+    ```{octave elem_by_elem, engine.path=octaveExe}
+    A = [1,2,3,4];
+    B = [2,4,6,8];
+
+    A .* B
+    A .+ B
+    A .^ B
+    ```
+
+2. We can set row and column vectors and matrices
+
+    ```{octave row_col_vec_mat, engine.path=octaveExe}
+    A = [1 2 3 4]
+    B = [2;4;6;8]
+    C = [1 2 3 4;5 6 7 8;9 10 11 12]
+    ```
+
+
 
 ## Tutorials
 
@@ -58,6 +89,11 @@ from 2014. Decent...
     octave:1> 
     ```
     
+2. Clear the screen
+
+    ```
+    octave:1> clc 
+    ``` 
 
 ## Getting the path right
 
