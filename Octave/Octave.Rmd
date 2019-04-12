@@ -67,7 +67,6 @@ For example:
     ```
 
 
-
 ## Tutorials
 
 1. A series on YouTube by
@@ -94,6 +93,97 @@ from 2014. Decent...
     ```
     octave:1> clc 
     ``` 
+
+## Special Functions
+
+1. `ones(n,m)` - Generates a matix `n x m` of 1's
+
+2. `zeros(n,m)` - Generates a matix `n x m` of 0's
+
+3. `eye(n) or eye(n,m)` Generates an identity matix
+
+4. `rand(n,m)` Generates a matix `n x m` of randomly distributed elements
+
+    ```{octave ones_mat, engine.path=octaveExe}
+    ones(3,5)
+    
+    rand(3,5)
+    
+    eye(4)
+    ```
+## The colon operator
+
+
+    ```{octave colon_op, engine.path=octaveExe}
+    S1 = 1:5
+    ```
+    
+    ```{octave colon_op_step, engine.path=octaveExe}
+    S2 = 2:2:10
+    ```
+
+## Indexing
+
+    ```{octave indexing, engine.path=octaveExe}
+    S = [1 2; 3 4]
+    
+    S(1,1)
+    S(1,[1 2])
+    S(1,1:2)
+    S(1,:)
+    ```
+
+## Other functions
+
+    ```{octave other_funcs, engine.path=octaveExe}
+    x = sprintf("Pi to 8 decimals: %0.8f", pi)
+    
+    vec = [pi, 2*pi]
+    ceil(vec)
+    floor(vec)
+    round(vec)
+    max(vec)
+    min(vec)
+    ```
+    
+    We can get help with `help(rand)`
+    
+    
+See the [intereter](https://www.gnu.org/software/octave/doc/interpreter/)
+docs...
+
+## Loading and using data
+
+[link to data](https://www.mediafire.com/folder/ffvd5sfasy2bz/Tutorial_3_-_Loading_%26_Saving)
+
+```{octave load_dat, engine.path=octaveExe}
+m = load("./dat/single.dat");
+length(m)
+
+v = rand(5,1)
+
+save ./dat/mydata.dat v
+    
+f = tmpfile
+save f v
+v = [0]
+load f
+    
+a = [1; 2; 3];
+b = [4; 5; 6];
+
+[a; b]
+
+c = [a b]
+
+size(c)
+
+length(c)
+
+length(a)
+    
+```
+
 
 ## Getting the path right
 
