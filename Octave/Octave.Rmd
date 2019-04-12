@@ -1,7 +1,7 @@
 ---
 title: "Octave Tips"
 author: "J. R. Minter"
-date: 'Started: 2019-03-21, Last modified: 2019-04-08'
+date: 'Started: 2019-03-21, Last modified: 2019-04-12'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -17,6 +17,8 @@ output:
 Gnu Octave is an Open Source program similar to Matlab.
 Binaries are available [here](https://www.gnu.org/software/octave/).
 
+There is a version that runs from the command line and a GUI version.
+
 As of 2019-03-21, the current release is `Octave 5.1.0.0` which was
 released on 2019-03-01.
 
@@ -28,6 +30,34 @@ Developer MacOSX App downloads are available
 There is extensive documentation
 [online](https://octave.org/doc/interpreter/index.html#SEC_Contents).
 
+## Key Tips
+
+1. element by element operators are the operator with a preceeding `.`.
+For example:
+
+    `A .* B`
+
+## Tutorials
+
+1. A series on YouTube by
+[DrapsTV](https://www.youtube.com/watch?v=X0xLTKRWPgo&list=PL1A2CSdiySGJ6oZe6XB-TTCFuHc5Fs1PO)
+from 2014. Decent...
+
+## Setup for the command line version
+
+1. Set a custom prompt.
+
+    ```
+    PS1("\# > ")
+    ```
+
+    gives a simple command line, although the standard prompt
+    is reasonable:
+    
+    ```
+    octave:1> 
+    ```
+    
 
 ## Getting the path right
 
