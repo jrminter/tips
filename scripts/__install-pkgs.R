@@ -13,8 +13,7 @@
 #            and tpoisot/digitize from github
 # 2018-08-15 Added DescTools package for numeric fomatting.
 # 2019-03-03 Add rdformats
-# 2019-04-13 Update to use lwPackageHelpR
-#
+# 2019-04-13 use lwPackageHelperR to install new
 
 
 if( Sys.info()['sysname'] == "Windows"){
