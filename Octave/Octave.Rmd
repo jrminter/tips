@@ -23,6 +23,29 @@ There is a version that runs from the command line and a GUI version.
 As of 2019-03-21, the current release is `Octave 5.1.0.0` which was
 released on 2019-03-01.
 
+One **_major advantage_** of the Windows installer is that it comes
+bundled with many (all key anyway...) packages from Octave Forge.
+This saves a lot of headaches while compiling packages, especially
+on MacOS. I have a Parallels Win10 x64 VM for this reason...
+
+Getting the path right was fun
+
+I ended up doiing this
+
+1. I set my Octave function folder as
+
+    ```
+    C:/Users/jrminter/Octave (note upper case...)
+    ```
+
+2. I ran
+
+    ```
+    rmpath("C:/Users/jrminter/octave")  (my old path renamed to `Octave`)
+    addpath("C:/Users/jrminter/Octave")
+    savepath() (this saved the path to C:/Users/jrminter.octaverc)
+    ```
+
 On the Mac, we install via Homebrew. This installs `Octave 4.4.1`.
 
 Developer MacOSX App downloads are available
