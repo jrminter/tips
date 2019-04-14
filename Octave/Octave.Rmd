@@ -54,12 +54,23 @@ Developer MacOSX App downloads are available
 There is extensive documentation
 [online](https://octave.org/doc/interpreter/index.html#SEC_Contents).
 
+## Development and Debugging on Octave for macOS
+
 There is also discussion regarding the development of the macOS app
 [**here**](https://github.com/octave-app/octave-app/issues/25).
 
-## Using Octave in Rmarkdown
+One suggestion for a **spinning ball** on Octave on MacOS - try:
 
-### Code chunks must be self-contained
+    ```
+    rm -rf ~/.config/octave 
+    ```
+    
+    and restart...
+
+
+# Using Octave in Rmarkdown
+
+## Code chunks must be self-contained
 
 We need to set the path to the Octave executable to run Octave chunks
 in Rmarkdown. **_N.B._ Octave code chunks must be _self-contained_**
@@ -71,7 +82,37 @@ octaveExe <- Sys.getenv("OCTAVE_EXECUTABLE")
 octaveExe
 ```
 
-### Setting up for working with operators
+On `crunch`, I set the environment variable `OCTAVE_EXECUTABLE` to:
+
+```
+C:/Apps/Octave-5.1.0.0/mingw64/bin/octave-cli-5.1.0.exe
+```
+
+On `jrmFastMac`, I set `OCTAVE_EXECUTABLE` to:
+
+```
+/usr/local/bin/octave
+```
+
+in Renviron in the `jrm_dotfiles` git repository. This
+is symbolically-linked to `.Renviron`
+
+Here is an example code chunk. Since I don't want this to execute
+here, note that the configuration has been moved to inside the
+block of triple back-ticks...
+
+```
+{octave, engine.path=octavePath}
+   A=[1,2,3;4,5,6]
+   [minval, row] = min(min(A,[],2));
+   [minval, col] = min(min(A,[],1));
+   [minval, row, col]
+
+```
+
+# Key Elements
+
+## Setting up for working with operators
 
 1. element by element operators are the operator with a preceding `.`.
 For example:
@@ -94,9 +135,9 @@ For example:
     ```
 
 
-## Tutorials
 
-1. A series on YouTube by
+# An Octave Tutorial Series on YouTube
+
 [DrapsTV](https://www.youtube.com/watch?v=X0xLTKRWPgo&list=PL1A2CSdiySGJ6oZe6XB-TTCFuHc5Fs1PO)
 from 2014. Decent...
 
@@ -615,20 +656,20 @@ print -dpng ‘mymesh.png’
 
 
 
-## Getting the path right
+# Getting the path right
 
 1. Run `addpath ("~/Octave")` to add an Octave folder for functions
 
 2. Save the path with `savepath ()`. This will write to `~/.octaverc`.
 
 
-## Install packages from Octave Forge
+# Install packages from Octave Forge
 
 ```
 pkg install -forge image
 ```
 
-## Publish
+# Publish
 
 Octave has a nice `publish` feature. To publish the `pub_example.m`
 file, one would enter from the command line (in the correct directory...)
@@ -637,7 +678,7 @@ file, one would enter from the command line (in the correct directory...)
 
 This creates a nice HTML file with a notebook-like format.
 
-## PDF output from jupyter notebook w/ Octave kernel
+# PDF output from jupyter notebook w/ Octave kernel
 
 This does not work automatically. I found a workaround
 [here](https://nbconvert.readthedocs.io/en/latest).
@@ -674,37 +715,7 @@ This does not work automatically. I found a workaround
 
 # Using Octave with Rmarkdown
 
-RStudio's `Rmarkdown` supports code chunks in languages other than `R`,
-including `Octave`! Here are the details in how I configured it on both
-MacOS and Windows.
 
-On `crunch`, I set the environment variable `OCTAVE_EXECUTABLE` to:
-
-```
-C:/Apps/Octave-5.1.0.0/mingw64/bin/octave-cli-5.1.0.exe
-```
-
-On `jrmFastMac`, I set `OCTAVE_EXECUTABLE` to:
-
-```
-/usr/local/bin/octave
-```
-
-in Renviron in the `jrm_dotfiles` git repository. This
-is symbolically-linked to `.Renviron`
-
-Here is an example code chunk. Since I don't want this to execute
-here, note that the configuration has been moved to inside the
-block of triple back-ticks...
-
-```
-{octave, engine.path=octavePath}
-   A=[1,2,3;4,5,6]
-   [minval, row] = min(min(A,[],2));
-   [minval, col] = min(min(A,[],1));
-   [minval, row, col]
-
-```
 
 
 # Min and Max value for a matrix
