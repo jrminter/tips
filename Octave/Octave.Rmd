@@ -1,7 +1,7 @@
 ---
 title: "Octave Tips"
 author: "J. R. Minter"
-date: 'Started: 2019-03-21, Last modified: 2019-04-13'
+date: 'Started: 2019-03-21, Last modified: 2019-04-14'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -30,7 +30,7 @@ on MacOS. I have a Parallels Win10 x64 VM for this reason...
 
 Getting the path right was fun
 
-I ended up doiing this
+I ended up doing this
 
 1. I set my Octave function folder as
 
@@ -54,6 +54,9 @@ Developer MacOSX App downloads are available
 There is extensive documentation
 [online](https://octave.org/doc/interpreter/index.html#SEC_Contents).
 
+There is also discussion regarding the development of the macOS app
+[**here**](https://github.com/octave-app/octave-app/issues/25).
+
 ## Using Octave in Rmarkdown
 
 ### Code chunks must be self-contained
@@ -68,9 +71,9 @@ octaveExe <- Sys.getenv("OCTAVE_EXECUTABLE")
 octaveExe
 ```
 
-### Setting up for working with opertors
+### Setting up for working with operators
 
-1. element by element operators are the operator with a preceeding `.`.
+1. element by element operators are the operator with a preceding `.`.
 For example:
 
     ```{octave elem_by_elem, engine.path=octaveExe}
@@ -120,13 +123,13 @@ from 2014. Decent...
 
 ## Special Functions
 
-1. `ones(n,m)` - Generates a matix `n x m` of 1's
+1. `ones(n,m)` - Generates a matrix `n x m` of 1's
 
-2. `zeros(n,m)` - Generates a matix `n x m` of 0's
+2. `zeros(n,m)` - Generates a matrix `n x m` of 0's
 
-3. `eye(n) or eye(n,m)` Generates an identity matix
+3. `eye(n) or eye(n,m)` Generates an identity matrix
 
-4. `rand(n,m)` Generates a matix `n x m` of randomly distributed elements
+4. `rand(n,m)` Generates a matrix `n x m` of randomly distributed elements
 
     ```{octave ones_mat, engine.path=octaveExe}
     ones(3,5)
@@ -185,9 +188,9 @@ It supports most commands from both Windows and *nix.
 
 - `cd` - Change directory
 
-- ls, dir - List current directory
+- `ls`, `dir` - List current directory
 
-- pwd - Print current working directory
+- `pwd` - Print current working directory
 
 Octave has built in `load()` and `save()` functions that make it easy to
 load and save many types of data files.
@@ -251,7 +254,7 @@ D = [A;B]
 
 - size(m) - returns a matrix of dimensions
 
-- length(m) - returns the longest dimensio
+- length(m) - returns the longest dimension
 
 
 ```{octave sz_len, engine.path=octaveExe}
@@ -383,7 +386,7 @@ print -dpng ‘mymesh.png’
 
 ## Control Statements
 
-The two control statements in Octave are `if` statments ans `repetitions`
+The two control statements in Octave are `if` statements and `repetitions`
 (`for` loops and `while` loops).
 
 ### Boolean (Comparison) Operators
@@ -688,11 +691,11 @@ On `jrmFastMac`, I set `OCTAVE_EXECUTABLE` to:
 ```
 
 in Renviron in the `jrm_dotfiles` git repository. This
-is symlinked to `.Renviron`
+is symbolically-linked to `.Renviron`
 
 Here is an example code chunk. Since I don't want this to execute
-here, note that the configurarion has been moved to inside the
-block of triple backticks...
+here, note that the configuration has been moved to inside the
+block of triple back-ticks...
 
 ```
 {octave, engine.path=octavePath}
@@ -709,9 +712,9 @@ block of triple backticks...
 This is n annoyance... Adapted from
 [here](https://gist.github.com/Atlas7/6e03676da65bf467cb22d1ca42f20695).
 
-1. Octave matrix indices start with `1` not `0`.
+1. Octave matrix index start with `1` not `0`.
 
-2. To find the minum value of the matrix and its index, one can use
+2. To find the minimum value of the matrix and its index, one can use
    this function of the matrix `A`:
   
    ```
