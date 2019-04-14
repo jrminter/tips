@@ -1,7 +1,7 @@
 ---
 title: "Python Tips"
 author: "J. R. Minter"
-date: 'Started: 2013-07-16, Last modified: 2019-03-25'
+date: 'Started: 2013-07-16, Last modified: 2019-04-11'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -14,6 +14,122 @@ output:
 
 # conda
 
+## Managing channels
+
+I often want to add or remove the `conda-forge` channel...
+
+1. Add 
+
+    ```
+    conda config --add channels conda-forge
+    ```
+
+2. List
+
+    ```
+    conda config --show channels
+    ```
+    
+3. Remove
+
+    ```
+    conda config --remove channels conda-forge
+    ```
+## Activating/Deactivating environments
+
+1. Activate
+
+    `conda activate scijava`
+    
+2. Deactivate
+
+    `conda deactivate`
+
+   
+
+## A clean install of python with conda.
+
+I prefer **a clean install** when key updates are needed
+instead of accumulating many unused
+packages that are not removed by `conda clean -a -y`.
+
+This will run the `Fiji/ImageJ` tutorials using a `Groovy` kernel
+in a `jupyter` notebook. This is **way cool**...
+
+Do this periodically:
+
+1. Download the latest miniconda installer from
+[here](https://repo.continuum.io/miniconda/).
+
+2. Delete the miniconda directory and all evidence
+of conda:
+
+    ```
+    rm -rf minconda3 .conda .condarc
+    ```
+    
+    Also check that conda is not in the path in
+    `.bash_profile`
+    
+3. Install the miniconda3 environment
+
+4. Install the desired packages. My current list is shown
+below.
+
+    ```
+    conda update conda
+    conda clean -a -y
+    conda update --all
+    conda install numpy scipy matplotlib seaborn jupyter spyder
+    conda install sqlite pandas xlwt scikit-image nbconvert pandoc
+    conda config --add channels conda-forge
+    conda install mahotas sympy cython
+    # OPTIONALLY install pkgs suggested by Curtis Rueden
+    conda install ipywidgets beakerx
+    pip install iversions
+    # clean up
+    conda clean -a -y
+    ```
+5. Set up to work with Fiji/ImageJ Tutorials
+
+    a. Clone this [imagej/tutorials](https://github.com/imagej/tutorials)
+       repository.
+       
+    b. Open a console and cd to your cloned working copy.
+    
+    c. Run:
+    
+        ```
+        conda env create -f environment.yml
+        ```
+        to create a conda environment with the dependencies these
+        notebooks need. type `source activate scijava`
+        (or `activate scijava` on Windows) to activate the 
+        
+    d. Run:
+    
+        ```
+        jupyter notebook
+        ```
+        to launch Jupyter Notebook in a web browser window.
+        
+    e. In the browser, click into notebooks, then click on the
+       `ImageJ-Tutorials-and-Demo.ipynb` notebook to open it.
+       
+    f. Fix issue on Windows 10
+    
+       See [stackoverflow](https://stackoverflow.com/questions/16428098/groovy-shell-warning-could-not-open-create-prefs-root-node)
+       regarding an issue where Win10 cannot write preferences.
+       
+       - Go into your Start Menu and type `regedit` into the search field.
+       
+       - Navigate to path `HKEY_LOCAL_MACHINE\Software\JavaSoft`
+       (Windows 10 may have this here:
+        `HKEY_LOCAL_MACHINE\Software\WOW6432Node\JavaSoft`)
+        
+       - Right click on the `JavaSoft folder` and click on `New -> Key`
+         Name the new Key `Prefs` and everything should work.
+
 ## Squeaky Clean Anaconda Environments
 
 > To delete packages, caches, and other files that aren't being used in
@@ -23,7 +139,45 @@ output:
 conda clean -a -y
 ```
 
-## Fixing Spyder on Python 3.7.2 miniconda x64 MacOSX
+# Render obstinate `.ipynb` files to PDF
+
+
+This does not work automatically. I found a workaround
+[here](https://nbconvert.readthedocs.io/en/latest).
+
+0. Install what we need from python
+
+    See the
+    [installation section](https://nbconvert.readthedocs.io/en/latest/install.html).
+
+    **not needed** with clean install above...
+
+    ```
+    conda install nbconvert
+    conda install pandoc
+    ```
+
+1. use as a command line tool
+
+    See the
+    [usage section](https://nbconvert.readthedocs.io/en/latest/usage.html).
+
+    ```
+    jupyter nbconvert --to latex notebook.ipynb
+    ```
+
+2. Use LaTeX to render the notebook. `TeXworks` worked fine...
+
+   In general, I am pleased with the rendering...
+   
+   There are items to add to the .tex file
+
+       Under `\title{}` (perhaps change):
+       \title{Octave \textit{Vade Mecum}}
+       \author{Mike James (Modified by J. R. Minter)}
+       \date{2019-03-25}
+
+# Fixing Spyder on Python 3.7.2 miniconda x64 MacOSX
 
 The problem:
 
@@ -45,43 +199,6 @@ The solution:
 ```
 ln -s /Users/jrminter/miniconda3/bin/python /Users/jrminter/miniconda3/python.app/Contents/MacOS/python
 ```
-
-# Render obstinate `.ipynb` files to PDF
-
-
-This does not work automatically. I found a workaround
-[here](https://nbconvert.readthedocs.io/en/latest).
-
-0. Install what we need from python
-
-    See the
-    [installation section](https://nbconvert.readthedocs.io/en/latest/install.html).
-
-    ```
-    conda install nbconvert
-    conda install pandoc
-    ```
-
-1. use as a command line tool
-
-    See the
-    [useage section](https://nbconvert.readthedocs.io/en/latest/usage.html).
-
-    ```
-    jupyter nbconvert --to latex notebook.ipynb
-    ```
-
-2. Use LaTeX to render the notebook. `TeXworks` worked fine...
-
-   In general, I am pleased with the rendering...
-   
-   There are items to add to the .tex file
-
-       Under `\title{}` (perhaps change):
-       \title{Octave \textit{Vade Mecum}}
-       \author{Mike James (Modified by J. R. Minter)}
-       \date{2019-03-25}
-
 
 
 # Remove PyCharm
@@ -177,6 +294,8 @@ as needed. Add others to the list (and note the date with a comment below)
     conda install mahotas
     conda install sympy
     conda install cython
+    # this last conda suggested by Curtis Rueden
+    conda install ipywidgets beakerx
     pip install iversions
     ```
 

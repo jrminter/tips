@@ -1,7 +1,7 @@
 ---
 title: "Git Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-03-07"
+date: "Started: 2013-07-16, Last modified: 2019-03-09"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -16,6 +16,67 @@ These are John Minter's tips for a workflow using git. They were
 compiled from several web sources.
 
 # Quick tips
+
+## Caching credentials
+
+From [Jenny Bryan](https://happygitwithr.com/credential-caching.html)
+
+1. Windows
+
+    a. The preferred setting for credential.helper is now manager,
+       which configures Git to use Git Credential Manager for Windows,
+       which ships with Git for Windows. This may already be
+       configured, but this command sets it explicitly:
+
+       ```
+       git config --global credential.helper manager
+       ```
+       
+    b. If for some reason, Git Credential Manager does not work, you
+       may have success with an older method, wincred:
+
+       ```
+      git config --global credential.helper wincred
+       ```
+      This is, however, considered deprecated and suggests you should
+      install the current Git for Windows. So only use this as a
+      temporary solution to get unstuck, until you can upgrade.
+      
+2. Mac
+
+     Find out if the credential helper is already installed. In the
+     shell, enter:
+    
+     ```
+     git credential-osxkeychain
+     ```
+     
+     And look for this output:
+     
+     ```
+     usage: git credential-osxkeychain <get|store|erase>
+     ```
+     
+     If you don’t get this output, it means you need a more recent
+     version of Git, either via command line developer tools or
+     Homebrew. Go back to the Mac section of chapter (6).
+     
+     Once you’ve confirmed you have the credential helper, enter:
+     
+     ```
+     git config --global credential.helper osxkeychain
+     ```
+
+3. Linux
+
+    In the shell, enter:
+    
+    ```
+    git config --global credential.helper 'cache --timeout=10000000'
+    ```
+    
+    to store your password for ten million seconds or around 16 weeks,
+    enough for a semester.
 
 ## Rendering Rmarkdown on Github
 

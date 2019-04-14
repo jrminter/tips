@@ -251,6 +251,10 @@ osPkgs/osPkgs.md
 osPkgs/osPkgs.html
 osPkgs/figure/
 
+Octave/*.html
+Octave/f
+Octave/dat/mydata.dat
+
 # pandoc directory
 pandoc/.DS_Store
 pandoc/pandoc.md
