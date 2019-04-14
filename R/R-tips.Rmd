@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-04-06"
+date: "Started: 2013-07-16, Last modified: 2019-04-13"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -12,24 +12,8 @@ output:
 
 ```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
 library(knitr)
-# make this an external chunk that can be included in any file
 options(width = 72)
-# opts_chunk$set(message = F, error = F, warning = F, comment = NA, fig.align = 'center', dpi = 100, tidy = F, cache.path = '.cache/', fig.path = 'figure/')
 
-options(xtable.type = 'html')
-knit_hooks$set(inline = function(x) {
-  if(is.numeric(x)) {
-    round(x, getOption('digits'))
-  } else {
-    paste(as.character(x), collapse = ', ')
-  }
-})
-
-
-knit_hooks$set(plot = knitr:::hook_plot_html)
-
-# library(statshelpR)
-# install_new("scales")
 suppressPackageStartupMessages(library("tidyverse"))
 ```
 
@@ -297,297 +281,6 @@ bookings %>%
   head(5)
 ```
 
-## Five tips to improve your R code
-
-[drsimonj](https://drsimonj.svbtle.com/five-simple-tricks-to-improve-your-r-code)
-has some great ways to improve R code. These include
-
-### More fun to sequence from 1
-
-- Sequence a vector
-
-```{r seqVec, comment=NA}
-x <- runif(10)
-seq(x)
-```
-
-- Sequence an integer
-
-```{r seqInt, comment=NA}
-seq(nrow(mtcars))
-```
-
-### `vector()` what you `c()`
-
-Next time you create an empty vector with `c()`, try to replace it with
-`vector("type", length)`.
-
-A numeric vector with 5 elements
-
-```{r numVec, comment=NA}
-vector("numeric", 5)
-```
-
-A character vector with 3 elements
-
-```{r charVec, comment=NA}
-vector("character", 3)
-```
-
-Doing this improves memory usage and increases speed!
-You often know upfront what type of values will go into a vector,
-and how long the vector will be. Using `c()` means R has to slowly
-work both of these things out. So help give it a boost with `vector()`!
-
-A good example of this value is in a for loop. People often write loops
-by declaring an empty vector and growing it with `c()` like this:
-
-```
-{r slowVec, comment=NA}
-x <- c()
-for (i in seq(5)) {
-  x <- c(x, i)
-}
-
-```
-
-Instead, pre-define the type and length with vector(), and reference
-positions by index, like this:
-
-```{r fastVec, comment=NA}
-n <- 5
-x <- vector("integer", n)
-for (i in seq(n)) {
-  x[i] <- i
-}
-```
-
-Here's a quick speed comparison:
-
-```
-{r slowComp, comment=NA}
-
-n <- 1e5
-
-x_empty <- c()
-system.time(for(i in seq(n)) x_empty <- c(x_empty, i))
-```
-
-```{r fastComp, comment=NA}
-x_zeros <- vector("integer", n)
-system.time(for(i in seq(n)) x_zeros[i] <- i)
-```
-
-That should be convincing enough!
-
-### Ditch the which()
-
-Next time you use `which()`, try to ditch it! People often use `which()`
-to get indices from some boolean condition, and then select values at
-those indices. This is not necessary.
-
-Getting vector elements greater than 5:
-
-```{r withWhich, comment=NA}
-x <- 3:7
-x[which(x > 5)]
-```
-
-```{r noWhich, comment=NA}
-x <- 3:7
-x[x > 5]
-```
-
-Or counting number of values greater than 5:
-
-```{r withWhich2, comment=NA}
-length(which(x > 5))
-```
-
-```{r noWhich2, comment=NA}
-sum(x > 5)
-```
-
-Why should you ditch `which()`? It's often unnecessary and boolean
-vectors are all you need.
-
-For example, R lets you select elements flagged as `TRUE` in a
-boolean vector:
-
-```{r cond1, comment=NA}
-condition <- x > 5
-condition
-```
-
-```{r cond2, comment=NA}
-x[condition]
-```
-
-Also, when combined with `sum()` or `mean()`, boolean vectors can be
-used to get the count or proportion of values meeting a condition:
-
-```{r sumCond, comment=NA}
-sum(condition)
-```
-
-```{r meanCond, comment=NA}
-mean(condition)
-```
-
-`which()` tells you the indices of `TRUE` values:
-
-```{r shichCond, comment=NA}
-which(condition)
-```
-
-And while the results are not wrong, it's just not necessary. For
-example, I often see people combining `which()` and `length()` to test
-whether any or all values are `TRUE`. Instead, you just need `any()` or
-`all()`:
-
-```{r tsetWhTwo, comment=NA}
-
-x <- c(1, 2, 12)
-if (length(which(x > 10)) > 0)
-  print("At least one value is greater than 10")
-
-# Wrapping a boolean vector with `any()`
-if (any(x > 10))
-  print("At least one value is greater than 10")
-
-# Using `which()` and `length()` to test if all values are positive
-if (length(which(x > 0)) == length(x))
-  print("All values are positive")
-
-# Wrapping a boolean vector with `all()`
-if (all(x > 0))
-  print("All values are positive")
-```
-
-Oh, and it saves you a little time...
-
-```{r timeWhichTwo, comment=NA}
-x <- runif(1e8)
-
-print(system.time(x[which(x > .5)]))
-
-
-print(system.time(x[x > .5]))
-```
- 
-### Factor that factor!
-
-Ever removed values from a factor and found you're stuck with old levels
-that don't exist anymore? I see all sorts of creative ways to deal with
-this. The simplest solution is often just to wrap it in `factor()` again.
-
-This example creates a factor with four levels ("a", "b", "c" and "d"):
-
-```{r fourLevfac, comment=NA}
-# A factor with four levels
-x <- factor(c("a", "b", "c", "d"))
-x
-
-plot(x)
-```
-
-
-If you drop all cases of one level ("d"), the level is still
-recorded in the factor:
-
-```{r dropfaLev, comment=NA}
-
-# Drop all values for one level
-x <- x[x != "d"]
-
-# But we still have this level!
-x
-```
-
-```{r plotX, comment=NA}
-plot(x)
-```
-
-A super simple method for removing it is to use `factor()` again:
-
-```{r fixFac, comment=NA}
-x <- factor(x)
-x
-```
-
-```{r plotX2, comment=NA}
-plot(x)
-```
-
-
-This is typically a good solution to a problem that gets a lot of
-people mad. So save yourself a headache and factor that factor!
-
-Aside, thanks to Amy Szczepanski who contacted me after the original
-publication of this article and mentioned `droplevels()`. Check it out
-if this is a problem for you!
-
- 
-### First you get the `$`, then you get the power
-
-Next time you want to extract values from a data.frame column where the
-rows meet a condition, specify the column with `$` before the rows with
-`[`.
-
-**Examples**
-
-Say you want the horsepower (`hp`) for cars with 4 cylinders (`cyl`),
-using the `mtcars` data set. You can write either of these:
-
-```{r cars1, comment=NA}
-# rows first, column second - not ideal
-mtcars[mtcars$cyl == 4, ]$hp
-```
-
-```{r cars2, comment=NA}
-# column first, rows second - much better
-mtcars$hp[mtcars$cyl == 4]
-```
-
-The tip here is to use the second approach.
-
-But why is that?
-
-First reason: do away with that pesky comma! When you specify rows
-before the column, you need to remember the comma:
-`mtcars[mtcars$cyl == 4,]$hp`. When you specify column first, this
-means that you're now referring to a vector, and don't need the comma!
-
-Second reason: speed! Let's test it out on a larger data frame:
-
-Simulate a data frame...
-
-```{r simDF, comment=NA}
-n <- 1e7
-d <- data.frame(
-  a = seq(n),
-  b = runif(n)
-)
-```
-
-
-```{r testDF1, comment=NA}
-# rows first, column second - not ideal
-system.time(d[d$b > .5, ]$a)
-```
-
-```{r testDF2, comment=NA}
-# column first, rows second - much better
-system.time(d$a[d$b > .5])
-```
-
-Worth it, right?
-
-
-
-
-
-
 ## Key RStudio Project Settings
 
 Tabs and spaces can be a **big** problem. The **tidyverse** and similar
@@ -613,7 +306,6 @@ BuildType: Package
 PackageUseDevtools: Yes
 PackageInstallArgs: --no-multiarch --with-keep.source
 ```
-
 
 ## Stop printing hashes
 
@@ -703,12 +395,9 @@ RSTUDIO_WHICH_R="/home/jrminter/apps/R/3.5.1/bin/R"
 TEMP="/home/jrminter/tmp"
 ```
 
+# Some hints on key packages
 
-
-
-## Some hints on key packages
-
-### From [Steph Locke](https://twitter.com/SteffLocke/status/990251709531344896)
+## From [Steph Locke](https://twitter.com/SteffLocke/status/990251709531344896)
 
 My #rstats #datascience goto packages:
 
@@ -773,8 +462,6 @@ library(rstudioapi)
 versionInfo()
 ```
 
-
-
 ## Get the .gitignore right...
 
 [This](https://stackoverflow.com/questions/36185456/gitignored-files-still-shown-in-rstudio)
@@ -793,8 +480,6 @@ git commit -m "Removed files...."
 ```
 .Rproj.user/**
 ```
-
-
 
 ## Special symbols...
 
@@ -854,15 +539,12 @@ print(plt)
 ```
 
 
-
-
 ## To start Rserve
 
 ```
 library(Rserve)
 Rserve(args="--no-save")
 ```
-
 
 ## Get rJava packages to work
 
@@ -888,8 +570,6 @@ I added this to `Rprofile.site` in
 C:\Apps\R\R-3.4.3\etc
 ```
 
-
-
 ## Vignettes
 
 ### To force building
@@ -914,7 +594,6 @@ e.g.
 browseVignettes(package="statshelpR")
 
 ```
-
 
 ## Set the path in .Renviron on MacOSX
 
@@ -1053,8 +732,6 @@ has a nice R style guide.
 R can be **really** frustrating at time. These are some
 tips on matters that made me go *hmmm...*
 
-# Hard things to find
-
 # Adjustments for El Capitan
 
 1. **Make changes to .Renviron** . This makes sure R (esp. RStudio) can
@@ -1116,24 +793,6 @@ I created `C:/Apps/R/local/local320` and unzipped `local320.zip` and
 (line 30) files in the binary distribution. This means I could add other
 versions accordingly.
 
-# git2r for WinXP
-
-HT [stewid](https://github.com/ropensci/git2r/issues/139#issuecomment-101176755)
-
-> git2r is an interface to the libgit2 library. Since libgit2 dropped
->support for Windows XP with the v0.21.0 release, git2r can not support
-> Windows XP.
-
-> @jrminter you only need zlib on Windows, no need for openssl. If you
-> have installed Rtools and configured LOCAL_SOFT, it should work to
-> install with:
-
-```
-git clone https://github.com/ropensci/git2r.git
-cd git2r
-make
-```
-
 
 # Using Hmisc LaTeX functions without Miktex
 
@@ -1167,7 +826,7 @@ ignore <- latex(x, file='matrix.tex')
 setwd(wd)
 ```
 
-# Upgrade packages after new verion
+# Upgrade packages after new version
 
 ```
 update.packages(checkBuilt=TRUE, ask=FALSE)
@@ -1213,54 +872,9 @@ library(knitr)
 is in the first chunk calling R
 
 
-# Data corruption in R 3.0.2 when using read.csv
-
-From [John Myles White](http://www.johnmyleswhite.com/notebook/2014/01/29/data-corruption-in-r-3-0-2-when-using-read-csv/) 
-
-He notes:
-
-> It may be old news to some, but I just recently discovered that the
-> automatic type inference system that R uses when parsing CSV files
-> assumes that data sets will never contain 64-bit integer values.
-
-> Specially, if an integer value read from a CSV file is too large to
-> fit in a 32-bit integer field without overflow, the column of data
-> that contains that value will be automatically converted to floating
-> point. This conversion will take place without any warnings, even
-> though it may lead to data corruption.
-
-> The reason that the automatic conversion of 64-bit integer-valued data
-> to floating point is problematic is that floating point numbers lack
-> sufficient precision to exactly represent the full range of 64-bit
-> integer values. As a consequence of the lower precision of floating
-> point numbers, two unequal integer values in the input file may be
-> converted to two equal floating point values in the data.frame R uses
-> to represent that data. Subsequent analysis in R will therefore treat
-> unequal values as if they were equal, corrupting any downstream
-> analysis that assumes that the equality predicate can be trusted.
-
-# Web scraping
-
-Hadley Wickham recommend [selector gadget](http://selectorgadget.com/)
-as an aid to web scraping.
-
 # Tables from knitr and Rmarkdown in RStudio
 
-
-This used to work when using options to the R chunk
-of ` echo=FALSE, results='asis' `
-
-```
-library(xtable)
-slope <- rbind(sum.fit.l$coef, sum.fit.k$coef)
-disp <- c("s","g", "g", "f", "g")
-dig  <- c(0,4,2,2,2)
-rownames(slope) <- c("Cu L", "Cu K")
-xt <- xtable(slope, digits=dig, display=disp)
-print(xt, type='html')
-```
-
-but it no longer does. The `pander` packages seems to work
+The `pander` packages seems to work
 
 ```
 n <- 100
@@ -1452,103 +1066,6 @@ largeData <- read.csv("huge-file.csv",
 [Milano R net](http://www.milanor.net/blog/?p=779)
 has a nice description of the available options.
 
-# Reading large data tables
-
-[Stack Overflow](http://stackoverflow.com/questions/1727772/quickly-reading-very-large-tables-as-dataframes-in-r)
-has a nice example highligting fread
-
-```
-library(data.table)
-# Demo speedup
-n=1e6
-DT = data.table( a=sample(1:1000,n,replace=TRUE),
-                 b=sample(1:1000,n,replace=TRUE),
-                 c=rnorm(n),
-                 d=sample(c("foo","bar","baz","qux","quux"),n,replace=TRUE),
-                 e=rnorm(n),
-                 f=sample(1:1000,n,replace=TRUE) )
-DT[2,b:=NA_integer_]
-DT[4,c:=NA_real_]
-DT[3,d:=NA_character_]
-DT[5,d:=""]
-DT[2,e:=+Inf]
-DT[3,e:=-Inf]
-standard read.table
-write.table(DT,"test.csv",sep=",",row.names=FALSE,quote=FALSE)
-cat("File size (MB):",round(file.info("test.csv")$size/1024^2),"\n")    
-# File size (MB): 51 
-
-system.time(DF1 <- read.csv("test.csv",stringsAsFactors=FALSE))        
-#    user  system elapsed 
-#   24.71    0.15   25.42
-# second run will be faster
-system.time(DF1 <- read.csv("test.csv",stringsAsFactors=FALSE))        
-#    user  system elapsed 
-#   17.85    0.07   17.98
-```
-
-# optimized read.table
-```
-system.time(DF2 <- read.table("test.csv",header=TRUE,sep=",",quote="",  
-                          stringsAsFactors=FALSE,comment.char="",nrows=n,                   
-                          colClasses=c("integer","integer","numeric",                        
-                                       "character","numeric","integer")))
-
-
-#    user  system elapsed 
-#   10.20    0.03   10.32
-```
-
-# fread
-```
-require(data.table)
-system.time(DT <- fread("test.csv"))                                  
- #    user  system elapsed 
-#    3.12    0.01    3.22
-```
-
-# sqldf
-```
-require(sqldf)
-
-system.time(SQLDF <- read.csv.sql("test.csv",dbname=NULL))             
-
-#    user  system elapsed 
-#   12.49    0.09   12.69
-```
-
-# sqldf as on SO
-```
-f <- file("test.csv")
-system.time(SQLf <- sqldf("select * from f", dbname = tempfile(), file.format = list(header = T, row.names = F)))
-
-#    user  system elapsed 
-#   10.21    0.47   10.73
-```
-
-# ff / ffdf
-
-```
-require(ff)
-
-system.time(FFDF <- read.csv.ffdf(file="test.csv",nrows=n))   
-#    user  system elapsed 
-#   10.85    0.10   10.99
-```
-
-# summary
-
-```
-#    user  system elapsed  Method
-#   24.71    0.15   25.42  read.csv (first time)
-#   17.85    0.07   17.98  read.csv (second time)
-#   10.20    0.03   10.32  Optimized read.table
-#    3.12    0.01    3.22  fread
-#   12.49    0.09   12.69  sqldf
-#   10.21    0.47   10.73  sqldf on SO
-#   10.85    0.10   10.99  ffdf
-```
-
 # Colored sizeplot with ggplot2
 
 [martinsbioblogg](http://martinsbioblogg.wordpress.com/2013/11/17/using-r-coloured-sizeplot-with-ggplot2/)
@@ -1639,10 +1156,12 @@ res
 
 # Mathematical annotation
 
-# Resources
+## Resources
 [Vistat Blog](http://vis.supstat.com/2013/04/mathematical-annotation-in-r/)
 
-# Adding results to plot legends and saving to PDF
+## Adding results to plot legends and saving to PDF
+
+
 I like to add values to calibration plots where I have
 computed the mean and standard error. Getting the $\pm$
 symbol to work on multiple platforms was fun. Note the
@@ -1751,12 +1270,9 @@ function to modify these count columns, I can do the following, Which
 then replaces the original data in columns 30 through 40 with the
 modified data! Handy! 
 
-    ```
+```
 mydf[,30:40] = sapply(mydf[,30:40], zerofy)
 ```
-
-
-
 
 
 # Nice examples from Vistat
@@ -1942,9 +1458,6 @@ looking but couldn't find anything.
 
 
 
-
-# Confidence levels and intervals.
-
 # Confidence levels and intervals in lm fits
 
 This one bit me recently.... Remember that if we want
@@ -1966,7 +1479,7 @@ confint(fit, level=0.90)
 
 # Graphics tips
 
-# A nice example from Jeff Leek:
+## A nice example from Jeff Leek:
 
 [A useful reference (www.statmethods.net)](http://www.statmethods.net/advgraphs/axes.html)
 
@@ -1985,92 +1498,8 @@ meanRatings <- tapply(movies$score,movies$rating,mean)
 points(1:4,meanRatings,col="red",pch="-",cex=5)
 ```
 
-# RMySQL
 
-# Building on Windows
-
-Note: this works on WinXP and Win7 x64.
-
-1. Download the
-   ``mysql-connector-c-6.1.0-win32.msi`` (or ``-win64.msi``)
-   installer.
-2. Install it. Choose a custom install and install it to
-   ``C:\Apps\MySQL\Connector\``. This gets around spaces in
-   file names. There is a good workaround for win32, but it
-   didn't work in Win7 x64...
-3. Pull the RMySL source code from CRAN and unzip it.
-4. Edit the RMySQL/src/Makevars.win32 (and .win64) so that
-   the build process looks for the DLL in
-   ``"${MYSQL_HOME}"/lib/libmySQL.dll``
-5. Clean the cruft out of the source directory: ``*.0``,
-   ``*.so``, ``*.rds``, ``*.rda``, ``*.dll``. 
-6. Zip up the whole source tree with 7-zip so you don't
-   have to do this again... 
-7. set the ``MYSQL_HOME`` variable to
-   ``C:/Apps/MySQL/Connector``
-8. Build RMySQL ``R CMD build RMySQL``
-9. Install ``R CMD INSTALL RMySQL_0.9-3.tar.gz``
-
-Not sure why I get a warning message about the version
-of MySQL. Haven't found it in the code...
-
-An example to query MIDB...
-
-```
-require(RMySQL)
-
-drv <- dbDriver("MySQL") 
-con <- dbConnect(drv, user="myid",
-                 password="mypw",
-                 dbname="midb",
-                 host="midb.rl.kodak.com")
-
-ans <- dbListTables(con)
-
-q1 <- "SELECT * FROM"
-q2 <- "samples"
-q3 <- "WHERE samples.LAB_ID = 'QM-03877' "
-
-res <- dbSendQuery(con, paste(q1,
-                              q2,
-                              q3))
-out <- fetch(res, n = -1)
-
-print(out)
-dbClearResult(res)
-dbDisconnect(con)
-dbUnloadDriver(drv)
-```
-
-# R and C/C++
-
-# Rboolean type and obsolete headers
-
-On 2013-05-24, Jan van der Laan wrote the r-devel mailing
-list noting some problems when trying to pass an an argument
-of type Rboolean to a function. He supplied the following
-reproducible example.
-
-```
-// foo.cpp
-#include <R.h>
-#include <Rdefines.h>
-
-void foo() {
-   Rboolean b = TRUE;
-}
-
-```
-
-Prof Brian Ripley (ripley@stats.ox.ac.uk) replied
-
-> Don't use Rdefines.h: use Rinternals.h.
-
-> Rdefines.h was for compatibility with S code from
-> the 1990s: it is not kept up to date.
-
-# Heat maps
-# Correlation heatmap with ggplot2
+## Correlation heatmap with ggplot2
 
 from [Martin Johnsson](http://martinsbioblogg.wordpress.com/2013/03/21/using-r-correlation-heatmap-with-ggplot2/)
 
@@ -2085,129 +1514,5 @@ require(reshape2)
 qplot(x=Var1, y=Var2, data=melt(cor(attitude)), fill=value, geom="tile")
 ```
 
-# Alchemy
-
-# Compiling an Rmath dynamic library
-[Dirk Eddelbuettel](http://r.789695.n4.nabble.com/R-Rmath-R-libraries-from-C-on-Mac-OS-X-td814726.html) noted
-
-```
- cd src/nmath/standalone
- make 
-```
-On Linux/MacOSX sytems these need to be in the
-LD_LIBRARY path. I put sym links into /usr/local/lib
-
-# Using stats::convolve effectively
-[Michael Moers](https://stat.ethz.ch/pipermail/r-devel/attachments/20130623/232921bc/attachment.pl)
-
-The function stats::convolve does not mention efficient usage of the 
-underlying FFT algorithm, such as
-
-1. if type="circular", then length(x)=length(y) should have many factors (e.g. length(x) = length(y) = 2^n)
-2. if type="open" or "filter", then length(x)+length(y)-1 should have many factors (e.g. length(x)+length(y)-1 = 2^n)
-
-In particular the latter may not be obvious to first time users, who may 
-think that stats::convolve is slow, even though it is fast, if applied 
-correctly.
-
-Moreover for zero padding, one may apply stats::nextn to (a) length(x) 
-or (b)  length(x)+length(y)-1.
-
-Examples:
-
-correct usage:
-
-```{r}
-x <- rnorm(514289)
-y <- rnorm(10000)
-#length(x) + length(y) - 1 = 2^19
-system.time(convolve(x, y, type="open"))
-
-#   user  system elapsed
-#   1.17    0.02    1.18
-```
-Incorrect usage:
-
-```
-# not run...
-x <- rnorm(300000)
-y <- rnorm(10000)
-system.time(convolve(x, y, type = "open"))
-#   user  system elapsed
-# 685.31    0.09  691.79
-```
-
-# Parse arguments of an R script
-By [Gregor Gorjanc](http://ggorjan.blogspot.com/2013/07/parse-arguments-of-r-script.html)
-
-R can be used also as a scripting tool. We just need to add shebang in
-the first line of a file (script):
-
-```
-
-#!/usr/bin/Rscript
-```
-
-and then the R code should follow.
-
-Often we want to pass arguments to such a script, which can be collected
-in the script by the commandArgs() function. Then we need to parse the
-arguments and conditional on them do something. I came with a rather
-general way of parsing these arguments using simply these few lines:
-
-```
-# Collect arguments
-args <- commandArgs(TRUE)
- 
-# Default setting when no arguments passed
-if(length(args) < 1) {
-  args <- c("--help")
-}
- 
-# Help section
-if("--help" %in% args) {
-  cat("
-      The R Script
- 
-      Arguments:
-      --arg1=someValue   - numeric, blah blah
-      --arg2=someValue   - character, blah blah
-      --arg3=someValue   - logical, blah blah
-      --help              - print this text
- 
-      Example:
-      ./test.R --arg1=1 --arg2="output.txt" --arg3=TRUE \n\n")
- 
-  q(save="no")
-}
- 
-# Parse arguments (we expect the form --arg=value)
-parseArgs <- function(x) strsplit(sub("^--", "", x), "=")
-argsDF <- as.data.frame(do.call("rbind", parseArgs(args)))
-argsL <- as.list(as.character(argsDF$V2))
-names(argsL) <- argsDF$V1
- 
-# Arg1 default
-if(is.null(args$arg1)) {
-  # do something
-}
- 
-# Arg2 default
-if(is.null(args$arg2)) {
-  # do something
-}
- 
-# Arg3 default
-if(is.null(args$arg3)) {
-  # do something
-}
- 
-# ... your code here ...
-
-```
-
-It is some work, but I find it pretty neat and use it for quite a while
-now. I do wonder what others have come up for this task. I hope I did
-not miss some very general solution.
 
 [Back to Index](../README.html)
