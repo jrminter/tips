@@ -13,7 +13,7 @@
 #            and tpoisot/digitize from github
 # 2018-08-15 Added DescTools package for numeric fomatting.
 # 2019-03-03 Add rdformats
-# 2019-04-13 use lwPackageHelperR to install new
+# 2019-04-13 use lwPackageHelperR to install new and github to .lib dir
 
 
 if( Sys.info()['sysname'] == "Windows"){
@@ -28,148 +28,166 @@ update.packages(ask=FALSE, checkBuilt = TRUE)
 library(lwPackageHelperR)
 
 # Start with the tidyverse
-install_new('devtools')
-install_new('tidyverse')
-install_new('svglite')
-install_new('ggvis')
-install_new('ggmap')
-install_new('ggthemes')
-install_new('Quandl')
-install_new('extrafont')
-install_new('Rd2roxygen')
-install_new('tidyquant')
-install_new('here') # by Kirill Muller recommended by HW and JB!
-install_new('fs')
-install_new('reprex')
-install_new('UsingR') # data sets including galton
+install_new('devtools', .libPaths()[1])
+install_new('tidyverse',.libPaths()[1])
+install_new('svglite',.libPaths()[1])
+install_new('ggvis',.libPaths()[1])
+install_new('ggmap',.libPaths()[1])
+install_new('ggthemes',.libPaths()[1])
+install_new('Quandl',.libPaths()[1])
+install_new('extrafont',.libPaths()[1])
+install_new('Rd2roxygen',.libPaths()[1])
+install_new('tidyquant',.libPaths()[1])
+install_new('here',.libPaths()[1]) # by Kirill Muller recommended by HW and JB!
+install_new('fs',.libPaths()[1])
+install_new('reprex',.libPaths()[1])
+install_new('UsingR',.libPaths()[1]) # data sets including galton
 
-install_new('ciTools')
-install_new('reticulate') # R-python interface
+install_new('ciTools',.libPaths()[1])
+install_new('reticulate',.libPaths()[1]) # R-python interface
 
 # Sweave and pandoc tools
-# install_new('cacheSweave') # not avail 3.2
-install_new('knitcitations')
-install_new('pander')
-install_new('rticles')
-install_new('rdformats')
+# install_new('cacheSweave',.libPaths()[1]) # not avail 3.2
+install_new('knitcitations',.libPaths()[1])
+install_new('pander',.libPaths()[1])
+install_new('rticles',.libPaths()[1])
+install_new('rdformats',.libPaths()[1])
 
-install_new('binb')
+install_new('binb',.libPaths()[1])
 
 # matrix algebra
-# install_new('rafalib')
-install_new('UsingR') # data including basic Galton
-install_new('HistData') # Has Galton Families
+# install_new('rafalib',.libPaths()[1])
+install_new('UsingR',.libPaths()[1]) # data including basic Galton
+install_new('HistData',.libPaths()[1]) # Has Galton Families
 
 # better number formatting
-install_new('DescTools')
+install_new('DescTools',.libPaths()[1])
 
-install_new('rtiff')
-install_new('raster')
-install_new('imager')
+install_new('rtiff',.libPaths()[1])
+install_new('raster',.libPaths()[1])
+install_new('imager',.libPaths()[1])
 
 # we want revealjs and ReporteRs for presentations
-install_new('revealjs')
-# install_new('ReporteRs')
+install_new('revealjs',.libPaths()[1])
+# install_new('ReporteRs',.libPaths()[1])
 
-install_new('RSQLite')
-# install_new('RMySQL')
-install_new('pryr')
-install_new('nycflights13')
-install_new('RODBC')
-install_new('Unicode')
-install_new('TeachingDemos')
-install_new('plotGoogleMaps')
-install_new('tikzDevice') # now back on CRAN...
-install_new('mixtools')
+install_new('RSQLite',.libPaths()[1])
+# install_new('RMySQL',.libPaths()[1])
+install_new('pryr',.libPaths()[1])
+install_new('nycflights13',.libPaths()[1])
+install_new('RODBC',.libPaths()[1])
+install_new('Unicode',.libPaths()[1])
+install_new('TeachingDemos',.libPaths()[1])
+install_new('plotGoogleMaps',.libPaths()[1])
+install_new('tikzDevice',.libPaths()[1]) # now back on CRAN...
+install_new('mixtools',.libPaths()[1])
 
 # metrology packages
-install_new('metRology')
-install_new('propagate')
+install_new('metRology',.libPaths()[1])
+install_new('propagate',.libPaths()[1])
 
 # for microR
-install_new('kernlab')
-install_new('FactoMineR')
-install_new('robCompositions')
-install_new('Cairo')
-install_new('beanplot')
-install_new('spatstat')
-install_new('numbers')
-install_new('gmp')
-# install_new('doMC') # not avail 3.3.2
-install_new('rbenchmark')
-install_new('doSNOW')
+install_new('kernlab',.libPaths()[1])
+install_new('FactoMineR',.libPaths()[1])
+install_new('robCompositions',.libPaths()[1])
+install_new('Cairo',.libPaths()[1])
+install_new('beanplot',.libPaths()[1])
+install_new('spatstat',.libPaths()[1])
+install_new('numbers',.libPaths()[1])
+install_new('gmp',.libPaths()[1])
+# install_new('doMC',.libPaths()[1]) # not avail 3.3.2
+install_new('rbenchmark',.libPaths()[1])
+install_new('doSNOW',.libPaths()[1])
 
-# install_new('RGtk2')
+# install_new('RGtk2',.libPaths()[1])
 # see BFI for mac
 
-install_new('PerformanceAnalytics')
+install_new('PerformanceAnalytics',.libPaths()[1])
 
-install_new('fields')
-# install_new('h5r') # not avail 3.3.2
+install_new('fields',.libPaths()[1])
+# install_new('h5r',.libPaths()[1]) # not avail 3.3.2
 
-install_new('SuppDists')
+install_new('SuppDists',.libPaths()[1])
 
-install_new('animation')
-install_new('highlight')
-install_new('qualityTools')
-install_new('rcdk')
-install_new('rpubchem')
+install_new('animation',.libPaths()[1])
+install_new('highlight',.libPaths()[1])
+install_new('qualityTools',.libPaths()[1])
+install_new('rcdk',.libPaths()[1])
+install_new('rpubchem',.libPaths()[1])
 
-install_new('rattle')
-install_new('chemCal')
-install_new('DAAG')
-install_new('fftw')
-install_new('rafalib')
-install_new('UsingR')
+install_new('rattle',.libPaths()[1])
+install_new('chemCal',.libPaths()[1])
+install_new('DAAG',.libPaths()[1])
+install_new('fftw',.libPaths()[1])
+install_new('rafalib',.libPaths()[1])
+install_new('UsingR',.libPaths()[1])
 
-install_new('fitdistrplus')
-install_new('mixdist')
-install_new('histogram')
-install_new('HSAUR2')
-install_new('moments')
-install_new('spc')
-install_new('sp')
-install_new('xlsx')
-install_new('readxl')
-install_new('DMwR')
+install_new('fitdistrplus',.libPaths()[1])
+install_new('mixdist',.libPaths()[1])
+install_new('histogram',.libPaths()[1])
+install_new('HSAUR2',.libPaths()[1])
+install_new('moments',.libPaths()[1])
+install_new('spc',.libPaths()[1])
+install_new('sp',.libPaths()[1])
+install_new('xlsx',.libPaths()[1])
+install_new('readxl',.libPaths()[1])
+install_new('DMwR',.libPaths()[1])
 
-install_new('CORElearn')
-install_new('corpcor')
-install_new('ggm')
-install_new('googleVis')
-install_new('lasso2')
-install_new('RXKCD')
-install_new('ChemometricsWithR')
-# install_new('ChemometricsWithRData')
-install_new('chemometrics')
-install_new('lspls')
-install_new('FITSio')
-install_new('LearnBayes')
-install_new('R2HTML')
-# install_new('SweaveListingUtils')
-install_new('mosaic')
-install_new('latex2exp')
-install_new('highcharter')
-install_new('WDI')
-install_new('tigris')
-install_new('xaringan')
-install_new('FinCal')
-install_new('hrbrthemes')
-install_new('cowsay')
+install_new('CORElearn',.libPaths()[1])
+install_new('corpcor',.libPaths()[1])
+install_new('ggm',.libPaths()[1])
+install_new('googleVis',.libPaths()[1])
+install_new('lasso2',.libPaths()[1])
+install_new('RXKCD',.libPaths()[1])
+install_new('ChemometricsWithR',.libPaths()[1])
+# install_new('ChemometricsWithRData',.libPaths()[1])
+install_new('chemometrics',.libPaths()[1])
+install_new('lspls',.libPaths()[1])
+install_new('FITSio',.libPaths()[1])
+install_new('LearnBayes',.libPaths()[1])
+install_new('R2HTML',.libPaths()[1])
+# install_new('SweaveListingUtils',.libPaths()[1])
+install_new('mosaic',.libPaths()[1])
+install_new('latex2exp',.libPaths()[1])
+install_new('highcharter',.libPaths()[1])
+install_new('WDI',.libPaths()[1])
+install_new('tigris',.libPaths()[1])
+install_new('xaringan',.libPaths()[1])
+install_new('FinCal',.libPaths()[1])
+install_new('hrbrthemes',.libPaths()[1])
+install_new('cowsay',.libPaths()[1])
+# needed for vignettes for ggstatsplot
+install_new('ordinal',.libPaths()[1])
+install_new('robust',.libPaths()[1])
 
-install_new_github('slidify','ramnathv')
-install_new_github('slidifyLibraries','ramnathv')
-install_new_github('rCharts','ramnathv')
-# install_new_github('bookdown','hadley')
-install_new_github('captioner','adletaw')
-# install_new_github('choroplethrZip','arilamstein')
-install_new_github('printr','yihui')
+install_new_github(pkg, repo, .libPaths()[1])
 
-install_new_github('rPeaks','jrminter')
-install_new_github('rEDP','jrminter')
-install_new_github('rEDS','jrminter')
-install_new_github('rFinFuncs','jrminter')
-install_new_github('rWrapStrataGem','jrminter')
+install_new_github('slidify','ramnathv',.libPaths()[1])
+install_new_github('slidifyLibraries','ramnathv',.libPaths()[1])
+install_new_github('rCharts','ramnathv',.libPaths()[1])
+# install_new_github('bookdown','hadley',.libPaths()[1])
+install_new_github('captioner','adletaw',.libPaths()[1])
+# install_new_github('choroplethrZip','arilamstein',.libPaths()[1])
+install_new_github('printr','yihui',.libPaths()[1])
+
+install_new_github('rPeaks','jrminter',.libPaths()[1])
+install_new_github('rEDP','jrminter',.libPaths()[1])
+install_new_github('rEDS','jrminter',.libPaths()[1])
+install_new_github('rFinFuncs','jrminter',.libPaths()[1])
+install_new_github('rWrapStrataGem','jrminter',.libPaths()[1])
+
+install_new_github('magick','ropensci',.libPaths()[1])
+install_new_github('bookdown','rstudio',.libPaths()[1])
+install_new_github('rrtools','benmarwick',.libPaths()[1])
+install_new_github('diffobj','brodieG',.libPaths()[1])
+install_new_github('speedtest','hrbrmstr',.libPaths()[1])
+install_new_github('styler','r-lib',.libPaths()[1])
+install_new_github('icon','ropenscilabs',.libPaths()[1])
+install_new_github('anicon','emitanaka',.libPaths()[1])
+install_new_github('xaringan','yihui',.libPaths()[1])
+install_new_github('digitize','tpoisot',.libPaths()[1])
+
+
 
 # needed for vignettes for ggstatsplot
 install_new('ordinal')
@@ -179,20 +197,6 @@ devtools::install_github('jrminter/statshelpR',build_vignettes=TRUE)
 devtools::install_github('jrminter/rAnaLab',build_vignettes=TRUE)
 devtools::install_github('jrminter/statshelpR',build_vignettes=TRUE)
 
-devtools::install_github('ropensci/magick')
-devtools::install_github("hadley/modelr") #still experimental
-# devtools::install_github('WinVector/WVPlots',build_vignettes=TRUE)
-devtools::install_github("rstudio/bookdown")
-devtools::install_github("ThinkR-open/remedy")
-# devtools::install_github("crsh/citr")
-devtools::install_github("benmarwick/rrtools")
-devtools::install_github("brodieG/diffobj")
-# devtools::install_github("rorynolan/ijtiff")
-devtools::install_github("hrbrmstr/speedtest")
-# devtools::install_github("lbusett/insert_table")
-devtools::install_github("r-lib/styler")
-devtools::install_github("ropenscilabs/icon")
-devtools::install_github("emitanaka/anicon")
-devtools::install_github("yihui/xaringan")
-devtools::install_github("tpoisot/digitize")
+
+
 
