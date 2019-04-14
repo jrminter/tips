@@ -1,13 +1,14 @@
 ---
 title: "Octave Tips"
 author: "J. R. Minter"
-date: 'Started: 2019-03-21, Last modified: 2019-04-05'
+date: 'Started: 2019-03-21, Last modified: 2019-04-13'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
     number_sections: yes
     toc: yes
     toc_depth: 3
+    highlight: tango
 ---
 
 [Back to Index](../README.html)
@@ -17,8 +18,33 @@ output:
 Gnu Octave is an Open Source program similar to Matlab.
 Binaries are available [here](https://www.gnu.org/software/octave/).
 
+There is a version that runs from the command line and a GUI version.
+
 As of 2019-03-21, the current release is `Octave 5.1.0.0` which was
 released on 2019-03-01.
+
+One **_major advantage_** of the Windows installer is that it comes
+bundled with many (all key anyway...) packages from Octave Forge.
+This saves a lot of headaches while compiling packages, especially
+on MacOS. I have a Parallels Win10 x64 VM for this reason...
+
+Getting the path right was fun
+
+I ended up doiing this
+
+1. I set my Octave function folder as
+
+    ```
+    C:/Users/jrminter/Octave (note upper case...)
+    ```
+
+2. I ran
+
+    ```
+    rmpath("C:/Users/jrminter/octave")  (my old path renamed to `Octave`)
+    addpath("C:/Users/jrminter/Octave")
+    savepath() (this saved the path to C:/Users/jrminter.octaverc)
+    ```
 
 On the Mac, we install via Homebrew. This installs `Octave 4.4.1`.
 
@@ -27,6 +53,563 @@ Developer MacOSX App downloads are available
 
 There is extensive documentation
 [online](https://octave.org/doc/interpreter/index.html#SEC_Contents).
+
+## Using Octave in Rmarkdown
+
+### Code chunks must be self-contained
+
+We need to set the path to the Octave executable to run Octave chunks
+in Rmarkdown. **_N.B._ Octave code chunks must be _self-contained_**
+**unlike** R code chunks.
+
+```{r setup, include=TRUE}
+knitr::opts_chunk$set(echo = TRUE)
+octaveExe <- Sys.getenv("OCTAVE_EXECUTABLE")
+octaveExe
+```
+
+### Setting up for working with opertors
+
+1. element by element operators are the operator with a preceeding `.`.
+For example:
+
+    ```{octave elem_by_elem, engine.path=octaveExe}
+    A = [1,2,3,4];
+    B = [2,4,6,8];
+
+    A .* B
+    A .+ B
+    A .^ B
+    ```
+
+2. We can set row and column vectors and matrices
+
+    ```{octave row_col_vec_mat, engine.path=octaveExe}
+    A = [1 2 3 4]
+    B = [2;4;6;8]
+    C = [1 2 3 4;5 6 7 8;9 10 11 12]
+    ```
+
+
+## Tutorials
+
+1. A series on YouTube by
+[DrapsTV](https://www.youtube.com/watch?v=X0xLTKRWPgo&list=PL1A2CSdiySGJ6oZe6XB-TTCFuHc5Fs1PO)
+from 2014. Decent...
+
+## Setup for the command line version
+
+1. Set a custom prompt.
+
+    ```
+    PS1("\# > ")
+    ```
+
+    gives a simple command line, although the standard prompt
+    is reasonable:
+    
+    ```
+    octave:1> 
+    ```
+    
+2. Clear the screen
+
+    ```
+    octave:1> clc 
+    ``` 
+
+## Special Functions
+
+1. `ones(n,m)` - Generates a matix `n x m` of 1's
+
+2. `zeros(n,m)` - Generates a matix `n x m` of 0's
+
+3. `eye(n) or eye(n,m)` Generates an identity matix
+
+4. `rand(n,m)` Generates a matix `n x m` of randomly distributed elements
+
+    ```{octave ones_mat, engine.path=octaveExe}
+    ones(3,5)
+    
+    rand(3,5)
+    
+    eye(4)
+    ```
+## The colon operator
+
+
+    ```{octave colon_op, engine.path=octaveExe}
+    S1 = 1:5
+    ```
+    
+    ```{octave colon_op_step, engine.path=octaveExe}
+    S2 = 2:2:10
+    ```
+
+## Indexing
+
+    ```{octave indexing, engine.path=octaveExe}
+    S = [1 2; 3 4]
+    
+    S(1,1)
+    S(1,[1 2])
+    S(1,1:2)
+    S(1,:)
+    ```
+
+## Other functions
+
+    ```{octave other_funcs, engine.path=octaveExe}
+    x = sprintf("Pi to 8 decimals: %0.8f", pi)
+    
+    vec = [pi, 2*pi]
+    ceil(vec)
+    floor(vec)
+    round(vec)
+    max(vec)
+    min(vec)
+    ```
+    
+    We can get help with `help(rand)`
+    
+    
+See the [intereter](https://www.gnu.org/software/octave/doc/interpreter/)
+docs...
+
+## Loading and using data
+
+[link to data](https://www.mediafire.com/folder/ffvd5sfasy2bz/Tutorial_3_-_Loading_%26_Saving)
+
+Octave uses a working directory just like a terminal or command line.
+It supports most commands from both Windows and *nix.
+
+- `cd` - Change directory
+
+- ls, dir - List current directory
+
+- pwd - Print current working directory
+
+Octave has built in `load()` and `save()` functions that make it easy to
+load and save many types of data files.
+
+`load filename` or `load("filename")` loads the data into a vector or
+matrix.
+
+Octave can also save data easily
+
+`save <filename> <variable>`
+
+Octave supports temporary files. These are deleted when Octave closes.
+
+The syntax is
+
+```
+f = tmpfile
+save f <variable>
+load f
+```
+
+```{octave load_dat, engine.path=octaveExe}
+m = load("./dat/single.dat");
+length(m)
+
+v = rand(5,1)
+
+save ./dat/mydata.dat v
+    
+f = tmpfile
+save f v
+v = [0]
+load f
+    
+a = [1; 2; 3];
+b = [4; 5; 6];
+
+[a; b]
+
+c = [a b]
+
+size(c)
+
+length(c)
+
+length(a)
+    
+```
+
+Note that we can merge (concatenate) data
+
+```{octave concat, engine.path=octaveExe}
+
+A = [1;2;3];
+B = [4;5;6];
+C = [A B]
+D = [A;B]
+```
+
+## Size and Length functions
+
+- size(m) - returns a matrix of dimensions
+
+- length(m) - returns the longest dimensio
+
+
+```{octave sz_len, engine.path=octaveExe}
+
+A = [1;2;3];
+B = [4;5;6];
+C = [A B]
+D = [A;B]
+
+size(C)
+length(C)
+
+size(D)
+length(D)
+```
+
+Octave and load and save:
+
+- Matlab files
+- csv files
+- tabulated /  whitespace files
+
+Bear in mind...
+
+- If you **don't specify a variable**, octave will save 
+**_all_ the variables in the session**.
+
+- If you want to save plain text, add the option `-ascii`.
+
+- Specify what you want with:
+
+   ```
+   save <filename> var1 var2
+   ```
+- use `addpath("path/to/my/folder")` to add a load/save path.
+
+## Plotting in Octave
+
+Octave supports many different types of plots.
+
+### Simple X-Y Plots
+
+```
+y = 0:20;
+y = y .^2;
+plot(y)
+```
+
+The `hold on` in console
+
+`close` will close the screen.
+
+### Scatter Plots
+
+```
+y = 0:20;
+y = y .^2;
+x = 0:20;
+scatter(x,y)
+```
+
+### Histograms
+
+```
+a = randn(1000, 1);
+hist(a)
+hold(on)
+```
+
+default is 10 bins
+
+specify the mumber
+
+```
+a = randn(10000, 1);
+hist(a, 50)
+hold(on)
+
+```
+
+### Contour plots
+
+```
+x = [1 2 3 2 1];
+y = x;
+z = x' * y;
+z
+axis([1 5 1 5]);
+contour(z);
+```
+
+### Polar plot
+
+```
+x = 0:0.1:2*pi;
+size(x)
+y = linspace(0.1, 0.1, 63);
+polar(x,y)
+```
+
+### Pie Charts
+
+```
+a = 1:6;
+pie(a);
+```
+
+```
+a = 1:6;
+e = [1 0 1 0 1 0];
+pie(a,e);
+```
+
+### 3D Plots
+
+```
+x = -10:10
+y = -10:10
+[x,y] = meshgrid(x,y)
+z = x .^2 + y .^2
+mesh(x,y,z)
+meshc(x,y,z)
+meshz(x,y,z)
+surf(x,y,z)
+
+//saving//
+print -dpng ‘mymesh.png’
+```
+
+## Control Statements
+
+The two control statements in Octave are `if` statments ans `repetitions`
+(`for` loops and `while` loops).
+
+### Boolean (Comparison) Operators
+
+- `==` Is equal to
+
+- `!=` Is **not** equal to
+
+- `~=` Is **not** equal to
+
+- `>` Greater than
+
+- `<` Less than
+
+- `>=` Greater than or equal to
+
+- `<=` Less than or equal to
+
+### `if` statement and `for` and `while`  loops
+
+
+```{octave simple_if, engine.path=octaveExe}
+% simple if
+x = 6;
+if x >= 5,
+    disp("x is larger than 5!");
+end;
+```
+
+```{octave if_elseif_else, engine.path=octaveExe}
+% if-elseif-else
+x = 6;
+if x > 10,
+    disp("x is bigger than 10!");
+elseif x > 0,
+    disp("x is greater than 0 but less than 10!");
+else
+    disp("x is negative!");
+end;
+```
+
+```{octave for_loop, engine.path=octaveExe}
+% for loop
+for i=1:10,
+    disp(sprintf("%ith index",i));
+end;
+```
+
+```{octave while_loop, engine.path=octaveExe}
+% while loop
+i = 1;
+while i < 10,
+    disp(i);
+    i=i+1;
+end;
+```
+
+```{octave break_statement, engine.path=octaveExe}
+% break statements
+n = 1;
+v = 0;
+while true,
+    v = v + n;
+    if n > 4,
+  break;
+    end;
+    n = n + 1;
+end;
+v
+```
+
+## Defining functions
+
+### Editing from the command line
+
+```
+edit mini.m
+```
+
+Then type the function...
+
+### Examples
+
+```{octave minimum_func, engine.path=octaveExe}
+function ret = minimum(x)
+  ret = x(1);
+  for i = 2:length(x),
+    if x(i) < ret,
+      ret = x(i);
+    end;
+  end;
+endfunction
+
+y = [1 2 -5 7 8];
+minimum(y)
+
+```
+
+```{octave minmax_func, engine.path=octaveExe}
+function [low,high] = minmax(x)
+  low = x(1);
+  high = x(1);
+  for i = 2:length(x),
+    if x(i) < low,
+      low = x(i);
+    elseif x(i) > high,
+      high = x(i);
+    end;
+  end;
+endfunction
+  
+y = [1 2 -5 7 8];
+minmax(y)
+```
+
+Add error checking
+
+```{octave minmax_err_func, engine.path=octaveExe, error=TRUE}
+%
+% Note: knitr chunk option error=TRUE to permit the error message to print out
+%
+function [low,high] = minmax(x)
+  if nargin != 1,
+    usage("minmax(vector)");
+  end;
+  if isvector(x),
+    low = x(1);
+    high = x(1);
+    for i = 2:length(x),
+      if x(i) < low,
+        low = x(i);
+      elseif x(i) > high,
+        high = x(i);
+      end;
+    end;
+  else
+    error("minmax expects a vector!");
+  end;
+endfunction
+
+y = [1 2 -5 7 8];
+minmax(y)
+
+% try a matrix...
+y = [1 2; 3 4]
+minmax(y)
+```
+
+## Plots
+
+These crash in Rmarkdown chunks...
+
+### Scatter plots
+
+```
+y = 0:10;
+y = y .^2;
+x = 0:10;
+scatter(x,y);
+```
+
+### Histogram
+
+```
+a = randn(1000,1);
+hist(a)
+```
+
+Note the difference with the number of bis set to 50
+
+```
+a = randn(1000,1);
+hist(a,50)
+```
+
+### Contour plot
+
+```
+x = [1 2 3 2 1];
+y = x;
+z = x' * y;
+axis([1 5 1 5]);
+contour(z);
+```
+
+### Polar plot
+
+```
+x = 0:0.1:2*pi
+size(x)
+y = linspace(0.1, 0.1, 63)
+polar(x,y)
+```
+
+### Pie chart
+
+```
+a = 1:6;
+pie(a);
+```
+
+Note the difference
+
+```
+a = 1:6;
+e = [1 0 1 0 1 0];
+pie(a,e);
+```
+
+### 3d plot
+
+```
+x = -10:10
+y = -10:10
+[x,y] = meshgrid(x,y)
+z = x .^2 + y .^2
+mesh(x,y,z)
+meshc(x,y,z)
+meshz(x,y,z)
+surf(x,y,z)
+%
+% saving
+%
+print -dpng ‘mymesh.png’
+```
+
 
 
 ## Getting the path right
@@ -92,13 +675,13 @@ RStudio's `Rmarkdown` supports code chunks in languages other than `R`,
 including `Octave`! Here are the details in how I configured it on both
 MacOS and Windows.
 
-On `crunch`, I set the environment variable `OCTAVE_PATH` to:
+On `crunch`, I set the environment variable `OCTAVE_EXECUTABLE` to:
 
 ```
 C:/Apps/Octave-5.1.0.0/mingw64/bin/octave-cli-5.1.0.exe
 ```
 
-On `jrmFastMac`, I set `OCTAVE_PATH` to:
+On `jrmFastMac`, I set `OCTAVE_EXECUTABLE` to:
 
 ```
 /usr/local/bin/octave
@@ -194,7 +777,7 @@ for installation instructions.
    setenv("GNUTERM","qt");
    ```
    
-   2. Add to `.bashrc`
+   2. Add to `.bash_profile`
    
    ```
    OCTAVE_EXECUTABLE="/Applications/Octave-5.1.0.app/Contents/Resources/usr/Cellar/octave-octave-app@5.1.0/5.1.0/bin/octave-5.1.0"
