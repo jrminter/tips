@@ -160,8 +160,6 @@ install_new('cowsay',.libPaths()[1])
 install_new('ordinal',.libPaths()[1])
 install_new('robust',.libPaths()[1])
 
-install_new_github(pkg, repo, .libPaths()[1])
-
 install_new_github('slidify','ramnathv',.libPaths()[1])
 install_new_github('slidifyLibraries','ramnathv',.libPaths()[1])
 install_new_github('rCharts','ramnathv',.libPaths()[1])

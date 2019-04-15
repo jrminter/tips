@@ -1,7 +1,7 @@
 ---
 title: "R-Markdown Tips"
 author: "J. R. Minter"
-date: "Started: 2016-12-08, Last modified: 2019-04-04"
+date: "Started: 2016-12-08, Last modified: 2019-04-15"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -156,13 +156,16 @@ Use the include `-> in_header` option to include an HTML file that contains a st
 
 
 
-# My typical YAML for an HTML document
+# YAML for Rmarkdown
 
 **YAML** is an abbreviation for "Yet Another Markup Language". 
 R-markdown uses YAML to encode information for later steps in the document
 generation process. Each document begins with a YAML header. 
 This is an example of a YAML header for an analysis. Note how the \% 
 character is escaped. Also note the $\LaTeX$ expression.
+
+
+## YAML for an HTML document
 
 ```
 ---
@@ -187,8 +190,10 @@ output:
 
 ```
 
-and a second header for when I speak at Northgate. My `speak.css` renders
-a nice size to keep me on track...
+## YAML for notes while speaking
+
+When I speak at Northgate, I use `speak.css` to render an HTML document
+witn a nice size font and layout to keep me on track...
 
 ```
 ---
@@ -213,7 +218,29 @@ output:
 
 ```
 
+## YAML for HTML and PDF with link highlighting
 
+I developed this YAML block where I want `pdf` and `html` with proper
+link highlighting (in blue)
+
+---
+title: "Title"
+author: "John Minter"
+date: "Started 2019-04-15, Last modified 2019-04-15"
+output:
+  html_document:
+    csl: ../inc/apa.csl
+    css: ../inc/jm-gray-vignette.css
+    toc: yes
+    toc_depth: 3
+    df_print: paged
+  pdf_document: default
+urlcolor: blue
+theme: cerulean
+---
+
+
+## YAML that generated date/time at rendering
 
 
 Note that one can generate the date and time at document generation time by
@@ -229,7 +256,7 @@ in the blank area below (I had to enter this way or it would compile...)
 
 to create the YAML entry...
 
-# YAML for a PDF document.
+## YAML for a complicated PDF document.
 
 PDF documents can have some **really complicated** YAML.
 I spent a couple of hours getting this example to work well.
@@ -274,7 +301,7 @@ knitr::opts_chunk$set(echo=TRUE,
   error = FALSE)
 ```
 
-## Simple Word to markdown
+# Simple Word to markdown
 
 From [rud.is](https://rud.is/b/2017/04/30/r%E2%81%B6-using-pandoc-from-r-a-neat-package-for-reading-subtitles/)
 
