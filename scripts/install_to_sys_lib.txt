@@ -1,0 +1,45 @@
+install_to_sys_lib.txt
+
+cd /home/jrminter/Documents/git/tips/scripts
+sudo Rscript bf_and_i_install_pkgs_sys_lib.R
+
+/home/jrminter/Documents/git/tips/scripts
+
+/usr/local/lib/R/site-library
+
+'/usr/lib/R/library'
+
+
+[1] "/home/jrminter/R/x86_64-pc-linux-gnu-library/3.6"
+[2] "/usr/local/lib/R/site-library"                   
+[3] "/usr/lib/R/site-library"                         
+[4] "/usr/lib/R/library" 
+
+
+I like the idea of install CRAN packages to "/usr/lib/R/library" 
+
+and github packages to "/home/jrminter/R/x86_64-pc-linux-gnu-libray/3.6"
+                    or "/usr/local/lib/R/site-library"  
+
+devtools::install_github(repo,
+                         username = NULL,
+                         ref = "master",
+                         subdir = NULL,
+                         auth_token = github_pat(quiet),
+                         host = "https://api.github.com",
+                         quiet = FALSE, ...)
+
+From:
+
+Do I **really** want to put github pkgs anywher other than user lib???
+
+library(devtools)
+with_libpaths(new = "/usr/lib/R/site-library/", install_github('rCharts', 'ramnathv'))
+
+On Debian, 
+
+/home/jrminter/R/x86_64-pc-linux-gnu-library has 2 sub directories:
+
+3.5 and 3.6
+
+hmmm...
