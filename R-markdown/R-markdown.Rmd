@@ -34,7 +34,10 @@ introduction to pandoc
 4. The `Liberate Science` [rmarkdown workshop](https://github.com/libscie/rmarkdown-workshop)
 repository on github.
 
-5. A nice article by [www.accelebrate.com](https://www.accelebrate.com/library/how-to-articles/r-rstudio-library) on library paths in RStudio,
+5. A nice article by [www.accelebrate.com](https://www.accelebrate.com/library/how-to-articles/r-rstudio-library) on library paths in RStudio.
+
+6. A nice article on R/RStudio in
+[Ubuntu](https://cran.r-project.org/bin/linux/ubuntu/README.html) Linux.
 
 # Rmarkdown Kung Fu
 
