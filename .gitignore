@@ -368,6 +368,13 @@ R-matrix-algebra/R-matrix-algebra.md
 R-matrix-algebra/*.html
 R-matrix-algebra/*.htm
 
+# R-markdown directory
+R-memes/.DS_Store
+R-memes/figure/
+R-meme/*.md
+R-memes/*.html
+R-memes/*.htm
+
 # R-model-predict directory
 R-model-predict/.DS_Store
 R-model-predict/figure/
