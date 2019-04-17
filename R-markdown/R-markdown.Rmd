@@ -1,7 +1,7 @@
 ---
 title: "R-Markdown Tips"
 author: "J. R. Minter"
-date: "Started: 2016-12-08, Last modified: 2019-04-15"
+date: "Started: 2016-12-08, Last modified: 2019-04-17"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -228,6 +228,7 @@ output:
 I developed this YAML block where I want `pdf` and `html` with proper
 link highlighting (in blue)
 
+```
 ---
 title: "Title"
 author: "John Minter"
@@ -243,10 +244,10 @@ output:
 urlcolor: blue
 theme: cerulean
 ---
+```
 
 
 ## YAML that generated date/time at rendering
-
 
 Note that one can generate the date and time at document generation time by
 using an R chunk in the YAML header.
@@ -291,7 +292,7 @@ header-includes:
   - \counterwithin{table}{section}
 ---
 ```
-followed by this chunk. **Note:** I moved the chunk name int the block
+followed by this chunk. **Note:** I moved the chunk name into the block
 so it will not execute here...
 
 ```
