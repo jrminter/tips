@@ -1,5 +1,12 @@
 install_to_sys_lib.txt
 
+libPaths()
+
+[1] "/home/jrminter/R/x86_64-pc-linux-gnu-library/3.6"
+[2] "/usr/local/lib/R/site-library"
+[3] "/usr/lib/R/site-library"
+[4] "/usr/lib/R/library"  
+
 cd /home/jrminter/Documents/git/tips/scripts
 sudo Rscript bf_and_i_install_pkgs_sys_lib.R
 
