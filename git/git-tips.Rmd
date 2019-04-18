@@ -77,6 +77,35 @@ From [Jenny Bryan](https://happygitwithr.com/credential-caching.html)
     
     to store your password for ten million seconds or around 16 weeks,
     enough for a semester.
+    
+    Also noted this from stackoverflow:
+    gnome-credential-helper is now **deprecated**.
+
+    Instead, use `libsecret`. If it's not already buil-in your Ubuntu, use
+    the following procedure:
+
+    You can install libsecret and the development libraries with:
+
+    ```
+    sudo apt-get install libsecret-1-0 libsecret-1-dev
+    ```
+
+    Then you need to build the credential manager:
+    
+    ```
+    cd /usr/share/doc/git/contrib/credential/libsecret
+    sudo make
+    ```
+
+    Finally, you should point git to the newly created file in your config:
+
+    ```
+    git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+    ```
+
+    More details on [stackoverflow.com](https://stackoverflow.com/a/40312117/2017781).
+
+
 
 ## Rendering Rmarkdown on Github
 
