@@ -1,4 +1,5 @@
-# fixRstudioPandocWin.R
+# fix_rstudio_pandoc_win.R
+# 
 # Download pandoc 2.7.1 built with ghc-8.6.4, and instruct
 # RStudio + rmarkdown to use it.
 # From Kevin Ushey
