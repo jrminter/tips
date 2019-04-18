@@ -105,6 +105,8 @@ From [Jenny Bryan](https://happygitwithr.com/credential-caching.html)
 
     More details on
     [stackoverflow.com](https://stackoverflow.com/a/40312117/2017781).
+    
+    **Note**: One needs to log out and back in after doing this... 
 
 
 
