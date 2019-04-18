@@ -53,14 +53,19 @@ On Debian and Ubuntu, we install using flatpak as outlined
 On `ubuntu-bionic` I installed the system octave and needed to add 
 
     ```
-    graphics_toolkit("qt");
+    graphics_toolkit("gnuplot");
     ```
-To the top of the script
-N.B. the Octave path is
+To the .octaverc file:
 
     ```
-    /usr/bin/octave
+    ## Begin savepath auto-created section, do not edit
+    addpath ('/home/jrminter/octave', '-begin');
+    ## End savepath auto-created section
+
+    # set the graphics toolkit
+    graphics_toolkit("gnuplot")
     ```
+    
 
 # Octave resources
 
