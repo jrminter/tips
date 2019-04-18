@@ -50,8 +50,41 @@ On Debian and Ubuntu, we install using flatpak as outlined
     ```
 
 
+# Octave resources
+
+1. [octave Online](https://octave-online.net/)
+
+2. The [NexMirror](https://github.com/NexMirror/Octave) Octave source
+repository on github.
+
+3. Richard Schneeman's Octave code for the 2011 stanford machine learning
+[ machine learning](https://github.com/schneems/Octave) class.
+
+4. The [flathub](https://github.com/flathub/org.octave.Octave) Octave git
+repository
+
+5. Sublime Text [Octave](https://github.com/apjanke/OctaveSupport) support.
+
+6. The [homebrew](https://github.com/octave-app/homebrew-octave-app)
+code for the `Octave.app`
+
+7. The [Octave.app](https://github.com/octave-app/octave-app-bundler) bundler.
+
+8. Some [numerical](https://github.com/IPGP/num-matlab) functions
+
+9. [tertiary Courses](https://github.com/tertiarycourses/OctaveTraining)
+Octave training examples.
+
+10. A collection of [scripts](https://github.com/RoaldFre/octaveScripts)
+
+11. Useful [functions](https://github.com/ptflinner/OctaveFunctions/blob/master/functions.m)
+
+12. [nice examples](https://github.com/johnfkraus/octave)
+
+13. [Linear Algebra examples](https://github.com/Lo1s/Laff)
 
 
+# Getting the path right
 
 Getting the path right was fun
 
