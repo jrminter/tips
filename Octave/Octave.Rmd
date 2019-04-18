@@ -48,7 +48,19 @@ On Debian and Ubuntu, we install using flatpak as outlined
     sudo apt-get remove flatpak
     
     ```
+## Standard install
 
+On `ubuntu-bionic` I installed the system octave and needed to add 
+
+    ```
+    graphics_toolkit("qt");
+    ```
+To the top of the script
+N.B. the Octave path is
+
+    ```
+    /usr/bin/octave
+    ```
 
 # Octave resources
 
