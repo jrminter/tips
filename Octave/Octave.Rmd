@@ -1,7 +1,7 @@
 ---
 title: "Octave Tips"
 author: "J. R. Minter"
-date: 'Started: 2019-03-21, Last modified: 2019-04-14'
+date: 'Started: 2019-03-21, Last modified: 2019-04-17'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -27,6 +27,31 @@ One **_major advantage_** of the Windows installer is that it comes
 bundled with many (all key anyway...) packages from Octave Forge.
 This saves a lot of headaches while compiling packages, especially
 on MacOS. I have a Parallels Win10 x64 VM for this reason...
+
+## Flatpak install
+
+On Debian and Ubuntu, we install using flatpak as outlined
+[here](http://ubuntuhandbook.org/index.php/2019/03/gnu-octave-5-1-0-released-with-hidpi-support-howto-install/).
+
+1. `sudo apt-get install flatpak`
+
+2. `sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo`
+
+3. `sudo flatpak install flathub org.octave.Octave`
+
+4. Launch from the Gnome launcher. Pin to Favorites.
+
+5. Uninstall as desired:
+
+    ```
+    flatpak install flathub org.octave.Octave
+    sudo apt-get remove flatpak
+    
+    ```
+
+
+
+
 
 Getting the path right was fun
 
@@ -111,6 +136,42 @@ block of triple back-ticks...
 ```
 
 # Key Elements
+
+## Listing installed packages
+
+List the installed packages with:
+
+```{octave list_installed_pkgs, engine.path=octaveExe}
+pkg list
+
+```
+
+### Windows
+
+On Win they were in:    
+
+```
+C:\Apps\Octave-5.1.0.0\mingw64\share\octave\packages
+```
+
+### Debian
+
+On Debian Sid, they are in:
+
+```
+Package Name  | Version | Installation directory
+--------------+---------+-----------------------
+   dataframe  |   1.2.0 | /usr/share/octave/packages/dataframe-1.2.0
+     general  |   2.1.0 | /home/jrminter/octave/general-2.1.0
+       image  |  2.10.0 | /home/jrminter/octave/image-2.10.0
+          io  |  2.4.12 | /home/jrminter/octave/io-2.4.12
+  statistics  |   1.4.0 | /home/jrminter/octave/statistics-1.4.0
+    symbolic  |   2.7.1 | /home/jrminter/octave/symbolic-2.7.1    
+```
+
+
+
+
 
 ## Setting up for working with operators
 
