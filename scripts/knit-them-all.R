@@ -4,6 +4,8 @@ rm(list=ls())
 library(knitr)
 library(rmarkdown)
 
+sleep_time <- 2
+
 strGitHome <- Sys.getenv("GIT_HOME")
 if(strGitHome=="") strGitHome="~/Documents/git"
 #if(strGitHome=="/Users/jrminter/git") strGitHome="/Users/jrminter/Documents/git"
@@ -88,6 +90,7 @@ knitIt <- function(wrkPath, scrPath, theName){
   theMD <- paste0(strsplit(theName, ".Rmd")[[1]], ".md")
   file.remove(theMD)
   setwd(scrPath)
+  Sys.sleep(sleep_time)
 }
 
 strScripts <- paste0(strGitHome, strRel)
