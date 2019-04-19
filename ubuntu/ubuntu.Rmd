@@ -1,7 +1,7 @@
 ---
 title: "Ubuntu Tips"
 author: "J. R. Minter"
-date: "Started: 2014-01-17, Last modified: 2019-04-08"
+date: "Started: 2014-01-17, Last modified: 2019-04-18"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -29,6 +29,24 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 
 [Back to Index](../README.html)
+
+# Install Dropbox
+
+From [vutux.com](https://vitux.com/how-to-install-and-sync-dropbox-on-ubuntu/)
+
+1. You can download the official .deb installation package from the
+[Dropbox website](https://www.dropbox.com/install-linux).
+
+
+2. Save the `.deb` file on your system; it will be saved to the
+`Downloads` folder by default.
+
+3. Right click on the package and select the `Open with Software Install`
+option from the menu. This will open a graphical installer. Click the
+`Install` button.
+
+4. It will ask for the admin password...
+
 
 # Choose a kernel on boot
 hold down ``left shift`` key on boot to get to grub menu
