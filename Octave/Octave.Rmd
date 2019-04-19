@@ -192,6 +192,14 @@ On `jrmFastMac`, I set `OCTAVE_EXECUTABLE` to:
 /usr/local/bin/octave
 ```
 
+On Ubuntu, `OCTAVE_EXECUTABLE` needs to be
+
+```
+/usr/bin/octave-cli
+```
+
+(the GUI is `/usr/bin/octave` ...)
+
 in Renviron in the `jrm_dotfiles` git repository. This
 is symbolically-linked to `.Renviron`
 

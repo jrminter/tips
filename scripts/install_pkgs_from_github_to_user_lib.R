@@ -21,9 +21,15 @@ if( Sys.info()['sysname'] == "Windows"){
 # WE need this package...
 library(lwPackageHelperR)
 
-# make sure this is propery set and test by installing this package
+# /home/jrminter/Documents/git/tips/scripts
 
-libDir <- "/home/jrminter/R/x86_64-pc-linux-gnu-library/3.6"
+# make sure this is properly set and test by installing this package
+
+# For Debian
+# libDir <- "/home/jrminter/R/x86_64-pc-linux-gnu-library/3.6"
+
+# For ubuntu-bionic
+libDir <- "/home/jrminter/R/x86_64-pc-linux-gnu-library/3.4"
 
 # run this from the command line by:
 # cd /home/jrminter/Documents/git/tips/scripts
