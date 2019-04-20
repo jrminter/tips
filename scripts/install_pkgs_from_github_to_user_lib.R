@@ -29,7 +29,10 @@ library(lwPackageHelperR)
 # libDir <- "/home/jrminter/R/x86_64-pc-linux-gnu-library/3.6"
 
 # For ubuntu-bionic
-libDir <- "/home/jrminter/R/x86_64-pc-linux-gnu-library/3.4"
+# libDir <- "/home/jrminter/R/x86_64-pc-linux-gnu-library/3.4"
+
+# For macOS
+libDir <- "/Library/Frameworks/R.framework/Versions/3.5/Resources/library"
 
 # run this from the command line by:
 # cd /home/jrminter/Documents/git/tips/scripts
