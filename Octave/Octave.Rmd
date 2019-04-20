@@ -177,6 +177,10 @@ in Rmarkdown. **_N.B._ Octave code chunks must be _self-contained_**
 ```{r setup, include=TRUE}
 knitr::opts_chunk$set(echo = TRUE)
 octaveExe <- Sys.getenv("OCTAVE_EXECUTABLE")
+# I do not know why this barfs on Debian
+if (octaveExe==""){
+  octaveExe='/usr/bin/octave-cli'
+}
 octaveExe
 ```
 
@@ -222,9 +226,9 @@ block of triple back-ticks...
 
 List the installed packages with:
 
-```{octave list_installed_pkgs, engine.path=octaveExe}
+```
+{octave list_installed_pkgs, engine.path=octaveExe}
 pkg list
-
 ```
 
 ### Windows
@@ -259,7 +263,7 @@ Package Name  | Version | Installation directory
 1. element by element operators are the operator with a preceding `.`.
 For example:
 
-    ```{octave elem_by_elem, engine.path=octaveExe}
+    ```{octave ebe, engine.path=octaveExe}
     A = [1,2,3,4];
     B = [2,4,6,8];
 
