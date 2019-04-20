@@ -1,7 +1,7 @@
 ---
 title: "R-Markdown Tips"
 author: "J. R. Minter"
-date: "Started: 2016-12-08, Last modified: 2019-04-17"
+date: "Started: 2016-12-08, Last modified: 2019-04-20"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -276,11 +276,14 @@ date: "Started: 2018-07-10, Last modified: 2018-07-11"
 geometry: "left=0.5in,right=0.5in,top=0.5in,bottom=0.5in"
 output:
   pdf_document:
-    # fig_caption: yes
-    number_sections: yes
+    # fig_caption: true
+    number_sections: true
     latex_engine: xelatex
+    toc_depth: 2
     fig_width: 5
     fig_height: 5
+    highlight: tango
+    keep_tex: true
 bibliography: inc/viridis.bib
 csl: inc/acs.csl
 fontsize: 12pt
@@ -292,6 +295,12 @@ header-includes:
   - \counterwithin{table}{section}
 ---
 ```
+
+**Note**:
+
+User contributed templates are available on the 
+[pandoc wiki](https://github.com/jgm/pandoc/wiki/User-contributed-templates).
+
 followed by this chunk. **Note:** I moved the chunk name into the block
 so it will not execute here...
 
