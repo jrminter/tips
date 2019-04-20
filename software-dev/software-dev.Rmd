@@ -1,7 +1,7 @@
 ---
 title: "Software Development"
 author: "J. R. Minter"
-date: "Started: 2017-11-21, Last modified: 2018-10-11"
+date: "Started: 2017-11-21, Last modified: 2019-04-20"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -14,7 +14,9 @@ output:
 
 library(knitr)
 options(width = 72)
-opts_chunk$set(message = F, error = F, warning = F, comment = NA, fig.align = 'center', dpi = 100, tidy = F, cache.path = '.cache/', fig.path = 'figure/')
+opts_chunk$set(message = F, error = F, warning = F, comment = NA,
+               fig.align = 'center', dpi = 100, tidy = F,
+               cache.path = '.cache/', fig.path = 'figure/')
 
 options(xtable.type = 'html')
 knit_hooks$set(inline = function(x) {
@@ -29,6 +31,46 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 
 [Back to Index](../README.html)
+
+# Technical Debt
+
+Key comments by
+[Gordon Shotwell](https://blog.shotwell.ca/posts/2019-04-19-technical-debt-in-data-science/)
+from an article published **2019-04-19**:
+
+> Here are a couple of questions to help identify if you have a problem with
+> this kind of technical debt:
+> 
+> - Do you have time and resources to write tests, refactor code, or review
+>   the code of your colleagues?
+>
+> - Do you know the limits of your code base, in other words can you say
+>   clearly what parts of your code need to be maintained
+>
+> - Do you know what your test coverage is for this codebase?
+>
+> - Do you get and respond to feedback about whether your code is easy
+>   to understand?
+>
+> If you answered "no" to these questions there's a good chance you are taking
+> on dangerous technical debt. Not only are you trading today's work for
+> tomorrow, but you **_can't know_** how much future work you're committing
+> to. The technical debt sits like a time bomb somewhere in your code base,
+> and you don't know when it will go off or what damage it will cause.
+
+> **How to fix this**
+>
+> - Look through your code base and ask "do I care if this code is correct
+>    include tests for all such code.
+>
+> - Start writing **smaller**, **_simpler_ functions**. These are easier to test.
+>   When other developers ask you to refactor or extend their code,
+>   **insist that it includes tests**. **Do _not_ trust people** when they
+>   **_say_** the code is correct. **Insist** that they define what correctness
+>   means.
+>
+> - Make an **_organizational policy_** that **tasks _aren't complete_** until
+>   **they are tested**.
 
 # Some tips from Julia Evans
 
