@@ -176,11 +176,8 @@ in Rmarkdown. **_N.B._ Octave code chunks must be _self-contained_**
 
 ```{r setup, include=TRUE}
 knitr::opts_chunk$set(echo = TRUE)
+# This needs to be set in .Renviron NOT .Rprofile...
 octaveExe <- Sys.getenv("OCTAVE_EXECUTABLE")
-# I do not know why this barfs on Debian without a fix
-if (octaveExe==""){
-   octaveExe='/usr/bin/octave-cli'
-}
 octaveExe
 
 ```
