@@ -1,7 +1,7 @@
 ---
 title: "Ubuntu Tips"
 author: "J. R. Minter"
-date: "Started: 2014-01-17, Last modified: 2019-04-18"
+date: "Started: 2014-01-17, Last modified: 2019-04-20"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -74,6 +74,90 @@ This will remove a user and their home directory from the command line:
 sudo deluser --remove-home username
 ```
 
+# Desktop entries
+
+We provide information to start applications by using `*.desktop` files.
+
+These are placed in `/usr/share/applications` to be accessable to all
+users. For a single user, they are placed in `~/.local/share/applications`.
+Use of these files is described in the Gnome 
+[desktop-files](https://developer.gnome.org/integration-guide/stable/desktop-files.html.en)
+help page.
+
+The Gnome sample
+
+    ```
+    [Desktop Entry]
+    Type=Application
+    Encoding=UTF-8
+    Name=Sample Application Name
+    Comment=A sample application
+    Exec=application
+    Icon=application.png
+    Terminal=false
+    ```
+
+**Line by line explanation**:
+
+| Line              | Description                  |
+|-------------------|------------------------------|
+| [Desktop Entry]   | Required first entry         |
+| Type=Application  | Also `Link` or `Directory`   |
+| Encoding=UTF-8    | Describes the encoding used  |
+| Name=Sample       | Name for launcher            |
+| Comment=A sample  | Description for a tool tip   |
+| Exec=Command line | Command with arguments       |
+| Icon=icon.png     | The icon to display          |
+| Terminal=false    | Whether to run in a terminal |
+
+**Exec variables**:
+
+| Add... | Accepts...
+|--------|------------------|
+| %f     | a single filename. |
+| %F     | multiple filenames. |
+| %u     | a single URL. |
+| %U     | multiple URLs. |
+| %d     | a single directory. Used in conjunction with %f to locate a file. |
+| %D     | multiple directories. Used in conjunction with %F to locate files. |
+| %n     | a single filename without a path. |
+| %N     | multiple filenames without paths. |
+| %k     | a URI or local filename of the location of the desktop file. |
+| %v     | the name of the Device entry. |
+
+
+Two examples of my custom desktop files:
+
+1. `tips.desktop` usd to put the index of my "tip" documents in my
+`Favorites` bar:
+
+    ```
+    [Desktop Entry]
+    Version=1.0
+    Name=Tips
+    GenericName=Utility
+    Comment=Show Tips
+    Exec=/usr/bin/chromium /home/jrminter/Documents/git/tips/README.html
+    Terminal=false
+    X-MultipleArgs=true
+    Type=Application
+    Icon=/home/jrminter/Documents/git/global/png/T.png
+    ```
+
+2. `dtsa2.desktop` used to start `NIST DTSA-II`:
+
+    ```
+    [Desktop Entry]
+    Version=1.0
+    Name=DTSA-II-Kelvin
+    GenericName=Utility
+    Comment=EDS Spectrum Simulation
+    Exec=/usr/bin/java -jar /home/jrminter/Apps/DTSA-II-Kelvin/dtsa2.jar
+    Terminal=true
+    X-MultipleArgs=true
+    Type=Application
+    Icon=/home/jrminter/Documents/git/global/png/lord-kelvin.png
+    ```
 
 # Managing software - From Distrowatch
 
