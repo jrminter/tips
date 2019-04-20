@@ -74,6 +74,24 @@ This will remove a user and their home directory from the command line:
 sudo deluser --remove-home username
 ```
 
+# Turn off annoying auto updates on 18.04 bionic
+
+From [linuxconfig.org](https://linuxconfig.org/disable-automatic-updates-on-ubuntu-18-04-bionic-beaver-linux)
+
+I use `subl` instead of `nano`...
+
+```
+sudo subl /etc/apt/apt.conf.d/20auto-upgrades
+```
+
+Change to
+
+```
+APT::Periodic::Update-Package-Lists "0";
+APT::Periodic::Unattended-Upgrade "0";
+```
+
+
 # Desktop entries
 
 We provide information to start applications by using `*.desktop` files.
