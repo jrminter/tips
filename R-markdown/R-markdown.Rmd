@@ -1,7 +1,7 @@
 ---
 title: "R-Markdown Tips"
 author: "J. R. Minter"
-date: "Started: 2016-12-08, Last modified: 2019-04-20"
+date: "Started: 2016-12-08, Last modified: 2019-04-21"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -294,6 +294,43 @@ header-includes:
   - \counterwithin{figure}{section}
   - \counterwithin{table}{section}
 ---
+```
+
+## YAML for a multiformat manuscript
+
+```
+---
+title: "Testing control chart packages"
+author: 'Original: Robert Nguyen, Modified by: J. R. Minter'
+date: 'Started: 2019-04-21, Last Modified: 2019-04-21'
+output:
+  html_document:
+    css: ../css/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 2
+    highlight: tango
+  pdf_document:
+    toc: yes
+    toc_depth: '2'
+    highlight: 'tango'
+  word_document:
+    toc: yes
+    toc_depth: '2'
+    highlight: 'tango'
+bibliography: inc/control_chart.bib
+csl: ../csl/acs.csl
+abstract: |
+  Control charts help the analyst follow the stability of a process. This is
+  an example from Robert Nguyen [@Nguyen2019a] . This version uses the ACS
+  bibiographic file with titles and sentence case. The references are printed
+  in the document at superscript numbers referring to the bibliography.
+---
+
+Note: Be sure to add to end:
+
+# Bibliography
+
 ```
 
 **Note**:
