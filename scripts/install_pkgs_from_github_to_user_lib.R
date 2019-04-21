@@ -39,7 +39,7 @@ libDir <- "/Library/Frameworks/R.framework/Versions/3.5/Resources/library"
 # cd /home/jrminter/Documents/git/tips/scripts
 # sudo Rscript install_pkgs_from_github_to_user_lib.R
 
-
+install_new_github('knitcitations','cboettig',libDir)
 install_new_github('rmdTemplates','Pakillo',libDir)
 install_new_github('slidify','ramnathv',libDir)
 install_new_github('slidifyLibraries','ramnathv',libDir)
