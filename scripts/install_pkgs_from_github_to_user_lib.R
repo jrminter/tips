@@ -6,7 +6,8 @@
 # ----------  ---  ---------------------------------------------------------
 # 2019-04-17  JRM  Set the  User library near the top. Get it by running 
 #                  `.libPaths()``from the cmmand line
-#  
+# 2019-04-20  JRM  Added Pakillo's rmdTemplates. Have libPaths for several;\
+#                  Systems that an be uncommented...
 
 # set the system to hande JAVA
 if( Sys.info()['sysname'] == "Windows"){
@@ -39,7 +40,7 @@ libDir <- "/Library/Frameworks/R.framework/Versions/3.5/Resources/library"
 # sudo Rscript install_pkgs_from_github_to_user_lib.R
 
 
-
+install_new_github('rmdTemplates','Pakillo',libDir)
 install_new_github('slidify','ramnathv',libDir)
 install_new_github('slidifyLibraries','ramnathv',libDir)
 install_new_github('rCharts','ramnathv',libDir)
