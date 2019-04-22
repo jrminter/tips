@@ -239,6 +239,12 @@ msys/msys.md
 msys/msys.html
 msys/figure/
 
+# msOffice directory
+msOffice/.DS_Store
+msOffice/*.md
+msOffice/*.html
+msOffice/figure/
+
 # mysql directory
 mysql/.DS_Store
 mysql/mysql.md
