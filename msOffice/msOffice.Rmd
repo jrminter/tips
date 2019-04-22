@@ -25,9 +25,9 @@ with your favorite program.
 
 2. The images are in the `media` folder. The `.jpeg` and
 `.png` files are easy to handle. The `.emf` and `.wmf` files
-are harder to process.
+are harder to process. The
 [techglobber.wordpress.com](https://techglobber.wordpress.com/2009/07/10/how-to-convert-emf-files-on-mac-os-x-using-microsoft-word/)
-provides the solution. The trick is to open a **blank** Word document,
+website provides the solution. The trick is to open a **blank** Word document,
 drag the `.emf` or `.wmf` file onto the document. It will open
 and display as an image. Highlight this and `Save as Image`.
 storing as a `.png` file (lossless compression).
