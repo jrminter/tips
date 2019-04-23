@@ -1,7 +1,7 @@
 ---
 title: "R-Markdown Tips"
 author: "J. R. Minter"
-date: "Started: 2016-12-08, Last modified: 2019-04-21"
+date: "Started: 2016-12-08, Last modified: 2019-04-23"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -40,6 +40,18 @@ repository on github.
 [Ubuntu](https://cran.r-project.org/bin/linux/ubuntu/README.html) Linux.
 
 # Rmarkdown Kung Fu
+
+## Quick tips
+
+- Degree symbol w/o unicode:    
+  Unicode can cause issues rendering to PDF via LaTeX...
+
+    ```
+    100$^\circ$ C
+    ```
+
+    100$^\circ$ C
+
 
 ## List available languages
 
@@ -326,11 +338,58 @@ abstract: |
   bibiographic file with titles and sentence case. The references are printed
   in the document at superscript numbers referring to the bibliography.
 ---
+```
 
-Note: Be sure to add to end:
+And here is a second one
 
+```
+---
+title: "Surface modification of Zinc Oxides by RAFT polymerization"
+author: Yuchang Huang, Michael J. Motala, Kurt Sieber, John R. Minter, Steven C. Switalski,
+  Peter Ghyzel, Wayne T. Ferrar
+date: 'Started: 2018-11-18, Last Modified: 2019-04-22'
+bibliography: inc/paper.bib
+output:
+  html_document:
+    css: inc/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 2
+  pdf_document:
+    latex_engine: xelatex
+    includes:
+      in_header: inc/preamble.tex
+    df_print: tibble
+    toc: yes
+    toc_depth: '2'
+    highlight: 'tango'
+abstract: |
+  Controlled radical polymerization was used to graft
+  poly(methylmethacrylate) (PMMA) and poly(methyl
+  methacrylate)-co-poly(butyl acrylate) (PMMA-co-PBA) copolymers on the
+  surface of aluminum zinc oxide (AZO) nanorods. The polymer bonded AZO
+  particles stay suspended in the coating solutions and form strong
+  interactions between the particle and the polymer matrix. Deposited
+  films of the polymer modified particles show piezoresistive behavior.
+  Plots of pressure and electrical resistance changes with time show the
+  inverse relationship of resistance and pressure for free standing films.
+  Using similar chemistry, polymer grafted zinc oxide (ZnO) nanorods were
+  added to dimethylformamide (DMF) to make dispersions that were "printed"
+  using electrospinning.
+  The grafted polymer served as the matrix of the
+  electrospun nanofiber. These types of nanocomposites have been referred
+  to "matrix-free" because they are made from one component where the ZnO
+  is bonded to the PMMA. The ZnO nanorods in the oriented fibers produced
+  polarized emissions in the visible region of the optical spectrum when
+  exposed to UV light.
+---
+
+```
+
+Note: Be sure to add to end of each of these two:
+
+```
 # Bibliography
-
 ```
 
 **Note**:
