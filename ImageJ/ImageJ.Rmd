@@ -16,6 +16,36 @@ I have collected these tips both from experience and from a very helpful user co
 
 # Quick tips
 
+## My Current Install
+
+### Fiji Update Sites checked
+
+**Updated 2019-04-24**
+
+- ImageJ
+- Fiji
+- Java-8
+- BIG-EPFL
+- Biomedgroup
+- Cookbook
+- DiameterJ
+- FFMPEG
+- IBMP-CNRS
+- IJPB-plugins
+- ImageJ-Latex
+- ImageScience
+- LOCI
+- Morphology
+- MOSAIC ToolSuite
+- ParticleSizer
+- SimonKlein
+
+**Entries in** `/Applications/Fiji.app/jars/Lib`:
+
+- JmFijiGen.py
+- kodakBubbles.py
+
+
 ## A fix for Fiji startup problems on MacOS Mojave
 
 I'm not having problems at the moment, but users with new installs are.
