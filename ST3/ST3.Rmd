@@ -1,7 +1,7 @@
 ---
 title: "Sublime Text 3 Tips"
 author: "J. R. Minter"
-date: "Started: 2015-02-13, Last modified: 2019-04-23"
+date: "Started: 2015-02-13, Last modified: 2019-04-24"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -66,7 +66,45 @@ To make sure Package Control works
 From [Marius Schulz](https://blog.mariusschulz.com/2014/12/16/how-to-set-up-sublime-text-for-a-vastly-better-markdown-writing-experience)
 
 1. Install the `Monokai Extended` package.
-2. Install the `Markdown Extended` package to get the additional color scheme.
+2. Install the `Markdown Editing` package to get the additional control
+
+**I really struggled with this...**
+
+The solution was to set the:
+
+`Preferences > Package Settings > Markdown-Editing > Markdown GFM Settings-User`
+
+to:
+
+```
+{
+	"draw_centered": false,
+	"line_numbers": true,
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.sublime-color-scheme",
+	"extensions":
+	[
+		".Rmd",
+		".md",
+	]
+}
+```
+
+and repeat for:
+
+
+`Preferences > Package Settings > Markdown-Editing > Markdown (Standard) Settings-User`
+
+and
+
+
+`Preferences > Package Settings > Markdown-Editing > MultiMarkdown Settings-User`
+
+to the same values.
+
+Note as of 2019-04-24, the installed packages on my Win7 box are:
+
+![](./inc/installed-pkgs-win7.png)
+
 
 
 # Spell Checking
