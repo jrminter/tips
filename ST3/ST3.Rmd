@@ -14,6 +14,7 @@ output:
 
 These are John Minter's tips for using the editor ``Sublime Text 3``.
 
+
 # Key info
 
 A. Documentation 
@@ -44,9 +45,14 @@ located in:
 
 - OS X: `~/Library/Application Support/Sublime Text 3`
 
+    On MacOS, the key directory structure is shown here:
+    
+    ![ST3 Key Directory Structure. The license file goes in `Local`, The settings go in `Packages/User` (see the red arrows).](inc/ST3-Key-Dir-Structure-Mac.png)
+
 - Windows: `%APPDATA%\Sublime Text 3`
 
 - Linux: `~/.config/sublime-text-3`
+
 
 To revert to a freshly installed state, you can:
 

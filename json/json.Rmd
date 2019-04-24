@@ -14,9 +14,92 @@ output:
 
 These are John Minter's tips on JSON files.
 
-# Simple tricks
+# Introduction
 
-## A
+[Wikipedia](https://en.wikipedia.org/wiki/JSON) compares `JSON` to `YAML` and
+`XML`. I would add the old `INI` file to this group. All are easily read by
+humans and there are parsers for most languages, making them useful for saving
+configuration data.
+
+ 
+
+## Data types and syntax
+
+Wikipedia lists JSON's basic data types:
+
+- **Number:** a signed decimal number that may contain a fractional part and
+may use exponential E notation, but **cannot include** non-numbers such as `NaN`.
+The format makes no distinction between integer and floating-point. JavaScript
+uses a double-precision floating-point format for all its numeric values, but
+other languages implementing JSON may encode numbers differently.
+
+- **String**: a sequence of zero or more Unicode characters. Strings are
+delimited with double-quotation marks and support a backslash escaping syntax.
+
+- **Boolean**: either of the values `true` or `false`
+
+- **Array**: an ordered list of zero or more values, each of which may be of any
+type. **Arrays use square bracket notation and elements are comma-separated**.
+
+- **Object**: an unordered collection of name–value pairs where the names (also
+called `keys`) are **strings**. Since objects are intended to **represent**
+**associative arrays**, it is **_recommended_**, though not required, that each
+**key is unique within an object**. Objects are delimited with **curly brackets**
+and use commas to separate each pair, while within each pair the **colon** ':'
+character **separates the key or name from its value**.
+
+- **null**: An empty value, using the word `null`
+
+According to [fileinfo.com](https://fileinfo.com/extension/json):
+
+> A JSON file is a file that stores simple data structures and objects in
+> JavaScript Object Notation (`JSON`) format, which is a
+> **standard data interchange format**. It is primarily used for transmitting
+> data between a web application and a server. JSON files are **lightweight**,
+> text-based, human-readable, and can be edited using a text editor.
+> 
+> **More Information**
+>
+> The JSON format was originally based on a subset of JavaScript, but is
+> considered a language-independent format, being supported by many different
+> programming APIs. JSON is commonly used in Ajax Web application programming.
+> It is becoming increasingly popular as an alternative to XML.
+> 
+> While many applications use JSON for data interchange, they may not actually
+> save `.json` files on the hard drive since the data interchange occurs between
+> Internet-connected computers. However, some applications do enable users to
+> save `.json` files. One example is Google+, which uses JSON files for saving
+> Profile data. After logging in, you can choose the "Data liberation" page and
+> select "Download your Profile data."
+> 
+> Mozilla Firefox saves bookmark backups using JSON files. The files are saved
+> to the Firefox user profile directory within a folder called bookmarkbackups.
+> You can also make manual backups of Firefox bookmarks and import them into a
+> different copy of Firefox. To import, open the bookmark Library, click the
+> import/export button in the top bar, choose Restore → Choose File..., and then
+> select your JSON backup file.
+
+# Parsing JSON
+
+## R
+
+On stackoverflow,
+[joscani](https://stackoverflow.com/questions/2061897/parse-json-with-r)
+provides this example:
+
+```{r parse_json_lite, comment=NA}
+library(jsonlite)
+# file with ypescript JSON rplacing their broken link with JSON from ST3
+url <- './inc/MultiMarkdown.json'
+
+document <- fromJSON(txt=url)
+document
+```
+
+
+## Sublime Text 3
+
+Sublime Text 3 stores configuration data in the `JSON` format.
 
 
 [Back to Index](../README.html)

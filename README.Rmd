@@ -137,6 +137,10 @@ This skips several steps from original article!
 
 [Jekyll on github.io](./jekyll-github/jekyll-github.html)
 
+[json](./json/json.html)
+
+[legacy equipment](./legacy/Legacy.html)
+
 [Logos Library System](./Logos/Logos.html)
 
 [Lubuntu](./Lubuntu/Lubuntu.html)
@@ -144,8 +148,6 @@ This skips several steps from original article!
 [mac](./mac/mac.html)
 
 [mac-for-data-science](./mac-for-data-science/mac-for-data-science.html)
-
-[maintaining legacy equipment](./legacy/Legacy.html)
 
 [microscopy](./micro/micro.html)
 
