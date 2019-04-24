@@ -1,7 +1,7 @@
 ---
 title: "Image-J Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-04-11"
+date: "Started: 2013-07-16, Last modified: 2019-04-24"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -15,6 +15,46 @@ output:
 I have collected these tips both from experience and from a very helpful user community.
 
 # Quick tips
+
+## A fix for Fiji startup problems on MacOS Mojave
+
+I'm not having problems at the moment, but users with new installs are.
+
+[Stefan Muenkner](mailto::stefan.muenkner@uni-saarland.de) wrote on
+the ImageJ mailing list (2019-04-24):
+
+>  I stumbled about the same problem. Using a terminal I could manually
+> start Fiji by using:
+> 
+>    ```
+>    /Applications/Fiji.app/Contents/MacOS/ImageJ-macosx
+>    ```
+>
+> it complained about a Version 1.8 Java not being available but it started
+> anyway. Out of curiosity I started:
+>
+>    ```
+>    /Applications/Fiji.app/Contents/MacOS/ImageJ-tiger
+>    ```
+> 
+> which fired the above error message about a Java6 needing to be installed.
+> 
+> Looking into `Info.plist` I found that the first key `CFBundleExecutable`
+> was set to `ImageJ-tiger`
+>
+>    ```
+>    <key>CFBundleExecutable</key>
+>    <string>ImageJ-tiger</string>
+>    ```
+>
+> Using the good old `vi` **[JRM note: use `subl`]**, I changed ImageJ-tiger
+> to ImageJ-macosx in `Info.plist` and - after moving the `Fiji App` once
+> out of `Applications` and back in - Fiji started. This might be a workaround
+> for Mojave...
+
+Note: My info.plist is different:
+
+![My Info.plist file in XCode](png/Info-plist.png)
 
 ## Tutorials
 
