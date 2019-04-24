@@ -63,7 +63,8 @@ pdf_length("joined.pdf")
 The split and join features are provided via a new package `qpdf` which
 wraps the `qpdf` C++ library. The main benefit of `qpdf` is that no external
 software (such as pdftk) is needed. The `qpdf` package is entirely self
-contained and works reliably on all operating systems with zero system dependencies.
+contained and works reliably on all operating systems with zero system
+dependencies.
 
 Data extraction now available on Linux too
 
