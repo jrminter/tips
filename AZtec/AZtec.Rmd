@@ -1,7 +1,7 @@
 ---
 title: "AZtec Tips"
 author: "J. R. Minter"
-date: "Started 2014-09-09, Last modified: 2019-02-21"
+date: "Started 2014-09-09, Last modified: 2019-04-24"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -55,23 +55,23 @@ These licenses have been installed on John's laptop and desktop
 
 **Instructions:**
 
-On the PC where the licence is to be used: 
+On the PC where the license is to be used: 
 
 1. Install the Oxford Instruments software from the DVD supplied 
 2. Start the License Product Tool from the Oxford Instruments
 NanoAnalysis folder 
 on the Start button of the PC.
-3. Review and if you agree, accept the Licence Agreement. 
+3. Review and if you agree, accept the License Agreement. 
 4. Copy the Product Key given above into the Product Key field. 
 5. Click the “Login” button. 
-6. Wait a few seconds for the licence activation server to be
-contacted over the internet. 
+6. Wait a few seconds for the lenience activation server to be
+contacted over the Internet. 
 7. The Activate Product Key screen is displayed. 
-8. Verify the licence information displayed is as expected. 
+8. Verify the license information displayed is as expected. 
 9. Click the “Online Activation” button. 
 10. Wait a few seconds while the license activation server prepares
-the licence. 
-11. A message will be displayed when the licence has been successfully
+the license. 
+11. A message will be displayed when the license has been successfully
 saved. 
 12. Click “Exit” to close the Product License Tool. 
 
@@ -81,7 +81,7 @@ applied with **PKAct**.
 
 # Useful quick tips
 
-## Useful free microanaysis software
+## Useful free microanalysis software
 
 Several programs that complement AZTec are included in
 [this](http://probesoftware.com/smf/index.php?topic=927)
@@ -637,7 +637,7 @@ After we got the mess cleaned up, we let everything dry with fans for
 
 I worked on the microscope PC and system the rest of that week. On
 2017-11-13 I turned my attention to the Oxford System. Dave McLaughlin
-suggested I open the cased on theb Compaq 8300 PC. There was no evidence
+suggested I open the cased on the Compaq 8300 PC. There was no evidence
 of water damage inside. I blew N~2~ into the case for 30 min. Building
 services were working to replace tiles nearby so i closed everything up
 and waited.
