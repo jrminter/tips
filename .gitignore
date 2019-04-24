@@ -192,6 +192,12 @@ iOS/iOS.md
 iOS/iOS.html
 iOS/figure/
 
+# json tips directory
+json/.DS_Store
+json/json.md
+json/json.html
+json/figure/
+
 # legacy directory
 legacy/.DS_Store
 legacy/Legacy.md
