@@ -188,6 +188,8 @@ This skips several steps from original article!
 
 [R-boxplots](./R-boxplots/R-boxplots.html)
 
+[R-data-pipeline](./R-data-pipeline/R-data-pipeline.html)
+
 [R-Excel](./R-Excel/R-Excel.html)
 
 [R-foreach](./R-foreach/R-foreach.html)

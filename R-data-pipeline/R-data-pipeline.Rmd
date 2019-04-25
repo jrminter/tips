@@ -1,0 +1,68 @@
+---
+title: "R data pipeline"
+author: "J. R. Minter"
+date: "Started: 2013-04-25, Last modified: 2019-04-25"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+
+```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F, comment=NA}
+library(knitr)
+options(width = 72)
+
+suppressPackageStartupMessages(library("tidyverse"))
+```
+
+
+[Back to Index](../README.html)
+
+
+# How to understand the pipe (`%>%`) operator
+
+The `tidyverse` pulls the pipe (`%>%`) operator from the `magritter`
+package. Understanding it is often difficult at first. The best way
+to read a sequence is to read the operator as **and then**. Note that
+RStudio defines a keyboard shortcut `Ctrl+Shift+M` (Win) and  `CMD+Shift+M`
+(Mac).
+
+The examples came from a tutorial given by Simon Jackson at the
+useR2018 conference. See the
+[youtube video)](https://www.youtube.com/watch?v=E-Vvg8uzcVM)
+and the [github repository](https://github.com/drsimonj/tidyverse_tutorial-useR2018).
+
+
+```{r readPriceData, comment=NA}
+library(tidyverse)
+bookings <- read_csv("dat/bookings.csv")
+# properties <- read_csv("dat/properties.csv")
+bookings %>%
+  filter(price_per_night < 80) %>% 
+  select(room_nights, review_score) %>% 
+  head(2)
+```
+
+Pipes are not new. Note that the Linux/Unix shell has been piping
+commands for decades...
+
+We don't need to create multiple objects and we can read the sequence
+easily.
+
+Another query from the `bookings` data.
+
+> Write a data pipeline to get a tibble of the `property_id` and 
+> `status` of all bookings made on a Wednesday.
+
+```{r checkinWedData, comment=NA}
+bookings %>%
+  filter(checkin_day=='wed') %>% 
+  select(property_id, status) %>% 
+  head(5)
+```
+
+
+
+[Back to Index](../README.html)
