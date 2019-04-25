@@ -1,7 +1,7 @@
 ---
 title: "R-Markdown Tips"
 author: "J. R. Minter"
-date: "Started: 2016-12-08, Last modified: 2019-04-23"
+date: "Started: 2016-12-08, Last modified: 2019-04-25"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -21,29 +21,73 @@ that are compatible with version control. This works very well in the
 
 Some key resources are:
 
-1. The [RStudio](http://rmarkdown.rstudio.com/lesson-1.html)
+1. [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/) by
+Yihui Xie, J. J. Allaire, and Garrett Grolemund (2019-03-19)
+
+2. The [RStudio](http://rmarkdown.rstudio.com/lesson-1.html)
 introduction to Rmarkdown.
 
-2. The
+3. The
 [RStudio](http://rmarkdown.rstudio.com/authoring_pandoc_markdown.html)
 introduction to pandoc
 
-3. For $\LaTeX$ math, the
+4. For $\LaTeX$ math, the
 [AOPS](http://artofproblemsolving.com/wiki/index.php/LaTeX:Commands) site.
 
-4. The `Liberate Science` [rmarkdown workshop](https://github.com/libscie/rmarkdown-workshop)
+5. The `Liberate Science` [rmarkdown workshop](https://github.com/libscie/rmarkdown-workshop)
 repository on github.
 
-5. A nice article by [www.accelebrate.com](https://www.accelebrate.com/library/how-to-articles/r-rstudio-library) on library paths in RStudio.
+6. A nice article by [www.accelebrate.com](https://www.accelebrate.com/library/how-to-articles/r-rstudio-library) on library paths in RStudio.
 
-6. A nice article on R/RStudio in
+7. A nice article on R/RStudio in
 [Ubuntu](https://cran.r-project.org/bin/linux/ubuntu/README.html) Linux.
+
+
+# Some helpful template examples
+
+- Lucy McGowan's [dissertation toolkit](https://github.com/LucyMcGowan/dissertation-toolkit)
+github repository. Lucy wrote her dissertation using
+[bookdown](https://bookdown.org/yihui/bookdown/) and it is very well
+structured. She has a great
+[blogpost](https://livefreeordichotomize.com/2018/09/14/one-year-to-dissertate/)
+describing her strategy. It has many helpful tips.
+
+- Rosanna Van Hespen also wrote her thesis in Rmarkdown. She has a
+[Github repository](https://github.com/rosannav/thesis_in_rmarkdown/tree/master/example_thesis)
+with the code. She also wrote a five part series of blog posts explaining
+what is involved:
+
+    1. [Getting started](https://rosannavanhespenresearch.wordpress.com/2016/02/03/writing-your-thesis-with-r-markdown-1-getting-started/)
+
+    2. [Making a chapter](https://rosannavanhespenresearch.wordpress.com/2016/02/17/writing-your-thesis-with-rmarkdown-2-making-a-chapter/)
+
+    3. [Figures: R code and tables](https://rosannavanhespenresearch.wordpress.com/2016/03/18/writing-your-thesis-with-r-markdown-3-figures-r-code-and-tables/)
+
+    4. [Putting the thesis together](https://rosannavanhespenresearch.wordpress.com/2016/03/29/writing-your-thesis-with-r-markdown-4-putting-the-thesis-together/)
+    
+    5. [The thesis layout](https://rosannavanhespenresearch.wordpress.com/2016/03/30/writing-your-thesis-with-r-markdown-5-the-thesis-layout/)
+    
+    This is a great example of a multi-file PDF document.
+    
+- The [`rticles`](https://cran.r-project.org/web/packages/rticles/index.html)
+package has templates for many different formats, including journal articles.
+
+- Emi Tanaka's [xaringen ninja theme](https://github.com/emitanaka/ninja-theme)
+that is based on Yihui Xie's [xaringan](https://github.com/yihui/xaringan)
+package.
+
+- The [sorensonimpact](https://github.com/Sorenson-Impact/sorensonimpact)
+package. This inspired my
+[minterbrand](https://github.com/jrminter/minterbrand) package.
+
+- A nice html template in the [epuRate](https://github.com/holtzy/epuRate) package by Holtz Yan.
+
 
 # Rmarkdown Kung Fu
 
 ## Quick tips
 
-- Degree symbol w/o unicode:    
+- Degree symbol w/o Unicode:    
   Unicode can cause issues rendering to PDF via LaTeX...
 
     ```
@@ -87,9 +131,6 @@ which will render the kable output as an image and happily show up across all pl
 
 ```
 
-
-
-
 ## Selective page break for PDF document
 
 Use a chunk that looks like this to only break for PDF...
@@ -107,25 +148,6 @@ From [Colin Fay](https://twitter.com/_ColinFay/status/1057598724342456321)
 xaringan:::inf_mr() 
 ```
 
-
-## Some helpful template examples
-
-- Lucy McGowan's [dissertation toolkit](https://github.com/LucyMcGowan/dissertation-toolkit)
-github repository. Lucy wrote her disseration using
-[bookdown](https://bookdown.org/yihui/bookdown/) and it is very well
-structured. She has a great
-[blogpost](https://livefreeordichotomize.com/2018/09/14/one-year-to-dissertate/)
-describing her strategy. It has many helpful tips.
-
-- Emi Tanaka's [xaringen ninja theme](https://github.com/emitanaka/ninja-theme)
-that is based on Yihui Xie's [xaringan](https://github.com/yihui/xaringan)
-package.
-
-- The [sorensonimpact](https://github.com/Sorenson-Impact/sorensonimpact)
-package. This inspired my
-[minterbrand](https://github.com/jrminter/minterbrand) package.
-
-- A nice html template in the [epuRate](https://github.com/holtzy/epuRate) package by Holtz Yan.
 
 ## Using the `out.extra` argument to apply styles to a single chunk.
 
@@ -308,7 +330,7 @@ header-includes:
 ---
 ```
 
-## YAML for a multiformat manuscript
+## YAML for a multi-format manuscript
 
 ```
 ---
