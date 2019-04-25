@@ -15,8 +15,10 @@
 # system_r_library <- '/usr/lib/R/library'
 
 # For ubuntu bionic
-system_r_library <- '/usr/local/lib/R/site-library'
+# system_r_library <- '/usr/local/lib/R/site-library'
 
+# for lubuntu-bionic
+system_r_library <-'/home/jrminter/R/x86_64-pc-linux-gnu-library/3.5'
 
 install.packages('devtools', system_r_library, dependencies=TRUE)
 install.packages('plotGoogleMaps', system_r_library, dependencies=TRUE)
