@@ -11,9 +11,56 @@ output:
 ---
 [Back to Index](../README.html)
 
-# Tips
+# Packages installed via homebrew
 
-## For mac rstats folks install/update R etc from Homebrew
+These were installed (other dependencies came with...)
+
+```
+brew install wget sqlite R rstudio youtube-dl gdal dos2unix
+brew install gnuplot
+```
+
+## Set terminal for `gnuplot`
+
+`gnuplot` now installs `qt` so to run a plot,
+[mark Setchel](https://stackoverflow.com/questions/54296621/brew-install-gnuplot-with-qt-with-x11-not-working)
+reported that this works (and I confirmed...):
+
+```
+export GNUTERM=qt
+```
+
+reports:
+
+```
+Terminal type is now 'qt'
+```
+
+and the following throws up a Qt window:
+
+```
+gnuplot> plot sin(x)
+```
+
+This explanation was helpful:
+
+> I contacted the brew maintainer who had most recently modified the gnuplot
+> formula. Brew is no longer allowing options in formulas, so
+> 
+> > `brew install gnuplot --with-x11`
+>
+> can no longer be done, but
+>
+> > `brew install gnuplot`
+>
+> installs the `qt` terminal and useful terminals from the `cairo` package,
+> but not the `x11` terminal. I caught the formula during a couple of hour
+> window when the formula was broken. It is now working, but with no way to
+> install the x11 terminal.
+
+## The importance of updates
+
+For mac rstats folks install/update R etc from Homebrew
 
 From [Bob Rudis](https://twitter.com/hrbrmstr/status/1111046690872705025)
 Periodically run...
@@ -26,7 +73,7 @@ and consider updating your 📦/modules/et. al. that depend on any libraries
 from them.
 
 
-### Install R etc from Homebrew
+## Install R etc from Homebrew
 
 **2019**
 
@@ -81,6 +128,7 @@ Use [this](https://gist.github.com/pachamaltese/a789eb3bc96f33b47e5a1499481c0f4b
     > indeed an nvim issue (if you do not want to punt this to homebrew). @jamessan
 
 
+# Other packages
 
 ## Get/Use iTerm2
 
