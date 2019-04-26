@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-03-30"
+date: "Started: 2013-07-16, Last modified: 2019-04-26"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -13,7 +13,7 @@ output:
 
 # Tips
 
-## For mac rstats folks...
+## For mac rstats folks install/update R etc from Homebrew
 
 From [Bob Rudis](https://twitter.com/hrbrmstr/status/1111046690872705025)
 Periodically run...
@@ -24,6 +24,36 @@ brew update && brew upgrade && brew cleanup
 
 and consider updating your 📦/modules/et. al. that depend on any libraries
 from them.
+
+
+### Install R etc from Homebrew
+
+**2019**
+
+Jenny Bryans's what they forgot [site](https://whattheyforgot.org/set-up-an-r-dev-environment.html)
+has a more recently updated description of how to install R from
+`homebrew`.
+
+She notes: 
+
+> Instead, if you prefer the convenience of homebrew, we recommend
+> installing the `"r cask install"`. **NOTE**: the cask used to be named `r-app`
+> but the `-app` suffix was dropped due to a homebrew policy change around
+> **2019-03-11**. Use:
+
+    ```
+    brew cask install r
+    ```
+> This will install the CRAN R distribution, so all package binaries will
+> be available just like they would be from installing R manually.
+
+**Note**: one still needs to install the `clang-6.0.0.pkg` and
+`gfortran-6.1.pkg`  files.
+
+
+**2017-07-12**
+
+Use [this](https://gist.github.com/pachamaltese/a789eb3bc96f33b47e5a1499481c0f4b) gist is dated but has some ideas. 
 
 ## Issues with building R packages
 
@@ -733,11 +763,6 @@ choice, and aim to get the drive replaced sooner than later.
 ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 ```
 
-## A nice tip to install R etc from Homebrew
-
-**2017-07-12**
-
-Use [this](https://gist.github.com/pachamaltese/a789eb3bc96f33b47e5a1499481c0f4b) gist. See the blog post [here](http://pacha.hk/2017-07-12_r_and_gnu_tools_via_homebrew.html).
 
 ## Unison
 
