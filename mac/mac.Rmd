@@ -17,7 +17,7 @@ These were installed (other dependencies came with...)
 
 ```
 brew install wget sqlite R rstudio youtube-dl gdal dos2unix
-brew install gnuplot
+brew install gnuplot fish
 ```
 
 ## Set terminal for `gnuplot`
@@ -57,6 +57,9 @@ This explanation was helpful:
 > but not the `x11` terminal. I caught the formula during a couple of hour
 > window when the formula was broken. It is now working, but with no way to
 > install the x11 terminal.
+
+I have to paste in the window because the qt window quits at the end...
+
 
 ## The importance of updates
 
