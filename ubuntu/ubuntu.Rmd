@@ -221,7 +221,68 @@ Add repository  ................................ (edit /etc/apt/sources.list)
 Remove repository .............................. (edit /etc/apt/sources.list)
 ```
 
+# Manage repositories
+
+1. Removing unwanted [ppas](https://askubuntu.com/questions/307/how-can-ppas-be-removed)
+
+    ```
+    sudo ls /etc/apt/sources.list.d
+    ```
+    
+    Find the name of the offending ppa (e.g. myppa.list).
+    
+    ```
+    sudo rm -i /etc/apt/sources.list.d/myppa.list
+    ```
+    
+    Then
+    
+    ```
+    sudo apt-get update
+    ```
+    
+# Install Flatpak
+
+From [Flatpak](https://flatpak.org/setup/Debian/):
+
+1. Install Flatpak
+
+    A flatpak package is available in Debian Buster and newer. To
+    install it, run the following as root:
+
+    ```
+    apt install flatpak
+    ```
+    
+    For Debian Jessie and Stretch, a flatpak package is available in the
+    official backports repository.
+
+2. Install the Software Flatpak plugin
+
+    If you are running GNOME, it is also a good idea to install the
+    Flatpak plugin for GNOME Software. To do this, run:
+
+    ```
+    apt install gnome-software-plugin-flatpak
+    ```
+    
+3. Add the Flathub repository
+
+    Flathub is the best place to get Flatpak apps. To enable it, run:
+    
+    ```
+    flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+    ```
+    
+4. Restart
+
+    To complete setup, restart your system. Now all you have to do is
+    install some [apps](https://flathub.org/)!
+
+
+
 # Find and remove old kernels
+
 from [liberiangeek.net](http://www.liberiangeek.net/2011/11/remove-old-kernels-in-ubuntu-11-10-oneiric-ocelot/)
 
 ### Find the current kernel. Don’t remove this one!!!
