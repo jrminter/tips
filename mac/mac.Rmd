@@ -17,7 +17,11 @@ These were installed (other dependencies came with...)
 
 ```
 brew install wget sqlite R rstudio youtube-dl gdal dos2unix
-brew install gnuplot fish
+brew install gnuplot fish cowsay curl docutils 
+
+brew cask install sublime text
+ln -s  /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl $HOME/bin/subl
+
 ```
 
 ## Set terminal for `gnuplot`
