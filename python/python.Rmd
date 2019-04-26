@@ -1,7 +1,7 @@
 ---
 title: "Python Tips"
 author: "J. R. Minter"
-date: 'Started: 2013-07-16, Last modified: 2019-04-11'
+date: 'Started: 2013-07-16, Last modified: 2019-04-26'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -77,6 +77,7 @@ of conda:
 below.
 
     ```
+    # Set up a base environment
     conda update conda
     conda clean -a -y
     conda update --all
@@ -87,8 +88,39 @@ below.
     # OPTIONALLY install pkgs suggested by Curtis Rueden
     conda install ipywidgets beakerx
     pip install iversions
+    cd ~/Documents/git/ezwrappers
+    python setup.py install
+
+
+    # Set up a scijava environment
+    conda create -y -n scijava 'python>=3'
+    source activate scijava
+    conda install jupyter_contrib_nbextensions numpy openjdk=8
+    conda install pyimagej python rise scikit-image
+    conda install openjdk=8.0.121
+    conda install notebook>=5.7.6
+    conda install tornado>6
+    conda install ipywidgets>=7.0.0
+    conda install nodejs pandas maven
+    conda install py4j requests
+    conda install -c conda-forge pythreejs
+    conda install beakerx
+    conda install py3js
+    conda install -c conda-forge ipyvolume
+    pip install iversions
+    
+    source deactivate
+    
     # clean up
     conda clean -a -y
+    ```
+    
+    ```
+    cd /Users/jrminter/Documents/git/beakerx/doc/groovy
+    conda activate scijava
+    jupyter notebook
+    
+    conda deactivate
     ```
 5. Set up to work with Fiji/ImageJ Tutorials
 
