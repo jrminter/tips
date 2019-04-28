@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<modsCollection xmlns="http://www.loc.gov/mods/v3">
+<mods ID="Nain2016">
+    <titleInfo>
+        <title>Zinc oxide nanorod assisted rapid single-step process for the conversion of electrospun poly(acrylonitrile) nanofibers to carbon nanofibers with a high graphitic content</title>
+    </titleInfo>
+    <name type="personal">
+        <namePart type="given">Ratyakshi</namePart>
+        <namePart type="family">Nain</namePart>
+        <role>
+            <roleTerm authority="marcrelator" type="text">author</roleTerm>
+        </role>
+    </name>
+    <name type="personal">
+        <namePart type="given">Dhirendra</namePart>
+        <namePart type="family">Singh</namePart>
+        <role>
+            <roleTerm authority="marcrelator" type="text">author</roleTerm>
+        </role>
+    </name>
+    <name type="personal">
+        <namePart type="given">Manjeet</namePart>
+        <namePart type="family">Jassal</namePart>
+        <role>
+            <roleTerm authority="marcrelator" type="text">author</roleTerm>
+        </role>
+    </name>
+    <name type="personal">
+        <namePart type="given">Ashwini</namePart>
+        <namePart type="given">K</namePart>
+        <namePart type="family">Agrawal</namePart>
+        <role>
+            <roleTerm authority="marcrelator" type="text">author</roleTerm>
+        </role>
+    </name>
+    <originInfo>
+        <dateIssued>2016</dateIssued>
+    </originInfo>
+    <typeOfResource>text</typeOfResource>
+    <genre authority="bibutilsgt">journal article</genre>
+    <relatedItem type="host">
+        <titleInfo>
+            <title>Nanoscale</title>
+        </titleInfo>
+        <originInfo>
+            <issuance>continuing</issuance>
+            <publisher>The Royal Society of Chemistry</publisher>
+        </originInfo>
+        <genre authority="marcgt">periodical</genre>
+        <genre authority="bibutilsgt">academic journal</genre>
+        <identifier type="issn">2040-3364</identifier>
+    </relatedItem>
+    <abstract>The effect of incorporation of rigid zinc oxide (ZnO) nanostructures on carbonization behavior of electrospun special acrylic fiber grade poly(acrylonitrile) (PAN-SAF) nanofibers was investigated. ZnO nanorods with high aspect ratios were incorporated into a PAN-N,N-dimethylformamide system and the composite nanofibers reinforced with aligned ZnO rods up to 50 wt% were successfully electrospun, and subsequently, carbonized. The morphology and the structural analysis of the resultant carbon nanofibers revealed that the rigid ZnO nanorods, present inside the nanofibers, possibly acted as scaffolds (temporary support structures) for immobilization of polymer chains and assisted in uniform heat distribution. This facilitated rapid and efficient conversion of the polymer structure to the ladder, and subsequently, the graphitized structure. At the end of the process, the ZnO nanorods were found to completely separate from the carbonized fibers yielding pure carbon nanofibers with a high graphitic content and surface area. The approach could be used to eliminate the slow, energy intensive stabilization step and achieve fast conversion of randomly laid carbon nanofiber webs in a single step to carbon nanofibers without the application of external tension or internal templates usually employed to achieve a high graphitic content in such systems.</abstract>
+    <identifier type="citekey">Nain2016</identifier>
+    <identifier type="doi">10.1039/C5NR06809F</identifier>
+    <part>
+        <date>2016</date>
+        <detail type="volume"><number>8</number></detail>
+        <detail type="issue"><number>7</number></detail>
+        <extent unit="page">
+            <start>4360</start>
+            <end>4372</end>
+        </extent>
+    </part>
+</mods>
+</modsCollection>

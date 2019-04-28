@@ -1,0 +1,197 @@
+---
+title: "bibtex and related packages"
+author: "J. R. Minter"
+date: "Started: 2019-04-27, Last modified: 2019-04-27"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+[Back to Index](../README.html)
+
+# Introduction
+
+`bibtex` is both a program and a file format which are used to store and
+process lists of references for bibliographies, mostly in conjunction with
+$LaTeX$ documents. There is a closely-related format, `biblatex`. There are
+also conversion programs to convert these bibliography files from one format
+to another. A key resource is [bibtex.org](http://www.bibtex.org/).
+
+# Key utility programs
+
+## [`bibutils`](https://sourceforge.net/p/bibutils/home/Bibutils/)
+
+A set of program thar converts between various bibliography formats using a
+common MODS-format XML intermediate. Some key programs in this suite are
+
+| program   | Description | 
+|-----------|-----------------------------------------------------------------------------|
+| bib2xml | convert BibTeX to MODS XML intermediate |
+| biblatex2xml | convert BibLaTeX to MODS XML intermediate |
+| bibdiff | compare two bibliographies after reading into the bibutils internal format |
+| copac2xml | convert COPAC format references to MODS XML intermediate |
+| end2xml | convert EndNote (Refer format) to MODS XML intermediate |
+| endx2xml | convert EndNote XML to MODS XML intermediate |
+| isi2xml | convert ISI web of science to MODS XML intermediate |
+| med2xml | convert Pubmed XML references to MODS XML intermediate |
+| modsclean | a MODS to MODS converter for testing purposes mostly |
+| nbib2xml | convert Pubmed/National Library of Medicine nbib format to MODS XML intermediate |
+| ris2xml | convert RIS format to MODS XML intermediate |
+| xml2ads | convert MODS XML intermediate into Smithsonian/NASA/ADS format |
+| xml2bib | convert MODS XML intermediate into BibTeX |
+| xml2end | convert MODS XML intermediate into format for EndNote |
+| xml2isi | convert MODS XML intermediate to ISI format |
+| xml2nbib | convert MODS XML intermediate to Pubmed nbib format |
+| xml2ris | convert MODS XML intermediate into RIS format
+| xml2wordbib | convert MODS XML intermediate into Word 2007 bib format |
+
+The progarm is available on
+[SourceForge](https://sourceforge.net/p/bibutils/home/Bibutils/).
+One can also install on mac via homebrew:
+
+```
+brew install bibutils
+```
+
+# An example conversion
+
+## Download a `.ris` file from https://pubs.rsc.org
+
+Start with a `.ris` file downloaded from [here](https://pubs.rsc.org/en/Content/ArticleLanding/2016/NR/C5NR06809F#!divAbstract).
+
+
+```
+TY  - JOUR
+T1  - Zinc oxide nanorod assisted rapid single-step process for the conversion of electrospun poly(acrylonitrile) nanofibers to carbon nanofibers with a high graphitic content
+A1  - Nain, Ratyakshi
+A1  - Singh, Dhirendra
+A1  - Jassal, Manjeet
+A1  - Agrawal, Ashwini K.
+Y1  - 2016
+SP  - 4360
+EP  - 4372
+JF  - Nanoscale
+JO  - Nanoscale
+VL  - 8
+IS  - 7
+PB  - The Royal Society of Chemistry
+SN  - 2040-3364
+DO  - 10.1039/C5NR06809F
+M3  - 10.1039/C5NR06809F
+UR  - http://dx.doi.org/10.1039/C5NR06809F
+N2  - The effect of incorporation of rigid zinc oxide (ZnO) nanostructures on carbonization behavior of electrospun special acrylic fiber grade poly(acrylonitrile) (PAN-SAF) nanofibers was investigated. ZnO nanorods with high aspect ratios were incorporated into a PAN-N,N-dimethylformamide system and the composite nanofibers reinforced with aligned ZnO rods up to 50 wt% were successfully electrospun, and subsequently, carbonized. The morphology and the structural analysis of the resultant carbon nanofibers revealed that the rigid ZnO nanorods, present inside the nanofibers, possibly acted as scaffolds (temporary support structures) for immobilization of polymer chains and assisted in uniform heat distribution. This facilitated rapid and efficient conversion of the polymer structure to the ladder, and subsequently, the graphitized structure. At the end of the process, the ZnO nanorods were found to completely separate from the carbonized fibers yielding pure carbon nanofibers with a high graphitic content and surface area. The approach could be used to eliminate the slow, energy intensive stabilization step and achieve fast conversion of randomly laid carbon nanofiber webs in a single step to carbon nanofibers without the application of external tension or internal templates usually employed to achieve a high graphitic content in such systems.
+ER  - 
+```
+
+# Processing with `ris2xml`
+
+use the command
+
+```
+ris2xml Nain.ris > Nain.xml
+```
+to get
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<modsCollection xmlns="http://www.loc.gov/mods/v3">
+<mods ID="Nain2016">
+    <titleInfo>
+        <title>Zinc oxide nanorod assisted rapid single-step process for the conversion of electrospun poly(acrylonitrile) nanofibers to carbon nanofibers with a high graphitic content</title>
+    </titleInfo>
+    <name type="personal">
+        <namePart type="given">Ratyakshi</namePart>
+        <namePart type="family">Nain</namePart>
+        <role>
+            <roleTerm authority="marcrelator" type="text">author</roleTerm>
+        </role>
+    </name>
+    <name type="personal">
+        <namePart type="given">Dhirendra</namePart>
+        <namePart type="family">Singh</namePart>
+        <role>
+            <roleTerm authority="marcrelator" type="text">author</roleTerm>
+        </role>
+    </name>
+    <name type="personal">
+        <namePart type="given">Manjeet</namePart>
+        <namePart type="family">Jassal</namePart>
+        <role>
+            <roleTerm authority="marcrelator" type="text">author</roleTerm>
+        </role>
+    </name>
+    <name type="personal">
+        <namePart type="given">Ashwini</namePart>
+        <namePart type="given">K</namePart>
+        <namePart type="family">Agrawal</namePart>
+        <role>
+            <roleTerm authority="marcrelator" type="text">author</roleTerm>
+        </role>
+    </name>
+    <originInfo>
+        <dateIssued>2016</dateIssued>
+    </originInfo>
+    <typeOfResource>text</typeOfResource>
+    <genre authority="bibutilsgt">journal article</genre>
+    <relatedItem type="host">
+        <titleInfo>
+            <title>Nanoscale</title>
+        </titleInfo>
+        <originInfo>
+            <issuance>continuing</issuance>
+            <publisher>The Royal Society of Chemistry</publisher>
+        </originInfo>
+        <genre authority="marcgt">periodical</genre>
+        <genre authority="bibutilsgt">academic journal</genre>
+        <identifier type="issn">2040-3364</identifier>
+    </relatedItem>
+    <abstract>The effect of incorporation of rigid zinc oxide (ZnO) nanostructures on carbonization behavior of electrospun special acrylic fiber grade poly(acrylonitrile) (PAN-SAF) nanofibers was investigated. ZnO nanorods with high aspect ratios were incorporated into a PAN-N,N-dimethylformamide system and the composite nanofibers reinforced with aligned ZnO rods up to 50 wt% were successfully electrospun, and subsequently, carbonized. The morphology and the structural analysis of the resultant carbon nanofibers revealed that the rigid ZnO nanorods, present inside the nanofibers, possibly acted as scaffolds (temporary support structures) for immobilization of polymer chains and assisted in uniform heat distribution. This facilitated rapid and efficient conversion of the polymer structure to the ladder, and subsequently, the graphitized structure. At the end of the process, the ZnO nanorods were found to completely separate from the carbonized fibers yielding pure carbon nanofibers with a high graphitic content and surface area. The approach could be used to eliminate the slow, energy intensive stabilization step and achieve fast conversion of randomly laid carbon nanofiber webs in a single step to carbon nanofibers without the application of external tension or internal templates usually employed to achieve a high graphitic content in such systems.</abstract>
+    <identifier type="citekey">Nain2016</identifier>
+    <identifier type="doi">10.1039/C5NR06809F</identifier>
+    <part>
+        <date>2016</date>
+        <detail type="volume"><number>8</number></detail>
+        <detail type="issue"><number>7</number></detail>
+        <extent unit="page">
+            <start>4360</start>
+            <end>4372</end>
+        </extent>
+    </part>
+</mods>
+</modsCollection>
+```
+## Convert from `.xml` to `.bib`
+
+Run:
+
+```
+xml2bib Nain.xml > Nain.bib
+```
+
+to get
+
+```
+@Article{Nain2016,
+author="Nain, Ratyakshi
+and Singh, Dhirendra
+and Jassal, Manjeet
+and Agrawal, Ashwini K.",
+title="Zinc oxide nanorod assisted rapid single-step process for the conversion of electrospun poly(acrylonitrile) nanofibers to carbon nanofibers with a high graphitic content",
+journal="Nanoscale",
+year="2016",
+publisher="The Royal Society of Chemistry",
+volume="8",
+number="7",
+pages="4360--4372",
+abstract="The effect of incorporation of rigid zinc oxide (ZnO) nanostructures on carbonization behavior of electrospun special acrylic fiber grade poly(acrylonitrile) (PAN-SAF) nanofibers was investigated. ZnO nanorods with high aspect ratios were incorporated into a PAN-N,N-dimethylformamide system and the composite nanofibers reinforced with aligned ZnO rods up to 50 wt{\%} were successfully electrospun, and subsequently, carbonized. The morphology and the structural analysis of the resultant carbon nanofibers revealed that the rigid ZnO nanorods, present inside the nanofibers, possibly acted as scaffolds (temporary support structures) for immobilization of polymer chains and assisted in uniform heat distribution. This facilitated rapid and efficient conversion of the polymer structure to the ladder, and subsequently, the graphitized structure. At the end of the process, the ZnO nanorods were found to completely separate from the carbonized fibers yielding pure carbon nanofibers with a high graphitic content and surface area. The approach could be used to eliminate the slow, energy intensive stabilization step and achieve fast conversion of randomly laid carbon nanofiber webs in a single step to carbon nanofibers without the application of external tension or internal templates usually employed to achieve a high graphitic content in such systems.",
+issn="2040-3364",
+doi="10.1039/C5NR06809F",
+url="https://doi.org/10.1039/C5NR06809F"
+}
+
+```
+
+
+[Back to Index](../README.html)

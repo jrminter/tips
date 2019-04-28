@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-04-24"
+date: "Started: 2013-07-16, Last modified: 2019-04-27"
 output:
   html_document:
     keep_md: true
@@ -75,6 +75,8 @@ This skips several steps from original article!
 [EkAutomater](./automater/automater.html)
 
 [Oxford AZtec](./AZtec/AZtec.html)
+
+[bibtex](./bibtex/bibtex.html)
 
 [C++11](./C++11/C++11-Tips.html)
 

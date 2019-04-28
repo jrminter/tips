@@ -12,7 +12,7 @@ if(strGitHome=="") strGitHome="~/Documents/git"
 strRel     <- '/tips/scripts'
 
 names <- c("README.Rmd",
-           "AccessToSqlite.Rmd", "automater.Rmd", "AZtec.Rmd",
+           "AccessToSqlite.Rmd", "automater.Rmd", "AZtec.Rmd", "bibtex.Rmd",
            "C++11-Tips.Rmd", "carbonFilmThickness.Rmd",
            "chntpw.Rmd", "color.Rmd", "ConductiveEpoxy.Rmd",
            "DataScience-linux64.Rmd", "Debian.Rmd","Denton.Rmd",
@@ -49,7 +49,7 @@ names <- c("README.Rmd",
 
 rPath <- c("../",
            "../AccessToSqlite", "../automater", 
-           "../AZtec", "../C++11", "../carbonFilmThickness", 
+           "../AZtec", "../bibtex", "../C++11", "../carbonFilmThickness", 
            "../chntpw", "../color", "../ConductiveEpoxy",
            "../DataScience-linux64", "../Debian","../Denton",
            "../DiffractionLimit", "../dtsa2","../earth-sci",
