@@ -4,7 +4,6 @@
 .cache/
 .Rproj.user/**
 tab.tex
-*.html
 
 # Don't track these types of directories...
 */*_files
@@ -64,6 +63,8 @@ ConductiveEpoxy/ConductiveEpoxy.md
 ConductiveEpoxy/ConductiveEpoxy.html
 ConductiveEpoxy/figure/
 
+DataScience-linux64/*.html
+
 # Debian directory
 Debian/.DS_Store
 Debian/Debian.md
@@ -98,16 +99,18 @@ EDAX/EDAX.html
 EDAX/figure/
 
 # epma-matric-corr dir
-epma-matric-corr/.DS_Store
-epma-matric-corr/epma-matric-corr.md
-epma-matric-corr/epma-matric-corr.html
-epma-matric-corr/figure/
+epma-matrix-corr/.DS_Store
+epma-matrix-corr/*.md
+epma-matrix-corr/*.html
+epma-matrix-corr/figure/
 
 # Excel tips directory
 Excel/.DS_Store
 Excel/Excel.md
 Excel/Excel.html
 Excel/figure/
+
+fitness/*.html
 
 # french-press-instructions directory
 french-press-instructions/french-press-instructions.html
@@ -133,6 +136,7 @@ ggplot2Intro/figure/
 ggplot2Intro/ggplot2Intro_fi*
 
 # ggplotUseCases directory
+ggplot2UseCases/*.html
 ggplot2UseCases/.DS_Store
 ggplot2UseCases/ggplot2Intro.md
 ggplot2UseCases/ggplot2Intro.html
@@ -198,6 +202,8 @@ iOS/iOS.md
 iOS/iOS.html
 iOS/figure/
 
+jekyll-github/*.html
+
 # json tips directory
 json/.DS_Store
 json/json.md
@@ -214,6 +220,8 @@ legacy/figure/
 Logos/.DS_Store
 Logos/Logos.md
 Logos/Logos.html
+
+Lubuntu/*.html
 
 # mac directory
 mac/.DS_Store
@@ -238,6 +246,8 @@ micro-sample-prep/.DS_Store
 micro-sample-prep/micro-sample-prep.md
 micro-sample-prep/micro-sample-prep.html
 micro-sample-prep/figure/
+
+midb/*.html
 
 # monteCarlo directory
 monteCarlo/.DS_Store
@@ -335,6 +345,8 @@ R-boxplots/figure/
 R-boxplots/R-boxplots.md
 R-boxplots/R-boxplots.html
 
+R-data-pipeline/*.html
+
 # R-Excel directory
 R-Excel/.DS_Store
 R-Excel/figure/
@@ -354,6 +366,8 @@ R-GeoSpatial/R-GeoSpatial.md
 R-GeoSpatial/*.html
 R-GeoSpatial/*.htm
 R-GeoSpatial/Legend*.png
+
+R-knitrBootstrap/*.html
 
 # R-loess directory
 R-lm/.DS_Store
@@ -408,6 +422,8 @@ R-packages/*.html
 R-packages/*.htm
 R-packages/Legend*.png
 
+ReproducibleResearch/*.html
+
 # research directory
 research/.DS_Store
 research/figure/
@@ -458,6 +474,8 @@ ST3/.DS_Store
 ST3/ST3.md
 ST3/ST3.html
 
+Stratagem/Stratagem.html
+
 # Sweave directory
 Sweave/.DS_Store
 Sweave/Sweave.md
@@ -467,6 +485,8 @@ Sweave/figure/
 # scripts dir
 scripts/.RData
 
+
+software-dev/*.html
 # SQL dir
 SQL/.DS_Store
 SQL/SQL.md
@@ -488,6 +508,8 @@ tex/.DS_Store
 tex/tex-tips.md
 tex/tex-tips.html
 tex/figure/
+
+tidyData/*.html
 
 # tv-bluetooth directory
 TV/.DS_Store
@@ -524,4 +546,6 @@ workflow/.DS_Store
 workflow/workflow.md
 workflow/workflow.html
 workflow/figure/
+
+wxMaxima/*.html
 .Rproj.user
