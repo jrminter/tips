@@ -1,7 +1,7 @@
 ---
 title: "TeXLive Hints"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-04-26"
+date: "Started: 2013-07-16, Last modified: 2019-04-28"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -31,7 +31,6 @@ Set `clean=0` to delete all; `clean=1` will keep a single backup. I use:
 tlmgr backup --clean=0 --all
 ```
 
-
 ## tlmgr complains about gpg key
 
 See [www.preining.info](http://www.preining.info/tlgpg/) for details.
@@ -44,6 +43,13 @@ tlmgr --repository http://www.preining.info/tlgpg/ install tlgpg
 
 Note: Avast complains...
 
+## A helpful scientific site: [csml-wiki.northwestern.edu](https://csml-wiki.northwestern.edu/index.php/Notes_on_using_LaTeX_for_manuscripts)
+
+The general wiki for the CSML group is helpful. The formatting tips on the
+link above are quite helpful as are the bibtex notes and the programs to
+convert different biblography formates.  There are many journal-specific tips.
+
+A locally archived copy is [**_here_**](./inc/csml.html).
 
 ## Spacing in math mode
 
