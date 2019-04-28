@@ -49,7 +49,7 @@ The general wiki for the CSML group is helpful. The formatting tips on the
 link above are quite helpful as are the bibtex notes and the programs to
 convert different biblography formates.  There are many journal-specific tips.
 
-A locally archived copy is [**_here_**](./inc/csml.html).
+A **_locally_** archived copy is [**_here_**](./inc/csml.html).
 
 ## Spacing in math mode
 
