@@ -87,7 +87,7 @@ ER  -
 
 # Processing with `ris2xml`
 
-use the command
+Run the command
 
 ```
 ris2xml Nain.ris > Nain.xml
