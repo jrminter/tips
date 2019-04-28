@@ -17,6 +17,43 @@ They were compiled from several web sources.
 
 # Simple tricks
 
+## Set the LaTeX progran at top of document
+
+1. XeLaTeX
+
+    ```
+    % !TeX program = xelatex
+    ```
+
+2. pdflatex
+
+
+    ```
+    % !TeX program = pdflatex
+    ```
+
+## Set a custom Unicode font for Hebrew
+
+```
+% !TeX program = xelatex
+\documentclass{article}
+\usepackage{unicode-math}
+\usepackage{fontspec}
+\setmathfont{latinmodern-math.otf}
+\setmathfont[range={\aleph,\beth,\gimel,\daleth}, Scale=10.0]{FreeSerif.otf}
+\title{Example large Hebrew fonts}
+\author{John Minter}
+\date{2019-04-28}
+\begin{document}
+% From:
+% https://tex.stackexchange.com/questions/170476/how-to-get-aleph-and-beth-symbols-in-similar-font/170494#170494
+\[ \aleph \beth \gimel \daleth \]
+\end{document}
+
+```
+
+
+
 ## A dark theme for TexWorks
 
 There is an interesting article on
