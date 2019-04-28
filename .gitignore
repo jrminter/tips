@@ -28,6 +28,12 @@ AZtec/AZtec.md
 AZtec/AZtec.html
 AZtec/figure/
 
+# bibtex directory
+bibtex/.DS_Store
+bibtex/*.md
+bibtex/*.html
+bibtex/figure/
+
 # C++11 directory
 C++11/.DS_Store
 C++11/C++11-Tips.md
