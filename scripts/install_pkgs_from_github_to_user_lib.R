@@ -8,6 +8,7 @@
 #                  `.libPaths()``from the cmmand line
 # 2019-04-20  JRM  Added Pakillo's rmdTemplates. Have libPaths for several;\
 #                  Systems that an be uncommented...
+# 2019-04-29  JRM  Added posterdown
 
 # set the system to hande JAVA
 if( Sys.info()['sysname'] == "Windows"){
@@ -33,10 +34,10 @@ library(lwPackageHelperR)
 # libDir <- "/home/jrminter/R/x86_64-pc-linux-gnu-library/3.4"
 
 # For lubuntu-bionic
-libDir <- "/home/jrminter/R/x86_64-pc-linux-gnu-library/3.5"
+# libDir <- "/home/jrminter/R/x86_64-pc-linux-gnu-library/3.5"
 
 # For macOS
-# libDir <- "/Library/Frameworks/R.framework/Versions/3.5/Resources/library"
+libDir <- "/Library/Frameworks/R.framework/Versions/3.5/Resources/library"
 
 # run this from the command line by:
 # cd /home/jrminter/Documents/git/tips/scripts
@@ -68,4 +69,5 @@ install_new_github('icon','ropenscilabs',libDir)
 install_new_github('anicon','emitanaka',libDir)
 install_new_github('xaringan','yihui',libDir)
 install_new_github('digitize','tpoisot',libDir)
+install_new_github('posterdown','brentthorne',libDir)
 
