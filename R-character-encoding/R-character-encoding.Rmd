@@ -24,6 +24,7 @@ github:
 library(stringi)
 library(tidyverse)
 library(utf8splain)
+library(here)
 ```
 
 
@@ -100,9 +101,9 @@ is a good guess, but **wrong**. Again, this is a realistic tutorial.
 Let's now assume you know the encoding. Or, well... you **think** you do.
 
 ```{r test_read}
-user <- read_csv2(
-  "dat/useR-2019-accepted-talks.csv",
-  locale = locale(encoding = "ISO-8859-15")
+path <- here("/R-character-encoding/dat/useR-2019-accepted-talks.csv")
+user <- read_csv2(path,
+                  locale = locale(encoding = "ISO-8859-15")
 )
 ```
 
