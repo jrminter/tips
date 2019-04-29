@@ -70,4 +70,5 @@ install_new_github('anicon','emitanaka',libDir)
 install_new_github('xaringan','yihui',libDir)
 install_new_github('digitize','tpoisot',libDir)
 install_new_github('posterdown','brentthorne',libDir)
+install_new_github('utf8splain','ThinkR-open',libDir)
 
