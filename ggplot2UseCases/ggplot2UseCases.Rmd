@@ -1,7 +1,7 @@
 ---
 title: "ggplot2 Use Cases"
 author: "J. R. Minter"
-date: "Started: 2016-01-20, Last modified: 2019-03-29"
+date: "Started: 2016-01-20, Last modified: 2019-30-29"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -41,6 +41,23 @@ was helpful.
 
 These can be fun. [Stackoverflow](https://stackoverflow.com/questions/17148679/construct-a-manual-legend-for-a-complicated-plot)
 helped...
+
+## Margins
+
+From [RLadies twitter](https://twitter.com/WeAreRLadies/status/1123109094422921216):
+
+Margins can be specified logically (all yes or all no) or for specific variables
+as (character variable names)
+
+```{r margin_example}
+library(ggplot2)
+mg <- ggplot(mtcars, aes(x=mpg, y=wt)) +
+      geom_point() +
+      facet_grid(vs + am ~ gear, margins = TRUE) +
+      NULL
+
+mg
+```
 
 
 
