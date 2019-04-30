@@ -17,7 +17,7 @@ They were compiled from several web sources.
 
 # Simple tricks
 
-## Set the LaTeX progran at top of document
+## Set the LaTeX program at top of the document
 
 1. XeLaTeX
 
@@ -31,6 +31,21 @@ They were compiled from several web sources.
     ```
     % !TeX program = pdflatex
     ```
+    
+## Add the document information to the output PDF
+
+From [Max Kuhn](https://www.cl.cam.ac.uk/~mgk25/publ-tips/#pdfmark):
+
+Include this **before** `\begin{document}`:
+
+```
+\usepackage[pdftitle={Playing with Chemfig},
+                      pdfauthor={John R. Minter},
+                      pdfsubject={chemfig},
+                      pdfkeywords={chemfig, LaTeX, pdf}]{hyperref}
+```
+
+
 
 ## Set a custom Unicode font for Hebrew
 
