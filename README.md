@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-04-29"
+date: "Started: 2013-07-16, Last modified: 2019-04-30"
 output:
   html_document:
     keep_md: true
@@ -191,6 +191,8 @@ This skips several steps from original article!
 [R-boxplots](./R-boxplots/R-boxplots.html)
 
 [R-character-encoding](./R-character-encoding/R-character-encoding.html)
+
+[R-data-cleaning](./R-data-cleaning/R-data-cleaning.html)
 
 [R-data-pipeline](./R-data-pipeline/R-data-pipeline.html)
 
