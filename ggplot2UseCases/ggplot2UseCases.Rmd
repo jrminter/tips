@@ -1,10 +1,11 @@
 ---
 title: "ggplot2 Use Cases"
 author: "J. R. Minter"
-date: "Started: 2016-01-20, Last modified: 2019-30-29"
+date: "Started: 2016-01-20, Last modified: 2019-04-29"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
+    csl: ../inc/american-chemical-society-with-titles-sentence-case-doi.csl
     number_sections: yes
     toc: yes
     toc_depth: 3
@@ -410,7 +411,7 @@ This is a work in progress. Some resources for later
 
 # Rationale for this document
 
-I typically have spurts where I use  R and ggplot2 [@Wickham2009a] to 
+I typically have spurts where I use  R and ggplot2 [@ggplot2] to 
 analyze data and find myself saying, "I've done this before, but where
 is the code?" These exemplars should make it easy to get back up to speed
 quickly. As Karl Broman noted: 

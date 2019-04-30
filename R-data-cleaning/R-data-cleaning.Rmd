@@ -1,0 +1,131 @@
+---
+title: "R data cleaning"
+author: "J. R. Minter"
+date: "Started: 2019-04-30, Last modified: 2019-30-29"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    csl: ../inc/american-chemical-society-with-titles-sentence-case-doi.csl
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+bibliography: ../inc/tips.bib
+---
+
+[Back to Index](../README.html)
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment = NA)
+```
+
+# Introduction
+
+We get data from many sources. Often the the data needs to be imported from
+files where the names and or formats do not play well with R [@r-project].
+Hadley Wickham has created the concept of **Tidy Data** [@tidy-data]. The
+process we use is called **data cleaning**. There is an excellent R package,
+`janitor` by Sam Firke [@janitor] that helps automate the process.
+
+Start by loading the packages we will use...
+
+
+```{r load_packages, message=FALSE}
+library(janitor)
+library(dplyr) # for pipe (%>%) operaror
+library(here) # make paths easier...
+library(ggplot2) # for plotting
+```
+
+# Example 1
+
+Let's consider a simple example from the package vignette. We start by creating
+a data frame with "**dirty names**"... Note the spaces in the names and unicode
+characters. R does not like those...
+
+```{r, df_w_dirty_names}
+test_df <- as.data.frame(matrix(ncol = 6))
+names(test_df) <- c("firstName", "ábc@!*", "% successful (2009)",
+                    "REPEAT VALUE", "REPEAT VALUE", "")
+test_df
+```
+
+Clean the variable names, returning a data.frame:
+
+```{r clean_the_names}
+test_df %>%
+  clean_names()
+```
+
+This is already better...
+
+# An example from a Casino simulation of "guilding metal"
+
+`Guilding metal` is an alloy of Cu and Zn. I used the Casino v. 2.5.1 software
+[the latest major version of [@casino-v2.42]] to model the X-ray emission from
+the alloy when exposed to a 25 kV electron probe.
+
+The result are two tab-delimited files, `casino-guilding-Zn-25kV.dat` and
+`casino-guilding-Cu-25kV.dat`. We need to skip the first 4 lines that have
+a title (prz of Cu or Zn), and then our five column names. Let's read in the
+Cu data
+
+## Process the Cu data
+
+```{r read_cu_data}
+
+path <- here("/R-data-cleaning/dat/casino-guilding-Cu-25kV.dat")
+
+df <- read.table(path, header = TRUE, sep="\t", skip=4)
+print(head(df))
+
+clean_cu <- df %>%
+            clean_names()
+head(clean_cu)
+```
+
+## Process the Zn data
+
+Now, we will repeat the process for the Zn data
+
+
+```{r read_zn_data}
+
+path <- here("/R-data-cleaning/dat/casino-guilding-Zn-25kV.dat")
+
+df <- read.table(path, header = TRUE, sep="\t", skip=4)
+clean_zn <- df %>%
+            clean_names()
+head(clean_zn)
+```
+
+## Plot the $\phi (\rho z)$ curve
+
+```{r plot_k_data}
+
+plt <-  ggplot() +
+        geom_point(data=clean_cu, aes(x=depth_nm, y=intensity_k),
+                   colour="darkblue") +
+        annotate("text", label = 'Cu K-L3', x = 1000., y = 1.75,
+                 size = 5, colour = "darkblue") +
+        geom_point(data=clean_zn, aes(x=depth_nm, y=intensity_k),
+                  colour='darkred') +
+        annotate("text", label = 'Zn K-L3', x = 1000., y = 1.25,
+                 size = 5, colour = "darkred") +
+        xlab(label="depth [nm]") +
+        ylab(label="\U03D5(\U03C1z)") +
+        ggtitle("Casino \U03D5(\U03C1z) Model of Guilding Metal at 25 kV") +
+        theme(axis.text=element_text(size=12),
+              axis.title=element_text(size=14),
+              plot.title = element_text(hjust = 0.5)) + # center the title
+        
+        NULL
+plt
+```
+
+
+
+
+
+[Back to Index](../README.html)
+
+# References
