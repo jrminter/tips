@@ -34,7 +34,7 @@ They were compiled from several web sources.
     
 ## Add the document information to the output PDF
 
-From [Max Kuhn](https://www.cl.cam.ac.uk/~mgk25/publ-tips/#pdfmark):
+From [Marcus Kuhn](https://www.cl.cam.ac.uk/~mgk25/publ-tips/#pdfmark):
 
 Include this **before** `\begin{document}`:
 
