@@ -1,7 +1,7 @@
 ---
 title: "Python Tips"
 author: "J. R. Minter"
-date: 'Started: 2013-07-16, Last modified: 2019-04-26'
+date: 'Started: 2013-07-16, Last modified: 2019-05-01'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -87,6 +87,7 @@ below.
     conda install mahotas sympy cython
     # OPTIONALLY install pkgs suggested by Curtis Rueden
     conda install ipywidgets beakerx
+    conda install octave_kernel
     pip install iversions
     cd ~/Documents/git/ezwrappers
     python setup.py install
@@ -107,9 +108,10 @@ below.
     conda install beakerx
     conda install py3js
     conda install -c conda-forge ipyvolume
+    conda install -c conda-forge octave_kernel
     pip install iversions
     
-    source deactivate
+    conda deactivate
     
     # clean up
     conda clean -a -y
