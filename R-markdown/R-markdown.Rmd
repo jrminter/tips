@@ -1,7 +1,7 @@
 ---
 title: "R-Markdown Tips"
 author: "J. R. Minter"
-date: "Started: 2016-12-08, Last modified: 2019-04-25"
+date: "Started: 2016-12-08, Last modified: 2019-05-01"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -280,6 +280,60 @@ theme: cerulean
 ---
 ```
 
+## YAML for a long PDF document with many files
+
+Ken Butler from the University of Toronto shared on the Twitter `#rstats`
+[feed](https://twitter.com/KenButler12/status/1123429151749361664)
+that he had successfully compiled a long, multi-file document into a PDF
+file. Ken overcame memory limitations by compiling with `lualatex` instead
+of `pdflatex`. The source code is in his github
+[notes](https://github.com/nxskok/notes/) repository.
+
+Note the YAML he used and the code chunks. **_N.B._**: I moved the r chunk
+configuration into the three backtick blocks so the code would not execute
+here but we can still see the results. This was originally Beamer slides for
+lecture notes. Note also the **header-includes**.  Ken used many download calls
+to data sets on his website. I prefer more reproducible approaches, with the
+data sets in the repository. I think there is a lot of opportunity to use
+entries in the `.gitignore` file to keep intermediate files out of the
+repository.
+
+```
+---
+title: "STAC32: Applications of Statistical Methods"
+author: "Lecture notes"
+header-includes:
+   - \usepackage{multicol}
+output: 
+  beamer_presentation:
+    latex_engine: lualatex
+    slide_level: 2
+    df_print: kable
+    theme: "AnnArbor"
+    colortheme: "dove"
+---
+
+    ```
+    {r setup, include=FALSE}
+    knitr::opts_chunk$set(fig.height = 5)
+    # knitr::opts_chunk$set(echo = FALSE)
+    options(width=55)
+    ```
+
+# Course outline
+
+# Running R
+
+    ```
+    {r child="running_R.Rmd"}
+    ```
+
+# Reading in data
+
+    ```
+    {r child="readfile_R.Rmd"}
+    ```
+```
 
 ## YAML that generated date/time at rendering
 
