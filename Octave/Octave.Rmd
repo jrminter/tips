@@ -1,7 +1,7 @@
 ---
 title: "Octave Tips"
 author: "J. R. Minter"
-date: 'Started: 2019-03-21, Last modified: 2019-04-18'
+date: 'Started: 2019-03-21, Last modified: 2019-05-01'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -191,7 +191,7 @@ C:/Apps/Octave-5.1.0.0/mingw64/bin/octave-cli-5.1.0.exe
 On `jrmFastMac`, I set `OCTAVE_EXECUTABLE` to:
 
 ```
-/usr/local/bin/octave
+/usr/local/bin/octave-cli
 ```
 
 On Ubuntu, `OCTAVE_EXECUTABLE` needs to be
