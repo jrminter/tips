@@ -91,8 +91,11 @@ below.
     pip install iversions
     cd ~/Documents/git/ezwrappers
     python setup.py install
+    ```
+    
+    Next
 
-
+    ```
     # Set up a scijava environment
     conda create -y -n scijava 'python>=3'
     source activate scijava
@@ -116,6 +119,7 @@ below.
     # clean up
     conda clean -a -y
     ```
+    Next
     
     ```
     cd /Users/jrminter/Documents/git/beakerx/doc/groovy
@@ -124,7 +128,29 @@ below.
     
     conda deactivate
     ```
-5. Set up to work with Fiji/ImageJ Tutorials
+
+## Packages in environment at /Users/jrminter/miniconda3:
+    
+**2019-05-02** Current packages in base environment
+    
+    ```
+    conda list -n base 
+    ```
+    
+Packages are [here](./environs/base.html).
+    
+
+**2019-05-02** Current packages in scijava environment
+    
+    ```
+    conda list -n scijava 
+    ```
+    
+Results are [here](./environs/scijava.html).
+    
+
+
+# Set up to work with Fiji/ImageJ Tutorials
 
     a. Clone this [imagej/tutorials](https://github.com/imagej/tutorials)
        repository.
