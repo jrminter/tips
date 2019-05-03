@@ -289,6 +289,12 @@ pandoc/pandoc.md
 pandoc/pandoc.html
 pandoc/figure/
 
+# penepma directory
+penepma/.DS_Store
+penepma/penepma.md
+penepma/penepma.html
+penepma/figure/
+
 # plagiarism directory
 plagiarism/.DS_Store
 plagiarism/plagiarism.md
