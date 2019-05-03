@@ -170,6 +170,8 @@ This skips several steps from original article!
 
 [pandoc](./pandoc/pandoc.html)
 
+[penepma](./penepma/penepma.html)
+
 [plagiarism](./plagiarism/plagiarism.html)
 
 [portable makefiles](./portableMakefiles/portableMakefiles.html)
