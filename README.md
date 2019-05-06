@@ -106,6 +106,8 @@ This skips several steps from original article!
 
 [Excel](./Excel/Excel.html)
 
+[Fiji plugin development](./fiji-plugin-development/fiji-plugin-development.html)
+
 [Fitness](./fitness/fitness.html)
 
 [French Press Instructions](./french-press-instructions/french-press-instructions.html)

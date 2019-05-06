@@ -110,6 +110,12 @@ Excel/Excel.md
 Excel/Excel.html
 Excel/figure/
 
+# fiji-plugin-development dir
+fiji-plugin-development/.DS_Store
+fiji-plugin-development/*.md
+fiji-plugin-development/*.html
+fiji-plugin-development/figure/
+
 fitness/*.html
 
 # french-press-instructions directory
