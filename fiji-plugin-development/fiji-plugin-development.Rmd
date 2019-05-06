@@ -27,6 +27,14 @@ understand the devlopment process.
 The [Tomancak](https://www.youtube.com/watch?v=YIWpoBnnLio) group provided a 
 helpful example video that is on YouTube.
 
+**2019-05-06**
+
+I am having problems with legacy ImageJ1 plugins that compile without errors
+but do not work when called from jython scripts. When isntalled, they do not
+appear in the menus (a known limitation). I did get an ImageJ2 example to
+compile and execute as expected. I might do better to stick with Jython script
+libraries while I teach myself to build ImageJ2 plugins. Grrrrr....
+
 # My current software configuration
 
 1. **Java**: Currently building for Fiji/ImageJ with **jdk 1.8.0_201** (64 bit)
