@@ -1,7 +1,7 @@
 ---
 title: "Image-J Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-05-04"
+date: "Started: 2013-07-16, Last modified: 2019-05-06"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -41,12 +41,13 @@ tutorial is very good.
 
 ### Fiji Update Sites checked
 
-**Updated 2019-04-24**
+**Updated 2019-05-06**
 
 - ImageJ
 - Fiji
 - Java-8
 - BIG-EPFL
+- Bioformats
 - Biomedgroup
 - Cookbook
 - DiameterJ
