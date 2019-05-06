@@ -13,9 +13,213 @@ output:
 
 # Introduction
 
+Plugins make image processing and analysis in `Fiji/ImageJ` easier by wrapping
+many steps into a plug-in. The process is complicated because there are two
+different underlying approaches. The oldest is the approach used by `ImageJ1`.
+I have written many scripts for this mode over several years. There is a newer,
+more complex system in `ImageJ2`. Both of these approaches use  the `Java` language
+and `Maven` as a build manager, typically using `Eclipse`. Ultimately, there are
+automated builds and the code is expected to be maintained under version control
+on `github`. Getting started is a bit intimidating and there is
+**_a lot_ to learn**. This document serves as my reference and a way for me to
+understand the devlopment process.
+
+The [Tomancak](https://www.youtube.com/watch?v=YIWpoBnnLio) group provided a 
+helpful example video that is on YouTube.
+
+# My current software configuration
+
+1. **Java**: Currently building for Fiji/ImageJ with **jdk 1.8.0_201** (64 bit)
+
+2. **Eclipse**: 2019-03
+
 
 # Setup for Maven builds with Eclipse
 
+Both `ImageJ1` and `ImageJ2` use development with `Maven`. While the class
+structure of the two branches are different, there are similarities in the
+configuration and compilation steps.
+
+## `Pom.xml` files
+
+Configuration information is passed to `Eclipse` and `Maven` by means of a
+`Pom.xml` file. The file listed below is from the `ImageJ2` example but is
+representative of the `Imagej1` build as well.
+
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+		http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.scijava</groupId>
+		<artifactId>pom-scijava</artifactId>
+		<version>26.0.0</version>
+		<relativePath />
+	</parent>
+
+	<groupId>com.mycompany</groupId>
+	<artifactId>Process_Pixels</artifactId>
+	<version>0.1.0-SNAPSHOT</version>
+
+	<name>Process Pixels</name>
+	<description>A Maven project implementing an ImageJ 1.x plugin.</description>
+	<url>http://mycompany.com/imagej/process-pixels/</url>
+	<inceptionYear>2012</inceptionYear>
+	<organization>
+		<name>My Company</name>
+		<url>http://mycompany.com/</url>
+	</organization>
+	<licenses>
+		<license>
+			<name>Simplified BSD License</name>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<developers>
+		<developer>
+			<id>ctrueden</id>
+			<name>Curtis Rueden</name>
+			<url>https://imagej.net/User:Rueden</url>
+			<roles>
+				<role>lead</role>
+				<role>developer</role>
+				<role>debugger</role>
+				<role>reviewer</role>
+				<role>support</role>
+				<role>maintainer</role>
+			</roles>
+		</developer>
+	</developers>
+	<contributors>
+		<contributor>
+			<name>Johannes Schindelin</name>
+			<url>https://imagej.net/User:Schindelin</url>
+			<roles><role>founder</role></roles>
+			<properties><id>dscho</id></properties>
+		</contributor>
+		<contributor>
+			<name>Olivier Burri</name>
+			<url>https://imagej.net/User:Oburri</url>
+			<properties><id>lacan</id></properties>
+		</contributor>
+		<contributor>
+			<name>Mark Hiner</name>
+			<url>https://imagej.net/User:Hinerm</url>
+			<properties><id>hinerm</id></properties>
+		</contributor>
+		<contributor>
+			<name>Jules Maselbas</name>
+		</contributor>
+		<contributor>
+			<name>Kota Miura</name>
+			<url>https://imagej.net/User:Miura</url>
+			<properties><id>cmci</id></properties>
+		</contributor>
+		<contributor>
+			<name>Yili Zhao</name>
+			<url>https://imagej.net/User:Panovr</url>
+			<properties><id>panovr</id></properties>
+		</contributor>
+	</contributors>
+
+	<mailingLists>
+		<mailingList>
+			<name>Image.sc Forum</name>
+			<archive>https://forum.image.sc/</archive>
+		</mailingList>
+	</mailingLists>
+
+	<scm>
+		<connection>scm:git:git://github.com/imagej/example-legacy-plugin</connection>
+		<developerConnection>scm:git:git@github.com:imagej/example-legacy-plugin</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/imagej/example-legacy-plugin</url>
+	</scm>
+	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>https://github.com/imagej/example-legacy-plugin/issues</url>
+	</issueManagement>
+	<ciManagement>
+		<system>None</system>
+	</ciManagement>
+
+	<properties>
+		<package-name>com.mycompany.imagej</package-name>
+		<main-class>com.mycompany.imagej.Process_Pixels</main-class>
+		<license.licenseName>bsd_2</license.licenseName>
+		<license.copyrightOwners>My Company, Inc.</license.copyrightOwners>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>net.imagej</groupId>
+			<artifactId>ij</artifactId>
+		</dependency>
+	</dependencies>
+</project>
+
+```
+
+## Key observations
+
+1. **The group id convention**: Group ids are entered in the format
+
+    ```
+    domain-name.organization-name.group
+    ```
+    
+    In the video, this was:
+    
+    ```
+    de.mpicb.tomancak
+    ```
+    
+2. One should not use **spaces** or **dashes** in Artiface ID (i.e. plugin name).
+
+    Use `GaussianFilter` instead of `Gaussian Filter` for the plugin name.
+    
+3. Provide a brief, short description of the plugin.
+
+4. There is an expectation that the plugin is under version control and the
+XML has fields for the github repository and for the place to file issues.
+
+5. There are fields for the contact information and roles of the main developer
+and for contributors. If there are no contributors enter **None**.
+
+6. Make sure all the fields are filled out and double check the syntax. The save
+the `pom.xml` file at the **top level** of the workspace. One should also include
+an explanatory `README.md` file.
+
+7. You need to choose a license. `gpl2` is reasonable...
+
+8. The plug-in java source file (e.g `ShadingCorrect.java`) goes in the source
+tree. The directory structure is a bit daunting at first
+
+      ```
+      src
+          main
+              java
+                  com
+                      group (or company) name
+                          imagej
+                  PlugIn.java is in the `java` directory with the `com` folder
+                  resources  (folder is at the same level as java )
+                      plugins-config (is in the resources folder)
+      
+      target (directory is at the same level as src)
+      ```
+
+    
+  9. When you are done editing, save the `pom.xml` file at the top level and
+  give the `readme.md` file another look...
+
+
+# Eclipse configuration
 
 # Legacy IJ1 Plugins
 
