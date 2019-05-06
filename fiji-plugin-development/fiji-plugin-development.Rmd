@@ -33,6 +33,14 @@ helpful example video that is on YouTube.
 
 2. **Eclipse**: 2019-03
 
+3. A download of the
+[example-imagej-command](https://github.com/imagej/example-imagej-command)
+repository from github.
+
+4. The [javadocs](https://javadoc.scijava.org/) for the ImageJ/Fiji ecosystem.
+  
+    > "Use the source, Luke!"
+
 
 # Setup for Maven builds with Eclipse
 
@@ -166,6 +174,12 @@ representative of the `Imagej1` build as well.
 ```
 
 ## Key observations
+
+0. Software required
+
+    - Current Eclipse installer (64 bit)
+    
+    - `example-imagej-command-master` plugin from github
 
 1. **The group id convention**: Group ids are entered in the format
 
