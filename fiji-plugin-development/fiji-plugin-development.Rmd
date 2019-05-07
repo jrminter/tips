@@ -22,7 +22,7 @@ and `Maven` as a build manager, typically using `Eclipse`. Ultimately, there are
 automated builds and the code is expected to be maintained under version control
 on `github`. Getting started is a bit intimidating and there is
 **_a lot_ to learn**. This document serves as my reference and a way for me to
-understand the devlopment process.
+understand the development process.
 
 The [Tomancak](https://www.youtube.com/watch?v=YIWpoBnnLio) group provided a 
 helpful example video that is on YouTube.
@@ -30,10 +30,52 @@ helpful example video that is on YouTube.
 **2019-05-06**
 
 I am having problems with legacy ImageJ1 plugins that compile without errors
-but do not work when called from jython scripts. When isntalled, they do not
+but do not work when called from jython scripts. When installed, they do not
 appear in the menus (a known limitation). I did get an ImageJ2 example to
 compile and execute as expected. I might do better to stick with Jython script
 libraries while I teach myself to build ImageJ2 plugins. Grrrrr....
+
+See a work-around below...
+
+# Quick and dirty compilation of legacy IJ1 plugins
+
+1. Install current `ImageJ1` software from Wayne's repository. The current
+release is IJ-152. I downloaded the 64 bit window version for `crunch`
+and installed it in `C:\Apps\ImageJ`. This is bundled with
+`jre1.8.0_112`
+
+2. I downloaded
+`java-1.8.0-openjdk-1.8.0.212-1.b04.ojdkbuild.windows.x86_64` from
+[github](https://github.com/ojdkbuild/ojdkbuild#downloads-for-windows-x86_64)
+and replaced the existing jre (`jre-orig`) with this `jre`. I renamed
+the original `tools.jar` to `tools.jar.orig_jdk` and added the
+`tools.jar` from the openjdk to be consistent.
+
+3. I created a launcher on my Windows Desktop named `my_javaw`, This
+launches ImageJ with the command:
+
+    ```
+    C:\Apps\ImageJ\jre\bin\java.exe -mx100m -cp ij.jar;tools.jar ij.ImageJ
+    ```
+    
+    This procedure picks up the consistent tool set.
+
+4. I place my desired `plug_in.java` file in the `ImageJ\plugins\Examples`
+folder. I then run `Compile and Run`.
+
+5. Once I am satisfied, I create the `.jar` file by:
+
+    ```
+    jar cvf plug_in_name.jar plug_in_name.class
+    ```
+    
+    It is important to store the `.xml`, `.class` and `.java` files
+    in a `git` repository under version control. **_N.B._**: If you
+    forget to remove the `.class` file, ImageJ complains about a
+    `duplicate plugin` because both the `.class` and `.jar` files are
+    there.
+
+
 
 # My current software configuration
 
@@ -204,7 +246,7 @@ representative of the `Imagej1` build as well.
 2. One should not use **spaces** or **dashes** in Artifact ID (i.e. plugin name).
 
     Use `GaussianFilter` instead of `Gaussian Filter` for the plugin name.
-    Curtis Reuden notes that a '_' character is acceptible.
+    Curtis Reuden notes that a '_' character is acceptable.
     
 3. Enter the version number of your plugin. The default was
    `0.1.0-SNAPSHOT`. Curtis Reuden explains it like this:
@@ -288,9 +330,9 @@ your `ImageJ` folder.
 - value: `/path/to/ImageJ.app/
 
 This ensures that the final .`jar` file will also be copied to your ImageJ
-plugins folder everytime you run the Maven Build.
+plugins folder every time you run the Maven Build.
 
-**JRM Note** Verify that this works with Fiji.app
+**JRM Note** Verify that this works with Fiji.app!
 
 
 # Eclipse configuration
@@ -386,7 +428,7 @@ publish the result in your own repository:
     - value: `/path/to/ImageJ.app/`
 
 This ensures that the final `.jar` file will also be copied to your ImageJ
-plugins folder everytime you run the Maven Build
+plugins folder every time you run the Maven Build.
 
 # Building ImageJ2 Commands
 
@@ -478,7 +520,7 @@ publish the result in your own repository:
     - value: `/path/to/ImageJ.app/`
 
 This ensures that the final `.jar` file will also be copied to your ImageJ
-plugins folder everytime you run the Maven Build
+plugins folder every time you run the Maven Build.
 
 
 # Current  Plugins
