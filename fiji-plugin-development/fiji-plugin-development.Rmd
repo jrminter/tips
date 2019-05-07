@@ -65,6 +65,8 @@ launches ImageJ with the command:
     ```
     
     This procedure picks up the consistent tool set.
+    
+    ![File layout on Win7 (crunch)](inc/WinLayout.png)
 
 4. I place my desired `plug_in.java` file in the `ImageJ\plugins\Examples`
 folder. I then run `Compile and Run`.
