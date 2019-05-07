@@ -58,6 +58,12 @@ launches ImageJ with the command:
     C:\Apps\ImageJ\jre\bin\java.exe -mx100m -cp ij.jar;tools.jar ij.ImageJ
     ```
     
+    It starts in
+    
+    ```
+    C:\Apps\ImageJ
+    ```
+    
     This procedure picks up the consistent tool set.
 
 4. I place my desired `plug_in.java` file in the `ImageJ\plugins\Examples`
