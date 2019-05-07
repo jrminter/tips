@@ -16,6 +16,31 @@ I have collected these tips both from experience and from a very helpful user co
 
 # Quick tips
 
+## Keyboard shortcuts
+
+These are from a helpful online
+[presentation](https://imagej.github.io/presentations/fiji-introduction/#/).
+
+- **Ctl + L** opens a small window for searches to find commands. This expands
+during use.
+
+- Select an image window, then **Shift + T** - Threshold
+
+- **Shift + Z** : Image > Color > Channel Tools
+
+- **Shift + P** : Image > Properties
+
+
+## Helpful resources
+
+1. [Curtis Reuden's](https://github.com/miura/NEUBIAS_Bioimage_Analyst_Course2017/blob/master/docs/Preparation%20steps%20for%20the%20ImageJ2%20workshop.md)
+Preparation steps for the ImageJ2 workshop.
+
+2. [Setting up a development environment](https://github.com/miura/NEUBIAS_Bioimage_Analyst_Course2017/blob/master/docs/Setting%20up%20a%20Java%20development%20environment%20for%20Fiji%20and%20friends.md).
+
+3. The [basic Program](https://github.com/miura/NEUBIAS_Bioimage_Analyst_Course2017/blob/master/docs/Bioimage%20Analyst%20School-%20Program.md)
+for the workshop helped.
+
 ## Sources of Fiji/ImageJ Scripts
 
 - My collection is in this
