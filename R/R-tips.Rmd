@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-04-23"
+date: "Started: 2013-07-16, Last modified: 2019-05-08"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -22,9 +22,56 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 # Don't forget...
 
+## Remove R-Studio
+
+Sometimes we need a clean install...
+
+
+From [RStudio](https://support.rstudio.com/hc/en-us/articles/200554736-How-To-Uninstall-RStudio-Desktop)
+
+Uninstalling RStudio Desktop is the same as a typical application on your
+system.
+
+
+### Windows
+
+Run the program uninstaller from the Start Menu
+`(All Programs | RStudio | Uninstall)`. Alternatively, you may use the
+`Add or Remove Programs` utility from the control panel.
+
+### Mac
+
+Simply drag the RStudio application into the trash from your
+Applications directory.
+
+### Linux
+
+Remove RStudio using your system's uninstaller from the command line:
+
+- **Debian/Ubuntu** - `$ sudo apt-get remove rstudio`
+- **CentOS/RedHat/Fedora** - `$ sudo rpm -e rstudio`
+
+## Saved Settings and Preferences
+
+After uninstalling RStudio, your personalized settings are preserved in
+the RStudio-Desktop directory. This remains on your system in case you
+decide to reinstall RStudio. If you wish to delete this hidden directory,
+it is stored in the following locations:
+
+- **Windows 7**: The user's local App Data directory
+`%AppData%\RStudio`
+
+- **Windows XP**: The user's local App Data directory
+`Local Settings\Application Data`
+
+- **Mac OS**: The user's home directory `~/.rstudio-desktop`
+
+- **Linux**: The user's home directory `~/.rstudio-desktop`
+
+
 ## pdftools
 
-See [ Jeroen Ooms](https://ropensci.org/technotes/2019/04/24/pdftools-22/)
+See [Jeroen Ooms](https://ropensci.org/technotes/2019/04/24/pdftools-22/)
 tutorial on the latest (2019-04-24) `pdftools` package
 
 ### Split and Join PDF files
