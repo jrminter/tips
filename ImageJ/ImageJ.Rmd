@@ -1,7 +1,7 @@
 ---
 title: "Image-J Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-05-06"
+date: "Started: 2013-07-16, Last modified: 2019-05-08"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -52,6 +52,9 @@ repository.
 
 - The [Scripting ImageJ](https://imagej.net/Scripting) page is helpful.
 
+- The [Fiji Cookbook](https://github.com/fiji/cookbook) has some nice 
+examples of (Legacy?) scripts in the directory `src/main/java/sc/fiji/cookbook`.
+
 - The 
 [Scripting with Fiji](https://imagej.github.io/presentations/fiji-scripting/#/)
 slides are helpful.
@@ -62,15 +65,23 @@ tutorial is very good.
 - [axtimwalde](https://github.com/axtimwalde/fiji-scripts) has some interesting
 `.bsh` scripts.
 
+- [R Harks](https://github.com/rharkes/ImageJ-Macros) has a git repository
+with his lab's examples. He also has a [Temporal-Median-Background-Subtraction](https://github.com/rharkes/Temporal-Median-Background-Subtraction)
+plugin. This uses `ImgLib2`. There is a discussion of this plugin on the
+[ImageJ Forum](https://forum.image.sc/t/learning-imglib2-development/24833).
+
+- Tutorials on [github](https://github.com/imagej/tutorials).
+
 ## My Current Install
 
 ### Fiji Update Sites checked
 
-**Updated 2019-05-06**
+**Updated 2019-05-08**
 
 - ImageJ
 - Fiji
 - Java-8
+- BAR
 - BIG-EPFL
 - Bioformats
 - Biomedgroup
