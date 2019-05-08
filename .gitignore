@@ -289,6 +289,9 @@ Octave/*.html
 Octave/f
 Octave/dat/mydata.dat
 
+# oracle Virtual Box
+Oracle-Virtual-Box/*.html
+
 # pandoc directory
 pandoc/.DS_Store
 pandoc/pandoc.md
