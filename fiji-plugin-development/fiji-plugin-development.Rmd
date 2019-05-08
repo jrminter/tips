@@ -1,7 +1,7 @@
 ---
 title: "Fiji Plugin Development"
 author: "J. R. Minter"
-date: "Started: 2019-05-05, Last modified: 2019-05-06"
+date: "Started: 2019-05-05, Last modified: 2019-05-08"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -82,6 +82,8 @@ folder. I then run `Compile and Run`.
     forget to remove the `.class` file, ImageJ complains about a
     `duplicate plugin` because both the `.class` and `.jar` files are
     there.
+    
+    I got all my legacy plugins built by **2019-05-08**!
 
 
 
