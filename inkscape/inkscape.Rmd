@@ -25,6 +25,8 @@ The current release is version `0.92.3`.
 
 See [kestrel.nmt.edu](http://kestrel.nmt.edu/~raymond/software/howtos/greekscape.xhtml) for a table.  I cached it [locally](img/greekscape.pdf).
 
+There is also a [YouTube video](https://www.youtube.com/watch?v=8p7iSGHM568).
+
 ## Trouble with text not showing up.
 
 The site
