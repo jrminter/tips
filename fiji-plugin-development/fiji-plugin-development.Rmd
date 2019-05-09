@@ -1,7 +1,7 @@
 ---
 title: "Fiji Plugin Development"
 author: "J. R. Minter"
-date: "Started: 2019-05-05, Last modified: 2019-05-08"
+date: "Started: 2019-05-05, Last modified: 2019-05-09"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -50,6 +50,14 @@ and installed it in `C:\Apps\ImageJ`. This is bundled with
 and replaced the existing jre (`jre-orig`) with this `jre`. I renamed
 the original `tools.jar` to `tools.jar.orig_jdk` and added the
 `tools.jar` from the openjdk to be consistent.
+
+    **_Note_: Getting openjdk on mac**
+
+    [Curtis Reuden](https://forum.image.sc/t/how-do-i-install-pyimagej/23189/7?u=john_minter) noted on the ImageJ Forum:
+
+    > You are right—I updated the instructions. Note that you also need to use
+    > `brew cask install adoptopenjdk8` rather than
+    > `brew install adoptopenjdk8`, since the **_AdoptOpenJDK_ formulas are casks**.
 
 3. I created a launcher on my Windows Desktop named `my_javaw`, This
 launches ImageJ with the command:
