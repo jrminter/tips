@@ -17,7 +17,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [Inkscape](https://inkscape.org/en/) is a professional vector graphics
 editor for Windows, Mac OS X and Linux. It's free and open source.
-The current release is version `0.92.3`.
+The current release is version `0.92.4`.
 
 # Fast Tips
 
