@@ -1,7 +1,7 @@
 ---
 title: "Python Tips"
 author: "J. R. Minter"
-date: 'Started: 2013-07-16, Last modified: 2019-05-01'
+date: 'Started: 2013-07-16, Last modified: 2019-05-09'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -131,7 +131,7 @@ below.
 
 ## Packages in environment at /Users/jrminter/miniconda3:
     
-**2019-05-02** Current packages in base environment
+**2019-05-09** Current packages in base environment
     
     ```
     conda list -n base 
@@ -365,10 +365,15 @@ as needed. Add others to the list (and note the date with a comment below)
     conda clean --all
     ```
 
+6. To remove an obsolete environment (`pweave`)
 
+    ```
+    conda env remove -n pweave
+    ```
 
 
 # Hints for key packages
+
 
 ## pandoc that will work with R-Studio
 
