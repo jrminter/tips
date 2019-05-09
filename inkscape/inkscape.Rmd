@@ -1,7 +1,7 @@
 ---
 title: "Inkscape"
 author: "John Minter"
-date: "Started: 2018-06-04, Last modified: 2018-10-11"
+date: "Started: 2018-06-04, Last modified: 2019-05-09"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -20,6 +20,10 @@ editor for Windows, Mac OS X and Linux. It's free and open source.
 The current release is version `0.92.3`.
 
 # Fast Tips
+
+## Entering Unicode text
+
+See [kestrel.nmt.edu](http://kestrel.nmt.edu/~raymond/software/howtos/greekscape.xhtml) for a table.  I cached it [locally](img/greekscape.pdf).
 
 ## Trouble with text not showing up.
 
