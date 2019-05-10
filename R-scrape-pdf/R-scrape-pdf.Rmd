@@ -21,7 +21,7 @@ options(width = 72)
 
 # `tabulizer:` Scraping tables from PDF files
 
-An example from the vignette
+## An example from the vignette
 
 ```{r scrape_example, warning=FALSE}
 library("tabulizer")
@@ -52,6 +52,23 @@ List the third table:
 out1[[3]]
 ```
 
+## The extract_areas() function
+
+Tabulizer has a function, `extract_areas()` :
+
+This could be **_really useful_**!
+
+```
+extract_areas(file, pages = NULL, guess = FALSE, copy = FALSE, ...)
+```
+
+| Argument | Description |
+|----------|---------------|
+| file | A character string specifying the path to a PDF file. This can also be a URL, in which case the file will be downloaded to the R temporary directory using download.file.|
+| pages | An optional integer vector specifying pages to extract from. To extract multiple tables from a given page, repeat the page number (e.g., c(1,2,2,3)).|
+| guess | See extract_tables (note the different default value).|
+| copy | Specifies whether the original local file(s) should be copied to tempdir() before processing. FALSE by default. The argument is ignored if file is URL.|
+| ... |Other arguments passed to extract_tables.|
 
 
 
