@@ -1,0 +1,59 @@
+---
+title: "R Scrape PDF"
+author: "J. R. Minter"
+date: "Started: 2019-05-10, Last modified: 2019-05-10"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+
+```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
+library(knitr)
+options(width = 72)
+
+```
+
+
+[Back to Index](../README.html)
+
+# `tabulizer:` Scraping tables from PDF files
+
+An example from the vignette
+
+```{r scrape_example, warning=FALSE}
+library("tabulizer")
+f <- system.file("examples", "data.pdf", package = "tabulizer")
+out1 <- extract_tables(f)
+str(out1)
+```
+
+Note that the output is a list of tables.
+
+List the first table:
+
+```{r list_table_1, comment=NA}
+out1[[1]]
+```
+
+List the second table:
+
+```{r list_table_2, comment=NA}
+out1[[2]]
+
+```
+
+List the third table:
+
+
+```{r list_table_3, comment=NA}
+out1[[3]]
+```
+
+
+
+
+
+[Back to Index](../README.html)

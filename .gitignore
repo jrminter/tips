@@ -443,6 +443,11 @@ R-packages/*.html
 R-packages/*.htm
 R-packages/Legend*.png
 
+# R-scrape-pdf directory
+R-scrape-pdf/.DS_Store
+R-scrape-pdf/*.md
+R-scrape-pdf/*.html
+
 ReproducibleResearch/*.html
 
 # research directory

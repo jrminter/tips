@@ -224,6 +224,8 @@ This skips several steps from original article!
 
 [R-Packages](./R-packages/R-packages.html)
 
+[R-scrape-pdf](./R-scrape-pdf/R-scrape-pdf.html)
+
 [Reproducible Research](./ReproducibleResearch/ReproducibleResearch.html)
 
 [Research](./research/research.html)
