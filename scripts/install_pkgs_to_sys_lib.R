@@ -25,6 +25,7 @@
 
 install.packages('devtools', system_r_library, dependencies=TRUE)
 install.packages('pdftools', system_r_library, dependencies=TRUE)
+install.packages('tabulizer', system_r_library, dependencies=TRUE)
 install.packages('janitor', system_r_library, dependencies=TRUE)
 install.packages('plotGoogleMaps', system_r_library, dependencies=TRUE)
 install.packages('RCurl', system_r_library, dependencies=TRUE)
