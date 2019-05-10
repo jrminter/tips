@@ -37,7 +37,7 @@ library(lwPackageHelperR)
 # libDir <- "/home/jrminter/R/x86_64-pc-linux-gnu-library/3.5"
 
 # For macOS
-# libDir <- "/Library/Frameworks/R.framework/Versions/3.5/Resources/library"
+# libDir <- "/Library/Frameworks/R.framework/Versions/3.6/Resources/library"
 
 # For Crunch
 # libDir <- "C:/Apps/R/R-3.5.3/library"
