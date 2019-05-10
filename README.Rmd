@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-04-30"
+date: "Started: 2013-07-16, Last modified: 2019-05-09"
 output:
   html_document:
     keep_md: true
