@@ -105,6 +105,7 @@ plugin. This uses `ImgLib2`. There is a discussion of this plugin on the
 - MOSAIC ToolSuite
 - ParticleSizer
 - SimonKlein
+- Stowers
 
 **Entries in** `/Applications/Fiji.app/jars/Lib`:
 
