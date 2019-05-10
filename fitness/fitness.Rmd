@@ -30,6 +30,12 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 [Back to Index](../README.html)
 
+# My favorite Merrell shoes
+
+![Bare Access Flex Knit, size 10.5](inc/merrell-bare-access-flex-knit.png)
+
+J77587, 10.5 medium, 8457 60244
+
 # From Jeff Galloway
 
 ## Ice threatment
