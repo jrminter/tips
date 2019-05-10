@@ -34,7 +34,11 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 ![Bare Access Flex Knit, size 10.5](inc/merrell-bare-access-flex-knit.png)
 
-J77587, 10.5 medium, 8457 60244
+**J77587, 10.5 medium, 8457 60244**
+
+Seem to be discontinued. When I need to replace, the
+[**Trail Glove 5**](https://www.merrell.com/US/en/trail-glove-5/36207M.html)
+might be a decent choice.
 
 # From Jeff Galloway
 
