@@ -84,7 +84,7 @@ below.
     conda install numpy scipy matplotlib seaborn jupyter spyder
     conda install sqlite pandas xlwt scikit-image nbconvert pandoc
     conda config --add channels conda-forge
-    conda install mahotas sympy cython
+    conda install mahotas sympy cython astropy
     # OPTIONALLY install pkgs suggested by Curtis Rueden
     conda install ipywidgets beakerx
     conda install octave_kernel
