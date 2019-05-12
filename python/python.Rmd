@@ -131,7 +131,7 @@ below.
 
 ## Packages in environment at /Users/jrminter/miniconda3:
     
-**2019-05-09** Current packages in base environment
+**2019-05-12** Current packages in base environment
     
     ```
     conda list -n base 
