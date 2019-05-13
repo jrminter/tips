@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-04-26"
+date: "Started: 2013-07-16, Last modified: 2019-05-13"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -10,6 +10,29 @@ output:
     toc_depth: 3
 ---
 [Back to Index](../README.html)
+
+# Fixing gnuplot
+
+From: [here](https://gist.github.com/scuxiayiqian/c8ea9452f86dc1918de92b136e772c80#gistcomment-2878171):
+
+> The Brew implementation of gnuplot is not really usable because it no longer
+> supports the necessary terminals (e.g., you can no longer provide
+> `--with-aquaterm` or `--with-x11` during installation).
+>
+> However, the MacPorts package manager has a usable install for gnuplot
+> (it's safe to have both Brew and MacPorts installed).
+>
+> See [macports](https://www.macports.org/)
+>
+> After installing AquaTerm, I used the following to install gnuplot, and all
+> is working as expected:
+>
+>    ```
+>    sudo port install gnuplot +aquaterm
+>    ```
+
+
+I'm using macOS Mojave 10.14.4.
 
 # Packages installed via homebrew
 
