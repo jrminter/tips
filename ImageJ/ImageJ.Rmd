@@ -18,7 +18,15 @@ I have collected these tips both from experience and from a very helpful user co
 
 ## Key sites
 
-1.  [Scripting](https://imagej.net/Scripting)
+1. The ImageJ [Scripting](https://imagej.net/Scripting) site
+
+2. Jan Eglinger's
+[github script repository](https://github.com/imagejan/imcf-fiji-scripts)
+
+3. The [ImageJ programming examples](https://github.com/imagej/tutorials)
+
+4. Kota Miura's
+[NEUBIAS 2019 Course](https://github.com/miura/NEUBIAS_AnalystSchool2019)
 
 ## Keyboard shortcuts
 
