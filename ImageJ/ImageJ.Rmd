@@ -25,10 +25,12 @@ I have collected these tips both from experience and from a very helpful user co
 These are from a helpful online
 [presentation](https://imagej.github.io/presentations/fiji-introduction/#/).
 
-- **Ctl + L** opens a small window for searches to find commands. This expands
+Note: Windows = **Ctl**, Mac = **Cmd**
+
+- **Ctl/Cmd + L** opens a small window for searches to find commands. This expands
 during use.
 
-- **Ctl + [** opens the Script Editor.
+- **Ctl/Cmd + [** opens the Script Editor.
 
 - Select an image window, then **Shift + T** - Threshold
 
