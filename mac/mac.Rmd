@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-05-13"
+date: "Started: 2013-07-16, Last modified: 2019-05-16"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -33,6 +33,22 @@ From: [here](https://gist.github.com/scuxiayiqian/c8ea9452f86dc1918de92b136e772c
 
 
 I'm using macOS Mojave 10.14.4.
+
+**Note**: 2019-05-16
+
+An upgrade of homebrew caused a regression. I fixed with:
+
+```
+brew unlink gnuplot
+sudo port install gnuplot +aquaterm
+```
+
+I tried out the MacPorts plot with [this file](plt/simCorningEagleXG.plt).
+This launches a persistent menu.
+
+The AquaTerm `Filemenu` has a  `SaveAs` option to export either `.eps` or
+`.pdf` files. This is helpful.
+
 
 # Packages installed via homebrew
 
