@@ -33,6 +33,13 @@ See the discussion on the ImageJ
 
 - An interesting post on
 [pyimagej](https://forum.image.sc/t/using-imagej-functions-like-type-conversion-and-setting-pixel-size-via-pyimagej/25755)
+
+Install via conda:
+
+```
+conda install -c conda-forge pyimagej 
+```
+
  
 ## Helpful presentations
 
