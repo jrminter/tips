@@ -30,6 +30,9 @@ A modern approach uses machine learning. One implementation is the
 Leaving it checked causes generation of problematic screen shots...
 See the discussion on the ImageJ
 [Forum](https://forum.image.sc/t/unexpected-behavior-from-screen-shot/25764).
+
+- An interesting post on
+[pyimagej](https://forum.image.sc/t/using-imagej-functions-like-type-conversion-and-setting-pixel-size-via-pyimagej/25755)
  
 ## Helpful presentations
 
