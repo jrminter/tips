@@ -1,0 +1,18 @@
+run("Close All");
+imgDir = "/Users/jrminter/Desktop/";
+imgNam = "jrm-screen-shot";
+imgExt = ".png";
+imgPath = imgDir + imgNam + imgExt;
+imgFullName = imgNam + imgExt;
+open(imgPath);
+selectWindow(imgFullName);
+rename(imgNam);
+run("Stack to Images");
+close();
+selectWindow("1");
+rename("red");
+selectWindow("2");
+rename("green");
+selectWindow("3");
+rename("blue");
+run("Merge Channels...", "c1=red c2=green c3=blue ignore");

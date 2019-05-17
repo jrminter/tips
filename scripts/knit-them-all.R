@@ -24,7 +24,11 @@ names <- c("README.Rmd",
            "ggplot2-figure.Rmd", "ggplot2Intro.Rmd",
            "ggvisIntro.Rmd","ggplot2UseCases.Rmd", "git-tips.Rmd", 
            "gnuplot.Rmd","hacklev.Rmd", "homebrew.Rmd", "hyperspy.Rmd",
-           "ImageJ.Rmd", "inkscape.Rmd", "iOS.Rmd", "jekyll-github.Rmd",
+           # Note: there are/will be multiple files in the ImageJ Directory...
+           # That link to the main one
+           "ImageJ.Rmd", "trainable_weka_segmentation.Rmd",
+           #
+           "inkscape.Rmd", "iOS.Rmd", "jekyll-github.Rmd",
            "json.Rmd","Legacy.Rmd", "Logos.Rmd",
            "Lubuntu.Rmd", "mac.Rmd", "mac-for-data-science.Rmd",
            "micro.Rmd", "micro-sample-prep.Rmd", "midb.Rmd", 
@@ -62,7 +66,10 @@ rPath <- c("../",
            "../ggvisIntro","../ggplot2UseCases", "../git", 
            "../gnuplot", "../hacklev", 
            "../homebrew","../hyperspy",
-           "../ImageJ", "../inkscape", "../iOS", "../jekyll-github", 
+           # Note: there are multiple RMD files in the ImageJ Directory...
+           "../ImageJ", "../ImageJ",
+           #
+           "../inkscape", "../iOS", "../jekyll-github", 
            "../json","../legacy", "../Logos",
            "../Lubuntu", "../mac", "../mac-for-data-science",
            "../micro", "../micro-sample-prep" , "../midb", 
