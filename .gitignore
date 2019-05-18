@@ -194,6 +194,7 @@ hyperspy/figure/
 ImageJ/.DS_Store
 ImageJ/ImageJ.md
 ImageJ/ImageJ.html
+ImageJ/train*.html
 ImageJ/figure/
 ImageJ/trainable_weka_segmentation.html
 
