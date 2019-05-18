@@ -1,7 +1,7 @@
 ---
 title: "Trainable Weka Segmentation"
 author: "J. R. Minter"
-date: "Started: 2019-05-17, Last modified: 2019-05-17"
+date: "Started: 2019-05-17, Last modified: 2019-05-18"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -13,13 +13,15 @@ output:
 [Back to ImageJ](ImageJ.html)
 
 
-# Itroduction
+# Introduction
 
 This example came from a
 [Forum post](https://forum.image.sc/t/analysis-of-aggregates/303)
 by a user who was having difficulties segmenting the image below.
 Ellen Arena used this as an example in this 
-[video](https://vimeo.com/218520761#t=1h11m44s).
+[video](https://vimeo.com/218520761#t=1h11m44s). The method uses the
+[Trainable Weka Segmentation](https://academic.oup.com/bioinformatics/article/33/15/2424/3092362)
+plug-in which uses machine learning to train a classifier.
 
 Ellen explains the difficulties:
 
@@ -34,7 +36,7 @@ The user benefis from the algorithms included in the package.
 3. The output is a labeled result based on the data training set used to train
 the model.
 
-![Exemplar image](jpg/aggregates_w_TWS.jpg)
+![Exemplar image supplied by the user](jpg/aggregates_w_TWS.jpg)
 
 # The problem explained
 
@@ -110,15 +112,24 @@ using
 
 5. Set the settings. The image below shows the current choices selected
 
-    ![Settings for this exemplar](png/jrm_tw_settings.png)
+    ![Settings for this example using the current release](png/jrm_tw_settings.png)
     
-    Note one odd feature. When I save (on the mac) a screen shot of the 
-    Weka window
+    Note: make sure to turn off using SCIFIO in the `Edit > Options > ImageJ2`
+    menu to prevent getting a 4 image stack instead  of an RGB image with a
+    screen shot. That was **really** annoying!
+    
+    ![Uncheck `Use SCIFO` in the ImageJ2 options!!!](png/scifio-settings.png)
     
 6. Run the classifier. The image below shows the segmentation
 
     ![Results from JRM Trainable Weka Segmentation](png/jrm_results.png)
 
+# Other examples
+
+The [web site](https://imagej.net/Trainable_Weka_Segmentation) has a nice
+leaf example. The code is also archived [here](ijm/tws_leaf_example.ijm).
+
+There are other scripting examples [here](https://imagej.net/Scripting_the_Trainable_Weka_Segmentation).
 
 
 [Back to ImageJ](ImageJ.html)
