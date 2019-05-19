@@ -208,18 +208,36 @@ By hand...
 
 - Set both Brightness and Saturation to the full range (0-255)
 
-- Set Hue to 0 - 32, which gets the yellow/red part of the spectrum.
-   ![Color Threshold Window](png/HSB-win.png). Make certain that the
-   pixels are not connected at the end.
+- Set Hue to 0 - 32, (pass 2: I like 0 - 40 better...) which gets the
+yellow/red part of the spectrum.
+
+![Color Threshold Window](png/HSB-win.png). Make certain that the
+pixels are not connected at the end.
    
 - When happy select that object  (3rd from left, second line from bottom)
 
-- duplicate ("work") the window and convert to mask
+- duplicate ("work") the window and convert to mask. **_Note_**: I find this
+tool very annoying. It seems to easily rest the brightness and saturation. Check
+these before `Convert To Mask`. Duplicate the mask, again to be safe...
+(1:49:12)
 
-about 1:48 in video
+- preparation for segmentation: We need the tube to be filled in. Skeletization
+will find the middle of the tube. It will put out perpendicular lines to find
+the boundary. First we need to fill in holes and can use binary operations.
+First run `Fill Holes`. Then `Dilate`, `Fill Holes`, `Erode`.
 
+- Run `Analyze Particles`. Set the bottom size to 1000 px., check 
+`Exculude on edges` and `Add to Manager`, and then `OK`. Our tube skows
+up in the `ROI Manager`. Now we can `Skeletonize`. A copy of the image
+is flattened and shown below.
 
+![The sketonized tube](png/tube-skeletonized-2.bmp)
+The central line is the longest, shortest path for the object. We can run
+`Analyze Skeleton(2D/3D)` and select `Calculate longest-shortest path`. This
+prints out the length in the `Results Table`. The value is 3164.106 (px?)  (1:51:39). It is all
+macro-recordable...
 
+This was the answer the user needed.
 
 
 [Back to ImageJ](ImageJ.html)

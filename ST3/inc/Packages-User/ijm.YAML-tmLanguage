@@ -1,0 +1,301 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: ImageJ Macro
+scopeName: source.ijm
+fileTypes: [ijm]
+uuid: 54e99b34-ab81-491d-8cc3-21f3ae7369e2
+
+patterns:
+- include: '#comments'
+- include: '#support'
+- include: '#core'
+- include: '#special'
+
+repository:
+  core:
+    patterns:
+    - include: '#leading-space'
+
+    # literals
+    - include: '#literal-regex'
+    - include: '#literal-number'
+    - include: '#literal-quasi'
+    - include: '#literal-language-constant'
+
+    # keywords/operators
+    - include: '#literal-keywords'
+
+    # macros/functions
+    - include: '#literal-macro-storage'
+    - include: '#literal-function-storage'
+
+    # after literal-function-storage which requires the below in some cases
+    - include: '#literal-string'
+    - include: '#literal-language-variable'
+
+    # function calls
+    - include: '#literal-method-call'
+    - include: '#literal-function-call'
+
+    # punctuation
+    - include: '#literal-labels'
+    - include: '#literal-variable'
+    - include: '#literal-punctuation'
+
+    # brackets
+    - include: '#brackets'
+
+  brackets:
+    patterns:
+    - name: meta.group.braces.round
+      begin: (\()
+      beginCaptures:
+        '1': {name: meta.brace.round.ijm}
+      end: (\))
+      endCaptures:
+        '1': {name: meta.brace.round.ijm}
+      patterns:
+      - include: source.ijm
+
+    - name: meta.group.braces.square
+      begin: (\[)
+      beginCaptures:
+        '1': {name: meta.brace.square.ijm}
+      end: (\])
+      endCaptures:
+        '1': {name: meta.brace.square.ijm}
+      patterns:
+      - include: source.ijm
+
+  comments:
+    patterns:
+    - name: comment.block.ijm
+      begin: /\*
+      end: \*/
+      captures:
+        '0': {name: punctuation.definition.comment.ijm}
+
+    - name: comment.line.ijm
+      match: (//).*$\n?
+      captures:
+        '1': {name: punctuation.definition.comment.ijm}
+
+  function-declaration-parameters:
+    patterns:
+    - begin: (\()
+      beginCaptures:
+        '1': {name: punctuation.definition.parameters.begin.ijm}
+      end: (\))
+      endCaptures:
+        '1': {name: punctuation.definition.parameters.end.ijm}
+      patterns:
+        - name: variable.parameter.function.ijm
+          match: |-
+            (?x)
+              [_$a-zA-Z][_$\w]*
+        - name: punctuation.separator.parameter.function.ijm
+          match: ','
+        - include: '#comments'
+
+  leading-space:
+    patterns:
+    - name: meta.leading-tabs
+      begin: ^(?=(\t|  ))
+      end: (?=[^\t\s])
+      patterns:
+      - match: (    )(    )?(    )?(    )?(    )?(    )?(    )?(    )?(    )?(    )?(    )?
+        captures:
+          '1': {name: meta.odd-tab.group1.spaces}
+          '2': {name: meta.even-tab.group2.spaces}
+          '3': {name: meta.odd-tab.group3.spaces}
+          '4': {name: meta.even-tab.group4.spaces}
+          '5': {name: meta.odd-tab.group5.spaces}
+          '6': {name: meta.even-tab.group6.spaces}
+          '7': {name: meta.odd-tab.group7.spaces}
+          '8': {name: meta.even-tab.group8.spaces}
+          '9': {name: meta.odd-tab.group9.spaces}
+          '10': {name: meta.even-tab.group10.spaces}
+          '11': {name: meta.odd-tab.group11.spaces}
+
+      - match: (\t)(\t)?(\t)?(\t)?(\t)?(\t)?(\t)?(\t)?(\t)?(\t)?(\t)?
+        captures:
+          '1': {name: meta.odd-tab.group1.tab}
+          '2': {name: meta.even-tab.group2.tab}
+          '3': {name: meta.odd-tab.group3.tab}
+          '4': {name: meta.even-tab.group4.tab}
+          '5': {name: meta.odd-tab.group5.tab}
+          '6': {name: meta.even-tab.group6.tab}
+          '7': {name: meta.odd-tab.group7.tab}
+          '8': {name: meta.even-tab.group8.tab}
+          '9': {name: meta.odd-tab.group9.tab}
+          '10': {name: meta.even-tab.group10.tab}
+          '11': {name: meta.odd-tab.group11.tab}
+
+  literal-function-storage:
+    patterns:
+    # e.g. function play(arg1, arg2) {  }
+    - name: meta.function.ijm
+      begin: \b(function(?:\s*\*|(?=\s|[(])))(?:\s*([a-zA-Z_$][_$\w]*))?\s*
+      beginCaptures:
+        '1': {name: storage.type.function.ijm}
+        '2': {name: entity.name.function.ijm}
+      end: (?<=\))
+      patterns:
+        - include: '#function-declaration-parameters'
+
+  literal-keywords:
+    patterns:
+    - name: storage.type.ijm
+      match: \bvar\b
+
+    - name: keyword.control.flow.ijm
+      match: \breturn\b
+
+    - name: keyword.control.conditional.ijm
+      match: \b(else|if)\b
+
+    - name: keyword.control.loop.ijm
+      match: \b(do|for|while|break|continue)\b
+
+    - name: keyword.operator.ijm
+      match: '!|%|\^|&|\*|/|\-\-|\-|\+\+|\+|~|==|=|!=|<=|>=|<<|>>|<|>|&&|\|\||\*=|/=|\+=|\-='
+
+    - name: keyword.other.builtin.ijm
+      match: |-
+        (?x)
+          \b(
+            abs|acos|
+            (Array)
+              ((\.)(concat|copy|fill|findMinima|findMaxima|getStatistics|print|rankPositions|
+              resample|reverse|show|slice|sort|trim))?|
+            asin|atan|atan2|autoUpdate|beep|butDepth|calibrate|call|
+            changeValues|charCodeAt|close|cos|d2s|
+            (Dialog)
+              ((\.)(((add)(Message|String|Number|Slider|Checkbox(Group)?|RadioButtonGroup|
+              Choice|Help))|create|show|setInsets|((get)(String|Number|Checkbox|Choice|RadioButton))))|
+            doCommand|doWand|drawLine|drawOval|drawRect|drawString|dump|endsWith|eval|exec|exit|exp|ext|Ext|
+            (File)
+              ((\.)(append|close|copy|dateLastModified|delete|directory|exists|(get)(Name|Parent)|
+              isDirectory|lastModified|length|makeDirectory|(name)(WithoutExtension)?|(open)(AsString|
+              AsRawString|UrlAsString|Dialog)?|rename|saveString|separator))|
+            fill|fillOval|fillRect|
+            (Fit)
+              ((\.)(doFit|rSquared|p|nParams|f|nEquations|getEquation|plot|logResults|showDialog))
+            floodFill|floor|fromCharCode|
+            (get)
+              (Argument|Boolean|BoundingRect|CursorLoc|DateAndTime|Dimensions|Directory|DisplayedArea|
+              FileList|Height|Histogram|ImageID|ImageInfo|Info|Line|List|LocationAndSize|Lut|Metadata|
+              MinAndMax|Number|Pixel|PixelSize|Profile|RawStatistics|(Result)(String|Label)?|
+              (Selection)(Bounds|Coordinates)|SliceNumber|Statistics|String(Width)?|Threshold|
+              Time|Title|Value|Version|VoxelSize|Width|Zoom)|
+            (IJ)
+              ((\.)(deleteRows|getToolName|freeMemory|currentMemory|log|maxMemory|pad|redirectErrorMessages|renameResults))|
+            imageCalculator|indexOf|is|isKeyDown|isNaN|isOpen|lastIndexOf|lengthOf|lineTo|
+            (List)
+              ((\.)(clear|set(Commands|Measurements|List)?|get(List|Value)?|size))|
+            log|makeArrow|makeEllipse|makeLine|makeOval|makePoint|makePolygon|makeRectangle|makeSelection|makeText|
+            matches|mmaxOf|minOf|moveTo|newArray|newImage|newMenu|nImages|nResults|nSlices|open|
+            (Overlay)
+              ((\.)(moveTo|lineTo|drawLine|add|setPosition|drawRect|drawEllipse|drawString|show|hide|hidden|remove|
+              clear|size|addSelection|activateSelection|moveSelection|removeSelection|copy|paste|drawLabels))|
+            parseFloat|parseInt|PI|
+            (Plot)
+              ((\.)(create|setLimits|setFrameSize|setLogScale(X|Y)|setLineWidth|setColor|add|addText|setJustification|
+              drawLine|drawNormalizedLine|show|update|getValues))|
+            pow|print|random|rename|replace|requires|reset|resetMinAndMax|resetThreshold|restoreSettings|
+            (Roi)
+              ((\.)(getBounds|getCoordinates|getDefaultColor|getStrokeColor|getFillColor|getName|getPropert(y|ies)|
+              getType|move|setStrokeColor|setFillColor|setName|setStrokeWidth))|
+            roiManager|round|run|runMacro|save(As|Settings)?|screenHeight|screenWidth|selectionContains|selectionName|
+            selectionType|selectImage|selectWindow|setAutoThreshold|setAutoThreshold|setBackgroundColor|setBatchMode|
+            setColor|setFont|setForegroundColor|setJustification|setKeyDown|setLineWidth|setLocation|setLut|setMetadata|
+            setMinAndMax|setOption|setPasteMode|setPixel|setResult|setRGBWeights|setSelectionLocation|setSelectionName|
+            setSlice|setThreshold|setTool|setupUndo|setVoxelSize|setZCoordinate|showMessage|showMessageWithCancel|
+            showProgress|showStatus|showText|sin|snapshot|split|sqrt|
+            (Stack)
+              ((\.)(isHyperstack|getDimensions|setDimensions|setChannel|setSlice|setFrame|getPosition|setPosition|
+              getFrameRate|setFrameRate|getFrameInterval|setFrameInterval|getUnits|setTUnit|setZUnit|setDisplayMode|
+              getDisplayMode|setActiveChannels|getActiveChannels|swap|getStatistics))|
+            startsWith|
+            (String)
+              ((\.)(resetBuffer|append|buffer|copy|copyResults|getResultsHeadings|paste|show))|
+            substring|tan|toBinary|toHex|toLowerCase|toolID|toScaled|toUnscaled|toString|toUpperCase|updateDisplay|
+            updateResults|wait|waitForUser
+          )(\b)
+
+  literal-language-constant:
+    patterns:
+    - name: constant.language.boolean.true.ijm
+      match: \btrue\b
+
+    - name: constant.language.boolean.false.ijm
+      match: \bfalse\b
+
+  literal-number:
+    patterns:
+    - name: constant.numeric.ijm
+      match: |-
+        (?xi)
+          (?:\B[-+])?
+          (?:
+            (
+              \B\.[0-9]+|
+              \b[0-9]+(\.[0-9]*)?
+            )(e[-+]?[0-9]+)?
+          )
+
+  literal-punctuation:
+    patterns:
+    - name: punctuation.terminator.statement.ijm
+      match: \;
+
+    - name: meta.delimiter.object.comma.ijm
+      match: ','
+
+    - name: meta.delimiter.method.period.ijm
+      match: \.
+
+    - name: meta.brace.curly.ijm
+      match: \{|\}
+
+    - name: meta.brace.round.ijm
+      match: \(|\)
+
+    - name: meta.brace.square.ijm
+      match: \[|\]
+
+    - name: meta.complete.method
+      match: (?<=\.)\s
+
+  literal-string:
+    patterns:
+    - name: string.quoted.single.ijm
+      begin: "'"
+      beginCaptures:
+        '0': {name: punctuation.definition.string.begin.ijm}
+      end: (')|(\n)
+      endCaptures:
+        '1': {name: punctuation.definition.string.end.ijm}
+        '2': {name: invalid.illegal.newline.ijm}
+      patterns:
+      - include: '#string-content'
+
+      - name: string.quoted.double.ijm
+      begin: '"'
+      beginCaptures:
+        '0': {name: punctuation.definition.string.begin.ijm}
+      end: (")|(\n)
+      endCaptures:
+        '1': {name: punctuation.definition.string.end.ijm}
+        '2': {name: invalid.illegal.newline.ijm}
+      patterns:
+      - include: '#string-content'
+
+  string-content:
+    patterns:
+    - name: constant.character.escape.newline.ijm
+      match: \\\s*\n
+
+    - name: constant.character.escape.ijm
+      match: \\(x[\da-fA-F]{2}|u[\da-fA-F]{4}|.)
+...
