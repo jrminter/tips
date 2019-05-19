@@ -197,6 +197,7 @@ ImageJ/ImageJ.html
 ImageJ/train*.html
 ImageJ/figure/
 ImageJ/trainable_weka_segmentation.html
+ImageJ/basic_segmentation.html
 
 # Inkscape directory
 inkscape/.DS_Store
