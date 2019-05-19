@@ -26,7 +26,7 @@ names <- c("README.Rmd",
            "gnuplot.Rmd","hacklev.Rmd", "homebrew.Rmd", "hyperspy.Rmd",
            # Note: there are/will be multiple files in the ImageJ Directory...
            # That link to the main one
-           "ImageJ.Rmd", "trainable_weka_segmentation.Rmd",
+           "ImageJ.Rmd", "trainable_weka_segmentation.Rmd", "basic_segmentation.Rmd",
            #
            "inkscape.Rmd", "iOS.Rmd", "jekyll-github.Rmd",
            "json.Rmd","Legacy.Rmd", "Logos.Rmd",
@@ -67,7 +67,7 @@ rPath <- c("../",
            "../gnuplot", "../hacklev", 
            "../homebrew","../hyperspy",
            # Note: there are multiple RMD files in the ImageJ Directory...
-           "../ImageJ", "../ImageJ",
+           "../ImageJ", "../ImageJ",  "../ImageJ",
            #
            "../inkscape", "../iOS", "../jekyll-github", 
            "../json","../legacy", "../Logos",
