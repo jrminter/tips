@@ -1,7 +1,7 @@
 ---
 title: "TeXLive Hints"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-04-28"
+date: "Started: 2013-07-16, Last modified: 2019-05-19"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -95,13 +95,16 @@ tlmgr --repository http://www.preining.info/tlgpg/ install tlgpg
 
 Note: Avast complains...
 
-## A helpful scientific site: [csml-wiki.northwestern.edu](https://csml-wiki.northwestern.edu/index.php/Notes_on_using_LaTeX_for_manuscripts)
+## A helpful scientific site:
+
+[csml-wiki.northwestern.edu](https://csml-wiki.northwestern.edu/index.php/Notes_on_using_LaTeX_for_manuscripts)
 
 The general wiki for the CSML group is helpful. The formatting tips on the
 link above are quite helpful as are the bibtex notes and the programs to
 convert different biblography formates.  There are many journal-specific tips.
 
 A **_locally_** archived copy is [**_here_**](./inc/csml.html).
+
 
 ## Spacing in math mode
 
@@ -394,6 +397,31 @@ fine. I have no clue what possessed me to write it this way.
 Now I know better. This is the 3 hours of my life that I will
 never get back. All because I put label before a caption.
 Do not do that to yourself!
+
+## Dick Koch explains multiple TeX distributions on Mac
+
+From the TexLive mailing list (after minor editing for Rmarkdown)...
+
+> Gosh, we work for years on this stuff, and then it turns out that users are
+> oblivious to it.  (No criticism, just a little astonishment!)
+>
+> 1. BasicTeX does not install GUI apps. It just installs a TeX Distribution. Your current GUI apps work fine with it.
+>
+> 2. BasicTeX is installed in `/usr/local/texlive/2019basic`. BasicTeX-2019-Hardened is installed in `/usr/local/texlive/2019basic-hardened`. The full TeX Live 2019 is in `/usr/local/texlive/2019`.
+>
+> 3. All TeX Distributions from us share `~/Library/texmf`
+>
+> 4. Sometimes TeX Distributions need to write information (like font data) when being run by a user in user mode. They do this using special folders in `~/Library/texlive`. Each distribution has two folders here for different kinds of data. The full TeX Live 2019's folders in the location are `2019/texmf-var` and `2019/texmf-config`. For BasicTeX this year, they are `2019basic/texmf-var` and `2019basic/texmf-config`. The hardened versions are `2019basic-hardened/texmf-var` and `2019basic-hardened/texmf-config`. All very systematic.
+>
+> 5. Long ago, Gerben Wierda and Jerome Laurens invented a "TeXDist data structure". Every one of our TeX Live based distributions has data there. Also, `/Library/TeX/texbin`, `/Library/TeX/Documentation`, `/Library/TeX/Root` point into this data structure. In particular, TeXLive-2018, TeXLive-2019, BasicTeX-2018, BasicTeX-2019, and BasicTeX-2019-Hardened each have sections of data there.
+>
+> 6. Remember long ago when Jerome Laurens had a Preference Pane which switched the active data? This pane actually switched a symbolic link in the TeX Dist data (NOT `/Library/TeX/texbin`, but some more hidden link). Switching this link automatically switched **EVERYTHING**, so your GUI apps, the command line, and everything suddenly used a different TeX Distribution.
+>
+> 7. More recently, TeX Live Utility is used to switch the default TeX distribution. It does exactly the same thing that the old Preference Pane did. The pane is now obsolete because Apple kept switching the standards which Pref Panes need to use: universal-binary, then 32-bit Intel, then 64-bit intel with Garbage Collection, then 64-bit Intel without Garbage Collection but using Automatic Reference Counting. That's because Pref Panes are plug ins for Apple's Preference Pane application, so any change in that application changed how Pref Panes work. So we switched to TeX Live Utility.
+>
+>8. So the answer to your full set of questions is that you can switch between `TeXLive-2019` and `BasicTeX-2019-Hardened` exactly like you currently switch between `TeXLive-2018` and `TeXLive-2019`.
+
+
 
 # Citations
 
