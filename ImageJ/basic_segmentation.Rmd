@@ -239,5 +239,23 @@ macro-recordable...
 
 This was the answer the user needed.
 
+# Background subtraction
+
+Image has elliptical cells and bubbles and an uneven background.
+
+![bubbles and cells](jpg/elliptical_cells_w_bubbles.jpg)
+
+Ellen noted that the  Rolling Ball can do some strange things to images and
+recommends **not to use** the `Subtract Background...` method because the
+rolling ball can do strange things to images (1:58:00), especially images
+with jpg compression. **N.B.** The uneven background can be badly rendered
+in jpg images. See the image with expanded contrast
+
+![Note the background artifacts in this image that was then saved as a PNG](png/elliptical_cells_w_bubbles_jpg_artifact.png)
+
+1. Duplicate the image. For a `Gaussian Blur`, one wants to select a size that
+is roughly 30% of the image size. Then use `Image Calculator` to subtract the
+blurred image and create a 32 bit image. It looked still JRM Q: Why not divide?
+
 
 [Back to ImageJ](ImageJ.html)
