@@ -66,7 +66,7 @@ def rgb_gaussian_blur_bks(imp, size):
 
 	Returns
 	=======
-	bks:	The image plus of the backround-subtracted
+	bks:	The image plus of the background-subtracted
 			image.
 	"""
 	title = imp.getShortTitle()
