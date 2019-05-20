@@ -1,7 +1,7 @@
 ---
 title: "Basic Segmentation"
 author: "J. R. Minter"
-date: "Started: 2019-05-17, Last modified: 2019-05-18"
+date: "Started: 2019-05-17, Last modified: 2019-05-20"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -16,9 +16,9 @@ output:
 # Introduction
 
 
-This part of the workshop uses a dataset of five images available from
+This part of the workshop uses a data set of five images available from
 [here](https://workshops.imagej.net/). Download the file
-`images/C3-jw-30min.zip`. The origin of this dataset is explained
+`images/C3-jw-30min.zip`. The origin of this data set is explained
 [here](https://data.broadinstitute.org/bbbc/BBBC020/).
 
 The authors suggest a citation:
@@ -43,18 +43,18 @@ without the `(style="")` they throw an error.
 
 Ellen notes that there is no "one right way" to segment because images are
 different. The key is to choose what works best and is reproducible. Scripting
-snf good documentation are especially important for reproducibility. This is
-analagous to having a well documented protocal for specimen preparation.
+and good documentation are especially important for reproducible analyses. This is
+analogous to having a well documented protocol for specimen preparation.
 
-During preprocessing steps one corrects for noise, smooth edges of the objects,
+During pre-processing steps one corrects for noise, smooth edges of the objects,
 normalize the background. The goal is to increase the contrast of the objects
 you want to be able to easily differentiate the objects from background.
 **JRM note: this is much easier _said_ than _done_**. We want good contrast
 and signal/noise ratio between the objects and background. We will set a gray
-level threshold to distinguish between the backgound and our objects.
+level threshold to distinguish between the background and our objects.
 
 To accomplish this one can apply different filters, for example a median filter
-to reduce noise, Gaussian filters are useful for smooothing background but it
+to reduce noise, Gaussian filters are useful for smoothing background but it
 does not preserve edges. To study object shape one needs to preserve edges: a
 [Sobel edge detector](https://imagej.nih.gov/ij/docs/guide/146-29.html#sub:Find-Edges)
 or a [Kuwahara filter](https://en.wikipedia.org/wiki/Kuwahara_filter) are
@@ -64,7 +64,7 @@ good at preserving edges.
 
 1. Open the image 5 using Bioformats to preserve the metadata. (1:26:12)
 
-2. Change to grayscale (LUT > Grays) (1:26:19)
+2. Change to gray scale (LUT > Grays) (1:26:19)
 
 3. Sometimes we make mistakes in trial processing. Not all commands work with
 the "Undo" button. Ellen works on Duplicates ( **Shift CMD D** ) as she goes
@@ -109,7 +109,7 @@ features (1:31:55).
 `Analyze Particles...`. We will duplicate the watershed image before starting,
 naming it `after-watershed`. We have a size feature  - in px^2^ and circularity.
 We can set a 200 px^2^ minimum size and will not filter on circularity. We will
-also select `Add to manager` to save the detected ROIs. We will also excude on
+also select `Add to manager` to save the detected ROIs. We will also exclude on
 edges. Ellen does this most of the time. In this case note that one of the
 particles at the top is badly clipped. This is why one wants to exclude
 these types of particles. Now we run it and flatten the image to add
@@ -131,12 +131,12 @@ Then press `Measure`. We can save this to a .csv file,
 [Image-5 ROI data csv file](csv/image_5_rois.csv).
 
 **Note** - Because we measured the **binary image**, we cannot get the gray
-level from the ROIs. They are all 255 - white. Tis is OK if all we care about
+level from the ROIs. They are all 255 - white. This is OK if all we care about
 is **area**. But sometimes we need gray level information.
 
-The solution is to **_overlay the ROIs_ on the _original dataset_**.
+The solution is to **_overlay the ROIs_ on the _original data-set_**.
 
-- Bring the origianl image to the foreground
+- Bring the original image to the foreground
 
 - In the ROI manager press "show all" and toggle "Labels" and "Show All".
 
@@ -221,21 +221,27 @@ tool very annoying. It seems to easily rest the brightness and saturation. Check
 these before `Convert To Mask`. Duplicate the mask, again to be safe...
 (1:49:12)
 
-- preparation for segmentation: We need the tube to be filled in. Skeletization
+- preparation for segmentation: We need the tube to be filled in. Skeletonization
 will find the middle of the tube. It will put out perpendicular lines to find
 the boundary. First we need to fill in holes and can use binary operations.
 First run `Fill Holes`. Then `Dilate`, `Fill Holes`, `Erode`.
 
 - Run `Analyze Particles`. Set the bottom size to 1000 px., check 
-`Exculude on edges` and `Add to Manager`, and then `OK`. Our tube skows
+`Exculude on edges` and `Add to Manager`, and then `OK`. Our tube shows
 up in the `ROI Manager`. Now we can `Skeletonize`. A copy of the image
 is flattened and shown below.
 
 ![The sketonized tube](png/tube-skeletonized-2.bmp)
 The central line is the longest, shortest path for the object. We can run
 `Analyze Skeleton(2D/3D)` and select `Calculate longest-shortest path`. This
-prints out the length in the `Results Table`. The value is 3164.106 (px?)  (1:51:39). It is all
-macro-recordable...
+prints out the length in the `Results Table`. The value is 3164.106 (px?)
+
+![measure thelongest-shortest_path](png/ana_skel_longest_shortest_path.png)
+
+
+![A lattened image with the longest-shortest path](png/longest-shortest-path-flattened.png)
+
+(1:51:39). It is all macro-record-able...
 
 This was the answer the user needed.
 
@@ -257,5 +263,10 @@ in jpg images. See the image with expanded contrast
 is roughly 30% of the image size. Then use `Image Calculator` to subtract the
 blurred image and create a 32 bit image. It looked still JRM Q: Why not divide?
 
+**Note**: I scripted a background subtraction using division and came up with:
+
+![**Left**: Original RGB image. **Right**: After channel-by-channel background subtraction using a Gaussian Blurr. Note that the JPG artifacts are still present on the BKS image... ](png/bubbles_cells_before_after_channel-by-channel_bks.png)
+
+My script is [here](py/cells_and_bubbles_rgb_bks.py).
 
 [Back to ImageJ](ImageJ.html)
