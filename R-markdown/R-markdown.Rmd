@@ -1,7 +1,7 @@
 ---
 title: "R-Markdown Tips"
 author: "J. R. Minter"
-date: "Started: 2016-12-08, Last modified: 2019-05-01"
+date: "Started: 2016-12-08, Last modified: 2019-05-21"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -19,7 +19,7 @@ author to generate attractive documents that are stored in plain text files
 that are compatible with version control. This works very well in the
 **RStudio** environment.
 
-Some key resources are:
+## Some key resources
 
 1. [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/) by
 Yihui Xie, J. J. Allaire, and Garrett Grolemund (2019-03-19)
@@ -29,21 +29,24 @@ introduction to Rmarkdown.
 
 3. The
 [RStudio](http://rmarkdown.rstudio.com/authoring_pandoc_markdown.html)
-introduction to pandoc
+introduction to pandoc.
 
-4. For $\LaTeX$ math, the
+4. [Happy collaboration with Rmd to docx](https://rmarkdown.rstudio.com/articles_docx.html) - Jenny Bryan's super
+helpful guide to configuring a .docx template to render Word from Rmd.
+
+5. For $\LaTeX$ math, the
 [AOPS](http://artofproblemsolving.com/wiki/index.php/LaTeX:Commands) site.
 
-5. The `Liberate Science` [rmarkdown workshop](https://github.com/libscie/rmarkdown-workshop)
+6. The `Liberate Science` [rmarkdown workshop](https://github.com/libscie/rmarkdown-workshop)
 repository on github.
 
-6. A nice article by [www.accelebrate.com](https://www.accelebrate.com/library/how-to-articles/r-rstudio-library) on library paths in RStudio.
+7. A nice article by [www.accelebrate.com](https://www.accelebrate.com/library/how-to-articles/r-rstudio-library) on library paths in RStudio.
 
-7. A nice article on R/RStudio in
+8. A nice article on R/RStudio in
 [Ubuntu](https://cran.r-project.org/bin/linux/ubuntu/README.html) Linux.
 
 
-# Some helpful template examples
+## Helpful template examples
 
 - Lucy McGowan's [dissertation toolkit](https://github.com/LucyMcGowan/dissertation-toolkit)
 github repository. Lucy wrote her dissertation using
