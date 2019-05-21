@@ -9,6 +9,7 @@ def set_roi_color_and_stroke(int_width, int_R, int_G, int_B):
 	set_roi_color_and_stroke(str_color, int_R, int_G, int_B)
 
 	Set the color and stroke of the current ROI
+	Add to image with Image > Overlay > Add Selection (CMD B)
 
 	Parameters
 	==========

@@ -1,0 +1,161 @@
+---
+title: "Basic Scripting Fiji/ImageJ"
+author: "J. R. Minter"
+date: "Started: 2019-05-20, Last modified: 2019-05-20"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+
+[Back to ImageJ](ImageJ.html)
+
+
+# Introduction
+
+We will use the images that I downloaded and installed in the `./tif`
+directory. We will use the
+[Scripting Slides](http://imagej.github.io/presentations/fiji-scripting/#/).
+There are active links in the slides.
+
+The video is [here](https://vimeo.com/218520432). I will include time stamps
+for the exercises.
+
+Ellen Arena is a postoc at [LOCI](https://loci.wisc.edu/). She is one of the
+maintainers of ImageJ.
+
+(6:00)
+Scripts help with documenting our work. Ellen thinks of them as her
+lab notebook for computation. By adding comments you cna record what you did
+and why. The "what" is the code; the notes are the "why" (and your observations).
+You always want to think about "down the road." I recall Karl Broman:
+
+> Your closest collaborator is you, six months from now. And you don't respond
+> to email...
+
+Ask yourself:
+
+> When you read it again, can you replicate it?
+
+We all want to automate our analyses to avoid unneeded repetition and to have
+reproducible analyses. And you want to share your work...
+
+# The macro recorder
+
+The macro recorder is built into Fiji/ImageJ. The recorder saves the steps in a
+text file. You can record in multiple languages
+
+
+- Use "l" to get the command finder and type `record` and select the
+`Record...` entry and press `Run`. This starts the recorder.
+
+  ![Macro recorder languages (8:45)](png/recorder_languages.png) 
+  
+  All the scripts today will be in the ImageJ macro language. it is not the most
+  powerful language but it is a good place to start in ImageJ.
+  
+  Opening the `Blobs` sample image produces `run("Blobs (25K)");`. Note that
+  threshold commands are recorded, even the check box togggles. (9:55)
+  
+  Creating a mask produces `run("Create Mask");`. Each step is recorded.
+  
+# The plan
+
+1. Close the recorder
+2. Read in one of the images using Bioformats importer to preserve metadata
+3. Open image 5.
+4. Switch LUT to Gray
+5. Now open the recorder (`Record...`this prevents hard-coding opening images),
+   Make sure we are recording in the macro language (12:35).
+6. Do the following:
+   - Gaussian Blur with sigma=2
+   - Run Threshold, use the default with a dark background
+   - Create a mask
+   - Run a Watershed
+   - Run `Analyze Particles` with size from 2000 to infinity, exclude edges,
+     and add to ROI manager
+   - Press `Create` to send the commands to the Script Manager
+   - Make sure the language is `ImageJ Macro`. Note that more languages
+     are available:
+   
+     ![Languages available and syntax coloring.](png/languages_available.png)
+   - Our code looks like this (19:13)
+    
+     ```
+     run("Gaussian Blur...", "sigma=2");
+     //run("Threshold...");
+     setAutoThreshold("Default dark");
+     run("Create Mask");
+     run("Watershed");
+     run("Analyze Particles...", "size=2000-Infinity exclude add");
+     ```
+     
+     It is a good start. Now we "fix it up"
+     
+     
+# Introduction to Script Parameters (20:47)
+
+1. We edit, adding a script parameter
+   
+    ```
+    // @int(label = "Minimum size px") minSize
+    run("Gaussian Blur...", "sigma=2");
+    //run("Threshold...");
+    setAutoThreshold("Default dark");
+    run("Create Mask");
+    run("Watershed");
+    run("Analyze Particles...", "size=" + minSize + "-Infinity exclude add");
+    ```
+    
+    We re-open image with Bioformats
+    
+    Variable names **are case-sensitive**! (28:29)
+
+# Storing Macros
+
+- From script editor, save the .ijm file in Fiji.app/scripts/Plugins
+(note the capital P).
+
+- We can also group scripts in subfolders of Plugins (37:17)
+  I saved this as `Nuclei_Count.ijm` in `/Applications/Fiji.app/scripts/Plugins`.
+
+- Close and re-open Fiji to have it find the script
+
+   ![Note that they are found at the bottom](png/plug_ins_at_bottom.png)
+
+**_Nota Bene_:** Save copies of your scripts in a git repository because if you
+have to reinstall Fiji, you might lose your scripts!!!! (39:09).
+
+Remember the code for this example is
+[here](http://imagej.github.io/presentations/fiji-scripting/#/4/4).
+
+and reproduced below:
+
+```
+#@int(label = "Minimum size") minSize
+
+setBatchMode(true);
+id = getImageID(); // get original image id
+run("Duplicate...", " "); // duplicate original image and work on the copy
+run("Gaussian Blur...", "sigma=2");
+setAutoThreshold("Default dark");
+//run("Threshold...");
+run("Create Mask");
+run("Watershed");
+run("Analyze Particles...", "size=" + minSize + "-Infinity display exclude add");
+run("Clear Results"); // delete contents of results table
+selectImage(id); // activate original image
+roiManager("Show All with labels"); // overlay ROIs
+roiManager("Deselect");
+roiManager("Measure"); // measure on original image
+```
+
+# More on the Script Editor
+
+(Starting at 40:02) - stop for night...
+
+
+
+[Back to ImageJ](ImageJ.html)

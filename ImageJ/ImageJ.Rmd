@@ -39,6 +39,11 @@ I summarized the video.
 A modern approach uses machine learning. One implementation is the
 [Trainable Weka Segmentation](trainable_weka_segmentation.html).
 
+# Basic Scripting
+
+Ellen Arena did a nice tutorial on [Basic Scripting](basic_scripting.html)
+I summarized the video.
+
 # Quick tips
 
 - be **sure** to **_uncheck_** `Use SCIFIO when  opening files (BETA!)`.
@@ -225,7 +230,7 @@ plugin. This uses `ImgLib2`. There is a discussion of this plugin on the
 - kodakBubbles.py
 
 
-## A fix for Fiji startup problems on MacOS Mojave
+## A fix for Fiji start-up problems on MacOS Mojave
 
 I'm not having problems at the moment, but users with new installs are.
 
@@ -340,9 +345,9 @@ This seems to be caused by moving to Jython 2.7.1. A work-around is to add
  -Dpython.console.encoding=UTF-8
 ```
 
-to the startup.
+to the start-up.
 
-On my windows box, my startup alias uses this string:
+On my windows box, my start-up alias uses this string:
 
 ```
 C:\Apps\Fiji.app.win64\ImageJ-win64.exe -Dpython.cachedir.skip=false -Dpython.console.encoding=UTF-8  --
@@ -481,8 +486,8 @@ There is a useful tutorial attributed to [Chris Ambrose](http://www.allandebono.
 ```
 ip.setMinAndMax(15000, 24000);
 ```
-# Explicitly setting the standard grayscale LUT
-[Michael Schmid](http://imagej.1557.x6.nabble.com/Problem-saving-PNG-files-in-particular-order-td5011977.html#a5012010) notes that one can explicitly set the standard grayscale LUT with the following snippet
+# Explicitly setting the standard gray scale LUT
+[Michael Schmid](http://imagej.1557.x6.nabble.com/Problem-saving-PNG-files-in-particular-order-td5011977.html#a5012010) notes that one can explicitly set the standard gray scale LUT with the following snippet
 
 ```
  ip.setColorModel(ip.getDefaultColorModel()) 
@@ -517,7 +522,7 @@ Java seems most efficient... Apparently written in 2005, [Hartenstein](https://w
 4. [Add_Noise.py](https://www.mcdb.ucla.edu/Research/Hartenstein/software/imagej/Add_Noise.py) 44 sec (macro-like version, but using python's random.randint() function)
 
 All this plugin/macro/script does is to duplicate the current image, get one pixel at a time and add random noise to it.
-The ImageJ builtin macro language is certainly more specific to ImageJ and thus goes through less clutter than the more general jython interpreter. Still a 4x in execution time is quite astonishing. Luckily enough the biggest different is made when using the java.util.Random class instead of python's 'random' module.
+The ImageJ built-in macro language is certainly more specific to ImageJ and thus goes through less clutter than the more general jython interpreter. Still a 4x in execution time is quite astonishing. Luckily enough the biggest different is made when using the java.util.Random class instead of python's 'random' module.
 Note that the complexity of the 3 files is quite similar, both in terms of length and in assumptions about the system. Thus the coder needs to learn several conventions before writing any of the 3 versions of this program. Stay with Java plugins if speed matters to your program!
 Jython though really pays off when properly optimized, and it's particularly useful to make GUIs in no time.
 
@@ -612,7 +617,7 @@ I wanted a substitute for analySIS Five's ``Extended Focus Imaging``. ImageJ/Fij
 
 ## Test Images
 
-I have a test image stacck (pre-aligned) in ``$GIT_HOME/OSImageAnalysis/images/extended-depth-of-field/Mattheddleite/Mattheddleite-jm-cr-align-stack.tif``.
+I have a test image stack (pre-aligned) in ``$GIT_HOME/OSImageAnalysis/images/extended-depth-of-field/Mattheddleite/Mattheddleite-jm-cr-align-stack.tif``.
 
 ## Procedure
 
@@ -761,7 +766,7 @@ An alternative: Read only part of the video (the AVI import dialog has an option
 
 > Plain ImageJ supports the following types: 
 
-> - Raw video with 8-bit or 16-bit grayscale and RGB (3 * 8 = 24 bits/pxl) 
+> - Raw video with 8-bit or 16-bit grayscale and RGB (3 * 8 = 24 bits/px) 
 - Various color ('chroma') subsampling types, because frame grabbers or cameras often deliver these as raw format (Y422, YUYV, I420, NV12, and the like) 
 - PNG or JPEG compression of individual frames (the latter is also known as MJPG). 
 
@@ -902,7 +907,7 @@ imp2.show()
 ```
 
 > So you don’t convert between `ImageProcessors` and
-> ImagePluss, _per se_ – the former is wrapped by the latter.
+> ImagePlus, _per se_ – the former is wrapped by the latter.
 > 
 > Depending on what you are doing, to modify an image you
 > can construct a new ImagePlus that wraps a new or modified
