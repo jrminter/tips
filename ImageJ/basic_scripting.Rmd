@@ -154,7 +154,184 @@ roiManager("Measure"); // measure on original image
 
 # More on the Script Editor
 
-(Starting at 40:02) - stop for night...
+(Starting at 40:02)
+
+1. The left bracket `[` opens the script editor.
+
+2. The syntax highlighting in the Script editor helps us write code.
+
+    **Green**: comments (not processed...) **Except** Script Parameters
+    (more later...)
+    
+    **Yellow**: Functions
+    
+    **Magenta**: Strings
+    
+    **Blue**: Numbers and proxies like `true` and `false`
+    
+# Basic scripting (from slide)
+
+  a. If it is not syntax colored, select a language
+    
+  b. Comments let us add notes of explanation.    
+      Ex:    
+       
+       ```
+       // Comments allow you to put human-readable thoughts
+       // into your code.
+       
+       // The goal of this "macro" is simply to teach you about comments!
+       
+       // Comments help you to remember why you did something:
+       // Set the value to "2" because my boss said so!
+       value = 2; // Comments can be added to any line!
+
+       // Code can be disabled by commenting it out:
+       // x = y * 2;
+       ```
+    
+       In ijm language use `//`    
+       Code is inherently tricky to read. Think of a lab notebook...    
+       We can comment out sections of code to track errors.     
+       Script Parameters may be extracgted from comments.    
+       Ex: `#@int(label = "Minimum size") minSize`     
+       (43:37)    
+       
+#  Variables
+       
+    A variable is a placeholder. The assignment operator is the `=` sign.
+       
+    In the macro language there are only two types of variables: **strings**
+    and **numbers**. Booleans (**true** and **false**) are numbers. (45:03)
+       
+    ```
+    // what sorts of values can we assign?
+    title = "Hello, World!";                // string
+    intensity = 255;                        // number
+    // Note the error: x, y, and a are not yet assigned!!!
+    a = exp(x * sin(y)) + atan(x * y – a);  // expression
+    
+    // string constant vs. variable name
+    text = "title"; 
+    // print(text);
+    text = title;
+    // print(title);
+       
+    x = 3;
+    y = x;
+    x = 5; // what is the value of y after this?
+
+    // the variable is assigned after the expression is evaluated
+    intensity = intensity * 2;
+    ```
+    
+#  Functions
+    
+    ![Function Concept (52:04)](png/function_concept.png)
+    
+    `print()` is a function. There is a list of
+    [built-in macro functions](http://imagej.net/developer/macro/functions.html)
+    and it has a **search menu**! **JRM note**: for work in Jython or other
+    languages, the source code for these built-in functions is
+    [here](https://imagej.nih.gov/ij/developer/source/ij/macro/Functions.java.html).
+    One can also search the [Fiji Wiki](https://imagej.net/Fiji_Wiki)
+    for built-in macro functions.
+    
+#  Function examples (53:30):
+    
+    Recall that functions print to the **Log** window.
+    
+    Functions can **return values**.
+    
+    ```
+    print("Hello, world!");
+    // functions can return values
+    // Hint: use parameters instead of calling getNumber
+    number = getNumber("Type in a number!", 5);
+    
+    // the "run" function is the most important one
+    // it follows the structure of run("Command...", "Argument(s) String");
+    run("Duplicate...", "title=New");
+    
+    // for arguments with spaces, enclose in square brackets
+    run("Duplicate...", "title=[with spaces]");
+    ```
+    
+# Strings (57:12)
+    
+    ```
+    name = "copy";
+    
+    // you can concatenate strings and strings with numbers
+    text = "The name is " + name;
+    
+    // what happens when we type thsi?
+    run("Duplicate...", "title=name");
+    
+    // what's different with this line?
+    run("Duplicate...", "title=" + name);
+    ```
+    
+#  Conditionals (1:00:22)
+    
+    ```
+    #@String instructor
+
+    if (getBoolean("Is " + instructor + " going too fast?")) {
+        hint = "Tell them to to slow down!";
+    }
+    else {
+        hint = "Try to modify the code, play with it...";
+    }
+    showMessage("Advice:", hint);
+    ```
+    
+9.  Loops** (1:05:18)
+    
+    ```
+    // For loops:
+    // They use assignment, test, increment
+    // Use when you know the # of times the loop will run
+    for (i = 1; i <= 10; i++) {
+        print("Counter: " + i);
+     }
+     
+    // While loops:
+    // Use when you do not necessarily know the # of times the loop will run
+    while (getBoolean("Do you want me to keep going?")) {
+         print("Ok, I'm still going...");
+    }
+    showMessage("Ok, I'm done!");
+    ```
+    
+# Script parameters(1:16:03)
+    
+    
+# Batch processing (1:22:37)
+       
+# Process folder IJ1 macro (1:24:55)
+       
+# Batch Processing - Nuclei (1:29:58)
+
+    ```
+    #@int(label = "Minimum size") minSize
+    setBatchMode(true);
+    id = getImageID(); // get original image id
+    run("Duplicate...", " "); // duplicate original image and work on the copy
+    run("Gaussian Blur...", "sigma=2");
+    setAutoThreshold("Default dark");
+    //run("Threshold...");
+    run("Create Mask");
+    run("Watershed");
+    run("Analyze Particles...", "size=" + minSize + "-Infinity display exclude add");
+    run("Clear Results"); // delete contents of results table
+    selectImage(id); // activate original image
+    roiManager("Show All with labels"); // overlay ROIs
+    roiManager("Deselect");
+    roiManager("Measure"); // measure on original image
+    ```
+       
+# Further Reading (1:39:33)
 
 
 

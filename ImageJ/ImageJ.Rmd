@@ -41,8 +41,12 @@ A modern approach uses machine learning. One implementation is the
 
 # Basic Scripting
 
-Ellen Arena did a nice tutorial on [Basic Scripting](basic_scripting.html)
-I summarized the video.
+Ellen Arena did a nice tutorial on Basic Scripting. I have a cached copy
+[here](basic_scripting.html) were I summarized the video.
+
+Important takeaways
+
+- The left bracket `[` on your keyboard opens the Script Editor
 
 # Quick tips
 
