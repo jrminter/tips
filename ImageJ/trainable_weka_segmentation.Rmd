@@ -1,7 +1,7 @@
 ---
 title: "Trainable Weka Segmentation"
 author: "J. R. Minter"
-date: "Started: 2019-05-17, Last modified: 2019-05-18"
+date: "Started: 2019-05-17, Last modified: 2019-05-21"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -31,7 +31,7 @@ It is darker in the upper left....
 
 2. The user trains the system with part of your input data, teaching the
 classifier  what to segment. The results may be applied to multiple images.
-The user benefis from the algorithms included in the package.
+The user benefits from the algorithms included in the package.
 
 3. The output is a labeled result based on the data training set used to train
 the model.
@@ -43,12 +43,12 @@ the model.
 The user explains the problem:
 
 > I seeded cells in microwells to measure the difference in aggregation.
-> Pictures were taken through a microscope. Now I want to analyse the size of
+> Pictures were taken through a microscope. Now I want to analyze the size of
 > the aggregates. Therefore I want to **outline the clump of cells** then to be
-> able to anlyse them. I have to repeat this for every clump in the picture.
+> able to analyze them. I have to repeat this for every clump in the picture.
 > (I have many many more pictures to go through...) I started drawing the
 > outlines with the freehand tool (JRM: **ugh!**), but I would want to automate
-> this process. **The wand tool is way too rough and unprecise**.
+> this process. **The wand tool is way too rough and imprecise**.
 > I’m still a beginner, I have not much of a clue how imageJ exactly works.
 > (JRM: an honest user...) If someone of you could help me further, I’d be
 > incredibly grateful.

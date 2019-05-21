@@ -1,7 +1,7 @@
 ---
 title: "Basic Segmentation"
 author: "J. R. Minter"
-date: "Started: 2019-05-17, Last modified: 2019-05-20"
+date: "Started: 2019-05-17, Last modified: 2019-05-21"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -227,19 +227,19 @@ the boundary. First we need to fill in holes and can use binary operations.
 First run `Fill Holes`. Then `Dilate`, `Fill Holes`, `Erode`.
 
 - Run `Analyze Particles`. Set the bottom size to 1000 px., check 
-`Exculude on edges` and `Add to Manager`, and then `OK`. Our tube shows
+`Exclude on edges` and `Add to Manager`, and then `OK`. Our tube shows
 up in the `ROI Manager`. Now we can `Skeletonize`. A copy of the image
 is flattened and shown below.
 
-![The sketonized tube](png/tube-skeletonized-2.bmp)
+![The skeletonized tube](png/tube-skeletonized-2.bmp)
 The central line is the longest, shortest path for the object. We can run
 `Analyze Skeleton(2D/3D)` and select `Calculate longest-shortest path`. This
 prints out the length in the `Results Table`. The value is 3164.106 (px?)
 
-![measure thelongest-shortest_path](png/ana_skel_longest_shortest_path.png)
+![measure the longest-shortest_path](png/ana_skel_longest_shortest_path.png)
 
 
-![A lattened image with the longest-shortest path](png/longest-shortest-path-flattened.png)
+![A flattened image with the longest-shortest path](png/longest-shortest-path-flattened.png)
 
 (1:51:39). It is all macro-record-able...
 
@@ -265,7 +265,7 @@ blurred image and create a 32 bit image. It looked still JRM Q: Why not divide?
 
 **Note**: I scripted a background subtraction using division and came up with:
 
-![**Left**: Original RGB image. **Right**: After channel-by-channel background subtraction using a Gaussian Blurr. Note that the JPG artifacts are still present on the BKS image... ](png/bubbles_cells_before_after_channel-by-channel_bks.png)
+![**Left**: Original RGB image. **Right**: After channel-by-channel background subtraction using a Gaussian Burr. Note that the JPG artifacts are still present on the BKS image... ](png/bubbles_cells_before_after_channel-by-channel_bks.png)
 
 My script is [here](py/cells_and_bubbles_rgb_bks.py).
 

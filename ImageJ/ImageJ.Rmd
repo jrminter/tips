@@ -1,7 +1,7 @@
 ---
 title: "Image-J Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-05-18"
+date: "Started: 2013-07-16, Last modified: 2019-05-21"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -147,7 +147,7 @@ From [imagej.net](https://imagej.net/Image_Intensity_Processing#Flat-field_corre
 >
 > and the results...
 >
-> ![Results of the divide operarion](figs/ICFFieldResults.png).
+> ![Results of the divide operation](figs/ICFFieldResults.png).
 
 
 ## Getting openjdk on mac
@@ -434,7 +434,7 @@ Here is a reasonable workflow.
 2. **Start MosaicJ:** Open the plug-in from the ``Plugins > Stitching`` menu.
 3. **Load your images:** From the MosaicJ file menu choose ``Load Image sequence`` and select the first image in your ``prep`` folder. This will load the images into MosaicJ's bottom panel.
 4. **Rough placement:** Click each image in the bottom panel. It will place each image into the top panel. Use the mouse to roughly move each image into the position it should have in the array.
-5. **Fine placement:** use the mouse to better align the tiles. The ``Scale > Magnifiy`` menu item will zoom. Note that ``Ctrl +`` (using the plus on the numeric keypad) shortcut zooms; ``Ctrl -`` shrinks. Do your best to move the images so the features overlap.
+5. **Fine placement:** use the mouse to better align the tiles. The ``Scale > Magnify`` menu item will zoom. Note that ``Ctrl +`` (using the plus on the numeric keypad) shortcut zooms; ``Ctrl -`` shrinks. Do your best to move the images so the features overlap.
 6. **Create the montage:** Use ``File > Create Mosaic`` to generate the montage image. Save it as a tif in the parent folder of your ``prep`` folder. You can then crop, correct aspect ratio, adjust the LUT as needed and burn a scale bar.
 
 # Stack Alignment using the TemplateMatching Plug-in
@@ -477,7 +477,7 @@ The ``Cookbook > Annotating images > Add Scale bar`` choice from the menu opens 
 There is a useful tutorial attributed to [Chris Ambrose](http://www.allandebono.org/show/protocols/imagejoverlays/)
 
 
-# 16bit images
+# 16 bit images
 
 [Michael Schmid](http://imagej.1557.x6.nabble.com/Use-of-LUTS-give-different-results-td5010726.html) provides some interesting tips regarding LUTs for 16 bit images where there is a limited range of information. He notes:
 
@@ -574,7 +574,7 @@ First we need and HSV to RGB function. I found that this worked
 from colorsys import hsv_to_rgb
 def hueDegToRGBCol(hue):
   """hueDegToRGBCol(hue)
-  Convert a hue balue (0 to 360 degrees) to an RGB color.
+  Convert a hue value (0 to 360 degrees) to an RGB color.
   Useful for LUTs."""
   h = hue / 360.
   [r, g, b] =  hsv_to_rgb(h, 1.0, 1.0)
