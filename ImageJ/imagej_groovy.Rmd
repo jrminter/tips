@@ -52,12 +52,18 @@ page.
 
 [Groovy Syntax](http://groovy-lang.org/syntax.html)
 
-I had a **_terrible_** time installing Groovy on my Win 7 system (crunch)
-I ended up downloading the Windows zip file (rezipped installation and
-stored it in  `Dropbox/groovy/groovy-2.5.7.7z` I install it
-`C:/Apps/groovy` and created a batch file `start_groovy_console.bat`
+I had a **_terrible_** time installing Groovy on my Win 7 system (crunch).
+I could not get the installer file to choose a 64 bit java and when it
+used my 32 bit JDK the program crashed on start up.
+
+I ended using the brute force approach: I downloaded the
+[zip file](https://dl.bintray.com/groovy/maven/apache-groovy-binary-2.5.7.zip)
+unzipped it and installed it in `C:/Apps/groovy\groovy-2.5.7`
+(I 7-zipped the installation and
+stored it in`Dropbox/groovy/groovy-2.5.7.7z` I created a batch file
+`start_groovy_console.bat`
 that I install in `C:/Apps/local/path`. I created a Windows shortcut
-`start_groovy_console` that sits on my desktop. )
+`start_groovy_console` that sits on my desktop. It works...
 
 
 [Back to ImageJ](ImageJ.html)
