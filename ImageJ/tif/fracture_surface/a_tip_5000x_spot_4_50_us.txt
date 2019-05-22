@@ -1,0 +1,24 @@
+a_tip_5000x_spot_4_50_us.tif
+
+From IJ Forum:
+https://forum.image.sc/t/creating-binary-image-from-sem-image-of-ductile-dimples-on-fracture-surface/23948
+
+
+Looks like an Al printing plate to me...
+
+Original scale did not make sense.
+It was 0.0294118 cm/px
+I reset to 1 px
+
+I measured the 20 um scale bar.
+Length was 336.336 px
+I measured 0.0595 um/px
+
+Also try BioFormats
+It read properly!!!
+
+image is a high mag fracture surface imported with Bioformats
+
+The Beuccher ref:
+S. Beucher, “The watershed transformation applied to image segmentation,” 10th Pfefferkorn Conf. on Signal and Image Processing in Microscopy and Microanalysis, 16-19 sept. 1991, Cambridge, UK, Scanning Microscopy International, suppl. 6. 1992, pp. 299-314 4
+
