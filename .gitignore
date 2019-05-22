@@ -192,7 +192,6 @@ hyperspy/figure/
 
 # Image-J tips directory
 ImageJ/.DS_Store
-ImageJ/ImageJ.md
 ImageJ/ImageJ.html
 ImageJ/train*.html
 ImageJ/figure/
