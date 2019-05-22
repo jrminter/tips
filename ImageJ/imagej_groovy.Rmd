@@ -50,5 +50,14 @@ ImageJ.net that refers to the Groovy
 [Getting Started](http://groovy-lang.org/documentation.html#gettingstarted)
 page.
 
+[Groovy Syntax](http://groovy-lang.org/syntax.html)
+
+I had a **_terrible_** time installing Groovy on my Win 7 system (crunch)
+I ended up downloading the Windows zip file (rezipped installation and
+stored it in  `Dropbox/groovy/groovy-2.5.7.7z` I install it
+`C:/Apps/groovy` and created a batch file `start_groovy_console.bat`
+that I install in `C:/Apps/local/path`. I created a Windows shortcut
+`start_groovy_console` that sits on my desktop. )
+
 
 [Back to ImageJ](ImageJ.html)
