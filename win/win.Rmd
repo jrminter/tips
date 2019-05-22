@@ -1,7 +1,7 @@
 ---
 title: "Windows Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-02-19"
+date: "Started: 2013-07-16, Last modified: 2019-05-22"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -13,6 +13,10 @@ output:
 [Back to Index](../README.html)
 
 Some useful tips for windows
+
+# Sources of OpenJDK
+
+See [ojdkbuild](https://github.com/ojdkbuild/ojdkbuild)
 
 # SHA2 support required for Win7 after July 2019
 
