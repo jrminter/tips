@@ -49,6 +49,10 @@ Important takeaways
 
 - The left bracket `[` on your keyboard opens the Script Editor
 
+# Groovy Scripting
+
+I have started a [local summary](imagej_groovy.html) of Groovy Scripting. 
+
 # Quick tips
 
 - be **sure** to **_uncheck_** `Use SCIFIO when  opening files (BETA!)`.
