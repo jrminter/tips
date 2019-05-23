@@ -66,7 +66,9 @@ that I install in `C:/Apps/local/path`. I created a Windows shortcut
 `start_groovy_console` that sits on my desktop. It works...
 
 I have a simple groovy script [here](groovy/gaussian_blur.groovy) that uses
-a 32 bit image of my [head shot](groovy/john_32.png).
+a 32 bit image of my head shot
+
+![John's 32 bit/px head shot](groovy/john_32.png).
 
 
 [Back to ImageJ](ImageJ.html)
