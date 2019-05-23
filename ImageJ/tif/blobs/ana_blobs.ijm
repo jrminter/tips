@@ -12,4 +12,7 @@ run("Set Measurements...", "area mean min centroid center perimeter fit shape fe
 run("Analyze Particles...", str_ana_2);
 selectWindow("blobs.tif");
 roiManager("Show All with labels");
+selectWindow("ROI Manager");
+roiManager("Deselect");
+roiManager("Measure");
 
