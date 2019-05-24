@@ -1,0 +1,35 @@
+Key,Value
+ BitsPerPixel,16
+ DimensionOrder,XYCZT
+ IsInterleaved,false
+ IsRGB,false
+ LittleEndian,true
+ PixelType,uint16
+ Series 0 Name,BX61-10X-1-AO-Micro
+ SizeC,1
+ SizeT,1
+ SizeX,1600
+ SizeY,1200
+ SizeZ,1
+Acquisition date,2017-10-06T15:15:00
+Artist,jrminter
+BitsPerSample,16
+Camera name,3-Spot
+Channel name,3-SpotRT-1.00-G16
+Compression,Uncompressed
+Image name,BX61-10X-1-AO-Micro
+ImageLength,1200
+ImageWidth,1600
+Instrument Make,Olympus Soft Imaging Solutions
+Location,/Users/jrminter/Documents/git/tips/ImageJ/tif/for_SIS_metadata/BX61-10X-1-AO-Micro.tif
+Magnification,10.0
+MetaDataPhotometricInterpretation,Monochrome
+Nanometers per pixel (X),0.733094833147616
+Nanometers per pixel (Y),0.733094833147616
+NewSubfileType,0
+NumberOfChannels,1
+PhotometricInterpretation,BlackIsZero
+PlanarConfiguration,Chunky
+ResolutionUnit,None
+SamplesPerPixel,1
+Software,analySIS 5.0
