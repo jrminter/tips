@@ -1,7 +1,7 @@
 ---
 title: "Image-J Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-05-21"
+date: "Started: 2013-07-16, Last modified: 2019-05-25"
 output:
   html_document:
     keep_md: yes
@@ -90,7 +90,11 @@ Install via conda:
 ```
 conda install -c conda-forge pyimagej 
 ```
+## The ParticleSizer Plugin
 
+The `ParticleSizer` plugin measures particle size distributions and
+has an interface to R that works in Windows. There are
+details cached locally [here](particle_sizer.html).
  
 ## Helpful presentations
 
