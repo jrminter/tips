@@ -1,7 +1,7 @@
 ---
 title: "Scripting ImageJ using Groovy"
 author: "J. R. Minter"
-date: "Started: 2019-05-22, Last modified: 2019-05-22"
+date: "Started: 2019-05-22, Last modified: 2019-05-25"
 output:
   html_document:
     keep_md: yes
@@ -66,9 +66,130 @@ that I install in `C:/Apps/local/path`. I created a Windows shortcut
 `start_groovy_console` that sits on my desktop. It works...
 
 I have a simple groovy script [here](groovy/gaussian_blur.groovy) that uses
-a 32 bit image of my head shot
+a 32 bit image of my head shot.
 
 ![John's 32 bit/px head shot](groovy/john_32.png).
+
+# Source Forge example scripts
+
+**From [here](http://ij-plugins.sourceforge.net/plugins/groovy/examples.html)**
+listed as **retired**...
+
+These are useful template examples.
+
+There is a PDF I archive [here](pdf/Tutorial_Recording_Groovy_Scripts.pdf).
+
+## Batch Processing
+
+This script batch processes all images with extension ".png" in the input directory. Applies a median filter to each, and saves them in the output directory.
+
+```
+import ij.*
+ 
+//
+// Process files with given extension.
+//
+ 
+// Names with extension .png
+def nameFilter = ~/.*.png/
+ 
+// Input directory
+def inputDir = new File("my_input_dir");
+ 
+// Output directory
+def outputDir = new File("my_output_dir");
+outputDir.mkdirs();
+ 
+// List all files with extension ".png"
+def inputFiles = new ArrayList<File>()
+inputDir.eachFileMatch(nameFilter) {inputFiles.add(it)}
+ 
+// Iterate through all input files
+inputFiles.each { inputFile ->
+  def src = IJ.openImage(inputFile.absolutePath)
+  def dest = process(src)
+  def outputFile = new File(outputDir, inputFile.name)
+  IJ.saveAs(dest, "tif", outputFile.absolutePath)
+}
+ 
+ 
+def ImagePlus process(ImagePlus src) {
+  // Do some processing
+  IJ.run(src, "Median...", "radius=4")
+  return src
+}
+```
+
+
+## Process Current ImageJ Image
+
+This scripts gets a reference to currently selected image in ImageJ then applies median filter to it. If no image is opened shows "No image" error message.
+
+```
+import ij.IJ
+ 
+process()
+ 
+def process() {
+  // Get currently selected image
+  def imp = IJ.image
+  if (imp == null) {
+    // Show error message
+    IJ.noImage()
+    return
+  }
+ 
+  // Do some processing
+  IJ.run(imp, "Median...", "radius=4")
+  // ...
+}
+```
+
+## Save Image with a Transparency
+
+Example of using Java API to create and save an image with an alpha channel (translucent).
+
+```
+import ij.process.*
+import java.awt.*
+import java.awt.color.*
+import java.awt.image.*
+import javax.imageio.ImageIO
+ 
+def ColorProcessor cp // = ...
+def ByteProcessor alpha // = ...
+def BufferedImage bi = createTransparent(cp, alpha)
+ImageIO.write(bi, "PNG", new File("transparent-image.png"))
+ 
+// Pixels with alpha equal 0 will be transparent, pixels with alpha=255 will
+// be opaque, values between 0 and 255 will vary transparency.
+ 
+def createTransparent(ColorProcessor src, ByteProcessor alpha) {
+  def cs = ColorSpace.getInstance(ColorSpace.CS_sRGB)
+  def bits = [8, 8, 8, 8] as int[]
+  def cm = new ComponentColorModel(cs, bits, true, false,
+                                   Transparency.BITMASK, DataBuffer.TYPE_BYTE)
+  def raster = cm.createCompatibleWritableRaster(src.width, src.height)
+  def dataBuffer = raster.dataBuffer as DataBufferByte
+ 
+  final data = dataBuffer.data
+  final n = (src.pixels as int[]).length
+  final r = new byte[n]
+  final g = new byte[n]
+  final b = new byte[n]
+  final a = (byte[]) alpha.pixels
+  src.getRGB(r, g, b)
+  for (int i = 0; i < n; ++i) {
+    final int offset = i * 4
+    data[offset] = r[i]
+    data[offset + 1] = g[i]
+    data[offset + 2] = b[i]
+    data[offset + 3] = a[i]
+  }
+ 
+  return new BufferedImage(cm, raster, false, null)
+}
+```
 
 
 [Back to ImageJ](ImageJ.html)
