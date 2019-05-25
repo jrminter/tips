@@ -34,12 +34,14 @@ To configure the PlugIn select
 
 # Example use
 
-Thorsten Wagner supplied an image of nano gold particles for analysis
+Thorsten Wagner supplied an image of nano-gold particles for analysis
 
-![The exemplar Au image. This image is not calibrated, so all meaurements are in px.](png/Gold_no_overlay.png)
+![The exemplar Au image. This image is not calibrated, so all measurements are in px.](png/Gold_no_overlay.png)
 
 Processing the image produces this image:
 
-![Processed image. The overlay was burned in wiht](png/Gold_w_overlay.png)
+![Processed image. The overlay was burned into the input image.](png/Gold_w_overlay.png)
+
+The script is [here](ijm/particle_sizer_au.ijm).
 
 [Back to ImageJ](ImageJ.html)
