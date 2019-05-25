@@ -19,7 +19,27 @@ output:
 The [ParticleSizer](https://imagej.net/ParticleSizer) plug-in was written by
 [Thorsten Wagner](https://github.com/thorstenwagner) wraps a `particleSizer`
 function that will size nanoparticles and has an interface to R that works
-on Windows.
+on Windows. The mechanism to set the path to R does not work on Mac or
+Linux.
 
+# Configuration
+
+To configure the PlugIn select
+
+
+> Plugins > NanoDefine > Settings Manager
+
+
+![The ParticleSizer Settings Manager in Windows. Note that the "Set R install directory" box does **not** appear in MacOS. ](png/ParticleSizerSettingsManager.png)
+
+# Example use
+
+Thorsten Wagner supplied an image of nano gold particles for analysis
+
+![The exemplar Au image. This image is not calibrated, so all meaurements are in px.](png/Gold_no_overlay.png)
+
+Processing the image produces this image:
+
+![Processed image. The overlay was burned in wiht](png/Gold_w_overlay.png)
 
 [Back to ImageJ](ImageJ.html)
