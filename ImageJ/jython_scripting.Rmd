@@ -1,7 +1,7 @@
 ---
 title: "Jython Scripting"
 author: "J. R. Minter"
-date: "Started: 2019-05-23, Last modified: 2019-05-23"
+date: "Started: 2019-05-23, Last modified: 2019-05-25"
 output:
   html_document:
     keep_md: yes
@@ -25,6 +25,26 @@ ImageJ.net has instructions for jython scripting in
 [ImageJ2](https://imagej.net/ImageJ2_Python_Scripts).
 
 One needs to **_explicitly_** import the java classes we need.
+
+# A looming issue...
+
+**There is a looming issue**: Curtis Reuden explains
+[here](https://forum.image.sc/t/jython-imagej-coding-advice/23639/13).
+
+> The looming issue is that Python 2 is increasingly going away, so there
+> will be increasing frustration as people only familiar with Python 3 try
+> doing stuff in Jython and find it doesn’t work. I hope this creates pressure
+> for some developers to complete the Python 3 version of Jython, but I don’t
+> know the politics of that;
+> **if no one steps up then Jython may simply molder instead**.
+> Even if a Python 3 version of Jython is created, there is still the issue of
+> native extensions like NumPy not working; hopefully
+> [JyNI](https://jyni.org/) moves forward to
+> address that, but it’s not clear at this point.
+
+This is one reason I am learning [Groovy](imagej_groovy.html).
+
+
 
 # ImageJ1 examples
 

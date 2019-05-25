@@ -637,25 +637,26 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">Jython Scripting</h1>
 <h4 class="author">J. R. Minter</h4>
-<h4 class="date">Started: 2019-05-23, Last modified: 2019-05-23</h4>
+<h4 class="date">Started: 2019-05-23, Last modified: 2019-05-25</h4>
 
 </div>
 
 <div id="TOC">
 <ul>
 <li><a href="#introduction"><span class="toc-section-number">1</span> Introduction</a></li>
-<li><a href="#imagej1-examples"><span class="toc-section-number">2</span> ImageJ1 examples</a><ul>
-<li><a href="#using-overlays-on-image-channels"><span class="toc-section-number">2.1</span> Using overlays on image channels</a></li>
+<li><a href="#a-looming-issue"><span class="toc-section-number">2</span> A looming issue…</a></li>
+<li><a href="#imagej1-examples"><span class="toc-section-number">3</span> ImageJ1 examples</a><ul>
+<li><a href="#using-overlays-on-image-channels"><span class="toc-section-number">3.1</span> Using overlays on image channels</a></li>
 </ul></li>
-<li><a href="#imagej2-examples"><span class="toc-section-number">3</span> ImageJ2 Examples</a><ul>
-<li><a href="#applythreshold.py"><span class="toc-section-number">3.1</span> ApplyThreshold.py</a></li>
+<li><a href="#imagej2-examples"><span class="toc-section-number">4</span> ImageJ2 Examples</a><ul>
+<li><a href="#applythreshold.py"><span class="toc-section-number">4.1</span> ApplyThreshold.py</a></li>
 </ul></li>
-<li><a href="#unclassified-examples"><span class="toc-section-number">4</span> Unclassified examples</a><ul>
-<li><a href="#a-nice-example-from-the-imagej-forum"><span class="toc-section-number">4.1</span> A nice example from the ImageJ Forum</a></li>
+<li><a href="#unclassified-examples"><span class="toc-section-number">5</span> Unclassified examples</a><ul>
+<li><a href="#a-nice-example-from-the-imagej-forum"><span class="toc-section-number">5.1</span> A nice example from the ImageJ Forum</a></li>
 </ul></li>
-<li><a href="#reproducible-jython-scripting"><span class="toc-section-number">5</span> Reproducible Jython Scripting</a><ul>
-<li><a href="#using-a-mu-in-a-jython-script"><span class="toc-section-number">5.1</span> Using a mu in a Jython script</a><ul>
-<li><a href="#getting-dir-to-work-with-jython-in-fiji"><span class="toc-section-number">5.1.1</span> Getting dir() to work with Jython in Fiji</a></li>
+<li><a href="#reproducible-jython-scripting"><span class="toc-section-number">6</span> Reproducible Jython Scripting</a><ul>
+<li><a href="#using-a-mu-in-a-jython-script"><span class="toc-section-number">6.1</span> Using a mu in a Jython script</a><ul>
+<li><a href="#getting-dir-to-work-with-jython-in-fiji"><span class="toc-section-number">6.1.1</span> Getting dir() to work with Jython in Fiji</a></li>
 </ul></li>
 </ul></li>
 </ul>
@@ -668,10 +669,18 @@ $(document).ready(function () {
 <p>ImageJ.net has instructions for jython scripting in <a href="https://imagej.net/Jython_Scripting">ImageJ1</a> and in <a href="https://imagej.net/ImageJ2_Python_Scripts">ImageJ2</a>.</p>
 <p>One needs to <strong><em>explicitly</em></strong> import the java classes we need.</p>
 </div>
+<div id="a-looming-issue" class="section level1">
+<h1><span class="header-section-number">2</span> A looming issue…</h1>
+<p><strong>There is a looming issue</strong>: Curtis Reuden explains <a href="https://forum.image.sc/t/jython-imagej-coding-advice/23639/13">here</a>.</p>
+<blockquote>
+<p>The looming issue is that Python 2 is increasingly going away, so there will be increasing frustration as people only familiar with Python 3 try doing stuff in Jython and find it doesn’t work. I hope this creates pressure for some developers to complete the Python 3 version of Jython, but I don’t know the politics of that; <strong>if no one steps up then Jython may simply molder instead</strong>. Even if a Python 3 version of Jython is created, there is still the issue of native extensions like NumPy not working; hopefully <a href="https://jyni.org/">JyNI</a> moves forward to address that, but it’s not clear at this point.</p>
+</blockquote>
+<p>This is one reason I am learning <a href="imagej_groovy.html">Groovy</a>.</p>
+</div>
 <div id="imagej1-examples" class="section level1">
-<h1><span class="header-section-number">2</span> ImageJ1 examples</h1>
+<h1><span class="header-section-number">3</span> ImageJ1 examples</h1>
 <div id="using-overlays-on-image-channels" class="section level2">
-<h2><span class="header-section-number">2.1</span> Using overlays on image channels</h2>
+<h2><span class="header-section-number">3.1</span> Using overlays on image channels</h2>
 <p>Wayne Rasband provided (2013-05-24) this useful snippet</p>
 <pre><code>imp.setMode(CompositeImage.GRAYSCALE);
 overlay = new Overlay();
@@ -682,9 +691,9 @@ overlay.add(rect1);</code></pre>
 </div>
 </div>
 <div id="imagej2-examples" class="section level1">
-<h1><span class="header-section-number">3</span> ImageJ2 Examples</h1>
+<h1><span class="header-section-number">4</span> ImageJ2 Examples</h1>
 <div id="applythreshold.py" class="section level2">
-<h2><span class="header-section-number">3.1</span> ApplyThreshold.py</h2>
+<h2><span class="header-section-number">4.1</span> ApplyThreshold.py</h2>
 <p>This is from the <a href="https://imagej.net/ImageJ2_Python_Scripts">ImageJ2 example page</a>.</p>
 <p>Note the use of script parameters.</p>
 <pre><code>#@ String(label=&quot;Threshold Method&quot;, required=true, choices={'otsu', 'huang'}) method_threshold
@@ -720,9 +729,9 @@ output = ds.create(thresholded)</code></pre>
 </div>
 </div>
 <div id="unclassified-examples" class="section level1">
-<h1><span class="header-section-number">4</span> Unclassified examples</h1>
+<h1><span class="header-section-number">5</span> Unclassified examples</h1>
 <div id="a-nice-example-from-the-imagej-forum" class="section level2">
-<h2><span class="header-section-number">4.1</span> A nice example from the ImageJ Forum</h2>
+<h2><span class="header-section-number">5.1</span> A nice example from the ImageJ Forum</h2>
 <p>From <a href="https://forum.image.sc/u/mountain_man">MountainMan</a> responding to a question by <a href="https://forum.image.sc/u/holastello">holastello</a>:</p>
 <blockquote>
 <p>Let me answer your last question first.</p>
@@ -806,7 +815,7 @@ imp2.show()</code></pre>
 </div>
 </div>
 <div id="reproducible-jython-scripting" class="section level1">
-<h1><span class="header-section-number">5</span> Reproducible Jython Scripting</h1>
+<h1><span class="header-section-number">6</span> Reproducible Jython Scripting</h1>
 <p>For a couple of years I have been trying to follow the <code>DRY</code> process (Don’t Repeat Yourself) for more reproducible Jython scripting with DTSA. Recently I have been migrating my ImageJ scripts to Jython to use with Fiji. I just learned how import user functions…</p>
 <ol style="list-style-type: decimal">
 <li>Create a folder <code>Lib</code> in FIJI_ROOT/jars/</li>
@@ -876,7 +885,7 @@ def hueDegToRGBCol(hue):
   
   return ret</code></pre>
 <div id="using-a-mu-in-a-jython-script" class="section level2">
-<h2><span class="header-section-number">5.1</span> Using a mu in a Jython script</h2>
+<h2><span class="header-section-number">6.1</span> Using a mu in a Jython script</h2>
 <p><a href="http://tex.stackexchange.com/questions/33965/siunitx-%C2%B5-doesnt-work">Stackexchange</a> helped!!!</p>
 <p>The usual Windows key sequence for a <span class="math inline">\(\mu\)</span> is <strong>not</strong> a utf-8 character. Using this gives errors in Jython scripts. Here is how to define a <span class="math inline">\(\mu\)</span> as a utf-8 character:</p>
 <pre><code># DO NOT use GREEK SMALL LETTER MU
@@ -891,7 +900,7 @@ units = IJ.micronSymbol + &quot;m&quot;
 print(units)</code></pre>
 <p>Note that <code>IJ</code> also defines <code>IJ.angstromSymbol</code> and <code>IJ.degreeSymbol</code> …</p>
 <div id="getting-dir-to-work-with-jython-in-fiji" class="section level3">
-<h3><span class="header-section-number">5.1.1</span> Getting dir() to work with Jython in Fiji</h3>
+<h3><span class="header-section-number">6.1.1</span> Getting dir() to work with Jython in Fiji</h3>
 <p>One needs to start Fiji with a command switch. On MacOSX, this works:</p>
 <pre><code>/Applications/Fiji.app/Contents/MacOS/ImageJ-macosx -Dpython.cachedir.skip=false --</code></pre>
 <p>On Win7, this works from the <code>fiji.cmd</code> in <code>C:\Apps\local</code>:</p>
