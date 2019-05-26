@@ -15,7 +15,7 @@ output:
 # Introduction
 
 Our pool is 30+ years old. We have used Baquacil the whole time and we
-are still on the orginal liner.
+are still on the original liner.
 
 **Pool volume**: We have a 24 ft pool with deep center so that should be their
 expanded capacity which they list as 10,410 gallons. Pettis thinks it is closer
@@ -25,15 +25,15 @@ to 14,000 gallons.
 
 This year (2019) when we removed the cover, some of the water from the cover
 got into the pool. We have cloudy water. Pettis recommended a pH adjustment
-and a flocculaant (get details from Eileen). We added the chemicals they,
-suggested, ran the filter for 2 hrs as recommended, amd turned it off for
+and a flocculent (get details from Eileen). We added the chemicals they,
+suggested, ran the filter for 2 hrs as recommended, and turned it off for
 two days as recommended. 
 
-Three days later it was still cloudy, soe we vaccumed to waste as directed and
+Three days later it was still cloudy, so we vacuumed to waste as directed and
 will let it pump overnight. Pool filter pressure 12.5 psi. We will take a water
 sample to pettis tomorrow.
 
-# Flocculent info
+# Flocculant info
 
 ## Baquacil
 
@@ -89,7 +89,7 @@ site. Their explanation of colloid chemistry is pretty good. Cached locally belo
 
 > If you have a sand filter, you might be able to speed up the process by using a product like Bio-Lab’s Sparkle Up or even DE powder. These will sit on the top of the filter sand and increase its ability to filter down to a finer micron. But remember to watch your pressure gauge and backwash when needed.
 
-> **Seems flakey to me**
+> **Seems flaky to me**
 
 > Floc is like a clarifier in that the chemical you add to your pool, the flocculent, attracts the tiny particles to itself. Nerd alert! It’s about to get technical! Flocculation is the process of bringing colloids (microscopically dispersed insoluble particles) out of suspension (not out of solution because they are not nor, will they ever be dissolved) to form a flack (floc). These flakes then become heavy enough and large enough that they sink to the bottom.
 
