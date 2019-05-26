@@ -80,4 +80,23 @@ print(plt)
 
 ![](ana-pol4455_files/figure-html/plotECD-1.png)<!-- -->
 
+
+Try a linear distribution panel plot that uses base graphics. This assunmes
+a linear (not lognormal) particle size distribution from my old `rAnaLab`
+package.
+
+Sometime I need to migrate this function to ggplot2...
+
+
+
+```r
+library(rAnaLab)
+
+linear.distn.panel.plot(particles$ecd, n.brks = 25, distn.lab = "ecd [nm]",
+  hist.legend = TRUE, legend.loc = "topright", kern.bw = "nrd0",
+  plt.median = TRUE, scale.mult = 1.2)
+```
+
+![](ana-pol4455_files/figure-html/linearDistPanelPlot-1.png)<!-- -->
+
 [Back to ImageJ](ImageJ.html)
