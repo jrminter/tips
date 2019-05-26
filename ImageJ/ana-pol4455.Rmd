@@ -51,7 +51,7 @@ library(ggplot2)
 bSave = FALSE
 
 plt <- ggplot(particles, aes(ecd)) +
-       geom_histogram(binwidth = 1) +
+       geom_histogram(binwidth = 1.0) +
        ggtitle("Equivalent Circular Diameter") +
        theme(plot.title = element_text(lineheight=2, size=12)) +
        labs(x="diameter [nm]", y="Count") +
