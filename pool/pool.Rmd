@@ -1,0 +1,112 @@
+---
+title: "Pool Tips"
+author: "J. R. Minter"
+date: "Started: 2019-05-26, Last modified: 2019-05-26"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+
+[Back to Index](../README.html)
+
+# Introduction
+
+Our pool is 30+ years old. We have used Baquacil the whole time and we
+are still on the orginal liner.
+
+**Pool volume**: We have a 24 ft pool with deep center so that should be their
+expanded capacity which they list as 10,410 gallons. Pettis thinks it is closer
+to 14,000 gallons.
+
+# Cloudy water
+
+This year (2019) when we removed the cover, some of the water from the cover
+got into the pool. We have cloudy water. Pettis recommended a pH adjustment
+and a flocculaant (get details from Eileen). We added the chemicals they,
+suggested, ran the filter for 2 hrs as recommended, amd turned it off for
+two days as recommended. 
+
+Three days later it was still cloudy, soe we vaccumed to waste as directed and
+will let it pump overnight. Pool filter pressure 12.5 psi. We will take a water
+sample to pettis tomorrow.
+
+# Flocculent info
+
+## Baquacil
+
+From Baquacil's
+[troubleshooting](https://www.baquacil.com/troubleshooting/solution) page:
+
+> **Cloudy Water (Haze)**
+>
+>
+> One of the major causes of hazy pool water, or compromised water clarity,
+> is lack of adequate filtration. If your filter is dirty or clogged, it can't
+> operate at peak efficiency. This can happen when an accumulation of unwanted
+> contaminants affect your filter, including dirt, suntan lotion, bacteria and
+> algae, body oils and minerals. And sometimes backwashing alone won't get it
+> really clean. **In fact, backwashing a sand filter too often may actually**
+> **reduce its effectiveness**. That's why **you should deep-clean your filter**
+> **chemically twice during the swimming season with**
+> **BAQUACIL Universal Filter Cleaner**.
+> 
+> A couple of simple rules will help determine which steps to take to solve the
+>problem by determining if:
+>
+> A. You can still see the bottom of your pool or
+>
+> B. You cannot see the bottom of your pool.
+> 
+> Get the full steps and treatment course for solving this problem by
+> downloading our
+> [Treating Haze Reference Sheet](pdf/Haze.pdf) (locally cached)
+> for easy to follow detailed instructions.
+
+## Dolphin Pools
+
+Found information on the
+[Dolphin Pool](https://www.dolphinpool-spa.com/index.php/pro-tip-blog/41-what-the-floc)
+site. Their explanation of colloid chemistry is pretty good. Cached locally below:
+
+> OK…despite your best efforts, your pool water is now cloudy. Your pool professional, hopefully, one of the Happy Dolphin Retail Staff at our store in Plymouth, MN, has suggested you use a clarifier or a flocculent. So, what is a clarifier, a flocculent and what is the difference between them?
+
+> Not a cloud in the sky. BECAUSE it is in my pool!
+
+> First, let’s talk a little bit about why your pool water can get cloudy. Water is cloudy when there are substantial amounts of tiny, tiny little particles in suspension. These little particles are too light to sink to the bottom and are often too small to be caught by your filter. What are they made of? Dust, pollen, dander, body oils, make-up, urine, nitrates, high alkalinity, high calcium, yadda, yadda, yadda. The point? It is hard to know and, to some extent, it doesn’t matter. Cloudy water means a lot of something really small is floating around in the water; we don’t care what it is - we just want to get it out.
+
+> There are two courses of action you can take. You can make the particles bigger, so your filter can grab them, or you can concentrate them on the bottom of the pool so that you can vacuum them out.
+
+> A quick side note here: While it is not uncommon to have cloudy water after a pool party, algae bloom, or when opening in the spring, you should not rely on a clarifier or frequent flocking to maintain clear water. If your pool water is consistently cloudy, there are likely other factors in play. For example, your sanitizer may be ineffective, your water may be out of balance, or your filter may be undersized or damaged. It may even be that you are not filtering enough. You should be turning your pool over - moving your entire pool volume through your filter - at least twice a day (three times a day for a commercial pool).
+
+> I can see clearly now...
+
+> The easiest way to deal with cloudy water is to use a water clarifier. Water clarifiers are positively charged polymers, a macromolecule composed of many repeated subunits. When you pour this into your pool, these macromolecules attract the negatively charged microparticles that are making the water cloudy; this, in turn, causes the macromolecule polymer to grow even larger. It continues to do this until it gets big enough to get caught by the filter.
+
+> Why are polymers positively charged, and why are the cloudy particles negatively charged? I don’t know, but, I do know that if your water is balanced and your filter is working, adding a clarifier will do the trick. It will, however, take some time to work - often several days or more. Also, because you are relying on your filter to get “the stuff” out, you should run your filter 24/7 until your water clears up.
+
+> If you have a sand filter, you might be able to speed up the process by using a product like Bio-Lab’s Sparkle Up or even DE powder. These will sit on the top of the filter sand and increase its ability to filter down to a finer micron. But remember to watch your pressure gauge and backwash when needed.
+
+> **Seems flakey to me**
+
+> Floc is like a clarifier in that the chemical you add to your pool, the flocculent, attracts the tiny particles to itself. Nerd alert! It’s about to get technical! Flocculation is the process of bringing colloids (microscopically dispersed insoluble particles) out of suspension (not out of solution because they are not nor, will they ever be dissolved) to form a flack (floc). These flakes then become heavy enough and large enough that they sink to the bottom.
+
+> The primary difference is that flocs work much faster and grow the particle sizes to very large clumps that will clog your filter.  So instead of running your pump continuously until your water is clear, you add the floc to your pool usually through a skimmer, run your pump for a couple of hours, shut the pump off for 12-24 hours allowing everything to settle to the bottom. Then ever so slowly to not disturb or remix up the floc and contaminants, you vacuum to waste.
+
+> So, which should you use?
+
+> Whether to use a clarifier or a flocculent to clear up your cloudy pool depends on several factors. Time, the ability to vacuum to waste, and the desire to use a little elbow grease.
+
+> If you cannot vacuum to waste, you really should not use a flocculent, only a clarifier.
+
+> If you would rather not do the work of slowly vacuuming the pool and can wait several days for the cloudiness to clear up, then use a clarifier.
+
+> Need your pool clear soon, don’t mind vacuuming and can do it to waste, then flocculating is for you.
+
+
+
+
+
+[Back to Index](../README.html)

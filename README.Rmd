@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-05-09"
+date: "Started: 2013-07-16, Last modified: 2019-05-26"
 output:
   html_document:
     keep_md: true
@@ -177,6 +177,8 @@ This skips several steps from original article!
 [penepma](./penepma/penepma.html)
 
 [plagiarism](./plagiarism/plagiarism.html)
+
+[pool](./pool/pool.html)
 
 [portable makefiles](./portableMakefiles/portableMakefiles.html)
 
