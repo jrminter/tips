@@ -214,7 +214,40 @@ print(pltc)
 
 
 ```r
-library(ggplot2)
+the_plt <- ggplot(particles, aes(x="", y=ecd)) + 
+           geom_boxplot() +
+           coord_fixed(.1) +
+           labs(y="ecd nm") +
+           theme(axis.title.x=element_blank(),
+                 axis.text.x=element_blank(),
+                 axis.ticks.x=element_blank())
+
+print(the_plt)
+```
+
+![](make_gg_panel_plot_files/figure-html/plot_diam_boxplot-1.png)<!-- -->
+
+
+
+```r
+ecd_qq_plt <- ggplot(particles, aes(sample = ecd)) +
+              stat_qq() +
+              stat_qq_line() +
+              labs(y="ECD [nm]") +
+              coord_fixed(.5) +
+              NULL
+         
+print(ecd_qq_plt)
+```
+
+![](make_gg_panel_plot_files/figure-html/ecd_qq_plot-1.png)<!-- -->
+
+
+
+
+
+````
+
 
 pltc <- ggplot(particles, aes(circ)) +
         geom_histogram(binwidth = 0.1) +
@@ -230,9 +263,8 @@ if (bSave == TRUE) {
          width=6, height=4, units="in", dpi=150)
 }
 print(pltc)
-```
 
-![](make_gg_panel_plot_files/figure-html/plotTradCirc-1.png)<!-- -->
+```
 
 Try a linear distribution panel plot that uses base graphics. This assunmes
 a linear (not lognormal) particle size distribution from my old `rAnaLab`

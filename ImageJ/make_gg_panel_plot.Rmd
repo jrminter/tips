@@ -165,8 +165,37 @@ print(pltc)
 ```
 
 
-```{r plotTradCirc, message=FALSE, comment=NA}
-library(ggplot2)
+```{r plot_diam_boxplot, message=FALSE, comment=NA}
+
+the_plt <- ggplot(particles, aes(x="", y=ecd)) + 
+           geom_boxplot() +
+           coord_fixed(.1) +
+           labs(y="ecd nm") +
+           theme(axis.title.x=element_blank(),
+                 axis.text.x=element_blank(),
+                 axis.ticks.x=element_blank())
+
+print(the_plt)
+```
+
+
+```{r ecd_qq_plot}
+ecd_qq_plt <- ggplot(particles, aes(sample = ecd)) +
+              stat_qq() +
+              stat_qq_line() +
+              labs(y="ECD [nm]") +
+              coord_fixed(.5) +
+              NULL
+         
+print(ecd_qq_plt)
+```
+
+
+
+
+
+````
+
 
 pltc <- ggplot(particles, aes(circ)) +
         geom_histogram(binwidth = 0.1) +
