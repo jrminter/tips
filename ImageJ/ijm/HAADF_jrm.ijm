@@ -465,7 +465,7 @@ macro "HAADF" {
 		
 
 		/*
-		 * Register image to shape filter plugins. This enabales the selection of particles by mouse 
+		 * Register image to shape filter plugins. This enables the selection of particles by mouse 
 		 */
 		run("Register Image to ShapeFilter", "image=["+originaltitle+"]");
 		
