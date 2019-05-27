@@ -1,7 +1,7 @@
 ---
 title: "Analyzing POL4455 using ParticleSizer"
 author: "J. R. Minter"
-date: "Started: 2019-05-25, Last modified: 2019-05-25"
+date: "Started: 2019-05-25, Last modified: 2019-05-27"
 output:
   html_document:
     keep_md: yes
@@ -30,76 +30,83 @@ I analyzed my background-subtrated POL4455 image
 
 # Read in the data with R
 
+First load all the R packages we will need.
+
 
 ```r
 library(dplyr)
+library(ggplot2)
+library(latex2exp)
+```
+
+
+```r
 fi <-'./csv/pol4455-particle_sizer.csv'
 df <- read.csv(fi, header=TRUE, as.is=TRUE)
 df <- as_tibble(df)
-df
+summary(df)
 ```
 
 ```
-# A tibble: 1,083 x 26
-   Frame Label      X     Y  Area Area.Conv..Hull Peri. Peri..Conv..Hull
-   <int> <int>  <dbl> <dbl> <dbl>           <dbl> <dbl>            <dbl>
- 1     1     1   78.4  17.5 1088.           1118.  115.             116.
- 2     1     2  994.   22.1  943.            957.  105.             107.
- 3     1     3 1074.   27.0 1361.           1398.  127.             129.
- 4     1     4  640.   26.1 1069.           1097.  113.             114.
- 5     1     5 1162.   26.1 1239.           1267.  121.             123.
- 6     1     6 1245.   28.4 1316.           1347.  125.             127.
- 7     1     7  464.   30.0 1505.           1529.  133.             135.
- 8     1     8  384.   29.5 1284.           1309.  124.             125.
- 9     1     9 1331.   29.7 1344.           1361.  124.             128.
-10     1    10  559.   33.7 1321.           1365.  130.             130.
-# … with 1,073 more rows, and 18 more variables: Feret <dbl>,
-#   Min..Feret <dbl>, Maximum.inscriped.circle.diameter <int>,
-#   Area.equivalent.circle.diameter <dbl>, Long.Side.Length.MBR <dbl>,
-#   Short.Side.Length.MBR <dbl>, Aspect.Ratio <dbl>, Area.Peri. <dbl>,
-#   Circ. <dbl>, Elong. <dbl>, Convexity <dbl>, Solidity <dbl>,
-#   Num..of.Holes <int>, Thinnes.Rt. <dbl>, Contour.Temp. <dbl>,
-#   Orientation <dbl>, Fract..Dim. <dbl>, Fract..Dim..Goodness <dbl>
+     Frame       Label              X                 Y          
+ Min.   :1   Min.   :   1.0   Min.   :  23.59   Min.   :  17.55  
+ 1st Qu.:1   1st Qu.: 271.5   1st Qu.: 424.91   1st Qu.: 390.21  
+ Median :1   Median : 542.0   Median : 821.84   Median : 789.54  
+ Mean   :1   Mean   : 542.0   Mean   : 806.79   Mean   : 781.03  
+ 3rd Qu.:1   3rd Qu.: 812.5   3rd Qu.:1203.36   3rd Qu.:1168.04  
+ Max.   :1   Max.   :1083.0   Max.   :1546.60   Max.   :1545.56  
+      Area      Area.Conv..Hull      Peri.        Peri..Conv..Hull
+ Min.   : 294   Min.   : 303.4   Min.   : 58.12   Min.   : 59.94  
+ 1st Qu.:1214   1st Qu.:1241.5   1st Qu.:119.84   1st Qu.:121.92  
+ Median :1321   Median :1348.9   Median :125.29   Median :127.21  
+ Mean   :1310   Mean   :1340.2   Mean   :124.81   Mean   :126.54  
+ 3rd Qu.:1421   3rd Qu.:1456.2   3rd Qu.:130.58   3rd Qu.:132.20  
+ Max.   :1865   Max.   :1904.3   Max.   :153.25   Max.   :152.43  
+     Feret         Min..Feret    Maximum.inscriped.circle.diameter
+ Min.   :21.28   Min.   :16.80   Min.   :0                        
+ 1st Qu.:40.36   1st Qu.:36.66   1st Qu.:0                        
+ Median :42.25   Median :38.19   Median :0                        
+ Mean   :42.16   Mean   :37.81   Mean   :0                        
+ 3rd Qu.:43.77   3rd Qu.:39.72   3rd Qu.:0                        
+ Max.   :55.33   Max.   :45.83   Max.   :0                        
+ Area.equivalent.circle.diameter Long.Side.Length.MBR
+ Min.   :19.35                   Min.   :18.33       
+ 1st Qu.:39.31                   1st Qu.:38.19       
+ Median :41.01                   Median :39.72       
+ Mean   :40.74                   Mean   :39.53       
+ 3rd Qu.:42.54                   3rd Qu.:41.25       
+ Max.   :48.73                   Max.   :51.22       
+ Short.Side.Length.MBR  Aspect.Ratio     Area.Peri.         Circ.      
+ Min.   :16.80         Min.   :1.000   Min.   : 5.059   Min.   :11.37  
+ 1st Qu.:36.66         1st Qu.:1.000   1st Qu.:10.097   1st Qu.:11.82  
+ Median :38.19         Median :1.038   Median :10.526   Median :11.93  
+ Mean   :37.90         Mean   :1.046   Mean   :10.445   Mean   :11.95  
+ 3rd Qu.:39.72         3rd Qu.:1.050   3rd Qu.:10.898   3rd Qu.:12.02  
+ Max.   :45.83         Max.   :1.688   Max.   :12.402   Max.   :15.04  
+     Elong.         Convexity        Solidity      Num..of.Holes
+ Min.   :0.0510   Min.   :0.995   Min.   :0.9030   Min.   :0    
+ 1st Qu.:0.1770   1st Qu.:1.000   1st Qu.:0.9750   1st Qu.:0    
+ Median :0.2200   Median :1.000   Median :0.9780   Median :0    
+ Mean   :0.2266   Mean   :1.000   Mean   :0.9775   Mean   :0    
+ 3rd Qu.:0.2650   3rd Qu.:1.000   3rd Qu.:0.9810   3rd Qu.:0    
+ Max.   :0.6800   Max.   :1.000   Max.   :0.9900   Max.   :0    
+  Thinnes.Rt.     Contour.Temp.     Orientation       Fract..Dim.   
+ Min.   :0.8350   Min.   :0.0650   Min.   :  0.093   Min.   :1.128  
+ 1st Qu.:1.0000   1st Qu.:0.1310   1st Qu.: 83.968   1st Qu.:1.538  
+ Median :1.0000   Median :0.1390   Median :130.767   Median :1.567  
+ Mean   :0.9991   Mean   :0.1382   Mean   :114.348   Mean   :1.560  
+ 3rd Qu.:1.0000   3rd Qu.:0.1460   3rd Qu.:156.131   3rd Qu.:1.590  
+ Max.   :1.0000   Max.   :0.1710   Max.   :179.535   Max.   :1.687  
+ Fract..Dim..Goodness
+ Min.   :0.8500      
+ 1st Qu.:0.9650      
+ Median :0.9660      
+ Mean   :0.9638      
+ 3rd Qu.:0.9660      
+ Max.   :0.9910      
 ```
 
-```r
-bSave = FALSE
-area = df$Area
-peri = df$Peri.
 
-trad_circ = 4.0*pi*area/peri^2
-summary(trad_circ)
-```
-
-```
-   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
- 0.8354  1.0453  1.0537  1.0518  1.0629  1.1054 
-```
-
-```r
-particles <- as_tibble(data.frame(lab=df$Label,
-                                  ecd=df$Area.equivalent.circle.diameter,
-                                  ar=df$Aspect.Ratio, circ=df$Circ., elong=df$Elong.,
-                                  conv=df$Convexity))
-particles
-```
-
-```
-# A tibble: 1,083 x 6
-     lab   ecd    ar  circ elong  conv
-   <int> <dbl> <dbl> <dbl> <dbl> <dbl>
- 1     1  37.2  1.31  12.1 0.464     1
- 2     2  34.6  1     11.6 0.197     1
- 3     3  41.6  1.04  11.9 0.133     1
- 4     4  36.9  1.09  11.9 0.304     1
- 5     5  39.7  1     11.8 0.221     1
- 6     6  40.9  1.04  11.8 0.208     1
- 7     7  43.8  1.04  11.7 0.2       1
- 8     8  40.4  1     11.9 0.167     1
- 9     9  41.4  1     11.5 0.112     1
-10    10  41.0  1.14  12.8 0.405     1
-# … with 1,073 more rows
-```
 # The measure of circularity
 
 I am **really** confused by the `circularity` value reported by ParticleSizer.
@@ -111,54 +118,72 @@ $\frac{4  \pi A}{P^2}$
 
 that ranges from 0 to 1.0
 
+The circularity is odd... Let's look at the histogram of the
+circularity
+
 
 ```r
-library(ggplot2)
+c_plt <- ggplot(df, aes(Circ.)) +
+         geom_histogram(binwidth = 0.05) +
+         ggtitle("Circularity") +
+         theme(plot.title = element_text(lineheight=2, size=12)) +
+         labs(x="Circularity", y="Count") +
+         ggtitle("Raw distribution of circularity") +
+         theme(axis.text=element_text(size=12), axis.title=element_text(size=14),
+               plot.title = element_text(hjust = 0.5)) +
+         NULL
+
+print(c_plt)
 ```
 
-```
-## Registered S3 methods overwritten by 'ggplot2':
-##   method         from 
-##   [.quosures     rlang
-##   c.quosures     rlang
-##   print.quosures rlang
-```
+![](ana-pol4455_files/figure-html/rawCircHisto-1.png)<!-- -->
 
-```r
-dfCircTest <- data.frame(trad_circ=trad_circ, Circ=df$Circ.)
-# head(dfCircTest)
-circPlt <-  ggplot(dfCircTest) +  
-            geom_point(aes(x = trad_circ, y = Circ), colour="blue") +
-            ylab(label="ParticleSizer circularity") + 
-            xlab("'traditional' circularity") +
-            ggtitle("Circularity measures from a monodisperse latex") +
-            theme(axis.text=element_text(size=12),
-                  axis.title=element_text(size=14),
-                  plot.title = element_text(hjust = 0.5)) # center the title
-            NULL
-```
 
-```
-## NULL
-```
+
+
+
+After a discussion on the ImageJ
+[Forum](https://forum.image.sc/t/circularity-measure-in-particlesizer-plug-in/26068)
+we think the issue is a factor of $4.0 * \pi$ (12.56637). 
+Let's test this hypothesis:
+
 
 ```r
+bSave = FALSE
+
+fixed_c_plt <- ggplot(df, aes(Circ./(4.0*pi))) +
+               geom_histogram(binwidth = 0.05/(4.0*pi)) +
+               ggtitle("Corrected ParticleSizer Circularity From Soft Latex") +
+               theme(plot.title = element_text(lineheight=2, size=12)) +
+               xlab(TeX("$\\frac{circularity}{4.0\\pi}$")) +
+               ylab("count")+
+               #labs(x="Corrected Circularity", y="Count") +
+               theme(axis.text=element_text(size=12),
+                     axis.title=element_text(size=14),
+                     plot.title = element_text(hjust = 0.5)) +
+               NULL
+
 if (bSave == TRUE) {
-  ggsave("png/pol4455-circularity-measures.png", plot=circPlt,
-         width=6, height=4, units="in", dpi=150)
+  ggsave("png/corrected-particle-sizer-circularity-from-latex.png",
+         plot=fixed_c_plt, width=6, height=4, units="in", dpi=150)
 }
-print(circPlt)
+print(fixed_c_plt)
 ```
 
-![](ana-pol4455_files/figure-html/testCircPlt-1.png)<!-- -->
+![](ana-pol4455_files/figure-html/fixedCircHisto-1.png)<!-- -->
+
+```r
+bSave = FALSE
+```
+
+Our hypothesis appears to be correct.
+
 
 # Plot the histogram of ECD
 
 
 ```r
-library(ggplot2)
-
-plt <- ggplot(particles, aes(ecd)) +
+plt <- ggplot(df, aes(Area.equivalent.circle.diameter)) +
        geom_histogram(binwidth = 1.0) +
        ggtitle("Equivalent Circular Diameter") +
        theme(plot.title = element_text(lineheight=2, size=12)) +
@@ -176,52 +201,7 @@ print(plt)
 ```
 
 ![](ana-pol4455_files/figure-html/plotECD-1.png)<!-- -->
-
-
-```r
-library(ggplot2)
-
-pltc <- ggplot(dfCircTest, aes(trad_circ)) +
-        geom_histogram(binwidth = 0.01) +
-        ggtitle("Circularity") +
-        theme(plot.title = element_text(lineheight=2, size=12)) +
-        labs(x="'traditional' circularity", y="Count") +
-        ggtitle("Circularity distribution of soft latex particles in vitreous ice") +
-        theme(axis.text=element_text(size=12), axis.title=element_text(size=14),
-              plot.title = element_text(hjust = 0.5)) +
-        NULL
-
-if (bSave == TRUE) {
-  ggsave("png/pol4455-trad-circ-histo.png", plot=pltc,
-         width=6, height=4, units="in", dpi=150)
-}
-print(pltc)
-```
-
-![](ana-pol4455_files/figure-html/plot_trad_circ-1.png)<!-- -->
-
-
-
-```r
-library(ggplot2)
-
-pltc <- ggplot(particles, aes(circ)) +
-        geom_histogram(binwidth = 0.1) +
-        theme(plot.title = element_text(lineheight=2, size=12)) +
-        labs(x="'ParticleSizer' Circularity", y="Count") +
-        ggtitle("Circularity distribution of soft latex particles in vitreous ice") +
-        theme(axis.text=element_text(size=12), axis.title=element_text(size=14),
-              plot.title = element_text(hjust = 0.5)) +
-        NULL
-
-if (bSave == TRUE) {
-  ggsave("png/pol4455-part-sizer-circ-histo.png", plot=pltc,
-         width=6, height=4, units="in", dpi=150)
-}
-print(pltc)
-```
-
-![](ana-pol4455_files/figure-html/plotTradCirc-1.png)<!-- -->
+# A panel plot
 
 Try a linear distribution panel plot that uses base graphics. This assunmes
 a linear (not lognormal) particle size distribution from my old `rAnaLab`
@@ -234,7 +214,7 @@ Sometime I need to migrate this function to ggplot2...
 ```r
 library(rAnaLab)
 
-linear.distn.panel.plot(particles$ecd, n.brks = 25,
+linear.distn.panel.plot(df$Area.equivalent.circle.diameter, n.brks = 25,
                         distn.lab = "ecd [nm]",
                         hist.legend = TRUE,
                         legend.loc = "topright",
@@ -248,13 +228,14 @@ linear.distn.panel.plot(particles$ecd, n.brks = 25,
 ```r
 if (bSave == TRUE) {
   png("png/linearDistPanelPlot.png", width=1024, height=768, pointsize=24)
-  linear.distn.panel.plot(particles$ecd, n.brks = 25,
-                         distn.lab = "ecd [nm]",
-                         hist.legend = TRUE,
-                         legend.loc = "topright",
-                         kern.bw = "nrd0",
-                         plt.median = TRUE,
-                         scale.mult = 1.2)
+  linear.distn.panel.plot(df$Area.equivalent.circle.diameter,
+                          n.brks = 25,
+                          distn.lab = "ecd [nm]",
+                          hist.legend = TRUE,
+                          legend.loc = "topright",
+                          kern.bw = "nrd0",
+                          plt.median = TRUE,
+                          scale.mult = 1.2)
   dev.off()
 }
 ```
