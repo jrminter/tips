@@ -27,18 +27,21 @@ later...
 library(knitr)
 library(dplyr)
 library(ggplot2)
+library(gridExtra)
 ```
 
 # Read in the data with R
 
 ```{r readRawData, message=FALSE, comment=NA}
 fi <-'./csv/pol4455-particle_sizer.csv'
+
 df <- read.csv(fi, header=TRUE, as.is=TRUE)
 df <- as_tibble(df)
 df
 ```
 
-Make a tibble that includes the traditional definition of circularity.
+Make a tibble that includes the traditional definition of circularity. We
+discovered that the `Circ.` column need to be divided by $4 \pi$.
 
 ```{r makeTibble, message=FALSE, comment=NA}
 area = df$Area
@@ -49,19 +52,20 @@ trad_circ = 4.0*pi*area/peri^2
 particles <- as_tibble(data.frame(lab=df$Label,
                                   ecd=df$Area.equivalent.circle.diameter,
                                   ar=df$Aspect.Ratio,
-                                  circ=trad_circ,
+                                  circ=df$Circ./(4.0*pi),
                                   elong=df$Elong.,
                                   conv=df$Convexity))
 summary(particles)
 ```
 # The measure of circularity
 
-I am **really** confused by the `circularity` value reported by ParticleSizer.
+I was **really** confused by the `Circ.` value reported by ParticleSizer.
 I noticed that all the values are close to 12. I am used to the definition of
 circularity as defined by [Wikipedia](https://en.wikipedia.org/wiki/Shape_factor_(image_analysis_and_microscopy)#Circularity)
 as
 
-$\frac{4  \pi A}{P^2}$
+$\frac{4  \pi A}{P^2}$. It turns out that ParticleSizer did **not** divide by
+$4 \pi$ so we will correct the result during data processing.
 
 that ranges from 0 to 1.0. So that is what we will use.
 
@@ -96,6 +100,7 @@ that ranges from 0 to 1.0. So that is what we will use.
 
 plot_ecd <- function(tib, bin_width, title, xlab, ylab = "Counts",
                      base_txt_pts=12){
+         med <- median(tib$ecd)
   plt <- ggplot(tib, aes(ecd)) +
          geom_histogram(binwidth=bin_width) +
          ggtitle(title) +
@@ -105,19 +110,24 @@ plot_ecd <- function(tib, bin_width, title, xlab, ylab = "Counts",
          theme(axis.text=element_text(size=base_txt_pts),
                axis.title=element_text(size=base_txt_pts+2),
               plot.title = element_text(hjust = 0.5)) +
+         geom_vline(xintercept=med,linetype=1, size=1.5, colour="blue") +
          NULL
         return(plt)
 }
 
+anot <- sprintf("Median is \n %.1f nm", median(particles$ecd)) 
 
-plt <- plot_ecd(particles, 1.0, "Diameter distribution", "diameter [nm]", "Counts")
+ecd_plt <- plot_ecd(particles, 1.0, "Diameter distribution",
+                "diameter [nm]", "Counts") +
+       annotate("text", label = anot, x = 30, y = 150, size = 4,
+                colour = "blue")
 
-print(plt)
+print(ecd_plt)
 ```
 
-```{r plot_trad_circ, message=FALSE, comment=NA}
+```{r plot_circ, message=FALSE, comment=NA}
 
-#' Plot the traditional circularity distribution
+#' Plot the corrected circularity distribution
 #'
 #' Make a ggplot2 plot of the traditional circularity distribution
 #'
@@ -152,7 +162,7 @@ plot_circ <- function(tib, bin_width, title, xlab, ylab = "Counts",
          ggtitle(title) +
          theme(axis.text=element_text(size=base_txt_pts),
                axis.title=element_text(size=base_txt_pts+2),
-              plot.title = element_text(hjust = 0.5)) +
+               plot.title = element_text(hjust = 0.5)) +
          NULL
         return(plt)
 }
@@ -167,52 +177,54 @@ print(pltc)
 
 ```{r plot_diam_boxplot, message=FALSE, comment=NA}
 
+plot_diam_boxplot <- function(tib, c_fixed=0.1, title="Box Plot", ylab = "ECD [nm]",
+                     base_txt_pts=12){
+
 the_plt <- ggplot(particles, aes(x="", y=ecd)) + 
            geom_boxplot() +
-           coord_fixed(.1) +
-           labs(y="ecd nm") +
-           theme(axis.title.x=element_blank(),
-                 axis.text.x=element_blank(),
-                 axis.ticks.x=element_blank())
+           coord_fixed(c_fixed) +
+           labs(y=ylab, x="") +
+           ggtitle(title) +
+           theme(axis.text=element_text(size=base_txt_pts),
+                 axis.title=element_text(size=base_txt_pts+2),
+                 plot.title = element_text(hjust = 0.5)) +
+           NULL
 
-print(the_plt)
+return(the_plt)
+}
+
+box_plt <- plot_diam_boxplot(particles)
+print(box_plt)
+
 ```
 
 
 ```{r ecd_qq_plot}
-ecd_qq_plt <- ggplot(particles, aes(sample = ecd)) +
+plot_ecd_qq_plot <- function(tib, c_fixed=0.5, title="QQ Plot", ylab = "ECD [nm]",
+                     base_txt_pts=12){
+base_txt_pts=12
+plt <- ggplot(tib, aes(sample = ecd)) +
               stat_qq() +
               stat_qq_line() +
-              labs(y="ECD [nm]") +
-              coord_fixed(.5) +
+              labs(y=ylab, x="") +
+              ggtitle(title) +
+              coord_fixed(c_fixed) +
+              theme(axis.text=element_text(size=base_txt_pts),
+                 axis.title=element_text(size=base_txt_pts+2),
+                 plot.title = element_text(hjust = 0.5)) +
               NULL
          
-print(ecd_qq_plt)
-```
-
-
-
-
-
-````
-
-
-pltc <- ggplot(particles, aes(circ)) +
-        geom_histogram(binwidth = 0.1) +
-        theme(plot.title = element_text(lineheight=2, size=12)) +
-        labs(x="'ParticleSizer' Circularity", y="Count") +
-        ggtitle("Circularity distribution of soft latex particles in vitreous ice") +
-        theme(axis.text=element_text(size=12), axis.title=element_text(size=14),
-              plot.title = element_text(hjust = 0.5)) +
-        NULL
-
-if (bSave == TRUE) {
-  ggsave("png/pol4455-part-sizer-circ-histo.png", plot=pltc,
-         width=6, height=4, units="in", dpi=150)
+return(plt)
 }
-print(pltc)
 
+ecd_qq_plot <- plot_ecd_qq_plot(particles, c_fixed=0.5, title="QQ Plot",
+                                ylab = "ECD [nm]", base_txt_pts=12)
+print(ecd_qq_plot)
 ```
+
+
+
+
 
 Try a linear distribution panel plot that uses base graphics. This assunmes
 a linear (not lognormal) particle size distribution from my old `rAnaLab`
@@ -246,6 +258,14 @@ if (bSave == TRUE) {
   dev.off()
 }
 
+```
+
+Make the panel plot
+
+```{r panel_plot}
+
+out <- grid.arrange(ecd_plt, box_plt, ecd_qq_plot, nrow=1 )
+ggsave(file="png/pol4455_gg_panel_plot.png", out) 
 ```
 
 [Back to ImageJ](ImageJ.html)
