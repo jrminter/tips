@@ -1,7 +1,7 @@
 ---
 title: "Make gg_panel_plot"
 author: "J. R. Minter"
-date: "Started: 2019-05-25, Last modified: 2019-05-25"
+date: "Started: 2019-05-25, Last modified: 2019-05-27"
 output:
   html_document:
     keep_md: yes
