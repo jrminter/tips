@@ -1,7 +1,7 @@
 ---
 title: "Image-J Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-05-25"
+date: "Started: 2013-07-16, Last modified: 2019-05-28"
 output:
   html_document:
     keep_md: yes
@@ -32,6 +32,16 @@ I have collected these tips both from experience and from a very helpful user co
 `Ctl-Enter` - Bring the main window to the front
 
 See the full list [here](http://rsb.info.nih.gov/ij/docs/shortcuts.html)
+
+## Debugging macros
+
+A tip from Wayne Rasband for debugging macros:
+
+> Open the macro in the Fiji Script Editor, type cmd-A (Select All),
+> cmd-C (Copy), close the Script Editor and type cmd-V (Paste).
+> The macro will open in an ImageJ macro editor window (named “Clipboard”)
+> **that has a Debug menu**. On Linux and Windows, use the control key
+> instead for keyboard shortcuts. 
 
 # Don't get bit...
 
