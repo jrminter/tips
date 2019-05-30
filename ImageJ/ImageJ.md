@@ -41,7 +41,8 @@ See the full list [here](http://rsb.info.nih.gov/ij/docs/shortcuts.html)
 2. Navigate to the `key-macros` directory in `~/Documents/git/tips/ImageJ`
 3. Select `resize_fiji_main_window_mac.js` or `resize_fiji_main_window_windows.js`
 
-This will set the main window width and height.
+This will set the main window width and height. Sadly, it is
+**not persistent**...
 
 ## Explanation
 
