@@ -1,7 +1,7 @@
 ---
 title: "Image-J Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-05-29"
+date: "Started: 2013-07-16, Last modified: 2019-05-30"
 output:
   html_document:
     keep_md: yes
@@ -33,7 +33,45 @@ I have collected these tips both from experience and from a very helpful user co
 
 See the full list [here](http://rsb.info.nih.gov/ij/docs/shortcuts.html)
 
-## Debugging macros
+# Setting the window position & preference file
+
+We can set the **position** of the Fiji main window by setting `ij.x=136`
+and `ij.y=26` in `IJ_prefs.txt`. To resize the main window, we need this
+javascript macro from Curtis Reuden:
+
+```
+importClass(Packages.ij.IJ)
+importClass(Packages.java.awt.Dimension)
+IJ.getInstance().setSize(new Dimension(810, 90))
+```
+## Menu bar positions
+
+These are in `IJ_Prefs.txt`.
+
+### Mac
+
+Use:
+
+```
+ij.x=86
+ij.y=23
+
+.actionbarIMCF\ toolbar.xloc=660
+.actionbarIMCF\ toolbar.yloc=23
+```
+
+## IJ_prefs.txt location
+
+**MacOSX**: /Users/jrminter/Library/Preferences/IJ_Prefs.txt \
+**Windows**: C:/Users/jrminter/.imagej/IJ_Prefs.txt
+
+Note: I wrote a Python script (`getPrefsDirImageJ.py`) that will find
+the the directory that contains `IJ_Prefs.txt`. It is in the
+**OSImageAnalysis** github repository
+[here](https://github.com/jrminter/OSImageAnalysis/tree/master/ImageJ/macros/py).
+
+
+# Debugging macros
 
 A tip from Wayne Rasband for debugging macros:
 
@@ -361,21 +399,6 @@ Curtis Rueden wrote (2019-01-16):
 
 - Image processing with machine learning resources by [Emmanuelle Gouillart 2019-01-06](https://twitter.com/EGouillart/status/1082030252900143104)
 
-## Menu bar positions
-
-These are in `IJ_Prefs.txt`.
-
-### Mac
-
-Use:
-
-```
-ij.x=86
-ij.y=23
-
-.actionbarIMCF\ toolbar.xloc=660
-.actionbarIMCF\ toolbar.yloc=23
-```
 
 
 ## Fix an error
@@ -407,16 +430,6 @@ and is set to start in
 
 
 
-
-## IJ_prefs.txt location
-
-**MacOSX**: /Users/jrminter/Library/Preferences/IJ_Prefs.txt \
-**Windows**: C:/Users/jrminter/.imagej/IJ_Prefs.txt
-
-Note: I wrote a Python script (`getPrefsDirImageJ.py`) that will find
-the the directory that contains `IJ_Prefs.txt`. It is in the
-**OSImageAnalysis** github repository
-[here](https://github.com/jrminter/OSImageAnalysis/tree/master/ImageJ/macros/py).
 
 
 ## Check the open image header for metadata
