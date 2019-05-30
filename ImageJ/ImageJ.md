@@ -1,7 +1,7 @@
 ---
 title: "Image-J Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-05-28"
+date: "Started: 2013-07-16, Last modified: 2019-05-29"
 output:
   html_document:
     keep_md: yes
@@ -244,7 +244,7 @@ plugin. This uses `ImgLib2`. There is a discussion of this plugin on the
 
 ### Fiji Update Sites checked
 
-**Updated 2019-05-08**
+**Updated 2019-05-28**
 
 - ImageJ
 - Fiji
@@ -254,6 +254,7 @@ plugin. This uses `ImgLib2`. There is a discussion of this plugin on the
 - Bioformats
 - Biomedgroup
 - Cookbook
+- CMCI-EMBL
 - DiameterJ
 - FFMPEG
 - IBMP-CNRS
@@ -266,7 +267,7 @@ plugin. This uses `ImgLib2`. There is a discussion of this plugin on the
 - ParticleSizer
 - SimonKlein
 - Stowers
-- Linear Distance
+[- Linear Distance]?
 
 
 **Entries in** `/Applications/Fiji.app/jars/Lib`:
