@@ -35,6 +35,16 @@ See the full list [here](http://rsb.info.nih.gov/ij/docs/shortcuts.html)
 
 # Setting the window position & preference file
 
+## TLDR
+
+1. Select `Plugins > Macro > Run`
+2. Navigate to the `key-macros` directory in `~/Documents/git/tips/ImageJ`
+3. Select `resize_fiji_main_window_mac.js` or `resize_fiji_main_window_windows.js`
+
+This will set the main window width and height.
+
+## Explanation
+
 We can set the **position** of the Fiji main window by setting `ij.x=136`
 and `ij.y=26` in `IJ_prefs.txt`. To resize the main window, we need this
 javascript macro from Curtis Reuden:
@@ -44,6 +54,9 @@ importClass(Packages.ij.IJ)
 importClass(Packages.java.awt.Dimension)
 IJ.getInstance().setSize(new Dimension(810, 90))
 ```
+
+Sadly, it will not auto-run in Fiji...
+
 ## Menu bar positions
 
 These are in `IJ_Prefs.txt`.
