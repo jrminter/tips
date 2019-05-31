@@ -1,7 +1,7 @@
 ---
 title: "Image-J Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-05-30"
+date: "Started: 2013-07-16, Last modified: 2019-05-31"
 output:
   html_document:
     keep_md: yes
@@ -84,6 +84,10 @@ the the directory that contains `IJ_Prefs.txt`. It is in the
 **OSImageAnalysis** github repository
 [here](https://github.com/jrminter/OSImageAnalysis/tree/master/ImageJ/macros/py).
 
+# Analyzing IJ results from stage micrometer
+
+I used Fiji to segment the lines in an image recorded at 10X on the Olympus
+BX61 microscope. The data analysis is [here](anaStageMicrometer.html).
 
 # Debugging macros
 
