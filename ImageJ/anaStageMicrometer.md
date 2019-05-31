@@ -39,7 +39,7 @@ Let's read in the data
 
 
 ```r
-df <-read.csv2("tif/stage-micrometer/BX61-10X-1-AO-micro.csv", sep=',')
+df <-read.csv2("tif/stage-micrometer/BX61-10X-1-AO-micro.csv", sep=',', stringsAsFactors =FALSE)
 library(knitr)
 kable(df)
 ```
@@ -70,7 +70,7 @@ We can do this using base R as shown below
 
 ```r
 df_good <- df[df$Area>1,]
-kable(df_good)
+kable(df)
 ```
 
 
@@ -88,6 +88,79 @@ kable(df_good)
   9    135    255   255   255  1268.389   12.848 
  10    137    255   255   255  1406.128   12.945 
  11    131    255   255   255  36.210     14.233 
+ 12      1    255   255   255  1263.500   1.500  
+
+All we really need is the `XM` columnm, so we can run
+
+
+```r
+df <- df[df$Area>1,]
+xm <- as.numeric(df$XM)
+xm
+```
+
+```
+ [1]  172.983  310.438  447.214  583.455  720.433  857.769  994.500
+ [8] 1131.829 1268.389 1406.128   36.210
+```
+
+Note the last value is unusual...
+
+
+```r
+delta_xm <- diff(xm)
+delta_xm
+```
+
+```
+ [1]   137.455   136.776   136.241   136.978   137.336   136.731   137.329
+ [8]   136.560   137.739 -1369.918
+```
+
+Yes, the last value is spurious...
+
+
+```r
+delta_xm <- delta_xm[1:9]
+delta_xm
+```
+
+```
+[1] 137.455 136.776 136.241 136.978 137.336 136.731 137.329 136.560 137.739
+```
+
+These look as expected. However, they are in units of `px/100 microns`. We really
+want `microns/px`, so we do a transformation
+
+
+```r
+px_per_um <- 100.0/delta_xm
+px_per_um
+```
+
+```
+[1] 0.7275108 0.7311224 0.7339934 0.7300442 0.7281412 0.7313630 0.7281783
+[8] 0.7322789 0.7260108
+```
+
+
+```r
+library(dplyr)
+med <- median(px_per_um)
+std_dev <- sd(px_per_um)
+
+df_px_per_um <- as_tibble(data.frame(statistic=c("median", "std_dev"),
+                                 px_per_um=round(c(med, std_dev),4)))
+kable(df_px_per_um)
+```
+
+
+
+statistic    px_per_um
+----------  ----------
+median          0.7300
+std_dev         0.0026
+
 
 
 [Back to ImageJ](ImageJ.html)

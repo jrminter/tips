@@ -39,7 +39,7 @@ Let's read in the data
 
 ```{r read_csv_file}
 
-df <-read.csv2("tif/stage-micrometer/BX61-10X-1-AO-micro.csv", sep=',')
+df <-read.csv2("tif/stage-micrometer/BX61-10X-1-AO-micro.csv", sep=',', stringsAsFactors =FALSE)
 library(knitr)
 kable(df)
 
@@ -53,8 +53,52 @@ We can do this using base R as shown below
 
 ```{r filterData, comment=NA}
 df_good <- df[df$Area>1,]
-kable(df_good)
+kable(df)
 ```
+
+All we really need is the `XM` columnm, so we can run
+
+```{r get_diff, comment=NA}
+
+df <- df[df$Area>1,]
+xm <- as.numeric(df$XM)
+xm
+```
+
+Note the last value is unusual...
+
+```{r calc_diff, comment=NA}
+
+delta_xm <- diff(xm)
+delta_xm
+```
+
+Yes, the last value is spurious...
+
+```{r delete_last, comment=NA}
+delta_xm <- delta_xm[1:9]
+delta_xm
+```
+
+These look as expected. However, they are in units of `px/100 microns`. We really
+want `microns/px`, so we do a transformation
+
+```{r transform, comment=NA}
+
+px_per_um <- 100.0/delta_xm
+px_per_um
+```
+
+```{r calc_stats, message=FALSE, comment=NA}
+library(dplyr)
+med <- median(px_per_um)
+std_dev <- sd(px_per_um)
+
+df_px_per_um <- as_tibble(data.frame(statistic=c("median", "std_dev"),
+                                 px_per_um=round(c(med, std_dev),4)))
+kable(df_px_per_um)
+```
+
 
 
 [Back to ImageJ](ImageJ.html)

@@ -665,7 +665,7 @@ $(document).ready(function () {
 </div>
 <p>The measurement data was stored to a <code>.csv</code> file for analysis.</p>
 <p>Let’s read in the data</p>
-<pre class="r"><code>df &lt;-read.csv2(&quot;tif/stage-micrometer/BX61-10X-1-AO-micro.csv&quot;, sep=',')
+<pre class="r"><code>df &lt;-read.csv2(&quot;tif/stage-micrometer/BX61-10X-1-AO-micro.csv&quot;, sep=',', stringsAsFactors =FALSE)
 library(knitr)
 kable(df)</code></pre>
 <table>
@@ -794,7 +794,7 @@ kable(df)</code></pre>
 <p>Note that the area of the last measurement is 1 pixel. This is spurious. We need to filter out the last row.</p>
 <p>We can do this using base R as shown below</p>
 <pre class="r"><code>df_good &lt;- df[df$Area&gt;1,]
-kable(df_good)</code></pre>
+kable(df)</code></pre>
 <table>
 <thead>
 <tr class="header">
@@ -906,6 +906,60 @@ kable(df_good)</code></pre>
 <td align="right">255</td>
 <td align="left">36.210</td>
 <td align="left">14.233</td>
+</tr>
+<tr class="even">
+<td align="right">12</td>
+<td align="right">1</td>
+<td align="right">255</td>
+<td align="right">255</td>
+<td align="right">255</td>
+<td align="left">1263.500</td>
+<td align="left">1.500</td>
+</tr>
+</tbody>
+</table>
+<p>All we really need is the <code>XM</code> columnm, so we can run</p>
+<pre class="r"><code>df &lt;- df[df$Area&gt;1,]
+xm &lt;- as.numeric(df$XM)
+xm</code></pre>
+<pre><code> [1]  172.983  310.438  447.214  583.455  720.433  857.769  994.500
+ [8] 1131.829 1268.389 1406.128   36.210</code></pre>
+<p>Note the last value is unusual…</p>
+<pre class="r"><code>delta_xm &lt;- diff(xm)
+delta_xm</code></pre>
+<pre><code> [1]   137.455   136.776   136.241   136.978   137.336   136.731   137.329
+ [8]   136.560   137.739 -1369.918</code></pre>
+<p>Yes, the last value is spurious…</p>
+<pre class="r"><code>delta_xm &lt;- delta_xm[1:9]
+delta_xm</code></pre>
+<pre><code>[1] 137.455 136.776 136.241 136.978 137.336 136.731 137.329 136.560 137.739</code></pre>
+<p>These look as expected. However, they are in units of <code>px/100 microns</code>. We really want <code>microns/px</code>, so we do a transformation</p>
+<pre class="r"><code>px_per_um &lt;- 100.0/delta_xm
+px_per_um</code></pre>
+<pre><code>[1] 0.7275108 0.7311224 0.7339934 0.7300442 0.7281412 0.7313630 0.7281783
+[8] 0.7322789 0.7260108</code></pre>
+<pre class="r"><code>library(dplyr)
+med &lt;- median(px_per_um)
+std_dev &lt;- sd(px_per_um)
+
+df_px_per_um &lt;- as_tibble(data.frame(statistic=c(&quot;median&quot;, &quot;std_dev&quot;),
+                                 px_per_um=round(c(med, std_dev),4)))
+kable(df_px_per_um)</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">statistic</th>
+<th align="right">px_per_um</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">median</td>
+<td align="right">0.7300</td>
+</tr>
+<tr class="even">
+<td align="left">std_dev</td>
+<td align="right">0.0026</td>
 </tr>
 </tbody>
 </table>
