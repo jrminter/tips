@@ -15,7 +15,7 @@ output:
 
 I have collected these tips both from experience and from a very helpful user community.
 
-# Useful keyboard shortcuts
+# Useful keyboard shortcuts and script parameters
 
 `[` - Start the script editor. 
 
@@ -31,7 +31,9 @@ I have collected these tips both from experience and from a very helpful user co
 
 `Ctl-Enter` - Bring the main window to the front
 
-See the full list [here](http://rsb.info.nih.gov/ij/docs/shortcuts.html)
+See the full list [here](http://rsb.info.nih.gov/ij/docs/shortcuts.html),
+
+See the list of `Script Parameters` [here](https://imagej.net/Script_Parameters).
 
 # Setting the window position & preference file
 
