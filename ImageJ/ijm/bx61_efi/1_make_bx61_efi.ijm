@@ -4,7 +4,7 @@
 @String(label="microns per pixel",style="") str_um_per_pix
 @Integer(label="Number of images") num_images
 
-// make_bx61_efi.ijm
+// 1_make_bx61_efi.ijm
 //
 // load images for an extended depth of field analysis
 // Do **not** use bioformats... 
@@ -33,8 +33,5 @@ run("Images to Stack", "name=Stack title=[] use");
 selectWindow("Stack");
 run("Properties...", "channels=1 slices=1 frames=" + num_images + " unit=microns pixel_width=" + str_um_per_pix + " pixel_height=" + str_um_per_pix + " voxel_depth=1.0");
 run("Extended Depth of Field (Easy mode)...");
-
-selectWindow("Output");
-run("Properties...", "channels=1 slices=1 frames=1 unit=microns pixel_width=" + str_um_per_pix + " pixel_height=" + str_um_per_pix + " voxel_depth=1.0");
 
 
