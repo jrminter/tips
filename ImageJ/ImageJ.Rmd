@@ -35,12 +35,22 @@ See the full list [here](http://rsb.info.nih.gov/ij/docs/shortcuts.html),
 
 See the list of `Script Parameters` [here](https://imagej.net/Script_Parameters).
 
-# Video Playlists
+# YouTube Video Playlists
 
 1. My Youtube playlist of most
 [helpful videos](https://www.youtube.com/playlist?list=PLYj1kur6z-iyQRsVBSxpJHNECZf2j1iDM).
 
 2. [Manchester Bioimaging's](https://www.youtube.com/playlist?list=PLeM_d8ZXiMCOYmpf92IBfOpQQBduWuiw7) Youtube playlist.
+
+# Fiji's Vimeo videos
+
+1. Ellen Arena [Part 1](https://vimeo.com/218520761) covered basic useage
+and segmentation and Trainable Weka segmentation.
+
+2. Ellen Arena [Part 2](https://vimeo.com/218520432) covered basic
+scripting. 
+
+3. Mark Enter's [ImageJ Porosity Tutorial](https://vimeo.com/273045726)
 
 # Setting the main window position & preference file
 
