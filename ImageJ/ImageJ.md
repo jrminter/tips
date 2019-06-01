@@ -42,7 +42,7 @@ See the list of `Script Parameters` [here](https://imagej.net/Script_Parameters)
 
 2. [Manchester Bioimaging's](https://www.youtube.com/playlist?list=PLeM_d8ZXiMCOYmpf92IBfOpQQBduWuiw7) Youtube playlist.
 
-# Setting the window position & preference file
+# Setting the main window position & preference file
 
 ## Menu bar `x` and `y` positions
 
