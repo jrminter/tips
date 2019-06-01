@@ -35,34 +35,19 @@ See the full list [here](http://rsb.info.nih.gov/ij/docs/shortcuts.html),
 
 See the list of `Script Parameters` [here](https://imagej.net/Script_Parameters).
 
+# Video Playlists
+
+1. My Youtube playlist of most
+[helpful videos](https://www.youtube.com/playlist?list=PLYj1kur6z-iyQRsVBSxpJHNECZf2j1iDM).
+
+2. [Manchester Bioimaging's](https://www.youtube.com/playlist?list=PLeM_d8ZXiMCOYmpf92IBfOpQQBduWuiw7) Youtube playlist.
+
 # Setting the window position & preference file
 
-## TLDR
+## Menu bar `x` and `y` positions
 
-1. Select `Plugins > Macro > Run`
-2. Navigate to the `key-macros` directory in `~/Documents/git/tips/ImageJ`
-3. Select `resize_fiji_main_window_mac.js` or `resize_fiji_main_window_windows.js`
-
-This will set the main window width and height. Sadly, it is
-**not persistent**...
-
-## Explanation
-
-We can set the **position** of the Fiji main window by setting `ij.x=136`
-and `ij.y=26` in `IJ_prefs.txt`. To resize the main window, we need this
-javascript macro from Curtis Reuden:
-
-```
-importClass(Packages.ij.IJ)
-importClass(Packages.java.awt.Dimension)
-IJ.getInstance().setSize(new Dimension(810, 90))
-```
-
-Sadly, it will not auto-run in Fiji...
-
-## Menu bar positions
-
-These are in `IJ_Prefs.txt`.
+These are in `IJ_Prefs.txt`. These keep the main window from interfering
+with icons on the Desktop.
 
 ### Mac
 
@@ -75,6 +60,33 @@ ij.y=23
 .actionbarIMCF\ toolbar.xloc=660
 .actionbarIMCF\ toolbar.yloc=23
 ```
+
+## Setting a persistent main window width
+
+A wider main window **prevents comments from interfering with the search bar**
+and on windows **prevents plugins that add to the top level menu from making**
+**the top menu split to two lines on Windows systems**. Getting this to work
+required **_a lot of help_** from the ImageJ Forum.
+
+Add the macro `qResize_MainWindow.ijm` to the `Fiji.app/macros/AutoRun`
+folder. Curtis Reuden contributed the macro (2019-05-31). I found a 
+**gremlin**: I needed to install the macro in `Fiji.app/macros/AutoRun`
+and adjust the name to `qResize_MainWindow.ijm` to make
+certain that it ran **before** Jay Unruh's macro `Register_Jay_Reader.ijm`.
+It would not run after Jay's plugin... All the gory details are explained in
+this
+[discussion](https://forum.image.sc/t/how-to-increase-the-width-of-the-main-fiji-window-at-startup/26174/8?u=john_minter)
+on the ImageJ Forum. When run this way, the change is **_persistent_**.
+What a relief!!!
+
+
+## Explanation
+
+We can set the **position** of the Fiji main window by setting `ij.x=136`
+and `ij.y=26` in `IJ_prefs.txt`. To resize the main window, we need to use
+Curtis Reuden's approach above.
+
+
 
 ## IJ_prefs.txt location
 
