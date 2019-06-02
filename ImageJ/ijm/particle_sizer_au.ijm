@@ -8,7 +8,7 @@ imgProcPath = gitHome + "/" + relPath + "/" + imgProcName + imgExt;
 csvPath = gitHome + "/" + relPath + "/" + imgName + ".csv";
 pltPath = gitHome + "/" + relPath + "/" + imgName + "_distn" + imgExt;
 
-// leave as false to lookm at particle by particle results...
+// leave as false to look at particle by particle results...
 close_last = false
 run("Close All");
 // print(imgPath);
