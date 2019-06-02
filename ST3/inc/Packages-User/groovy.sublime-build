@@ -1,0 +1,5 @@
+{
+	"cmd": ["groovy","$file"],
+	"selector": "source.groovy",
+	"file_regex": "[ ]*at .+[(](.+):([0-9]+)[)]",
+}
