@@ -1,7 +1,6 @@
-
 /**
  * ImageJ_area_map.groovy
- *
+ * 
  * Groovy script to convert a binary image into one in which every foreground pixel
  * has a value equal to the area of the (8-connected) region containing it.
  *
@@ -10,7 +9,9 @@
  * Well, this gives a way to apply an area-based threshold quickly and intuitively.
  * Simply set a threshold on the area map, and apply it to create a new binary image.
  *
- * Created by Peter Bankhead on 2016-11-22.
+ * Created by Pete Bankhead on 2016-11-22.
+ *
+ * JRM note: This is an IJ1 groovy script...
  */
 
 import ij.IJ

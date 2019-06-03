@@ -1,7 +1,7 @@
 ---
 title: "Scripting ImageJ using Groovy"
 author: "J. R. Minter"
-date: "Started: 2019-05-22, Last modified: 2019-05-25"
+date: "Started: 2019-05-22, Last modified: 2019-06-03"
 output:
   html_document:
     keep_md: yes
@@ -15,42 +15,69 @@ output:
 
 # Introduction
 
+## Why Groovy?
 
-Jan Eglinger (imagejan on the forum.image.sc) is a proponent of Groovy
+My "**_Go-To_**" Fiji/ImageJ scripting language has been Jython. Jython has
+a problem - it **still uses** Python 2 and is not actively being updated.
+Fiji and ImageJ2 are rapidly developing and have a different object model and
+syntax than legacy ImageJ1. But I have a lot of Jython functions in a library
+(`jmFijGen.py`) that is maintained under version control (git) and copies "live"
+in `Fiji.app/jars/Lib` and so these functions can be called and reused in jython
+scripts that are run in the script editor.
+
+I would like to migrate to Groovy or Python if possible.
+
+- Note that there is
+[fijibin](https://github.com/arve0/fijibin/tree/master/fijibin)
+on github which is supposed to be a python interface, but it has not been
+updated since 2015-04-22. It also runs in headless mode. It did run under
+Python 3.4... 
+
+- There is also
+[PyimageJ](https://nbviewer.jupyter.org/github/imagej/tutorials/blob/master/notebooks/1-Using-ImageJ/6-ImageJ-with-Python-Kernel.ipynb) which lets the user interact 
+with ImageJ.
+
+- Jan Eglinger (imagejan on the forum.image.sc) is a proponent of Groovy
 for understandable scripting in Fiji/ImageJ. He wrote:
 
-> In Groovy, you can just as well write:
->
->   ```
->   image = IJ.getImage()
->   ```
->
-> Isn’t that simple enough?
->
-> You can even write:
-> 
->    ```
->    image1 = IJ.openImage("/path/to/image/One.tif")
->    image2 = IJ.openImage("/path/to/image/Two.tif")
->    
->    results = []
->
->    [image1, image2].each { image ->
->       statistics = image.getStatistics()
->       results << statistics.mean
->    }
->    
->    println results
->    ```
+    > In Groovy, you can just as well write:
+    >
+    >   ```
+    >   image = IJ.getImage()
+    >   ```
+    >
+    > Isn’t that simple enough?
+    >
+    > You can even write:
+    > 
+    >    ```
+    >    image1 = IJ.openImage("/path/to/image/One.tif")
+    >    image2 = IJ.openImage("/path/to/image/Two.tif")
+    >    
+    >    results = []
+    >
+    >    [image1, image2].each { image ->
+    >       statistics = image.getStatistics()
+    >       results << statistics.mean
+    >    }
+    >    
+    >    println results
+    >    ```
 
-The main site for Groovy is [groovy-lang.org](http://groovy-lang.org/).
+- The main site for Groovy is [groovy-lang.org](http://groovy-lang.org/).
 
-There is a [Groovy Scripting](https://imagej.net/Groovy_Scripting) page on
+- There is a [Groovy Scripting](https://imagej.net/Groovy_Scripting) page on
 ImageJ.net that refers to the Groovy
 [Getting Started](http://groovy-lang.org/documentation.html#gettingstarted)
 page.
 
-[Groovy Syntax](http://groovy-lang.org/syntax.html)
+- Source Forge example scripts
+**From [here](http://ij-plugins.sourceforge.net/plugins/groovy/examples.html)**
+listed as **retired**... These are useful template examples. There is an
+accompanying PDF that I archived
+[here](pdf/Tutorial_Recording_Groovy_Scripts.pdf).
+
+- [Groovy Syntax](http://groovy-lang.org/syntax.html)
 
 I had a **_terrible_** time installing Groovy on my Win 7 system (crunch).
 I could not get the installer file to choose a 64 bit java and when it
@@ -70,14 +97,7 @@ a 32 bit image of my head shot.
 
 ![John's 32 bit/px head shot](groovy/john_32.png).
 
-# Source Forge example scripts
 
-**From [here](http://ij-plugins.sourceforge.net/plugins/groovy/examples.html)**
-listed as **retired**...
-
-These are useful template examples.
-
-There is a PDF I archive [here](pdf/Tutorial_Recording_Groovy_Scripts.pdf).
 
 ## Batch Processing
 
@@ -123,7 +143,7 @@ def ImagePlus process(ImagePlus src) {
 
 ## Process Current ImageJ Image
 
-This scripts gets a reference to currently selected image in ImageJ then applies median filter to it. If no image is opened shows "No image" error message.
+This IJ1 script gets a reference to currently selected image in ImageJ then applies median filter to it. If no image is opened shows "No image" error message.
 
 ```
 import ij.IJ
