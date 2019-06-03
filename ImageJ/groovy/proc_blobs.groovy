@@ -14,6 +14,7 @@
 
 import ij.IJ
 import ij.WindowManager
+import ij.plugin.frame.RoiManager
 
 IJ.log("\\Clear")
 IJ.run("Close All")
@@ -37,4 +38,18 @@ IJ.run(imp_thr, "Set Measurements...", "area center perimeter fit shape feret's 
 
 
 IJ.run("Analyze Particles...", str_ana2 )
+
+
+
+/*
+
+selectWindow("ROI Manager")
+
+
+roiManager("Show None");
+selectWindow("work");
+roiManager("Show All");
+roiManager("Show All with labels");
+run("Flatten");
+*/
 
