@@ -33,10 +33,10 @@ def gaussian_blur_8_bks(imp, size):
 
 	Returns
 	=======
-	bks:	The image plus of the backround-subtracted
+	bks:	The image plus of the background-subtracted
 			gray scale image
 	size:	The size in px of the blur. Should be about
-			40% of the image size	
+			40% of the image size
 	"""
 	strSize = "sigma=%i" % (size)
 	imp.show()
