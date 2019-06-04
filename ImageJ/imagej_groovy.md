@@ -1,7 +1,7 @@
 ---
 title: "Scripting ImageJ using Groovy"
 author: "J. R. Minter"
-date: "Started: 2019-05-22, Last modified: 2019-06-03"
+date: "Started: 2019-05-22, Last modified: 2019-06-04"
 output:
   html_document:
     keep_md: yes
@@ -63,6 +63,7 @@ for understandable scripting in Fiji/ImageJ. He wrote:
     >    
     >    println results
     >    ```
+- [BAR](https://github.com/tferr/Scripts/blob/master/BAR/src/main/resources/lib/BARlib.groovy) has an example script.
 
 - The main site for Groovy is [groovy-lang.org](http://groovy-lang.org/).
 
