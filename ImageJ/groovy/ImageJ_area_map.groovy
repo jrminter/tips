@@ -11,7 +11,7 @@
  *
  * Created by Pete Bankhead on 2016-11-22.
  *
- * JRM note: This is an IJ1 groovy script...
+ * JRM note: This is an IJ1 groovy script... Doesn't work well for me...
  */
 
 import ij.IJ
@@ -20,23 +20,38 @@ import ij.Prefs
 import ij.process.FloatProcessor
 import ij.process.FloodFiller
 
+
+// JRM addn 
+IJ.run("Close All")
+IJ.run("Blobs (25K)")
+
 // Request the current image
 def imp = IJ.getImage()
+imp.show()
 def ip = imp.getProcessor()
 int w = ip.getWidth()
-int h = ip.getHeight()
+println(w)
 
+int h = ip.getHeight()
+println(h)
+/**
 // For now, be fussy... require a binary image (this could be made more general if needed)
-if (!ip.isBinary()) {
-    IJ.error("A binary image is needed for this script!")
-    return
-}
+//if (!ip.isBinary()) {
+//    IJ.error("A binary image is needed for this script!")
+//    return
+//}
+
+**/
 
 // Figure out what the foreground value is
 // (Warning: This could be wrong... consider changing this if the script does the opposite of what's expected)
+
+ip = imp.getProcessor()
 int foreground = Prefs.blackBackground ? 255 : 0
 if (ip.isInvertedLut())
     foreground = 255 - foreground
+
+imp.show()
 
 // Create a labelled image, with foreground pixels set to -1
 def ipLabels = new FloatProcessor(w, h)
