@@ -199,6 +199,7 @@ ImageJ/trainable_weka_segmentation.html
 ImageJ/basic_segmentation.html
 ImageJ/basic_scripting.html
 ImageJ/anaStageMicrometer.html
+ImageJ/imagej_groovy.html
 
 # Inkscape directory
 inkscape/.DS_Store
