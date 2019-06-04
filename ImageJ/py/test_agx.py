@@ -126,7 +126,7 @@ def ana_particles_watershed(imp, strThrMeth="method=Default white", minPx=10, mi
 def ana_particles(imp, minSize, maxSize, minCirc, bHeadless=True):
 	"""ana_particles(imp, minSize, maxSize, minCirc, bHeadless=True)
 	Analyze particles using a watershed separation. If headless=True, we cannot
-	redirect the intensity measurement to the original immage becuae it is never
+	redirect the intensity measurement to the original image because it is never
 	displayed. If we display the original, we can and get the mean gray level. We
 	may then compute the particle contrast from the measured Izero value for the image.
 	No ability here to draw outlines on the original.
@@ -149,7 +149,7 @@ def ana_particles(imp, minSize, maxSize, minCirc, bHeadless=True):
 		strSetMeas = "area mean modal min center perimeter bounding fit shape feret's redirect='original' decimal=3"
 	
 	IJ.run("Set Measurements...", strSetMeas)
-	# note this doies not get passed directly to ParticleAnalyzer, so
+	# note this does not get passed directly to ParticleAnalyzer, so
 	# I did this, saved everything and looked for the measurement value in ~/Library/Preferences/IJ_Prefs.txt
 	# measurements=27355
 	# meas = Measurements.AREA + Measurements.CIRCULARITY + Measurements.PERIMETER + Measurements.SHAPE_DESCRIPTORS
@@ -160,6 +160,10 @@ def ana_particles(imp, minSize, maxSize, minCirc, bHeadless=True):
 	rt.createTableFromImage(ret.getProcessor())
 	return [ret, rt]
 	
+
+
+# Test code starts here...
+
 IJ.run("Close All")
 b_verbose = True
 n_seq = 1
