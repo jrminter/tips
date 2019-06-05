@@ -1,4 +1,5 @@
 @String(label="Image Directory", style="") img_dir
+@String(label="Report Directory", style="") rpt_dir
 @String(label="Image Name", style="") img_nam
 @String(label="Image Extension", style="") img_tif
 /*
@@ -28,6 +29,7 @@ import ij.process.PolygonFiller
 import ij.gui.Roi
 import ij.plugin.frame.RoiManager
 import ij.gui.Overlay
+
 
 import ij.process.FloodFiller
 import java.awt.Color
@@ -146,14 +148,106 @@ def boolean noThreshold
 def boolean calledByPlugin
 def boolean hyperstack
 
-def ana_particles(imp, csv_path) {
-	println img_dir
-	imp.show()
+def addRoiToOverlay(imp, roi, label=None, bDrawLabels=False, font=20,
+					labCol=Color.white, linCol=Color.white){
+	"""
+	addRoiToOverlay(imp, roi, label="", bDrawLabels=False, font=20,
+					labCol=Color.white, linCol=Color.white)
+
+	A convenience function to draw a ROI into the overlay of an
+	ImagePlus. This is useful for situations where ROIs are computed
+	from a highly processed image and the analyst wants to
+	draw them into the overlay of the original image (e.g. particle
+	analysis after a watershed separation. Adapted from addToOverlay()
+	from Analyzer.java
+
+	Parameters
+	----------
+	imp: ImagePlus
+		Image into which we draw the ROI
+	roi: ROI
+		ROI to draw
+	label: string (None)
+		Optional label
+	bDrawLabels: Boolean (False)
+		Flag to draw ROI labels
+	font: int
+		Font size for label
+	labCol: Color (Color.white)
+		Color for the label
+	linCol: Color (Color.white)
+		Color for the stroke/line
+
+	Returns
+	-------
+	imp: ImagePlus
+		Image with the updated overlay
+	"""
+	jFont = Font("SanSerif", Font.BOLD, font)
+	roi.setIgnoreClipRect(True)
+	ovl = imp.getOverlay()
+	if(ovl == None){
+		ovl = Overlay()
+	}
+	ovl.drawNames(bDrawLabels)
+	ovl.drawLabels(bDrawLabels)
+	ovl.setLabelFont(jFont) 
+	ovl.setStrokeColor(linCol)
+	ovl.setLabelColor(labCol);
+	ovl.drawBackgrounds(False);
+	ovl.add(roi)
+	imp.setOverlay(ovl)
+	imp.updateImage()
+	return imp
 }
 
-imp_work = IJ.openImage("http://imagej.nih.gov/ij/images/blobs.gif")
+def ana_particles(imp_ori, imp_wat, csv_dir, min_area_px=10, max_area_px=100000, 
+                     min_circ=0.50, max_AR=1.05) {
+	println csv_dir
+	ti = imp_ori.getShortTitle()
+	imp_ori.setTitle(ti)
+	imp_ori.show()
+	imp_wat.show()
 
-ana_particles(imp_work)
+    s1 = "area mean modal min centroid center perimeter bounding fit "
+    s2 = "shape Feret's display redirect=None decimal=3"
+    str_meas = s1 + s2
+    IJ.run(imp_wat, "Set Measurements...", str_meas)
+    
+    def str_ana = sprintf("size=%d-%d display exclude clear add", min_area_px, max_area_px )
+    IJ.run(imp_wat, "Analyze Particles...", str_ana)
+    imp_wat.show()
+    IJ.selectWindow("Results")
+    def str_csv = sprintf("%s/%s.csv", rpt_dir, ti)
+    IJ.saveAs("Results", str_csv)
+    IJ.selectWindow("Results")
+    IJ.run("Close")
+    IJ.selectWindow("orig")
+    // RoiManager("Show None")
+    // RoiManager("Show All")
+    // RoiManager("Show All with labels")
+    
+    
+}
+        
+        
+
+
+IJ.run("Close All")
+
+imp_work = IJ.openImage("http://imagej.nih.gov/ij/images/blobs.gif")
+imp_work.setTitle("orig")
+imp_work.show()
+IJ.run("Duplicate...", "title=bin")
+imp_bin = IJ.getImage()
+imp_bin.show()
+IJ.setThreshold(128, 255)
+IJ.run("Convert to Mask")
+IJ.run("Watershed");
+imp_bin.show()
+
+ana_particles(imp_work, imp_bin, rpt_dir )
+
 
 
 

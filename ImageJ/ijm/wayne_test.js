@@ -1,0 +1,5 @@
+Packages.ij.IJ.run("Close All")
+img = Packages.ij.IJ.openImage("http://wsr.imagej.net/images/blobs.gif")
+img.show()
+Packages.ij.IJ.run("Auto Threshold", "method=Default white")
+Packages.ij.IJ.run("Analyze Particles...", "  show=[Bare Outlines] exclude include in_situ")
