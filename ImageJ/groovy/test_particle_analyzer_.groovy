@@ -223,6 +223,8 @@ def ana_particles(imp_ori, imp_wat, csv_dir, min_area_px=10, max_area_px=100000,
     IJ.selectWindow("Results")
     IJ.run("Close")
     IJ.selectWindow("orig")
+    def roim = RoiManager(true)
+    // println(roiM)
     // RoiManager("Show None")
     // RoiManager("Show All")
     // RoiManager("Show All with labels")
