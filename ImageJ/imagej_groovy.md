@@ -22,7 +22,7 @@ a problem - it **still uses** Python 2 and is not actively being updated.
 Fiji and ImageJ2 are rapidly developing and have a different object model and
 syntax than legacy ImageJ1. But I have a lot of Jython functions in a library
 (`jmFijGen.py`) that is maintained under version control (git) and copies "live"
-in `Fiji.app/jars/Lib` and so these functions can be called and reused in jython
+in `Fiji.app/jars/Lib` and so these functions can be called and reused in Jython
 scripts that are run in the script editor.
 
 ## Key input from Jan Erlinger
@@ -33,7 +33,9 @@ because most commands are calls into the Java API.
 
     **JRM Note 1:** Recording in Beanshell mode **_does not_** really
 create a runnable beanshell script. Creating and running always
-genrates errors for me. I need to covbert to groovy
+generates errors for me. I need to convert to groovy. To see a real
+beanshell script, look
+[here](https://imagej.nih.gov/ij/download/docs/bean-shell.html)
 
     **JRM Note 2:** Saving the scripts can produce odd file names with
 multiple extensions. I needed to fix these manually...
