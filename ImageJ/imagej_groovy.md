@@ -1,7 +1,7 @@
 ---
 title: "Scripting ImageJ using Groovy"
 author: "J. R. Minter"
-date: "Started: 2019-05-22, Last modified: 2019-06-06"
+date: "Started: 2019-05-22, Last modified: 2019-06-07"
 output:
   html_document:
     keep_md: yes
@@ -30,6 +30,13 @@ scripts that are run in the script editor.
 1. Set the macro recorder to record in **_Beanshell_ mode**,
 which records syntax mostly compatible with both Python and Groovy,
 because most commands are calls into the Java API.
+
+    **JRM Note 1:** Recording in Beanshell mode **_does not_** really
+create a runnable beanshell script. Creating and running always
+genrates errors for me. I need to covbert to groovy
+
+    **JRM Note 2:** Saving the scripts can produce odd file names with
+multiple extensions. I needed to fix these manually...
 
 2. To close any open `Results` and `ROI manager` windows at the beginning,
 use `Script Parameters`. You can achieve this in two steps:
