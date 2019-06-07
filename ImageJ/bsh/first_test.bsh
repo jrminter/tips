@@ -1,0 +1,45 @@
+/*
+ * My first working Beanshell example
+ * 
+ *    Date     Who  What
+ * ----------  ---  -------------------------------------------------
+ * 2019-06-07  JRM  Initial example
+ * 
+ * 
+ */
+
+// start clean...
+ij.IJ.run("Close All");
+ij.IJ.run("Blobs (25K)");
+ij.ImagePlus imp = ij.WindowManager.getCurrentImage();
+imp.setTitle("Blobs");
+imp.show();
+
+// duplicate and fix inverted LUT
+imp_new = imp.duplicate();
+imp_new.setTitle("Work");
+ij.IJ.run(imp_new, "Grays", "");
+ij.IJ.run(imp_new, "Invert", "");
+imp_new.show();
+imp_new.changes = false;
+
+imp_thr = imp_new.duplicate();
+imp_thr.setTitle("Threshold");
+ij.IJ.setAutoThreshold(imp_thr, "Default");
+imp_thr.show();
+
+imp_seg = imp_thr.duplicate();
+imp_seg.setTitle("Segmented");
+ij.IJ.run(imp_seg, "Make Binary", "");
+imp_seg.show();
+
+ij.IJ.run("Set Measurements...", "area perimeter fit shape display redirect=None decimal=3");
+ij.IJ.run(imp_seg, "Analyze Particles...", "display exclude clear add");
+imp_seg.show();
+ij.IJ.saveAs("Results", "/Users/jrminter/Documents/git/tips/ImageJ/bsh/blobs.csv");
+imp_flat = imp_seg.flatten();
+ij.IJ.saveAs(imp_flat, "PNG", "/Users/jrminter/Documents/git/tips/ImageJ/bsh/segmented_flattend.png");
+
+Float f = new Float(42f);
+Integer i = new Integer(2);
+
