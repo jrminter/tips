@@ -1,7 +1,7 @@
 ---
 title: "Jython Scripting"
 author: "J. R. Minter"
-date: "Started: 2019-05-23, Last modified: 2019-05-25"
+date: "Started: 2019-05-23, Last modified: 2019-06-08"
 output:
   html_document:
     keep_md: yes
@@ -23,6 +23,10 @@ applications/scripts.
 ImageJ.net has instructions for jython scripting in 
 [ImageJ1](https://imagej.net/Jython_Scripting) and in
 [ImageJ2](https://imagej.net/ImageJ2_Python_Scripts).
+
+Albert Cardona has his scripts in a
+[**github repository**](https://github.com/acardona/scripts).
+Look in the `python` folder...
 
 One needs to **_explicitly_** import the java classes we need.
 
