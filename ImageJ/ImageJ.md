@@ -31,9 +31,13 @@ I have collected these tips both from experience and from a very helpful user co
 
 `Ctl-Enter` - Bring the main window to the front
 
-See the full list [here](http://rsb.info.nih.gov/ij/docs/shortcuts.html),
+- See the full list [here](http://rsb.info.nih.gov/ij/docs/shortcuts.html),
 
-See the list of `Script Parameters` [here](https://imagej.net/Script_Parameters).
+- See the list of `Script Parameters` [here](https://imagej.net/Script_Parameters).
+
+- Use the [Pixel Inspector Tool](https://imagej.nih.gov/ij/plugins/pixel-tool/).
+To add it to the ImageJ toolbar, select `Pixel Inspection Tool` from the
+toolbar's `>>` menu.
 
 # YouTube Video Playlists
 
