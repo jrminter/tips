@@ -15,6 +15,11 @@ output:
 
 I have collected these tips both from experience and from a very helpful user community.
 
+**_Nota Bene_**: The presentation by Robert Haase _et al._ that is 
+available on
+[github](https://git.mpi-cbg.de/rhaase/lecture_applied_bioimage_analysis.git)
+is **_awesome_**! The ppt slides are very well done!
+
 # Useful keyboard shortcuts and script parameters
 
 `[` - Start the script editor. 
