@@ -30,6 +30,9 @@ Look in the `python` folder...
 
 One needs to **_explicitly_** import the java classes we need.
 
+**_Note_**: [This](https://forum.image.sc/t/jython-imagej-coding-advice/23639/8)
+thread on the IJ Forum has a good discussion of the issues with Jython.
+
 # A looming issue...
 
 **There is a looming issue**: Curtis Reuden explains
