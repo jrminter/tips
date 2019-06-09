@@ -1,0 +1,24 @@
+Particle Size Analysis by CryoTEM                      
+Sample Description:                          An Experiment
+MIDB Test Result                             LBMN827
+AnalySIS Version                                    3.0
+AnalysisPSD Version                                 1.0
+Instrument magnification               [kX]          12
+Instrument calibration factor       [nm/px]      3.3000
+Minimum size for inclusion          [sq px]          40
+Minimum size for inclusion          [sq nm]         436
+Maximum size for inclusion          [sq px]      100000
+Maximum size for inclusion          [sq nm]     1089000
+Maximum Percent Bay for inclusion [percent]        5.50
+No. Single Particles                               1126
+Total No. Features                                 1788
+Total Feature Area                  [sq um]        3.66
+Non-parametric statistics:                         
+Number-weighted    (J = 0.0) GMD       [nm]       49.60
+                             GSD                 1.1613
+Area-weighted      (J = 2.0) GMD       [nm]       51.54
+                             GSD                 1.1390
+Volume-weighted    (J = 3.0) GMD       [nm]       52.37
+                             GSD                 1.1327
+1/Z-weighted       (J = 5.5) GMD       [nm]       54.27
+                             GSD                 1.1234

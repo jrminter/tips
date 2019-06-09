@@ -1,0 +1,73 @@
+---
+title: "Analyze Diameter Data from Model Sphere Images"
+author: "J. R. Minter"
+date: "Started: 2019-06-08, Last modified: 2019-06-08"
+output:
+  html_document:
+    keep_md: yes
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+
+[Back to ImageJ](ImageJ.html)
+
+I have three images of model spheres from 1998. I analyzed each image using
+ImageJ. The results were written to `.csv` files. The objective is to measure
+the equivalent circular diameter and circularity of each specimen.
+
+# Read in the data
+
+```{r read_image_1, echo=FALSE, message=FALSE, warning=FALSE}
+library(here)
+library(readr)
+library(dplyr)
+library(knitr)
+
+fi <- here("ImageJ/tif/model_spheres/spheres-1.csv") #("model-spheres/spheres-1.csv")
+df1 <- read_csv(fi)
+df1 <- data.frame(ecd_px=2.0*sqrt(df1$Area/pi), circ=df1$Circ.)
+```
+
+```{r read_image_2, echo=FALSE, message=FALSE, warning=FALSE}
+fi <- here("ImageJ/tif/model_spheres/spheres-2.csv") #("model-spheres/spheres-1.csv")
+df2 <- read_csv(fi)
+df2 <- data.frame(ecd_px=2.0*sqrt(df2$Area/pi), circ=df2$Circ.)
+```
+
+
+```{r read_image_3,echo=FALSE, message=FALSE, warning=FALSE}
+fi <- here("ImageJ/tif/model_spheres/spheres-3.csv") #("model-spheres/spheres-1.csv")
+df3 <- read_csv(fi)
+df3 <- data.frame(ecd_px=2.0*sqrt(df3$Area/pi), circ=df3$Circ.)
+```
+
+```{r make_summary, echo=FALSE, message=FALSE, warning=FALSE}
+med_ecd_1 <- median(df1$ecd_px)
+sd_ecd_1 <- sd(df1$ecd_px)
+med_circ_1 <- median(df1$circ)
+sd_circ_1 <- sd(df1$circ)
+sum_1 <- c(med_ecd_1, sd_ecd_1, med_circ_1, sd_circ_1)
+
+med_ecd_2 <- median(df2$ecd_px)
+sd_ecd_2 <- sd(df2$ecd_px)
+med_circ_2 <- median(df2$circ)
+sd_circ_2 <- sd(df2$circ)
+sum_2 <- c(med_ecd_2, sd_ecd_2, med_circ_2, sd_circ_2)
+
+med_ecd_3 <- median(df3$ecd_px)
+sd_ecd_3 <- sd(df3$ecd_px)
+med_circ_3 <- median(df3$circ)
+sd_circ_3 <- sd(df3$circ)
+sum_3 <- c(med_ecd_3, sd_ecd_3, med_circ_3, sd_circ_3)
+
+res <- round(rbind(sum_1, sum_2, sum_3), 3)
+colnames(res) <- c("median ECD px", "sd ECD px", "median Circ", "sd Circ")
+rownames(res) <- c("spheres-1", "spheres-2", "spheres-3")
+
+knitr::kable(as_tibble(res))
+
+```
+
+[Back to ImageJ](ImageJ.html)
