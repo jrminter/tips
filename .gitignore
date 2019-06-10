@@ -200,6 +200,8 @@ ImageJ/basic_segmentation.html
 ImageJ/basic_scripting.html
 ImageJ/anaStageMicrometer.html
 ImageJ/imagej_groovy.html
+ImageJ/ana_model_sphere.html
+ImageJ/jython_scripting.html
 
 # Inkscape directory
 inkscape/.DS_Store
