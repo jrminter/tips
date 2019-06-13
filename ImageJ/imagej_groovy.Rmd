@@ -15,6 +15,58 @@ output:
 
 # Introduction
 
+## Some hints regarding groovy
+
+From a [youtube video](https://www.youtube.com/watch?v=B98jc8hdu9g) by
+Derek Banas who gives many tips fro groovy on the mac.
+
+1. To set up groovy on the mac get some information:
+
+    - Java versions installed:
+
+   ```
+   /usr/libexec/java_home -V
+   ```
+   
+   on jrmFastMac this gave
+   
+   ```
+   Matching Java Virtual Machines (3):
+    11.0.1, x86_64:	"OpenJDK 11.0.1"	/Library/Java/JavaVirtualMachines/openjdk-11.0.1.jdk/Contents/Home
+    10.0.2, x86_64:	"Java SE 10.0.2"	/Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home
+    1.8.0_212, x86_64:	"AdoptOpenJDK 8"	/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home
+   ```
+   
+   In terminal I would type:
+   
+   ```
+   export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_212, x86_64`
+   ```
+   
+   verify with
+   
+   ```
+   $ java -version 
+   openjdk version "1.8.0_192"
+   ```
+   
+   install groovy with
+   
+   ```
+   brew install groovy
+   ```
+   
+   which returned
+   
+   ```
+   groovy 2.5.7 is already installed and up-to-date
+   ```
+   Install Atom for an IDE...
+   
+   ```
+   brew cask install atom
+   ```
+
 ## Why Groovy?
 
 My "**_Go-To_**" Fiji/ImageJ scripting language has been Jython. Jython has

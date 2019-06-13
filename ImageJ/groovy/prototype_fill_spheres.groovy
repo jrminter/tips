@@ -11,7 +11,7 @@
  * 	1.	Need to generate diameters with a logarithmic GMD
  * 		Considering importing a list in from R...
  * 		
- * 	2.	Figure out how to efficently generate the images.
+ * 	2.	Figure out how to efficiently generate the images.
  * 		We need to have none touching particles and would 
  * 		like to get 50+ particles per image.
  * 		
