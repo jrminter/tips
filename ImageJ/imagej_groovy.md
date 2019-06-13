@@ -1,7 +1,7 @@
 ---
 title: "Scripting ImageJ using Groovy"
 author: "J. R. Minter"
-date: "Started: 2019-05-22, Last modified: 2019-06-07"
+date: "Started: 2019-05-22, Last modified: 2019-06-13"
 output:
   html_document:
     keep_md: yes
@@ -18,7 +18,7 @@ output:
 ## Some hints regarding groovy
 
 From a [youtube video](https://www.youtube.com/watch?v=B98jc8hdu9g) by
-Derek Banas who gives many tips fro groovy on the mac.
+Derek Banas who gives many tips for groovy on the mac.
 
 1. To set up groovy on the mac get some information:
 
