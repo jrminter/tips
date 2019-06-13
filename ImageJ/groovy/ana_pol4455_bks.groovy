@@ -24,7 +24,7 @@
    2019-06-12  JRM   1. Fixed hard-coded paths.
                      2. Saved the results in the same folder as the TIF image
                      3. Wrote a function 'close_open_non_image_window' that
-                        checks if a non-image window with a speficied name is
+                        checks if a non-image window with a specified name is
                         open and if so, closes the window.
 
    TODO:
