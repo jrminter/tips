@@ -20,6 +20,15 @@ available on
 [github](https://git.mpi-cbg.de/rhaase/lecture_applied_bioimage_analysis.git)
 is **_awesome_**! The ppt slides are very well done!
 
+# Breaking News
+
+**Some good news from Albert Cardona** It looks like there is hope for
+Jython to be extended. See
+[here](https://forum.image.sc/t/tutorials-for-python-for-fiji/26563/8) 
+and
+[here](https://sourceforge.net/p/jython/mailman/message/36607206/).
+
+
 # Useful keyboard shortcuts and script parameters
 
 `[` - Start the script editor. 
