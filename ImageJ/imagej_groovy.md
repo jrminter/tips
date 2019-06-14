@@ -66,6 +66,23 @@ Derek Banas who gives many tips for groovy on the mac.
    ```
    brew cask install atom
    ```
+## Try a plugin?
+
+StackOverflow has an example
+[here](https://stackoverflow.com/questions/8170681/creating-own-groovy-library).
+
+I tried
+
+```
+groovyc jrmFijiGen.groovy
+jar cvf jrmFijiGen.jar -C classes .
+```
+
+and restarted. I got the error
+
+```
+```
+
 
 ## Why Groovy?
 
