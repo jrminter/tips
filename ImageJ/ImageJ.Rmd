@@ -1,7 +1,7 @@
 ---
 title: "Image-J Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-05-31"
+date: "Started: 2013-07-16, Last modified: 2019-06-15"
 output:
   html_document:
     keep_md: yes
@@ -19,6 +19,14 @@ I have collected these tips both from experience and from a very helpful user co
 available on
 [github](https://git.mpi-cbg.de/rhaase/lecture_applied_bioimage_analysis.git)
 is **_awesome_**! The ppt slides are very well done!
+
+# Commands the macro recorder never records...
+
+```
+IJ.run("Make Binary")
+IJ.run("Convert to Mask")
+```
+
 
 # Breaking News
 
