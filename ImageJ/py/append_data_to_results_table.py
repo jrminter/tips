@@ -4,6 +4,22 @@ append_data_to_results_table.py
 Interesting example of jython measurements from the IJ Forum:
 https://forum.image.sc/t/python-how-to-append-data-into-results-table/26673/2
 
+For my current project I have coded a quite simple python script which
+calculates distance between points selected by user with ‘Multi-point’
+selection tool.
+
+The script should work as follows:
+
+1 With ‘Multi-point’ selection tool a user mark start and end points of the
+feature of interest in a z-stack;
+
+2. After all features of interest were selected, the user runs the script
+
+3. The script gets x, y and z coordinates from the Results table, calculates
+the lengths of selected features of interest and clears Results table
+
+4. Finally, the script creates new table where it puts the calculated values.
+
 
 """
 
