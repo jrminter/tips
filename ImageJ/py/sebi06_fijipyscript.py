@@ -16,13 +16,16 @@ Author: sebi06
 Date: 2019_05_21
 Version: 0.2
 
+Date: 2019-06-17
+JRM addition - use os.getenv to get IMG_ROOT and construct an output dir
+see lines 140 and 141
+
+
 The idea of this module is to provide a template showing some of the required
-code parts in order to create modules based on Fiji. The chosen processing step
+code parts in order to create modules based on Fiji. The choosen processing step
 is just an example for your image analysis pipeline
 
 Disclaimer: Use at your own risk!
-
-JRM Note: set the output path in line 38
 
 """
 
@@ -134,8 +137,8 @@ log.info('------------  START IMAGE ANALYSIS ------------')
 ##############################################################
 
 # define path for the output
-# outputimagepath = '/output/' + os.path.basename(IMAGEPATH)
-outputimagepath = '/Users/jrminter/Downloads/' + os.path.basename(IMAGEPATH)
+img_root = os.getenv('IMG_ROOT')
+outputimagepath = img_root +'/out/' + os.path.basename(IMAGEPATH)
 basename = os.path.splitext(outputimagepath)[0]
 
 # remove the extra .ome before reassembling the filename
@@ -145,6 +148,8 @@ if basename[-4:] == '.ome':
 
 # save processed image
 outputimagepath = basename + SUFFIX_FL + '.' + SAVEFORMAT
+
+print(outputimagepath)
 
 #############   RUN MAIN IMAGE ANALYSIS PIPELINE ##########
 
