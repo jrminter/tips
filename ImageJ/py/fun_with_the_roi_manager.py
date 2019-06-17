@@ -1,8 +1,27 @@
 @String(label="Image Directory", style="") img_dir
 
 """
+fun_with_the_roi_manager.py
+
+Test capabilities of the RoiManager
+
+Date        Who  What
+----------  ---  ------------------------------------------------------------
+2019-06-16  JRM  Initial start but had trouble with setting color to the ROIs
+2019-06-17  JRM  Bio7 from IJ Forum provided the info I needed & added comments
+
 img_dir macOS:
 /Users/jrminter/Documents/git/tips/ImageJ/tif/blobs
+
+I had trouble getting the color to yellow, I posted a question on the
+IJ Forum:
+https://forum.image.sc/t/turn-off-prompt-when-changing-roimanagers-line-color-in-a-jython-script/26680
+
+and Bio7 provided the solution:
+https://forum.image.sc/t/turn-off-prompt-when-changing-roimanagers-line-color-in-a-jython-script/26680/2
+
+This Forum post (linked by Bio7) was helpful:
+https://forum.image.sc/t/clear-selection-implementation-in-jython/5187
 
 """
 
@@ -51,15 +70,31 @@ imp_det.show()
 
 # RoiManager should be present
 rm = RoiManager.getInstance()
+
+# find the number of ROis and make the color yellow
+# based on Bio7's suggestion
+count = rm.getCount()
+for x in range(count):
+	rm.select(x)
+	rm.runCommand("Set Color", "yellow")
+
+	
 rm.allowRecording(True)
-rm.runCommand("Set Color", "yellow")
 imp_ori.show()
 ip = imp_ori.getProcessor()
 ra = rm.getRoisAsArray()
-# loop through ROI array and do measurements. 
-# here is only listing mean intensity of ROIs
-# if you want more, see 
-# http://rsbweb.nih.gov/ij/developer/api/ij/process/ImageStatistics.html
+
+"""
+loop through ROI array and do measurements. 
+here is only listing mean intensity of ROIs
+if you want more, see 
+http://rsbweb.nih.gov/ij/developer/api/ij/process/ImageStatistics.html
+
+This isn't terribly helpful because in general I save directly to .csv.
+Where it could be helpful is in filtering results by ROI, perhaps selecting
+compliant particles...
+"""
+
 for r in ra:
 	ip.setRoi(r)
 	istats = ip.getStatistics()
