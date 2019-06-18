@@ -1,7 +1,7 @@
 ---
 title: "Image-J Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-06-15"
+date: "Started: 2013-07-16, Last modified: 2019-06-18"
 output:
   html_document:
     keep_md: yes
@@ -138,6 +138,13 @@ the the directory that contains `IJ_Prefs.txt`. It is in the
 
 I used Fiji to segment the lines in an image recorded at 10X on the Olympus
 BX61 microscope. The data analysis is [here](anaStageMicrometer.html).
+
+# Generating and analyzing spherical particles
+
+This is a work in progress. The goal is to model a distribution of
+lognormal particles and generate test images. Currently I can model
+the particles. See the results
+[here](ana_generated_spheres.html).
 
 # Debugging macros
 
