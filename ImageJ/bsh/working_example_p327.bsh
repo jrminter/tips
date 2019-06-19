@@ -1,0 +1,40 @@
+/*
+ * Test Beanshell example
+ * 
+ *    Date     Who  What
+ * ----------  ---  -------------------------------------------------
+ * 2019-06-19  JRM  Initial example based on p. 327 of Image
+ *                  Processing with ImageJ Second Edition.
+ *                  Timing came from the first answer here:
+ *                  https://stackoverflow.com/questions/6317750/how-to-measure-the-a-time-span-in-seconds-using-system-currenttimemillis
+ *                  For longer processes, use:                
+ *                  long start = System.currentTimeMillis();
+ *                  and then divide the difference to get seconds...
+ * 
+ * 
+ */
+
+
+import ij.IJ;
+import ij.ImagePlus;
+import ij.WindowManager;
+import ij.process.ByteProcessor;
+
+long start = System.nanoTime();
+
+IJ.run("Close All");
+IJ.run("Blobs (25K)");
+// Specify the class on initialization...
+ImagePlus imp = WindowManager.getCurrentImage();
+ByteProcessor ip = imp.getProcessor();
+ip.invertLut();
+imp.setProcessor(ip);
+imp.updateAndDraw();
+IJ.run(imp, "Invert", "");
+imp.show();
+imp.setTitle("Blobs with Gray8 LUT");
+imp.show();
+
+long end = System.nanoTime();
+print(delta_sec = ((end - start)/ 1000000)  + " ms");
+print("Done...")
