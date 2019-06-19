@@ -23,7 +23,7 @@ class using the script `test_lognormal_distribution.py`.
 
 
 ```
-## [1] "/Users/jrminter/Documents/git/tips/ImageJ/csv/test_gen_lognormal_particles.csv"
+## [1] "C:/Users/jrminter/Documents/git/tips/ImageJ/csv/test_gen_lognormal_particles.csv"
 ```
 
 ```
@@ -40,17 +40,6 @@ class using the script `test_lognormal_distribution.py`.
 ```r
 bSave = FALSE
 library(ggplot2)
-```
-
-```
-## Registered S3 methods overwritten by 'ggplot2':
-##   method         from 
-##   [.quosures     rlang
-##   c.quosures     rlang
-##   print.quosures rlang
-```
-
-```r
 pHD <- ggplot(df_particles, aes(ECD_nm)) +
        geom_histogram(binwidth = .02) +
        scale_x_log10(limits = c(10.,100.0),
