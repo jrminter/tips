@@ -1,0 +1,30 @@
+Lognormal distribution
+
+see [Wikipedia](https://en.wikipedia.org/wiki/Log-normal_distribution)
+
+Dist params: mu and sigma
+
+Geometric mean = exp(mu)
+Geometric variance = exp(sigma^2)
+Geometric std dev = exp(sigma)
+
+So to create a lognormal distribution with a geometric mean of 50 nm and a geometric standard deviation of 1.2, we would choose
+
+50.0 = exp(mu) so mu = ln(50) = 3.912023
+
+and 
+
+1.2 = exp(sigma) so sigma = ln(1.2) = 0.1823216
+
+see https://javadoc.scijava.org/Apache-Commons-Math/
+
+org.apache.commons.math3.distribution.LogNormalDistribution
+
+LogNormalDistribution.
+
+LogNormalDistribution(double scale, double shape) i.e.
+distn = LogNormalDistribution(3.912023, 0.1823216)
+
+my_sample = distn.sample()
+
+
