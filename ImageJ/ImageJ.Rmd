@@ -36,6 +36,28 @@ Jython to be extended. See
 and
 [here](https://sourceforge.net/p/jython/mailman/message/36607206/).
 
+**Beware of multiple image transformations** - Robert Hasse has an interesting
+[Tweet](https://twitter.com/haesleinhuepf/status/1088546103866388481)
+that warns of image degradation by repeated transformation. Robert and coworkers
+call this an **Interpolation artifact**. It is demonstrated in
+[imagelib2-realransform](https://github.com/imglib/imglib2-realtransform).
+Robert noted that he observed it on:
+
+> Any axis. at.rotate(2,1);
+> 
+> I was just wondering if manipulation of an AffineTransform3D has the same
+> effect on a transformed image later on as a sequence of transformations
+> applied to the image...
+
+Steven Saffield noted:
+
+> Yes, same.  With affines, concatenate affines though because faster (one
+> affine on all pixels instead of many). Also, for 2D images use AffineTransform2D.
+> Also, check 
+> [here](https://github.com/imglib/imglib2-realtransform/blob/master/src/main/java/net/imglib2/realtransform/RealViews.java#L159
+> for rendering. Saves compute by adding differential vectors instead of
+> matrix multiplication.
+
 
 # Useful keyboard shortcuts and script parameters
 
