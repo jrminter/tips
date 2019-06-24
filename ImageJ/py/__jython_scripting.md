@@ -1,3 +1,9 @@
+# Jython Scripting Hints
+
+Last edit: 2019-06-23
+
+Started as a post to a user on the ImageJ Forum. A good list for me to keep up.
+
 If you want to try `Jython`,  here are my favorite resources to help you get started:
 
 - [Kota Miura's](http://wiki.cmci.info/documents/120206pyip_cooking/python_imagej_cookbook) cookbook
