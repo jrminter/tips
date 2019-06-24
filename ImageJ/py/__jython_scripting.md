@@ -27,3 +27,56 @@ Best regards,
 John Minter
 
 
+# Some commands to remember
+
+- `IJ.run("Measure")`
+- `IJ.run("Clear Results")`
+- `MeasureTable = WindowManager.getWindow("Measurements")`
+- `str_info = """Analyst: J. R. Minter
+  Date Recorded: 2004-08-10 14:05
+  Sample: Nalco silica
+  Instrument: Philips CM20
+  Conditions: CryoTEM 200 kV 38,000X LowDose
+  Notes: Original image size 1024x1024x16 bits/px 
+  Comment: 2019-06-19: Rotated and cropped in Fiji to get best particles. 
+  """
+  imp.setProperty("Info", str_info)`
+
+- `import os`
+  `git_home = os.getenv("GIT_HOME")`
+
+- `from ij.plugin import ImageCalculator`
+  `ic = ImageCalculator()`
+  `imp_sub = ic.run("Subtract create 32-bit", imp_jpg, imp_ori)`
+
+- `IJ.run(imp_ori, "32-bit", "")`
+- `IJ.run(imp_sub, "Enhance Contrast", "saturated=0.35")`
+- `IJ.run(imp_sub, "8-bit", "")`
+- `from ij import WindowManager`
+  `print(WindowManager.getImageTitles())`
+  `img_cnt = WindowManager.getImageCount()`
+- `from ij.plugin import ChannelSplitter`
+  `channels = ChannelSplitter.split(imp_leaf)`
+  `# red`
+  `channels[0].show()`
+  `# green`
+  `channels[1].show()`
+  `# blue`
+  `channels[2].show()`
+
+  `from ij.plugin.frame import RoiManager`
+  `def add_roi_and_update(imp, rm, roi_num):`
+      `rm.select(roi_num)`
+      `rm.selectAndMakeVisible(imp, roi_num)` 
+      `imp.updateAndRepaintWindow()`
+
+   `roi_num = 0`
+   `add_roi_and_update(channels[0], rm, roi_num)`
+
+
+
+
+
+
+
+

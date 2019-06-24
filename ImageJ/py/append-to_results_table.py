@@ -40,7 +40,7 @@ IJ.run("Clear Results")
 # Append to custom Measurement table or create it if non existing
 MeasureTable = WindowManager.getWindow("Measurements")
 if MeasureTable == None:
-    MeasureTable = ResultsTable()
+	MeasureTable = ResultsTable()
 else:
 	MeasureTable = WindowManager.getWindow("Measurements")
 	MeasureTable = MeasureTable.getTextPanel().getOrCreateResultsTable()
