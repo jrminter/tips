@@ -1,7 +1,7 @@
 ---
 title: "Image-J Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-06-23"
+date: "Started: 2013-07-16, Last modified: 2019-06-24"
 output:
   html_document:
     keep_md: yes
@@ -402,6 +402,7 @@ plugin. This uses `ImgLib2`. There is a discussion of this plugin on the
 - Morphology
 - MOSAIC ToolSuite
 - ParticleSizer
+- SCF-MPI-CBG
 - SimonKlein
 - Stowers
 [- Linear Distance]?
