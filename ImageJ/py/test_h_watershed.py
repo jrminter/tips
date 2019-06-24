@@ -1,5 +1,19 @@
 #@ OpService ops
 
+"""
+
+Script is from here:
+https://forum.image.sc/t/h-watershed-and-labelregions/26918
+
+Describing this:
+https://imagej.net/Interactive_Watershed
+
+Fails as expected...
+
+Not geneally impressed w tests on blobs
+
+"""
+
 from ij import IJ
 from ij import ImagePlus
 from net.imglib2.img.display.imagej import ImageJFunctions
@@ -40,5 +54,8 @@ print "labeling: ", type(labeling)
 regions =  LabelRegions(labeling)
 print "regions: ", type(regions)
 
+print(dir(regions))
+
+# note crash here even though getExistingLabels() is defined...
 existing_labels = regions.getExistingLabels()
 print "existingLabels: ", type(existing_labels)
