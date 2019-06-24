@@ -1,7 +1,7 @@
 ---
 title: "Image-J Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-06-18"
+date: "Started: 2013-07-16, Last modified: 2019-06-23"
 output:
   html_document:
     keep_md: yes
@@ -41,7 +41,9 @@ and
 that warns of image degradation by repeated transformation. Robert and coworkers
 call this an **Interpolation artifact**. It is demonstrated in
 [imagelib2-realransform](https://github.com/imglib/imglib2-realtransform).
-Robert noted that he observed it on:
+Robert noted that he observed it on
+
+![Robert Haase's tweet about repeated transformations](png/Hasse-tweet.png)
 
 > Any axis. at.rotate(2,1);
 > 
