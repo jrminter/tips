@@ -1,7 +1,7 @@
 ---
 title: "Image-J Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-06-24"
+date: "Started: 2013-07-16, Last modified: 2019-06-25"
 output:
   html_document:
     keep_md: yes
@@ -84,6 +84,16 @@ Steven Saffield noted:
 - Use the [Pixel Inspector Tool](https://imagej.nih.gov/ij/plugins/pixel-tool/).
 To add it to the ImageJ toolbar, select `Pixel Inspection Tool` from the
 toolbar's `>>` menu.
+
+# Autothreshold names...
+
+```
+Default, Huang, Intermodes, IsoData, IJ_IsoData, Li, MaxEntropy
+Mean, MinError, Minimum, Moments, Otsu, Percentile, RenyiEntropy
+Shanbhag, Triangle, Yen
+```
+
+
 
 # YouTube Video Playlists
 
