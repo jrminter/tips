@@ -1,7 +1,7 @@
 ---
 title: "Python Tips"
 author: "J. R. Minter"
-date: 'Started: 2013-07-16, Last modified: 2019-06-03'
+date: 'Started: 2013-07-16, Last modified: 2019-06-26'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -35,7 +35,8 @@ I often want to add or remove the `conda-forge` channel...
     ```
     conda config --remove channels conda-forge
     ```
-## Activating/Deactivating environments
+
+## Activating/Deactivating/deleting environments
 
 1. Activate
 
@@ -44,6 +45,10 @@ I often want to add or remove the `conda-forge` channel...
 2. Deactivate
 
     `conda deactivate`
+    
+3. Delete an environment
+
+    `conda remove -n sage --all`
 
 ## Sharing environments
 
