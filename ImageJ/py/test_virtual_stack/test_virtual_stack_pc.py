@@ -23,6 +23,7 @@ for f in filtFiles:
 		imp = IJ.openImage(path)
 		print(imp)
 		imp.show()
+		#                                               nothing works here...
 		vs = VirtualStack(imp.width, imp.height, None, "/")
 		vs.addSlice(path)
 	else:
