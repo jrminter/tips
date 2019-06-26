@@ -24,7 +24,7 @@ for f in filtFiles:
 		print(imp)
 		imp.show()
 		#                                               nothing works here...
-		vs = VirtualStack(imp.width, imp.height, None, "C:\\Temp\\vs.tif")
+		vs = VirtualStack(imp.width, imp.height, None, "/")
 		vs.addSlice(path)
 	else:
 		path = img_dir + f
