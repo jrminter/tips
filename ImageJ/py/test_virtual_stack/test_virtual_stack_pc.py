@@ -23,7 +23,8 @@ for f in filtFiles:
 		imp = IJ.openImage(path)
 		print(imp)
 		imp.show()
-		vs = VirtualStack(imp.width, imp.height, None, "/")
+		#                                               nothing works here...
+		vs = VirtualStack(imp.width, imp.height, None, "C:\\Temp\\vs.tif")
 		vs.addSlice(path)
 	else:
 		path = img_dir + f
