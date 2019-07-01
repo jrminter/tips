@@ -1,6 +1,6 @@
 # Jython Scripting Hints
 
-Last edit: 2019-06-23
+Last edit: 2019-07-01
 
 Started as a post to a user on the ImageJ Forum. A good list for me to keep up.
 
@@ -31,6 +31,9 @@ John Minter
 
 - `IJ.run("Measure")`
 - `IJ.run("Clear Results")`
+- `IJ.run(imp, "Line Width...", "line=60")`
+- `from ij.plugin import ChannelSplitter`    
+  `channels = ChannelSplitter.split(imp)`
 - `MeasureTable = WindowManager.getWindow("Measurements")`
 - `str_info = """Analyst: J. R. Minter
   Date Recorded: 2004-08-10 14:05
