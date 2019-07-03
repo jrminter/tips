@@ -5,7 +5,8 @@
     
 */
 
-import ij.IJ
+import ij.*
+import ij.plugin.*
 
 IJ.run("Close All")
 img = IJ.openImage("http://wsr.imagej.net/images/blobs.gif")
