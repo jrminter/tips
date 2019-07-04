@@ -17,6 +17,10 @@ import net.imglib2.view.Views
 import net.imglib2.FinalInterval
 
 import net.imglib2.realtransform.AffineTransform2D
+import ij.IJ
+
+// JRM addition
+IJ.run("Close All")
 
 // required for rasterizing
 // to avoid misalignment between J stem and bottom
@@ -87,3 +91,5 @@ img = Views.interval(Views.raster(mask), new FinalInterval(
 						[mask.realMin( 0 ), mask.realMin( 1 ) ] as long[],
 						[mask.realMax( 0 ), mask.realMax( 1 ) ] as long[] )
 					)
+/* JRM addition... */
+IJ.run("Brightness/Contrast...")
