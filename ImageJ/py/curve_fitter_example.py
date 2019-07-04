@@ -66,10 +66,13 @@ plt.setLimits(left, right, bottom, top)
 plt.setFrameSize(600, 300 );
 plt.setColor("blue", "#ccccff")
 # the circles are small. Can't figure out how to make 
-# them larger...
+# them larger... These 2 calls are equivalent...
+# plt.addPoints(jxa,jya, Plot.CIRCLE)
 plt.add("circles", jxa, jya)
+# this is even harder to see...
+# plt.addPoints(jxa,jya, Plot.CROSS)
 plt.setColor(Color.RED)
-plt.setLineWidth(2)
+plt.setLineWidth(1)
 plt.drawLine(0.0, 2.5, 4.0, 4.5) 
 plt.setXYLabels("X", "Y")
 plt.show()
