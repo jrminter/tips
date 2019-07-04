@@ -1,7 +1,7 @@
 ---
 title: "Image-J Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-06-26"
+date: "Started: 2013-07-16, Last modified: 2019-07-04"
 output:
   html_document:
     keep_md: yes
@@ -25,7 +25,17 @@ is **_awesome_**! The ppt slides are very well done!
 ```
 IJ.run("Make Binary")
 IJ.run("Convert to Mask")
+run("Open Next");	//This becomes the active image for the next session
+close("\\Others");
 ```
+
+jython version:
+added to jmFijiGen.py 2019-07-04
+```
+def close_others():
+	IJ.runMacro("close(\"\\\\Others\")")
+```
+
 
 
 # Breaking News
