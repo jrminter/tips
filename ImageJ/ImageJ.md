@@ -25,8 +25,8 @@ is **_awesome_**! The ppt slides are very well done!
 ```
 IJ.run("Make Binary")
 IJ.run("Convert to Mask")
-run("Open Next");	//This becomes the active image for the next session
-close("\\Others");
+IJ.run("Open Next");	//This becomes the active image for the next session
+close("\\Others")
 ```
 
 jython version:
