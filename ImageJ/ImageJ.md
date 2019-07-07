@@ -1,7 +1,7 @@
 ---
 title: "Image-J Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-07-04"
+date: "Started: 2013-07-16, Last modified: 2019-07-06"
 output:
   html_document:
     keep_md: yes
@@ -397,11 +397,11 @@ plugin. This uses `ImgLib2`. There is a discussion of this plugin on the
 
 - Tutorials on [github](https://github.com/imagej/tutorials).
 
-## My Current Install
+# My Current Install
 
-### Fiji Update Sites checked
+## Fiji Update Sites checked
 
-**Updated 2019-05-28**
+**Updated 2019-07-06**
 
 - ImageJ
 - Fiji
@@ -410,11 +410,14 @@ plugin. This uses `ImgLib2`. There is a discussion of this plugin on the
 - BIG-EPFL
 - Bioformats
 - Biomedgroup
+- BioVoxxel
 - Cookbook
 - CMCI-EMBL
 - DiameterJ
 - FFMPEG
 - IBMP-CNRS
+- IJPB-plugins
+- IJ-OpenCV-plugins
 - IJPB-plugins
 - ImageJ-Latex
 - ImageScience
@@ -423,6 +426,7 @@ plugin. This uses `ImgLib2`. There is a discussion of this plugin on the
 - MOSAIC ToolSuite
 - ParticleSizer
 - SCF-MPI-CBG
+- Scijava Jupyter Kernel
 - SimonKlein
 - Stowers
 [- Linear Distance]?
@@ -434,7 +438,7 @@ plugin. This uses `ImgLib2`. There is a discussion of this plugin on the
 - kodakBubbles.py
 
 
-## A fix for Fiji start-up problems on MacOS Mojave
+# A fix for Fiji start-up problems on MacOS Mojave
 
 I'm not having problems at the moment, but users with new installs are.
 
@@ -474,7 +478,7 @@ Note: My info.plist is different:
 
 ![My Info.plist file in XCode](png/Info-plist.png)
 
-## Tutorials
+# Tutorials
 
 See these ImageJ tutorials that use an ipython notebook. Clone
 [this](https://github.com/imagej/tutorials) github repository

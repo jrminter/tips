@@ -1,0 +1,67 @@
+---
+title: "Pella 617 Au on C"
+author: "John Minter"
+date: "2019-07-06"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+
+The current "standard" image for particle analysis in Fiji/ImageJ is the
+`blobs.gif` image.
+
+![**Figure 1.** blobs.gif](blobs.gif)
+
+This image has a few issues. 
+
+1. There is no published provenance.
+
+2. It is supplied with an inverted look-up table., i.e. it is really light 
+particles on a dark background.
+
+3. The image has very few (31) equally spaced gray levels, The first entry in
+the histogram begins at 8 and the final entry is 248.
+
+![**Figure 2.** Blobs histogram. Note this image only has 31 gray levels.](blobs_histogram.png)
+
+4. The image lacks a **spatial calibration**
+
+5. I cannot find any documentation on the provenance of the image.
+
+To be fair, `blobs.gif` **is** a nice to demonstrate a particle amalysis
+including watershed separation.
+
+My question: **_Can we do better_**
+
+# My hypothesis
+
+I believe the blobs image is SEM image of Au islands on graphitic carbon imaged
+on an older SEM. The particles would be bright because of secondary and
+backscattered electrons emitted from the Au. There is little electron emission
+from the C. Several vendors supply specimens like this for image resolution
+tests. 
+
+I wanted to compare the blobs image to images from a Au on C test specimen
+supplied by Ted Pella (product number 617). The `617 TN.pdf` (available from
+[here](https://www.tedpella.com/technote_html/617%20TN.pdf) - see page 2).
+Pella markets specimens with different size distributions on Au particles on C
+that are also discribed.
+
+# Making a sample image.
+
+I created a sample image from the micrograph in the brochure.
+**_I would really prefer an original micrograph with provenance information_** 
+
+![**Figure 3** A 1024x768 image created from the brochure. Note that the width of the image is 1106 nm (calibrated from the scale bar below the image). Sadly, this specimen does not have many features with restrictions suitable for a watershed (green arrows).](Pella_617_Au_on_C_100kX_15kV_cr.png)
+
+And the histogram
+
+![**Figure 4** Histogram from 1024x768 Au on C image. In this image the first gray level begins at 5 and the last gray level with counts is 254 with 10 counts. This is a very nice histogram.](Pella_617_Au_on_C_100kX_15kV_cr_histogram.png)
+
+
+
+
