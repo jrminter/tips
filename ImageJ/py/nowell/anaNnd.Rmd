@@ -1,0 +1,48 @@
+---
+title: "Analyze Nuclei Nearest Neighbor Distances"
+author: "John Minter"
+date: "2019-07-09"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment=NA)
+```
+
+Load Packages
+
+```{r loadPackages, message=FALSE}
+library(here)
+library(dplyr)
+library(ggplot2)
+
+```
+
+Set the file path using the `here()` package and create a `tibble` containing
+the data.
+
+```{r loadData}
+fi <- here("/ImageJ/py/nowell/nuclei_nnd.csv")
+print(fi)
+
+tib <- as_tibble(read.csv(fi,header = TRUE, sep = ","))
+names(tib) <- c("NND_px")
+print(head(tib))
+```
+
+
+```{r plotHisto}
+plt <- ggplot(tib, aes(x=NND_px)) +
+        geom_histogram(binwidth=1) +
+        xlab("Nearest Neighbor Distance [px]") +
+        ylab("Count") +
+        ggtitle("Nearest Distance for Nuclei Image") +
+        labs(caption = 'jrminter@gmail.com / @jrminter') +
+        theme(axis.text=element_text(size=12),
+              axis.title=element_text(size=12),
+              # center the title
+              plot.title=element_text(hjust = 0.5)) +
+        NULL
+        
+print(plt)
+```
