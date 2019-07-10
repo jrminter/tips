@@ -36,6 +36,24 @@ def close_others():
 	IJ.runMacro("close(\"\\\\Others\")")
 ```
 
+# Convert *.class to *.jar
+
+From [here](https://introcs.cs.princeton.edu/java/85application/jar/jar.html).
+
+1. Create a Manifest file
+
+    For Nnd_.class the file would read:
+    
+    ```
+    Manifest-Version: 1.0
+    Main-Class: Nnd_
+    ```
+2. Create the archive from the command line by
+
+    ```
+    jar cmf Nnd_.mf Nnd_.jar Nnd_.class
+    ```
+    
 
 
 # Breaking News
