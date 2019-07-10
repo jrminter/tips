@@ -18,6 +18,7 @@ from ij.process import ImageProcessor, ImageConverter
 from ij.plugin.filter import EDM
 from ij.process.AutoThresholder import Method
 import os
+import jmFijiGen as jmg
 
 def auto_threshold(imp_in, str_thresh, bScale=False):
 	"""
@@ -103,8 +104,8 @@ img_path = path + "Nuclei.tif"
 imp_ori = IJ.openImage(img_path)
 imp_ori.show()
 
-
-ret = auto_threshold(imp_ori, "Otsu", bScale=False)
+# note: it works from jmFijiGen.py!
+ret = jmg.auto_threshold(imp_ori, "Otsu", bScale=False)
 
 IJ.run(ret[0], "Apply LUT", "")
 # ret[0].setDisplayRange(0, ret[1]+1)
