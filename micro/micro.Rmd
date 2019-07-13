@@ -1,7 +1,7 @@
 ---
 title: "Microscopy Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2018-10-11"
+date: "Started: 2013-07-16, Last modified: 2019-07-12"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -11,6 +11,18 @@ output:
 ---
 
 [Back to Index](../README.html)
+
+# Good advice from Henry Baker
+
+One of the first documents Ned Thomas gave me was an excerpt from Henry Baker's book "[The Microscope Made Easy](https://books.google.com/books?id=__QLAAAAMAAJ&dq=%22Cautions+in+viewing+Objects%22)" (1743). The quote below comes from pages 62 and 63. I changed the case of some words for modern English usage.
+
+> Beware of determining and declaring your opinion suddenly on any object; for imagination often gets the start of judgment and makes people believe they see things which better observations will convince them could not possibly be seen: therefore assert nothing til after repeated experiments and examinations in all lights and all positions.
+>
+> When you employ the microscope, shake off all prejudice, nor harbor any favorite opinions; for, if you do, 'tis not unlikely fancy will betray you into error, and make you see what you wish to see.
+>
+> Remember, that truth alone is the matter you are in search after; and if you have been mistaken, let not vanity seduce you to persist in your mistake.
+> 
+> Pass no judgment upon things over-extended by force or contracted by dryness or in any manner out of their natural state without making suitable allowances. 
 
 # Microscopy databases
 
