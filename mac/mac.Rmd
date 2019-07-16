@@ -13,7 +13,8 @@ output:
 
 # Configuring my FiiO headphone amplifier
 
-I need to configure the sound properties
+First, I need to use apple headphones. The knock-off seem to have poor quality
+control on connectors. I need to configure the sound properties as shown below.
 
 1. Open `System Preferences` control panel
 
