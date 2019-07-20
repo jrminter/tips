@@ -1,7 +1,7 @@
 ---
 title: "Image-J Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-07-06"
+date: "Started: 2013-07-16, Last modified: 2019-07-20"
 output:
   html_document:
     keep_md: yes
@@ -35,6 +35,20 @@ added to jmFijiGen.py 2019-07-04
 def close_others():
 	IJ.runMacro("close(\"\\\\Others\")")
 ```
+
+# IJ problems with scientific TIF images on Windows
+
+[cgholke](https://forum.image.sc/t/windows-freeze-for-multi-page-tiffs/27820/4)
+writes:
+
+> Thumbnails, previews, and Windows Explorer extensions are known to have
+> issues with scientific TIFF files. Try to enable
+> `Always show icons, never thumbnails` in the    
+> `Folder Options > View`
+> settings and disable the Explorer preview pane.
+
+This can cause problems with `Windows Explorer`.
+
 
 # Convert *.class to *.jar
 
