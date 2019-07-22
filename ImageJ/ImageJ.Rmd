@@ -1,7 +1,7 @@
 ---
 title: "Image-J Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-07-20"
+date: "Started: 2013-07-16, Last modified: 2019-07-22"
 output:
   html_document:
     keep_md: yes
@@ -19,6 +19,26 @@ I have collected these tips both from experience and from a very helpful user co
 available on
 [github](https://git.mpi-cbg.de/rhaase/lecture_applied_bioimage_analysis.git)
 is **_awesome_**! The ppt slides are very well done!
+
+# The IJ.run() function
+
+The `IJ.run()` function comes with **four** variants. **_None_ of these return a value**.
+
+1.  `static void run(ImagePlus imp, java.lang.String command, java.lang.String options)`
+
+    This runs an ImageJ command using the specified image and options.
+    
+2. `static void run(Interpreter interpreter, java.lang.String command, java.lang.String options)`
+
+    The macro interpreter uses this method to run commands.
+
+3. `static void run(java.lang.String command)`
+
+    Runs an ImageJ command.
+
+4. `static void run(java.lang.String command, java.lang.String options)`
+
+    Runs an ImageJ command, with options that are passed to the GenericDialog and OpenDialog classes.
 
 # Commands the macro recorder never records...
 
