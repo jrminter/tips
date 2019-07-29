@@ -1,7 +1,7 @@
 ---
 title: "Image-J Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-07-22"
+date: "Started: 2013-07-16, Last modified: 2019-07-29"
 output:
   html_document:
     keep_md: yes
@@ -13,12 +13,17 @@ output:
 
 [Back to Index](../README.html)
 
+# Key resources
+
 I have collected these tips both from experience and from a very helpful user community.
 
 **_Nota Bene_**: The presentation by Robert Haase _et al._ that is 
 available on
 [github](https://git.mpi-cbg.de/rhaase/lecture_applied_bioimage_analysis.git)
 is **_awesome_**! The ppt slides are very well done!
+
+There is a **very nice collection of tutorials** available on the
+[ImageJ Forum](https://forum.image.sc/t/bioimage-analysis-recommended-reading-and-viewing/28051).
 
 # The IJ.run() function
 
