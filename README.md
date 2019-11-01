@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-05-26"
+date: "Started: 2013-07-16, Last modified: 2019-11-01"
 output:
   html_document:
     keep_md: true
@@ -17,18 +17,22 @@ format.
 
 **First**, some quickies:
 
-1. **regex for youtube time stamps**. Useful in SublimeText3!
+1. **install command line tools**
+
+    `xcode-select --install`
+
+2. **regex for youtube time stamps**. Useful in SublimeText3!
 
    `\d\d:\d\d`
 
-2. **Symbolic links**. I always get this confused
+3. **Symbolic links**. I always get this confused
 
     ```
        file     link
 ln -s source destination
     ```
 
-3. **Fun snippets**
+4. **Fun snippets**
 
 > Your closest colaborator is you, six months from now    
 > ... and you don't respond to email     
@@ -37,17 +41,17 @@ ln -s source destination
 > DRY (do not repeat yourself) vs WET (waste everyones time) coding styles    
 > - Peter Baker (UseR 2018)
 
-4. **Getting started with data science**
+5. **Getting started with data science**
 
 - A very helpful article from
 [Datacamp](https://www.datacamp.com/community/tutorials/setup-data-science-environment).
 
-5. **Clear the Chrome Cache**
+6. **Clear the Chrome Cache**
 
 - Press "CTRL" + "Shift" + "Delete" keys in Windows or Linux
 - Press "Command" + "Shift" + "Delete"" keys on MacOS.
 
-6. **Delete Specific Cookies in Chrome for Mac OS X**
+7. **Delete Specific Cookies in Chrome for Mac OS X**
 
     From [osxdaily.com](http://osxdaily.com/2016/07/02/delete-cookies-chrome-browser/): You can remove a specific website cookie from Chrome by doing the following:
 
@@ -63,7 +67,7 @@ This skips several steps from original article!
 
 - Avoid cookie placement and cache generation in the first place by using the Chrome `Incognito Mode` private browsing feature.
 
-7. **Automatically download all files in a directory**
+8. **Automatically download all files in a directory**
 
    Let's also exclude all the `index.html` files... 
 
