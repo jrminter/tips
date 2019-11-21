@@ -1,7 +1,7 @@
 ---
 title: "Windows Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-05-22"
+date: "Started: 2013-07-16, Last modified: 2019-10-21"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -39,7 +39,41 @@ From [slashdot](https://tech.slashdot.org/story/19/02/19/0356237/windows-7-users
 ```
     subl  C:\Windows\Logs\CBS\CBS.log
 ```
-    
+
+# Manual cleanup of Win10
+
+How to manually delete cache files and unneeded files in Win 10. From a 
+[Youtube](https://www.youtube.com/watch?v=z3cjTqCQemU).
+
+1. Start Windows Explorer.
+
+2. Go to the `C:\` drive.
+
+3. There may be a Windows.old folder. Delete this.
+
+4. Go into the **Windows** directory. Find the **Software Distribution** Folder.
+Open the **Download** folder. This is all downloaded files. Highlight and delete
+all the files using the **Delete** key.
+
+5. Use **Windows** + **R** Key to get a Run box. Enter `%temp%` and `OK`. This
+will take you to the temp folder. You can delete all the content. **Note**: you
+can add a delete key to the menu bar from the dropdown menu on the top window.
+
+6. Run Box. enter **temp**. Continue. Delete all content.
+
+7. Run Box. Enter **prefetch**.
+
+8. Run Box. Enter **wsreset**.
+
+9. Clear the Edge browser cache.
+
+10. `Start` > `Settings` >  `Privac`y > `Clear`.
+
+11. Open an Administrator command prompt. Type: `ipconfig/flushDNS`.
+
+12. Run Box. Enter clean.  Get Disk Cleanup.
+
+13. System Restore. Delete old restors and create a new one.
 
 # Backup fails with `0x8007002`
 
