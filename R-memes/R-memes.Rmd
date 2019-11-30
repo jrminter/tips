@@ -176,7 +176,8 @@ plot_grid(x, y, ncol=1, labels = c("A", "B"))
 
 In addition to the fonts installed on your system, there are many amusing fonts that are funny for meme, e.g. fonts on https://fontmeme.com/fonts/.
 
-```{r import_pokemon_fonts}
+```
+{r import_pokemon_fonts}
 ## import pokemon fonts
 ## downloaded from <https://fontmeme.com/fonts/pokmon-font/>
 font_pokemon()
