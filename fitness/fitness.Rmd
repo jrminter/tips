@@ -1,7 +1,7 @@
 ---
 title: "Fitness tips"
 author: "J. R. Minter"
-date: "Started: 2015-05-10, Last modified: 2018-10-11"
+date: "Started: 2015-05-10, Last modified: 2019-11-30"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -42,7 +42,7 @@ might be a decent choice.
 
 # From Jeff Galloway
 
-## Ice threatment
+## Ice treatment
 
 [2017-11-21](http://jeffgalloway.typepad.com/jeff_galloways_blog/2017/11/injured-ice-massage-the-right-way-to-do-it.html)
 
@@ -53,17 +53,17 @@ below, it is a very powerful treatment or aches, pains and injuries that
 are just below the skin. Deeper damage does not usually respond to the
 ice treatment.
 
-- Put a styrofoam cup full of water in your freezer. Keep at least one
+- Put a Styrofoam cup full of water in your freezer. Keep at least one
 there, as "insurance".
 - At the first sign of an ache or pain in the area close to the skin,
-peel the styrofoam off the top, and rub.
+peel the Styrofoam off the top, and rub.
 - For 15 minutes, rub constantly on the limited area until it gets numb.
 - Do this every night – even for a week after all the pain goes away.
 
 It is the direct contact of Ice, and the constant massage rub that seems
 to do the job.
 
-## Walking as an Endurance Excercise 
+## Walking as an Endurance Exercise 
 [2015-05-10](http://jeffgalloway.typepad.com/jeff_galloways_blog/2015/05/walking-as-an-endurance-exercise.html)
 
 > What is endurance exercise?
