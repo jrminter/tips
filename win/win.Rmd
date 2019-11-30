@@ -1,7 +1,7 @@
 ---
 title: "Windows Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-10-21"
+date: "Started: 2013-07-16, Last modified: 2019-11-29"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -13,6 +13,22 @@ output:
 [Back to Index](../README.html)
 
 Some useful tips for windows
+
+# jrmSimulationPC
+
+On 2019-11-29 I purchased an HP OMEN Obelisk Desktop 875-0xxx
+PC from BestBuy with 16 GB RAM and an i7-9700 CPU 3GHZ.
+It is a nice system. As a gaming PC it has red lights that
+that are remincent of a house of ill repute.
+
+The good news is that one can turn off the lights by
+
+1. Search for OMEN Control.
+2. Click the Profile. Find the lighting Name field.
+3. Change the color - or as I did - turn them off.
+
+See [here](https://support.hp.com/us-en/document/c05238081).
+
 
 # Sources of OpenJDK
 
