@@ -29,6 +29,96 @@ The good news is that one can turn off the lights by
 
 See [here](https://support.hp.com/us-en/document/c05238081).
 
+# Create a System Recovery Drive in Win 10
+
+From [here](https://www.partitionwizard.com/clone-disk/cant-create-recovery-drive-win10.html).
+
+If you’re running Windows 10, you need to create USB recovery drive that allows
+you to restore your system from a restore point, an image backup, or through a
+complete reinstall if Windows won't allow to access. Same with Windows 8,
+Windows 10 offers the option to create recovery drive. First of all, let's have
+a quick review on how to create USB recovery drive:
+
+This post tells how to create a Windows 8 recovery disk.
+
+## Before you do...
+
+1. Prepare a USB drive that is no smaller than 4 GB.
+2. Make sure your USB drive is connected successfully.
+3. Make sure your computer is running Windows 10.
+
+## Step 1
+
+At Search bar type: create recovery drive. Windows 10 will list the best match
+and the specific utility will appear in the first place. Please hit Enter on
+your keyboard then.
+
+![](png/cant-create-recovery-drive-win10-2.jpg)
+
+## Step 2
+
+The Recovery Drive utility comes out immediately. Please keep the option
+`Back up system files to the recovery drive` checked (to back up system files
+necessary for a full reinstall) and continue.
+
+![](png/cant-create-recovery-drive-win10-3.png)
+
+## Step 3
+
+Please wait patiently until the wizard successfully detects your USB drive and
+gets prepared to copy files. Then press `Next` to go on.
+
+![](png/cant-create-recovery-drive-win10-4.png)
+
+![](png/cant-create-recovery-drive-win10-5.png)
+
+## Step 4
+
+You will receive a warning message saying everything on the USB drive will be
+deleted. Please make sure you have made a backup of the important data if there
+is any before you continue.
+
+![](png/cant-create-recovery-drive-win10-6.png)
+
+## Step 5
+
+Creating the recovery drive can take some time. You should wait patiently or
+you can go for something else.
+
+![](png/cant-create-recovery-drive-win10-7.jpg)
+
+## Step 6
+
+When the recovery drive is ready, click `Finish`.
+
+![](png/cant-create-recovery-drive-win10-8.jpg)
+
+## Tip
+
+No product key is required when using a Recovery Drive to reinstall Windows 10.
+But if you do a complete reinstall, you are likely to be required to enter your
+Product ID number to prove that you can legally run Windows 10 on this machine.
+So you should Google a product which can save the Product ID number and help
+you activate Windows 10.
+
+## Countermeasures
+
+1. If creating recovery drive in Windows 10 fails, it seems your PC is
+suffering from a corrupted system file. Here’s how to find out and hopefully fix it:
+
+**Step 1:** Type `cmd` in the `Search` field. In the search results,
+**right-click** `Command Prompt` and select `Run as administrator`.
+
+2. Once you’re inside the command environment, type `sfc/scannow` and press
+`Enter`. The System File Checker (SFC) program will examine Windows files and
+replace any that appear to be corrupt. This scan usually takes about several
+minutes only.
+
+3. After the scan, exit command prompt and try creating Windows 10 recovery
+drive again.
+
+4. Solution 2: Try another Flash Drive...
+
 
 # Sources of OpenJDK
 
