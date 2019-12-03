@@ -1,7 +1,7 @@
 ---
 title: "Windows Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-11-29"
+date: "Started: 2013-07-16, Last modified: 2019-12-02"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -28,6 +28,28 @@ The good news is that one can turn off the lights by
 3. Change the color - or as I did - turn them off.
 
 See [here](https://support.hp.com/us-en/document/c05238081).
+
+# Manually clean up Win10 PCs
+
+How to manually delete cache files and unneeded files in Win 10.
+From a [youtube](https://www.youtube.com/watch?v=z3cjTqCQemU) video.
+
+1. Start Windows Explorer.
+2. Go to the C:\ drive.
+3. There may be a Windows.old folder (more later)
+4. Go into the **Windows** directory
+5. Find the **Software Distribution** Folder. Open the **Download** folder. This is all downloaded files. Highlight and delete all. Use the **Delete** Key
+6. Use **Windows** + **R** Key to get a Run box. Enter %temp% and OK. This will take you to the temp folder. You can delete all the content. Note: you can add a delete key to the menu bar from the dropdown menu.
+7. Run Box. enter **temp**. Continue. Delete all content.
+8. Run Box. emter **prefetch**.
+9. Run Box. Enter **wsreset**,
+10. Clear Edge cache
+11. Start > Settings >  Privacy > Clear
+12. Admin command prompt > ipconfig/flushDNS
+13. Runbar type clean get Disk Cleanup
+14. System Restore. Delete old restore and create a new one.
+
+
 
 # Create a System Recovery Drive in Win 10
 
