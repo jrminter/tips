@@ -29,6 +29,12 @@ The good news is that one can turn off the lights by
 
 See [here](https://support.hp.com/us-en/document/c05238081).
 
+# Some tips
+
+1. **Steps Recorder**
+   a. Type "Steps recorder" in search box.
+   
+
 # Manually clean up Win10 PCs
 
 How to manually delete cache files and unneeded files in Win 10.
