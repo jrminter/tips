@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-11-01"
+date: "Started: 2013-07-16, Last modified: 2019-12-06"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -14,6 +14,13 @@ output:
 # Install command line tools
 
    `xcode-select --install`
+
+# Clear recent files on VLC
+
+    1. Open VLC and click `File`.
+    2. Scroll down to `Open Recent`.
+    3. Select `Clear Menu` to clear the current list.
+
 
 # Configuring my FiiO headphone amplifier
 
