@@ -123,6 +123,8 @@ Octave training examples.
 
 13. [Linear Algebra examples](https://github.com/Lo1s/Laff)
 
+14. [A nice Youtube Playlist](https://www.youtube.com/watch?v=X0xLTKRWPgo&list=PL1A2CSdiySGJ6oZe6XB-TTCFuHc5Fs1PO)
+
 
 # Getting the path right
 
