@@ -1,7 +1,7 @@
 ---
 title: "Excel Tips"
 author: "J. R. Minter"
-date: "Started: 2016-09-16, Last modified: 2018-10-11"
+date: "Started: 2016-09-16, Last modified: 2019-12-07"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -15,6 +15,91 @@ output:
 library(png)
 library(grid)
 ```
+
+
+# VBA Tips
+
+## Seven Vital Areas of the VBA Editor
+
+From [Youtube](https://www.youtube.com/watch?v=N_2hyGxu0W4)
+
+1. Understand the main window
+
+  - `Alt + F11` opens the VBA editor under Windows. Toggles in all of series...
+
+  - The `Project` pane shows open workbooks and sheets. Double-click to open.
+
+  - The `Properties` window show the properties of whatever we have open. Changes
+    here transfer to the object.
+
+2. Mastering the modules
+
+  - `Insert` Inserts and opens a new module where we can enter code.
+  
+  - We can change the name or the properties in the module.
+  
+  - We can create subroutines (`Sub`, a unique function), (`Ctrl F6`, cycles between
+    modules and different sheets).
+  
+     ```
+     Sub CreateReport()
+     ```
+     
+     ```
+     Sub ReadData()
+     
+     ```
+     
+  - `Ctrl F4` controls (and closes) the current document in Microsoft Office.
+  
+3. Bossing the bookmarks\
+
+  - Use bookmarks to navigate. Click in Excel and then `Toggle Bookmark` from the
+    bar and that turns it on. Click `Toggle` again and it turns off the bookmark.
+    Using `Next Bookmark` from the `Edity Toolbar` cycles through bookmarks.
+    Bookmarks are lost when we close the module.
+    
+4. Taming the Toolbars
+
+  - See the active Toolbars from the `Toolbars` entry in the `View` menu
+    and toggle them on and off.  It is easier to `Right Click` on the menu bar
+    to select and move the toolbars we want.
+
+5. Winning with Windows
+
+  - We can double click to undock and drag windows where we want. Double click
+    the moved window and it returns the window to the previous location.
+  
+  - If you don't see a window you want, select it from the `View` menu. `Ctl R`
+    and `F4` are keyboard shortcuts. `Ctl G` - for immediate window.
+    `Alt V H` for the watch window.
+    
+6. Dominate the Debug Menu
+
+  - This lets you set breakpoints and debug code. N.B. the `Compile VBA` entry
+    at the top. This finds syntax and project-wide errors, such as a `For`
+    statement without a `Next` statement.
+  
+7. Rule the `Run` menus
+
+  - Run the code. Will run a subroutine if cursor is inside one. Also can
+    run from the `Run` menu. `F5` works too...
+  
+  - set a break point
+  
+  - reset
+  
+  - Design Mode 
+  
+  
+  
+  
+
+
+
+
+
+
 
 # Tips from [Joel Spolsky](https://www.youtube.com/watch?v=0nbkaYsR94c)
 
@@ -85,7 +170,7 @@ RC     - this cell
 
 1. There is a quick toggle from absolute and relative references. On Windows it
 is **F4**. On Mac OSX it is **Cmd+T**.
-2. **Cntrl+`** (backtick) - a toggle between displaying Formulas and Values
+2. **Ctrl+`** (back-tick) - a toggle between displaying Formulas and Values
 
 ## Data Entry shortcuts
 
@@ -136,7 +221,7 @@ grid.raster(img)
 
 Learn how that dumb paintbrush works. You create a cell formatted the way you like, highlight it, click the paintbrush tool, and drag over your cells. This is especially helpful for tables...
 
-### Cntrl+A (Cmd+A MacOSX)
+### Ctrl+A (Cmd+A Mac OS)
 
 Stop trying to select while scrolling. Cmd+A (Ctrl+A on Windows) selects the
 current region which means the largest island surrounded by white space.
@@ -149,7 +234,7 @@ If your numbers are really codes (like ZIP codes) start them with apostrophe (')
 
 Seriously? I never want to see absolute or relative references. References are confusing, apt to screw up when you move things (or insert (or delete)), and the source of all bugs.
 
-**Tables should be surrounded by whitespace**
+**Tables should be surrounded by white space**
 
 **Always use named ranges**
 
