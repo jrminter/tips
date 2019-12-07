@@ -29,13 +29,19 @@ The good news is that one can turn off the lights by
 
 See [here](https://support.hp.com/us-en/document/c05238081).
 
+# Some tips
+
+1. **Steps Recorder**
+   a. Type "Steps recorder" in search box.
+   
+
 # Manually clean up Win10 PCs
 
 How to manually delete cache files and unneeded files in Win 10.
 From a [youtube](https://www.youtube.com/watch?v=z3cjTqCQemU) video.
 
 1. Start Windows Explorer.
-2. Go to the C:\ drive.
+2. Go to the C:\\ drive.
 3. There may be a Windows.old folder (more later)
 4. Go into the **Windows** directory
 5. Find the **Software Distribution** Folder. Open the **Download** folder. This is all downloaded files. Highlight and delete all. Use the **Delete** Key
