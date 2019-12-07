@@ -165,8 +165,7 @@ One suggestion for a **spinning ball** on Octave on MacOS - try:
     
     and restart...
 
-
-# Using Octave in Rmarkdown
+# Octave on Win 10
 
 ## Move window
 
@@ -178,6 +177,10 @@ the window to maximized or a size, then drag it to where you want using the titl
 bar. Last. You can hover over octave's taskbar icon, it should popup a thumbnail of
 the window. Right click on the thumbnail and you could get the same context menu to
 let you Move, Resize, etc.
+
+
+# Using Octave in Rmarkdown
+
 
 ## Code chunks must be self-contained
 
