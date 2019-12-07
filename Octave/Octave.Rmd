@@ -168,6 +168,17 @@ One suggestion for a **spinning ball** on Octave on MacOS - try:
 
 # Using Octave in Rmarkdown
 
+## Move window
+
+The title bar is too high, offscreen,  and can't be clicked.
+
+Win10 recognizes keyboard commands, but Alt-Spacebar used to open the window context
+menu letting you Move, Resize, etc.  Alternatively you can WindowsKey-Arrow to snap
+the window to maximized or a size, then drag it to where you want using the title
+bar. Last. You can hover over octave's taskbar icon, it should popup a thumbnail of
+the window. Right click on the thumbnail and you could get the same context menu to
+let you Move, Resize, etc.
+
 ## Code chunks must be self-contained
 
 We need to set the path to the Octave executable to run Octave chunks
