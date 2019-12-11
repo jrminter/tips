@@ -29,6 +29,20 @@ The good news is that one can turn off the lights by
 
 See [here](https://support.hp.com/us-en/document/c05238081).
 
+## Fix missing mscomct2.ocx
+
+The ocx control should be in your `Syswow64` (if 64 bit pc) folder and not in
+the app folder, and it needs to be registered manually (common vb6 problem in
+Win7, 8 ,10).
+
+It seems you can see the file, but it might not be registered.
+
+Run cmd in administrator mode, type `regsvr32 C:\Windows\SysWOW64\MSCOMCTL.OCX`.
+
+This should solve the problem
+
+
+
 ## Display port problem
 
 DisplayPort No Signal Solved!
