@@ -1,7 +1,11 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
+<<<<<<< HEAD
 date: "Started: 2013-07-16, Last modified: 2019-12-13"
+=======
+date: "Started: 2013-07-16, Last modified: 2019-12-12"
+>>>>>>> 796ca140fb12b2661e4b3721a6209b611e3b6c75
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -14,6 +18,32 @@ output:
 # Install command line tools
 
    `xcode-select --install`
+   
+# Disks for TimeMachine Backups
+
+From [here](https://support.apple.com/en-us/HT202784#drive).
+
+Time Machine can back up to an external drive connected to a USB, Thunderbolt,
+or FireWire port on your Mac.
+
+
+## How to format a disk for Time Machine
+
+Time Machine supports all Mac OS Extended (Journaled) formats and Xsan
+formats. If the disk isn't using the correct format, Time Machine
+automatically prompts you to erase it when you connect it to your Mac:
+
+![Erase disk for TimeMachine](png/time_machine_erase_disk.png)
+
+If you need to erase the disk manually, use the Disk Utility app to erase
+using the Mac OS Extended (Journaled) format.
+
+Time Machine can't back up to an iOS device or disk formatted for Windows.
+And if your disk uses the Master Boot Record (MBR) partition scheme, some
+of its partitions might not be available for use with Time Machine.
+
+- Published Date: April 10, 2019
+
 
 # Clear recent files on VLC
 

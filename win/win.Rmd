@@ -29,6 +29,40 @@ The good news is that one can turn off the lights by
 
 See [here](https://support.hp.com/us-en/document/c05238081).
 
+## Fix missing mscomct2.ocx
+
+The ocx control should be in your `Syswow64` (if 64 bit pc) folder and not in
+the app folder, and it needs to be registered manually (common vb6 problem in
+Win7, 8 ,10).
+
+It seems you can see the file, but it might not be registered.
+
+Run cmd in administrator mode, type `regsvr32 C:\Windows\SysWOW64\MSCOMCTL.OCX`.
+
+This should solve the problem
+
+
+
+## Display port problem
+
+DisplayPort No Signal Solved!
+In one last desperate attempt to avoid screwing in DVI cables, I tried to get
+to the bottom of this once and for all. I did some further searching round the
+Internet and found that a few other people had encountered this issue before.
+
+To solve this issue, it turned out to be as basic as:
+
+1. Turn off the PC.
+2. Disconnect the PC from its power source.
+3. Disconnect all monitors
+4. Unplug the monitor you’re having issues with from its power source.
+5. Wait approximately 1 minute.
+6. Reconnect ONLY the monitor you were having issues with to the power, and
+to the PC.
+7. Reconnect the PC to the power source.
+8. Turn on the PC.
+
+
 # Some tips
 
 1. **Steps Recorder**
