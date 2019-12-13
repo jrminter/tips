@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-12-06"
+date: "Started: 2013-07-16, Last modified: 2019-12-13"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -92,6 +92,14 @@ This launches a persistent menu.
 
 The AquaTerm `Filemenu` has a  `SaveAs` option to export either `.eps` or
 `.pdf` files. This is helpful.
+
+# A jmol installation
+
+I installed jmol in `/Users/jrminter/apps/jmol-14.30.1`. To start, from terminal
+change to the directory and type `./jmol.sh` to start.
+
+A good source of mol files is `http://molview.org/`. Download and store them
+locally.
 
 
 # Packages installed via homebrew
