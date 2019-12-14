@@ -1,7 +1,7 @@
 ---
 title: "iOS Tips"
 author: "J. R. Minter"
-date: "Started: 2014-09-07, Last modified: 2018-10-11"
+date: "Started: 2014-09-07, Last modified: 2019-12-14"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -11,6 +11,22 @@ output:
 ---
 
 [Back to Index](../README.html)
+
+# Turn off emojis
+
+I hate the emoji keyboard. I hit it easily with my fat fingers. I turned 
+it off!
+
+From [mashable.com](https://mashable.com/article/how-to-hide-memoji-imessage-keyboard/)
+
+1. Open iMessage.
+2. Click into a random conversation thread.
+3. Swipe on the app icons until you see the bubble with three dots and then tap it.
+4. Select "Edit"
+5. Deselect "Memoji" from both the "FAVORITES" and the "MORE APPS" section.
+6. Tap "Done"
+
+
 
 # Turn off the Facebook auto-play video feature?
 

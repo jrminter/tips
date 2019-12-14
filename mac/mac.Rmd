@@ -1,11 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-<<<<<<< HEAD
 date: "Started: 2013-07-16, Last modified: 2019-12-13"
-=======
-date: "Started: 2013-07-16, Last modified: 2019-12-12"
->>>>>>> 796ca140fb12b2661e4b3721a6209b611e3b6c75
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
