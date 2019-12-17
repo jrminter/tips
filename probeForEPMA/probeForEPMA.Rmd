@@ -369,7 +369,7 @@ The image below shows how to run a basic simulation using **penepma12**
 
 Note the default input parameters:
 
-![**Note the large number of default trajectories (2.0e9) and the long simulation time (1.0e5 sec = 27.8 hrs!)** You probably want to change these to something like 2.0e4 trajectories and 3600 sec (1 hr). You probably also want to **set the minimum photon energy to 90 eV**. Do this **before!!** you press **Create PENEPMA input file.** or edit the file and restart the GUI before starting the simulation...](./img/penepma-default-input-par.png)
+![**Note the large number of default trajectories (2.0e9) and the long simulation time (1.0e5 sec = 27.8 hrs!)** You probably want to change these to something like **2.0e4 trajectories** and **3600 sec (1 hr)** or **28800 sec (8 hrs) **. You probably also want to **set the minimum photon energy to 90 eV**. Do this **before!!** you press **Create PENEPMA input file.** or edit the file and restart the GUI before starting the simulation...](./img/penepma-default-input-par.png)
 
 - Enter simulation time values on the last line of the **name.in** file for the simulation.
 - Enter the energy ranges are on the `MSIMPA` lines of the **name.in** file for the simulation.
@@ -382,6 +382,7 @@ Note the default input parameters:
 | 4 | 14440 |
 | 8 | 28800 |
 | 24 | 86400 |
+| 27.8 | 10^5^ (default) |
 
 
 
