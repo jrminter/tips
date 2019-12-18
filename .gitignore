@@ -489,6 +489,12 @@ shell/shell-tips.md
 shell/shell-tips.html
 shell/figure/
 
+# Sirion directory
+Sirion/.DS_Store
+Sirion/Sirion.md
+Sirion/Sirion.html
+Sirion/figure/
+
 # skills directory
 skills/.DS_Store
 skills/skills.md

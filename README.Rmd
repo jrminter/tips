@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-11-01"
+date: "Started: 2013-07-16, Last modified: 2019-12-06"
 output:
   html_document:
     keep_md: true
@@ -243,6 +243,8 @@ This skips several steps from original article!
 [SEM](./SEM/SEM.html)
 
 [shell](./shell/shell-tips.html)
+
+[Sirion](./Sirion/Sirion.html)
 
 [skills](./skills/skills.html)
 
