@@ -140,7 +140,7 @@ Ubuntu Disco which was released this week. I also created a PPA for
 including Travis:
 
 ```
-sudo add-apt-repository ppa:opencpu/poppler
+sudo add-apt-repository ppa:cran/poppler
 sudo apt-get update
 sudo apt-get install libpoppler-cpp-dev
 ```
