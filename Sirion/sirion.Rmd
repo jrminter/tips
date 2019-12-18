@@ -16,35 +16,69 @@ output:
 
 ## Align the final lens aperture
 
-Before you align the column, be sure that the final lens aperture is correctly aligned. If the final lens aperture has to be aligned, choose the smallest for the best results. It is recommended to use **20 kV** and **spot 3**, **UHR Mode**, with the specimen at a working distance of **5 mm**, the eucentric working distance in the S-FEG. 
+Before you align the column, be sure that the final lens aperture is correctly
+aligned. If the final lens aperture has to be aligned, choose the smallest for
+the best results. It is recommended to use **20 kV** and **spot 3**,
+**UHR Mode**, with the specimen at a working distance of **5 mm**, the eucentric
+working distance in the S-FEG. 
 
 (**JM Note:** check if ours lets us use 20 kV in UHR mode.)
 
-When the aperture is well aligned, the image does not rotate at low magnification or move at high magnification during focusing. **The position of the final aperture should remain constant and should not be changed further during the alignment procedures.**
+When the aperture is well aligned, the image does not rotate at low
+magnification or move at high magnification during focusing.
+**The position ofthe final aperture should remain constant and should not be**
+**changed further during the alignment procedures.**
 
-We do not use an aperture strip but rather Pt apertures in a CM holder. We currently have the large hole, a 100 and two 30 micron aperures installed.
+We do not use an aperture strip but rather Pt apertures in a CM holder. We
+currently have the large hole, a 100 and two 30 micron aperures installed.
 
 1. Go to the UHR Mode at 5 mm WD. Select Zero Beam Shift from the Stage menu.
-2. Make an image at a magnification of about 10,000X. Select TV Rate from the Scan pulldown menu and Average 4 from the Filter pulldown menu.
+
+2. Make an image at a magnification of about 10,000X. Select TV Rate from the
+Scan pulldown menu and Average 4 from the Filter pulldown menu.
+
 3. Move the stage to find a good area of interest, and focus as best one can.
+
 4. Center a feature with the **Get** function.
-5. Click in the Final Lens Modulator check box in the Beam control area, a cross appears in the center of the screen and the image rotates about a point on the screen
-6. Adjust the position of the aperture so that the center of the rotation is over the cross.
-7. Increase the magnification to 20,000X and realign. If necessary, repeat at 40,000X. At higher magnification the image moves very slightly in a certain direction. By tuning the aperture, you can minimize this movement.
-8. When corrected, switch off the Final Lens Modulator. There should be no image shift when the focus control is used.
+
+5. Click in the Final Lens Modulator check box in the Beam control area, a
+cross appears in the center of the screen and the image rotates about a point
+on the screen.
+
+6. Adjust the position of the aperture so that the center of the rotation is
+over the cross.
+
+7. Increase the magnification to 20,000X and realign. If necessary, repeat at
+40,000X. At higher magnification the image moves very slightly in a certain
+direction. By tuning the aperture, you can minimize this movement.
+
+8. When corrected, switch off the Final Lens Modulator. There should be no image
+shift when the focus control is used.
 
 ### Gun Tilt and Shift Field Adjustments
 
-To perform a complete column alignment, use the adjustment procedures starting with 20kV at Step 1 in the UHR Mode and work down to 500V, saving the results at each procedure. Each individual adjustment is a complete step-by-step procedure. For 30kV the mode can be changed to the HR Mode, the sequence in the procedure being the same.
+To perform a complete column alignment, use the adjustment procedures starting
+with 20kV at Step 1 in the UHR Mode and work down to 500V, saving the results
+at each procedure. Each individual adjustment is a complete step-by-step
+procedure. For 30kV the mode can be changed to the HR Mode, the sequence in the
+procedure being the same.
 
-Use the rectangular X-Y control with cross-hair to change the setting of the corresponding parameter. Click the left mouse button in this area. You can step back and forth through each procedure (using the + or - buttons) and go to another control area for further optimization of the image.
+Use the rectangular X-Y control with cross-hair to change the setting of the
+corresponding parameter. Click the left mouse button in this area. You can step
+back and forth through each procedure (using the + or - buttons) and go to
+another control area for further optimization of the image.
 
-When each procedure ends, the adjustments are stored in the computer. When the column is correctly aligned, the image stays in focus, and it does not show substantial image displacement when you change kV and spot-size.
-Later when you select a kV that is not in the list, the software performs an interpolation between the values stored in the table.
+When each procedure ends, the adjustments are stored in the computer. When the
+column is correctly aligned, the image stays in focus, and it does not show
+substantial image displacement when you change kV and spot-size.
+Later when you select a kV that is not in the list, the software performs
+an interpolation between the values stored in the table.
 
 ### Gun Tilt and Shift Functions
 
-The Gun Tilt and Shift adjustment control area shows the following Information and functions. The White items in the table are significant to the alignment and the Gray items are for additional information to the user.
+The Gun Tilt and Shift adjustment control area shows the following Information
+and functions. The White items in the table are significant to the alignment and
+the Gray items are for additional information to the user.
 
 
 | Field Name | Function |
