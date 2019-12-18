@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-05-10"
+date: "Started: 2013-07-16, Last modified: 2019-12-18"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -1282,7 +1282,8 @@ str.pdf <-paste0("./figure/foo.pdf")
 pdf.options(useDingbats=TRUE)
 dev.copy2pdf(file="temp.pdf", width=9,
              height=6, pointsize=12)
-embedFonts("temp.pdf","pdfwrite", str.pdf)
+# 2019-12-16 - xommented line crashed...
+# embedFonts("temp.pdf","pdfwrite", str.pdf)
 unlink("temp.pdf")
 ```
 Note that I had odd results with this from R-Studio as
