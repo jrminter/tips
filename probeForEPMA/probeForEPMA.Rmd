@@ -376,7 +376,7 @@ I need a clear summary of the difference between **standard k-factors** and
 "o","ka",1,0,0,0.,.190763,0.0
 ```
 
-# Monte Carlo Simulations
+# PENEPMA Monte Carlo Simulations
 
 Note that one starts Monte Carlo simulations from the **Standards.exe** window
 
