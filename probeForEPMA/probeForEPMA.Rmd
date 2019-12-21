@@ -1,7 +1,7 @@
 ---
 title: "Probe For EPMA"
 author: "John Minter"
-date: "Started: 2017-05-27, Last modified: 2019-12-17"
+date: "Started: 2017-05-27, Last modified: 2019-12-21"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -395,8 +395,6 @@ Note the default input parameters:
 | 27.8 | 10^5^ (default) |
 
 
-
-
 Note it has a **.in** extension. Note that this is a text file that is well
 commented.
 
@@ -487,6 +485,43 @@ John Donovan suggests that the finished product should look like this:
 An my implementation...
 
 ![My simulation of a thin film of N-doped ZnO on Si](./img/JRM-penepma-thin-film-mc.png)
+
+# Reproducible penepma simulations from the command line
+
+As installed, the penempma GUI is convenient for testing problems. One issue
+is that all the work is done in the folder
+
+`C:\UserData\Penepma12\Penepma`
+
+This is convenient, but I find it way too easy to overwrite data files. I prefer
+to run the simulations in my own data directory where each folder has all
+the files for/from the simulation. Each simulation has it's own batch file:
+One file to rule them al :). On my Win10 box, my work directory is
+
+`C:\Users\johnr\penepma_sims`
+
+To make this work, I made a copy of `penepma.exe` from the
+`C:\UserData\Penepma12\Penepma` folder, renamed it `penepma12.exe`
+and put it in a folder (`C:\Apps\local\path`) in my path.
+
+
+A simulation of a pure SiO2 bulk standard would start with the files:
+
+```
+bulk.geo (copied from the C:\UserData\Penepma12\Penepma folder)
+SiO2-pure.mat (created from the GUI)
+SiO2-pure.in (Created from the GUI)
+
+and SiO2-pure.bat that contains the lines:
+
+C:
+cd "C:\Users\johnr\penepma_sims\SiO2-15kV"
+echo "Running a 4 hr simulation of SiO2 at 15 kV"
+Penepma12.exe < "SiO2-pure.in"
+```
+
+To run the simulation, I simply double-click the batch file and let 
+it run. The program runs in the terminal...
 
 
 # Plotting $\phi \rho z$ curves. 
