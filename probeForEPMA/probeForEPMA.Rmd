@@ -18,9 +18,51 @@ knitr::opts_chunk$set(echo = TRUE)
 Probe for EPMA is a commercial EPMA software package with demo packages,
 especially CalcZAF. I have long term interest.
 
-# Fast Tips
+# Reproducible penepma simulations from the command line
 
-## Using on a Mac Parallels VM
+As installed, the penempma GUI is convenient for testing problems. One issue
+is that all the work is done in the folder
+
+`C:\UserData\Penepma12\Penepma`
+
+This is convenient, but I find it way too easy to overwrite data files. I prefer
+to run the simulations in my own data directory where each folder has all
+the files for/from the simulation. Each simulation has it's own batch file:
+One file to rule them al :). On my Win10 box, my work directory is
+
+`C:\Users\johnr\penepma_sims`
+
+To make this work, I made a copy of `penepma.exe` from the
+`C:\UserData\Penepma12\Penepma` folder, renamed it `penepma12.exe`
+and put it in a folder (`C:\Apps\local\path`) in my path.
+
+
+A simulation of a pure SiO2 bulk standard would start with the files:
+
+```
+bulk.geo (copied from the C:\UserData\Penepma12\Penepma folder)
+SiO2-pure.mat (created from the GUI)
+SiO2-pure.in (Created from the GUI)
+
+and SiO2-pure.bat that contains the lines:
+
+C:
+cd "C:\Users\johnr\penepma_sims\SiO2-15kV"
+echo "Running a 4 hr simulation of SiO2 at 15 kV"
+Penepma12.exe < "SiO2-pure.in"
+```
+
+To run the simulation, I simply double-click the batch file and let 
+it run. The program runs in the terminal...
+
+At the conclusion of the run I compress a copy of folder with all the data files
+to a 7zip archive. I then store the z-zip archive and copies of the most useful
+files (e.g. SiO2.mat, SiO2.mat.bat, SiO2.mat.in, penepma.dat, peintens01.dat, 
+and pe-spec-01.dat). I have `gnuplot` scripts to plot the intensity and spectra
+files.
+
+
+# Using on a Mac Parallels VM
 
 1. Before starting the Win 10 VM, use CMD+Option+D to hide the dock.
 
@@ -35,37 +77,16 @@ of the screen and hit the green button.
 5. When done with the VM, exit FS mode and shut down. Use CMD+Option+D
 to restore the dock.
 
-## Path to standard files
+# Path to standard files
 
 `C:\ProgramData\Probe Software\Probe for EPMA`
 
-## Standard Databases
+# Standard Databases
 
 1. I renamed John Donovan's standard database to `jd-standard.mdb`
 
 2. I added some compostions to John Donovan's base file (`standard.mdb`)
 
-## Fix a Win 7 problem
-
-From [here](https://probesoftware.com/smf/index.php?topic=76.msg2289#msg2289)
-
-We now have a fix for the Windows Installer issues that I have been seeing on some Win7 64 computers. The steps are amazingly easy, so here they are, but do let me know if you have trouble with them.
-
-1. Open the command prompt in administrator mode by typing "cmd" in the Start button "Search Programs and Files field, then once the Cmd.exe app appears in the file list, right click the Cmd.exe app and select "Run As Administrator" from the menu. 
-
-2. Then navigate to “C:\Windows\System32” folder using the DOS cd command and type following command line:
-
-```
-regsvr32 msi.dll
-```
-
-3. Now , navigate to “C:\Windows\SysWow64” folder and again type same command line:
-
-```
-regsvr32 msi.dll
-```
-
-That fixed all the Windows installer and update issues on all the computers I've tried it on so far.
 
 # Getting started
 
@@ -486,42 +507,6 @@ An my implementation...
 
 ![My simulation of a thin film of N-doped ZnO on Si](./img/JRM-penepma-thin-film-mc.png)
 
-# Reproducible penepma simulations from the command line
-
-As installed, the penempma GUI is convenient for testing problems. One issue
-is that all the work is done in the folder
-
-`C:\UserData\Penepma12\Penepma`
-
-This is convenient, but I find it way too easy to overwrite data files. I prefer
-to run the simulations in my own data directory where each folder has all
-the files for/from the simulation. Each simulation has it's own batch file:
-One file to rule them al :). On my Win10 box, my work directory is
-
-`C:\Users\johnr\penepma_sims`
-
-To make this work, I made a copy of `penepma.exe` from the
-`C:\UserData\Penepma12\Penepma` folder, renamed it `penepma12.exe`
-and put it in a folder (`C:\Apps\local\path`) in my path.
-
-
-A simulation of a pure SiO2 bulk standard would start with the files:
-
-```
-bulk.geo (copied from the C:\UserData\Penepma12\Penepma folder)
-SiO2-pure.mat (created from the GUI)
-SiO2-pure.in (Created from the GUI)
-
-and SiO2-pure.bat that contains the lines:
-
-C:
-cd "C:\Users\johnr\penepma_sims\SiO2-15kV"
-echo "Running a 4 hr simulation of SiO2 at 15 kV"
-Penepma12.exe < "SiO2-pure.in"
-```
-
-To run the simulation, I simply double-click the batch file and let 
-it run. The program runs in the terminal...
 
 
 # Plotting $\phi \rho z$ curves. 
@@ -562,9 +547,9 @@ display modes.
 These are tips for use and sys-admin.
 
 
-# Key directories in my install
+## Key directories in my install
 
-## preferred install dir
+1. Preferred install dir
 
 ```
 C:\Apps\CalcZAF
@@ -572,7 +557,7 @@ C:\Apps\CalcZAF
 
 This has programs and some data
 
-## Windows ProgramData
+2. Windows ProgramData
 
 ```
 C:\ProgramData\Probe Software\Probe for EPMA 
@@ -581,7 +566,7 @@ C:\ProgramData\Probe Software\Probe for EPMA
 **standard.mdb** goes in here, as do update installers. John Donovan
 occasionally updates this file.
 
-## User data
+3. User data
 
 ```
 C:\UserData
@@ -592,7 +577,7 @@ Has the following tree with data files
 ![UserData tree](./img/UserData-tree.png)
  
 
-## UserImages
+4. UserImages
  
 This would have images from the system
  
@@ -601,6 +586,29 @@ C:\UserImages
 ```
 
 Currently empty in my installs
+
+
+## Fix a Win 7 problem
+
+From [here](https://probesoftware.com/smf/index.php?topic=76.msg2289#msg2289)
+
+We now have a fix for the Windows Installer issues that I have been seeing on some Win7 64 computers. The steps are amazingly easy, so here they are, but do let me know if you have trouble with them.
+
+1. Open the command prompt in administrator mode by typing "cmd" in the Start button "Search Programs and Files field, then once the Cmd.exe app appears in the file list, right click the Cmd.exe app and select "Run As Administrator" from the menu. 
+
+2. Then navigate to `C:\Windows\System32` folder using the DOS cd command and type following command line:
+
+```
+regsvr32 msi.dll
+```
+
+3. Now, navigate to `C:\Windows\SysWow64` folder and again type same command line:
+
+```
+regsvr32 msi.dll
+```
+
+That fixed all the Windows installer and update issues on all the computers I've tried it on so far.
 
 
 
