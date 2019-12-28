@@ -29,6 +29,33 @@ The good news is that one can turn off the lights by
 
 See [here](https://support.hp.com/us-en/document/c05238081).
 
+## Enable remote destop on Windows 10
+
+From [windowscentral.com](https://www.windowscentral.com/how-use-remove-desktop-app-connect-pc-windows-10-0)
+
+**How to enable remote connections on your PC**
+
+If you're trying to start a remote connection inside your local network, you
+only need to make sure the computer you're trying to access is configured to
+allow to handle remote desktop.
+
+**Important**: Windows 10 Home **_doesn't_** include support for remote desktop
+connections, **you can only enable this feature on Windows 10 Pro** and
+business variants of the operating system.
+
+To allow a remote PC to accept remote connections, do the following:
+
+1. Open Control Panel.
+
+2. Click on System and Security.
+
+3. Click on Allow remote access.
+
+4. Under Remote Desktop make sure to select Allow remote connections to this
+computer.
+
+![Setup Win10 remote desktop](png/win10_remote_desktop.png)
+
 ## Fix missing mscomct2.ocx
 
 The ocx control should be in your `Syswow64` (if 64 bit pc) folder and not in
@@ -40,6 +67,8 @@ It seems you can see the file, but it might not be registered.
 Run cmd in administrator mode, type `regsvr32 C:\Windows\SysWOW64\MSCOMCTL.OCX`.
 
 This should solve the problem
+
+
 
 
 
