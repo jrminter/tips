@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-12-06"
+date: "Started: 2013-07-16, Last modified: 2019-12-09"
 output:
   html_document:
     keep_md: true
@@ -175,6 +175,8 @@ This skips several steps from original article!
 [MySQL](./mysql/mysql.html)
 
 [Octave](./Octave/Octave.html)
+
+[OnePassword](./OnePassword/OnePassword.html)
 
 [Oracle Virtual Box](./Oracle-Virtual-Box/Oracle-Virtual-Box.html)
 
