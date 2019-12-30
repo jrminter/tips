@@ -1,7 +1,7 @@
 ---
 title: "Gnuplot Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-20, Last modified: 2018-10-11"
+date: "Started: 2013-07-20, Last modified: 2019-12-11"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -119,6 +119,18 @@ set terminal aqua
 
 
 # Hacking the .plt file
+
+## Gnuplot palletes
+
+Very helpful images from [phd-bachephysicdun.blogspot.com](http://phd-bachephysicdun.blogspot.com/2014/01/)
+
+[1](png/gp-pal-1.png)
+[2](png/gp-pal-2.png)
+[3](png/gp-pal-3.png)
+[4](png/gp-pal-4.png)
+[5](png/gp-pal-5.png)
+[6](png/gp-pal-6.png)
+[7](png/gp-pal-7.png)
 
 ## Adding a marker line
 
