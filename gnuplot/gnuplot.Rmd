@@ -111,7 +111,12 @@ plot "-" with lines lw 2 lc rgb "#000000" title "Cu", \
 
 # Installing and Running on MacOSX
 
-1, Install using [Homebrew](https://stackoverflow.com/questions/32421713/install-gnuplot-5-0-1-on-osx)
+## Installing with Homebrew
+
+1. Install using [Homebrew](https://stackoverflow.com/questions/32421713/install-gnuplot-5-0-1-on-osx)
+
+Note: 2019-12-30 - Recent changes really mess this up so this doesn't work
+anymore. Note that HomeBrew installs into `/usr/local/bin`.
 
 ```
 brew cask install aquaterm; brew install gnuplot --with-aquaterm
@@ -122,6 +127,10 @@ brew cask install aquaterm; brew install gnuplot --with-aquaterm
 ```
 set terminal aqua
 ```
+
+## Installing with MacPorts
+
+This installs into `/opt/local/bin` and works better...
 
 
 # Hacking the .plt file
