@@ -1,7 +1,7 @@
 ---
 title: "Gnuplot Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-20, Last modified: 2019-12-11"
+date: "Started: 2013-07-20, Last modified: 2019-12-31"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -183,7 +183,7 @@ $ convert  Orthoclase-15kV.emf  Orthoclase-15kV.pdf
 
 The `png` file has reasonable resolution...
 
-![Orthoclase png file generated with imageMagick from the command line.](png/Orthoclase-15kV.png)
+![Orthoclase png file generated with the ImageMagick command line from the gnuplot `.emf` file.](png/Orthoclase-15kV.png)
 
 
 # Installing and Running on MacOSX
