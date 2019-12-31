@@ -160,6 +160,31 @@ plot 'pe-spect-01.dat' u ($1/1000.):2:3 notitle w lines lw 2 lc rgb '#1B325F'
 
 ```
 
+## Using the Windows gnuplot GUI
+
+The Windows Gnuplot GUI is helpful for visualizing plots. 
+
+The menu bar in the top left corner of the GUI has an `Options` window
+
+![The gnuplot options controls on the top left](png/gnuplot_menu_bar.png)
+
+When the `Options` is clicked, it displays a pull-down menu.
+
+![The gnuplot options controls on the top left of the menu bar](png/gnuplot_options_menu.png)
+
+Note the `Save as EMF... (Ctl+C)` with the handy short cut. This permits
+one to save the image as an Extended Meta file. The ImageMagick program
+`convert` will convert the .emf file to a `.ps`, `.png` or `.pdf` file
+from the command line:
+
+```
+$ convert  Orthoclase-15kV.emf  Orthoclase-15kV.pdf
+```
+
+The `png` file has reasonable resolution...
+
+![Orthoclase png file generated with imageMagick from the command line.](png/Orthoclase-15kV.png)
+
 
 # Installing and Running on MacOSX
 
