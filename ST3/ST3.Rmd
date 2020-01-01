@@ -1,7 +1,7 @@
 ---
 title: "Sublime Text 3 Tips"
 author: "J. R. Minter"
-date: "Started: 2015-02-13, Last modified: 2019-05-07"
+date: "Started: 2015-02-13, Last modified: 2020-01-01"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -65,6 +65,29 @@ To make sure Package Control works
 1. Open the User settings
 2. Make certain `PackageControl` is **not** in the excluded packages.
 **_Only_** `Vintage` should be in the list...
+
+# Custom python build systems
+
+## Macbook Pro
+
+I wanted to create a sublime text 3 build system for Anaconda with Python 3.7
+
+I created a file named `python37.sublime-build` in the folder
+
+```
+/Users/jrminter/Library/Application Support/Sublime Text 3/Packages/User
+```
+
+The content of the  `python37.sublime` file:
+
+```
+{
+ "cmd": ["/Users/jrminter/miniconda3/bin/python", "-u", "$file"],
+ "file_regex": "^[ ]File \"(...?)\", line ([0-9]*)",
+ "selector": "source.python"
+}
+
+```
 
    
 # Better Markdown
