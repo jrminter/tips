@@ -1,7 +1,7 @@
 ---
 title: "Gnuplot Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-20, Last modified: 2019-12-31"
+date: "Started: 2013-07-20, Last modified: 2020-01-01"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -593,6 +593,19 @@ set rmargin at screen 0.95
 set tmargin at screen 0.95
 ```
 
+# Some examples from the web...
+
+- From: [gnuplot on sourceforge](http://gnuplot.sourceforge.net/demo_5.2/).
+Note that the current app has these demo files in:
+
+    ```
+    C:\Program Files\gnuplot\demo
+    ```
+
+
+- From: [alvinalexander.com](https://alvinalexander.com/technology/gnuplot-charts-graphs-examples#sample-data-files)
+
+- From [https://courses.physics.illinois.edu/](https://courses.physics.illinois.edu/phys466/sp2013/comp_info/gnuplot.html)
 
 
 [Back to Index](../README.html)
