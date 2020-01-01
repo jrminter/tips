@@ -70,6 +70,8 @@ To make sure Package Control works
 
 ## Macbook Pro
 
+**Note**: There is a better way [here](https://docs.anaconda.com/anaconda/user-guide/tasks/integration/sublime/).
+
 I wanted to create a sublime text 3 build system for Anaconda with Python 3.7
 
 I created a file named `python37.sublime-build` in the folder
