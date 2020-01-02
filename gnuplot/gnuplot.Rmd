@@ -136,6 +136,7 @@ keyFont  = "Arial,14"
 ticFont  = "Arial,12"
 
 set key font keyFont
+set key right
 set tics font ticFont
 
 unset xzeroaxis
