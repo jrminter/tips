@@ -1,7 +1,7 @@
 ---
 title: "Gnuplot Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-20, Last modified: 2020-01-02"
+date: "Started: 2013-07-20, Last modified: 2020-01-05"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -26,6 +26,48 @@ compiled from several web sources. Some helpful ones:
 [Gnuplot tricks](http://gnuplot-tricks.blogspot.com/2009/05/gnuplot-tricks-many-say-that-it-is.html)
 
 [gnuplotting.org](http://www.gnuplotting.org/)
+
+# Helpful script files
+
+## Use ImageMagick to convert an `emf` file to `png`
+
+Note: the file `EagleXG_15kV_gnuplot.emf` must exist in the work directory
+
+The best way for me to generate this file is to start in Gnuplot with
+
+```
+set terminal windows
+```
+
+which responds with
+
+```
+Terminal type is now 'windows'
+Options are '0 color solid butt enhanced standalone wsize 1440,765'
+```
+
+Then load the plot file from the Windows GUI
+
+
+Then use the `Options` > `Save as EMF` to save the EMF file
+
+
+Then run the ImageMagik conversion with the Windows `CMD` file below:
+
+```
+rem plot_gnuplot_EagleXG_15kV.cmd
+rem Use ImageMagick to convert an existing gnuplot emf file to png format
+print "converting..."
+print "change to correct directory"
+cd C:\Users\johnr\Documents\gnuplot\EagleXG\
+del /f EagleXG_15kV_gnuplot.png
+C:\Apps\ImageMagick\convert.exe EagleXG_15kV_gnuplot.emf EagleXG_15kV_gnuplot.png
+
+pause
+
+```
+
+
 
 # Key modifications to the plot file
 
