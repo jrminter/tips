@@ -33,7 +33,7 @@ compiled from several web sources. Some helpful ones:
 
 Note: the file `EagleXG_15kV_gnuplot.emf` must exist in the work directory
 
-The best way for me to generate this file is to start in Gnuplot with
+The best way for me to generate this file is to start in Gnuplot GUI with
 
 ```
 set terminal windows
@@ -72,6 +72,24 @@ pause
 # Key modifications to the plot file
 
 ## Some source information.
+
+- The hints on [gnuplot-tricks.blogspot.com](http://gnuplot-tricks.blogspot.com/2009/05/gnuplot-tricks-many-say-that-it-is.html)
+though old (2009), were helpful.
+
+- EMF terminal infor from [soc.if.usp.br](http://soc.if.usp.br/manual/gnuplot-doc/htmldocs/emf.html)
+was helpful.
+
+- The **Math and Physics** Youtube channel has four videos:
+
+  [gnuplot Tutorial 1: basic Plotting tips & tricks, errorbars, png output](https://www.youtube.com/watch?v=9QUtcfyBFhE)
+  
+  [gnuplot Tutorial 2: linestyles, better plots, symbols, fonts & pngcairo](https://www.youtube.com/watch?v=F_XcgIxdExE)
+  
+  [gnuplot Tutorial 3: Curve Fitting, SSR and WSSR (unweighted and weighted)](https://www.youtube.com/watch?v=vHM_5AeKwXE)
+  
+  [gnuplot Tutorial 4: Animated gifs and STATS (statistical summary](https://www.youtube.com/watch?v=DF0dCOllLFI)
+
+- My tips...
 
 I like what DTSA-II writes with a date modified to ISO...
 
