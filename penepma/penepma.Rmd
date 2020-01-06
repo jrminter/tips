@@ -1,7 +1,7 @@
 ---
 title: "Penepma Tips"
 author: "J. R. Minter"
-date: 'Started: 2019-05-03, Last modified: 2019-05-03'
+date: 'Started: 2019-05-03, Last modified: 2020-01-05'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -13,6 +13,21 @@ output:
 [Back to Index](../README.html)
 
 # Introduction
+
+## Helpful voltages for penepma12/16 simulations
+
+For thin films on substrates, the following series of keVs are helpful
+
+[5, 10, 15, 20, 25 keV]
+
+For light elements Like B or ZnO L lines where the ZnLa1 line is
+1.0116 keV and the O Ka1 and Ka2 lines are at 0.5249 keV, one 
+can use:
+
+[2, 5, 7, 10 keV]
+
+The DTSA2 command line function `listTransitions("Zn")` is
+very helpful in picking the most reasonable beam energies...
 
 # Use of a random seed
 
@@ -80,7 +95,7 @@ on the Probe Software Forum:
 > > 
 > > Rn = 75Rn¡1 (mod 231 ¡ 1); »n = Rn=(231 ¡ 1); (1.30)
 > > 
-> > which produces a sequence of random numbers »n uniformly distributed in (0,1) from a given \seed" R0 (< 231 ¡ 1). Actually, the generated sequence is not truly random, because it is obtained from a deterministic algorithm (the term \pseudo-random" would be more appropriate), but it is very unlikely that the subtle correlations between the values in the sequence have an appreciable e®ect on the simulation results. The generator (1.30) is known to have good random properties (Press and Teukolsky, 1992). 
+> > which produces a sequence of random numbers »n uniformly distributed in (0,1) from a given \seed" R0 (< 231 ¡ 1). Actually, the generated sequence is not truly random, because it is obtained from a deterministic algorithm (the term \pseudo-random" would be more appropriate), but it is very unlikely that the subtle correlations between the values in the sequence have an appreciable e®etc on the simulation results. The generator (1.30) is known to have good random properties (Press and Teukolsky, 1992). 
 > > 
 > > However, the sequence is periodic, with a period of the order of 109. With present-day computational facilities, this value is not large enough to prevent re-initiation in a single simulation run. An excellent critical review of random-number generators has been published by James (1990), where he recommends using algorithms that are more sophisticated than simple congruential ones. The generator implemented in the Fortran 77 function RAND (Table 1.1) is due to L'Ecuyer (1988); it produces 32-bit floating-point numbers uniformly distributed in the open interval between zero and one. Its period is of the order of 1018, which is virtually inexhaustible in practical simulations.
 

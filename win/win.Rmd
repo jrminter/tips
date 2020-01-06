@@ -1,7 +1,7 @@
 ---
 title: "Windows Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-12-28"
+date: "Started: 2013-07-16, Last modified: 2020-01-05"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -13,6 +13,16 @@ output:
 [Back to Index](../README.html)
 
 Some useful tips for windows
+
+# Change the size of desktop icons
+
+How to Change the Size of Desktop Icons in Windows 10
+
+1. Right-click on an empty space on the desktop.
+2. Select View from the contextual menu.
+3. Select either Large icons, Medium icons, or Small icons...
+3. Right-click on an empty space on the desktop.
+4. Select Display settings from the contextual menu
 
 # jrmSimulationPC
 
