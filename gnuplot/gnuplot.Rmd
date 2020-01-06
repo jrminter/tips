@@ -1,7 +1,7 @@
 ---
 title: "Gnuplot Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-20, Last modified: 2020-01-05"
+date: "Started: 2013-07-20, Last modified: 2020-01-06"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -18,6 +18,27 @@ library(knitr)
 
 [Back to Index](../README.html)
 
+# My quick tips
+
+On Windows I am currently using `gnuplot 5.2 patchlevel 8` 64 bit.
+
+1. The gray bar on the Windows GUI has icons that send common commands to
+   to the terminal.
+
+    - The first icon - a circular arrow - will run `replot`.
+   
+    - The second icon - a folder with a red dot - will let you easily navigate
+      to the right directory.
+      
+    - The third icon - that looks like a floppy disk - will let you navigate to
+      where you want to save the plot.
+      
+    - The left and right arrow let you toggle through commands.
+    
+    - The last icon lets you change settings.
+
+# Other good sources
+
 These are John Minter's tips for using gnuplot. They were
 compiled from several web sources. Some helpful ones:
 
@@ -26,6 +47,40 @@ compiled from several web sources. Some helpful ones:
 [Gnuplot tricks](http://gnuplot-tricks.blogspot.com/2009/05/gnuplot-tricks-many-say-that-it-is.html)
 
 [gnuplotting.org](http://www.gnuplotting.org/)
+
+[A nice example using Fortran](http://personal.ph.surrey.ac.uk/~phs3ps/fortweb/unit8.html)
+
+
+## JRM Note: some example code
+
+
+
+A command file to build a fortran module to create a dataset
+
+```
+SET PATH=%PATH%;C:\Apps\R\Rtools\mingw_64\bin
+gfortran sinplot.f -o sinplot.exe
+pause
+```
+
+And the `gfortran` program code:
+
+```
+      program sinplot
+
+      real :: x
+      integer :: i
+
+      open(unit=20,file='sin.dat')
+
+      ! write out sin(x) for 0 < x < 2*pi
+      do i=0,200,1
+        x=i*6.283185/200.0
+        write(20,*) x,sin(x)
+      end do
+      end program sinplot
+```
+
 
 # Helpful script files
 
@@ -91,8 +146,9 @@ was helpful.
   
   [gnuplot Tutorial 4: Animated gifs and STATS (statistical summary](https://www.youtube.com/watch?v=DF0dCOllLFI)
 
-- My tips...
 
+      
+    
 I like what DTSA-II writes with a date modified to ISO...
 
 ```
