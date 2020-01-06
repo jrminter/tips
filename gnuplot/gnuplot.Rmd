@@ -52,7 +52,7 @@ Then load the plot file from the Windows GUI
 Then use the `Options` > `Save as EMF` to save the EMF file
 
 
-Then run the ImageMagik conversion with the Windows `CMD` file below:
+Then run the ImageMagick conversion with the Windows `CMD` file below:
 
 ```
 rem plot_gnuplot_EagleXG_15kV.cmd
@@ -76,10 +76,10 @@ pause
 - The hints on [gnuplot-tricks.blogspot.com](http://gnuplot-tricks.blogspot.com/2009/05/gnuplot-tricks-many-say-that-it-is.html)
 though old (2009), were helpful.
 
-- EMF terminal infor from [soc.if.usp.br](http://soc.if.usp.br/manual/gnuplot-doc/htmldocs/emf.html)
+- EMF terminal information from [soc.if.usp.br](http://soc.if.usp.br/manual/gnuplot-doc/htmldocs/emf.html)
 was helpful.
 
-- The **Math and Physics** Youtube channel has four videos:
+- The [**Math and Physics** Youtube channel](https://www.youtube.com/channel/UCvOPaVkZjvJoNawmowRCBww) has four *_very helpful_* videos:
 
   [gnuplot Tutorial 1: basic Plotting tips & tricks, errorbars, png output](https://www.youtube.com/watch?v=9QUtcfyBFhE)
   
@@ -272,7 +272,7 @@ anymore. Note that HomeBrew installs into `/usr/local/bin`.
 brew cask install aquaterm; brew install gnuplot --with-aquaterm
 ```
 
-This installation no longer works any nore. Boo! Hiss!
+This installation no longer works any more. Boo! Hiss!
 
 ## MacPorts
 
@@ -300,7 +300,7 @@ This installs into `/opt/local/bin` and works better...
 
 # Hacking the .plt file
 
-## Gnuplot palletes
+## Gnuplot palettes
 
 Very helpful images from [phd-bachephysicdun.blogspot.com](http://phd-bachephysicdun.blogspot.com/2014/01/)
 
@@ -412,7 +412,7 @@ set terminal window
 ```
 
 Where the **proc-gnuplot.sh** script (in C:/Apps/local/path) converts the file to
-pdf and crops the margins by using ps2pdf (from texlive) and convert (from ImageMagick) like this:
+pdf and crops the margins by using ps2pdf (from TexLive) and convert (from ImageMagick) like this:
 
 ```
 ps2pdf $1.ps temp.pdf
