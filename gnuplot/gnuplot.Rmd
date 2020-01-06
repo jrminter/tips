@@ -79,7 +79,7 @@ though old (2009), were helpful.
 - EMF terminal infor from [soc.if.usp.br](http://soc.if.usp.br/manual/gnuplot-doc/htmldocs/emf.html)
 was helpful.
 
-- The **Math and Physics** Youtube channel has four videos:
+- The **Math and Physics** Youtube channel has four videos that are verry good:
 
   [gnuplot Tutorial 1: basic Plotting tips & tricks, errorbars, png output](https://www.youtube.com/watch?v=9QUtcfyBFhE)
   
