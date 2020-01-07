@@ -1,7 +1,7 @@
 ---
 title: "Gnuplot Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-20, Last modified: 2020-01-06"
+date: "Started: 2013-07-20, Last modified: 2020-01-07"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -217,9 +217,13 @@ unset label
 set label 1 "C K{/Symbol a}" at first 281.8, 119000 center font lablFont
 ```
 
+
 ## Set up a plot
 
 We can use HTML colors
+
+Note also how we plot a series of data sets, splitting
+the long line with the `\` character: 
 
 ```
 plot "-" with lines lw 2 lc rgb "#000000" title "Cu", \
