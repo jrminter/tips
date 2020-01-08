@@ -46,7 +46,7 @@ compiled from several web sources. Some helpful ones:
 
 [Gnuplot tricks](http://gnuplot-tricks.blogspot.com/2009/05/gnuplot-tricks-many-say-that-it-is.html)
 
-[gnuplotting.org](http://www.gnuplotting.org/)
+[gnuplotting.org](http://www.gnuplotting.org/) It has a nice viridis colormap example.
 
 [A nice example using Fortran](http://personal.ph.surrey.ac.uk/~phs3ps/fortweb/unit8.html)
 
