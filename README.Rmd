@@ -75,6 +75,14 @@ This skips several steps from original article!
     wget -r --no-parent --reject "index.html*" http://my/url
 ```
 
+9. **How to block someone on Facebook**
+
+- Click at the top right of Facebook and choose `Settings`.
+- Click `Blocking` in the left side menu.
+- In the `Block` users setting, enter the name of the person you want to block and click `Block`.
+- Select the specific person you want to block ans click `Block > Block [name]`
+
+
 
 **Topics**
 
