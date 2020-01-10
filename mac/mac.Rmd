@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-12-13"
+date: "Started: 2013-07-16, Last modified: 2020-01-10"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -14,6 +14,20 @@ output:
 # Install command line tools
 
    `xcode-select --install`
+   
+# Update macports
+
+```
+sudo port selfupdate
+sudo port upgrade outdated
+```
+
+# Update homebrew
+
+```
+brew update
+brew upgrade
+```
    
 # Disks for TimeMachine Backups
 
