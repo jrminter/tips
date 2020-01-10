@@ -14,6 +14,83 @@ output:
 
 Some useful tips for windows
 
+# Connect to Shared Folder on Windows 10 from Mac OS X
+
+Written by: Aseem Kishore, Twitter: @akishore (2018-03016)
+
+who claims thsathis little tutorial will save you hours of frustration...
+
+I recently upgraded one of my computers to Windows 10 and setup a shared folder so that I could easily transfer files from my MacBook Pro and Windows 7 machines to Windows 10 over the home network. I did a clean install of Windows 10, created a shared folder and attempted to connect to my shared folder from OS X.
+
+Unfortunately, I was not able to connect and it took me a little time to figure it out. In this article, I’ll walk you through the steps to connect to a shared folder on Windows 10 from OS X.
+
+**Step 1 – Configure Windows 10 for Sharing**
+
+Obviously, the first thing you’ll need to do is create a shared folder on Windows 10. Right-click on the folder, go to Properties and click on the Sharing tab. Go ahead and share the folder and set the permissions to whatever you desire in terms of access.
+
+![Shared folder](png/mac-2-win10-01.png)
+
+I suggest clicking on Advanced Sharing as you have more fine-grain control over everything. Check the Share this folder box and then give the share a name. Click on Permissions and then add groups or users that you want to give access.
+
+If you want to make it easy and the folder doesn’t have sensitive data, just add the Everyone group and give them Full Control. This way, you’ll be able to access the folder from any computer or device without having to worry about entering credentials.
+
+The next thing you need to do is make sure that File and Printer Sharing is turned on and allowed through the Windows Firewall in Windows 10. Go to Control Panel and click on Windows Defender Firewall. Then click on Allow an app or feature through Windows Firewall.
+
+![Windows firewall](png/mac-2-win10-02.png)
+
+Scroll down until you see File and Printer Sharing and make sure that it is checked for the Private network. You may have to first click on the Change settings button at the top before you can select a box.
+
+![File and printer sharing](png/mac-2-win10-03.png)
+
+Lastly, you can decide how you want users to access the folder on Windows 10. By default, when connecting from another machine, you have to enter the username and password of an account that has access to that shared folder on Windows 10. If you setup a Windows 10 user account without adding a password, you won’t be able to connect to the shared folder.
+
+You’ll first have to add a password and then you could connect. However, if you feel your home network is super secure, you can always turn off password protected sharing, which means anyone can connect to the shared folder without having to type in a username or password.
+
+![Password protected sharing](png/mac-2-win10-04.png)
+
+You can do that by going to Control Panel, Network and Sharing Center, Advanced sharing settings and then expanding All Networks. Here you will see an option called Password protected sharing, which you can turn off. I personally keep it turned on, but if you really hate having to type in a username and password to connect, this is an option.
+
+Also, if you use Windows 10 without a password, this would save you from having to setup a password on your account. Note that even if you have a Windows account with a password, if you turn off password protected sharing, then people can still connect without typing any credentials.
+
+**Step 2 – Connect to Windows Shared Folder from OS X**
+
+Finally, on the Mac, open Finder and look under the Shared section for the Windows 10 PC. If Shared is not in the sidebar, you have to add it. With Finder open, click on Finder and then Preferences at the top. Click on Sidebar and check all the items under Shared.
+
+![Finder Preferences](png/mac-2-win10-05.png)
+
+Now go back to Finder and wait till your computer shows up. Note that it can take a little while until the Windows 10 PC shows up. If it doesn’t show up after 5 minutes, try restarting the PC once.
+
+If your Windows PC refuses to show up in the Shared devices list in Finder, you can try connecting manually using SMB. To do that, open Finder and click on Go and then Connect to Server.
+
+![Connect to Server](png/mac-2-win10-06.png)
+
+Now type in the following as shown, replacing the IP address below with the IP address of your Windows 10 PC.
+
+```
+smb://192.168.1.43
+```
+
+Click the Connect button and you’ll be asked to type in credentials again. If that is entered correctly, you’ll be asked which volume you want to mount.
+
+![Select Volumes](png/mac-2-win10-07.png)
+
+If you’re still not able to connect using SMB, then there is some issue on your Windows PC. You have to make sure the firewall is configured properly.
+
+Once it shows up in the sidebar, go ahead and click on it. When you click on it, it will try to connect and you may get a message saying Connection Failed or Not Connected.
+
+![The connection](png/mac-2-win10-08.png)
+
+That’s OK! That’s where that password protected folder setting in Windows 10 comes into play. If it’s turned on, you need to connect using the Windows 10 account credentials. You can do that by clicking the Connect As button at the top right.
+
+![Password request](png/mac-2-win10-09.png)
+
+Go ahead and type in your credentials and then click OK. Note that if it’s a Microsoft account you have setup on Windows 10, you’ll need to type in the full email address and the same password that you use to login to your Microsoft account.
+
+![Success!](png/mac-2-win10-10.png)
+
+That’s about it! Now you should see the Windows 10 shared folders in Finder on your Mac. If you have any questions about connecting to Windows 10 PC from a Mac, post a comment here and I’ll try to help out. Enjoy!
+
+
 # Change the size of desktop icons
 
 How to Change the Size of Desktop Icons in Windows 10
