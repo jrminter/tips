@@ -14,6 +14,15 @@ output:
 
 Some useful tips for windows
 
+# Change the default PDF Viewer
+
+  -  Right-click on a PDF file.    
+  -  Click on "Open with" > "Choose another app".   
+  -  Change Default Viewer.     
+  -  A pop-up window will prompt you to choose your preferred software. (Sumatra PDF...)    
+  Note that Adobe Acrobat is too much for my purpose...     
+  -  Tick the "Always use this app" check box and click "OK".
+
 # Connect to Shared Folder on Windows 10 from Mac OS X
 
 Written by: Aseem Kishore, Twitter: @akishore (2018-03016)
