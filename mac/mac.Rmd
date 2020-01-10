@@ -17,17 +17,16 @@ output:
    
 # Update macports
 
-```
-sudo port selfupdate
-sudo port upgrade outdated
-```
+   `sudo port selfupdate`
+   
+   `sudo port upgrade outdated`
 
 # Update homebrew
 
-```
-brew update
-brew upgrade
-```
+
+   `brew update`
+    
+   `brew upgrade`
    
 # Disks for TimeMachine Backups
 
