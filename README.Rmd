@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-12-29"
+date: "Started: 2013-07-16, Last modified: 2020-01-10"
 output:
   html_document:
     keep_md: true
@@ -17,63 +17,81 @@ format.
 
 **First**, some quickies:
 
-1. **install command line tools**
+1. The **Feynman** technique of learning:
+
+    - **Step 1**: Pick and study a topic
+
+    - **Step 2**: Explain the topic to someone, like a child, who is unfamiliar with the topic
+
+    - **Step 3**: Identify any gaps in your understanding 
+
+    - **Step 4**: Review and Simplify!
+
+2. **install command line tools** on MacOS
 
     `xcode-select --install`
 
-2. **regex for youtube time stamps**. Useful in SublimeText3!
+3. **regex for youtube time stamps**. Useful in SublimeText3!
 
    `\d\d:\d\d`
 
-3. **Symbolic links**. I always get this confused
+4. **Symbolic links**. I always get this backwards...
 
     ```
        file     link
 ln -s source destination
     ```
 
-4. **Fun snippets**
+5. **Fun snippets**
 
-> Your closest colaborator is you, six months from now    
-> ... and you don't respond to email     
-> - Karl Broman
+    > Your closest colaborator is you, six months from now    
+    > ... and you don't respond to email     
+    > - Karl Broman
 
-> DRY (do not repeat yourself) vs WET (waste everyones time) coding styles    
-> - Peter Baker (UseR 2018)
+    > DRY (do not repeat yourself) vs WET (waste everyones time) coding styles    
+    > - Peter Baker (UseR 2018)
 
-5. **Getting started with data science**
+6. **Getting started with data science**
 
 - A very helpful article from
 [Datacamp](https://www.datacamp.com/community/tutorials/setup-data-science-environment).
 
-6. **Clear the Chrome Cache**
+7. **Clear the Chrome Cache**
 
-- Press "CTRL" + "Shift" + "Delete" keys in Windows or Linux
-- Press "Command" + "Shift" + "Delete"" keys on MacOS.
+    - Press "CTRL" + "Shift" + "Delete" keys in Windows or Linux
+    - Press "Command" + "Shift" + "Delete"" keys on MacOS.
 
-7. **Delete Specific Cookies in Chrome for Mac OS X**
+8. **Delete Specific Cookies in Chrome for Mac OS X**
 
     From [osxdaily.com](http://osxdaily.com/2016/07/02/delete-cookies-chrome-browser/): You can remove a specific website cookie from Chrome by doing the following:
 
-This skips several steps from original article!
+    This skips several steps from original article!
 
-- Open `chrome://settings/siteData` as a URL
+    - Open `chrome://settings/siteData` as a URL
 
-- Scroll to look at the list or use the `Search` box if you want to quickly find a specific site URL.
+    - Scroll to look at the list or use the `Search` box if you want to quickly find a specific site URL.
 
-- To remove the cookie(s), then select the site and click the **trash can icon** to delete cookies for the site.
+    - To remove the cookie(s), then select the site and click the **trash can icon** to delete cookies for the site.
 
-- Rinse and repeat for other sites...
+    - Rinse and repeat for other sites...
 
-- Avoid cookie placement and cache generation in the first place by using the Chrome `Incognito Mode` private browsing feature.
+    - Avoid cookie placement and cache generation in the first place by using the Chrome `Incognito Mode` private browsing feature.
 
-8. **Automatically download all files in a directory**
+9. **Automatically download all files in a directory**
 
    Let's also exclude all the `index.html` files... 
 
 ```
     wget -r --no-parent --reject "index.html*" http://my/url
 ```
+
+10. **How to block someone on Facebook**
+
+    - Click at the top right of Facebook and choose `Settings`.
+    - Click `Blocking` in the left side menu.
+    - In the `Block` users setting, enter the name of the person you want to block and click `Block`.
+    - Select the specific person you want to block ans click `Block > Block [name]`
+
 
 
 **Topics**
