@@ -1,0 +1,36 @@
+---
+output:
+  pdf_document:
+    includes:
+      in_header: header.tex 
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(here)
+library(knitr)
+```
+\blandscape
+\pagenumbering{gobble}
+
+# Smoothing in gnuplot
+
+On page 45 in `Gnuplot in Action, 2nd ed.`, Philip Janert supplies the
+helpful table below. He writes:
+
+> Gnuplot can construct a variety of smooth curves as representations of a
+> data set. You can invoke this feature using the smooth directive to the plot
+> command, followed by an additional keyword that selects the specific interpolation
+> method. Table 3.4 lists the available smoothing methods, together with brief
+> descriptions.
+
+
+```{r read_csv, echo=FALSE}
+path <- paste0(here(), "/csv/gnuplot_table_3pt4.csv")
+# print(path)
+
+df <- read.csv(file=path, header=TRUE, sep=",")
+kable(df)
+```
+
+\elandscape
