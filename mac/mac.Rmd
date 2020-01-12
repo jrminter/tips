@@ -13,6 +13,8 @@ output:
 
 # Install command line tools
 
+From: [AtoZ Programming Tutorials](https://www.youtube.com/watch?v=jF_RiRYk-Wo) on Youtube.
+
    `xcode-select --install`
    
    Accept the license.
