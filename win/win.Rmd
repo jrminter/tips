@@ -52,6 +52,13 @@ HP's web site. I could try my previous solution that I purchsed from Amazon...
 
 [Carantee USB WiFi Adapter 1200Mbps, Wireless Network WiFi Dongle](https://www.amazon.com/dp/B07F9JWY7X?psc=1&ref=ppx_pop_dt_b_product_details). It cost $27. I don't recall drops...
 
+
+
+**I _think_ I may have found the root cause!** Time will tell...
+
+![The "let computer" turn off was set. I **unchecked it**!](png/network-adapter-props.png)
+
+
 # Turn off Compatibility Telemetry in Windows 10
 
 This was really annoying on my Win10 64 Pro VM in Parallels!
