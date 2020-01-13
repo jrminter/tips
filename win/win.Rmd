@@ -22,6 +22,30 @@ Some useful tips for windows
   -  A pop-up window will prompt you to choose your preferred software. (Sumatra PDF...)    
   Note that Adobe Acrobat is too much for my purpose...     
   -  Tick the "Always use this app" check box and click "OK".
+  
+# Issues with Wifi on HP Obelisk Desktop 875
+
+Info is [here](https://h30434.www3.hp.com/t5/Gaming-Desktops/Frequent-WiFi-disconnects-with-Omen-Obelisk-Desktop/td-p/7322896).
+
+> Product: OMEN By HP Obelisk Desktop 875-0xxx    
+> Operating System: Microsoft Windows 10 (64-Bit)    
+> 
+> I have an Omen Obelisk Desktop (about 6 months old) that frequently
+> disconnects from WiFi. I don't have trouble with any other devices in
+> my place and our router is new. Should be using the most up to date
+> driver. What can I do to fix this?
+>
+> That model card has had problems ever since it came out and Realtek
+> is constantly updating drivers in an effort to remedy the frequent
+> network disconnection issues.
+> 
+> So, the only suggestion I can offer if you have not done so already
+> would be to update the wifi and Bluetooth drivers to their latest
+> versions and restart the PC.
+
+It lookss like it has a 
+
+`Realtec RTL8822BE 802.11ac PCIeAdapter`
 
 # Turn off Compatibility Telemetry in Windows 10
 
