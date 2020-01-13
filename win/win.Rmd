@@ -43,9 +43,14 @@ Info is [here](https://h30434.www3.hp.com/t5/Gaming-Desktops/Frequent-WiFi-disco
 > would be to update the wifi and Bluetooth drivers to their latest
 > versions and restart the PC.
 
-It lookss like it has a 
+It looks like it has a 
 
 `Realtec RTL8822BE 802.11ac PCIeAdapter`
+
+I downloaded and installed the latest driver from
+HP's web site. I could try my previous solution that I purchsed from Amazon...
+
+[Carantee USB WiFi Adapter 1200Mbps, Wireless Network WiFi Dongle](https://www.amazon.com/dp/B07F9JWY7X?psc=1&ref=ppx_pop_dt_b_product_details). It cost $27. I don't recall drops...
 
 # Turn off Compatibility Telemetry in Windows 10
 
