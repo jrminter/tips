@@ -23,6 +23,35 @@ Some useful tips for windows
   Note that Adobe Acrobat is too much for my purpose...     
   -  Tick the "Always use this app" check box and click "OK".
 
+# Turn off Compatibility Telemetry in Windows 10
+
+This was really annoying on my Win10 64 Pro VM in Parallels!
+
+Soution is from number two from  [here](https://www.easeus.com/partition-manager-software/fix-windows-10-microsoft-compatibility-telemetry-high-disk-usage.html).
+
+1. Press the Windows logo key + R  then type `regedit` in the box and click OK.
+
+![The regedit box.](png/telem-1.png)
+
+2. Click `YES` when prompted by User Account Control.
+
+3. Go to:
+
+```
+HKEY_LOCAL_MACHINE > SOFTWARE > Policies > Microsoft > Windows > DataCollection
+```
+
+![The registry entries.](png/telem-2.png)
+
+3. Right-click on `DataCollection` and choose `New > DWORD (32-bit) Value`. Then name the new value `Allow Telemetry` then double-click `Allow Telemetry`.
+
+![Add the DWORD (32 bit) Value. ](png/telem-3.png)
+
+![Set the DWORD (32 bit) Value to `0` and click `OK`. ](png/telem-4.png)
+
+
+
+
 # Connect to Shared Folder on Windows 10 from Mac OS X
 
 Written by: Aseem Kishore, Twitter: @akishore (2018-03016)
