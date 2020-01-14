@@ -1,7 +1,7 @@
 ---
 title: "Windows Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-01-13"
+date: "Started: 2013-07-16, Last modified: 2020-01-14"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -48,7 +48,7 @@ It looks like it has a
 `Realtec RTL8822BE 802.11ac PCIeAdapter`
 
 I downloaded and installed the latest driver from
-HP's web site. I could try my previous solution that I purchsed from Amazon...
+HP's web site. I could try my previous solution that I purchased from Amazon...
 
 [Carantee USB WiFi Adapter 1200Mbps, Wireless Network WiFi Dongle](https://www.amazon.com/dp/B07F9JWY7X?psc=1&ref=ppx_pop_dt_b_product_details). It cost $27. I don't recall drops...
 
