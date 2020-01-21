@@ -17,6 +17,17 @@ They were compiled from several web sources.
 
 # Simple tricks
 
+## Comments
+
+Try something like this
+
+```
+%\begin{comment}
+% Section that isn't quite done
+%\end{comment}
+```
+
+
 ## Deleting backups of packages
 
 ```
