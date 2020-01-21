@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-01-12"
+date: "Started: 2013-07-16, Last modified: 2020-01-21"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -10,6 +10,21 @@ output:
     toc_depth: 3
 ---
 [Back to Index](../README.html)
+
+# Set default applications
+
+From [here](https://www.imore.com/how-set-mac-app-default-when-opening-file).
+
+1. Right-click on a **file** that uses the **file type** you'd like to
+**change the default** for.
+
+2. Click on **Get Info** in the pop-up.
+
+3. Click Open With if the section isn't already expanded.
+
+4. Click the dropdown and choose an **app**.
+
+5. Click `Change All`...
 
 # Install command line tools
 
