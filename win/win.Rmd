@@ -1,7 +1,7 @@
 ---
 title: "Windows Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-01-13"
+date: "Started: 2013-07-16, Last modified: 2020-01-18"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -22,6 +22,71 @@ Some useful tips for windows
   -  A pop-up window will prompt you to choose your preferred software. (Sumatra PDF...)    
   Note that Adobe Acrobat is too much for my purpose...     
   -  Tick the "Always use this app" check box and click "OK".
+  
+# An easy way to change the default app for a given file extension
+
+1. Create a dummy `foo.txt` file and change the extension to whatever
+you want (e.g. foo.text). Then go to `Settings` and select
+`Choose default apps by file type`. Pick the desired file extension. 
+
+2. A tip from
+[addictivetips.com](https://www.addictivetips.com/windows-tips/file-app-association-command-prompt-windows-10/).
+
+> Windows 10 allows you to set any app of your choice as the default app to open
+> a certain type of file. In some cases, e.g., with your browser, it will
+> relentlessly try and push Edge as a superior option but with other file types and
+> apps you don’t run into much resistance. Of course, app defaults often reset and
+> sometimes they fail to set altogether. If that’s the case, you can always set a
+> file app association from Command Prompt.
+>
+> ## File App Association
+>
+> In order to set a file app association from the Command Prompt, you need
+> administrative rights. The first thing you need to do is find the file
+> extension for the file that you want to set a default app for. This is
+> easy enough; open File Explorer to the location with the file in it.
+> 
+> Right-click the file and select Properties from the context menu. On the
+> General tab, you will see a ‘Type of File’ section that tells you what the
+> file’s extension is.
+>
+> Open `Command Prompt` with **administrative rights** and run the following command
+> in it.
+>
+> **Syntax**
+> 
+> `assoc .fileextension`
+> 
+> **Example**
+> 
+> `assoc .html`
+> 
+> This command will return the file type that the file is. This result is what
+> you need to execute the command to set a file app association.
+> 
+> The file type that the command has returned is “htmlfile”.
+>
+> Next, find the absolute path to the `EXE` of the app you want to associate with
+> the file type. Run the following command.
+> 
+> **Syntax**
+> 
+> `ftype File Type="absolute-path-to-application" "%1"`
+>
+> **Example**
+>
+> `ftype htmlfile="C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" "%1"`
+>
+> If the file app association is set successfully, Command Prompt will return the
+> following:
+> 
+> `File Type="absolute-path-to-application" "%1"`
+> 
+> From this point forward, Windows 10 will use the set app to open the type of file
+> you associated with it. This method doesn’t guarantee that the file association
+> cannot be reset, or that no other apps can change it.
+
+
   
 # Issues with Wifi on HP Obelisk Desktop 875
 
@@ -48,7 +113,7 @@ It looks like it has a
 `Realtec RTL8822BE 802.11ac PCIeAdapter`
 
 I downloaded and installed the latest driver from
-HP's web site. I could try my previous solution that I purchsed from Amazon...
+HP's web site. I could try my previous solution that I purchased from Amazon...
 
 [Carantee USB WiFi Adapter 1200Mbps, Wireless Network WiFi Dongle](https://www.amazon.com/dp/B07F9JWY7X?psc=1&ref=ppx_pop_dt_b_product_details). It cost $27. I don't recall drops...
 
