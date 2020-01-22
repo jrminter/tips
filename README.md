@@ -26,7 +26,7 @@ format.
     - **Step 3**: Identify any gaps in your understanding 
 
     - **Step 4**: Review and Simplify!
-
+    
 2. **install command line tools** on MacOS
 
     `xcode-select --install`
