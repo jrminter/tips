@@ -1,0 +1,122 @@
+---
+title: "The Feynman technique"
+author: "Socratica"
+date: "Started 2020-01-22, Last modified: 2020-01-22"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+
+[Back to Index](../README.html)
+
+From a video from [Socratica](https://www.youtube.com/watch?v=q-16DPh_VWw).
+
+# Introduction
+
+Hello my Socratica Friends. We’re here to help you be a GREAT student.
+
+One of the greatest students of all time was also one of the greatest teachers of all time: Richard Feynman.
+
+Feynman was a Nobel Prize-winning physicist, and a professor at Caltech. He was a legend in the classroom.
+
+# Example from a Feynman lecture:
+
+## Feynman's presentation
+Many, or even most, scientists aren’t really great at teaching. But Feynman had a way of connecting with students, even complete novices. People called him “The Great Explainer.”
+
+Symmetry seems to be absolutely fascinating to the human mind. We like to look at symmetrical things in nature, such as balls, which are perfectly symmetrical; spheres, like planets and the sun and so on; or symmetrical crystals, like snowflakes; flowers, which are nearly symmetrical, and so on.
+
+But it's not the object in nature - the symmetry of objects in nature - that I want to talk about tonight.
+
+It's rather the symmetry of the physical laws themselves. Now, how can a physical law have a symmetry? It's easy to understand how an object has a symmetry. Of course, it can't!
+
+But physicists delight themselves by using ordinary words for something else! {audience laughter} And so, in this case, they have a thing about the physical laws. Which is very close to the symmetry of objects, and they call it the Symmetry of the Laws.
+
+## Socratica Analysis
+
+A little bit of his magic was captured in the books “The Feynman Lectures on Physics.” They’ve helped thousands of students.
+
+Even before he was a professor, Feynman got a lot of experience teaching... himself. But Feynman didn’t limit his studies to physics. He taught himself a lot of math, cryptography, biology, art, music, all about an obscure country called Tuva where they do throat singing...
+
+He was just insatiably curious.
+
+Most professors lock themselves away in their office or their lab, but Feynman had this unusual habit of wandering into other departments and talking with students and professors outside of his field.
+
+How did he get to be so conversant in so many areas? By avoiding jargon and getting back to First Principles.
+
+## An example
+
+If you build any kind of apparatus, or do any kind of an experiment with things, And then go and build the same apparatus and do the same kind of experiment with similar things, but put them HERE, instead of there, merely TRANSLATE it from one place to the other, in space, then the same thing will happen in the translated thing that would have happened in the original thing. It's not really true, actually. {audience laughter}
+
+If I actually built such an apparatus and then displaced it twenty feet in that direction, it would get into the wall, and there would be difficulties. {audience laughter}
+
+It's necessary, in defining this idea, to take into account everything that might affect the situation, so that when you move the thing, you move everything.
+
+For example, if the system involved a pendulum, and I moved it 20,000 miles to the right, it wouldn't work right anymore, because the pendulum involves the attraction of the Earth. But if I imagine I move the Earth and the equipment, then it will behave the same way.
+
+## The point
+
+Feynman showed us - as long as you’re logical, you can figure out almost any topic.
+
+That’s why this technique is named for him. It’s straightforward, and powerful.
+
+Most people use the Feynman technique when they’re preparing for a test, but you can use it anytime you want to teach yourself something.
+
+It’s a kind of sanity check - to make sure you’re not just parroting back what you read in a textbook or heard in lecture.
+
+The Feynman technique lets you double-check that you REALLY understand what you’ve learned.
+
+# The Steps
+
+## STEP 1: _Pick your subject_.
+
+This is going to work best if it’s a small, manageable topic. For instance, covalent bonds - not all of inorganic chemistry.
+
+## STEP 2: _Write a simple explanation._
+
+Write an example of the concept in very simple language.
+
+Imagine you’re teaching covalent bonds to someone who doesn’t know anything about chemistry.
+
+Picture a very bright, inquisitive child, who’s going to point out any part of your explanation that doesn’t make sense.
+
+Now, observe yourself, as you write out your explanation. Is there any point where you’re having a lot of trouble explaining the concept SIMPLY? That’s it.
+
+That’s the heart of the Feynman technique, right there.
+
+That part that’s a little too complicated is what you need to review, until you understand it well enough that you could explain it to a child.
+
+## STEP 3: _Review_.
+
+Go back to your textbook and your lecture notes, and review that complicated part.
+
+Now try explaining it again. It can help to use analogies and pictures. Remember to avoid any jargon terms.
+
+## STEP 4: _Simplify more_.
+
+Now go through your explanation again, and try to simplify it **_even more_**.
+
+Try it out on a friend who’s not in your class and doesn’t know anything about this topic. Can you teach this subject to a novice?
+
+That’s it - that’s the Feynman technique. Really, it’s that simple?
+
+Surely you’re joking, Socratica!
+
+Here's a challenge for you: What's something you're studying that's REALLY complicated?
+
+In the comment section below, try to explain it to us, in a few sentences.
+
+Use the Feynman Technique!
+
+Then we can all discuss whether you are now a Great Explainer.
+
+Want to help us make more great videos?
+
+Join the Socratica Team on Patreon!
+
+Thank you for watching! :)
+
+[Back to Index](../README.html)

@@ -110,6 +110,12 @@ Excel/Excel.md
 Excel/Excel.html
 Excel/figure/
 
+# Feynman_technique tips directory
+Feynman_technique/.DS_Store
+Feynman_technique/Feynman_technique.md
+Feynman_technique/Feynman_technique.html
+Feynman_technique/figure/
+
 # fiji-plugin-development dir
 fiji-plugin-development/.DS_Store
 fiji-plugin-development/*.md

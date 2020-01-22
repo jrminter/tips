@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-01-10"
+date: "Started: 2013-07-16, Last modified: 2020-01-22"
 output:
   html_document:
     keep_md: true
@@ -131,6 +131,8 @@ ln -s source destination
 [EPMA Matrix Correction](./epma-matrix-corr/epma-matrix-corr.html)
 
 [Excel](./Excel/Excel.html)
+
+[Feynman Technique](./Feynman_technique/Feynman_technique.html)
 
 [Fiji plugin development](./fiji-plugin-development/fiji-plugin-development.html)
 
