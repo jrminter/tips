@@ -27,6 +27,8 @@ format.
 
     - **Step 4**: Review and Simplify!
     
+    More [here](./Feynman_technique/Feynman_technique.html)...
+    
 2. **install command line tools** on MacOS
 
     `xcode-select --install`
