@@ -1,7 +1,7 @@
 ---
 title: "Image-J Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-07-29"
+date: "Started: 2013-07-16, Last modified: 2020-01-23"
 output:
   html_document:
     keep_md: yes
@@ -25,7 +25,10 @@ is **_awesome_**! The ppt slides are very well done!
 There is a **very nice collection of tutorials** available on the
 [ImageJ Forum](https://forum.image.sc/t/bioimage-analysis-recommended-reading-and-viewing/28051).
 
-# The IJ.run() function
+
+# Really helpful hints
+
+## The `IJ.run()` function
 
 The `IJ.run()` function comes with **four** variants. **_None_ of these return a value**.
 
@@ -45,7 +48,27 @@ The `IJ.run()` function comes with **four** variants. **_None_ of these return a
 
     Runs an ImageJ command, with options that are passed to the GenericDialog and OpenDialog classes.
 
-# Commands the macro recorder never records...
+## Stein Rørvik makes a good case for using `.tsv` files
+
+On 2020-01-23, Stein wrote
+
+> Just a small note on an advantage of using `.tsv` instead of `.txt`
+> (even though the file contents should be identical in the two cases):
+> 
+> If you are on Windows, you can easily associate the `.tsv` extension
+> with your favorite statistics program (or ImageJ if you want), and
+> then just double-click the file for a direct import there. If you
+> use the command
+> 
+> > `assoc .tsv=Excel.Sheet`
+> 
+> in a **command-line window with administrator rights**, Windows will
+> thereafter open the file directly and correctly in Excel without
+> Excel doing any (**_usually wrong_**) attempt to guess the format of
+> the contents, as it does with the .txt extension.
+
+
+## Commands the macro recorder never records...
 
 ```
 IJ.run("Make Binary")
@@ -61,7 +84,7 @@ def close_others():
 	IJ.runMacro("close(\"\\\\Others\")")
 ```
 
-# IJ problems with scientific TIF images on Windows
+## IJ problems with scientific TIF images on Windows
 
 [cgholke](https://forum.image.sc/t/windows-freeze-for-multi-page-tiffs/27820/4)
 writes:
@@ -75,7 +98,7 @@ writes:
 This can cause problems with `Windows Explorer`.
 
 
-# Convert *.class to *.jar
+## Convert *.class to *.jar
 
 From [here](https://introcs.cs.princeton.edu/java/85application/jar/jar.html).
 
