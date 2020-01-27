@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-01-24"
+date: "Started: 2013-07-16, Last modified: 2020-01-27"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -11,6 +11,12 @@ output:
 ---
 [Back to Index](../README.html)
 
+# Mac keyboard shortcuts
+
+There are **lot** of keyboard shortcuts...
+
+[A handy PDF](pdf/mac-keyboard-shortcuts.pdf) ...
+
 # Force quit an application
 
 1. Choose `Force Quit` from the Apple Menu
@@ -18,9 +24,6 @@ output:
 2. From Keyboard press `CMD + Option + Escape`
 
     ![](png/Apple_Keyboard_Map_Restart_sm.png)
-
-
-
 
 # Set default applications
 
