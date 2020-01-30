@@ -1,7 +1,7 @@
 ---
 title: "Probe For EPMA"
 author: "John Minter"
-date: "Started: 2017-05-27, Last modified: 2020-01-07"
+date: "Started: 2017-05-27, Last modified: 2020-01-30"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -24,6 +24,15 @@ As installed, the penempma GUI is convenient for testing problems. One issue
 is that all the work is done in the folder
 
 `C:\UserData\Penepma12\Penepma`
+
+Note, this can be set to 
+
+`C:\UserData\Penepma16\Penepma`
+
+in
+
+`C:\ProgramData\Probe Software\Probe for EPMA`
+
 
 This is convenient, but I find it way too easy to overwrite data files. I prefer
 to run the simulations in my own data directory where each folder has all
