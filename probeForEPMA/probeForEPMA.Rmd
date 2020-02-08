@@ -1,7 +1,7 @@
 ---
 title: "Probe For EPMA"
 author: "John Minter"
-date: "Started: 2017-05-27, Last modified: 2020-01-30"
+date: "Started: 2017-05-27, Last modified: 2020-02-07"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -512,10 +512,22 @@ John Donovan suggests that the finished product should look like this:
 
 ![John Donovan's example thin film simulation](./img/Penepma-Thin-film-MC.png)
 
-An my implementation...
+And my implementation...
 
 ![My simulation of a thin film of N-doped ZnO on Si](./img/JRM-penepma-thin-film-mc.png)
 
+# Some hints on effective simulations
+
+1. You can create a multi-layer simulation from the GUI and create a `simulation.in` file. These can be imported with the `Browse` button and edited.
+
+2. One can use the `Edit Input File` to manually edit the input.
+
+3. I like to set a **low minimum photon energy** : I like `1.0e+2` (100 eV).
+
+4. I like the S/N ratio of the data with a 12 hr (43200 sec) simulation.
+
+5. Both penepma12 and penepma16 use a single core. One can run two simulations at
+one time by adjusting the window positions.
 
 
 # Plotting $\phi \rho z$ curves. 
