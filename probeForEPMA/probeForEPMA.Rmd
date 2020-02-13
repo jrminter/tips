@@ -387,6 +387,123 @@ I need a clear summary of the difference between **standard k-factors** and
 
 # PENEPMA Monte Carlo Simulations
 
+## General Instructions
+
+
+### Helpful voltages for penepma12/16 simulations
+
+For thin films on substrates, the following series of keVs are helpful
+
+[5, 10, 15, 20, 25 keV]
+
+For light elements Like B or ZnO L lines where the ZnLa1 line is
+1.0116 keV and the O Ka1 and Ka2 lines are at 0.5249 keV, one 
+can use:
+
+[2, 5, 7, 10 keV]
+
+The DTSA2 command line function `listTransitions("Zn")` is
+very helpful in picking the most reasonable beam energies...
+
+### Simulation Times
+
+| hrs for sim | seconds |
+|------------:|--------:|
+| 1 | 3600 |
+| 2 | 7200 |
+| 4 | 14440 |
+| 8 | 28800 |
+| 24 | 86400 |
+| 27.8 | 10^5^ (default) |
+
+
+
+### Some hints on effective simulations
+
+1. You can create a multi-layer simulation from the GUI and create a `simulation.in` file. These can be imported with the `Browse` button and edited.
+
+2. One can use the `Edit Input File` to manually edit the input.
+
+3. I like to set a **low minimum photon energy** : I like `1.0e+2` (100 eV).
+
+4. I like the S/N ratio of the data with a 12 hr (43200 sec) simulation.
+
+5. Both penepma12 and penepma16 use a single core. One can run two simulations at
+one time by adjusting the window positions.
+
+### Use of a random seed
+
+John Donovan explained the use of the random seed in `penepma`
+in this [post](https://probesoftware.com/smf/index.php?topic=202.msg8305#msg8305)
+on the Probe Software Forum:
+
+> This question came up off-line so I thought I would mention it here.
+> 
+> When running Penepma from the GUI in the Standard application, the random
+> seed is *not* varied. This is for reproducibility of results.
+>
+> However when running Penepma from **Probe for EPMA** to simulate EDS spectra,
+> the random seed *_is_* varied.
+>
+> To add a random seed in the Penepma input file simply add a line like this to
+> your .in file:
+>
+> ```
+> RSEED  1 2                  [Seeds of the random-number generator]
+> ```
+>
+> The defaults are 1 and 2 so you should change them if you want to simulate
+> random statistics, though the Penepma documentation does not explain exactly
+> **how** they are utilized that I can find. Except for this bit of code:
+>
+> ```
+> C *********************************************************************
+> C FUNCTION RAND
+> C *********************************************************************
+> FUNCTION RAND(DUMMY)
+> C
+> C This is an adapted version of subroutine RANECU written by F. James C
+> C (Comput. Phys. Commun. 60 (1990) 329-344), which has been modified to
+> C give a single random number at each call.
+> C
+> C The 'seeds' ISEED1 and ISEED2 must be initialised in the main program
+> C and transferred through the named common block /RSEED/.
+> C
+> 
+> IMPLICIT DOUBLE PRECISION (A-H,O-Z), INTEGER*4 (I-N)
+> PARAMETER (USCALE=1.0D0/2.147483563D9)
+> COMMON/RSEED/ISEED1,ISEED2
+> C
+> I1=ISEED1/53668
+> ISEED1=40014*(ISEED1-I1*53668)-I1*12211
+> IF(ISEED1.LT.0) ISEED1=ISEED1+2147483563
+> C
+> I2=ISEED2/52774
+> ISEED2=40692*(ISEED2-I2*52774)-I2*3791
+> IF(ISEED2.LT.0) ISEED2=ISEED2+2147483399
+> C
+> IZ=ISEED1-ISEED2
+> IF(IZ.LT.1) IZ=IZ+2147483562
+> RAND=IZ*USCALE
+> C
+> RETURN
+> END
+> ```
+>
+> and the following text:
+>
+> > 1.2.1 Random-number generator
+> > In general, random-sampling algorithms are based on the use of random numbers » uniformly distributed in the interval (0,1). These random numbers can be easily generated on the computer (see, e.g., Kalos and Whitlock, 1986; James, 1990). Among the \good" random-number generators currently available, the simplest ones are the so-called multiplicative congruential generators (Press and Teukolsky, 1992). A popular example of this kind of generator is the following,
+> > 
+> > Rn = 75Rn¡1 (mod 231 ¡ 1); »n = Rn=(231 ¡ 1); (1.30)
+> > 
+> > which produces a sequence of random numbers »n uniformly distributed in (0,1) from a given \seed" R0 (< 231 ¡ 1). Actually, the generated sequence is not truly random, because it is obtained from a deterministic algorithm (the term \pseudo-random" would be more appropriate), but it is very unlikely that the subtle correlations between the values in the sequence have an appreciable e®etc on the simulation results. The generator (1.30) is known to have good random properties (Press and Teukolsky, 1992). 
+> > 
+> > However, the sequence is periodic, with a period of the order of 109. With present-day computational facilities, this value is not large enough to prevent re-initiation in a single simulation run. An excellent critical review of random-number generators has been published by James (1990), where he recommends using algorithms that are more sophisticated than simple congruential ones. The generator implemented in the Fortran 77 function RAND (Table 1.1) is due to L'Ecuyer (1988); it produces 32-bit floating-point numbers uniformly distributed in the open interval between zero and one. Its period is of the order of 1018, which is virtually inexhaustible in practical simulations.
+
+
+## Instructions for penepma12 from default Standard.exe
+
 Note that one starts Monte Carlo simulations from the **Standards.exe** window
 
 ![Starting Monte Carlo Simulations](./img/start-mc.png)
@@ -541,26 +658,6 @@ to plot the resulting spectra.
 **An example bulk Cu simulation** - modified for 4096 channels - is [here](penepma16/Cu_20kV.zip).
 
 **An example 100 nm Cu film on Si  simulation** - modified for 4096 channels - is [here](penepma16/100_nm_Cu_on_Si_20kV.zip).
-
-
-
-
-
-
-
-# Some hints on effective simulations
-
-1. You can create a multi-layer simulation from the GUI and create a `simulation.in` file. These can be imported with the `Browse` button and edited.
-
-2. One can use the `Edit Input File` to manually edit the input.
-
-3. I like to set a **low minimum photon energy** : I like `1.0e+2` (100 eV).
-
-4. I like the S/N ratio of the data with a 12 hr (43200 sec) simulation.
-
-5. Both penepma12 and penepma16 use a single core. One can run two simulations at
-one time by adjusting the window positions.
-
 
 # Plotting $\phi \rho z$ curves. 
 

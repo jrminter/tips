@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-01-25"
+date: "Started: 2013-07-16, Last modified: 2020-02-13"
 output:
   html_document:
     keep_md: true
@@ -214,8 +214,6 @@ ln -s source destination
 [OS Package Links](./osPkgs/osPkgs.html)
 
 [pandoc](./pandoc/pandoc.html)
-
-[penepma](./penepma/penepma.html)
 
 [plagiarism](./plagiarism/plagiarism.html)
 
