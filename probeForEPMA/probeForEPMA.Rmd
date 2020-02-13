@@ -1,7 +1,7 @@
 ---
 title: "Probe For EPMA"
 author: "John Minter"
-date: "Started: 2017-05-27, Last modified: 2020-02-07"
+date: "Started: 2017-05-27, Last modified: 2020-02-13"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -391,7 +391,8 @@ Note that one starts Monte Carlo simulations from the **Standards.exe** window
 
 ![Starting Monte Carlo Simulations](./img/start-mc.png)
 
-The image below shows how to run a basic simulation using **penepma12**
+The image below shows how to run a basic simulation using **penepma12**. There is
+now (2020-02-13) a way to run penepma16 from the GUI as well.
 
 ![The basic procedure to run a simulation. It really is as easy as 1, 2, 3, 4, 5...](./img/penepma-input.png)
 
@@ -515,6 +516,37 @@ John Donovan suggests that the finished product should look like this:
 And my implementation...
 
 ![My simulation of a thin film of N-doped ZnO on Si](./img/JRM-penepma-thin-film-mc.png)
+
+# Running penepma 16 from the GUI
+
+## Compiling penepma16 from source.
+
+On Windows 10, I use the Fortran compiler that comes with RTools
+
+**Fix the number of channels**
+
+One needs to set the number of channels to to 4096
+
+**My compile script** is: [here](penepma16/compile.bat).
+
+**The Fortran file ** - modified for 4096 channels - is [here](penepma16/penepma.f).
+
+## Example penepma16 simulations with 4096 channels
+
+**Note**: These zip files include all required input and gnuplot files
+to plot the resulting spectra.
+
+**An example bulk Si simulation** - modified for 4096 channels - is [here](penepma16/Si_20kV.zip).
+
+**An example bulk Cu simulation** - modified for 4096 channels - is [here](penepma16/Cu_20kV.zip).
+
+**An example 100 nm Cu film on Si  simulation** - modified for 4096 channels - is [here](penepma16/100_nm_Cu_on_Si_20kV.zip).
+
+
+
+
+
+
 
 # Some hints on effective simulations
 
