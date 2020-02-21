@@ -599,5 +599,10 @@ workflow/workflow.md
 workflow/workflow.html
 workflow/figure/
 
+# write_usefully tips directory
+write_usefully/.DS_Store
+write_usefully/write_usefully.md
+write_usefully/write_usefully.html
+
 wxMaxima/*.html
 .Rproj.user
