@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-02-21"
+date: "Started: 2013-07-16, Last modified: 2020-02-25"
 output:
   html_document:
     keep_md: true
@@ -186,6 +186,8 @@ ln -s source destination
 [legacy equipment](./legacy/Legacy.html)
 
 [Logos Library System](./Logos/Logos.html)
+
+[Low Carb Diet (Denninger)](./Low-Carb-Diet/Low-Carb-Diet.html)
 
 [Lubuntu](./Lubuntu/Lubuntu.html)
 
