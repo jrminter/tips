@@ -17,13 +17,19 @@ output:
 
 I have collected these tips both from experience and from a very helpful user community.
 
+## A presentation by Robert Haase _et al._
+
 **_Nota Bene_**: The presentation by Robert Haase _et al._ that is 
 available on
 [github](https://git.mpi-cbg.de/rhaase/lecture_applied_bioimage_analysis.git)
 is **_awesome_**! The ppt slides are very well done!
 
+## A collection of tutorials
+
 There is a **very nice collection of tutorials** available on the
 [ImageJ Forum](https://forum.image.sc/t/bioimage-analysis-recommended-reading-and-viewing/28051).
+
+## A DIC plugin by Michael Schmid
 
 Michael Schmid generated a nice DIC plugin (2020-02-28)
 
