@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-02-25"
+date: "Started: 2013-07-16, Last modified: 2020-02-27"
 output:
   html_document:
     keep_md: true
@@ -17,16 +17,26 @@ format.
 
 **First**, some quickies:
 
-1. Closed captions in CBS All access
+1. CDC Corona Virus Recommendations
 
-> Go to www.cbs.com. Find a *full* episode of a series that you're
-> interested in and click on it. To turn the captions on, bring your
-> cursor into the middle of the video to see the menu show up. Look 
-> for and click on the plus sign for "More" on the lower right hand
-> side, click again on "CC captions" just once.
+   > The CDC recommends washing with soap and water for at least 20 seconds after
+   > using the bathroom, before eating and after blowing your nose or sneezing. It
+   > also advises not to touch your eyes, nose and mouth and to clean objects and
+   > surfaces you touch often.
+   >
+   > “These are all things you can do to prevent the spread of pretty much any
+   > respiratory virus,” Brewer said.
+
+2. Closed captions in CBS All access
+
+   > Go to www.cbs.com. Find a *full* episode of a series that you're
+   > interested in and click on it. To turn the captions on, bring your
+   > cursor into the middle of the video to see the menu show up. Look 
+   > for and click on the plus sign for "More" on the lower right hand
+   > side, click again on "CC captions" just once.
 
 
-2. The **Feynman** technique of learning:
+3. The **Feynman** technique of learning:
 
     - **Step 1**: Pick and study a topic
 
@@ -38,22 +48,22 @@ format.
     
     More [here](./Feynman_technique/Feynman_technique.html)...
     
-3. **install command line tools** on MacOS
+4. **install command line tools** on MacOS
 
     `xcode-select --install`
 
-4. **regex for youtube time stamps**. Useful in SublimeText3!
+5. **regex for youtube time stamps**. Useful in SublimeText3!
 
    `\d\d:\d\d`
 
-5. **Symbolic links**. I always get this backwards...
+6. **Symbolic links**. I always get this backwards...
 
     ```
        file     link
 ln -s source destination
     ```
 
-6. **Fun snippets**
+7. **Fun snippets**
 
     > Your closest colaborator is you, six months from now    
     > ... and you don't respond to email     
@@ -62,17 +72,17 @@ ln -s source destination
     > DRY (do not repeat yourself) vs WET (waste everyones time) coding styles    
     > - Peter Baker (UseR 2018)
 
-7. **Getting started with data science**
+8. **Getting started with data science**
 
 - A very helpful article from
 [Datacamp](https://www.datacamp.com/community/tutorials/setup-data-science-environment).
 
-8. **Clear the Chrome Cache**
+9. **Clear the Chrome Cache**
 
     - Press "CTRL" + "Shift" + "Delete" keys in Windows or Linux
     - Press "Command" + "Shift" + "Delete"" keys on MacOS.
 
-9. **Delete Specific Cookies in Chrome for Mac OS X**
+10. **Delete Specific Cookies in Chrome for Mac OS X**
 
     From [osxdaily.com](http://osxdaily.com/2016/07/02/delete-cookies-chrome-browser/): You can remove a specific website cookie from Chrome by doing the following:
 
@@ -88,7 +98,7 @@ ln -s source destination
 
     - Avoid cookie placement and cache generation in the first place by using the Chrome `Incognito Mode` private browsing feature.
 
-10. **Automatically download all files in a directory**
+11. **Automatically download all files in a directory**
 
    Let's also exclude all the `index.html` files... 
 
@@ -96,7 +106,7 @@ ln -s source destination
     wget -r --no-parent --reject "index.html*" http://my/url
 ```
 
-11. **How to block someone on Facebook**
+12. **How to block someone on Facebook**
 
     - Click at the top right of Facebook and choose `Settings`.
     - Click `Blocking` in the left side menu.
