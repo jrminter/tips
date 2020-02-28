@@ -1,7 +1,7 @@
 ---
 title: "Image-J Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-01-23"
+date: "Started: 2013-07-16, Last modified: 2020-02-28"
 output:
   html_document:
     keep_md: yes
@@ -24,6 +24,14 @@ is **_awesome_**! The ppt slides are very well done!
 
 There is a **very nice collection of tutorials** available on the
 [ImageJ Forum](https://forum.image.sc/t/bioimage-analysis-recommended-reading-and-viewing/28051).
+
+Michael Schmid generated a nice DIC plugin (2020-02-28)
+
+> As I might also need something like this in the future, I have quickly
+> programmed an ImageJ plugin for differential interference contrast
+> microscopy (DIC) images of sparse objects on a uniform background.
+> It is far from ideal, but should do the basic job to some degree, see
+> [here](https://imagejdocu.tudor.lu/plugin/filter/dic_processor/start).
 
 
 # Really helpful hints
