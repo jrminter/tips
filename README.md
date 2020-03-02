@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-02-27"
+date: "Started: 2013-07-16, Last modified: 2020-03-02"
 output:
   html_document:
     keep_md: true
@@ -100,7 +100,7 @@ ln -s source destination
 
 11. **Automatically download all files in a directory**
 
-   Let's also exclude all the `index.html` files... 
+    Let's also exclude all the `index.html` files... 
 
 ```
     wget -r --no-parent --reject "index.html*" http://my/url
@@ -112,7 +112,13 @@ ln -s source destination
     - Click `Blocking` in the left side menu.
     - In the `Block` users setting, enter the name of the person you want to block and click `Block`.
     - Select the specific person you want to block ans click `Block > Block [name]`
+    
 
+13. **HTML link syntax**
+
+    ```
+    <a href="https://...">Label</a>
+    ```
 
 
 **Topics**
