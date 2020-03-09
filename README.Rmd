@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-03-02"
+date: "Started: 2013-07-16, Last modified: 2020-03-09"
 output:
   html_document:
     keep_md: true
@@ -114,11 +114,25 @@ ln -s source destination
     - Select the specific person you want to block ans click `Block > Block [name]`
     
 
-13. **HTML link syntax**
+13. **HTML Syntax**
 
-    ```
-    <a href="https://...">Label</a>
-    ```
+    - **A link**
+    
+        ```
+        <a href="https://...">Label</a>
+        ```
+    
+    - **A paragraph**
+    
+        ```
+        <p>A paragraph</p>
+        ```
+    
+    - **A quote**
+    
+        ```
+        <q>A quote</q>
+        ```
 
 
 **Topics**
