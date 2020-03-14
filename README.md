@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-03-09"
+date: "Started: 2013-07-16, Last modified: 2020-03-14"
 output:
   html_document:
     keep_md: true
@@ -48,22 +48,27 @@ format.
     
     More [here](./Feynman_technique/Feynman_technique.html)...
     
-4. **install command line tools** on MacOS
+4. **Install command line tools** on MacOS
 
     `xcode-select --install`
 
-5. **regex for youtube time stamps**. Useful in SublimeText3!
+5. **Reset a Fitbit Ionic watch**
+
+    Press and hold the left and bottom right buttons at the same time until you
+    see the Fitbit logo. Let go of the buttons, and your tracker will restart.
+
+6. **Regex for youtube time stamps**. Useful in SublimeText3!
 
    `\d\d:\d\d`
 
-6. **Symbolic links**. I always get this backwards...
+7. **Symbolic links**. I always get this backwards...
 
     ```
        file     link
 ln -s source destination
     ```
 
-7. **Fun snippets**
+8. **Fun snippets**
 
     > Your closest colaborator is you, six months from now    
     > ... and you don't respond to email     
@@ -72,17 +77,17 @@ ln -s source destination
     > DRY (do not repeat yourself) vs WET (waste everyones time) coding styles    
     > - Peter Baker (UseR 2018)
 
-8. **Getting started with data science**
+9. **Getting started with data science**
 
 - A very helpful article from
 [Datacamp](https://www.datacamp.com/community/tutorials/setup-data-science-environment).
 
-9. **Clear the Chrome Cache**
+10. **Clear the Chrome Cache**
 
     - Press "CTRL" + "Shift" + "Delete" keys in Windows or Linux
     - Press "Command" + "Shift" + "Delete"" keys on MacOS.
 
-10. **Delete Specific Cookies in Chrome for Mac OS X**
+11. **Delete Specific Cookies in Chrome for Mac OS X**
 
     From [osxdaily.com](http://osxdaily.com/2016/07/02/delete-cookies-chrome-browser/): You can remove a specific website cookie from Chrome by doing the following:
 
@@ -98,7 +103,7 @@ ln -s source destination
 
     - Avoid cookie placement and cache generation in the first place by using the Chrome `Incognito Mode` private browsing feature.
 
-11. **Automatically download all files in a directory**
+12. **Automatically download all files in a directory**
 
     Let's also exclude all the `index.html` files... 
 
@@ -106,7 +111,7 @@ ln -s source destination
     wget -r --no-parent --reject "index.html*" http://my/url
 ```
 
-12. **How to block someone on Facebook**
+13. **How to block someone on Facebook**
 
     - Click at the top right of Facebook and choose `Settings`.
     - Click `Blocking` in the left side menu.
@@ -114,7 +119,7 @@ ln -s source destination
     - Select the specific person you want to block ans click `Block > Block [name]`
     
 
-13. **HTML Syntax**
+14. **HTML Syntax**
 
     - **A link**
     
