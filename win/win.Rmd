@@ -1,7 +1,7 @@
 ---
 title: "Windows Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-01-18"
+date: "Started: 2013-07-16, Last modified: 2020-03-15"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -123,6 +123,30 @@ HP's web site. I could try my previous solution that I purchased from Amazon...
 
 ![The "let computer" turn off was set. I **unchecked it**!](png/network-adapter-props.png)
 
+
+# Add a user in Win10
+
+1. From the Start menu, navigate to Settings.
+   
+   Note:
+   For help navigating, see Get around in Windows.
+
+2. Select Accounts.
+
+3. In the left menu, select Family & other users.
+
+4. Click `Add someone else to this PC`.
+
+5. Choose whether to create a Microsoft account or a local account.
+   To create a local account:
+   
+   a. At the bottom, click I don't have this person's sign-in information.
+   
+   b. Click `Add a user without a Microsoft account`.
+   
+   c. Enter a username and, if desired, a password.
+
+      See: https://www.youtube.com/watch?v=tqbx8cqzysw
 
 # Turn off Compatibility Telemetry in Windows 10
 
