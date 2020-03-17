@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-01-27"
+date: "Started: 2013-07-16, Last modified: 2020-03-17"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -39,6 +39,18 @@ From [here](https://www.imore.com/how-set-mac-app-default-when-opening-file).
 4. Click the dropdown and choose an **app**.
 
 5. Click `Change All`...
+
+# Reset a non-functioning trackpad
+
+*Q:* How do you fix an unresponsive trackpad on a MacBook Pro?
+
+*A:*  Reset the Mac SMC
+
+1. Shutdown your MacBook.
+2. Connect the MagSafe adapter.
+3. Hold down Shift+Control+Option and the Power button at the same time.
+4. Release the keys and look to see if the MagSafe adapter briefly changes color. If it does, the SMC reset has worked.
+5. Reboot your Mac and test the trackpad.
 
 # Install command line tools
 
