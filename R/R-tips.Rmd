@@ -22,6 +22,18 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 # Don't forget...
 
+## Fun with RTools 4.0 on Windows 10
+
+Date: 2020-04-12
+
+I have been struggling to get RTools 4.0 running on a Windows-10
+virtual machine trying to get ready for the impending release of R-4.0
+today. 
+
+I was helped by the setting `.libPaths() = “C:/Apps/R-4.0.0beta/library”.
+Note the default was listed as `\\\\Mac/Apps/R/4.0.0/library`
+
+
 ## Conflict between `here::here()` and `lubridate`
 
 There is an annoying conflict between `here::here()` and `lubridate`.
