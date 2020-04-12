@@ -1,7 +1,7 @@
 ---
-title: "Bar Plot with Error Bars in R"
+title: "Bar Plots in R"
 author: "J. R. Minter"
-date: "Started: 2013-10-21, Last modified: 2018-10-11"
+date: "Started: 2013-10-21, Last modified: 2020-04-12"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -10,7 +10,315 @@ output:
     toc_depth: 3
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment = NA)
+```
+
 [Back to Index](../README.html)
+
+# Bar Chart Examples by Bruno Rodrigues
+
+Bruno reported these examples on 2020-04-12
+
+> Bar charts are quite simple plots, but there are enough variations of them
+> that they deserve one single blog post. However, don’t expect many
+> explanations.
+
+> Let’s first start by loading some data, and the usually required packages:
+
+```{r loadRequiredPackages, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(lubridate)
+library(janitor)
+library(colorspace)
+library(ggplot2)
+```
+
+## Load a data set
+
+```{r loadData}
+data(gss_cat)
+```
+
+> Very often, what one wants to show are counts:
+
+```{r getCounts}
+gss_cat %>%
+  count(marital, race)
+```
+
+## Make an `other` category
+
+> Let’s lump marital statuses that appear less than 10% of the time into an
+> “Other” category:
+
+```{r lumpCounts}
+(
+  counts_marital_race <- gss_cat %>%
+    mutate(marital = fct_lump(marital, prop = 0.1)) %>%
+    count(marital, race)
+)
+```
+
+## Make the simplest bar plot
+
+**_Nota Bene_**: In these examples I have replaced `brotools::theme_blog()`
+with `theme_minimal()`.
+
+```{r simplestBarPlot}
+
+simple_plt <- ggplot(counts_marital_race) +
+              geom_col(aes(x = marital, y = n, fill = race)) +
+              scale_fill_discrete_qualitative(palette = "Dark 3") +
+              theme_minimal() +
+              NULL
+
+print(simple_plt)
+```
+
+## Now with position = "dodge":
+
+```{r simpleBarPlot2}
+smp_plt_2 <- ggplot(counts_marital_race) +
+             geom_col(aes(x = marital, y = n, fill = race),
+                      position = "dodge") +
+             scale_fill_discrete_qualitative(palette = "Dark 3") +
+             theme_minimal() +
+             NULL
+
+print(smp_plt_2)
+```
+
+## Moving the legend around
+
+We will use `theme(legend.position = ...)`:
+
+```{r themeLegendPosition}
+smp_plt_3 <- ggplot(counts_marital_race) +
+             geom_col(aes(x = marital, y = n, fill = race),
+                      position = "dodge") +
+             scale_fill_discrete_qualitative(palette = "Dark 3") +
+             theme_minimal() +
+             theme(legend.position = "left") +
+             NULL
+
+print(smp_plt_3)
+
+```
+
+## Counting by year
+
+We can count by year as well:
+
+```{r countByYear}
+(
+  counts_marital_race_year <- gss_cat %>%
+    mutate(marital = fct_lump(marital, prop = 0.1)) %>%
+    count(year, marital, race) %>%
+    ungroup()
+)
+
+```
+
+## Track a variable change with time
+
+> When you want to show how a variable evolves through time,
+> an **area chart** is handy:
+
+```{r AreaChart}
+
+smpl_plt_4 <- counts_marital_race_year %>%
+              group_by(year, marital) %>%
+              summarise(n = sum(n)) %>%
+              ggplot() +
+              geom_area(aes(x = year, y = n, fill = marital)) +
+              scale_fill_discrete_qualitative(palette = "Dark 3") +
+              theme_minimal() +
+              NULL
+
+print(smpl_plt_4)
+
+```
+
+## Now use `facets`
+
+```{r useFacets}
+smpl_plt_5 <- counts_marital_race_year %>%
+              ggplot() +
+              geom_area(aes(x = year, y = n, fill = marital)) +
+              facet_wrap(facets = vars(race), ncol = 1) +
+              scale_fill_discrete_qualitative(palette = "Dark 3") +
+              theme_minimal() +
+              NULL
+
+print(smpl_plt_5)
+
+```
+
+## `Facets` with individual `y-axis` scales
+
+```{r indAxisYscales}
+smpl_plt_6 <- counts_marital_race_year %>%
+              ggplot() +
+              geom_area(aes(x = year, y = n, fill = marital)) +
+              facet_wrap(facets = vars(race), ncol = 1, scales = "free_y") +
+              scale_fill_discrete_qualitative(palette = "Dark 3") +
+              theme_minimal() +
+              NULL
+
+print(smpl_plt_6)
+
+```
+
+## An area chart but with **relative frequencies**
+
+```{r areaChartRelFreq}
+
+smpl_plt_7 <- counts_marital_race_year %>% 
+              group_by(year, marital) %>% 
+              summarise(n = sum(n)) %>%  
+              mutate(freq = n/sum(n)) %>% 
+              ggplot() +
+              geom_area(aes(x = year, y = freq, fill = marital)) +
+              scale_fill_discrete_qualitative(palette = "Dark 3") +
+              theme_minimal() +
+              NULL
+
+print(smpl_plt_7)
+```
+
+## With `facet_wrap()`
+
+```{r withFacetWrap}
+smpl_plt_8 <- counts_marital_race_year %>% 
+              group_by(race, year, marital) %>% 
+              summarise(n = sum(n)) %>%  
+              mutate(freq = n/sum(n)) %>% 
+              ggplot() +
+              geom_area(aes(x = year, y = freq, fill = marital)) +
+              facet_wrap(facets = vars(race), ncol = 1, scales = "free_y") +
+              scale_fill_discrete_qualitative(palette = "Dark 3") +
+              theme_minimal() +
+              NULL
+
+print(smpl_plt_8)
+
+```
+
+## Fixing dates...
+
+> Want to replace 2000 with “2000-01-01”? First need to create vector of
+> prettier dates and positions?
+
+### Create better dates
+
+```{r createBetterDates}
+pretty_dates <- counts_marital_race_year %>%
+                mutate(pretty_dates = paste0(year, "-01-01")) %>%
+                pull(pretty_dates) %>%
+                unique()
+
+position_dates <- counts_marital_race_year %>%
+                  pull(year) %>%
+                  unique() %>%
+                  sort()
+```
+
+`scale_x_continuous()` can now use this. Using `guide = guide_axis(n.dodge = 2)`
+to avoid overlapping labels:
+
+```{r noOverLapLabels}
+smpl_plt_9 <- counts_marital_race_year %>% 
+              group_by(race, year, marital) %>% 
+              summarise(n = sum(n)) %>%  
+              mutate(freq = n/sum(n)) %>%
+              ggplot() +
+              geom_area(aes(x = year, y = freq, fill = marital)) +
+              facet_wrap(facets = vars(race), ncol = 1, scales = "free_y") +
+              scale_x_continuous("Year of survey", labels = pretty_dates,
+                                  breaks = position_dates,
+                                  guide = guide_axis(n.dodge = 2)) +
+              scale_fill_discrete_qualitative(palette = "Dark 3") +
+              theme_minimal() +
+              NULL
+print(smpl_plt_9)
+```
+
+### Getting labels right is a **major pain** in this case.
+
+The author needed to do some rearanging (see the original...)
+
+```{r rearrangedLabels}
+
+smpl_plt_10 <- counts_marital_race_year %>% 
+               group_by(race, year, marital) %>% 
+               summarise(n = sum(n)) %>%  
+               mutate(freq = n/sum(n)) %>%
+               group_by(year, race) %>%  
+               mutate(marital = fct_reorder(marital, freq)) %>% 
+               arrange(desc(marital)) %>% 
+               mutate(position = cumsum(freq)) %>%
+               mutate(prev_pos = lag(position, default = 0)) %>%
+               mutate(position = (position + prev_pos)/2) %>%  
+               ggplot() +
+               geom_area(aes(x = year, y = freq, fill = marital)) +
+               facet_wrap(facets = vars(race), ncol = 1, scales = "free") +
+               scale_x_continuous("Year of survey", labels = pretty_dates,
+                                   breaks = position_dates,
+                                   guide = guide_axis(n.dodge = 2)) +
+               geom_label(aes(x = year, y = position,
+                              label = round(100 * freq))) +
+               scale_fill_discrete_qualitative(palette = "Dark 3") +
+               theme_minimal() +
+               NULL
+
+print(smpl_plt_10)
+```
+
+I think that is getting pretty complicated...
+
+## Consider the `tv_hours` varible
+
+Now let’s focus on the variable tvhours. We want to show the total watched
+hours, but also the total across all the categories of race and marital in a
+faceted bar plot:
+
+```{r tvHours}
+(
+  total_tv <- gss_cat %>%
+    group_by(year, race, marital) %>%
+    summarise(total_tv = sum(tvhours, na.rm = TRUE))
+)
+```
+
+This tibble has the total watched hours by year, race and marital status
+variables. How to add the total by year and race categories? For this, by are
+first going to use the `group_split()`:
+
+
+**NOTE** I could not get this part to work on R-3.6.3 on mac. I'm tired...
+
+```
+{r tvGroupSplit, warning=FALSE}
+
+total_tv_split <- total_tv %>%
+                  select(race, year, marital, total_tv) %>%
+                  mutate(year = as.character(year)) # %>%  
+                  # group_split(year, race)
+
+print(total_tv_split)
+```
+
+
+I have to re-order the columns with select(), because when using
+janitor::adorn_totals(), which I will be using below to add totals, the
+first column must be a character column (it serves as an identifier column).
+
+This creates a list with 3 races times 6 years, so 24 elements. Each element of 
+the list is a tibble with each unique combination of year and race:
+
+
+# Simple Bar Plots in R
 
 2013-10-20 from
 [here](http://heuristically.wordpress.com/2013/10/20/bar-plot-with-error-bars-r/)
@@ -43,7 +351,7 @@ data.summary$sem <- data.summary$sd/sqrt(data.summary$n)
 data.summary$me <- qt(1-0.05/2, df=data.summary$n)*data.summary$sem
  
 # Load ggplot2 library
-require(ggplot2)
+
  
 # Use ggplot to draw the bar plot using the precalculated 95% CI.
 # png('barplot-ci.png') # Write to PNG
