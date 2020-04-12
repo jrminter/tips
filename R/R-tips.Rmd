@@ -34,6 +34,10 @@ I was helped by the setting `.libPaths() = “C:/Apps/R-4.0.0beta/library”.
 Note the default was listed as `\\\\Mac/Apps/R/4.0.0/library`
 
 
+See the [stackoverflow](https://stackoverflow.com/questions/37922924/rstudio-cant-find-devtools)
+discussion...
+
+
 ## Conflict between `here::here()` and `lubridate`
 
 There is an annoying conflict between `here::here()` and `lubridate`.
