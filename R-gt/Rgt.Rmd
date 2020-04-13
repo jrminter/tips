@@ -14,12 +14,10 @@ output:
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>")
-
-library(gt)
-library(dplyr)
 ```
 
-[Back main](../README.html)
+[Back to main](../README.html)
+
 
 # Introduction
 
@@ -30,6 +28,14 @@ The **gt** package is all about making it simple to produce nice-looking display
 We can think of display tables as output only, where we'd not want to use them as input ever again. Other features include annotations, table element styling, and text transformations that serve to communicate the subject matter more clearly.
 
 ## A Walkthrough of the **gt** Basics with a Simple Table
+
+Load the packages we will need
+
+```{r loadPackages, message=FALSE}
+library(gt)
+library(dplyr)
+```
+
 
 Let's use a less common dataset that is available in the R **datasets** package: `islands`. It's actually not a data frame but a named vector. That's okay though, we can use use **dplyr** and prepare a tibble from it:
 
@@ -1220,4 +1226,4 @@ tab
 That is it. The final table looks pretty good and conveys the additional information we planned for. That table can be used in a lot of different places like R Markdown, Shiny, email messages... wherever HTML is accepted.
 
 
-[Back main](../README.html)
+[Back to main](../README.html)
