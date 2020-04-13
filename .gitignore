@@ -412,7 +412,7 @@ R-GeoSpatial/*.html
 R-GeoSpatial/*.htm
 R-GeoSpatial/Legend*.png
 
-R-gt/R-gt.html
+R-gt/*.html
 
 R-knitrBootstrap/*.html
 
