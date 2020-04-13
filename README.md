@@ -207,6 +207,8 @@ ln -s source destination
 
 [homebrew](./homebrew/homebrew.html)
 
+[html](./html/html.html)
+
 [hyperspy](./hyperspy/hyperspy.html)
 
 [Image-J](./ImageJ/ImageJ.html)
