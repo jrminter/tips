@@ -1,0 +1,1223 @@
+---
+title: "Rgt - Creating Great Tables"
+author: "J. R. Minter merged R-gt vignetted"
+date: "Started: 2020-04-13, Last modified: 2020-04-13"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+
+```{r options, message=FALSE, warning=FALSE, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>")
+
+library(gt)
+library(dplyr)
+```
+
+[Back main](../README.html)
+
+# Introduction
+
+The **gt** package is all about making it simple to produce nice-looking display tables. Display tables? Well yes, we are trying to distinguish between data tables (e.g., tibbles, `data.frame`s, etc.) and those tables you'd find in a web page, a journal article, or in a magazine. Such tables can likewise be called presentation tables, summary tables, or just tables really. Here are some examples, ripped straight from the web:
+
+<img src="images/tables_from_the_web.png" width=100%>
+
+We can think of display tables as output only, where we'd not want to use them as input ever again. Other features include annotations, table element styling, and text transformations that serve to communicate the subject matter more clearly.
+
+## A Walkthrough of the **gt** Basics with a Simple Table
+
+Let's use a less common dataset that is available in the R **datasets** package: `islands`. It's actually not a data frame but a named vector. That's okay though, we can use use **dplyr** and prepare a tibble from it:
+
+```{r}
+# Take the `islands` dataset and use some
+# dplyr functionality to obtain the ten
+# biggest islands in the world
+islands_tbl <- 
+  dplyr::tibble(
+    name = names(islands),
+    size = islands
+  ) %>%
+  dplyr::arrange(desc(size)) %>%
+  dplyr::slice(1:10)
+
+# Display the table
+islands_tbl
+```
+
+Given that `islands_tbl` is a tibble, we now have a suitable input for **gt**. 
+
+The main entry point into the **gt** API is the `gt()` function. If we pass `islands_tbl` to the *function* `gt()`, we'll get a **gt Table** as output. As an aside, we could have easily used a data frame instead as valid **Table Data** for **gt**.
+
+```{r simple_gt_table}
+# Create a display table showing ten of
+# the largest islands in the world
+gt_tbl <- gt(data = islands_tbl)
+
+# Show the gt Table
+gt_tbl
+```
+
+That doesn't look too bad. Sure, it's basic but we really didn't really ask for much. We did receive a proper table with column labels and the data. Also, that default striping is a nice touch. Oftentimes however, you'll want a bit more: a **Table header**, a **Stub**, and sometimes *footnotes* and *source notes* in the **Table Footer** part.
+
+## Adding Parts to this Simple Table
+
+The **gt** package makes it relatively easy to add parts so that the resulting **gt Table** better conveys the information you want to present. These table parts work well together and there the possible variations in arrangement can handle most tabular presentation needs. The previous **gt Table** demonstrated had only two parts, the **Column Labels** and the **Table Body**. The next few examples will show all of the other table parts that are available.
+
+This is the way the main parts of a table (and their subparts) fit together:
+
+<p align="center"><img src="images/gt_parts_of_a_table.svg" width=100%></p>
+
+The parts (roughly from top to bottom) are:
+
+- the **Table Header** (optional; with a **title** and possibly a **subtitle**)
+- the **Stub** and the **Stub Head** (optional; contains *row labels*, optionally within *row groups* having *row group labels* and possibly *summary labels* when a summary is present)
+- the **Column Labels** (contains *column labels*, optionally under *spanner column labels*)
+- the **Table Body** (contains *columns* and *rows* of *cells*)
+- the **Table Footer** (optional; possibly with **footnotes** and **source notes**)
+
+The way that we add parts like the **Table Header** and *footnotes* in the **Table Footer** is to use the `tab_*()` family of functions. A **Table Header** is easy to add so let's see how the previous table looks with a **title** and a **subtitle**. We can add this part using the `tab_header()` function:
+
+```{r table_with_heading}
+# Make a display table with the `islands_tbl`
+# table; put a heading just above the column labels
+gt_tbl <- 
+  gt_tbl %>%
+  tab_header(
+    title = "Large Landmasses of the World",
+    subtitle = "The top ten largest are presented"
+  )
+
+# Show the gt Table
+gt_tbl
+```
+
+The **Header** table part provides an opportunity to describe the data that's presented. The `subtitle`, which functions as a subtitle, is an optional part of the **Header**. We may also style the `title` and `subtitle` using Markdown! We do this by wrapping the values passed to `title` or `subtitle` with the `md()` function. Here is an example with the table data truncated for brevity:
+
+```{r heading_w_markdown}
+# Use markdown for the heading's `title` and `subtitle` to
+# add bold and italicized characters
+gt(islands_tbl[1:2,]) %>%
+  tab_header(
+    title = md("**Large Landmasses of the World**"),
+    subtitle = md("The *top two* largest are presented")
+  )
+```
+
+A **source note** can be added to the table's **footer** through use of the `tab_source_note()` function. It works in the same way as `tab_header()` (it also allows for Markdown inputs) except it can be called multiple times---each invocation results in the addition of a source note.
+
+```{r}
+# Display the `islands_tbl` data with a heading and
+# two source notes
+gt_tbl <- 
+  gt_tbl %>%
+  tab_source_note(
+    source_note = "Source: The World Almanac and Book of Facts, 1975, page 406."
+  ) %>%
+  tab_source_note(
+    source_note = md("Reference: McNeil, D. R. (1977) *Interactive Data Analysis*. Wiley.")
+  )
+
+# Show the gt Table
+gt_tbl
+```
+
+Footnotes live inside the **Footer** part and their footnote marks are attached to cell data. Footnotes are added with the `tab_footnote()` function. The helper function `cells_body()` can be used with the `location` argument to specify which data cells should be the target of the footnote. The `cells_body()` helper has the two arguments `columns` and `rows`. For each of these, we can supply (1) a vector of colnames or rownames, (2) a vector of column/row indices, (3) bare column names wrapped in `vars()` or row labels within `c()`, or (4) a select helper function (`starts_with()`, `ends_with()`, `contains()`, `matches()`, `one_of()`, and `everything()`). For `rows` specifically, we can use a conditional statement with column names as variables (e.g., `size > 15000`).
+
+Here is a simple example on how a footnotes can be added to a table cell. Let's add a footnote that references the `North America` and `South America` cells in the `name` column:
+
+```{r table_footnote_simple}
+# Add footnotes (the same text) to two different
+# cell; data cells are targeted with `data_cells()`
+gt_tbl <- 
+  gt_tbl %>%
+  tab_footnote(
+    footnote = "The Americas.",
+    locations = cells_body(
+      columns = vars(name),
+      rows = 3:4)
+  )
+
+# Show the gt Table
+gt_tbl
+```
+
+Here is a slightly more complex example of adding footnotes that use expressions in `rows` to help target cells in a column by the underlying data in `islands_tbl`. First, a set of **dplyr** statements obtains the name of the 'island' by largest landmass. This is assigned to the `largest` object and is used in the first `tab_footnote()` call that targets the cell in the `size` column that is next to a `name` value that is stored in `largest` ('Asia'). The second `tab_footnote()` is similar except we are supplying a conditional statement that gets the lowest population.
+
+```{r}
+# Determine the row that contains the
+# largest landmass ('Asia')
+largest <- 
+  islands_tbl %>% 
+  arrange(desc(size)) %>%
+  slice(1) %>%
+  pull(name)
+
+# Create two additional footnotes, using the
+# `columns` and `where` arguments of `data_cells()`
+gt_tbl <- 
+  gt_tbl %>%
+  tab_footnote(
+    footnote = md("The **largest** by area."),
+    locations = cells_body(
+      columns = vars(size),
+      rows = name == largest)
+  ) %>%
+  tab_footnote(
+    footnote = "The lowest by population.",
+    locations = cells_body(
+      columns = vars(size),
+      rows = size == min(size))
+  )
+
+# Show the gt Table
+gt_tbl
+```
+
+We were able to supply the reference locations in the table by using the `cells_body()` helper function and supplying the necessary targeting through the `columns` and `rows` arguments. Other `cells_*()` functions have similar interfaces and they allow us to target cells in different parts of the table.
+
+## The Stub
+
+The **Stub** is the area to the left in a table that contains *row labels*, and may contain *row group labels*, and *summary labels*. Those subparts can be grouped in a sequence of *row groups*. The **Stub Head** provides a location for a label that describes the **Stub**. The **Stub** is optional since there are cases where a **Stub** wouldn't be useful (e.g., the display tables presented above were just fine without a **Stub**).
+
+An easy way to generate a **Stub** part is by specifying a stub column in the `gt()` function with the `rowname_col` argument. Alternatively, we can have an input dataset with a column named `rowname`---this magic column will signal to **gt** that that column should be used as the stub, making *row labels*. Let's add a stub with our `islands_tbl` dataset by modifying the call to `gt()`:
+
+```{r}
+# Create a gt table showing ten of the
+# largest islands in the world; this
+# time with a stub
+gt_tbl <- 
+  islands_tbl %>%
+  gt(rowname_col = "name")
+
+# Show the gt Table
+gt_tbl
+```
+
+Notice that the landmass names are off the the left in an unstriped area? That's the **stub**. We can apply what's known as a **stubhead label**. This label can be added with the `tab_stubhead()` function:
+
+```{r}
+# Generate a simple table with a stub
+# and add a stubhead label
+gt_tbl <- 
+  gt_tbl %>%
+  tab_stubhead(label = "landmass")
+
+# Show the gt Table
+gt_tbl
+```
+
+A very important thing to note here is that the table now has one column. Before, when there was no **stub**, two columns were present (with **column labels** `name` and `size`) but now column number `1` (the only column) is `size`.
+
+To apply our table parts as before (up to and including the footnotes) we use the following statements:
+
+```{r}
+# Display the `islands_tbl` data with a stub,
+# a heading, source notes, and footnotes
+gt_tbl <- 
+  gt_tbl %>%
+  tab_header(
+    title = "Large Landmasses of the World",
+    subtitle = "The top ten largest are presented"
+  ) %>%
+  tab_source_note(
+    source_note = "Source: The World Almanac and Book of Facts, 1975, page 406."
+  ) %>%
+  tab_source_note(
+    source_note = md("Reference: McNeil, D. R. (1977) *Interactive Data Analysis*. Wiley.")
+  ) %>%
+  tab_footnote(
+    footnote = md("The **largest** by area."),
+    locations = cells_body(
+      columns = vars(size),
+      rows = largest)
+  ) %>%
+  tab_footnote(
+    footnote = "The lowest by population.",
+    locations = cells_body(
+      columns = vars(size),
+      rows = contains("arc"))
+  )
+
+# Show the gt Table
+gt_tbl
+```
+
+Let's incorporate row groups into the display table. This divides rows into groups, creating *row groups*, and results in a display of a *row group labels* right above the each group. This can be easily done with a table containing row labels. We can make a new *row group* with each call of the `tab_row_group()` function. The inputs are group names in the `group` argument, and row references in the `rows` argument. We can use any of the strategies to reference rows as we did we footnotes (e.g., vectors of names/indices, select helpers, etc.).
+
+Here we will create three row groups (with row group labels `continent`, `country`, and `subregion`) to have a grouping of rows.
+
+```{r}
+# Create three row groups with the
+# `tab_row_group()` function
+gt_tbl <- 
+  gt_tbl %>% 
+  tab_row_group(
+    group = "continent",
+    rows = 1:6
+  ) %>%
+  tab_row_group(
+    group = "country",
+    rows = c("Australia", "Greenland")
+  ) %>%
+  tab_row_group(
+    group = "subregion",
+    rows = c("New Guinea", "Borneo")
+  )
+
+# Show the gt Table
+gt_tbl
+```
+
+Three *row groups* have been made since there are three unique categories under `groupname`. Across the top of each *row group* is the *row group label* contained in a separate row (these cut across the field and they contain nothing but the *row group label*). A rearrangement of rows is carried out to ensure each of the rows is collected within the appropriate *row groups*.
+
+Having groups of rows in *row groups* is a great way to present information. Including data summaries particular to each group is a natural extension of this idea. This process of adding summary rows with *summary labels* is covered in a separate article (*Creating Summary Lines*).
+
+Another way to make row groups is to have the magic column `groupname` present in the input data table. For our above example with `islands_tbl`, a `groupname` column with the categories `continent`, `country`, and `subregion` in the appropriate rows would produce row groups automatically (i.e., there would be no need to use the `tab_row_group()` statements). This strategy of supplying group names in a `groupname` column name can sometimes be advantageous since we can rely on functions such as those available in **dplyr** to generate the categories (e.g., using `case_when()` or `if_else()`).
+
+## The Column Labels
+
+The table's **Column Labels** part contains, at a minimum, columns and their *column labels*. The last example had a single column: `size`. Just as in the **Stub**, we can create groupings called *spanner columns* that encompass one or more columns. 
+
+To better demonstrate how **Column Labels** work and are displayed, let's use an input data table with more columns. In this case, that input table will be `airquality`. It has the following columns:
+
+- `Ozone`: mean ground-level ozone in parts per billion by volume (ppbV), measured between 13:00 and 15:00
+- `Solar.R`: solar radiation in Langley units (cal/m<sup>2</sup>), measured between 08:00 and noon
+- `Wind`: mean wind speed in miles per hour (mph)
+- `Temp`: maximum daily air temperature in degrees Fahrenheit (&deg;F)
+- `Month`, `Day`: the numeric month and day of month for the record
+
+We know that all measurements took place in 1973, so a `year` column will be added to the dataset before it is passed to `gt()`. 
+
+Let's organize the time information under a `Time` *spanner column label*, and put the other columns under a `Measurement` *spanner column label*. We can do this with the `tab_spanner()` function.
+
+```{r}
+# Modify the `airquality` dataset by adding the year
+# of the measurements (1973) and limiting to 10 rows
+airquality_m <- 
+  airquality %>%
+  mutate(Year = 1973L) %>%
+  slice(1:10)
+  
+# Create a display table using the `airquality`
+# dataset; arrange columns into groups
+gt_tbl <- 
+  gt(data = airquality_m) %>%
+  tab_header(
+    title = "New York Air Quality Measurements",
+    subtitle = "Daily measurements in New York City (May 1-10, 1973)"
+  ) %>%
+  tab_spanner(
+    label = "Time",
+    columns = vars(Year, Month, Day)
+  ) %>%
+  tab_spanner(
+    label = "Measurement",
+    columns = vars(Ozone, Solar.R, Wind, Temp)
+  )
+
+# Show the gt Table
+gt_tbl
+```
+
+We can do two more things to make this presentable:
+
+- move the `Time` columns to the beginning of the series (using `cols_move_to_start()`)
+- customize the column labels so that they are more descriptive (using `cols_label()`)
+
+Let's do both of these things in the next example.
+
+```{r}
+# Move the time-based columns to the start of
+# the column series; modify the column labels of
+# the measurement-based columns
+gt_tbl <- 
+  gt_tbl %>%
+  cols_move_to_start(
+    columns = vars(Year, Month, Day)
+  ) %>%
+  cols_label(
+    Ozone = html("Ozone,<br>ppbV"),
+    Solar.R = html("Solar R.,<br>cal/m<sup>2</sup>"),
+    Wind = html("Wind,<br>mph"),
+    Temp = html("Temp,<br>&deg;F")
+  )
+
+# Show the gt Table
+gt_tbl
+```
+
+Note that even though columns were moved using `cols_move_to_start()`, the *spanner column labels* still spanned above the correct *column labels*. There are a number of functions that **gt** provides to move columns, including `cols_move()`, `cols_move_to_end()`; there's even a function to hide columns: `cols_hide()`.
+
+Multiple columns can be renamed in a single use of `cols_label()`. Further to this, the helper functions `md()` and `html()` can be used to create column labels with additional styling. In the above example, we provided column labels as HTML so that we can insert linebreaks with `<br>`, insert a superscripted `2` (with `<sup>2</sup>`), and insert a degree symbol as an HTML entity (`&deg;`).
+
+
+## Creating Summary Lines
+
+We can use the **gt** `summary_rows()` function to insert summary rows into a table. There are two main types of summary rows: (1) groupwise summaries, and (2) the grand summary. The groupwise summaries operate on one or more row groups, which can themselves be generated in a variety of ways:
+
+- with the `gt()` function's `groupname_col` option
+- using the `tab_row_group()` function on a gt object
+- by passing in a grouped `tbl_df` object to `gt()` (using `dplyr::group_by()`)
+
+We generate the summary data through specification of aggregation functions. You choose how to format the values in the resulting summary cells by use of a formatter function (e.g,
+`fmt_number()`) and any relevant options. These summary rows are automatically inserted within the relevant row groups (for groupwise summaries) or at the bottom of the table (as a grand summary), where each summary row is the result of a different aggregation function. 
+
+# Preparing the Input Data Table
+
+Let's use the `exibble` dataset (included in the **gt** package) to demonstrate how summary rows can be added. That table contains categorical columns named `row` and `group`, along several columns with varying data types. Here is a preview of the `exibble` dataset using solely the `gt()` function with no other options: 
+
+```{r exibble_preview_gt}
+exibble %>% gt()
+```
+
+We'll create a table stub with both row labels (using the `row` column) and row groups (using the `group` column). The end result will be a table organized with labeled rows that are grouped together (the row group labels identify each of the row groups). To make the examples a bit easier to follow, some of the columns in exibble will first be dropped through a `dplyr::select()` statement.
+
+```{r exibble_a}
+# Create a gt table using the `exibble` dataset
+exibble_a <-
+  exibble %>%
+  dplyr::select(-c(fctr, date, time, datetime)) %>%
+  gt(rowname_col = "row", groupname_col = "group") %>%
+  fmt_missing(columns = everything())
+
+exibble_a
+```
+
+There are two groups in this data table: `grp_a` and `grp_b`. This gives us flexibility to create both a grand summary and groupwise summary rows.
+
+## Generating Groupwise Summary Rows
+
+Groupwise summary rows can be generated by using the `summary_rows()` function and, importantly, through specifying the groups that will receive summary rows. We can provide a vector group names, as in `c("grp_a", "grp_b")`, or, use `TRUE` to signify that all groups should receive summary rows. Aside from the selection of groups, there is control over which columns are to used for the summary. Since each call to `summary_rows()` only performs one set of aggregation functions, we may want specific aggregations for different subsets of columns.
+
+To make any sort of summary, we need to use functions that will perform the aggregation. We can provide base functions such as `mean()`, `sum()`, `min()`, `max()`, and more, within a `list()`. Each function provided will result in a summary row for each `group`.
+
+Because each function will yield a row, we need to be able to label that row. So, each summary row will receive a summary row label. We can provide our preferred names by naming the functions within the list (e.g, `list(average = "mean", total = "sum", SD = "sd")`). 
+
+```{r exibble_b}
+# Create groupwise summary rows for both
+# groups (using `groups = TRUE`); use the
+# `mean()`, `sum()`, and `sd()` functions
+# (only for the `num` column)
+exibble_b <- 
+  exibble_a %>%
+  summary_rows(
+    groups = TRUE,
+    columns = vars(num),
+    fns = list(
+      average = "mean",
+      total = "sum",
+      SD = "sd")
+  )
+
+exibble_b
+```
+
+We can specify the aggregation functions by use of function names in quotes (e.g., `"sum"`), as bare functions (e.g., `sum`), or as one-sided R formulas using a leading `~`. In the formula representation, a `.` serves as the data to be summarized, so we can use `sum(., na.rm = TRUE)`. The use of named arguments is recommended as those names will serve as summary row labels (the labels can derived from the function names but only when not providing bare function names).
+
+Now that the `summary_rows()` function has been somewhat explained, let’s look at how we can create groupwise summary rows for the `exibble_a` table. We'll create summaries for both available groups (`groups = TRUE`) and use the `mean()`, `sum()`, and `sd()` functions with the _function-name-in-quotes_ method (and this will only pertain to the `num` column).
+
+In the previous example we have an `NA` value in the `num/row_6` cell, and so we get `NA` outputs from `mean()`, `sum()`, and `sd()` in `grp_b`'s summary rows (which are replaced with em dashes, itself controllable through the `missing_text` option). To avoid this, let's rewrite the above using the _names-and-formulae_ method.
+
+```{r exibble_c}
+# Create groupwise summary rows for both
+# groups (using `groups = TRUE`); we will
+# use names and formulas this time in `fns`
+exibble_c <- 
+  exibble_a %>%
+  summary_rows(
+    groups = TRUE,
+    columns = vars(num),
+    fns = list(
+      avg = ~mean(., na.rm = TRUE),
+      total = ~sum(., na.rm = TRUE),
+      s.d. = ~sd(., na.rm = TRUE)
+    )
+  )
+
+exibble_c
+```
+
+Here we see that summary rows were created for both groups. However, the output of the summary row data is quite different than that of the cell data. The `formatter` argument (and extra `...` arguments) allows for use of any of the `fmt_*()` functions that we'd normally use to format cell data. In this example (another rewrite of the above), the cell data in the `num` column is formatted in scientific notation and the resulting summary cell data is also formatted in the same way (including the options of `decimals = 3`).
+
+```{r exibble_d}
+# Define a named list of aggregation
+# functions and summary row labels
+fns_labels <- 
+  list(
+    avg = ~mean(., na.rm = TRUE),
+    total = ~sum(., na.rm = TRUE),
+    s.d. = ~sd(., na.rm = TRUE)
+  )
+
+# Create groupwise summary rows as
+# before, supply `fns_labels` to `fns`,
+# and format the cell summary data
+exibble_d <- 
+  exibble_a %>%
+  fmt_scientific(
+    columns = vars(num),
+    decimals = 3
+  ) %>%
+  summary_rows(
+    groups = TRUE,
+    columns = vars(num),
+    fns = fns_labels,
+    formatter = fmt_scientific,
+    decimals = 3
+  )
+
+exibble_d
+```
+
+The input to `fns` is very permissive in regard to how the functions are defined. It is entirely valid to provide functions in the various forms shown earlier such that `list("sum", avg = ~mean(., na.rm = TRUE), SD = "sd")` will be correctly interpreted. It is recommended to use formula notation.
+
+The default for `formatter` is set to `fmt_number` which is a sensible default for many scenarios. The setting of argument values for a particular formatter can be done in the `...` area of the function call (as was done above for the `decimals` argument).
+
+## Using Multiple Calls of `summary_rows()` 
+
+We can re-use summary row labels and fill the otherwise empty summary cells with similar aggregations but perhaps with different formatting options. Here's an example where the `currency` column contains aggregate values that share the same summary rows as for the `num` column, adds two more rows, and uses currency formatting:
+
+```{r exibble_e}
+# Create groupwise summary rows as
+# before, supply `fns_labels` to `fns`,
+# and format the cell summary data
+exibble_e <- 
+  exibble_a %>%
+  fmt_scientific(
+    columns = vars(num),
+    decimals = 3
+  ) %>%
+  fmt_currency(
+    columns = vars(currency),
+    currency = "EUR"
+    ) %>%
+  summary_rows(
+    groups = TRUE,
+    columns = vars(num),
+    fns = fns_labels,
+    formatter = fmt_scientific,
+    decimals = 3
+  ) %>%
+  summary_rows(
+    groups = "grp_a",
+    columns = vars(currency),
+    fns = c(
+      fns_labels,
+      min = ~min(.),
+      max = ~max(.)),
+    formatter = fmt_currency,
+    currency = "EUR"
+  )
+
+exibble_e
+```
+
+A thing to again note in the above example is that even though two independent calls of `summary_rows()` were made, summary data within common summary row names were 'squashed' together, thus avoiding the fragmentation of summary rows. Put another way, we don't create additional summary rows across separate calls if we are referencing the same summary row labels. If the summary row labels provided in `fns` were to be different across columns however, additional summary rows would be produced even if the types of data aggregations were to be functionally equivalent.
+
+We can also store these argument values as local variables and pass them in both separate `fmt_*number*()` calls also to arguments within `summary_rows()` calls. This is useful for standardizing formatting parameters across different table cell types. Here's an example of that, which additional passes the `fr_BE` locale to all functions that take a `locale` value.
+
+```{r exibble_f}
+# Provide common formatting parameters to a list
+# object named `formats`; the number of decimal
+# places will be `2` and the locale is "fr_BE"
+formats <- 
+  list(
+    decimals = 3,
+    locale = "fr_BE",
+    currency = "EUR"
+  )
+
+# Format the `num` and `currency` columns
+# (using the values stored in `formats`);
+# when generating summary rows we can also
+# supply formatter options from this list
+exibble_f <- 
+  exibble_a %>%
+  fmt_scientific(
+    columns = vars(num),
+    decimals = formats$decimals,
+    locale = formats$locale
+  ) %>%
+  fmt_currency(
+    columns = vars(currency),
+    currency = formats$currency,
+    locale = formats$locale
+    ) %>%
+  summary_rows(
+    groups = TRUE,
+    columns = vars(num),
+    fns = fns_labels,
+    formatter = fmt_scientific,
+    decimals = formats$decimals,
+    locale = formats$locale
+  ) %>%
+  summary_rows(
+    groups = "grp_a",
+    columns = vars(currency),
+    fns = c(
+      fns_labels,
+      min = ~min(.),
+      max = ~max(.)),
+    formatter = fmt_currency,
+    currency = formats$currency,
+    locale = formats$locale
+  )
+
+exibble_f
+```
+
+Passing in parameters like this is useful, especially if there are larger numbers of columns. When we store formatting parameters outside of the `gt()` pipeline, we separate our concerns between data structuring and data formatting. Putting styles and options into objects becomes more important if we intend to centralize formatting options for reuse.
+
+## Creating a Grand Summary
+
+A grand summary aggregates column data regardless of the groups within the data. Grand summaries can also be created for **gt** tables that don't have row groups, or, don't have a stub. Finally, we can create a table that has both groupwise summaries and a grand summary.
+
+Let's keep it simple and create group summary rows on a table without a stub. We'll use `exibble` dataset for this once more. A few `exibble` columns are `select()`ed, passed to `gt()`, and then `summary_rows()`. Notice that, in the resulting table, a stub is created just for the summary row labels (they have to go somewhere).
+
+```{r exibble_g}
+# Create a simple grand summary on a gt
+# table that contains no stub
+exibble_g <-
+  exibble %>%
+  dplyr::select(num, char, currency) %>%
+  gt() %>%
+  grand_summary_rows(
+    columns = vars(num, currency),
+    fns = fns_labels
+  )
+
+exibble_g
+```
+
+By default, `groups` in the `summary_rows()` function is set to `NULL` and will produce a grand summary.
+
+A grand summary can be used in conjunction with groupwise summaries. Here's an mashup where both types are present:
+
+```{r exibble_h}
+# Using the table in `exibble_f`, create
+# additional grand summary rows (using two
+# separate calls of `grand_summary_rows()`
+# since the formatting
+# will be different)
+exibble_h <- 
+  exibble_f %>%
+  grand_summary_rows(
+    columns = vars(num),
+    fns = fns_labels,
+    formatter = fmt_number,
+    suffixing = TRUE,
+    locale = formats$locale
+  ) %>%
+  grand_summary_rows(
+    columns = vars(currency),
+    fns = fns_labels,
+    formatter = fmt_currency,
+    suffixing = TRUE,
+    locale = formats$locale
+  )
+
+exibble_h
+```
+
+Note that the grand summary has a double line separating it from groupwise summary that's part of `grp_b`. If this default styling appears to be too subtle, we can elect to add further styling to both groupwise summaries and the grand summary by using `tab_options()`.
+
+## Adding Some Style to the Summary Cells
+
+While the summary cells (both groupwise and grand) have a distinct appearance that sets them apart from the data cells, there's always the option to modify their appearance. We can use the `tab_options()` function to perform these customizations. Here are the options specific to the summary cells (for groupwise summaries) and the grand summary cells:
+
+- `summary_row.background.color` & `grand_summary_row.background.color`
+- `summary_row.padding` & `grand_summary_row.padding`
+- `summary_row.text_transform` & `grand_summary_row.text_transform`
+
+We can also target the summary cells and grand summary cells with the location helper functions `cells_summary()` and `cells_grand_summary()`. This is important for adding footnotes with `tab_footnote()` and for setting styles with `tab_style()` (both have the `locations` argument).
+
+Here is an example that uses multiple calls of `tab_options()` and `tab_footnote()`. The cell background color for both types of summary cells is modified and two footnotes are added.
+
+```{r exibble_i}
+# Using the gt table of `exibble_h` as a
+# starting point, style summary cells with
+# `tab_options()` and add two footnotes
+exibble_i <- 
+  exibble_h %>%
+  tab_options(
+    summary_row.background.color = "lightblue",
+    grand_summary_row.background.color = "lightgreen"
+  ) %>%
+  tab_footnote(
+    footnote = md("Mean of all *num* values."),
+    locations = cells_grand_summary(
+      columns = vars(num), rows = vars(avg)
+    )
+  ) %>%
+  tab_footnote(
+    footnote = md("Highest `currency` value in **grp_a**"),
+    locations = cells_summary(
+      groups = "grp_a",
+      columns = vars(currency),
+      rows = "max"
+    )
+  )
+
+exibble_i
+```
+
+## Extracting the Summary Data from the **gt** Table Object
+
+For a reproducible workflow, we do not want to have situations where any data created or modified cannot be accessed. While having summarized values be created in a **gt** pipeline presents advantages to readability and intent of analysis, it is recognized that the output table itself is essentially 'read only', as the input data undergoes processing and movement to an entirely different format.
+
+However, the object created still contains data and we can obtain the summary data from a **gt** table object using the `extract_summary()` function. Taking the `gt_summary` object, we get a list of tibbles containing the summary data while preserving the correct data types:
+
+```{r summary_list}
+# Extract the summary data from `exibble_d`
+# to a list  object
+summary_list <- exibble_d %>% extract_summary()
+```
+
+```{r summary_list_grp_a}
+# Print out the summary for the `grp_a` group
+summary_list %>% .$summary_df_data_list %>% .$grp_a
+```
+
+```{r summary_list_grp_b}
+# Print out the summary for the `grp_b` group
+summary_list %>% .$summary_df_data_list %>% .$grp_b
+```
+
+The output tibbles within the list always contain the `groupname` and `rowname` columns. The `groupname` column is filled with the name of the row group that was given to `summary_rows()`. The `rowname` column contains the descriptive stub labels for the summary rows (recall that values are either supplied explicitly in `summary_rows()`, or, are generated from the function names). The remaining columns are those from the original dataset.
+
+The output data from `extract_summary()` can be reintroduced to a reproducible workflow and serve as downstream inputs or undergo validation. Perhaps interestingly, the output tibbles are structured in a way that facilitates direct input back to `gt()` (i.e., it has the magic `groupname` and `rowname` columns). This can produce a new, standalone summary table where the summary rows are now data rows:
+
+```{r exibble_d_summary_list_gt}
+# Take `exibble_d`, which internally has a list
+# of summary data frames, extract the summaries,
+# and then combine them; input that into `gt()`,
+# and format the `num` column with `fmt_number()`
+exibble_d %>%
+  extract_summary() %>%
+  unlist(recursive = FALSE) %>%
+  dplyr::bind_rows() %>%
+  gt() %>%
+  fmt_number(
+    columns = vars(num),
+    decimals = 1
+  ) %>%
+  fmt_missing(
+    columns = vars(char, currency, row, group)
+  )
+```
+
+## Providing Our Own Aggregation Functions to Generate Summary Rows
+
+While many of the functions available in base R and within packages are useful as aggregate functions, we may occasionally have the need to create our own custom functions. When taking this approach the main things to keep in mind are that a vector of values is the main input, and, a single value should be returned. The return value can be pretty much any class (e.g., `numeric`, `character`, `logical`) and it's the `formatter` function that will handle any custom formatting while also converting to `character`.
+
+Here, we'll define a function that takes a vector of numeric values and outputs the two highest values (sorted low to high) above a `threshold` value. The output from this function is always a formatted `character` string.
+
+```{r define_agg_function}
+# Define a function that gives the
+# highest two values above a threshold
+agg_highest_two_above_value <- function(x, threshold) {
+  
+  # Get sorted values above threshold value
+  values <- sort(round(x[x >= threshold], 2))
+  
+  # Return character string with 2 highest values above threshold
+  if (length(values) == 0) {
+    return(paste0("No values above ", threshold))
+  } else {
+    return(
+      paste(
+        formatC(
+          tail(
+            sort(round(x[x > threshold], 2)), 2),
+          format = "f", digits = 2), collapse = ", "))
+  }
+}
+
+# Let's test this function with some values
+agg_highest_two_above_value(
+  x = c(0.73, 0.93, 0.75, 0.86, 0.23, 0.81),
+  threshold = 0.8
+)
+```
+
+Because this is character value that's returned, we don't need formatting functions like `fmt_number()`, `fmt_percent()`, etc. However, a useful formatter (and we do need *some* formatter) is the `fmt_passthrough()` function. Like the name suggests, it to great extent passes values through but formats as `character` (like all the `fmt_*()` function do) and it provides the option to decorate the output with a `pattern`. Let's have a look at how the `agg_highest_two_above_value()` function can be used with the `fmt_passthrough()` formatter function.
+
+```{r exibble_j}
+# Create a gt table with `exibble_a` and use
+# the custom function with a threshold of `20`;
+# the `fmt_passthrough` funtion allows for
+# minimal formatting of the aggregate values
+exibble_j <- 
+  exibble_a %>%
+  grand_summary_rows(
+    columns = vars(num, currency),
+    fns = list(
+      high = ~agg_highest_two_above_value(., 20)),
+    formatter = fmt_passthrough,
+    pattern = "({x})"
+  )
+
+exibble_j
+```
+
+We can extract the grand summary data from the `exibble_j` object. Note that columns `num` and `currency` are classed as character since it was character outputs that were generated by the `agg_highest_two_above_value()` function.
+
+```{r}
+# Extract the summary list from `exibble_j`
+# and inspect using `str()`
+exibble_j %>%
+  extract_summary() %>%
+  str()
+```
+
+# Case Study gtcars
+
+
+<p align="center"><img src="images/gtcars.svg" width=50%></p>
+
+Let's make a display table using the `gtcars` dataset. We all know `mtcars`... what is `gtcars`? It's basically a modernized `mtcars` for the **gt** age. It's part of the **gt** package, and here is a preview of the tibble:
+
+```{r gtcars_data_frame}
+#  This is `gtcars`
+dplyr::glimpse(gtcars)
+```
+
+For the purpose of simply learning more about **gt**, let's reduce this 47-row tibble to one that has only 8 rows:
+
+```{r gtcars_8}
+#  Get a subset of 8 cars from the `gtcars` dataset: two
+#  from each manufacturer country of origin except the UK
+gtcars_8 <-
+  gtcars %>%
+  dplyr::group_by(ctry_origin) %>%
+  dplyr::top_n(2) %>%
+  dplyr::ungroup() %>%
+  dplyr::filter(ctry_origin != "United Kingdom")
+
+#  Show the `gtcars_8` tibble
+dplyr::glimpse(gtcars_8)
+```
+
+Let's make a display table from this dataset. In doing so we'll fulfill the following 10 requirements:
+
+1. putting the cars into characteristic groups (by the car manufacturer's country of origin)
+2. removing some of the columns that we don't want to present
+3. incorporating some columns into a column group
+4. formatting the currency data and using a monospaced font for easier reading of that data
+5. giving the table a title and a subtitle
+6. adding footnotes to draw attention to some of the more interesting data points and to explain some of the more unusual aspects of the data
+7. placing a citation for the dataset at the bottom of the table
+8. transforming the transmission (`trsmn`) codes so that they are readable and understandable
+9. styling some cells according to basic criteria
+10. highlighting the cars that are considered to be *grand tourers*
+
+## Row Groups
+
+Let's again use **dplyr** to help make groupings by the `ctry_origin` column, which provides the country of origin for the vehicle manufacturer of the car. We can simply use `dplyr::group_by()` on the `gtcars` dataset and pass that to `gt()`. What you get is a display table that arranges the cars into row groups, with the name of the group displayed prominently above.
+
+```{r group_by_gtcars}
+#  Use `group_by()` on `gtcars` and pass that to `gt()`
+gtcars_8 %>%
+  dplyr::group_by(ctry_origin) %>%
+  gt()
+```
+
+Getting the row groups in the preferred order can be done easily with **dplyr**'s `arrange()` function. For example, we can have groups that are arranged alphabetically by manufacturer (`mfr`) and then sorted by highest sticker price (`msrp`) to lowest. 
+
+```{r group_by_arrange_gtcars}
+gtcars_8 %>%
+  dplyr::group_by(ctry_origin) %>%
+  dplyr::arrange(mfr, desc(msrp)) %>%
+  gt()
+```
+
+We could also use factor levels to get a more particular ordering within `arrange()`. For example, we can first arrange the groups themselves (the country of origin--`ctry_origin`) by our own preferred ordering and then arrange by `mfr` and descending `msrp` as before. Then, `group_by(ctry_origin)` can be used on the sorted tibble before passing this to `gt()`.
+
+```{r factor_gtcars}
+#  Define our preferred order `ctry_origin`
+order_countries <- c("Germany", "Italy", "United States", "Japan")
+
+#  Reorder the table rows by our specific ordering of groups
+gtcars_8 %>%
+  dplyr::arrange(
+    factor(ctry_origin, levels = order_countries), mfr, desc(msrp)
+  ) %>%
+  dplyr::group_by(ctry_origin) %>%
+  gt()
+```
+
+The last variation is to combine the manufacturer name with the model name, using those combined strings as row labels for the table. This is just a little more **dplyr** where we can use `dplyr::mutate()` to make a new `car` column followed by `dplyr::select()` where we remove the `mfr` and `model` columns. When introducing the tibble to the `gt()` function, we can now use the `rowname_col` argument to specify a column that will serve as row labels (which is the newly made `car` column).
+
+```{r factor_gtcars_rownames}
+#  Reorder the table rows by our specific ordering of groups
+tab <-
+  gtcars_8 %>%
+  dplyr::arrange(
+    factor(ctry_origin, levels = order_countries),
+    mfr, desc(msrp)
+    ) %>%
+  dplyr::mutate(car = paste(mfr, model)) %>%
+  dplyr::select(-mfr, -model) %>%
+  dplyr::group_by(ctry_origin) %>%
+  gt(rowname_col = "car")
+
+#  Show the table
+tab
+```
+
+## Hiding and Moving Some Columns
+
+Let's hide two columns that we don't need to the final table: `drivetrain` and `bdy_style`. We can use the `cols_hide()` function to hide columns. The same end result might also have been achieved by using `gtcars %>% dplyr::select(-c(drivetrain, bdy_style))`, before introducing the table to `gt()`. Why this function then? Sometimes you'll need variables for conditional statements within **gt** but won't want to display them in the end.
+
+Aside from hiding columns, let's *move* some of them. Again, this could be done with `dplyr::select()` but there are options here in **gt** via the `cols_move_to_start()`, `cols_move()`, and `cols_move_to_end()` functions.
+
+```{r cols_hide_move}
+#  Use a few `cols_*()` functions to hide and move columns 
+tab <- 
+  tab %>%
+  cols_hide(columns = vars(drivetrain, bdy_style)) %>%
+  cols_move(
+    columns = vars(trsmn, mpg_c, mpg_h),
+    after = vars(trim)
+  )
+
+#  Show the table
+tab
+```
+
+## Putting Columns Into Groups
+
+It's sometimes useful to arrange variables/columns into groups by using spanner column labels. This can be done in **gt** by using the `tab_spanner()` function. It takes the `label` and `columns` arguments; `label` is the spanner column label and the `columns` are those columns that belong in this group.
+
+Here, we'll put the `mpg_c`, `mpg_h`, `hp`, `hp_rpm`, `trq`, `trq_rpm` columns under the `Performance` spanner column, and the remaining columns won't be grouped together. This single spanner column label is styled with Markdown by using the `md()` helper.
+
+```{r tab_spanner}
+#  Put the first three columns under a spanner
+#  column with the label 'Performance'
+tab <- 
+  tab %>%
+  tab_spanner(
+    label = "Performance",
+    columns = vars(mpg_c, mpg_h, hp, hp_rpm, trq, trq_rpm)
+  )
+
+#  Show the table
+tab
+```
+
+## Merging Columns Together and Labeling Them
+
+Sometimes we'd like to combine the data from two columns into a single column. The `cols_merge()` function allows us to do this, we just need to describe how the data should be combined. For our table, let's merge together the following pairs of columns:
+
+- `mpg_c` and `mpg_h` (miles per gallon in city and highway driving modes)
+- `hp` and `hp_rpm` (horsepower and associated RPM)
+- `trq` and `trq_rpm` (torque and associated RPM)
+
+The `cols_merge()` function uses a `col_1` column and a `col_2` column. Once combined, the `col_1` column will be retained and the `col_2` column will be dropped. The pattern argument uses `{1}` and `{2}` to represent the content of `col_1` and `col_2`. Here, we can use string literals to add text like `rpm` or the `@` sign. Furthermore, because we are targeting an HTML table, we can use the `<br>` tag to insert a linebreak.
+
+Labeling columns essentially means that we are choosing display-friendly labels that are no longer simply the column names (the default label). The `cols_label()` function makes this relabeling possible. It accepts a series of named arguments in the form of `<column_name> = <column_label>, ...`.
+
+```{r merge_columns_pattern}
+#  Perform three column merges to better present
+#  MPG, HP, and torque; relabel all the remaining
+#  columns for a nicer-looking presentation
+tab <- 
+  tab %>%
+  cols_merge(
+    vars(mpg_c, mpg_h),
+    hide_columns = vars(mpg_h),
+    pattern = "{1}c<br>{2}h"
+    ) %>%
+  cols_merge(
+    vars(hp, hp_rpm),
+    hide_columns = vars(hp_rpm),
+    pattern = "{1}<br>@{2}rpm"
+  ) %>%
+  cols_merge(
+    vars(trq, trq_rpm),
+    hide_columns = vars(trq_rpm),
+    pattern = "{1}<br>@{2}rpm"
+  ) %>%
+  cols_label(
+    mpg_c = "MPG",
+    hp = "HP",
+    trq = "Torque",
+    year = "Year",
+    trim = "Trim",
+    trsmn = "Transmission",
+    msrp = "MSRP"
+  )
+
+#  Show the table
+tab
+```
+
+## Using Formatter Functions
+
+There are a number of formatter functions, all with the general naming convention `fmt*()`. The various formatters are convenient for applying formats to numeric or character values in the table's field. Here, we will simply use `fmt_currency()` on the `msrp` column (we still refer to columns by their original names) to get USD currency will no decimal places. We're not supplying anything for the `rows` argument and this means we want to apply the formatting to the entire column of data.
+
+```{r fmt_currency}
+#  Format the `msrp` column to USD currency
+#  with no display of the currency subunits
+tab <- 
+  tab %>%
+  fmt_currency(
+    columns = vars(msrp),
+    currency = "USD",
+    decimals = 0
+  )
+
+#  Show the table
+tab
+```
+
+## Column Alignment and Style Changes
+
+We can change the alignment of data in columns with `cols_align()`. For our table, let's center-align the `mpg_c`, `hp`, and `trq` columns. All other columns will maintain their default alignments.
+
+It's sometimes useful to modify the default styles of table cells. We can do this in a targeted way with the `tab_style()` function. That function require two key pieces of information: a `style` definition, and one or more `locations` (which cells should the styles be applied to?). The `style` argument commonly uses the `cells_styles()` helper function, which contains arguments for all the styles that are supported (use `?cells_styles` for more information on this). Here we will use a text size of `12px` in our targeted cells---both `px(12)` and `"12px"` work equally well here. We also use helper functions with the `locations` argument and these are the `cells_*()` functions. We would like to target the data cells in all columns except `year` and `msrp` so we need to use `cells_body` and then supply our target columns to the `columns` argument.
+
+```{r align_style}
+#  Center-align three columns in the gt table
+#  and modify the text size of a few columns
+#  of data
+tab <- 
+  tab %>%
+  cols_align(
+    align = "center",
+    columns = vars(mpg_c, hp, trq)
+  ) %>%
+  tab_style(
+    style = cell_text(size = px(12)),
+    locations = cells_body(
+      columns = vars(trim, trsmn, mpg_c, hp, trq))
+  )
+
+#  Show the table
+tab
+```
+
+## Text Transforms
+
+A text transform via the `text_transform()` function is a great way to further manipulate text in data cells (even after they've been formatted with the `fmt*()` function). After targeting data cells with the `cells_body()` location helper function, we supply a function to the `fn` argument that processes a vector of text. If we intend to render as an HTML table, we can directly apply HTML tags in the transformation function. The function we provide here will build strings that read better in a display table.
+
+```{r text_transform_html}
+#  Transform the column of text in `trsmn` using
+#  a custom function within `text_transform()`;
+#  here `x` represents a character vector defined
+#  in the `cells_body()` function
+tab <- 
+  tab %>%
+  text_transform(
+    locations = cells_body(columns = vars(trsmn)),
+    fn = function(x) {
+      
+      #  The first character of `x` always
+      #  indicates the number of transmission speeds
+      speed <- substr(x, 1, 1)
+      
+      #  We can carefully determine which transmission
+      #  type we have in `x` with a `dplyr::case_when()`
+      #  statement
+      type <-
+        dplyr::case_when(
+          substr(x, 2, 3) == "am" ~ "Automatic/Manual",
+          substr(x, 2, 2) == "m" ~ "Manual",
+          substr(x, 2, 2) == "a" ~ "Automatic",
+          substr(x, 2, 3) == "dd" ~ "Direct Drive"
+        )
+      
+      #  Let's paste together the `speed` and `type`
+      #  vectors to create HTML text replacing `x`
+      paste(speed, " Speed<br><em>", type, "</em>")
+    }
+  )
+
+#  Show the table
+tab
+```
+
+## Table Header: Title and Subtitle 
+
+The `tab_header()` function allows us to place a table title and, optionally, a subtitle at the top of the display table. It's generally a good idea to have both in a table, where the subtitle provides additional information (though that isn't quite the case in our example below).
+
+```{r tab_header}
+#  Add a table title and subtitle; we can use
+#  markdown with the `md()` helper function
+tab <- 
+  tab %>%
+  tab_header(
+    title = md("The Cars of **gtcars**"),
+    subtitle = "These are some fine automobiles"
+  )
+
+#  Show the table
+tab
+```
+
+## Adding a Source Citation
+
+A *source note* can be added below the display table using the `tab_source_note()` function. We can even add multiple source notes with multiple calls of that function. Here, we supply a web URL and by using Markdown (with `md()`) it's easy to create a link to the source of the data.
+
+```{r tab_source_note}
+#  Add a source note to the bottom of the table; this
+#  appears below the footnotes
+tab <- 
+  tab %>%
+  tab_source_note(
+    source_note = md(
+      "Source: Various pages within the Edmonds website.")
+  )
+
+#  Show the table
+tab
+```
+
+## Using the Complete `gtcars` table and Adding Footnotes
+
+Let's bring it all together by putting together all the statements we developed for `gtcars_8`, and applying that to the complete `gtcars` dataset. At the same time, we'll add a few interesting footnotes and our specific requirements for footnoting are:
+
+    a. identifying the car with the best gas mileage (city)
+    b. identifying the car with the highest horsepower
+    c. stating the currency of the MSRP
+
+The `tab_footnote()` function expects note text for the `footnote` argument, and locations for where the footnote mark should be attached. It will handle the placement of the footnote mark and also place the footnote in the footnotes area. Here, we'll use the `cells_body()` *location helper* function. There are several location helper functions for targeting all parts of the table (e.g,. `cells_body()`, `cells_stub()`, etc.). Each *location helper* has their own interface for targeting cells so refer to the documentation for examples of how they work in practice.
+
+What `cells_body()` expects is `columns` (column names, which can be conveniently provided in `vars()`) and `rows` (which can be a vector of row names or row indices). The `cells_stub()` location helper only expects a vector of `rows`. For `cells_column_labels()`, we can either provided targeted column labels in the `columns` argument or spanner column labels in the `groups` argument. Here, we are targeting a footnote to the `msrp` column label so we will use `columns = vars(msrp)`.
+
+In terms of structuring the code, we're taking all the previous statements and putting those in first. It should be noted that the order of the statements does not matter to the end result, we could also put in all of the `tab_footnote()` statements first (again, any in order) and expect the same output table.
+
+```{r tab_footnote}
+#  Use dplyr functions to get the car with the best city gas mileage;
+#  this will be used to target the correct cell for a footnote
+best_gas_mileage_city <- 
+  gtcars %>% 
+  dplyr::arrange(desc(mpg_c)) %>%
+  dplyr::slice(1) %>%
+  dplyr::mutate(car = paste(mfr, model)) %>%
+  dplyr::pull(car)
+
+#  Use dplyr functions to get the car with the highest horsepower
+#  this will be used to target the correct cell for a footnote
+highest_horsepower <- 
+  gtcars %>% 
+  dplyr::arrange(desc(hp)) %>%
+  dplyr::slice(1) %>%
+  dplyr::mutate(car = paste(mfr, model)) %>%
+  dplyr::pull(car)
+
+#  Create a display table with `gtcars`, using all of the previous
+#  statements piped together + additional `tab_footnote()` stmts
+tab <-
+  gtcars %>%
+  dplyr::arrange(
+    factor(ctry_origin, levels = order_countries),
+    mfr, desc(msrp)
+  ) %>%
+  dplyr::mutate(car = paste(mfr, model)) %>%
+  dplyr::select(-mfr, -model) %>%
+  dplyr::group_by(ctry_origin) %>%
+  gt(rowname_col = "car") %>%
+  cols_hide(columns = vars(drivetrain, bdy_style)) %>%
+  cols_move(
+    columns = vars(trsmn, mpg_c, mpg_h),
+    after = vars(trim)
+  ) %>%
+  tab_spanner(
+    label = "Performance",
+    columns = vars(mpg_c, mpg_h, hp, hp_rpm, trq, trq_rpm)
+  ) %>%
+  cols_merge(
+    vars(mpg_c, mpg_h),
+    hide_columns = vars(mpg_h),
+    pattern = "{1}c<br>{2}h"
+  ) %>%
+  cols_merge(
+    vars(hp, hp_rpm),
+    hide_columns = vars(hp_rpm),
+    pattern = "{1}<br>@{2}rpm"
+  ) %>%
+  cols_merge(
+    vars(trq, trq_rpm),
+    hide_columns = vars(trq_rpm),
+    pattern = "{1}<br>@{2}rpm"
+  ) %>%
+  cols_label(
+    mpg_c = "MPG",
+    hp = "HP",
+    trq = "Torque",
+    year = "Year",
+    trim = "Trim",
+    trsmn = "Transmission",
+    msrp = "MSRP"
+  ) %>%
+  fmt_currency(
+    columns = vars(msrp),
+    currency = "USD",
+    decimals = 0
+  ) %>%
+  cols_align(
+    align = "center",
+    columns = vars(mpg_c, hp, trq)
+  ) %>%
+  tab_style(
+    style = cell_text(size = px(12)),
+    locations = cells_body(
+      columns = vars(trim, trsmn, mpg_c, hp, trq)
+    )
+  ) %>%
+  text_transform(
+    locations = cells_body(columns = vars(trsmn)),
+    fn = function(x) {
+      
+      speed <- substr(x, 1, 1)
+      
+      type <-
+        dplyr::case_when(
+          substr(x, 2, 3) == "am" ~ "Automatic/Manual",
+          substr(x, 2, 2) == "m" ~ "Manual",
+          substr(x, 2, 2) == "a" ~ "Automatic",
+          substr(x, 2, 3) == "dd" ~ "Direct Drive"
+        )
+      
+      paste(speed, " Speed<br><em>", type, "</em>")
+    }
+  ) %>%
+  tab_header(
+    title = md("The Cars of **gtcars**"),
+    subtitle = "These are some fine automobiles"
+  ) %>%
+  tab_source_note(
+    source_note = md(
+      "Source: Various pages within the Edmonds website.")
+  ) %>%
+  tab_footnote(
+    footnote = md("Best gas mileage (city) of all the **gtcars**."),
+    locations = cells_body(
+      columns = vars(mpg_c),
+      rows = best_gas_mileage_city)
+  ) %>%
+  tab_footnote(
+    footnote = md("The highest horsepower of all the **gtcars**."),
+    locations = cells_body(
+      columns = vars(hp),
+      rows = highest_horsepower)
+  ) %>%
+  tab_footnote(
+    footnote = "All prices in U.S. dollars (USD).",
+    locations = cells_column_labels(columns = vars(msrp))
+  )
+
+#  Show the table
+tab
+```
+
+That is it. The final table looks pretty good and conveys the additional information we planned for. That table can be used in a lot of different places like R Markdown, Shiny, email messages... wherever HTML is accepted.
+
+
+[Back main](../README.html)

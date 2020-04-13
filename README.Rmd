@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-03-23"
+date: "Started: 2013-07-16, Last modified: 2020-04-13"
 output:
   html_document:
     keep_md: true
@@ -286,6 +286,8 @@ ln -s source destination
 [R-foreach](./R-foreach/R-foreach.html)
 
 [R-GeoSpatial](./R-GeoSpatial/R-GeoSpatial.html)
+
+[R-gt (great tables)](./R-gt/Rgt.html)
 
 [R-knitrBootstrap](./R-knitrBootstrap/R-knitrBootstrap.html)
 
