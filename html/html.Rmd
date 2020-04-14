@@ -1,0 +1,47 @@
+---
+title: "HTML hints"
+author: "J. R. Minter"
+date: "Started: 2020-04-13, Last modified: 2020-04-13"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+
+
+[Back to main](../README.html)
+
+
+# A basic link: to Google
+
+We want to visit <a href="https://www.google.com">Google</a>.
+
+```
+We want to visit <a href="https://www.google.com">Google</a>
+```
+
+<b>Check out other HTML tags <a href="https://www.w3schools.com/tags/tag_a.asp">here</a> </b>.
+
+
+# A quote
+
+```
+<q>A quote</q>
+```
+
+<q>A quote</q>
+
+# An example of a link to an image in HTML
+
+```
+The demographic response we have now for COVID-19 supports Fauci's statement. See the image: <img border="0" src="https://www.cdc.gov/mmwr/volumes/69/wr/figures/mm6915e3-F1.gif" width="1060" height="607">
+```
+
+The demographic response we have now for COVIF-19 supports Fauci's statement. See the image: <img border="0" src="https://www.cdc.gov/mmwr/volumes/69/wr/figures/mm6915e3-F1.gif" width="1060" height="607">
+
+
+
+
+[Back to main](../README.html)

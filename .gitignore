@@ -190,6 +190,9 @@ homebrew/homebrew.md
 homebrew/homebrew.html
 homebrew/figure/
 
+# html directory
+html/*.html
+
 # hyperspy directory
 hyperspy/.DS_Store
 hyperspy/hyperspy.md
