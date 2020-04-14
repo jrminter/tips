@@ -41,6 +41,8 @@ The solution was to run
 > Sys.getenv("GITHUB_PAT")
 ```
 
+On my mac I seen to need to do this before each use of `install_github()`...
+
 
 ## Fun with RTools 4.0 on Windows 10
 
