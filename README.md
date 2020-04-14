@@ -307,6 +307,8 @@ ln -s source destination
 
 [R-scrape-pdf](./R-scrape-pdf/R-scrape-pdf.html)
 
+[R-sys-admin](./R-sys-admin/R-sys-admin.html)
+
 [Reproducible Research](./ReproducibleResearch/ReproducibleResearch.html)
 
 [Research](./research/research.html)

@@ -469,10 +469,20 @@ R-packages/*.html
 R-packages/*.htm
 R-packages/Legend*.png
 
-# R-scrape-pdf directory
+
+## R-scrape-pdf directory
+R-scrape-pdf/.DS_Store
+R-scrape-pdf/*.md
+R-scrape-pdf/*.htmln directory
 R-scrape-pdf/.DS_Store
 R-scrape-pdf/*.md
 R-scrape-pdf/*.html
+
+
+# R-sys-admin directory
+R-sys-admin/.DS_Store
+R-sys-admin/*.md
+R-sys-admin/*.html
 
 ReproducibleResearch/*.html
 

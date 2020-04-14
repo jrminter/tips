@@ -1,0 +1,72 @@
+---
+title: "R Systems Administration"
+author: "J. R. Minter"
+date: "Started: 2020-04-14, Last modified: 2020-04-14"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+
+```{r options, message=FALSE, warning=FALSE, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>")
+```
+
+[Back to main](../README.html)
+
+This document contains hints for System administration for R
+
+# My preferred CRAN mirrors are:
+
+- [Univ of Tennessee](https://mirrors.nics.utk.edu/cran/) 
+
+- [Case Western (Ohio)](https://cran.case.edu/)
+
+- [RIT](http://mirrors.rit.edu/CRAN/) is **not** on the official list...
+
+
+# R Systems Administration for Windows
+
+## R-3.6.3
+
+`R-3.6.3` is the last release on the R-3.6 version. I am currently running
+this on my Windows computers anticipating the release of R-4.0.0.
+
+1. I like to install R in `C:/Apps/R/R-3.6.3`.
+
+- I edit `C:/Apps/R/R-3.6.3/etc/i386/Makeconf` adding \
+  `BINPREF ?= C:/Apps/R/Rtools/mingw_32/bin/`
+  
+-  I edit `C:/Apps/R/R-3.6.3/etc/x64/Makeconf` adding \
+   `BINPREF ?= C:/Apps/R/Rtools/mingw_64/bin/`
+
+2. I like to install Rtools in `C:/Apps/R/Rtools`
+
+
+## Preparing for R-4.0.0
+
+
+## Fun with RTools 4.0 on Windows 10
+
+Date: 2020-04-12
+
+I have been struggling to get RTools 4.0 running on a Windows-10
+virtual machine trying to get ready for the impending release of R-4.0
+today. 
+
+I was helped by the setting `.libPaths() = “C:/Apps/R-4.0.0beta/library”.
+Note the default was listed as `\\\\Mac/Apps/R/4.0.0/library` \
+Evidently Parallels messes with the installer...
+
+
+See the [stackoverflow](https://stackoverflow.com/questions/37922924/rstudio-cant-find-devtools)
+discussion...
+
+# R Systems Administration for MacOS
+
+
+[Back to main](../README.html)
