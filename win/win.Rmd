@@ -12,9 +12,9 @@ output:
 
 [Back to Index](../README.html)
 
-Some useful tips for windows
+# Some useful qick tips for Windows 10
 
-# See who is logged on
+## See who is logged on
 
 1. Press the `Windows logo key + R` simultaneously to open the Run box.
 
@@ -22,6 +22,17 @@ Some useful tips for windows
 
 3. When the Command Prompt window opens, type `query user` and press Enter.
 It will list all users that are currently logged on your computer.
+
+## See who logged on when
+
+1. Open Start (magnifying glass next to Win Logo).
+
+2. Search for Event Viewer, click the top result to launch the experience.
+
+3. Browse the following path: Event Viewer > Windows Logs > Security.
+
+   Double-click the event with the 4624 ID number, which indicates a
+   successful sign-in event.
 
 
 # Change the default PDF Viewer
