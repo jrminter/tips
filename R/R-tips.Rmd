@@ -22,6 +22,10 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 # Don't forget...
 
+## Easily add a code section in RStudio
+
+![Insert a code chunk from the RStudio GUI](inc/R-Studio_insert_code_chunk.png)
+
 ## Problems installing packages from Github
 
 I was getting errors like
