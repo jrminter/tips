@@ -14,6 +14,16 @@ output:
 
 Some useful tips for windows
 
+# See who is logged on
+
+1. Press the `Windows logo key + R` simultaneously to open the Run box.
+
+2. Type `cmd` and press `Enter`.
+
+3. When the Command Prompt window opens, type `query user` and press Enter.
+It will list all users that are currently logged on your computer.
+
+
 # Change the default PDF Viewer
 
   -  Right-click on a PDF file.    
