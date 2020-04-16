@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-04-14"
+date: "Started: 2013-07-16, Last modified: 2020-04-16"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -22,17 +22,9 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 # Don't forget...
 
-## Easily add a code section in RStudio
-
-![Insert a code chunk from the RStudio GUI](inc/R-Studio_insert_code_chunk.png)
-
-## Pimp my Rmd
-
-Find it [here](https://holtzy.github.io/Pimp-my-rmd/).
-
 ## Problems installing packages from Github
 
-I was getting errors like:
+I keep getting errors like:
 
 ```
 > install_github("StatsWithR/statsr")
@@ -42,7 +34,7 @@ from URL https://api.github.com/repos/StatsWithR/statsr/zipball/master
 Installation failed: Bad credentials
 ```
 
-The solution was to run
+The solution is to run
 
 ```
 > Sys.unsetenv("GITHUB_PAT")
@@ -51,6 +43,16 @@ The solution was to run
 
 On my mac I seen to need to do this before each use of `install_github()`...
 
+
+
+
+## Easily add a code section in RStudio
+
+![Insert a code chunk from the RStudio GUI](inc/R-Studio_insert_code_chunk.png)
+
+## Pimp my Rmd
+
+Find it [here](https://holtzy.github.io/Pimp-my-rmd/).
 
 ## Fun with RTools 4.0 on Windows 10
 
