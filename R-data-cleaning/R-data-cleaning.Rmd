@@ -64,11 +64,24 @@ If tou want to rearrange a group of columns to the left of the dataframe:
 
 ```{r rearrangeColumns}
 mtcars %>%
-  relocate(vs:gear)  %>%
+  relocate(vs:gear) %>%
   head(3)
 
 ```
 
+If you want to move them to a specific place, you can specify which they should
+follow or precede. In this example both of the following have the same effect:
+
+```{r rearrangeTwo}
+mtcars %>%
+  relocate(vs:gear, .before = cyl) %>%
+  head(3)
+
+mtcars %>%
+  relocate(vs:gear, .after = mpg) %>%
+  head(3)
+
+```
 
 # An example from a Casino simulation of "guilding metal"
 
