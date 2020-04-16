@@ -26,9 +26,13 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 ![Insert a code chunk from the RStudio GUI](inc/R-Studio_insert_code_chunk.png)
 
+## Pimp my Rmd
+
+Find it [here](https://holtzy.github.io/Pimp-my-rmd/).
+
 ## Problems installing packages from Github
 
-I was getting errors like
+I was getting errors like:
 
 ```
 > install_github("StatsWithR/statsr")
