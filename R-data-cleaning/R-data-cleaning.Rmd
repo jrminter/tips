@@ -58,6 +58,18 @@ test_df %>%
 
 This is already better...
 
+# Rearrange data columns
+
+If tou want to rearrange a group of columns to the left of the dataframe:
+
+```{r rearrangeColumns}
+mtcars %>%
+  relocate(vs:gear)  %>%
+  head(3)
+
+```
+
+
 # An example from a Casino simulation of "guilding metal"
 
 `Guilding metal` is an alloy of Cu and Zn. I used the Casino v. 2.5.1 software
