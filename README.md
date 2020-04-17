@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-04-16"
+date: "Started: 2013-07-16, Last modified: 2020-04-17"
 output:
   html_document:
     keep_md: true
@@ -149,6 +149,18 @@ format.
         ```
         <q>A quote</q>
         ```
+        
+    - **A blockquote**
+    
+        ```
+        <blockquote cite="https://www.w3schools.com/tags/tag_blockquote.asp">
+        <p>A long paragraph of text.</p>
+        
+        <p>A second long paragraph of text.</p>
+        
+        </blockquote>
+        ```
+        
 
 
 **Topics**
