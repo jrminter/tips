@@ -43,6 +43,15 @@ The solution is to run
 
 On my mac I seen to need to do this before each use of `install_github()`...
 
+## Getting ready for R-4.0.0
+
+I tested installation of R-4.0.0-beta and R-3.6.6 on my Parallels VM.
+
+The RTools3.5 (latest for the R-3 branch) has a choice to add it to
+the path.
+
+No matter what I tried, I could not get R-4.0.0 to find the RTools-4.0
+install.
 
 
 
