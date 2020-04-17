@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-04-16"
+date: "Started: 2013-07-16, Last modified: 2020-04-17"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -10,7 +10,7 @@ output:
     toc_depth: 3
 ---
 
-```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
+```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F, comment=NA}
 library(knitr)
 options(width = 72)
 
@@ -59,6 +59,19 @@ install.
 
 ![Insert a code chunk from the RStudio GUI](inc/R-Studio_insert_code_chunk.png)
 
+## Easily handle cards
+
+From Rasmus Bååth @rabaath on
+[twitter](https://twitter.com/rabaath/status/1251118874453516289) 2020-04-17.
+
+```{r handleCards}
+suits = c("♣", "♦", "♥", "♠")
+values = c(2:10, "J", "Q", "K", "A")
+cards = paste0(rep(values, each=4), suits)
+cat(sample(cards))
+```
+
+
 ## Pimp my Rmd
 
 Find it [here](https://holtzy.github.io/Pimp-my-rmd/).
@@ -83,7 +96,7 @@ discussion...
 
 There is an annoying conflict between `here::here()` and `lubridate`.
 
-```{r testHH, echo=TRUE, message=FALSE}
+```{r testHH, echo=TRUE, message=FALSE, comment=NA}
 library(here)
 library(lubridate)
 
