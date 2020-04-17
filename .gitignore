@@ -213,6 +213,8 @@ ImageJ/ana_model_sphere.html
 ImageJ/jython_scripting.html
 ImageJ/ana_generated_spheres.html
 ImageJ/Lognormal_distribution.html
+ImageJ/*.html
+
 
 # Inkscape directory
 inkscape/.DS_Store
