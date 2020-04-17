@@ -1,7 +1,7 @@
 ---
 title: "R data cleaning"
 author: "J. R. Minter"
-date: "Started: 2019-04-30, Last modified: 2019-30-29"
+date: "Started: 2019-04-30, Last modified: 2020-04-16"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -28,13 +28,13 @@ process we use is called **data cleaning**. There is an excellent R package,
 
 Start by loading the packages we will use...
 
-
-```{r load_packages, message=FALSE}
+```{r load_1, message=FALSE}
+library(dplyr)
 library(janitor)
-library(dplyr) # for pipe (%>%) operaror
 library(here) # make paths easier...
 library(ggplot2) # for plotting
 ```
+
 
 # Example 1
 
@@ -56,32 +56,8 @@ test_df %>%
   clean_names()
 ```
 
-This is already better...
+Note: I have a problem with the develk version of dplyr on Windows...
 
-# Rearrange data columns
-
-If tou want to rearrange a group of columns to the left of the dataframe:
-
-```{r rearrangeColumns}
-mtcars %>%
-  relocate(vs:gear) %>%
-  head(3)
-
-```
-
-If you want to move them to a specific place, you can specify which they should
-follow or precede. In this example both of the following have the same effect:
-
-```{r rearrangeTwo}
-mtcars %>%
-  relocate(vs:gear, .before = cyl) %>%
-  head(3)
-
-mtcars %>%
-  relocate(vs:gear, .after = mpg) %>%
-  head(3)
-
-```
 
 # An example from a Casino simulation of "guilding metal"
 
