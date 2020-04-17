@@ -299,8 +299,6 @@ format.
 
 [R-boxplots](./R-boxplots/R-boxplots.html)
 
-[R-character-encoding](./R-character-encoding/R-character-encoding.html)
-
 [R-data-cleaning](./R-data-cleaning/R-data-cleaning.html)
 
 [R-data-pipeline](./R-data-pipeline/R-data-pipeline.html)
@@ -308,8 +306,6 @@ format.
 [R-Excel](./R-Excel/R-Excel.html)
 
 [R-foreach](./R-foreach/R-foreach.html)
-
-[R-GeoSpatial](./R-GeoSpatial/R-GeoSpatial.html)
 
 [R-gt (great tables)](./R-gt/Rgt.html)
 
@@ -329,8 +325,6 @@ format.
 
 [R-Packages](./R-packages/R-packages.html)
 
-[R-scrape-pdf](./R-scrape-pdf/R-scrape-pdf.html)
-
 [R-sys-admin](./R-sys-admin/R-sys-admin.html)
 
 [Reproducible Research](./ReproducibleResearch/ReproducibleResearch.html)
@@ -346,8 +340,6 @@ format.
 [skills](./skills/skills.html)
 
 [skimage](./skimage/skimage.html)
-
-[Slidify](./Slidify/Slidify.html)
 
 [Software Development](./software-dev/software-dev.html)
 
@@ -370,8 +362,6 @@ format.
 [Ubuntu](./ubuntu/ubuntu.html)
 
 [vacuum systems](./vacuum/vacuum.html)
-
-[Visual Studio 2010](./VS2010/VS2010.html)
 
 [Win](./win/win.html)
 

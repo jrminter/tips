@@ -69,41 +69,34 @@ summary(df)
  Mean   :42.16   Mean   :37.81   Mean   :0                        
  3rd Qu.:43.77   3rd Qu.:39.72   3rd Qu.:0                        
  Max.   :55.33   Max.   :45.83   Max.   :0                        
- Area.equivalent.circle.diameter Long.Side.Length.MBR
- Min.   :19.35                   Min.   :18.33       
- 1st Qu.:39.31                   1st Qu.:38.19       
- Median :41.01                   Median :39.72       
- Mean   :40.74                   Mean   :39.53       
- 3rd Qu.:42.54                   3rd Qu.:41.25       
- Max.   :48.73                   Max.   :51.22       
- Short.Side.Length.MBR  Aspect.Ratio     Area.Peri.         Circ.      
- Min.   :16.80         Min.   :1.000   Min.   : 5.059   Min.   :11.37  
- 1st Qu.:36.66         1st Qu.:1.000   1st Qu.:10.097   1st Qu.:11.82  
- Median :38.19         Median :1.038   Median :10.526   Median :11.93  
- Mean   :37.90         Mean   :1.046   Mean   :10.445   Mean   :11.95  
- 3rd Qu.:39.72         3rd Qu.:1.050   3rd Qu.:10.898   3rd Qu.:12.02  
- Max.   :45.83         Max.   :1.688   Max.   :12.402   Max.   :15.04  
-     Elong.         Convexity        Solidity      Num..of.Holes
- Min.   :0.0510   Min.   :0.995   Min.   :0.9030   Min.   :0    
- 1st Qu.:0.1770   1st Qu.:1.000   1st Qu.:0.9750   1st Qu.:0    
- Median :0.2200   Median :1.000   Median :0.9780   Median :0    
- Mean   :0.2266   Mean   :1.000   Mean   :0.9775   Mean   :0    
- 3rd Qu.:0.2650   3rd Qu.:1.000   3rd Qu.:0.9810   3rd Qu.:0    
- Max.   :0.6800   Max.   :1.000   Max.   :0.9900   Max.   :0    
-  Thinnes.Rt.     Contour.Temp.     Orientation       Fract..Dim.   
- Min.   :0.8350   Min.   :0.0650   Min.   :  0.093   Min.   :1.128  
- 1st Qu.:1.0000   1st Qu.:0.1310   1st Qu.: 83.968   1st Qu.:1.538  
- Median :1.0000   Median :0.1390   Median :130.767   Median :1.567  
- Mean   :0.9991   Mean   :0.1382   Mean   :114.348   Mean   :1.560  
- 3rd Qu.:1.0000   3rd Qu.:0.1460   3rd Qu.:156.131   3rd Qu.:1.590  
- Max.   :1.0000   Max.   :0.1710   Max.   :179.535   Max.   :1.687  
- Fract..Dim..Goodness
- Min.   :0.8500      
- 1st Qu.:0.9650      
- Median :0.9660      
- Mean   :0.9638      
- 3rd Qu.:0.9660      
- Max.   :0.9910      
+ Area.equivalent.circle.diameter Long.Side.Length.MBR Short.Side.Length.MBR
+ Min.   :19.35                   Min.   :18.33        Min.   :16.80        
+ 1st Qu.:39.31                   1st Qu.:38.19        1st Qu.:36.66        
+ Median :41.01                   Median :39.72        Median :38.19        
+ Mean   :40.74                   Mean   :39.53        Mean   :37.90        
+ 3rd Qu.:42.54                   3rd Qu.:41.25        3rd Qu.:39.72        
+ Max.   :48.73                   Max.   :51.22        Max.   :45.83        
+  Aspect.Ratio     Area.Peri.         Circ.           Elong.      
+ Min.   :1.000   Min.   : 5.059   Min.   :11.37   Min.   :0.0510  
+ 1st Qu.:1.000   1st Qu.:10.097   1st Qu.:11.82   1st Qu.:0.1770  
+ Median :1.038   Median :10.526   Median :11.93   Median :0.2200  
+ Mean   :1.046   Mean   :10.445   Mean   :11.95   Mean   :0.2266  
+ 3rd Qu.:1.050   3rd Qu.:10.898   3rd Qu.:12.02   3rd Qu.:0.2650  
+ Max.   :1.688   Max.   :12.402   Max.   :15.04   Max.   :0.6800  
+   Convexity        Solidity      Num..of.Holes  Thinnes.Rt.    
+ Min.   :0.995   Min.   :0.9030   Min.   :0     Min.   :0.8350  
+ 1st Qu.:1.000   1st Qu.:0.9750   1st Qu.:0     1st Qu.:1.0000  
+ Median :1.000   Median :0.9780   Median :0     Median :1.0000  
+ Mean   :1.000   Mean   :0.9775   Mean   :0     Mean   :0.9991  
+ 3rd Qu.:1.000   3rd Qu.:0.9810   3rd Qu.:0     3rd Qu.:1.0000  
+ Max.   :1.000   Max.   :0.9900   Max.   :0     Max.   :1.0000  
+ Contour.Temp.     Orientation       Fract..Dim.    Fract..Dim..Goodness
+ Min.   :0.0650   Min.   :  0.093   Min.   :1.128   Min.   :0.8500      
+ 1st Qu.:0.1310   1st Qu.: 83.968   1st Qu.:1.538   1st Qu.:0.9650      
+ Median :0.1390   Median :130.767   Median :1.567   Median :0.9660      
+ Mean   :0.1382   Mean   :114.348   Mean   :1.560   Mean   :0.9638      
+ 3rd Qu.:0.1460   3rd Qu.:156.131   3rd Qu.:1.590   3rd Qu.:0.9660      
+ Max.   :0.1710   Max.   :179.535   Max.   :1.687   Max.   :0.9910      
 ```
 
 
