@@ -1,7 +1,7 @@
 ---
 title: "Carbon film thickness determination"
 author: "John Minter"
-date:  "Started: 2017-06-11, Last modified: 2017-10-28"
+date:  "Started: 2017-06-11, Last modified: 2020-04-18"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -11,6 +11,27 @@ output:
 ---
 
 [Back to Index](../README.html)
+
+# Bil Schneider notes
+
+Bil Schneider posted this on the Microscopy Listserver 2020-04-18
+
+> We have a Denton 502A Carbon Coater with a turbo molecular pump and
+> Cressington thickness monitor. Using carbon rods we deposit between 7-10 nm
+> for CL and 20 nm for imaging, EDS, and EPMA. It has a cold finger so liquid
+> nitrogen can be added to hasten a quick coat, otherwise an hour pump down
+> gets us to 10^-6^ torr. The stage rotates as its a line of site coater,
+> 10 one inch rounds or maybe 5 thin sections can go in at one pump down.
+>
+> We do a ton of EBSD, but rely on a Leica Ace600 coater to apply a 1 nm coat of
+> Iridium to any EBSD sample. It is flawless on geological thin sections and
+> never charges.
+> 
+> Bil Schneider UW Madison Geosciences SEM Lab Manager    
+> wfschneider@wisc.edu
+
+
+# Dale Callaham notes
 
 This was adapted and extended from a
 [document](https://www.bio.umass.edu/microscopy/CarbonFilmThicknessMethods.pdf) 
