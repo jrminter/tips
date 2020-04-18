@@ -59,7 +59,7 @@ install.
 
 ![Insert a code chunk from the RStudio GUI](inc/R-Studio_insert_code_chunk.png)
 
-## Easily handle cards
+## Easily handle cards and dice
 
 From Rasmus Bååth @rabaath on
 [twitter](https://twitter.com/rabaath/status/1251118874453516289) 2020-04-17.
@@ -71,6 +71,14 @@ cards = paste0(rep(values, each=4), suits)
 cat(sample(cards))
 ```
 
+and dice on
+[twitter](https://twitter.com/rabaath/status/1251117100791447557) 2020-04-17.
+
+
+```{r rollTheDice}
+dice = c("⚀", "⚁", "⚂", "⚃", "⚄", "⚅")
+cat(sample(dice, 200, replace = TRUE))
+```
 
 ## Pimp my Rmd
 
