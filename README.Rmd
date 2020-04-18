@@ -18,17 +18,24 @@ format.
 
 **First**, some quickies:
 
-1. Fix a `recurring guthub credential problem` - run:
+1. Keyboard shortcut for the `dplyr` pipe operator
+
+   ```
+   Win: `%>%` - Ctl + Shift + M    
+   Mac: `%>%` - CMD + Shift + M   
+   ```
+
+2. Fix a `recurring guthub credential problem` - run:
    
   ```
      Sys.unsetenv("GITHUB_PAT")
      Sys.getenv("GITHUB_PAT")
   ```
 
-2. The R `janitor` package is your friend. It cleans up
+3. The R `janitor` package is your friend. It cleans up
    **non-standard column names**.
 
-3. CDC Corona Virus Recommendations
+4. CDC Corona Virus Recommendations
 
    > The CDC recommends washing with soap and water for at least 20 seconds after
    > using the bathroom, before eating and after blowing your nose or sneezing. It
@@ -38,7 +45,7 @@ format.
    > “These are all things you can do to prevent the spread of pretty much any
    > respiratory virus,” Brewer said.
 
-4. Closed captions in CBS All access
+5. Closed captions in CBS All access
 
    > Go to www.cbs.com. Find a *full* episode of a series that you're
    > interested in and click on it. To turn the captions on, bring your
@@ -47,7 +54,7 @@ format.
    > side, click again on "CC captions" just once.
 
 
-5. The **Feynman** technique of learning:
+6. The **Feynman** technique of learning:
 
     - **Step 1**: Pick and study a topic
 
@@ -59,27 +66,27 @@ format.
     
     More [here](./Feynman_technique/Feynman_technique.html)...
     
-6. **Install command line tools** on MacOS
+7. **Install command line tools** on MacOS
 
     `xcode-select --install`
 
-7. **Reset a Fitbit Ionic watch**
+8. **Reset a Fitbit Ionic watch**
 
     Press and hold the left and bottom right buttons at the same time until you
     see the Fitbit logo. Let go of the buttons, and your tracker will restart.
 
-8. **Regex for youtube time stamps**. Useful in SublimeText3!
+9. **Regex for youtube time stamps**. Useful in SublimeText3!
 
    `\d\d:\d\d`
 
-9. **Symbolic links**. I always get this backwards...
+10. **Symbolic links**. I always get this backwards...
 
     ```
        file     link
     ln -s source destination
     ```
 
-10. **Fun snippets**
+11. **Fun snippets**
 
     > Your closest colaborator is you, six months from now    
     > ... and you don't respond to email     
@@ -88,17 +95,17 @@ format.
     > DRY (do not repeat yourself) vs WET (waste everyones time) coding styles    
     > - Peter Baker (UseR 2018)
 
-11. **Getting started with data science**
+12. **Getting started with data science**
 
 - A very helpful article from
 [Datacamp](https://www.datacamp.com/community/tutorials/setup-data-science-environment).
 
-12. **Clear the Chrome Cache**
+13. **Clear the Chrome Cache**
 
     - Press "CTRL" + "Shift" + "Delete" keys in Windows or Linux
     - Press "Command" + "Shift" + "Delete"" keys on MacOS.
 
-13. **Delete Specific Cookies in Chrome for Mac OS X**
+14. **Delete Specific Cookies in Chrome for Mac OS X**
 
     From [osxdaily.com](http://osxdaily.com/2016/07/02/delete-cookies-chrome-browser/): You can remove a specific website cookie from Chrome by doing the following:
 
@@ -114,7 +121,7 @@ format.
 
     - Avoid cookie placement and cache generation in the first place by using the Chrome `Incognito Mode` private browsing feature.
 
-14. **Automatically download all files in a directory**
+15. **Automatically download all files in a directory**
 
     Let's also exclude all the `index.html` files... 
 
@@ -122,7 +129,7 @@ format.
     wget -r --no-parent --reject "index.html*" http://my/url
 ```
 
-15. **How to block someone on Facebook**
+16. **How to block someone on Facebook**
 
     - Click at the top right of Facebook and choose `Settings`.
     - Click `Blocking` in the left side menu.
@@ -130,7 +137,7 @@ format.
     - Select the specific person you want to block ans click `Block > Block [name]`
     
 
-16. **HTML Syntax**
+17. **HTML Syntax**
 
     - **A link**
     
