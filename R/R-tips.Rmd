@@ -59,12 +59,12 @@ install.
 
 ![Insert a code chunk from the RStudio GUI](inc/R-Studio_insert_code_chunk.png)
 
-## Easily handle cards and dice
+## Easily handle cards, dice, and coins
 
 From Rasmus Bååth @rabaath on
 [twitter](https://twitter.com/rabaath/status/1251118874453516289) 2020-04-17.
 
-```{r handleCards}
+```{r handleCards, comment=NA}
 suits = c("♣", "♦", "♥", "♠")
 values = c(2:10, "J", "Q", "K", "A")
 cards = paste0(rep(values, each=4), suits)
@@ -75,9 +75,16 @@ and dice on
 [twitter](https://twitter.com/rabaath/status/1251117100791447557) 2020-04-17.
 
 
-```{r rollTheDice}
+```{r rollTheDice, comment=NA}
 dice = c("⚀", "⚁", "⚂", "⚃", "⚄", "⚅")
 cat(sample(dice, 200, replace = TRUE))
+```
+
+and my adaptation of his coin-flips (I found the images annoying)
+
+```{r tossCoin, comment=NA}
+head_tails = c("H", "T")
+cat(sample(head_tails, 20, replace = TRUE))
 ```
 
 ## Pimp my Rmd
