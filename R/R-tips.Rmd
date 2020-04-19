@@ -61,6 +61,8 @@ install.
 
 ## Easily handle cards, dice, and coins
 
+Note: the first two don't render correctly on windows
+
 From Rasmus Bååth @rabaath on
 [twitter](https://twitter.com/rabaath/status/1251118874453516289) 2020-04-17.
 
