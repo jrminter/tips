@@ -1,7 +1,7 @@
 ---
 title: "R Systems Administration"
 author: "J. R. Minter"
-date: "Started: 2020-04-14, Last modified: 2020-04-14"
+date: "Started: 2020-04-14, Last modified: 2020-04-19"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -33,6 +33,8 @@ This document contains hints for System administration for R
 
 ## R-3.6.3
 
+Date: 2020-04-18 
+
 `R-3.6.3` is the last release on the R-3.6 version. I am currently running
 this on my Windows computers anticipating the release of R-4.0.0.
 
@@ -52,7 +54,7 @@ this on my Windows computers anticipating the release of R-4.0.0.
 
 ## Fun with RTools 4.0 on Windows 10
 
-Date: 2020-04-12
+Date: 2020-04-18
 
 I have been struggling to get RTools 4.0 running on a Windows-10
 virtual machine trying to get ready for the impending release of R-4.0
@@ -67,6 +69,17 @@ See the [stackoverflow](https://stackoverflow.com/questions/37922924/rstudio-can
 discussion...
 
 # R Systems Administration for MacOS
+
+## R-3.6.3
+
+This information was entered on 2020-04-19
+
+```
+> .libPaths()
+[1] "/Library/Frameworks/R.framework/Versions/3.6/Resources/library"
+```
+
+
 
 
 [Back to main](../README.html)
