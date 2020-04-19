@@ -49,6 +49,15 @@ this on my Windows computers anticipating the release of R-4.0.0.
 2. I like to install Rtools in `C:/Apps/R/Rtools`
 
 
+On 2020-04-19 on jrmSimulationPC
+
+```
+> .libPaths()
+[1] "C:/Apps/R/R-3.6.3/library"
+```
+
+
+
 ## Preparing for R-4.0.0
 
 
