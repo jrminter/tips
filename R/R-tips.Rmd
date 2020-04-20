@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-04-17"
+date: "Started: 2013-07-16, Last modified: 2020-04-20"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -24,8 +24,10 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 ## Check your path from R
 
+This may be helpful in diagnosing problems with `RTools` on Windows.
+
 On MacOS the command `writeLines(strsplit(Sys.getenv("PATH"), ":")[[1]])`
-genrates:
+generates:
 
 ```
 ~/bin
@@ -39,6 +41,34 @@ genrates:
 /opt/X11/bin
 /opt/local/bin
 /Applications/RStudio.app/Contents/MacOS/postback
+```
+
+On Win 10 the command `writeLines(strsplit(Sys.getenv("PATH"), ";")[[1]])`
+generates:
+
+```
+C:\Apps\R\R-3.6.3\bin\x64
+C:\Apps\R\Rtools\bin
+C:\Apps\ImageMagick
+C:\Apps\R\Rtools35\bin
+C:\windows\system32
+C:\windows
+C:\windows\System32\Wbem
+C:\windows\System32\WindowsPowerShell\v1.0\
+C:\windows\System32\OpenSSH\
+C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common
+C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR
+C:\Apps\jdk-10\bin
+C:\Apps\gs\gs9.50\bin
+C:\Apps\local\path
+.\Plugins
+C:\Program Files\Gatan\Shared
+C:\Apps\Brackets\command
+C:\Program Files\Git\cmd
+C:\Apps\texlive\2020\bin\win32
+C:\Apps\Miniconda3
+C:\Apps\Miniconda3\Scripts
+C:\Users\johnr\AppData\Local\Microsoft\WindowsApps
 ```
 
 ## Problems installing packages from Github
