@@ -41,6 +41,7 @@ library(lwPackageHelperR)
 
 # For Crunch
 # libDir <- "C:/Apps/R/R-3.5.3/library"
+libDir <- "C:/Apps/R/R-4.0/R-4.0.0rc/library"
 
 # run this from the command line by:
 # cd /home/jrminter/Documents/git/tips/scripts
