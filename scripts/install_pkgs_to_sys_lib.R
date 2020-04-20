@@ -3,6 +3,7 @@
 #    Date     Who                           What
 # ----------  ---  ---------------------------------------------------------
 # 2019-04-17  JRM Set the system library at the top
+# 2020-04-20  JRM Updated for R-4.0.0
 #  
 
 # run this from the command line by:
@@ -23,15 +24,18 @@
 # For mac
 # system_r_library <-'/Library/Frameworks/R.framework/Versions/3.6/Resources/library'
 
+# For win
+system_r_library <-'/Apps/R/R-4.0/R-4.0.0rc/library'
+
+
 install.packages('devtools', system_r_library, dependencies=TRUE)
 install.packages('pdftools', system_r_library, dependencies=TRUE)
 install.packages('tabulizer', system_r_library, dependencies=TRUE)
 install.packages('janitor', system_r_library, dependencies=TRUE)
-install.packages('plotGoogleMaps', system_r_library, dependencies=TRUE)
+# install.packages('plotGoogleMaps', system_r_library, dependencies=TRUE)
 install.packages('RCurl', system_r_library, dependencies=TRUE)
 install.packages('callr', system_r_library, dependencies=TRUE)
 install.packages('prettyunits', system_r_library, dependencies=TRUE)
-install.packages('callr', system_r_library, dependencies=TRUE)
 install.packages('desc', system_r_library, dependencies=TRUE)
 install.packages('pkgbuild', system_r_library, dependencies=TRUE)
 install.packages('tidyverse', system_r_library, dependencies=TRUE)
@@ -58,7 +62,7 @@ install.packages('reticulate', system_r_library, dependencies=TRUE) # R-python i
 install.packages('knitcitations', system_r_library, dependencies=TRUE)
 install.packages('pander', system_r_library, dependencies=TRUE)
 install.packages('rticles', system_r_library, dependencies=TRUE)
-install.packages('rdformats', system_r_library, dependencies=TRUE)
+install.packages('rdformats', system_r_library, dependencies=TRUE) # not avail 4.0
 
 install.packages('binb', system_r_library, dependencies=TRUE)
 
@@ -85,7 +89,6 @@ install.packages('nycflights13', system_r_library, dependencies=TRUE)
 install.packages('RODBC', system_r_library, dependencies=TRUE)
 install.packages('Unicode', system_r_library, dependencies=TRUE)
 install.packages('TeachingDemos', system_r_library, dependencies=TRUE)
-install.packages('plotGoogleMaps', system_r_library, dependencies=TRUE)
 install.packages('tikzDevice', system_r_library, dependencies=TRUE) # now back on CRAN...
 install.packages('mixtools', system_r_library, dependencies=TRUE)
 
