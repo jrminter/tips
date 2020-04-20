@@ -25,6 +25,7 @@ suppressPackageStartupMessages(library("tidyverse"))
 ## Check your path from R
 
 This may be helpful in diagnosing problems with `RTools` on Windows.
+It came from Kevin Ushey [here](https://github.com/rstudio/rstudio/issues/3563).
 
 On MacOS the command `writeLines(strsplit(Sys.getenv("PATH"), ":")[[1]])`
 generates:
