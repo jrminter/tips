@@ -45,7 +45,7 @@ generates:
 ```
 
 On Win 10 the command `writeLines(strsplit(Sys.getenv("PATH"), ";")[[1]])`
-generates:
+generates on jrmSimulationPC:
 
 ```
 C:\Apps\R\R-3.6.3\bin\x64
@@ -70,6 +70,25 @@ C:\Apps\Miniconda3
 C:\Apps\Miniconda3\Scripts
 C:\Users\johnr\AppData\Local\Microsoft\WindowsApps
 ```
+
+and on jrmFastMacWin64
+
+```
+C:\Apps\R\R-3.6.3\bin\x64
+C:\Apps\R\Rtools\bin
+C:\Program Files (x86)\Parallels\Parallels Tools\Applications
+C:\Program Files (x86)\Common Files\Oracle\Java\javapath
+C:\Windows\system32
+C:\Windows
+C:\Windows\System32\Wbem
+C:\Windows\System32\WindowsPowerShell\v1.0\
+C:\Windows\System32\OpenSSH\
+C:\Apps\texlive\2019\bin\win32
+C:\Apps\local\path
+C:\Program Files\Git\cmd
+C:\Users\jrminter\AppData\Local\Microsoft\WindowsApps
+```
+
 
 ## Problems installing packages from Github
 
