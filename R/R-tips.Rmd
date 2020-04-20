@@ -22,6 +22,25 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 # Don't forget...
 
+## Check your path from R
+
+On MacOS the command `writeLines(strsplit(Sys.getenv("PATH"), ":")[[1]])`
+genrates:
+
+```
+~/bin
+/usr/local/bin
+/Library/TeX/texbin
+/Users/jrminter/miniconda3/bin
+/usr/bin
+/bin
+/usr/sbin
+/sbin
+/opt/X11/bin
+/opt/local/bin
+/Applications/RStudio.app/Contents/MacOS/postback
+```
+
 ## Problems installing packages from Github
 
 I keep getting errors like:
