@@ -1,7 +1,7 @@
 ---
 title: "R Systems Administration"
 author: "J. R. Minter"
-date: "Started: 2020-04-14, Last modified: 2020-04-19"
+date: "Started: 2020-04-14, Last modified: 2020-04-20"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -30,6 +30,13 @@ This document contains hints for System administration for R
 
 
 # R Systems Administration for Windows
+
+## R-3.5.1
+
+I am including this tip because of the problem finding RTools in R-4.0.0 beta
+
+Mara Averick posted a solution for being unable to find RTools
+[here](https://community.rstudio.com/t/rtools-not-recognized-r3-5-1-rtools-3-5/11311).
 
 ## R-3.6.3
 
