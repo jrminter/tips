@@ -51,7 +51,6 @@ generates:
 C:\Apps\R\R-3.6.3\bin\x64
 C:\Apps\R\Rtools\bin
 C:\Apps\ImageMagick
-C:\Apps\R\Rtools35\bin
 C:\windows\system32
 C:\windows
 C:\windows\System32\Wbem
