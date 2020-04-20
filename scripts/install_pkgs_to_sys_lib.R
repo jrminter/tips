@@ -25,6 +25,14 @@
 # system_r_library <-'/Library/Frameworks/R.framework/Versions/3.6/Resources/library'
 
 # For win
+# on Crunch R-4.0.0 was in 'C:/Apps/R/R-4.0/R-4.0.0rc/library'
+#           R-Tools40 was in 'C:/Apps/R/R-4.0/rtools40'
+#           The rtools40 installer sets RTOOLS40_HOME, default to standard install path
+#           Look in C:/Apps/R/R-4.0/R-4.0.0rc/etc/i386 Makeconf file: 
+#           RTOOLS40_HOME ?= C:/Apps/R/R-4.0/rtools40
+#           RTOOLS40_ROOT ?= $(subst \,/,$(RTOOLS40_HOME))
+#           similar in the C:/Apps/R/R-4.0/R-4.0.0rc/etc/x64
+#
 system_r_library <-'/Apps/R/R-4.0/R-4.0.0rc/library'
 
 
