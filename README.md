@@ -364,6 +364,8 @@ format.
 
 [Tidy Data](./tidyData/tidyData.html)
 
+[Tidy Models](./tidyModels/tidyModels.html)
+
 [TV](./TV/Tv.html)
 
 [Ubuntu](./ubuntu/ubuntu.html)

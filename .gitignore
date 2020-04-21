@@ -582,7 +582,11 @@ tex/tex-tips.md
 tex/tex-tips.html
 tex/figure/
 
+# tidyData directory
 tidyData/*.html
+
+# tidyModels directory
+tidyModels/*.html
 
 # tv-bluetooth directory
 TV/.DS_Store
