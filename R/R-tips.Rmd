@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-04-20"
+date: "Started: 2013-07-16, Last modified: 2020-04-22"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
