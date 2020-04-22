@@ -70,19 +70,46 @@ On 2020-04-19 on jrmSimulationPC
 
 ## Fun with RTools 4.0 on Windows 10
 
-Date: 2020-04-18
+## Getting R-4.0.0 to find RTools
 
-I have been struggling to get RTools 4.0 running on a Windows-10
-virtual machine trying to get ready for the impending release of R-4.0
-today. 
+From [here](https://cran.r-project.org/bin/windows/Rtools/) The whole page is 
+helpful. This had me pulling hair... For days... **Finally**, here is the
+solution:
 
-I was helped by the setting `.libPaths() = “C:/Apps/R-4.0.0beta/library”.
-Note the default was listed as `\\\\Mac/Apps/R/4.0.0/library` \
-Evidently Parallels messes with the installer...
+> After the installation is completed, you need to perform one more step to be
+> able to compile R packages: you need to put the location of the rtools make
+> utilities (bash, make, etc) on the PATH. The easiest way to do so is create a
+> text file .Renviron in your Documents folder which contains the following
+> line:
+> 
+> ```
+> PATH="${RTOOLS40_HOME}\usr\bin;${PATH}"
+> ```
+>
+> You can do this with a text editor, or you can even do it from R like so:
+>
+> ## Automatically put Rtools on the PATH
+>
+> `writeLines('PATH="${RTOOLS40_HOME}\\usr\\bin;${PATH}"', con = "~/.Renviron")`
+>
+> Now restart R and verify that make can be found, which should show the path to
+> your rtools installation. If this works you can try to install an R package
+> from source:
+>
+> ## Confirm that make.exe is on the PATH
+>
+> ```
+> Sys.which("make")
+> "C:\\rtools40\\usr\\bin\\make.exe"
+> ```
+> 
+> ## Try to install a package
+>
+> ```
+> install.packages("jsonlite", type = "source")
+> ```
+> If this succeeds, you’re good!
 
-
-See the [stackoverflow](https://stackoverflow.com/questions/37922924/rstudio-cant-find-devtools)
-discussion...
 
 # R Systems Administration for MacOS
 
