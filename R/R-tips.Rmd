@@ -62,6 +62,21 @@ solution:
 > ```
 > If this succeeds, you’re good!
 
+## Updating Rtools
+
+> Some R packages require external libraries or software to build. `Rtools40`
+> includes a package manager which you can use to install additional rtools
+> packages.
+> 
+> There should be a shortcut to the Rtools terminal in your Start Menu.
+>
+> Run:
+
+```
+pacman -S mingw-w64-{i686,x86_64}-curl
+```
+
+
 ## Check your path from R
 
 This may be helpful in diagnosing problems with `RTools` on Windows.
