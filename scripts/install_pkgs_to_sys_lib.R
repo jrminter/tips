@@ -33,7 +33,7 @@
 #           RTOOLS40_ROOT ?= $(subst \,/,$(RTOOLS40_HOME))
 #           similar in the C:/Apps/R/R-4.0/R-4.0.0rc/etc/x64
 #
-system_r_library <-'/Apps/R/R-4.0/R-4.0.0rc/library'
+system_r_library <-'C:/Apps/R/R-4.0.0rc/library'
 
 
 install.packages('devtools', system_r_library, dependencies=TRUE)

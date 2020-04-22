@@ -22,6 +22,46 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 # Don't forget...
 
+## Getting R-4.0.0 to find RTools
+
+From [here](https://cran.r-project.org/bin/windows/Rtools/) The whole page is 
+helpful. This had me pulling hair... For days... **Finally**, here is the
+solution:
+
+> After the installation is completed, you need to perform one more step to be
+> able to compile R packages: you need to put the location of the rtools make
+> utilities (bash, make, etc) on the PATH. The easiest way to do so is create a
+> text file .Renviron in your Documents folder which contains the following
+> line:
+> 
+> ```
+> PATH="${RTOOLS40_HOME}\usr\bin;${PATH}"
+> ```
+>
+> You can do this with a text editor, or you can even do it from R like so:
+>
+> ## Automatically put Rtools on the PATH
+>
+> `writeLines('PATH="${RTOOLS40_HOME}\\usr\\bin;${PATH}"', con = "~/.Renviron")`
+>
+> Now restart R and verify that make can be found, which should show the path to
+> your rtools installation. If this works you can try to install an R package
+> from source:
+>
+> ## Confirm that make.exe is on the PATH
+>
+> ```
+> Sys.which("make")
+> "C:\\rtools40\\usr\\bin\\make.exe"
+> ```
+> 
+> ## Try to install a package
+>
+> ```
+> install.packages("jsonlite", type = "source")
+> ```
+> If this succeeds, you’re good!
+
 ## Check your path from R
 
 This may be helpful in diagnosing problems with `RTools` on Windows.
