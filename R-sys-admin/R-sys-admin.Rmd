@@ -1,7 +1,7 @@
 ---
 title: "R Systems Administration"
 author: "J. R. Minter"
-date: "Started: 2020-04-14, Last modified: 2020-04-22"
+date: "Started: 2020-04-14, Last modified: 2020-04-23"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -76,10 +76,13 @@ the correct shell.
 
 2. Update Rtools 4.0 periodically using
 
-```
-$ pacman -S mingw-w64-{i686,x86_64}-curl
-```
+![Joren's example](inc/joren_shell.png)
 
+Copy and paste from the line below...
+
+<font size="5">
+pacman -S mingw-w64-{i686,x86_64}-curl
+</font>
 
 
 ## Getting R-4.0.0 to find RTools
