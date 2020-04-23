@@ -70,6 +70,18 @@ On 2020-04-19 on jrmSimulationPC
 
 ## Fun with RTools 4.0 on Windows 10
 
+1. Create an alias to the `mingw64.exe` 64 bit shell program
+and move it to the desktop or menu and use this to launch
+the correct shell.
+
+2. Update Rtools 4.0 periodically using
+
+```
+$ pacman -S mingw-w64-{i686,x86_64}-curl
+```
+
+
+
 ## Getting R-4.0.0 to find RTools
 
 From [here](https://cran.r-project.org/bin/windows/Rtools/) The whole page is 
@@ -109,6 +121,7 @@ solution:
 > install.packages("jsonlite", type = "source")
 > ```
 > If this succeeds, you’re good!
+
 
 
 # R Systems Administration for MacOS
