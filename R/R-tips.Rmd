@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-04-20"
+date: "Started: 2013-07-16, Last modified: 2020-04-22"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -61,6 +61,21 @@ solution:
 > install.packages("jsonlite", type = "source")
 > ```
 > If this succeeds, you’re good!
+
+## Updating Rtools
+
+> Some R packages require external libraries or software to build. `Rtools40`
+> includes a package manager which you can use to install additional rtools
+> packages.
+> 
+> There should be a shortcut to the Rtools terminal in your Start Menu.
+>
+> Run:
+
+```
+pacman -S mingw-w64-{i686,x86_64}-curl
+```
+
 
 ## Check your path from R
 

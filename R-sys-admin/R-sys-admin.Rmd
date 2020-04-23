@@ -1,7 +1,7 @@
 ---
 title: "R Systems Administration"
 author: "J. R. Minter"
-date: "Started: 2020-04-14, Last modified: 2020-04-20"
+date: "Started: 2020-04-14, Last modified: 2020-04-23"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -70,6 +70,21 @@ On 2020-04-19 on jrmSimulationPC
 
 ## Fun with RTools 4.0 on Windows 10
 
+1. Create an alias to the `mingw64.exe` 64 bit shell program
+and move it to the desktop or menu and use this to launch
+the correct shell.
+
+2. Update Rtools 4.0 periodically using
+
+![Joren's example](inc/joren_shell.png)
+
+Copy and paste from the line below...
+
+<font size="5">
+pacman -S mingw-w64-{i686,x86_64}-curl
+</font>
+
+
 ## Getting R-4.0.0 to find RTools
 
 From [here](https://cran.r-project.org/bin/windows/Rtools/) The whole page is 
@@ -109,6 +124,7 @@ solution:
 > install.packages("jsonlite", type = "source")
 > ```
 > If this succeeds, you’re good!
+
 
 
 # R Systems Administration for MacOS
