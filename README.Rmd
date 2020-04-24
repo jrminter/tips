@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-04-17"
+date: "Started: 2013-07-16, Last modified: 2020-04-24"
 output:
   html_document:
     keep_md: true
@@ -14,7 +14,7 @@ output:
 > Plod. don't sprint. Be fruitful like a tree, not efficient like a machine. Use the gifts God has given you. - Douglas Wilson
 
 This repository contains the John Minter's useful tips in Rmarkdown
-format.
+format.  **Note: as of 2020-04-24 still have some issues w R-4.0.0**
 
 **First**, some quickies:
 
