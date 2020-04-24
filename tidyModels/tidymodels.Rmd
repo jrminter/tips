@@ -30,6 +30,7 @@ Load packages
 ```{r loadPackages}
 library(tidymodels)
 library(parsnip)
+library(generics)
 ```
 
 `tidymodels` also contains a burgeoning list of tagged packages. These can be
