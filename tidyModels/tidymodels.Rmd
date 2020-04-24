@@ -1,7 +1,7 @@
 ---
 title: "Tidy Models"
 author: "Max Kuhn and Edgar Ruiz"
-date: "Original: 2018-08-06 Adapted by JRM: 2020-04-21"
+date: "Original: 2018-08-06 Adapted by JRM: 2020-04-21, prob 04-24..."
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -257,7 +257,10 @@ is used. Finally, to execute the model, the `fit()` function is used. The expect
 arguments are the **formula** and **data**. Notice that the model runs on top of
 the **juiced trained data**.
 
-```{r irisRangerOne}
+# **Runs into trouble below here**
+
+```
+{r irisRangerOne}
 iris_ranger <- rand_forest(trees = 100, mode = "classification") %>%
   set_engine("ranger") %>%
   fit(Species ~ ., data = iris_training)
@@ -266,7 +269,8 @@ iris_ranger <- rand_forest(trees = 100, mode = "classification") %>%
 The payoff is that if we now want to run the same model against `randomForest`,
 we simply change the value in `set_engine()` to “randomForest”.
 
-```{r irisRangerTwo}
+```
+{r irisRangerTwo}
 iris_rf <-  rand_forest(trees = 100, mode = "classification") %>%
   set_engine("randomForest") %>%
   fit(Species ~ ., data = iris_training)
@@ -283,14 +287,16 @@ Instead of a vector, the `predict()` function ran against a `parsnip` model
 returns a `tibble`. By default, the prediction variable is called `.pred_class`.
 In the example, notice that the **baked testing data is used**.
 
-```{r irisPredictOne}
+```
+{r irisPredictOne}
 predict(iris_ranger, iris_testing)
 ```
 
 It is very easy to add the predictions to the baked testing data by using 
 dplyr’s `bind_cols()` function.
 
-```{r irisPredictTwo}
+```
+{r irisPredictTwo}
 iris_ranger %>%
   predict(iris_testing) %>%
   bind_cols(iris_testing) %>%
@@ -304,7 +310,8 @@ automatically choose metrics appropriate for a given type of model. The function
 expects a tibble that contains the actual results (truth) and what the model
 predicted (estimate).
 
-```{r irisValidOne}
+```
+{r irisValidOne}
 iris_ranger %>%
   predict(iris_testing) %>%
   bind_cols(iris_testing) %>%
@@ -315,7 +322,8 @@ Because of the consistency of the new interface, measuring the same metrics
 against the randomForest model is as easy as replacing the model variable at
 the top of the code.
 
-```{r irisValidTwo}
+```
+{r irisValidTwo}
 iris_rf %>%
   predict(iris_testing) %>%
   bind_cols(iris_testing) %>%
@@ -329,7 +337,8 @@ the type argument to `prob`. That will return a tibble with as many variables as
 there are possible predicted values. Their name will default to the original
 value name, prefixed with `.pred_`.
 
-```{r irisClassMetOne}
+```
+{r irisClassMetOne}
 iris_ranger %>%
   predict(iris_testing, type = "prob") %>%
   glimpse()
@@ -338,7 +347,8 @@ iris_ranger %>%
 Again, use `bind_cols()` to append the predictions to the baked testing data
 set.
 
-```{r irisClassMetTwo}
+```
+{r irisClassMetTwo}
 iris_probs <- iris_ranger %>%
   predict(iris_testing, type = "prob") %>%
   bind_cols(iris_testing)
@@ -352,7 +362,8 @@ In this case we are using `gain_curve()`.
 The curve methods include an `autoplot()` function that easily creates a
 ggplot2 visualization.
 
-```{r irisClassMetVizOne}
+```
+{r irisClassMetVizOne}
 iris_probs%>%
   gain_curve(Species, .pred_setosa:.pred_virginica) %>%
   autoplot()
@@ -362,7 +373,8 @@ This is an example of a `roc_curve()`. Again, because of the consistency of the
 interface, only the function name needs to be modified; even the argument values
 remain the same.
 
-```{r irisClassMetVizTwo}
+```
+{r irisClassMetVizTwo}
 iris_probs%>%
   roc_curve(Species, .pred_setosa:.pred_virginica) %>%
   autoplot()
@@ -374,7 +386,8 @@ In this example, using dplyr’s `select()` makes the resulting tibble easier
 to read.
 
 
-```{r irisPredOne}
+```
+{r irisPredOne}
 predict(iris_ranger, iris_testing, type = "prob") %>%
   bind_cols(predict(iris_ranger, iris_testing)) %>%
   bind_cols(select(iris_testing, Species)) %>%
@@ -384,7 +397,8 @@ predict(iris_ranger, iris_testing, type = "prob") %>%
 Pipe the resulting table into `metrics()`. In this case, specify `.pred_class`
 as the estimate.
 
-```{r irisPredTwo}
+```
+{r irisPredTwo}
 predict(iris_ranger, iris_testing, type = "prob") %>%
   bind_cols(predict(iris_ranger, iris_testing)) %>%
   bind_cols(select(iris_testing, Species)) %>%
