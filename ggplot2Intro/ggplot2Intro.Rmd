@@ -1,7 +1,10 @@
 ---
-title: "Making a histogram with ggplot2"
-author: "The DataCamp Blog"
-date: "Original: 2015-03-14, Entered: 2015-04-04, Last modified: 2018-10-11"
+title: "An Introduction to ggplot2"
+author:
+  - From the RGraph Library
+  - From the DataCamp Blog
+  - John Minter (editor)
+date: "Original: 2015-04-04, Last modified: 2020-04-24"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -11,6 +14,78 @@ output:
 ---
 
 [Back to Index](../README.html)
+
+```{r options, message=FALSE, warning=FALSE, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = NA)
+```
+
+# Load libraries
+
+
+```{r, LoadLibraries, message=FALSE}
+library(ggplot2)
+library(ggExtra)
+library(here)
+```
+
+# From the RGraph Gallery
+
+The RGraph Gallery is [here](https://www.r-graph-gallery.com/index.html).
+
+## Two Marginal Plots
+
+We will use the `mtcars` dataset.
+
+Take a peek at the data
+
+```{r, lookAtData}
+head(mtcars)
+```
+
+A classic plot
+
+```{r classicPlot}
+p <- ggplot(mtcars, aes(x=wt, y=mpg, color=cyl, size=cyl)) +
+      geom_point() +
+      theme(legend.position="none")
+p
+```
+
+...With a marginal histogram
+
+```{r marginalHisto}
+p1 <- ggMarginal(p, type="histogram", size=10)
+print(p1)
+```
+
+...With a marginal density
+
+```{r marginalDensity}
+p2 <- ggMarginal(p, type="histogram", fill="slateblue", xparams=list( bins=10))
+print(p2)
+```
+
+...With a marginal boxplot
+
+```{r marginalBoxplot}
+p3 <- ggMarginal(p, margins='x', color="purple", size=4)
+print(p3)
+```
+
+```{r PlotSideBySide}
+require(gridExtra)
+grid.arrange(p1, p2, p3, ncol=3)
+```
+
+```{r savePltAsPdf}
+pa <- paste0(here(),"/ggplot2Intro/pdf/3-col-plt.pdf")
+ggsave(pa, arrangeGrob(p1, p2, p3))
+```
+
+
+# DataCamp
 
 This is from [The DataCamp Blog](http://blog.datacamp.com/make-histogram-ggplot2/)
 
@@ -28,9 +103,6 @@ install.packages("ggplot2")
 
 To effectively load the ``ggplot2`` package, execute the following command.
 
-```{r}
-library(ggplot2)
-```
 
 # Step Two. The Data
 
