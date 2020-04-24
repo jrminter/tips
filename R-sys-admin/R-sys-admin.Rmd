@@ -67,6 +67,29 @@ On 2020-04-19 on jrmSimulationPC
 
 ## Preparing for R-4.0.0
 
+### Saving a list of packages
+
+An interesting idea from `@dailyzad` on [Twitter](https://twitter.com/dailyzad/status/1253506170372980737).
+
+1. Save your packages and versions by:
+
+    ```
+    ip <- installed.packages()
+    saveRDS(ip, "path/to/current_packages.rds")
+    ```
+
+2. After re-installing base R
+
+    ```
+    ip <- readRDS(ip, "path/to/current_packages.rds")
+    install.packages(ip[,1])
+    ```
+    
+    This will re-install your packages. This might work well for a re-install
+    on a new computer, but doesn't make a lot of sense for a major distribution
+    update...
+    
+
 
 ## Fun with RTools 4.0 on Windows 10
 
