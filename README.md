@@ -220,6 +220,8 @@ format.  **Note: as of 2020-04-24 still have some issues w R-4.0.0**
 
 [gfortran](./gfortran/gfortran.html)
 
+[ggplot2 workshop](./ggplot2_workshop/ggplot2_workshop.html)
+
 [Building up a ggplot2 figure](./ggplot2figure/ggplot2-figure.html)
 
 [ggplot2Intro](./ggplot2Intro/ggplot2Intro.html)
