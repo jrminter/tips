@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-04-22"
+date: "Started: 2013-07-16, Last modified: 2020-04-26"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -21,6 +21,10 @@ suppressPackageStartupMessages(library("tidyverse"))
 [Back to Index](../README.html)
 
 # Don't forget...
+
+## Best Shortcuts
+
+![Best R Shortcuts by Preet Chauhan](inc/best_R_shortcuts.png)
 
 ## Getting R-4.0.0 to find RTools
 
