@@ -161,6 +161,214 @@ This information was entered on 2020-04-19
 [1] "/Library/Frameworks/R.framework/Versions/3.6/Resources/library"
 ```
 
+## R-4.0.0
+
+This version uses `XCode` and an installed `gfortran` package. A helpful
+website was
+
+[The Coatless Professor](https://thecoatlessprofessor.com/programming/cpp/r-compiler-tools-for-rcpp-on-macos/)
+
+I archived the key information below
+
+
+### INTRO
+
+The objective behind this post is to provide users with information on how to
+setup the macOS toolchain for compiling used in the 4.y.z series of R. The post
+is structured primarily for macOS Catalina (10.15.z) users.
+
+### REMOVING OLD INSTALLATION FILES
+
+If you previously used either the clang4, clang6, clang7, clang8, or the
+macos-rtools installer, please consider deleting the old components that
+were installed.
+
+Instructions for uninstallation can be found here:
+
+[Uninstalling the R development toolchain on macOS](https://thecoatlessprofessor.com/programming/r/uninstalling-the-r-development-toolchain-on-macos)
+
+That said, please remove both `~/.R/Makevar`s and `~/.Renviron` files prior
+to continuing as they were set in a prior iteration. You can achieve this by
+using:
+
+```
+unlink("~/.R/Makevars")
+unlink("~/.Renviron")
+```
+
+Alternatively, if there is contents inside of the `~/.Renviron` file that must
+be retained, please look for where the `PATH` variable is listed and
+**remove any part** with `clang`.
+
+Open the file in R using:
+
+```
+file.edit("~/.Renviron")
+```
+
+Next, find and remove:
+
+```
+PATH="/usr/local/clang7/bin:${PATH}"
+```
+
+Then, save and close the file. You may need to restart R for the changes to
+take effect.
+
+### INSTALLATION INSTRUCTIONS
+
+One of the primary ways to setup the R toolchain for compiled code on macOS
+is to individually installing each element yourself.
+
+There are two components to the R 4.y.z toolchain based on
+Section: C.3 macOS of
+[R Installation and Administration](https://cran.r-project.org/doc/manuals/r-release/R-admin.html#macOS).
+
+These components are:
+
+- `Xcode Command Line Tools` ("Xcode CLI")
+- gfortran    
+  gfortran 6.3: Sierra (10.12) and High Sierra (10.13)    
+  gfortran 8.2: Mojave (10.14) and Catalina (10.15)
+
+The gfortran component is dependent on the version of macOS being used.
+
+For historical information about the toolchain, please see:
+[R macOS toolchain evolution](https://thecoatlessprofessor.com/programming/cpp/r-macos-toolchain-evolution)
+
+### INSTALL GUIDE
+
+This guide provides a step-by-step breakdown of the actions required to setup
+the toolchain. As a result, this guide will use both installers and script
+commands via `Terminal.app` found in `/Applications/Utilities/`. `Terminal` is
+macOS’ equivalent to Linux’s shell and Window’s command line. From Terminal,
+we will install only the `XCode Command Line Tools` (“Xcode CLI”). These provide
+the system headers used to build the official CRAN binary for R.
+
+### XCODE COMMAND LINE TOOLS
+
+There is a [video](https://youtu.be/Z01lzHNrSdU) available.
+
+Here are the instructions:
+
+
+1. Open the `Terminal` from `/Applications/Utilities/`
+
+2. Type the following into Terminal
+
+  - Note: **Anytime** the Xcode CLI toolchain updates, you
+    must re-run this command.
+
+    ```
+xcode-select --install
+Press “Install”
+    ```
+3. Press “Install”
+
+4. Verify installation by typing into terminal:
+
+    ```
+gcc --version
+    ```
+
+
+### INSTALL OS-SPECIFIC GFORTRAN BINARY
+
+Determine the version of macOS the computer is being run on.
+
+1. Click the Apple menu  in the corner of your screen
+2. Choose “About This Mac”
+3. Look for Version `10.1*` or the name of the operating system.
+
+For additional help in determining this, please see Apple’s support page on
+[Find out which macOS your Mac is using](https://support.apple.com/en-us/HT201260).
+
+Then, download and install the appropriate gfortran binary from the [https://github.com/fxcoudert/gfortran-for-macOS](https://github.com/fxcoudert/gfortran-for-macOS)
+
+- Mojave (10.14) - Catalina (10.15) uses gfortran8.2
+
+  - [Download Link](https://github.com/fxcoudert/gfortran-for-macOS/releases/download/8.2/gfortran-8.2-Mojave.dmg)
+  
+  - [GitHub Release Page Overview](https://github.com/fxcoudert/gfortran-for-macOS/releases/tag/8.2)
+
+- Sierra (10.12) - High Sierra (10.13) uses `gfortran6.3`
+
+  - [Download Link](https://github.com/fxcoudert/gfortran-for-macOS/releases/download/6.3/gfortran-6.3-Sierra.dmg)
+  
+  - [GitHub Release Page Overview](https://github.com/fxcoudert/gfortran-for-macOS/releases/tag/8.2)
+
+
+Both of the installers will place the gfortran binary into `/usr/local/gfortran`. This will be picked up by the default implicit variable set by R during compilation.
+
+### QUICK CHECK
+
+To verify that everything is working appropriately, let’s do a quick
+`C++` program using `Rcpp` and `Armadillo`.
+
+First, let’s install Rcpp and RcppArmadillo within R.
+
+```
+install.packages(c('Rcpp', 'RcppArmadillo'))
+```
+
+Create a new file, name the follow: `helloworld.cpp`
+
+By adding the `.cpp` extension, the file is viewed as being `C++` code.
+
+Within the file write:
+
+```
+#include <RcppArmadillo.h>   
+
+// [[Rcpp::depends(RcppArmadillo)]]
+
+// [[Rcpp::export]]
+void hello_world() {
+  Rcpp::Rcout << "Hello World!" << std::endl;  
+}
+
+// After compile, this function will be immediately called using
+// the below snippet and results will be sent to the R console.
+
+/*** R
+hello_world() 
+*/
+```
+
+Compile the function using:
+
+```
+Rcpp::sourceCpp('path/to/file/helloworld.cpp')
+```
+where 'path/to/file/' is the location containing `helloworld.cpp`
+
+If everything is installed appropriately, then you should see the following in the console:
+
+```
+> hello_world()
+
+Hello World!
+```
+
+In addition, you should have a new function within the global
+environment scope called “hello_world”. You can call this
+function like a normal R function via:
+
+```
+hello_world()
+```
+
+### COMMON ERRORS
+
+The following are debugged errors that you may run into.
+
+```
+clang: warning: argument unused during compilation: '-fopenmp'
+fatal error: 'omp.h' file not found
+```
+
+Unfortunately, with R 4.0.0 the CRAN distributed version of R loses the ability to use OpenMP without a custom setup.
+
 
 
 
