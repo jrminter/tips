@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-04-24"
+date: "Started: 2013-07-16, Last modified: 2020-04-30"
 output:
   html_document:
     keep_md: true
@@ -14,28 +14,39 @@ output:
 > Plod. don't sprint. Be fruitful like a tree, not efficient like a machine. Use the gifts God has given you. - Douglas Wilson
 
 This repository contains the John Minter's useful tips in Rmarkdown
-format.  **Note: as of 2020-04-24 still have some issues w R-4.0.0**
+format.
 
 **First**, some quickies:
 
-1. Keyboard shortcut for the `dplyr` pipe operator
+1. Chrome Bookmarks - How to move a folder...
+
+   From [here](https://support.google.com/chrome/thread/3479132?hl=en).
+   
+   > Under Bookmarks, open Bookmark Manager. If you want to move FOLDERS
+   > that are within another folder (parent folder) you need to select the
+   > parent folder in the left window. Then you click on the NAME of the
+   > folder you want to move in the right side window. DO NOT click on the
+   > little 'folder' icon-- it will not work.
+
+
+2. Keyboard shortcut for the `dplyr` pipe operator
 
    ```
    Win: `%>%` - Ctl + Shift + M    
    Mac: `%>%` - CMD + Shift + M   
    ```
 
-2. Fix a `recurring guthub credential problem` - run:
+3. Fix a `recurring guthub credential problem` - run:
    
   ```
      Sys.unsetenv("GITHUB_PAT")
      Sys.getenv("GITHUB_PAT")
   ```
 
-3. The R `janitor` package is your friend. It cleans up
+4. The R `janitor` package is your friend. It cleans up
    **non-standard column names**.
 
-4. CDC Corona Virus Recommendations
+5. CDC Corona Virus Recommendations
 
    > The CDC recommends washing with soap and water for at least 20 seconds after
    > using the bathroom, before eating and after blowing your nose or sneezing. It
@@ -45,7 +56,7 @@ format.  **Note: as of 2020-04-24 still have some issues w R-4.0.0**
    > “These are all things you can do to prevent the spread of pretty much any
    > respiratory virus,” Brewer said.
 
-5. Closed captions in CBS All access
+6. Closed captions in CBS All access
 
    > Go to www.cbs.com. Find a *full* episode of a series that you're
    > interested in and click on it. To turn the captions on, bring your
@@ -54,7 +65,7 @@ format.  **Note: as of 2020-04-24 still have some issues w R-4.0.0**
    > side, click again on "CC captions" just once.
 
 
-6. The **Feynman** technique of learning:
+7. The **Feynman** technique of learning:
 
     - **Step 1**: Pick and study a topic
 
@@ -66,27 +77,27 @@ format.  **Note: as of 2020-04-24 still have some issues w R-4.0.0**
     
     More [here](./Feynman_technique/Feynman_technique.html)...
     
-7. **Install command line tools** on MacOS
+8. **Install command line tools** on MacOS
 
     `xcode-select --install`
 
-8. **Reset a Fitbit Ionic watch**
+9. **Reset a Fitbit Ionic watch**
 
     Press and hold the left and bottom right buttons at the same time until you
     see the Fitbit logo. Let go of the buttons, and your tracker will restart.
 
-9. **Regex for youtube time stamps**. Useful in SublimeText3!
+10. **Regex for youtube time stamps**. Useful in SublimeText3!
 
    `\d\d:\d\d`
 
-10. **Symbolic links**. I always get this backwards...
+11. **Symbolic links**. I always get this backwards...
 
     ```
        file     link
     ln -s source destination
     ```
 
-11. **Fun snippets**
+12. **Fun snippets**
 
     > Your closest colaborator is you, six months from now    
     > ... and you don't respond to email     
@@ -95,17 +106,17 @@ format.  **Note: as of 2020-04-24 still have some issues w R-4.0.0**
     > DRY (do not repeat yourself) vs WET (waste everyones time) coding styles    
     > - Peter Baker (UseR 2018)
 
-12. **Getting started with data science**
+13. **Getting started with data science**
 
 - A very helpful article from
 [Datacamp](https://www.datacamp.com/community/tutorials/setup-data-science-environment).
 
-13. **Clear the Chrome Cache**
+14. **Clear the Chrome Cache**
 
     - Press "CTRL" + "Shift" + "Delete" keys in Windows or Linux
     - Press "Command" + "Shift" + "Delete"" keys on MacOS.
 
-14. **Delete Specific Cookies in Chrome for Mac OS X**
+15. **Delete Specific Cookies in Chrome for Mac OS X**
 
     From [osxdaily.com](http://osxdaily.com/2016/07/02/delete-cookies-chrome-browser/): You can remove a specific website cookie from Chrome by doing the following:
 
@@ -121,7 +132,7 @@ format.  **Note: as of 2020-04-24 still have some issues w R-4.0.0**
 
     - Avoid cookie placement and cache generation in the first place by using the Chrome `Incognito Mode` private browsing feature.
 
-15. **Automatically download all files in a directory**
+16. **Automatically download all files in a directory**
 
     Let's also exclude all the `index.html` files... 
 
@@ -129,7 +140,7 @@ format.  **Note: as of 2020-04-24 still have some issues w R-4.0.0**
     wget -r --no-parent --reject "index.html*" http://my/url
 ```
 
-16. **How to block someone on Facebook**
+17. **How to block someone on Facebook**
 
     - Click at the top right of Facebook and choose `Settings`.
     - Click `Blocking` in the left side menu.
@@ -137,7 +148,7 @@ format.  **Note: as of 2020-04-24 still have some issues w R-4.0.0**
     - Select the specific person you want to block ans click `Block > Block [name]`
     
 
-17. **HTML Syntax**
+18. **HTML Syntax**
 
     - **A link**
     
