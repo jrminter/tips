@@ -1,0 +1,88 @@
+---
+title: "Lognormal Fit"
+author: "John Minter"
+date: "5/2/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment = NA)
+```
+
+```{r loadPackages}
+library(MASS)
+library(readr)
+library(ggplot2)
+library(UsingR)
+```
+
+```{r, fsTest}
+summary(father.son)
+
+```
+```{r, fsPlot}
+ggplot(father.son) + geom_qq(aes(sample = fheight))
+```
+
+
+
+
+
+
+
+
+First, set parameters and load the data
+
+```{r loadData}
+strCol <- "ECD_µm"
+strLongTitle <- "qm-02481_NiSO4_M-3000 hrs"
+strShortTitle <- "qm-02481_NiSO4_M-post"
+strQqFile <- "qm-02481_NiSO4_M-post_qq.pdf"
+strHistFile <- "qm-02481_NiSO4_M-post_hist.pdf"
+strOutFile <- "StreamNozzleID_out.csv"
+nBins <- 25 # number histogram bins
+nCalc <- 40 # number of calculated points
+df <- read_csv("qm-02481_NiSO4_M-post.csv")
+summary(df)
+```
+
+Next, extract the `ECD` data
+
+```{r getECD}
+ecd <- df$ECD_um
+(f <- fitdistr(ecd, 'lognormal'))
+```
+
+Compute the Geometric Mean Diameter (`GMD`) and the
+Geometric Standard Distribution (`GSD`)
+
+```{r calcGMD}
+gmd <- round(exp(f$estimate[[1]]),3)
+gsd <- round(exp(f$estimate[[2]]),3)
+print(c(gmd, gsd))
+```
+
+Make the first plot, using base graphics
+
+```{r firstPlot}
+xlab <- paste('Lognormal(gmd =', gmd)
+xlab <- paste(xlab,' [µm], gsd =')
+xlab <- paste(xlab, gsd)
+xlab <- paste(xlab,')')
+strYlab <- paste(strShortTitle, ' ', strCol)
+qqplot(qlnorm(ppoints(ecd), meanlog=f$estimate[[1]],
+              sdlog=f$estimate[[2]]),
+       ecd, main='QQ plot (Lognormal)', xlab=xlab, ylab=strYlab )
+grid()
+dev.copy(pdf, file=strQqFile, height=8.5, width=11, onefile=T)
+dev.off()
+```
+
+Let's try ggplot2
+
+```{r firstGGplot}
+plt <- ggplot(df, aes(sample=ECD_um)) + geom_qq(distribution=qlnorm) +
+       NULL
+print(plt)
+```
+

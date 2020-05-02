@@ -1,0 +1,37 @@
+---
+title: "foo"
+author: "John Minter"
+date: "5/2/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment = NA,  message=FALSE)
+```
+
+Load packages
+
+```{r loadPkgs}
+
+library(dplyr)
+library(ggplot2)
+library(qqplotr)
+# for using `%>%` and later data transformation
+```
+
+```{r makePlot}
+data(urine, package = "boot")
+
+urine %>%
+ggplot(aes(sample = ph)) +
+ggtitle("Normal") +
+xlab("Normal quantiles") +
+ylab("pH measurements quantiles") +
+stat_qq_band(bandType = "pointwise", fill = "#8DA0CB", alpha = 0.4) +
+stat_qq_line(colour = "#8DA0CB") +
+stat_qq_point() +
+theme_light() +
+ylim(3.2, 8.7) +
+  
+NULL
+```

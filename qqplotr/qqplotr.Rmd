@@ -1,0 +1,120 @@
+---
+title: "Test-qqplotr"
+author: "J. R. Minter"
+date: "Started: 2020-05-02, Last modified: 2020-05-02"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment=NA)
+```
+
+[Back to Index](../README.html)
+
+```{r loadLibs, message=FALSE}
+library(qqplotr)
+library(lattice)
+library(dplyr)
+library(MASS)
+library(readr)
+library(ggplot2)
+library(UsingR)
+library(here)
+library(fitdistrplus)
+
+```
+
+```{r getData}
+data("barley", package = "lattice")
+head(barley)
+```
+
+
+
+```{r pick}
+df <- barley %>% filter(site=="Duluth")
+```
+```{r DataSummary}
+summary(df)
+```
+
+```{r TestPlot}
+gg <- ggplot(data = df, mapping = aes(sample = yield, color = site, fill = site)) +
+    stat_qq_band(alpha=0.5) +
+    stat_qq_line() +
+    stat_qq_point() +
+    # facet_wrap(~ site) +
+    labs(x = "Theoretical Quantiles", y = "Sample Quantiles")
+gg
+```
+# Another example
+
+```{r loadDataPsd}
+
+pa <- paste0(here::here(), "/qqplotr/qm-02481_NiSO4_M-post.csv")
+df_size <- read_csv(pa)
+summary(df_size)
+```
+
+
+```{r fitDistr}
+x <- df_size$ECD_um
+(f<-fitdistr(x, 'lognormal'))
+summary(f)
+```
+
+Compute the geometric man and sd.
+
+```{r compGeomMeans}
+gmd <- round(exp(f$estimate[[1]]),3)
+gsd <- round(exp(f$estimate[[2]]),3)
+
+c(gmd, gsd)
+
+```
+
+Do a base graphics plot...
+
+```{r baseGraphicsPlt}
+strLongTitle <- "qm-02481_NiSO4_M-3000 hrs"
+strShortTitle <- "qm-02481_NiSO4_M-post"
+strCol <- "ECD [µm]"
+
+xlab <- paste('Lognormal(gmd =', gmd)
+xlab <- paste(xlab,' [µm], gsd =')
+xlab <- paste(xlab, gsd)
+xlab <- paste(xlab,')')
+strYlab <- paste(strShortTitle, ' ', strCol)
+strHistFile <- "qm-02481_NiSO4_M-post_hist.pdf"
+strQqFile <- "qm-02481_NiSO4_M-post_qq.pdf"
+qqplot(qlnorm(ppoints(x),
+       meanlog=f$estimate[[1]], sdlog=f$estimate[[2]]),
+       x, main='QQ plot (Lognormal)', xlab=xlab, ylab=strYlab)
+grid()
+dev.copy(pdf, file=strQqFile, height=8.5, width=11, onefile=T)
+dev.off()
+
+```
+
+# A ggplot2 version
+
+
+```{r ggplotVerQQ}
+
+plt <- ggplot(aes(sample=df_size),
+              aes(x=ECD_um),
+                   y=) +
+       NULL
+
+plt
+
+```
+
+
+[Back to Index](../README.html)
