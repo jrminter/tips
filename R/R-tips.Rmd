@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-04-26"
+date: "Started: 2013-07-16, Last modified: 2020-05-02"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -25,6 +25,23 @@ suppressPackageStartupMessages(library("tidyverse"))
 ## Best Shortcuts
 
 ![Best R Shortcuts by Preet Chauhan](inc/best_R_shortcuts.png)
+
+## Helpful R OpenSci Packages
+
+See the list [here](https://ropensci.org/packages/)
+
+These helpful packages are on CRAN
+
+- ijtiff
+- magick
+- pdftools 
+- RefManageR
+- writexl
+
+
+
+
+
 
 ## Getting R-4.0.0 to find RTools
 
