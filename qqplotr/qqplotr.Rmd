@@ -104,17 +104,7 @@ dev.off()
 
 # A ggplot2 version
 
-
-```{r ggplotVerQQ}
-
-plt <- ggplot(aes(sample=df_size),
-              aes(x=ECD_um),
-                   y=) +
-       NULL
-
-plt
-
-```
+To be fixed...
 
 
 [Back to Index](../README.html)
