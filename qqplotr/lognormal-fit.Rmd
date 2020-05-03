@@ -1,12 +1,17 @@
 ---
 title: "Lognormal Fit"
 author: "John Minter"
-date: "5/2/2020"
-output: html_document
+date: "original, Started: 2020-05-02, Last modified: 2020-05-02"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, comment = NA)
+knitr::opts_chunk$set(echo = TRUE, comment = NA, message=FALSE)
 ```
 
 ```{r loadPackages}

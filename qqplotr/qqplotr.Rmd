@@ -1,5 +1,5 @@
 ---
-title: "Test-qqplotr"
+title: "qqplotr"
 author: "J. R. Minter"
 date: "Started: 2020-05-02, Last modified: 2020-05-02"
 output:

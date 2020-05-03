@@ -1,15 +1,16 @@
 ---
 title: "An Introduction to 'qqplotr'"
 author: "Alexandre Almeida and Adam Loy"
-date: "`r Sys.Date()`"
+date: "Started: 2020-05-02, Last modified: 2020-05-02"
 output:
-  rmarkdown::html_vignette:
-    toc: true
-vignette: >
-  %\VignetteIndexEntry{An Introduction to qqplotr}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
 ---
+
+# Introduction
 
 This vignette presents a in-depth overview of the `qqplotr` package.
 
@@ -20,7 +21,7 @@ detrend adjustment of the plots, proposed by Thode (2002) to help reduce visual
 bias when assessing the results.
 
 
-## Installation
+# Installation
 
 If you would like to install the development version of `qqplotr`, you may do so
 by using, for example, `devtools`:
@@ -37,7 +38,7 @@ If, instead, you wish to install the stable CRAN version, then simply do:
 install.packages("qqplotr")
 ```
 
-## Details
+# Details
 
 The functions of this package, implemeneted as Stats from `ggplot2`, are divided
 into two groups: (1) Q-Q and (2) P-P plots.
@@ -49,7 +50,7 @@ independently.
 Below we will give an overview of all those Stats and, further in the document,
 we will present some usage examples.
 
-### Q-Q plot
+## Q-Q plot
 
 * `stat_qq_point` This is a modified version of `ggplot2::stat_qq` 
 with some parameters adjustments and a new option to detrend the points.
@@ -67,7 +68,7 @@ In order to facilitate the visualization of multiple Q-Q band methods at the
 same time, the `geom_qq_band` Geom was also implemented. Its usage will be 
 illustrated further below.
 
-### P-P plot
+## P-P plot
 
 * `stat_pp_point` Plots cumulative probabilities versus probability points. The 
 cumulative probability function is constructed with the sample data, and then
@@ -76,9 +77,9 @@ evaluated at each probability point.
 * `stat_pp_band` Draws confidence bands. For now, only the bootstrap version
 (`"boot"`) is available.
 
-## Usage
+# Usage
 
-### Q-Q plot
+## Q-Q plot
 
 Start by loading the `qqplotr` package:
 
@@ -203,7 +204,7 @@ gg <- ggplot(data = barley, mapping = aes(sample = yield, color = site, fill = s
 gg
 ```
 
-### P-P plot
+## P-P plot
 
 Let's start by plotting the previously simulated Normal data versus the standard
 Normal distribution:
@@ -279,7 +280,7 @@ let the most P-P points inside the confidence bands. Even so, that group of
 outside the confidence bands (at the lower tail) indicate that a more
 appropriate distribution should be selected.
 
-## Shiny App
+# Shiny App
 
 In this package, we also included an interactive Shiny app with which you're 
 able to explore this package functions and its parameters. To run the app,
