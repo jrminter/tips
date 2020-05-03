@@ -10,6 +10,8 @@ output:
     toc_depth: 3
 ---
 
+[Back to Index](../README.html)
+
 # Introduction
 
 This vignette presents a in-depth overview of the `qqplotr` package.
@@ -296,3 +298,5 @@ runShinyExample()
 * [Aldor-Noiman, S. et al. (2013). The Power to See: A New Graphical Test of
 Normality. The American
 Statistician. 67:4.](http://www.tandfonline.com/doi/abs/10.1080/00031305.2013.847865)
+
+[Back to Index](../README.html)

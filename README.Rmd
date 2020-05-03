@@ -311,6 +311,8 @@ format.
 
 [python image processing with skimage](./skimage/skimage.html)
 
+[qqplotr](./qqplotr/qqplotr.html)
+
 [R](./R/R-tips.html)
 
 [R-Anova](./R-Anova/R-Anova.html)

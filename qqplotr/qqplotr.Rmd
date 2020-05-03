@@ -15,8 +15,6 @@ output:
 knitr::opts_chunk$set(echo = TRUE, comment=NA)
 ```
 
-[Back to Index](../README.html)
-
 ```{r loadLibs, message=FALSE}
 library(qqplotr)
 library(lattice)
@@ -29,6 +27,12 @@ library(here)
 library(fitdistrplus)
 
 ```
+
+[Back to Index](../README.html)
+
+Note see [Intro to qqplotr](./intro-to-qqplotr.html), 
+[lognormal fit](./lognormal-fit.html), and
+[Plot urine data](./plotUrineData.html).
 
 ```{r getData}
 data("barley", package = "lattice")
@@ -106,5 +110,3 @@ dev.off()
 
 To be fixed...
 
-
-[Back to Index](../README.html)
