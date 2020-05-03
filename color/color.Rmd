@@ -1,7 +1,7 @@
 ---
 title: "Tips on Using Color"
 author: "J. R. Minter"
-date: "Started: 2013-07-23, Last modified: 2018-10-11"
+date: "Started: 2013-07-23, Last modified: 2020-05-03"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -79,6 +79,33 @@ par(mar=std.mar)
 
 
 # Some Palettes I like
+
+## From Color Cafe
+
+### Color Cafe 275
+
+```{r,fig.width=7,fig.height=1}
+pal <- c("#1D3752","#214D72","#2C7695","#50BFC3","#F7C232")
+names(pal) <- c("","","","","")
+std.mar <- par()$mar
+par(mar = rep(0, 4)) 
+image(matrix(1:5), col = pal, axes = FALSE)
+par(mar=std.mar)
+```
+
+### Color Cafe 408
+
+```{r,fig.width=7,fig.height=1}
+pal <- c("#1E3F63","#307FE2","#5BD0E6","#FFFFFF")
+names(pal) <- c("","","","")
+std.mar <- par()$mar
+par(mar = rep(0, 4)) 
+image(matrix(1:4), col = pal, axes = FALSE)
+par(mar=std.mar)
+```
+
+
+
 
 ## Colors that look OK with Kodak colors...
 ```
