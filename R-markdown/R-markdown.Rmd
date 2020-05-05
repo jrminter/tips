@@ -47,7 +47,7 @@ YAML like this:
 ```
 output:
   html_document:
-    css: styles.css
+    css: style.css
 ```
 
 
