@@ -1,7 +1,7 @@
 ---
 title: "R-Markdown Tips"
 author: "J. R. Minter"
-date: "Started: 2016-12-08, Last modified: 2020-01-10"
+date: "Started: 2016-12-08, Last modified: 2020-05-04"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -24,6 +24,33 @@ library(lubridate)
 author to generate attractive documents that are stored in plain text files
 that are compatible with version control. This works very well in the
 **RStudio** environment.
+
+## Some key tips
+
+1. Control the width of the HTML output
+
+Insert the following below the YAML
+
+```
+<style type="text/css">
+.main-container {
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+```
+
+Another approach would be to save this a `style.css` and add to the
+YAML like this:
+
+```
+output:
+  html_document:
+    css: styles.css
+```
+
+
 
 ## Some key resources
 
