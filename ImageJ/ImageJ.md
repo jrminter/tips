@@ -17,6 +17,29 @@ output:
 
 I have collected these tips both from experience and from a very helpful user community.
 
+## [Neubias Academy](http://neubaisacademey.org/)
+
+Kota Miura coordinates [In Defense of Image Data & Analysis Integrity](https://www.youtube.com/watch?v=c_Oi2HKom_Y)
+
+Kota recommends a package - `InspectJ` - to evaluate images.
+The package runs under ImageJ and Fiji. It was developed by
+ZMBH-Imaging-Facility. It may be downloaded from
+github [here](https://github.com/ZMBH-Imaging-Facility/InspectJ).
+There are tutorial videos on Youtube. A copy of of the `InspectJ_v2.ijm` is
+in the `ImageJ/key-macros` folder in this `tips` repository.
+
+
+1. [Teaser](https://www.youtube.com/watch?v=7UbWDmupxjE&list=PL9e7IFrONWL7_rJqVKki1Ee0FvqXRl4Ch&index=1)
+2. [Intro](https://www.youtube.com/watch?v=KdnEba81X6s&list=PL9e7IFrONWL7_rJqVKki1Ee0FvqXRl4Ch&index=2)
+3. [Inspecting Fluorescence Images](https://www.youtube.com/watch?v=W11ixmbjFkk&list=PL9e7IFrONWL7_rJqVKki1Ee0FvqXRl4Ch&index=3)
+4. [How to Download InspectJ](https://www.youtube.com/watch?v=z6qBhyX4YUI&list=PL9e7IFrONWL7_rJqVKki1Ee0FvqXRl4Ch&index=4)
+5. [How to Dowbload ImageJ and Fiji](https://www.youtube.com/watch?v=6881JWPl5TE)
+6. [Advanced Settings](https://www.youtube.com/watch?v=DjqCeS_-NvU&list=PL9e7IFrONWL7_rJqVKki1Ee0FvqXRl4Ch&index=6)
+7. [How to analyze images from the web or PDF documents](https://www.youtube.com/watch?v=CJrPdsz98FQ&list=PL9e7IFrONWL7_rJqVKki1Ee0FvqXRl4Ch&index=7)
+8. [How ro check for cloned objects across images](https://www.youtube.com/watch?v=87wD2_K5Uzk&list=PL9e7IFrONWL7_rJqVKki1Ee0FvqXRl4Ch&index=8)
+9. [How InspectJ deals with diffent image types](https://www.youtube.com/watch?v=s_eTMkhg93k&list=PL9e7IFrONWL7_rJqVKki1Ee0FvqXRl4Ch&index=9)
+
+
 ## A presentation by Robert Haase _et al._
 
 **_Nota Bene_**: The presentation by Robert Haase _et al._ that is 
