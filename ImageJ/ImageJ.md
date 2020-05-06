@@ -26,7 +26,8 @@ The package runs under ImageJ and Fiji. It was developed by
 ZMBH-Imaging-Facility. It may be downloaded from
 github [here](https://github.com/ZMBH-Imaging-Facility/InspectJ).
 There are tutorial videos on Youtube. A copy of of the `InspectJ_v2.ijm` is
-in the `ImageJ/key-macros` folder in this `tips` repository.
+in the `ImageJ/key-macros` folder in this `tips` repository. Install this
+in the `Fiji/macros` directory. 
 
 
 1. [Teaser](https://www.youtube.com/watch?v=7UbWDmupxjE&list=PL9e7IFrONWL7_rJqVKki1Ee0FvqXRl4Ch&index=1)
