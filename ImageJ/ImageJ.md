@@ -1,7 +1,7 @@
 ---
 title: "Image-J Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-02-28"
+date: "Started: 2013-07-16, Last modified: 2020-05-06"
 output:
   html_document:
     keep_md: yes
