@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-05-04"
+date: "Started: 2013-07-16, Last modified: 2020-05-08"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -21,6 +21,11 @@ suppressPackageStartupMessages(library("tidyverse"))
 [Back to Index](../README.html)
 
 # Don't forget...
+
+## Rmarkdown Project Templates
+
+I have a couple of zipped project templates
+in Dropbox/R. This make life easier...
 
 ## Best Shortcuts
 
