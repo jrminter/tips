@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-03-17"
+date: "Started: 2013-07-16, Last modified: 2020-05-11"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -24,6 +24,20 @@ There are **lot** of keyboard shortcuts...
 2. From Keyboard press `CMD + Option + Escape`
 
     ![](png/Apple_Keyboard_Map_Restart_sm.png)
+    
+# Screen Recording
+
+These instructions are for MacOS Catalina. The default application for
+screen recording is `Quicktime Player`. It does not work well for me.
+I prefer `Photo Booth`. Click the Movie Frame icon. 
+
+1. Record screen with photobooth. It will save as file.mov
+2. Use `ffmpeg test-3.mov test-3.mp4` to compress.
+
+
+
+
+
 
 # Set default applications
 
