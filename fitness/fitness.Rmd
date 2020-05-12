@@ -48,6 +48,19 @@ while still holding the other buttons.
 
 Your watch was now reset – you should have no problems using it!
 
+# Connect Fitbit to WiFi
+
+> How To Connect Fitbit Ionic To Wi-Fi    
+> From the Fitbit app dashboard, tap or click the Account icon – your watch tile.
+Tap or click Wi-Fi Settings.
+Tap or click Add Network and follow the on-screen instructions to connect your watch.
+
+> How do I change the Wi-Fi network my Fitbit watch is connected to?    
+> 
+> 1. In the Fitbit app, tap the Today tab > your profile picture > your watch tile.
+> 2. Tap Wi-Fi Settings. Wait a moment for the list of networks to appear.
+> 3. Tap the network name, then tap Connect.
+
 # How to Fall Asleep
 
 From FitBit video dated 2020-05-03
