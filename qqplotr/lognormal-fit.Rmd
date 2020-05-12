@@ -9,7 +9,7 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE, comment = NA)
 ```
 
-```{r loadPackages}
+```{r loadPackages, message=FALSE}
 library(MASS)
 library(readr)
 library(ggplot2)
