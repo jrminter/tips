@@ -1,17 +1,12 @@
 ---
 title: "Lognormal Fit"
 author: "John Minter"
-date: "original, Started: 2020-05-02, Last modified: 2020-05-02"
-output:
-  html_document:
-    css: ../theme/jm-gray-vignette.css
-    number_sections: yes
-    toc: yes
-    toc_depth: 3
+date: "5/2/2020"
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, comment = NA, message=FALSE)
+knitr::opts_chunk$set(echo = TRUE, comment = NA)
 ```
 
 ```{r loadPackages}
@@ -35,7 +30,7 @@ ggplot(father.son) + geom_qq(aes(sample = fheight))
 
 
 
-
+ggplotVers
 First, set parameters and load the data
 
 ```{r loadData}
