@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-05-11"
+date: "Started: 2013-07-16, Last modified: 2020-05-12"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -16,6 +16,15 @@ output:
 There are **lot** of keyboard shortcuts...
 
 [A handy PDF](pdf/mac-keyboard-shortcuts.pdf) ...
+
+# Update homebrew
+
+Bob Rudis recommends:
+
+```
+brew update && brew upgrade && brew cleanup
+```
+
 
 # Force quit an application
 
