@@ -1,0 +1,96 @@
+---
+title: "Visualizing Chemical Structures with `MolView`"
+author: "John Minter"
+date: '2020-05-11'
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
+---
+
+[Back to Index](../README.html)
+
+```{r options, message=FALSE, warning=FALSE, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = NA)
+```
+
+
+# Visualizing Chemical Structures
+
+Chemists and students studying Chemistry typically need to draw visual
+representations of chemical structures. Before computers were common, chemists
+had plastic templates to trace differebt features to build up structures.
+
+There are now several expensive software packages to do this. Examples are
+[ACD Chemsketch](https://www.acdlabs.com/resources/freeware/chemsketch/)
+which has a free version for personal/academic use. It runs on `Windows 64 bit`
+computers. ACD Labs notes that it will run on MacOS in a Windows Virtual
+Machine.
+
+There is also a package called [Chem Doodle](https://www.chemdoodle.com/)
+that runs on Windows, MacOS, and Linux. It sounds great, right? There is
+a problem: The license costs $15/month or $150/year ot $750/life. Ouch!
+
+Here is the good news: There is a website online that serves an Open Source
+package called [MolView](http://molview.org/). This is great: No software to
+download. It runs in your Web Browser!
+
+There is a manual available in PDF format
+[here](http://molview.org/docs/manual.pdf). There is a helpful video
+by Roger Nixon on [YouTube](https://www.youtube.com/watch?v=BamwweL2B4E)
+that demonstrates how to use MolView.
+
+One advantage of Molview is that one can find input data for many
+organic molecules on the [Pubchem](https://pubchem.ncbi.nlm.nih.gov/) website.
+This makes it easy to find molecular structures.
+
+One can query for a molecule like
+[toluene](https://pubchem.ncbi.nlm.nih.gov/#query=toluene). Note that Pubchem
+lists an `InChIKey` for toluene: `YXFVVABEGXRONW-UHFFFAOYSA-N`. If one
+types that key into the Molview `search box` at the top,
+Molview will draw the structure. That is really helpful!
+
+![Toluene Example](png/toluene_example.png)
+
+We can also toggle certain features (like bonds and H) in the display
+
+![Toggle Bonds](png/toggle_bonds.png)
+We can search for `benzoic acid` on PubChem. The search returns
+
+![Benzoic Acid on PubChem](png/pubchem_benzoic_acid.png)
+
+Note the key information:
+
+```
+MF: C7H6O2  MW: 122.12g/mol  
+InChIKey: WPYMKLBDIGXBTP-UHFFFAOYSA-N  
+IUPAC Name: benzoic acid  
+```
+
+Let's use the InChIKey to get the structure in MolView
+
+![benzoic acid](png/benzoic_acid.png)
+
+
+
+
+
+# Export Data
+
+Note what you can export from the `tools` menu:
+
+![](png/tools_dropdown.png)
+
+
+
+
+
+[Back to Index](../README.html)
+
