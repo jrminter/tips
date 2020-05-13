@@ -1,7 +1,7 @@
 ---
 title: "R-Markdown Tips"
 author: "J. R. Minter"
-date: "Started: 2016-12-08, Last modified: 2020-05-04"
+date: "Started: 2016-12-08, Last modified: 2020-05-12"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -49,6 +49,21 @@ output:
   html_document:
     css: style.css
 ```
+
+2. Render markdown code in a RMarkdown Document
+
+   From [support.rstudio](https://support.rstudio.com/hc/en-us/articles/360018181633-Including-verbatim-R-code-chunks-inside-R-Markdown)
+
+   The code below will be rendered
+
+   ![A markdown snippet in a .Rmd document](png/markdown_snippet.png)
+
+
+    ````markdown
+`r ''````{r}
+plot(cars)
+```
+    ````
 
 
 
