@@ -504,6 +504,10 @@ research/*.md
 research/*.html
 research/*.htm
 
+# screencast directory
+screencast/.DS_Store
+screencast/*.html
+
 # Salabim directory
 Salabim/.DS_Store
 Salabim/DE*

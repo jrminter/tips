@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-04-30"
+date: "Started: 2013-07-16, Last modified: 2020-05-15"
 output:
   html_document:
     keep_md: true
@@ -18,7 +18,14 @@ format.
 
 **First**, some quickies:
 
-1. Chrome Bookmarks - How to move a folder...
+1. Today I learned (TIL)
+
+   2020-05-14:    
+   **Do not update your iPhone OS right before a run**. The update
+   **appeared** to be done, but my music was skipping for about
+   20 min. Guess there was processing in the background.
+
+2. Chrome Bookmarks - How to move a folder...
 
    From [here](https://support.google.com/chrome/thread/3479132?hl=en).
    
@@ -29,24 +36,24 @@ format.
    > little 'folder' icon-- it will not work.
 
 
-2. Keyboard shortcut for the `dplyr` pipe operator
+3. Keyboard shortcut for the `dplyr` pipe operator
 
    ```
    Win: `%>%` - Ctl + Shift + M    
    Mac: `%>%` - CMD + Shift + M   
    ```
 
-3. Fix a `recurring guthub credential problem` - run:
+4. Fix a `recurring guthub credential problem` - run:
    
   ```
      Sys.unsetenv("GITHUB_PAT")
      Sys.getenv("GITHUB_PAT")
   ```
 
-4. The R `janitor` package is your friend. It cleans up
+5. The R `janitor` package is your friend. It cleans up
    **non-standard column names**.
 
-5. CDC Corona Virus Recommendations
+6. CDC Corona Virus Recommendations
 
    > The CDC recommends washing with soap and water for at least 20 seconds after
    > using the bathroom, before eating and after blowing your nose or sneezing. It
@@ -56,7 +63,7 @@ format.
    > “These are all things you can do to prevent the spread of pretty much any
    > respiratory virus,” Brewer said.
 
-6. Closed captions in CBS All access
+7. Closed captions in CBS All access
 
    > Go to www.cbs.com. Find a *full* episode of a series that you're
    > interested in and click on it. To turn the captions on, bring your
@@ -65,7 +72,7 @@ format.
    > side, click again on "CC captions" just once.
 
 
-7. The **Feynman** technique of learning:
+8. The **Feynman** technique of learning:
 
     - **Step 1**: Pick and study a topic
 
@@ -77,27 +84,27 @@ format.
     
     More [here](./Feynman_technique/Feynman_technique.html)...
     
-8. **Install command line tools** on MacOS
+9. **Install command line tools** on MacOS
 
     `xcode-select --install`
 
-9. **Reset a Fitbit Ionic watch**
+10. **Reset a Fitbit Ionic watch**
 
     Press and hold the left and bottom right buttons at the same time until you
     see the Fitbit logo. Let go of the buttons, and your tracker will restart.
 
-10. **Regex for youtube time stamps**. Useful in SublimeText3!
+11. **Regex for youtube time stamps**. Useful in SublimeText3!
 
    `\d\d:\d\d`
 
-11. **Symbolic links**. I always get this backwards...
+12. **Symbolic links**. I always get this backwards...
 
     ```
        file     link
     ln -s source destination
     ```
 
-12. **Fun snippets**
+13. **Fun snippets**
 
     > Your closest colaborator is you, six months from now    
     > ... and you don't respond to email     
@@ -106,17 +113,17 @@ format.
     > DRY (do not repeat yourself) vs WET (waste everyones time) coding styles    
     > - Peter Baker (UseR 2018)
 
-13. **Getting started with data science**
+14. **Getting started with data science**
 
 - A very helpful article from
 [Datacamp](https://www.datacamp.com/community/tutorials/setup-data-science-environment).
 
-14. **Clear the Chrome Cache**
+15. **Clear the Chrome Cache**
 
     - Press "CTRL" + "Shift" + "Delete" keys in Windows or Linux
     - Press "Command" + "Shift" + "Delete"" keys on MacOS.
 
-15. **Delete Specific Cookies in Chrome for Mac OS X**
+16. **Delete Specific Cookies in Chrome for Mac OS X**
 
     From [osxdaily.com](http://osxdaily.com/2016/07/02/delete-cookies-chrome-browser/): You can remove a specific website cookie from Chrome by doing the following:
 
@@ -132,7 +139,7 @@ format.
 
     - Avoid cookie placement and cache generation in the first place by using the Chrome `Incognito Mode` private browsing feature.
 
-16. **Automatically download all files in a directory**
+17. **Automatically download all files in a directory**
 
     Let's also exclude all the `index.html` files... 
 
@@ -140,7 +147,7 @@ format.
     wget -r --no-parent --reject "index.html*" http://my/url
 ```
 
-17. **How to block someone on Facebook**
+18. **How to block someone on Facebook**
 
     - Click at the top right of Facebook and choose `Settings`.
     - Click `Blocking` in the left side menu.
@@ -148,7 +155,7 @@ format.
     - Select the specific person you want to block ans click `Block > Block [name]`
     
 
-18. **HTML Syntax**
+19. **HTML Syntax**
 
     - **A link**
     
@@ -352,6 +359,8 @@ format.
 [Reproducible Research](./ReproducibleResearch/ReproducibleResearch.html)
 
 [Research](./research/research.html)
+
+[Screen Cast](./screencast/screencast.html)
 
 [SEM](./SEM/SEM.html)
 
