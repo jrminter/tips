@@ -13,4 +13,59 @@ output:
 
 # How to make a screen cast movie in PowerPoint
 
+## Mac warning
+
+Note this from [UWMilwaukee](https://kb.uwm.edu/uwmhd/page.php?id=55888).
+
+The workaround:
+
+> Since recording audio over slides in PowerPoint for Mac
+> **is not supported**, this article details how to use QuickTime to do
+> a screen recording of a PowerPoint presentation with audio recorded
+> from the internal microphone.
+
+- Open Quicktime
+
+- Go to the file menu and select "New Screen Recording"
+
+- The Screen recording window will open
+
+- Click on the down arrow next to the record button and select the
+  microphone as the Internal Microphone
+  
+- Click the record button. Drag to record the part of the screen.
+  End recording by clicking the stop button in the menu bar.
+  
+- Once the recording starts, start the Power Point presentation and
+  speak as needed during reporting.
+  
+- Once recording is completed, click the stop button on the menu bar.
+  A window will come up. Go to File and click Save. Save the file to
+  your desk top.
+  
+**This** is why I needed to render on the PC!!!
+
+
+## PC ideas
+
+1. Make a PowerPoint template that you like. **Simple** is better.    
+   Less is more...
+   I have an example I like in `john_blue_theme.potx`
+
+2. Prepare each slide. Each slide should let you make **one point**.
+   You have been preparing for a long time. You know the flow of your
+   argument. The audience doesn't. Use the the slide to bring them along
+   in your flow of your argument (logical flow of ideas.)
+
+3. Write a narration for each slide in your favorite text editor. This
+   will be your script when you record audio.
+
+4. Record the audio for each slide. Note the red arrow pointing to the
+   audio icon. I dragged it out of the frame. If you don't like the
+   audio recording, delete it and record again.
+   ![](img/slide_w_audio_marker.png)
+   
+5. When done, render the `.mp4` video.
+
+
 [Back to Index](../README.html)

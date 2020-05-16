@@ -4,7 +4,7 @@ author:
   - From the RGraph Library
   - From the DataCamp Blog
   - John Minter (editor)
-date: "Original: 2015-04-04, Last modified: 2020-04-24"
+date: "Original: 2015-04-04, Last modified: 2020-05-15"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -28,7 +28,45 @@ knitr::opts_chunk$set(
 library(ggplot2)
 library(ggExtra)
 library(here)
+library(tidyverse)
 ```
+
+
+# A fun example: Coffee Cooling
+
+```{r coffeeCool}
+# my 15yo's homework today during lockdown
+# find an equation for the cooling of a cup of coffee
+# with the following temperature measurements
+
+decay_tbl <- tribble(
+  ~time, ~temperature,
+      0,        179.5,
+      5,        168.7,
+      8,        158.1,
+     11,        149.2,
+     15,        141.7,
+     18,        134.6,
+     22,        125.4,
+     25,        123.5,
+     30,        116.3,
+     34,        113.2,
+     38,        109.1,
+     42,        105.7,
+     45,        102.2,
+     50,        100.5
+)
+
+decay_tbl %>% 
+  ggplot() +
+  aes(time, temperature) +
+  geom_line() +
+  geom_point() +
+  labs(title="Coffee Cooling") +
+  labs(x="Time [min]", y="Temperature [K]")
+
+```
+
 
 # From the RGraph Gallery
 
