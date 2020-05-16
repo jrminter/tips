@@ -60,10 +60,13 @@ decay_tbl <- tribble(
 decay_tbl %>% 
   ggplot() +
   aes(time, temperature) +
-  geom_line() +
-  geom_point() +
+  geom_point(color="red") +
+  geom_smooth(method = "loess", level=0.99) +
   labs(title="Coffee Cooling") +
-  labs(x="Time [min]", y="Temperature [K]")
+  labs(x="Time [min]", y="Temperature [F]") +
+  theme(axis.text=element_text(size=12),
+        axis.title=element_text(size=12),
+        plot.title=element_text(hjust = 0.5)) # center the title...
 
 ```
 
