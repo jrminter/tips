@@ -299,8 +299,21 @@ The binary paths are:
 
 1. TinyTeX
 
+Win
+
 ```
 %APPDATA%\TinyTeX\bin\win32
+```
+
+Mac
+
+```
+The root issue is the environment variable PATH.
+If you know how to add a path to PATH, you are all set add:
+
+~/Library/TinyTeX/bin/x86_64-darwin
+
+to PATH
 ```
 
 2. TexLive22020
