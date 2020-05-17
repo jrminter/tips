@@ -17,6 +17,24 @@ They were compiled from several web sources.
 
 # Simple tricks
 
+## Using TinyTeX
+
+TinyTeX is a package by Yihui Xie. It is **much smaller** than Texlive
+or MacTex. Info is [here](https://yihui.org/tinytex/). Basically one
+"rolls your own" distribution.
+
+Sometimes one gets an error like 
+**! LaTeX Error: File `times.sty` not found.**
+
+That means one needs to install the `times` package.
+
+From the command line
+
+```
+tlmgr install times
+```
+
+
 ## Comments
 
 Try something like this
