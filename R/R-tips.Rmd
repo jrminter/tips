@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-05-08"
+date: "Started: 2013-07-16, Last modified: 2020-05-18"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -21,6 +21,16 @@ suppressPackageStartupMessages(library("tidyverse"))
 [Back to Index](../README.html)
 
 # Don't forget...
+
+## Storing generated plots
+
+I like to store generated plots as `.png` and `.jpg` for compatibility with
+external software. Since these are generated `on the fly`, if one does not
+need to track these files with version control, they can be be written to
+a `png` folder and or a `jpg` folder. Add a `.gitkeep` file in the folder
+so `git` will not track the file, Note that these files will be included in
+embedded in your `.html` or `.pdf` files when you render the document. Those
+files could be saved under version control and needed by the analysis.
 
 ## Rmarkdown Project Templates
 
