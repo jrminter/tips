@@ -4,7 +4,7 @@ author:
   - From the RGraph Library
   - From the DataCamp Blog
   - John Minter (editor)
-date: "Original: 2015-04-04, Last modified: 2020-05-15"
+date: "Original: 2015-04-04, Last modified: 2020-05-18"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
