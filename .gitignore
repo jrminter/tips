@@ -149,6 +149,8 @@ ggplot2Intro/ggplot2Intro.md
 ggplot2Intro/ggplot2Intro.html
 ggplot2Intro/figure/
 ggplot2Intro/ggplot2Intro_fi*
+ggplot2Intro/pdf/*.pdf
+
 
 # ggplotUseCases directory
 ggplot2UseCases/*.html
