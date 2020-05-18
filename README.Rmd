@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-05-15"
+date: "Started: 2013-07-16, Last modified: 2020-05-18"
 output:
   html_document:
     keep_md: true
@@ -24,6 +24,13 @@ format.
    **Do not update your iPhone OS right before a run**. The update
    **appeared** to be done, but my music was skipping for about
    20 min. Guess there was processing in the background.
+   
+   2020-05-18:    
+   **Update Microsoft Office**    
+   - Open an Office application, such as Word, Excel, or PowerPoint. ...    
+   - Click on `Account` or `Office Account` on the list.    
+   - Under Product Information, click on `Update Options` next to `Office Updates`.    
+   - From the list of options, click on `Update Now`.
 
 2. Chrome Bookmarks - How to move a folder...
 
