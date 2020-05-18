@@ -17,6 +17,75 @@ They were compiled from several web sources.
 
 # Simple tricks
 
+## Using TinyTeX
+
+Note that TexLive 2020 was **7.7 GB**. TinyTex was about **_450 MB_**.
+
+TinyTeX is a package by Yihui Xie. It is **much smaller** than Texlive
+or MacTex. Info is [here](https://yihui.org/tinytex/). Basically one
+"rolls your own" distribution.
+
+Sometimes one gets an error like 
+**! LaTeX Error: File `times.sty` not found.**
+
+That means one needs to install the `times` package. You can verify...
+
+```
+tlmgr search --global --file "/times.sty"
+```
+
+Or. install the package from the command line
+
+```
+tlmgr install times
+```
+
+If you still see error messages that you don’t understand, you may
+update everything:
+
+```
+tlmgr update --self --all
+tlmgr path add
+fmtutil-sys --all
+```
+For R users, you can use the corresponding helper functions.
+Some examples:
+
+```
+library(tinytex)
+tlmgr_search('/times.sty')   # search for times.sty
+tlmgr_install('psnfss')      # install the psnfss package
+tlmgr_update()               # update everything
+```
+
+If you see an error message like:
+
+> Remote repository newer than local
+
+It means it is time for you to upgrade (re-install) TinyTeX manually:
+
+```
+tinytex::reinstall_tinytex()
+```
+If you see a message like below, don’t panic. Just wait for a couple o
+months and prepare for reinstalling TinyTeX.
+
+```
+TeX Live 2018 is frozen forever and will no longer be updated. This happens in preparation for a new release.
+```
+
+
+If you’re interested in helping to pretest the new release
+(when pretests are available), please read 
+[this](https://tug.org/texlive/pretest.html).
+Otherwise, just wait, and the new release will be ready in due time.
+
+That is all for an average user. Read the
+[FAQ](https://yihui.org/tinytex/faq/) page
+if you wish to know more technical details about TinyTeX.
+
+
+
 ## Comments
 
 Try something like this
@@ -201,7 +270,7 @@ From [tex.stackexchange.com](https://tex.stackexchange.com/questions/235313/how-
 6. Close and reopen TeXworks. The dictionaries should be listed under the Spelling item in the Edit menu.
 
 
-## TinyTex and BasicTex
+## TinyTex and BasicTex on Mac
 
 See [Yihui's write-up](https://yihui.name/tinytex/) and the
 [github repository](https://github.com/yihui/tinytex). On Windows,
@@ -230,14 +299,27 @@ The binary paths are:
 
 1. TinyTeX
 
+Win
+
 ```
 %APPDATA%\TinyTeX\bin\win32
 ```
 
-2. TexLive2018
+Mac
 
 ```
-C:\Apps\texlive\2018\bin\win32
+The root issue is the environment variable PATH.
+If you know how to add a path to PATH, you are all set add:
+
+~/Library/TinyTeX/bin/x86_64-darwin
+
+to PATH
+```
+
+2. TexLive22020
+
+```
+C:\Apps\texlive\2020\bin\win32
 ```
 
 
@@ -280,7 +362,6 @@ Yihui recommends:
 tlmgr update --self --all
 tlmgr path add
 fmtutil-sys --all
-
 ```
 
 
