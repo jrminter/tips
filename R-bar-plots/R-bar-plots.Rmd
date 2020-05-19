@@ -29,7 +29,7 @@ library(mdthemes)
 
 # Bar chart Examples from Thomas
 
-Note: need to install mdthemes
+Note: need to install `mdthemes`.
 
 ```
 Sys.unsetenv("GITHUB_PAT")
