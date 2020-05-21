@@ -209,6 +209,8 @@ format.
 
 [Carbon Film Thickness](./carbonFilmThickness/carbonFilmThickness.html)
 
+[chemStructures](./chemStructures/chemStructures.html)
+
 [chntpw](./chntpw/chntpw.html)
 
 [Color](./color/color.html)
