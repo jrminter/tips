@@ -1,7 +1,7 @@
 ---
 author: "J. R. Minter"
 title: "Reproducible Research"
-date: "Started: 2016-11-17, Last modified: 2020-05-10"
+date: "Started: 2016-11-17, Last modified: 2020-05-21"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -75,6 +75,26 @@ Prof. Barba cites a helpful "Top-Ten" list taken from Sandve et al., [**Ten Simp
 
 1. [Science Code Manifesto](http://sciencecodemanifesto.org/)
 
+# Reproducibility
 
+Miles McBain suggested this **reproducibility receipt**. It is
+an html wrapper. See below:
+
+## Reproducibility
+
+<details><summary>Reproducibility receipt</summary>
+
+```{r}
+## datetime
+Sys.time()
+
+## repository
+git2r::repository()
+
+## session info
+sessionInfo()
+```
+
+</details>
 
 [Back to Index](../README.html)
