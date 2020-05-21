@@ -78,7 +78,13 @@ Let's use the InChIKey to get the structure in MolView
 
 ![benzoic acid](png/benzoic_acid.png)
 
+# Chloroquine
 
+This is the covid-19 candidate drug.
+
+The InChI Key: WHTVZRBIWZFKQO-UHFFFAOYSA-N
+
+![chloroquine](png/chlorquine.png)
 
 
 
