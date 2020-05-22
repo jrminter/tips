@@ -13,6 +13,13 @@ output:
 
 > Plod. don't sprint. Be fruitful like a tree, not efficient like a machine. Use the gifts God has given you. - Douglas Wilson
 
+> The greatest value of a picture is when it forces us to notice what
+we never expected to see. - J.Tukey
+
+> All models are wrong, but some are useful. - G. Box
+
+> Make everything as simple as possible but not simpler. - A. Einstein
+
 From [DataArtisan](https://twitter.com/dataartisan1/status/1263784688432398338):
 
 > Skills that make you stand out in #DataScience    
