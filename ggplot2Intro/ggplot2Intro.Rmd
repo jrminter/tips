@@ -31,6 +31,29 @@ library(here)
 library(tidyverse)
 ```
 
+# Plotting a trapezoid
+
+This exammple came from [stackoverflow](https://stackoverflow.com/questions/61957337/plot-a-trapezoid-in-ggplot).
+
+The objective as to plot a trapezoid. The key issue
+was to get the coordinates correct.
+
+The key is: **The points are connected in the order of the _rows_**
+
+```{r plotTrapezoid}
+positions <- data.frame(
+  id = rep("glass", each = 4),
+  x = c(3.5, 6.5, 2, 8),
+  y = c(1, 1, 8, 8),
+  fill = rep("a")
+)
+
+ggplot(positions[c(1,2,4,3),],
+       aes(x = x, y = y)) +
+       geom_polygon(aes(fill = fill, group = id))
+
+```
+
 
 # A fun example: Coffee Cooling
 
