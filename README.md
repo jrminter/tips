@@ -20,6 +20,10 @@ we never expected to see. - J.Tukey
 
 > Make everything as simple as possible but not simpler. - A. Einstein
 
+> Your closest collaborator is you, six months from now. You do not
+> respond to email.    
+> - Karl Browman
+
 From [DataArtisan](https://twitter.com/dataartisan1/status/1263784688432398338):
 
 > Skills that make you stand out in #DataScience    
