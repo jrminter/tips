@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-05-22"
+date: "Started: 2013-07-16, Last modified: 2020-05-25"
 output:
   html_document:
     keep_md: true
@@ -43,6 +43,13 @@ format.
 **First**, some quickies:
 
 1. Today I learned (TIL)
+
+   2020-05-25:    
+   It appears that now I need to run RStudio as an administrator on
+   Windows to install packages. To do so, I need to right click on
+   the Rstudio in the taskbar item and select run as administrator.
+   This **really annoying** since my profile is an adminstrator...
+   
 
    2020-05-14:    
    **Do not update your iPhone OS right before a run**. The update
