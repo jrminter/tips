@@ -46,9 +46,18 @@ format.
 
    2020-05-25:    
    It appears that now I need to run RStudio as an administrator on
-   Windows to install packages. To do so, I need to right click on
-   the Rstudio in the taskbar item and select run as administrator.
-   This **really annoying** since my profile is an adminstrator...
+   Windows to install packages.
+   
+   Two ways to do it:
+   
+   - Right click on a **Desktop** RStudio icon and choose `Run as Administrator`
+   - Right click on the tool-bar RStudio Icon, **pull up**, and choose
+      `Run as Administrator`.
+      ![How to run RStudio as admnin from toolbar](./R/inc/R-as-admin-toolbar.png)
+   
+   This **really annoying** since my profile is an administrator...
+
+   
    
 
    2020-05-14:    
