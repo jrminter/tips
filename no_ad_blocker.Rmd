@@ -1,0 +1,25 @@
+---
+title: "Reader Script"
+author: "John Minter"
+date: "5/23/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(dplyr)
+```
+
+A hint from Bob Rudis:
+
+> You'd be surprised (perhaps, anyway) how many
+"We see you're using an ad blocker…" reader-hating content blocker
+attempts are thwarted w/this tweetable chunk of #rstats code:
+
+```{r theCode}
+URL <- "https://www.dailymail.co.uk/news/article-8348669/George-Soros-says-coronavirus-spell-end-EU.html"
+xml2::read_html(URL) %>% 
+  as.character() %>% 
+  htmltools::HTML() %>% 
+  htmltools::html_print()
+```
