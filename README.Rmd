@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-05-20"
+date: "Started: 2013-07-16, Last modified: 2020-05-22"
 output:
   html_document:
     keep_md: true
@@ -12,6 +12,30 @@ output:
 ---
 
 > Plod. don't sprint. Be fruitful like a tree, not efficient like a machine. Use the gifts God has given you. - Douglas Wilson
+
+> The greatest value of a picture is when it forces us to notice what
+we never expected to see. - J.Tukey
+
+> All models are wrong, but some are useful. - G. Box
+
+> Make everything as simple as possible but not simpler. - A. Einstein
+
+> Your closest collaborator is you, six months from now. You do not
+> respond to email.    
+> - Karl Browman
+
+From [DataArtisan](https://twitter.com/dataartisan1/status/1263784688432398338):
+
+> Skills that make you stand out in #DataScience    
+> 
+> Being good at     
+> - making presentations    
+> - public speaking    
+> - explaining complex concepts    
+> - listening     
+> - changing plans on short notice    
+> - receiving feedback    
+
 
 This repository contains the John Minter's useful tips in Rmarkdown
 format.
