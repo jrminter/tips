@@ -45,8 +45,8 @@ format.
 1. Today I learned (TIL)
 
    2020-05-25:    
-   It appears that now I need to run RStudio as an administrator on
-   Windows to install packages.
+   It appears that now I need to run RStudio as an **administrator** on
+   **Windows 10** to **install packages**.
    
    Two ways to do it:
    
