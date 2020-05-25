@@ -49,6 +49,7 @@ carbonFilmThickness/figure/
 
 # chemStructures
 chemStructures/*.html
+chemstructures/*.pdf
 
 # chntpw directory
 chntpw/.DS_Store
