@@ -3,14 +3,14 @@ title: "Visualizing Chemical Structures with `MolView`"
 author: "John Minter"
 date: '2020-05-20'
 output:
-  pdf_document:
-    toc: yes
-    toc_depth: '3'
   html_document:
     css: ../theme/jm-gray-vignette.css
     number_sections: yes
     toc: yes
     toc_depth: 3
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
 ---
 
 [Back to Index](../README.html)
