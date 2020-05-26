@@ -377,6 +377,8 @@ format.
 
 [R-boxplots](./R-boxplots/R-boxplots.html)
 
+[R-caracas](./R-caracas/R-caracas.html)
+
 [R-data-cleaning](./R-data-cleaning/R-data-cleaning.html)
 
 [R-data-pipeline](./R-data-pipeline/R-data-pipeline.html)
