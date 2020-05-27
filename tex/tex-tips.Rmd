@@ -1,7 +1,7 @@
 ---
 title: "TeXLive Hints"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-05-18"
+date: "Started: 2013-07-16, Last modified: 2020-05-27"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -316,7 +316,23 @@ If you know how to add a path to PATH, you are all set add:
 to PATH
 ```
 
-2. TexLive22020
+Note this example of installing TinyTeX
+
+```
+# borrowed from the Rocker setup at 
+# https://github.com/rocker-org/rocker-versioned/blob/3d62b38a1310/verse/Dockerfile#L50-L52
+wget -qO- "https://github.com/yihui/tinytex/raw/master/tools/install-unx.sh" | sh -s - --admin --no-path
+sudo mv ~/.TinyTeX /opt/TinyTeX
+sudo /opt/TinyTeX/bin/*/tlmgr path add
+sudo tlmgr install metafont mfware inconsolata tex ae parskip listings
+sudo tlmgr path add
+Rscript -e "source('https://install-github.me/yihui/tinytex'); tinytex::r_texmf()"
+sudo chown -R root:staff /opt/TinyTeX
+sudo chmod -R g+w /opt/TinyTeX
+sudo chmod -R g+wx /opt/TinyTeX/bin
+```
+
+2. TexLive 2020
 
 ```
 C:\Apps\texlive\2020\bin\win32
