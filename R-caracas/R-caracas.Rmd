@@ -33,11 +33,20 @@ conda install SymPy
 ```
 
 Note: I specified the python interpreter in my `.Renvion` file
-with:
+with...
+
+Mac:
 
 ```
 RETICULATE_PYTHON="/Users/jrminter/miniconda3/bin"
 ```
+
+PC:
+
+```
+RETICULATE_PYTHON="C:\Apps\Miniconda3\Python.exe"
+```
+
 
 because my MacBook Pro has both system python and minconda python... 
 
