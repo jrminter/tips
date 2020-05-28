@@ -37,6 +37,21 @@ suppressPackageStartupMessages(library("tidyverse"))
 > `Control + Option + x` RStudio will provide a pop-up box
 > requesting a function name and write a basic function for editing.
 
+### Comment out R code shortcut
+
+`Hat Tip` Erin Winslow:
+
+Highlight the lines and type `CMS Shift C`
+
+### Inset a code chunk shortcut
+
+`Hat Tip` Juliet Verstaen
+
+CMD + Option + i to create a code chunk
+
+
+
+
 ## Storing generated plots
 
 I like to store generated plots as `.png` and `.jpg` for compatibility with
