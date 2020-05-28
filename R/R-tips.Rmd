@@ -28,6 +28,15 @@ suppressPackageStartupMessages(library("tidyverse"))
 > Rstudio -> Tools -> Gobal Options -> General -> Advanced ->    
 > 'DOUBLE-CLICK TO SELECT WORDS IN CONSOLE PANE' 
 
+### R Function creation shortcut
+
+`Hat Tip` Allison Horst:
+
+> In a blank R chunk, if I enter a line like `apples + bananas`
+> and highight that expression, and then hit
+> `Control + Option + x` RStudio will provide a pop-up box
+> requesting a function name and write a basic function for editing.
+
 ## Storing generated plots
 
 I like to store generated plots as `.png` and `.jpg` for compatibility with
