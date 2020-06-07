@@ -1,7 +1,7 @@
 ---
 title: "Python Tips"
 author: "J. R. Minter"
-date: 'Started: 2013-07-16, Last modified: 2019-06-26'
+date: 'Started: 2013-07-16, Last modified: 2020-06-07'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -13,6 +13,14 @@ output:
 [Back to Index](../README.html)
 
 # conda
+
+## Finding where you are...
+
+```
+import os
+print(os.getcwd())
+```
+
 
 ## Managing channels
 
