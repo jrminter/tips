@@ -1,7 +1,7 @@
 ---
 title: "Tips on Using Color"
 author: "J. R. Minter"
-date: "Started: 2013-07-23, Last modified: 2020-05-03"
+date: "Started: 2013-07-23, Last modified: 2020-06-11"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -28,6 +28,17 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 
 [Back to Index](../README.html)
+
+# Quick Tips
+
+Visualize a color pallete
+
+```{r vizColorPalette}
+library(RColorBrewer)
+mypalette<-RColorBrewer::brewer.pal(9,"Blues")
+scales::show_col(mypalette)
+```
+
 
 
 Color palettes need to be chosen carefully.
