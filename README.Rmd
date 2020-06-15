@@ -411,6 +411,8 @@ format.
 
 [Research](./research/research.html)
 
+[Sage](./sage/sage.html)
+
 [Screen Cast](./screencast/screencast.html)
 
 [SEM](./SEM/SEM.html)

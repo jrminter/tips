@@ -514,6 +514,11 @@ research/*.md
 research/*.html
 research/*.htm
 
+# sage dir
+sage/*.html
+sage/*.md
+sage/.DS_Store
+
 # screencast directory
 screencast/.DS_Store
 screencast/*.html

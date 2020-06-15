@@ -1,0 +1,26 @@
+---
+title: "Sage Tips"
+author: "J. R. Minter"
+date: "Started: 2020-06-15, Last modified: 2020-06-15"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+[Back to Index](../README.html)
+
+To get the result you expect from SageTeX (e. g. in a file named tex.foo), you have to :
+
+LaTeX your .tex file (i. e. pdflatex foo.tex : the `\sagexxx` macros will generate a Sage program foo.sagetex.sage and (via the foo.aux file) leave _references_ to the sage outputs, which are yet to be generated ; these (unfilled) references will print as ?? in the output file.
+
+Execute your Sage program (i. e. sage foo.sagetex.sage). This will compute the outputs, place them in specific files, and, IIRC, update the foo.aux file.
+
+Re-`\LaTeX` your .tex file ; now that the Sage outputs exist and are referenceg in foo.aux, they will be inserted in your output PDF.
+
+All of this is well-documented in $SAGE_ROOT/local/share/texmf/tex/latex/sagetex/sagetex.tex ; reading and modifying $SAGE_ROOT/local/share/texmf/tex/latex/sagetex/example.tex is also useful.
+
+Now, since you use MikTeX (a Windows port of `\LaTeX`), you have to work both from Windows (to execute pdflatex) and from the Linux VM (to run sage), unless you have managed to create a Windows link able to call Sage from a Windows command line. These two have to work on the same directory (for example by creating a shared directory and cd-ing to it from both sides).
+
+[Back to Index](../README.html)
