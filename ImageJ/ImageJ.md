@@ -1,7 +1,7 @@
 ---
 title: "Image-J Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-05-06"
+date: "Started: 2013-07-16, Last modified: 2020-06-22"
 output:
   html_document:
     keep_md: yes
@@ -65,6 +65,19 @@ Michael Schmid generated a nice DIC plugin (2020-02-28)
 
 
 # Really helpful hints
+
+## Directories
+
+Wayne Rasband wrote (2020-6-22):
+
+> Starting with the ImageJ 1.53c58 daily build, library JAR files can
+> also be located in the `plugin/lib` directory. The following helpful
+> information is now displayed in the `Edit>Options>Compiler` dialog box:
+
+> "Library JAR files (e.g., imagescience.jar) should
+>  be located in either plugins/jars or plugins/lib.
+>  The javac command line will be displayed in
+>  the Log window if ImageJ is in debug mode.”
 
 ## The `IJ.run()` function
 
