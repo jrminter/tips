@@ -11,6 +11,12 @@ output:
     toc_depth: 3
 ---
 
+Fix for annoying git message:
+
+```
+git config --global pull.rebase false
+```
+
 > Plod. don't sprint. Be fruitful like a tree, not efficient like a machine. Use the gifts God has given you. - Douglas Wilson
 
 > The greatest value of a picture is when it forces us to notice what
