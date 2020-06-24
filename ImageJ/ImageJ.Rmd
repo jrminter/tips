@@ -1,7 +1,7 @@
 ---
 title: "Image-J Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-05-06"
+date: "Started: 2013-07-16, Last modified: 2020-06-23"
 output:
   html_document:
     keep_md: yes
@@ -12,6 +12,20 @@ output:
 ---
 
 [Back to Index](../README.html)
+
+# Recent tips
+
+On 2020-06-23, Wayne Rasband wrote:
+
+> Starting with the ImageJ 1.53c60 daily build, the LUT name is saved as an
+> image property and displayed when you type “i” (Image>Show Info). The LUT
+> name can be retrieved in a macro using Property.get("CurrentLUT”) and in
+> a plugin or script using imp.getProp("CurrentLUT”). The name will have 
+> “(edited)” appended to it if the LUT has been edited by the
+> `Image>Color>Edit LUT` tool.
+
+The URL is:
+[http://wsr.imagej.net/download/daily-build/ij.jar](http://wsr.imagej.net/download/daily-build/ij.jar)
 
 # Key resources
 
