@@ -297,9 +297,9 @@ format.
 
 [Building up a ggplot2 figure](./ggplot2figure/ggplot2-figure.html)
 
-[ggplot2Intro](./ggplot2Intro/ggplot2Intro.html)
+[ggplot2Examples](./ggplot2Examples/ggplot2Examples.html)
 
-[ggplot2UseCases](./ggplot2UseCases/ggplot2UseCases.html)
+[ggplot2Intro](./ggplot2Intro/ggplot2Intro.html)
 
 [ggvisIntro](./ggvisIntro/ggvisIntro.html)
 

@@ -1,7 +1,7 @@
 ---
-title: "ggplot2 Use Cases"
+title: "ggplot2 Examples"
 author: "J. R. Minter"
-date: "Started: 2016-01-20, Last modified: 2019-04-29"
+date: "Started: 2016-01-20, Last modified: 2020-06-24"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -28,6 +28,36 @@ documentation...
 
 [This](https://stackoverflow.com/questions/30015926/difficulty-annotating-plot-when-x-axis-values-are-dates)
 helped.
+
+### Add Regression Line Equation and R-Square to a ggplot
+
+This was inspired by a Twitter user `@nyokabi_weru` on 2020-06-24
+
+> I finally learned how to add adjusted R^2 to a ggplot. Wish I knew this 
+> when I was doing my projects but I'm happy I learned either way :)
+> 
+> `stat_regline_equation()` can also add the regression equation to your plot
+
+> More on the function:
+> [here](https://rpkgs.datanovia.com/ggpubr/reference/stat_regline_equation.html).
+
+They did not specify the source of the exemplar dataset. Happily, there
+is a good minimal example
+[here](https://rpkgs.datanovia.com/ggpubr/reference/stat_regline_equation.html)
+that is reproduced below. Note that the function requires the `ggplot2`
+and `ggpubr` packages to be installed.
+
+```{r stat_reg_line_example}
+library(ggplot2)
+library(ggpubr)
+
+ggscatter(mtcars, x = "wt", y = "mpg", add = "reg.line") +
+  stat_cor(label.x = 3, label.y = 34) +
+  stat_regline_equation(label.x = 3, label.y = 32)
+```
+
+
+
 
 ### Colors...
 
@@ -520,7 +550,7 @@ controlled by the following `date_labels`. Note how the example
 
 
 ```{r readDataTD}
-fi <- here('ggplot2UseCases/dat/csv/date-time-codes.csv')
+fi <- here('ggplot2Examples/dat/csv/date-time-codes.csv')
 panderOptions('table.alignment.default','left')
 df <- read.csv(fi)
 pander(df)
