@@ -11,6 +11,12 @@ output:
     toc_depth: 3
 ---
 
+Fix for annoying git message:
+
+```
+git config --global pull.rebase false
+```
+
 > Plod. don't sprint. Be fruitful like a tree, not efficient like a machine. Use the gifts God has given you. - Douglas Wilson
 
 > The greatest value of a picture is when it forces us to notice what
@@ -291,9 +297,9 @@ format.
 
 [Building up a ggplot2 figure](./ggplot2figure/ggplot2-figure.html)
 
-[ggplot2Intro](./ggplot2Intro/ggplot2Intro.html)
+[ggplot2Examples](./ggplot2Examples/ggplot2Examples.html)
 
-[ggplot2UseCases](./ggplot2UseCases/ggplot2UseCases.html)
+[ggplot2Intro](./ggplot2Intro/ggplot2Intro.html)
 
 [ggvisIntro](./ggvisIntro/ggvisIntro.html)
 

@@ -159,17 +159,17 @@ ggplot2Intro/pdf/*.pdf
 
 
 # ggplotUseCases directory
-ggplot2UseCases/*.html
-ggplot2UseCases/.DS_Store
-ggplot2UseCases/ggplot2Intro.md
-ggplot2UseCases/ggplot2Intro.html
-ggplot2UseCases/dat/*.png
-ggplot2UseCases/dat/png/*.png
-ggplot2UseCases/dat/pdf/*.pdf
-ggplot2UseCases/figure/
-ggplot2UseCases/dat/csv/PhiRhoZ-final.csv
-ggplot2UseCases/.DS_Store
-ggplot2UseCases/ggplot2UseCases_fi*
+ggplot2Examples/*.html
+ggplot2Examples/.DS_Store
+ggplot2Examples/ggplot2Intro.md
+ggplot2Examples/ggplot2Intro.html
+ggplot2Examples/dat/*.png
+ggplot2Examples/dat/png/*.png
+ggplot2Examples/dat/pdf/*.pdf
+ggplot2Examples/figure/
+ggplot2Examples/dat/csv/PhiRhoZ-final.csv
+ggplot2Examples/.DS_Store
+ggplot2Examples/ggplot2Examples_fi*
 
 # ggvisIntro tips directory
 ggvisIntro/.DS_Store
