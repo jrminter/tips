@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-05-27"
+date: "Started: 2013-07-16, Last modified: 2020-06-26"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -27,6 +27,10 @@ suppressPackageStartupMessages(library("tidyverse"))
 > TIF (today I found!)     
 > Rstudio -> Tools -> Gobal Options -> General -> Advanced ->    
 > 'DOUBLE-CLICK TO SELECT WORDS IN CONSOLE PANE' 
+
+RStudio also added a new (2020-06-26) shortcut pull-down: 
+
+!["pull with rebase"](inc/pull_with_rebase.png)
 
 ### R Function creation shortcut
 
