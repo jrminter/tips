@@ -1,7 +1,7 @@
 ---
 title: "Windows Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-06-18"
+date: "Started: 2013-07-16, Last modified: 2020-06-20"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -13,6 +13,21 @@ output:
 [Back to Index](../README.html)
 
 # Some useful qick tips for Windows 10
+
+## Resetting OneDrive
+
+This resets OneDrive:
+
+1. First, close the OneDrive app. ...
+2. Press `WinKey + R` to bring up the `Run` dialog.
+3. In the Run command dialog, type/paste the following command: 
+
+   ```
+%localappdata%\Microsoft\OneDrive\onedrive.exe /reset.
+   ```
+4. Press ENTER .
+
+
 
 ## Changing the file extension for multiple files
 
