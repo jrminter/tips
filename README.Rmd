@@ -457,6 +457,8 @@ format.
 
 [Win](./win/win.html)
 
+[winCasino](./winCasino/winCasino.html)
+
 [Workflow](./workflow/workflow.html)
 
 [Write Usefully (by Paul Graham)](./write_usefully/write_usefully.html)
