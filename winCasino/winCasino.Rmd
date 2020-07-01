@@ -32,7 +32,7 @@ Monte Carlo program is specifically designed for low energy beam interaction
 and can be used to generate many of the recorded signals (X-rays and backscattered
 electrons) in a scanning electron microscope. This program can also be
 efficiently used for all of the accelerated voltage found on a field emission
-scanning electron microscope(0.1 to 30 KeV).
+scanning electron microscope (0.1 to 30 KeV).
 
 ## What can CASINO do?
 
