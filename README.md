@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-05-25"
+date: "Started: 2013-07-16, Last modified: 2020-07-03"
 output:
   html_document:
     keep_md: true
@@ -206,9 +206,15 @@ format.
     - Click `Blocking` in the left side menu.
     - In the `Block` users setting, enter the name of the person you want to block and click `Block`.
     - Select the specific person you want to block ans click `Block > Block [name]`
-    
 
-19. **HTML Syntax**
+
+19. **Convert `.mkv` to `.mp4` from the command line**
+
+```
+    ffmpeg -i vid.mkv -c copy vid.mp4
+```
+
+20. **HTML Syntax**
 
     - **A link**
     
