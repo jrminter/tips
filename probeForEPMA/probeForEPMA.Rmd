@@ -18,6 +18,21 @@ knitr::opts_chunk$set(echo = TRUE)
 Probe for EPMA is a commercial EPMA software package with demo packages,
 especially CalcZAF. I have long term interest.
 
+# Quick tips
+
+1. Set up the defaults for CalcZAF for your most common use case.
+
+   I edited `C:/ProgramData/Probe Software/Probe for EPMA/probewin.ini`
+   setting changing the following defaults because I am working through
+   the Lehigh dataset of CuAu alloys. I needed to tweak the analysis and
+   tired of manually changing these 3 parameters:
+   
+   ```'
+   KiloVolts=20
+   TakeOff=52.5
+   BeamCurrent=25.
+   ```
+
 # Reproducible penepma simulations from the command line
 
 As installed, the penempma GUI is convenient for testing problems. One issue
