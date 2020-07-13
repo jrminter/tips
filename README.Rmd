@@ -48,6 +48,45 @@ format.
 
 **First**, some quickies:
 
+1. Key greek and other characters
+
+```
+Φ(ρ𝑧)
+   𝑧  script z   
+```
+Happily, Rmarkdown handles these well in html documents. 
+Haven't been able to use them in LaTeX.  Need to try XeLaTeX...
+
+```
+UC   LC    Name
+---  ---  ----
+Α	α	Alpha	
+Β	β	Beta
+Γ	γ	Gamma
+Δ	δ	Delta
+Ε	ε	Epsilon
+Ζ	ζ	Zeta
+Η	η	Eta
+Θ	θ	Theta
+Ι	ι	Iota
+Κ	κ	Kappa
+Λ	λ	Lambda
+Μ	μ	Mu
+Ν	ν	Nu
+Ξ	ξ	Xi
+Ο	ο	
+Π	π	Pi
+Ρ	ρ	Rho
+Σ	σ,ς 
+Τ	τ	
+Υ	υ	
+Φ	φ	Phi
+Χ	χ	Chi
+Ψ	ψ	Psi
+Ω	ω	Omega
+```
+
+
 1. Today I learned (TIL)
 
    2020-05-25:    
