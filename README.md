@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-07-03"
+date: "Started: 2013-07-16, Last modified: 2020-07-13"
 output:
   html_document:
     keep_md: true
@@ -331,6 +331,8 @@ UC   LC    Name
 [Fiji plugin development](./fiji-plugin-development/fiji-plugin-development.html)
 
 [Fitness](./fitness/fitness.html)
+
+[Font Test](./font-test/font-test.html)
 
 [French Press Instructions](./french-press-instructions/french-press-instructions.html)
 
