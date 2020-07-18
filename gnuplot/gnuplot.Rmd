@@ -1,7 +1,7 @@
 ---
 title: "Gnuplot Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-20, Last modified: 2020-01-07"
+date: "Started: 2013-07-20, Last modified: 2020-07-04"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -76,20 +76,39 @@ convert -density 150 $1.pdf $1.png
 
 On Windows I am currently using `gnuplot 5.2 patchlevel 8` 64 bit.
 
-1. The gray bar on the Windows GUI has icons that send common commands to
+1. The gray bar on the Windows GUI has icons that send common commands
    to the terminal.
+   
+    ![](png/gnuplot_menu_bar.png)
 
     - The first icon - a circular arrow - will run `replot`.
    
-    - The second icon - a folder with a red dot - will let you easily navigate
-      to the right directory.
+    - The second icon - an open folder - will let you easily navigate
+      to the desired directory.
       
     - The third icon - that looks like a floppy disk - will let you navigate to
       where you want to save the plot.
       
+    - The folder icon with a red dot will open a window that will let you browse
+      for a gnuplot script file.
+      
+    - The first printer icon sends terminal output to a terminal
+    
+    - The second printer icon prints current screen (win wxt qt)
+      
     - The left and right arrow let you toggle through commands.
     
     - The last icon lets you change settings.
+    
+    Note: on Windows the options are in:    
+    
+    "C:\\Users\\username\\AppData\\Roaming\\wgnuplot.ini"
+    
+    Defaults:    
+    GraphOrigin=208 208    
+    GraphSize=1424 765   I changed to 1024 758    
+    
+    
 
 # Other good sources
 

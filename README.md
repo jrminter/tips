@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-07-03"
+date: "Started: 2013-07-16, Last modified: 2020-07-13"
 output:
   html_document:
     keep_md: true
@@ -47,6 +47,45 @@ This repository contains the John Minter's useful tips in Rmarkdown
 format.
 
 **First**, some quickies:
+
+1. Key greek and other characters
+
+```
+Φ(ρ𝑧)
+   𝑧  script z   
+```
+Happily, Rmarkdown handles these well in html documents. 
+Haven't been able to use them in LaTeX.  Need to try XeLaTeX...
+
+```
+UC   LC    Name
+---  ---  ----
+Α	α	Alpha	
+Β	β	Beta
+Γ	γ	Gamma
+Δ	δ	Delta
+Ε	ε	Epsilon
+Ζ	ζ	Zeta
+Η	η	Eta
+Θ	θ	Theta
+Ι	ι	Iota
+Κ	κ	Kappa
+Λ	λ	Lambda
+Μ	μ	Mu
+Ν	ν	Nu
+Ξ	ξ	Xi
+Ο	ο	
+Π	π	Pi
+Ρ	ρ	Rho
+Σ	σ,ς 
+Τ	τ	
+Υ	υ	
+Φ	φ	Phi
+Χ	χ	Chi
+Ψ	ψ	Psi
+Ω	ω	Omega
+```
+
 
 1. Today I learned (TIL)
 
@@ -292,6 +331,8 @@ format.
 [Fiji plugin development](./fiji-plugin-development/fiji-plugin-development.html)
 
 [Fitness](./fitness/fitness.html)
+
+[Font Test](./font-test/font-test.html)
 
 [French Press Instructions](./french-press-instructions/french-press-instructions.html)
 
