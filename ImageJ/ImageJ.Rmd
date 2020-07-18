@@ -1,7 +1,7 @@
 ---
 title: "Image-J Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-06-23"
+date: "Started: 2013-07-16, Last modified: 2020-07-19"
 output:
   html_document:
     keep_md: yes
@@ -14,6 +14,24 @@ output:
 [Back to Index](../README.html)
 
 # Recent tips
+
+On 2020-07-18,  Wayne Rasband wrote in response to this question:
+
+> I am new to ImageJ and just got approved to use it. DOI is
+> loathe to put Java on computers for some reason I haven't
+> yet explored. This has probably been asked before but, does
+> ImageJ function with Amazon Corretto or am I just outta luck
+> and need to find another software?
+
+Wayne's response:
+ 
+> ImageJ works with Amazon Corretto, a version of OpenJDK. All
+> you have to do is copy the Home folder into the ImageJ folder,
+> rename the ire folder and change Home to jre. “java.version” is
+> 1.8.0_262 and “java.vender” is "Amazon.com Inc”. Make sure to
+> download the JDK version or the Compile and Run command will
+> not work. ImageJ also works with OpenJDK 14.
+
 
 On 2020-06-23, Wayne Rasband wrote:
 
