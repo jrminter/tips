@@ -39,6 +39,22 @@ defaults read TeXShop
 
     ![](png/Apple_Keyboard_Map_Restart_sm.png)
     
+# Tim's clean install instructions
+
+1. Download a copy of Catalina from the App Store:
+
+```
+    https://apps.apple.com/us/app/macos-catalina/id1466841314?mt=12
+```
+
+2. Format a USB drive (at least 12GB or larger) as MacOS Extended
+
+
+3. Run in terminal `sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstallmedia --volume /Volumes/[MyVolume]`
+[My Volume] = whatever the name of your USB drive is
+
+
+    
 # Screen Recording
 
 These instructions are for MacOS Catalina. The default application for
