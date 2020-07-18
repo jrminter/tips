@@ -20,6 +20,60 @@ library(knitr)
 
 # My quick tips
 
+**2020-07-18**
+
+On MacOS I currently have minimal gnuplot support. I ended up uninstalling
+and reinstalling Homebrew. Here the install info:
+
+```
+sudo chown -R $(whoami) $(brew --prefix)/*
+cd /usr/local
+mkdir Frameworks
+sudo chown -R $(whoami) $(brew --prefix)/*
+sudo chmod a+w Frameworks
+```
+
+I now just have:
+
+```
+brew install gnuplot --with-cairo --with-pdflib-lite --with-tex --with-x11 --HEAD
+brew install openssl
+brew install sqlite
+brew install pandoc
+brew install imagemagick
+brew install ghostscript
+brew link --overwrite ghostscript
+```
+
+Set the terminal to 
+
+```
+set terminal png 
+```
+
+and use
+
+```
+ gnuplot cOnSi5kV-all.plt > plt.png
+```
+
+Thsi is `proc-gnuplot` on the mac
+
+```
+#!/bin/bash
+# Call this script with 1 parameter
+# proc-gnuplot.sh basename
+# version 2018-01-10  set path to use imagemagik to get convert
+PATH=/usr/local/Cellar/imagemagick@6/6.9.9-31/bin:$PATH
+ps2pdf $1.ps temp.pdf
+pdfcrop --margins 4 temp.pdf $1.pdf
+rm -rf temp.pdf
+convert -density 150 $1.pdf $1.png
+```
+
+
+
+
 On Windows I am currently using `gnuplot 5.2 patchlevel 8` 64 bit.
 
 1. The gray bar on the Windows GUI has icons that send common commands to
