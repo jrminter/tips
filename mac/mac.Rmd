@@ -53,6 +53,39 @@ defaults read TeXShop
 3. Run in terminal `sudo /Applications/Install\ macOS\ Catalina.app/Contents/Resources/createinstallmedia --volume /Volumes/[MyVolume]`
 [My Volume] = whatever the name of your USB drive is
 
+# Overiding security
+
+Note: I had this app for two years before I updated to the latest
+Catalina update.
+
+The latest version of Catalina will not permit opening unsigned 
+applications (even if they are from reputable sites like
+SqliteStudio) The app store alternates are expensive and have
+short trial periods. Turns out there is a workaround from
+[here](https://superuser.com/questions/898124/the-application-someapp-app-can-t-be-opened).
+
+
+> Problem: after downloading an application in OS X Yosemite (10.10.x)
+> trying to open the application (either from the command-line or by
+> double-clicking the application) produces a dialog saying
+>
+> The application "SomeApp.app" can’t be opened.
+> 
+> 
+> I could not get any dialog or open Security panel. So I followed these
+> instructions from StackExchange:
+> 
+> After extensive trial-and-error, and a lot of fruitless Googling,
+> I found the solution required modifying the executable status of the
+> `inner` application file. This line:
+> 
+> chmod +x SomeApp.app/Contents/MacOS/*
+> 
+> Fixed the problem in all cases that I observed. The +x flags a file
+> as executable, and the only file in the `/Contents/MacOS/` directory
+> is a binary representing the actual file that should be executed when
+> you double-click the application (a .app file is really just a folder).
+> Hope this helps someone else!
 
     
 # Screen Recording
