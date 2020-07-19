@@ -55,6 +55,23 @@ defaults read TeXShop
 
 # Overiding security
 
+## Turning `Gatekeeper` on and off.
+
+Hat tip to Tim Minter who pointed (2020-07-19) me to:
+[cronotek.net](https://cronotek.net/blog/how-to-disable-gatekeeper-on-macos-mojave-and-catalina).
+
+**To disable Gatekeeper:** 
+
+`sudo spctl --master-disable` 
+
+
+**To enable Gatekeeper:**  
+
+`sudo spctl --master-enable`
+
+
+## How I did it by hand...
+
 Note: I had this app for two years before I updated to the latest
 Catalina update.
 
