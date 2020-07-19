@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-06-11"
+date: "Started: 2013-07-16, Last modified: 2020-07-19"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -17,12 +17,39 @@ There are **lot** of keyboard shortcuts...
 
 [A handy PDF](pdf/mac-keyboard-shortcuts.pdf) ...
 
-# Update homebrew
+# Homebrew
 
-Bob Rudis recommends:
+Bob Rudis recommends frequently running:
 
 ```
 brew update && brew upgrade && brew cleanup
+```
+
+To see what is installed:
+
+```
+brew list
+```
+
+Current list (2020-07-19)
+
+```
+cairo			ilmbase			openjpeg
+docbook			imagemagick		openssl@1.1
+docbook-xsl		jpeg			pandoc
+fontconfig		libcerf			pango
+freetype		libde265		pcre
+fribidi			libffi			pixman
+gdibheif			python@3.8
+gdbm			liblqr			qt
+gettext			libomp			readline
+ghostscript		libpng			shared-mime-info
+glib			libtiff			sqlite
+gnu-getopt		libtool			webp
+gnuplot			little-cms2		x265
+graphite2		lua			xmlto
+harfbuzz		lzo			xz
+icu4c			openexr
 ```
 
 # Getting preferences from command line
@@ -59,6 +86,8 @@ defaults read TeXShop
 
 Hat tip to Tim Minter who pointed (2020-07-19) me to:
 [cronotek.net](https://cronotek.net/blog/how-to-disable-gatekeeper-on-macos-mojave-and-catalina).
+
+There is a video here on [YouTube](https://www.youtube.com/watch?v=NaKgn9iEgyk).
 
 **To disable Gatekeeper:** 
 
