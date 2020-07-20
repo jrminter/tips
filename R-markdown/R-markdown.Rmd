@@ -27,7 +27,44 @@ that are compatible with version control. This works very well in the
 
 ## Some key tips
 
-1. Control the width of the HTML output
+1. For PDF documente
+
+Both LaTeX (and Rmarkdown to get PDF) can use
+
+```
+\fontsize{16}{19.2}
+\fontseries{r}
+\selectfont
+
+```
+ In general, the 2nd argument of `fontsize` should be `1.6*1st`.
+
+Series, any combination of weight and width is [in theory]
+possible:
+
+```
+weight                    width
+Ultra Light       ul      Ultra Condensed     uc    
+Extra Light       el      Extra Condensed     ec    
+Light             l       Condensed            c      
+Semi Light        sl      Semi Condensed      sc    
+Medium (normal)   m
+Semi Bold         sb      Semi Expanded       sx    
+Bold              b       Expanded             x 
+Extra Bold        eb      Extra Expanded      ex 
+Ultra Bold        ub      Ultra Expanded      ux
+Shape:
+
+upright (normal)   n 
+italic             it
+slanted/oblique    sl 
+small caps         sc
+upright italic     ui
+outline            ol 
+```
+
+
+2. Control the width of the HTML output
 
 Insert the following below the YAML
 
@@ -50,7 +87,7 @@ output:
     css: style.css
 ```
 
-2. Render markdown code in a RMarkdown Document
+3. Render markdown code in a RMarkdown Document
 
    From [support.rstudio](https://support.rstudio.com/hc/en-us/articles/360018181633-Including-verbatim-R-code-chunks-inside-R-Markdown)
 

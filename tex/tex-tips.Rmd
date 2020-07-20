@@ -17,6 +17,45 @@ They were compiled from several web sources.
 
 # Simple tricks
 
+## For PDF documents
+
+Both LaTeX (and Rmarkdown to get PDF) can use
+
+```
+\fontsize{16}{19.2}
+\fontseries{r}
+\selectfont
+
+```
+ In general, the 2nd argument of `fontsize` should be `1.6*1st`.
+
+```
+Series, any combination of weight and width is [in theory]
+possible:
+
+weight                    width
+Ultra Light       ul      Ultra Condensed     uc    
+Extra Light       el      Extra Condensed     ec    
+Light             l       Condensed            c      
+Semi Light        sl      Semi Condensed      sc    
+Medium (normal)   m
+Semi Bold         sb      Semi Expanded       sx    
+Bold              b       Expanded             x 
+Extra Bold        eb      Extra Expanded      ex 
+Ultra Bold        ub      Ultra Expanded      ux
+Shape:
+
+upright (normal)   n 
+italic             it
+slanted/oblique    sl 
+small caps         sc
+upright italic     ui
+outline            ol 
+
+```
+
+
+
 ## Using TinyTeX
 
 Note that TexLive 2020 was **7.7 GB**. TinyTex was about **_450 MB_**.
