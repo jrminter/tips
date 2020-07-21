@@ -14,6 +14,18 @@ output:
 
 # Some useful qick tips for Windows 10
 
+## Patch Tuesday
+
+From Wikipedia:
+
+> Patch Tuesday occurs on the second, and sometimes fourth, Tuesday of each
+month in North America. As far as the integrated Windows Update (WU) function is
+concerned, Patch Tuesday begins at 18:00 or 17:00 UTC (10:00 PST (UTC−8) or 10:00 PDT (UTC−7)).[6] The updates show up in Download Center before they are added to
+WU, and the KB articles and the Technet bulletin are unlocked later.
+
+> Microsoft has a pattern of releasing a larger number of updates in
+even-numbered months, and fewer in odd-numbered months.
+
 ## Resetting OneDrive
 
 This resets OneDrive:
