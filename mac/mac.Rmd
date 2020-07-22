@@ -31,7 +31,7 @@ To see what is installed:
 brew list
 ```
 
-Current list (2020-07-19)
+Current list (2020-07-21)
 
 ```
 cairo			ilmbase			openjpeg
@@ -40,7 +40,7 @@ docbook-xsl		jpeg			pandoc
 fontconfig		libcerf			pango
 freetype		libde265		pcre
 fribidi			libffi			pixman
-gdibheif			python@3.8
+gd			libheif			python@3.8
 gdbm			liblqr			qt
 gettext			libomp			readline
 ghostscript		libpng			shared-mime-info
@@ -49,7 +49,9 @@ gnu-getopt		libtool			webp
 gnuplot			little-cms2		x265
 graphite2		lua			xmlto
 harfbuzz		lzo			xz
+htop			ncurses
 icu4c			openexr
+
 ```
 
 # Getting preferences from command line
