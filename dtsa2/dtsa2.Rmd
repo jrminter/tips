@@ -1,7 +1,7 @@
 ---
 title: "Tips on Using DTSA-II"
 author: "J. R. Minter"
-date: "Started: 2015-05-19, Last modified: 2018-10-24"
+date: "Started: 2015-05-19, Last modified: 2020-07-22"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -36,9 +36,10 @@ or element abbreviation for an uncluttered look.
 ### Copy as bitmap
 
 **Copy as bitmap** produces a high resolution bitmap. Scaling is a bit
-counterintuitive. Lettering size is a function of size on the screen.
+counter-intuitive. Lettering size is a function of size on the screen.
 N. Ritchie typically drags window to 800x250 pixels. On the Mac I can't
 get below 270, so I tried 900x300.
+
 
 ### The Material Editor
 
@@ -68,6 +69,41 @@ results.
 I frequently need to be reminded of the material names for the materials
 that I have in the database. Happily, DTSA-II provides the function
 `listMaterials()` from the command line.
+
+
+### Stiching Emission and Trajectory images
+
+I occasionally want to make a montage of a couple of element
+emission images and the trajectory image output by DTSA-II Monte Carlo
+Simulations. The result of a simulation of an Fe-Cr alloy at 20 kV. The result
+is shown below.
+
+![Stitched montage of Cr K-L3 and  ](png/stitched.png)
+
+1. Convert each image to an `RGB TIF` image using Fiji/ImageJ.
+
+2. Name each of these with `tile-1.tif`, `tile-2.tif`, ...
+
+3. Use ImageJ macro, `stitch.ijm` macro to process the image. You can
+a grid of images. Yo can insert a blanks to fill the array.
+
+Below is an example with a single row of three images.
+**Do not change the large blank area after `order=[Down & Right` ... **
+
+```
+run("Grid/Collection stitching", "type=[Grid: column-by-column] order=[Down & Right                ] grid_size_x=3 grid_size_y=1 tile_overlap=0 first_file_index_i=1 directory=C:/Users/johnr/Documents/stitch file_names=tile-{i}.tif output_textfile_name=TileConfiguration.txt fusion_method=[Linear Blending] regression_threshold=0.30 max/avg_displacement_threshold=2.50 absolute_displacement_threshold=3.50 computation_parameters=[Save memory (but be slower)] image_output=[Fuse and display] use");
+saveAs("Tiff", "C:/Users/johnr/Documents/stitched.tif");    
+run("RGB Color");    
+selectWindow("stitched.tif");    
+close();    
+selectWindow("stitched.tif (RGB)");    
+saveAs("Tiff", "C:\\Users\\johnr\\Documents\\stitch\\stitched.tif");  
+// set a scle bar if needed...
+// run("Set Scale...", "distance=1 known=2.822 unit=nm");    
+// run("Add Scale Bar", "width=100 height=9 font=48 color=White location=[Lower Right] bold");    
+// close();    
+
+```
 
 
 ### DTSA's two "Composition" values
