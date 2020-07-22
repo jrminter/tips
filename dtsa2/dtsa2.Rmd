@@ -78,7 +78,7 @@ emission images and the trajectory image output by DTSA-II Monte Carlo
 Simulations. The result of a simulation of an Fe-Cr alloy at 20 kV. The result
 is shown below.
 
-![Stitched montage of Cr K-L3 and  ](png/stitched.png)
+![Stitched montage of Cr K-L3 and Fe K-L3 ](png/stitched.png)
 
 1. Convert each image to an `RGB TIF` image using Fiji/ImageJ.
 
