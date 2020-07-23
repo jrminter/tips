@@ -18,7 +18,7 @@ DTSA-II had a very helpful scripting language. This document explains key
 functions. We can get help from the `command line`. Karl Broman points out
 that:
 
-> Your closest collaborator is you, six months from now. You don't responf
+> Your closest collaborator is you, six months from now. You don't respond
 > to email. This document is primarily for `future John`...
 
 When we first start DTSA-II, we can get help. At the command prompt,
