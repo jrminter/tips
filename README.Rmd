@@ -318,6 +318,8 @@ UC   LC    Name
 
 [DTSA-II](./dtsa2/dtsa2.html)
 
+[DTSA-II Scripting](./dtsa2-scripting/dtsa2-scripting.html)
+
 [Earth Science](./earth-sci/earth-sci.html)
 
 [EDAX](./EDAX/EDAX.html)
