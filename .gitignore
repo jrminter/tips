@@ -94,6 +94,10 @@ dtsa2/.DS_Store
 dtsa2/dtsa2.md
 dtsa2/dtsa2.html
 
+dtsa2-scripting/.DS_Store
+dtsa2-scripting/*.md
+dtsa2-scripting/*.html
+
 # earth-sci
 earth-sci/earth-sci.html
 earth-sci/earth-sci.pdf
