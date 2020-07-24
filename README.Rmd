@@ -358,6 +358,8 @@ UC   LC    Name
 
 [Haklev's tips on data wrangling with R](./hacklev/hacklev.html)
 
+[hearing aids](hearing-aids/hearing-aids.html)
+
 [homebrew](./homebrew/homebrew.html)
 
 [html](./html/html.html)

@@ -199,6 +199,9 @@ hacklev/hacklev.md
 hacklev/hacklev.html
 hacklev/figure/
 
+hearing-aids/.DS_Store
+hearing-aids/*.html
+
 # homebrew directory
 homebrew/.DS_Store
 homebrew/homebrew.md

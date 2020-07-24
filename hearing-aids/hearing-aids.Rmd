@@ -1,0 +1,35 @@
+---
+title: "Hearing Aids"
+author: "J. R. Minter"
+date: "Started: 2020-07-24, Last modified: 2020-07-24"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+
+[Back to Index](../README.html)
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+I work with Matt MacDonald at Dalzells, 10 South Pointe landing, Suite
+150, Rochester NY, 14606, 585-227-0808.
+
+I wear Phonac hearing Aids  (Phonak Bolero Q) purchased 2014-03-2014.
+These still work reasonably well. The original cost of the two
+hearing aids was $4610. They were model `Q70SP`. I got a ComPilot TV
+link as well ($510 `S/N1409N 068C`). Total cost was $5425.
+
+**Note**: It is important to clean the ear was away. use a q-tip and
+blow out the tube (by mouth) occaionally...
+
+Ted Fox recently got some new hearing aids that he says are much
+better. These were `Phonak Audeom`. Ellie gave me part numbers
+`312`, `312T`, `(3?)13T`. 
+
+[Back to Index](../README.html)
