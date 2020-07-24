@@ -58,6 +58,18 @@ One issue is that I typically keep the jython scripts in github
 repositories. The best solution is to keep a zipped report with the
 jython script.
 
+I find it helpful to keep a text file with the path options
+in a separate window. I typically keep something like this
+as a hint on the search and replace:
+
+```
+
+file:/Users/jrminter/NIST%20DTSA-II%20Reports/2020/July/12-Jul-2020/
+
+file:./
+
+```
+
 
 
 
