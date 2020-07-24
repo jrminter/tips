@@ -29,6 +29,18 @@ On my MacBook it is in a directory like this.
 /Users/jrminter/Documents/DTSA-II Reports/2020/July/12-July-2020
 ```
 
+On my Win10 box it is
+
+```
+C:/Users/johnr/Documents/DTSA-II Reports/2020/July/12-Jul-2020
+```
+
+An experiment on windows 10:
+
+I set a user environment variable, `DTSA2_REPORT_DIR`, to
+`C:/Users/johnr/Documents/DTSA-II Reports`. When I use it to construct
+a path in a Jython Script
+
 The `index1.html` is the first report for the day. These reports
 use **hard-coded** paths to the spectra and images. This is problematic
 if one moves the report. There are some helpful search and replace
