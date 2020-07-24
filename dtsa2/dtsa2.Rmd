@@ -1,7 +1,7 @@
 ---
 title: "Tips on Using DTSA-II"
 author: "J. R. Minter"
-date: "Started: 2015-05-19, Last modified: 2020-07-22"
+date: "Started: 2015-05-19, Last modified: 2020-07-23"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -18,6 +18,48 @@ He tries to put out a new release yearly and bug-fix releases as
 needed.
 
 # Key tricks
+
+## Making Reports portable
+
+DTSA-II writes reports into the users working directory.
+
+On my MacBook it is in a directory like this.
+
+```
+/Users/jrminter/Documents/DTSA-II Reports/2020/July/12-July-2020
+```
+
+The `index1.html` is the first report for the day. These reports
+use **hard-coded** paths to the spectra and images. This is problematic
+if one moves the report. There are some helpful search and replace
+stratagies that help. I edit the html files to use **relative paths**.
+
+An example would be a long string like:
+
+```
+file:/Users/jrminter/NIST%20DTSA-II%20Reports/2020/July/12-Jul-2020/my_spectra.msa
+```
+One searches for the appropriate string (see above...)
+
+and **replaces** the long path wih a **relative path**:
+
+```
+file:./my_spectra.msa
+```
+
+To make my analyses portable, I include all spectra and images in the
+working report directory and then search and replace all file paths
+with their relative equivalents. This makes it easy to move reports
+to different computers.
+
+I also tend to make an archive of each report and the date.
+
+One issue is that I typically keep the jython scripts in github 
+repositories. The best solution is to keep a zipped report with the
+jython script.
+
+
+
 
 ## Notes from Nicholas Ritchie's videos
 
