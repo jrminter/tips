@@ -44,7 +44,10 @@ a path in a Jython Script
 The `index1.html` is the first report for the day. These reports
 use **hard-coded** paths to the spectra and images. This is problematic
 if one moves the report. There are some helpful search and replace
-stratagies that help. I edit the html files to use **relative paths**.
+strategies that help. I edit the html files to use **relative paths**.
+
+**Note;** If you do **not** want DTSA-II to over write a report, chnage the name
+to `report1.html`.
 
 An example would be a long string like:
 
