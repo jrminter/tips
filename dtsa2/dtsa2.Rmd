@@ -85,6 +85,57 @@ file:./
 
 ```
 
+## Notes on java for macos for DTSA-II
+
+From [here](https://installvirtual.com/install-openjdk-11-mac-using-brew/)
+
+> 1. Brew tap    
+First of all, we need to tap a brew repo. Execute the following command:
+
+```
+$ brew tap AdoptOpenJDK/openjdk
+```
+
+The above will add more repositories to brew.
+
+Read Also: How to uninstall/remove Java 10 from Mac
+
+2. Install OpenJDK 11 Mac
+
+> After adding tap, let’s install OpenJDK using brew.
+
+> $ brew cask install adoptopenjdk11
+
+So, now we have installed Java 11, we can check the installation with
+the following command.
+
+3. Check JDK Version
+
+> Now we can check the JDK version.
+
+> java -version
+openjdk version "11.0.2" 2019-01-15
+OpenJDK Runtime Environment AdoptOpenJDK (build 11.0.2+9)
+OpenJDK 64-Bit Server VM AdoptOpenJDK (build 11.0.2+9, mixed mode)
+
+Now Java has installed properly.
+
+4. Java Location
+
+> Now let’s check the java path.
+
+```
+# which java
+/usr/bin/java
+```
+
+5. Good practice
+
+It is probably not a good idea to run a DTSA script in a 
+git repository. It is probably better to run the script
+in a work directory and store the results and script in the
+repository...
+
 
 
 
