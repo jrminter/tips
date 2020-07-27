@@ -1,7 +1,7 @@
 ---
 title: "Tips on Using DTSA-II"
 author: "J. R. Minter"
-date: "Started: 2015-05-19, Last modified: 2020-07-23"
+date: "Started: 2015-05-19, Last modified: 2020-07-27"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -162,6 +162,9 @@ get below 270, so I tried 900x300.
 
 
 ### The Material Editor
+
+Nicholas Ritchie suggests that good material name start with a letter
+and only have letters and numbers. This helps the search functions.
 
 **When using the material editor**, start with a throw-away name like
 "Unknown" to prevent overwriting something in the database by accident.
