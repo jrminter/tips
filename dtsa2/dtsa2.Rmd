@@ -189,6 +189,9 @@ Type the string above into the empty dialog and press "add". We can then
 add the density (2.36) and change the name to '**EagleXG**' and save the
 results.
 
+**Note:** `Ctl/enter` in database adds marker for a composition. E.g.
+enter `SiO2` and `Ctl/enter` and DTSA adds all the markers!
+
 I frequently need to be reminded of the material names for the materials
 that I have in the database. Happily, DTSA-II provides the function
 `listMaterials()` from the command line.
