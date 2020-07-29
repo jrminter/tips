@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-07-13"
+date: "Started: 2013-07-16, Last modified: 2020-07-28"
 output:
   html_document:
     keep_md: true
@@ -48,7 +48,20 @@ format.
 
 **First**, some quickies:
 
-1. Key greek and other characters
+1. Checking Author/date properties in a PDF
+
+> **Q: How do I find out when a PDF doc was originally created there is nothing under `File/Properties`? **
+
+Answer by **RahulTyagi (Adobe Employee)**
+
+> Generally, it is shown under the document properties window in
+> Acrobat (As shown in the following snapshot).
+
+![](img/acrobat-properties.png)
+
+However, if the sender/Author has removed metadata from the pdf then there are chances that original file creation date is not displayed.
+
+2. Key greek and other characters
 
 ```
 Φ(ρ𝑧)
@@ -87,7 +100,7 @@ UC   LC    Name
 ```
 
 
-1. Today I learned (TIL)
+3. Today I learned (TIL)
 
    2020-05-25:    
    It appears that now I need to run RStudio as an **administrator** on
@@ -117,7 +130,7 @@ UC   LC    Name
    - Under Product Information, click on `Update Options` next to `Office Updates`.    
    - From the list of options, click on `Update Now`.
 
-2. Chrome Bookmarks - How to move a folder...
+3. Chrome Bookmarks - How to move a folder...
 
    From [here](https://support.google.com/chrome/thread/3479132?hl=en).
    
@@ -128,24 +141,24 @@ UC   LC    Name
    > little 'folder' icon-- it will not work.
 
 
-3. Keyboard shortcut for the `dplyr` pipe operator
+4. Keyboard shortcut for the `dplyr` pipe operator
 
    ```
    Win: `%>%` - Ctl + Shift + M    
    Mac: `%>%` - CMD + Shift + M   
    ```
 
-4. Fix a `recurring guthub credential problem` - run:
+5. Fix a `recurring guthub credential problem` - run:
    
   ```
      Sys.unsetenv("GITHUB_PAT")
      Sys.getenv("GITHUB_PAT")
   ```
 
-5. The R `janitor` package is your friend. It cleans up
+6. The R `janitor` package is your friend. It cleans up
    **non-standard column names**.
 
-6. CDC Corona Virus Recommendations
+7. CDC Corona Virus Recommendations
 
    > The CDC recommends washing with soap and water for at least 20 seconds after
    > using the bathroom, before eating and after blowing your nose or sneezing. It
@@ -155,7 +168,7 @@ UC   LC    Name
    > “These are all things you can do to prevent the spread of pretty much any
    > respiratory virus,” Brewer said.
 
-7. Closed captions in CBS All access
+8. Closed captions in CBS All access
 
    > Go to www.cbs.com. Find a *full* episode of a series that you're
    > interested in and click on it. To turn the captions on, bring your
@@ -164,7 +177,7 @@ UC   LC    Name
    > side, click again on "CC captions" just once.
 
 
-8. The **Feynman** technique of learning:
+9. The **Feynman** technique of learning:
 
     - **Step 1**: Pick and study a topic
 
@@ -176,27 +189,27 @@ UC   LC    Name
     
     More [here](./Feynman_technique/Feynman_technique.html)...
     
-9. **Install command line tools** on MacOS
+10. **Install command line tools** on MacOS
 
     `xcode-select --install`
 
-10. **Reset a Fitbit Ionic watch**
+11. **Reset a Fitbit Ionic watch**
 
     Press and hold the left and bottom right buttons at the same time until you
     see the Fitbit logo. Let go of the buttons, and your tracker will restart.
 
-11. **Regex for youtube time stamps**. Useful in SublimeText3!
+12. **Regex for youtube time stamps**. Useful in SublimeText3!
 
    `\d\d:\d\d`
 
-12. **Symbolic links**. I always get this backwards...
+13. **Symbolic links**. I always get this backwards...
 
     ```
        file     link
     ln -s source destination
     ```
 
-13. **Fun snippets**
+14. **Fun snippets**
 
     > Your closest colaborator is you, six months from now    
     > ... and you don't respond to email     
@@ -205,17 +218,17 @@ UC   LC    Name
     > DRY (do not repeat yourself) vs WET (waste everyones time) coding styles    
     > - Peter Baker (UseR 2018)
 
-14. **Getting started with data science**
+15. **Getting started with data science**
 
 - A very helpful article from
 [Datacamp](https://www.datacamp.com/community/tutorials/setup-data-science-environment).
 
-15. **Clear the Chrome Cache**
+16. **Clear the Chrome Cache**
 
     - Press "CTRL" + "Shift" + "Delete" keys in Windows or Linux
     - Press "Command" + "Shift" + "Delete"" keys on MacOS.
 
-16. **Delete Specific Cookies in Chrome for Mac OS X**
+17. **Delete Specific Cookies in Chrome for Mac OS X**
 
     From [osxdaily.com](http://osxdaily.com/2016/07/02/delete-cookies-chrome-browser/): You can remove a specific website cookie from Chrome by doing the following:
 
@@ -231,7 +244,7 @@ UC   LC    Name
 
     - Avoid cookie placement and cache generation in the first place by using the Chrome `Incognito Mode` private browsing feature.
 
-17. **Automatically download all files in a directory**
+18. **Automatically download all files in a directory**
 
     Let's also exclude all the `index.html` files... 
 
@@ -239,7 +252,7 @@ UC   LC    Name
     wget -r --no-parent --reject "index.html*" http://my/url
 ```
 
-18. **How to block someone on Facebook**
+19. **How to block someone on Facebook**
 
     - Click at the top right of Facebook and choose `Settings`.
     - Click `Blocking` in the left side menu.
@@ -247,13 +260,13 @@ UC   LC    Name
     - Select the specific person you want to block ans click `Block > Block [name]`
 
 
-19. **Convert `.mkv` to `.mp4` from the command line**
+20. **Convert `.mkv` to `.mp4` from the command line**
 
 ```
     ffmpeg -i vid.mkv -c copy vid.mp4
 ```
 
-20. **HTML Syntax**
+21. **HTML Syntax**
 
     - **A link**
     
