@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-07-19"
+date: "Started: 2013-07-16, Last modified: 2020-07-28"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -31,7 +31,7 @@ To see what is installed:
 brew list
 ```
 
-Current list (2020-07-21)
+Current list (2020-07-28)
 
 ```
 cairo			ilmbase			openjpeg
@@ -44,14 +44,14 @@ gd			libheif			python@3.8
 gdbm			liblqr			qt
 gettext			libomp			readline
 ghostscript		libpng			shared-mime-info
-glib			libtiff			sqlite
-gnu-getopt		libtool			webp
-gnuplot			little-cms2		x265
-graphite2		lua			xmlto
-harfbuzz		lzo			xz
+glib			libsigc++@2		sqlite
+glibmm			libtiff			webp
+gnu-getopt		libtool			x265
+gnuplot			little-cms2		xmlto
+graphite2		lua			xz
+harfbuzz		lzo			youtube-dl
 htop			ncurses
 icu4c			openexr
-
 ```
 
 # Getting preferences from command line
