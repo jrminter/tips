@@ -389,6 +389,8 @@ UC   LC    Name
 
 [json](./json/json.html)
 
+[LaTeX for Rmarkdown](./latex-eqns-for-rmarkdown/latex-eqns-for-rmarkdown.html)
+
 [legacy equipment](./legacy/Legacy.html)
 
 [Logos Library System](./Logos/Logos.html)

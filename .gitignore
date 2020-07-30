@@ -254,6 +254,8 @@ json/json.md
 json/json.html
 json/figure/
 
+latex-eqns-for-rmarkdown/*.html
+
 # legacy directory
 legacy/.DS_Store
 legacy/Legacy.md
