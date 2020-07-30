@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-07-28"
+date: "Started: 2013-07-16, Last modified: 2020-07-30"
 output:
   html_document:
     keep_md: true
@@ -11,291 +11,310 @@ output:
     toc_depth: 3
 ---
 
-Fix for annoying git message:
-
-```
-git config --global pull.rebase false
-```
-
-> Plod. don't sprint. Be fruitful like a tree, not efficient like a machine. Use the gifts God has given you. - Douglas Wilson
-
-> The greatest value of a picture is when it forces us to notice what
-we never expected to see. - J.Tukey
-
-> All models are wrong, but some are useful. - G. Box
-
-> Make everything as simple as possible but not simpler. - A. Einstein
-
-> Your closest collaborator is you, six months from now. You do not
-> respond to email.    
-> - Karl Browman
-
-From [DataArtisan](https://twitter.com/dataartisan1/status/1263784688432398338):
-
-> Skills that make you stand out in #DataScience    
-> 
-> Being good at     
-> - making presentations    
-> - public speaking    
-> - explaining complex concepts    
-> - listening     
-> - changing plans on short notice    
-> - receiving feedback    
-
-
 This repository contains the John Minter's useful tips in Rmarkdown
 format.
+
+- **USB drives**
+
+  Note to self: Only buy **USB-3.1** thumb drives, They are **a _lot_ faster**
+  than USB 3.0...
+
+  see [Amazon](https://www.amazon.com/gp/product/B07D7PDLXC/ref=ppx_yo_dt_b_asin_title_o00_s00) for a nice drive...
+
+
+- **Fix for annoying git message:**
+
+  ```
+  git config --global pull.rebase false
+  ```
+
+- **Quotes I Like**
+
+  > Plod. don't sprint. Be fruitful like a tree, not efficient like a machine.
+  > Use the gifts God has given you. - Douglas Wilson
+
+  > The greatest value of a picture is when it forces us to notice what we never
+  > expected to see. - J.Tukey
+
+  > All models are wrong, but some are useful. - G. Box
+
+  > Make everything as simple as possible but not simpler. - A. Einstein
+
+  > Your closest collaborator is you, six months from now. You do not
+  > respond to email.    
+  > - Karl Browman
+
+- From [DataArtisan](https://twitter.com/dataartisan1/status/1263784688432398338):
+
+  Skills that make you stand out in #DataScience    
+  
+  Being good at     
+  - making presentations    
+  - public speaking    
+  - explaining complex concepts    
+  - listening     
+  - changing plans on short notice    
+  - receiving feedback    
+
 
 **First**, some quickies:
 
 1. Checking Author/date properties in a PDF
 
-> **Q: How do I find out when a PDF doc was originally created there is nothing under `File/Properties`? **
+  > **Q: How do I find out when a PDF doc was originally created there is nothing under `File/Properties`? **
 
-Answer by **RahulTyagi (Adobe Employee)**
+  > Answer by **RahulTyagi (Adobe Employee)**
 
-> Generally, it is shown under the document properties window in
-> Acrobat (As shown in the following snapshot).
+  > Generally, it is shown under the document properties window in
+  > Acrobat (As shown in the following snapshot).
 
-![](img/acrobat-properties.png)
+  > ![](img/acrobat-properties.png)
 
-However, if the sender/Author has removed metadata from the pdf then there are chances that original file creation date is not displayed.
+  > However, if the sender/Author has removed metadata from the pdf then there
+  > are chances that original file creation date is not displayed.
 
+  
 2. Key greek and other characters
 
-```
-Φ(ρ𝑧)
-   𝑧  script z   
-```
-Happily, Rmarkdown handles these well in html documents. 
-Haven't been able to use them in LaTeX.  Need to try XeLaTeX...
+  ```
+  Φ(ρ𝑧)
+  𝑧  script z   
+  ```
+  Happily, Rmarkdown handles these well in html documents. 
+  Haven't been able to use them in LaTeX.  Need to try XeLaTeX...
 
-```
-UC   LC    Name
----  ---  ----
-Α	α	Alpha	
-Β	β	Beta
-Γ	γ	Gamma
-Δ	δ	Delta
-Ε	ε	Epsilon
-Ζ	ζ	Zeta
-Η	η	Eta
-Θ	θ	Theta
-Ι	ι	Iota
-Κ	κ	Kappa
-Λ	λ	Lambda
-Μ	μ	Mu
-Ν	ν	Nu
-Ξ	ξ	Xi
-Ο	ο	
-Π	π	Pi
-Ρ	ρ	Rho
-Σ	σ,ς 
-Τ	τ	
-Υ	υ	
-Φ	φ	Phi
-Χ	χ	Chi
-Ψ	ψ	Psi
-Ω	ω	Omega
-```
+  ```
+  UC LC Name
+  -- -- ----
+  Α	 α	Alpha	
+  Β	 β	Beta
+  Γ	 γ	Gamma
+  Δ	 δ	Delta
+  Ε	 ε	Epsilon
+  Ζ	 ζ	Zeta
+  Η	 η	Eta
+  Θ	 θ	Theta
+  Ι	 ι	Iota
+  Κ	 κ	Kappa
+  Λ	 λ	Lambda
+  Μ	 μ	Mu
+  Ν	 ν	Nu
+  Ξ	 ξ	Xi
+  Ο	 ο	Omicron
+  Π	 π	Pi
+  Ρ	 ρ	Rho
+  Σ	 σ,ς  Sigma
+  Τ	 τ	Tau
+  Υ	 υ  Upsilon	
+  Φ	 φ	Phi
+  Χ	 χ	Chi
+  Ψ	 ψ	Psi
+  Ω	 ω	Omega
+  ```
 
 
-3. Today I learned (TIL)
+  3. Today I learned (TIL)
 
-   2020-05-25:    
-   It appears that now I need to run RStudio as an **administrator** on
-   **Windows 10** to **install packages**.
-   
-   Two ways to do it:
-   
-   - Right click on a **Desktop** RStudio icon and choose `Run as Administrator`
-   - Right click on the tool-bar RStudio Icon, **pull up**, and choose `Run as Administrator`.
+      2020-05-25:    
+      It appears that now I need to run RStudio as an **administrator** on
+      **Windows 10** to **install packages**.
+      
+      Two ways to do it:
+      
+      - Right click on a **Desktop** RStudio icon and choose `Run as Administrator`
+       - Right click on the tool-bar RStudio Icon, **pull up**, and choose `Run as Administrator`.
    
       ![How to run RStudio as admnin from toolbar](./R/inc/R-as-admin-toolbar.png)
    
-   This **really annoying** since my profile is an administrator...
+        This **really annoying** since my profile is an administrator...
 
    
    
 
-   2020-05-14:    
-   **Do not update your iPhone OS right before a run**. The update
-   **appeared** to be done, but my music was skipping for about
-   20 min. Guess there was processing in the background.
+        2020-05-14:    
+        **Do not update your iPhone OS right before a run**. The update
+        **appeared** to be done, but my music was skipping for about
+        20 min. Guess there was processing in the background.
    
-   2020-05-18:    
-   **Update Microsoft Office**    
-   - Open an Office application, such as Word, Excel, or PowerPoint. ...    
-   - Click on `Account` or `Office Account` on the list.    
-   - Under Product Information, click on `Update Options` next to `Office Updates`.    
-   - From the list of options, click on `Update Now`.
+        2020-05-18:    
+        **Update Microsoft Office**    
+        - Open an Office application, such as Word, Excel, or PowerPoint. ...    
+        - Click on `Account` or `Office Account` on the list.    
+        - Under Product Information, click on `Update Options` next to `Office Updates`.    
+        - From the list of options, click on `Update Now`.
 
-3. Chrome Bookmarks - How to move a folder...
+  4. Chrome Bookmarks - How to move a folder...
 
-   From [here](https://support.google.com/chrome/thread/3479132?hl=en).
+        From [here](https://support.google.com/chrome/thread/3479132?hl=en).
    
-   > Under Bookmarks, open Bookmark Manager. If you want to move FOLDERS
-   > that are within another folder (parent folder) you need to select the
-   > parent folder in the left window. Then you click on the NAME of the
-   > folder you want to move in the right side window. DO NOT click on the
-   > little 'folder' icon-- it will not work.
+        > **Under Bookmarks**, open Bookmark Manager. If you want to move FOLDERS
+        > that are within another folder (parent folder) you need to select the
+        > parent folder in the left window. Then you click on the NAME of the
+        > folder you want to move in the right side window. DO NOT click on the
+        > little 'folder' icon-- it will not work.
 
 
-4. Keyboard shortcut for the `dplyr` pipe operator
+  5. Keyboard shortcut for the `dplyr` pipe operator
 
-   ```
-   Win: `%>%` - Ctl + Shift + M    
-   Mac: `%>%` - CMD + Shift + M   
-   ```
+      ```
+      Win: `%>%` - Ctl + Shift + M    
+      Mac: `%>%` - CMD + Shift + M   
+      ```
 
-5. Fix a `recurring guthub credential problem` - run:
+  6. Fix a `recurring guthub credential problem` - run:
    
-  ```
-     Sys.unsetenv("GITHUB_PAT")
-     Sys.getenv("GITHUB_PAT")
-  ```
+      ```
+      Sys.unsetenv("GITHUB_PAT")
+      Sys.getenv("GITHUB_PAT")
+      ```
 
-6. The R `janitor` package is your friend. It cleans up
-   **non-standard column names**.
+  7. The R `janitor` package is your friend. It cleans up
+     non-standard column names .
 
-7. CDC Corona Virus Recommendations
+  8. CDC Corona Virus Recommendations
 
-   > The CDC recommends washing with soap and water for at least 20 seconds after
-   > using the bathroom, before eating and after blowing your nose or sneezing. It
-   > also advises not to touch your eyes, nose and mouth and to clean objects and
-   > surfaces you touch often.
-   >
-   > “These are all things you can do to prevent the spread of pretty much any
-   > respiratory virus,” Brewer said.
+      > The CDC recommends washing with soap and water for at least 20 seconds after
+      > using the bathroom, before eating and after blowing your nose or sneezing. It
+      > also advises not to touch your eyes, nose and mouth and to clean objects and
+      > surfaces you touch often.
+      >
+      > “These are all things you can do to prevent the spread of pretty much any
+      > respiratory virus,” Brewer said.
 
-8. Closed captions in CBS All access
+  9. Closed captions in CBS All access
 
-   > Go to www.cbs.com. Find a *full* episode of a series that you're
-   > interested in and click on it. To turn the captions on, bring your
-   > cursor into the middle of the video to see the menu show up. Look 
-   > for and click on the plus sign for "More" on the lower right hand
-   > side, click again on "CC captions" just once.
+      > Go to www.cbs.com. Find a full episode of a series that you're
+      > interested in and click on it. To turn the captions on, bring your
+      > cursor into the middle of the video to see the menu show up. Look 
+      > for and click on the plus sign for "More" on the lower right hand
+      > side, click again on "CC captions" just once.
 
 
-9. The **Feynman** technique of learning:
+  10. The Feynman technique of learning:
 
-    - **Step 1**: Pick and study a topic
+      - Step 1: Pick and study a topic
 
-    - **Step 2**: Explain the topic to someone, like a child, who is unfamiliar with the topic
+      - Step 2: Explain the topic to someone, like a child, who is unfamiliar
+        with the topic
 
-    - **Step 3**: Identify any gaps in your understanding 
+      - Step 3: Identify any gaps in your understanding 
 
-    - **Step 4**: Review and Simplify!
+      - Step 4: Review and Simplify!
     
-    More [here](./Feynman_technique/Feynman_technique.html)...
+      More [here](./Feynman_technique/Feynman_technique.html)...
     
-10. **Install command line tools** on MacOS
+  11. Install command line tools on MacOS
 
-    `xcode-select --install`
+      `xcode-select --install`
 
-11. **Reset a Fitbit Ionic watch**
+  12. Reset a Fitbit Ionic watch
 
-    Press and hold the left and bottom right buttons at the same time until you
-    see the Fitbit logo. Let go of the buttons, and your tracker will restart.
+      Press and hold the left and bottom right buttons at the same time until you
+       see the Fitbit logo. Let go of the buttons, and your tracker will restart.
 
-12. **Regex for youtube time stamps**. Useful in SublimeText3!
+  13. Regex for youtube time stamps. Useful in SublimeText3!
 
-   `\d\d:\d\d`
+      `\d\d:\d\d`
 
-13. **Symbolic links**. I always get this backwards...
+  14. Symbolic links. I always get this backwards...
 
+      ```
+      file     link
+      ln -s source destination
+      ```
+
+  15. Fun snippets
+
+      > Your closest colaborator is you, six months from now    
+      > ... and you don't respond to email     
+      > - Karl Broman
+
+      > DRY (do not repeat yourself) vs WET (waste everyones time) coding
+      > styles    
+      > - Peter Baker (UseR 2018)
+
+  16. Getting started with data science
+
+      - A very helpful article from
+          [Datacamp](https://www.datacamp.com/community/tutorials/setup-data-science-environment).
+
+  17. Clear the Chrome Cache
+
+      - Press "CTRL" + "Shift" + "Delete" keys in Windows or Linux
+      - Press "Command" + "Shift" + "Delete"" keys on MacOS.
+
+  18. Delete Specific Cookies in Chrome for Mac OS X
+
+      From [osxdaily.com](http://osxdaily.com/2016/07/02/delete-cookies-chrome-browser/)
+      You can remove a specific website cookie from Chrome by doing the following
+      This skips several steps from original article!    
+      - Open `chrome://settings/siteData` as a URL
+
+      - Scroll to look at the list or use the `Search` box if you want to
+      quickly find a specific site URL.
+
+      - To remove the cookie(s), then select the site and click the
+      **trash can icon** to delete cookies for the site.
+
+      - Rinse and repeat for other sites...
+
+      - Avoid cookie placement and cache generation in the first place by using
+      the Chrome `Incognito Mode` private browsing feature.
+  
+  19. Automatically download all files in a directory
+
+      Let's also exclude all the `index.html` files... 
+      
+      ```
+      wget -r --no-parent --reject "index.html*" http://my/url
+      ```
+        
+  20. How to block someone on Facebook
+
+      - Click at the top right of Facebook and choose `Settings`.
+      - Click `Blocking` in the left side menu.
+      - In the `Block` users setting, enter the name of the person you want to
+      block and click `Block`.
+      - Select the specific person you want to block ans click
+      `Block > Block [name]`
+
+
+  21. Convert `.mkv` to `.mp4` from the command line
+
+      ```
+      ffmpeg -i vid.mkv -c copy vid.mp4
+      ```
+
+  22. HTML Syntax
+
+  - A link
+    
+      ```
+      <a href="https://...">Label</a>
+      ```
+    
+  - A paragraph
+    
+      ```
+      <p>A paragraph</p>
+      ```
+    
+  - A quote
+    
     ```
-       file     link
-    ln -s source destination
+    <q>A quote</q>
     ```
-
-14. **Fun snippets**
-
-    > Your closest colaborator is you, six months from now    
-    > ... and you don't respond to email     
-    > - Karl Broman
-
-    > DRY (do not repeat yourself) vs WET (waste everyones time) coding styles    
-    > - Peter Baker (UseR 2018)
-
-15. **Getting started with data science**
-
-- A very helpful article from
-[Datacamp](https://www.datacamp.com/community/tutorials/setup-data-science-environment).
-
-16. **Clear the Chrome Cache**
-
-    - Press "CTRL" + "Shift" + "Delete" keys in Windows or Linux
-    - Press "Command" + "Shift" + "Delete"" keys on MacOS.
-
-17. **Delete Specific Cookies in Chrome for Mac OS X**
-
-    From [osxdaily.com](http://osxdaily.com/2016/07/02/delete-cookies-chrome-browser/): You can remove a specific website cookie from Chrome by doing the following:
-
-    This skips several steps from original article!
-
-    - Open `chrome://settings/siteData` as a URL
-
-    - Scroll to look at the list or use the `Search` box if you want to quickly find a specific site URL.
-
-    - To remove the cookie(s), then select the site and click the **trash can icon** to delete cookies for the site.
-
-    - Rinse and repeat for other sites...
-
-    - Avoid cookie placement and cache generation in the first place by using the Chrome `Incognito Mode` private browsing feature.
-
-18. **Automatically download all files in a directory**
-
-    Let's also exclude all the `index.html` files... 
-
-```
-    wget -r --no-parent --reject "index.html*" http://my/url
-```
-
-19. **How to block someone on Facebook**
-
-    - Click at the top right of Facebook and choose `Settings`.
-    - Click `Blocking` in the left side menu.
-    - In the `Block` users setting, enter the name of the person you want to block and click `Block`.
-    - Select the specific person you want to block ans click `Block > Block [name]`
-
-
-20. **Convert `.mkv` to `.mp4` from the command line**
-
-```
-    ffmpeg -i vid.mkv -c copy vid.mp4
-```
-
-21. **HTML Syntax**
-
-    - **A link**
-    
-        ```
-        <a href="https://...">Label</a>
-        ```
-    
-    - **A paragraph**
-    
-        ```
-        <p>A paragraph</p>
-        ```
-    
-    - **A quote**
-    
-        ```
-        <q>A quote</q>
-        ```
         
-    - **A blockquote**
+  - A blockquote
     
-        ```
-        <blockquote cite="https://www.w3schools.com/tags/tag_blockquote.asp">
-        <p>A long paragraph of text.</p>
+    ```
+    <blockquote cite="https://www.w3schools.com/tags/tag_blockquote.asp">
+    <p>A long paragraph of text.</p>
         
-        <p>A second long paragraph of text.</p>
+    <p>A second long paragraph of text.</p>
         
-        </blockquote>
-        ```
+    </blockquote>
+    ```
         
 
 
