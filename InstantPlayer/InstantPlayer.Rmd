@@ -21,9 +21,18 @@ software here:
 
 [Instant Reality Player](https://www.instantreality.org/downloads/)
 
-Four menus
+The latest daily build on mac is:
 
-# File
+`InstantPlayer-MacOS-10.10-x64-2.9.0.39931rc4`
+
+The latest daily build on Windows is: 
+
+`InstantReality-Windows-vs2013-x64-2.11.0.45996.msi`
+
+
+# Four menus
+
+## File
 
 ```
 - Open File       Ctl-D
@@ -36,7 +45,7 @@ Four menus
 ```
 
 
-# Navigation
+## Navigation
 
 ```
 
@@ -44,44 +53,45 @@ Four menus
 - Show All (move camera to show all)
 - Straighten Up (moves trajectories off screen...)
 - Cameras > DTSA Menu with:
-            Y-axis
-            Gun (Z)
-            X-axis
-- Navigation Mode > Menu
-                    - Examine 
-                    - Walk - left-right arrows rotate
-                    - Fly
-                    - Free Fly
-                    - Look At
-                    - Pan
-                    - Slide
-                    - Game 
+           - Y-axis
+           - Gun (Z)
+           - X-axis
+- Navigation
+        Mode > Menu
+            - Examine 
+            - Walk - left-right arrows rotate
+            - Fly
+            - Free Fly
+            - Look At
+            - Pan
+            - Slide
+            - Game 
 ```
 
 
-# View Window > Menu
+## View Window > Menu
 
 ```
-                    - Render Mode > Filled, Wireframe, or Point Filled is best
-                    - Activate Full Screen (Alt-Enter)
-                    - Statistic - Off (default), Applications, keyboard Mapping
-                    - Deactivate Status Bar
+              - Render Mode > Filled, Wireframe, or Point Filled is best
+              - Activate Full Screen (Alt-Enter)
+              - Statistic - Off (default), Applications, keyboard Mapping
+              - Deactivate Status Bar
 ```
 
 
-# ? (Help Menu) > Pop up Help Menu
+## ? (Help Menu) > Pop up Help Menu
 
 ```
-                    - Insta Player Help (a VERY limited help file, mostly license...)
-                    - Insta Player Website (goes nowhere...)
-                    - License  The fine print....
-                    - Acknowledgments. Does identify Pawel W. Olszta
-                    - Web Interface Scene Graph > Gives your installation parameters
-                      Key info: Avalon Web Interface
-                      V2.8.0 build: R-36098 Jul 27 2016 Windows x86_64
-                      Lists loaded file name and Network Services
-                    - Web Interface Device Manager (lists Root Namespace and installed Codecs)
-                    - Info (a small about box)
+              - Insta Player Help (a VERY limited help file, mostly license...)
+              - Insta Player Website (goes nowhere...)
+              - License  The fine print....
+              - Acknowledgments. Does identify Pawel W. Olszta
+              - Web Interface Scene Graph > Gives your installation parameters
+                Key info: Avalon Web Interface
+                V2.8.0 build: R-36098 Jul 27 2016 Windows x86_64
+                Lists loaded file name and Network Services
+              - Web Interface Device Manager (lists Root Namespace and installed Codecs)
+              - Info (a small about box)
 ```
 
 
