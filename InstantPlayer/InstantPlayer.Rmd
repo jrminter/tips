@@ -1,8 +1,11 @@
 ---
 title: "Instant Player"
 author: "J. R. Minter"
-date: "Started: 2020-08-02, Last modified: 2020-08-02"
+date: 'Started: 2020-08-02, Last modified: 2020-08-02'
 output:
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
   html_document:
     css: ../theme/jm-gray-vignette.css
     number_sections: yes
