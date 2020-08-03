@@ -85,6 +85,43 @@ file:./
 
 ```
 
+## Oxides used for glasses
+
+To model and simulate spectra, one needs to know the composition of the
+glass. These tend to be produced from a number of oxides from the elements..
+The table below contains the oxide and density. One can use these to compute the
+composition. The NIST Glass database is especially helpful. Below is a list
+of oxides and densities in ascending order of density.
+
+![K309 from NIST Glass database](png/K309-NIST-glass-database.png)
+
+### Common oxides for glass and their densities
+
+One can estimate the glass density from the mass fractions of the oxides.
+It is a decent estimate...
+
+
+```
+El   Oxide  g/cm3
+--   -----  -----
+Ca - CaO    2.21
+B  - B2O3   2.46
+Si - SiO2   2.65
+P  - P2O5   2.39
+As - As2O3  3.74
+Al - Al2O3  3.95
+Ge - GeO2   4.25
+Sb - Sb2O3  5.2
+Fe - Fe2O3  5.24
+Te - TeO2   5.67
+Ba - BaO    5.72
+La - La2O3  6.51
+Ce - CeO2   7.22
+Pb - PbO    9.53
+
+```
+
+
 ## Notes on java for macos for DTSA-II
 
 From [here](https://installvirtual.com/install-openjdk-11-mac-using-brew/)
