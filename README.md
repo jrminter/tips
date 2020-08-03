@@ -444,6 +444,8 @@ format.
 
 [pandoc](./pandoc/pandoc.html)
 
+[phi-rho-z](./phi-rho-z/phi-rho-z.html)
+
 [plagiarism](./plagiarism/plagiarism.html)
 
 [pool](./pool/pool.html)
