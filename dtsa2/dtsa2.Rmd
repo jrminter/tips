@@ -100,6 +100,18 @@ of oxides and densities in ascending order of density.
 One can estimate the glass density from the mass fractions of the oxides.
 It is a decent estimate...
 
+**_Nota bene_** The DTSA material "alien" will properly handle a string like
+
+```
+0.3*B2O3+0.5*SiO2+0.1*CaO+0.1*P2O5
+```
+and we can use a calculator for and set the name for `unknown`
+
+```
+0.3*2.46+0.5*2.65+0.1*2.21+0.1*2.39
+```
+To get a density estimate of `2.52`
+
 
 ```
 El   Oxide  g/cm3
