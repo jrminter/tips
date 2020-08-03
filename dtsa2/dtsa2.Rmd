@@ -112,6 +112,7 @@ and we can use a calculator for and set the name for `unknown`
 ```
 To get a density estimate of `2.52`
 
+**And here is a handy table of oxides...**
 
 ```
 El   Oxide  g/cm3
