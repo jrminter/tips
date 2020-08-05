@@ -118,18 +118,26 @@ To get a density estimate of `2.52`
 El   Oxide  g/cm3
 --   -----  -----
 Ca - CaO    2.21
+K  - K2O    2.35
 B  - B2O3   2.46
 Si - SiO2   2.65
 P  - P2O5   2.39
+Mg - MgO    3.58
 As - As2O3  3.74
 Al - Al2O3  3.95
+Rb - Rb2O   4.0
+Ti - TiO2   4.23
 Ge - GeO2   4.25
+Cs - Cs2O   4.65
+Sr - SrO    4.7
 Sb - Sb2O3  5.2
 Fe - Fe2O3  5.24
 Te - TeO2   5.67
 Ba - BaO    5.72
 La - La2O3  6.51
+Gd - Gd2O3  7.07
 Ce - CeO2   7.22
+Eu - Eu2O3  7.40
 Pb - PbO    9.53
 
 ```
