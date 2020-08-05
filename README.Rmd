@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-07-30"
+date: "Started: 2013-07-16, Last modified: 2020-08-05"
 output:
   html_document:
     keep_md: true
@@ -325,6 +325,8 @@ format.
 [EkAutomater](./automater/automater.html)
 
 [Oxford AZtec](./AZtec/AZtec.html)
+
+[Badger Film](./BadgerFilm/BadgerFilm.html)
 
 [bibtex](./bibtex/bibtex.html)
 

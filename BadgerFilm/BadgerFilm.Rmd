@@ -1,0 +1,48 @@
+---
+title: "Badger Film"
+author: "J. R. Minter"
+date: "Started 2020-08-05, Last modified: 2020-08-05"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(knitr)
+```
+
+
+
+[Back to Index](../README.html)
+
+# Introduction
+
+`BadgerFilm` is a program developed by Aurelien Moi and John Fournelle
+to do thin film quantification from X-ray EDS and Electron Microprobe Spectra
+from thin films on a substrate.
+
+It is a successor to the `GMRFilm` package by Richard Waldo at General Motors
+in the 1980s.
+
+`BadgerFilm` is Open Source and is written in Visual Basic and hosted on
+[github](https://github.com/Aurelien354/BadgerFilm). The developers note: 
+
+> BadgeFilm requires a Windows OS (or emulator) and the
+> .NET Framework 4.5.2 or higher version.
+
+There is a `Quick Start` guide
+[here](https://github.com/Aurelien354/BadgerFilm/blob/master/BadgerFilm%20v1.2%20quickstart.docx).
+
+I have  local archives in the "Documentation" sub directory.
+
+
+
+
+
+
+
+[Back to Index](../README.html)
