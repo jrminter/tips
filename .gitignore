@@ -29,6 +29,9 @@ AZtec/AZtec.md
 AZtec/AZtec.html
 AZtec/figure/
 
+# BadgerFilm
+BadgerFilm/*.html
+
 # bibtex directory
 bibtex/.DS_Store
 bibtex/*.md
