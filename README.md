@@ -548,6 +548,8 @@ format.
 
 [winCasino](./winCasino/winCasino.html)
 
+[winXray](./winXray/winXray.html)
+
 [Workflow](./workflow/workflow.html)
 
 [Write Usefully (by Paul Graham)](./write_usefully/write_usefully.html)
