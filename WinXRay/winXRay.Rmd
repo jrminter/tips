@@ -1,0 +1,63 @@
+---
+title: "winXRay Instructions"
+author: "Raynald Gauvin et. al., adapted by J. R. Minter"
+date: 'Started: 2020-08-08, Last modified: 2020-08-08'
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
+---
+
+[Back to Index](../README.html)
+
+# Introduction
+
+## WinXray?
+
+Adapted from [here](https://www.gel.usherbrooke.ca/casino/tutorial/tutorial_frames.html) to
+be able to get html and pdf output. Minor reformatting from the original and adding PDF output.
+
+
+
+# Creating a Simulation
+
+## Step 1: Creating the Simulation
+
+You will be greeted with a main menu that has a series of icons
+at the top.
+
+![Win-Xray's ain menu bar](png/main-menu.png)
+
+To create a new simulation select File/New from the menu or click the first icon on the menu bar.
+
+The `NEW SIMULATION WIZARD` will appear on the screen.
+
+![The simulation option menu. Here you set the electron beam energies to simulate, the number of trajectories, and the detector parameters (at the bottom) ](png/option-simulation.png)
+Then you hit the `Next` 
+
+## Step 2: Creating Layers
+
+The first dialog box will be the Option Specimen dialog. In this dialog you will create your sample. The first choice will be
+a bulk sample that is pre-figured for `Al`.
+
+![](png/initial-option-specimen.png)
+
+Note that there is a box labeled `Set Element for All Region` and
+a check-box to set a `user defined density`.
+
+Note that at the bottom of the dialog you have a choice to make
+this `the default simulation`.
+
+
+
+![An opportunity to enter mass fractions](png/enter-mass-fractions.png)
+
+
+
+[Back to Index](../README.html)
+

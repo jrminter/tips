@@ -660,6 +660,10 @@ win/win.md
 win/win.html
 win/figure/
 
+WinXRay/*.html
+
+
+
 # workflow tips directory
 workflow/.DS_Store
 workflow/workflow.md
