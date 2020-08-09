@@ -1,7 +1,7 @@
 ---
 title: "R-Markdown Tips"
 author: "J. R. Minter"
-date: "Started: 2016-12-08, Last modified: 2020-05-12"
+date: "Started: 2016-12-08, Last modified: 2020-08-07"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -27,7 +27,13 @@ that are compatible with version control. This works very well in the
 
 ## Some key tips
 
-1. For PDF documente
+1. For PDF documents
+
+generate a page break with
+
+```
+\newpage
+```
 
 Both LaTeX (and Rmarkdown to get PDF) can use
 
