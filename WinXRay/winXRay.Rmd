@@ -26,12 +26,19 @@ be able to get html and pdf output. Minor reformatting from the original and add
 
 # Creating a Simulation
 
+## A **very** helpful hint.
+
+As you work through an analysis you can use **set as default**.
+This sets an entry in the `default.wxc` file. It is like an
+`.ini` file that stores the configuration. Save these files in case
+you need to repeat an analysis.
+
 ## Step 1: Creating the Simulation
 
 You will be greeted with a main menu that has a series of icons
 at the top.
 
-![Win-Xray's ain menu bar](png/main-menu.png)
+![Win-Xray's main menu bar](png/main-menu.png)
 
 To create a new simulation select File/New from the menu or click the first icon on the menu bar.
 
@@ -58,13 +65,8 @@ this `the default simulation`.
 ![An opportunity to enter mass fractions](png/enter-mass-fractions.png)
 
 And the final spectra
-![Final-spectrum log Y](png/Final-spectrum-display.png)
+![Final-spectrum log Y](png/Figure96-EDS-Au80Cu20-wt-pct-30kV.png)
 
-![Final Spectrum linear Y](png/Final-spectrum-linear.png)
-
-![Final Cu spectrum](png/Cu-Ka2-30kV.png)
-
-![Final Au Spectrum](png/AuLa-30KV.png)
 
 [Back to Index](../README.html)
 
