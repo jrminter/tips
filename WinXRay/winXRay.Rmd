@@ -1,5 +1,5 @@
 ---
-title: "winXRay Instructions"
+title: "WinXRay Instructions"
 author: "Raynald Gauvin et. al., adapted by J. R. Minter"
 date: 'Started: 2020-08-08, Last modified: 2020-08-08'
 output:
@@ -57,7 +57,14 @@ this `the default simulation`.
 
 ![An opportunity to enter mass fractions](png/enter-mass-fractions.png)
 
+And the final spectra
+![Final-spectrum log Y](png/Final-spectrum-display.png)
 
+![Final Spectrum linear Y](png/Final-spectrum-linear.png)
+
+![Final Cu spectrum](png/Cu-Ka2-30kV.png)
+
+![Final Au Spectrum](png/AuLa-30KV.png)
 
 [Back to Index](../README.html)
 
