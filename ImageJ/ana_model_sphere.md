@@ -27,10 +27,10 @@ the equivalent circular diameter and circularity of each specimen.
 
 
 
- median ECD px   sd ECD px   median Circ   sd Circ
---------------  ----------  ------------  --------
-        30.403       0.714         0.935     0.010
-        26.270       2.131         0.940     0.015
-        12.666       1.150         0.967     0.025
+| median ECD px| sd ECD px| median Circ| sd Circ|
+|-------------:|---------:|-----------:|-------:|
+|        30.403|     0.714|       0.935|   0.010|
+|        26.270|     2.131|       0.940|   0.015|
+|        12.666|     1.150|       0.967|   0.025|
 
 [Back to ImageJ](ImageJ.html)
