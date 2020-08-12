@@ -120,6 +120,8 @@ epma-matrix-corr/*.md
 epma-matrix-corr/*.html
 epma-matrix-corr/figure/
 
+font-test/*.html
+
 # Excel tips directory
 Excel/.DS_Store
 Excel/Excel.md
@@ -662,6 +664,8 @@ win/.DS_Store
 win/win.md
 win/win.html
 win/figure/
+
+winCasino/winCasino.html
 
 WinXRay/*.html
 
