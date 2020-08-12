@@ -66,6 +66,9 @@ color/color.md
 color/color.html
 color/figure/
 
+# complex-kratios
+complex-kratios/*.html
+
 # ConductiveEpoxy directory
 ConductiveEpoxy/.DS_Store
 ConductiveEpoxy/ConductiveEpoxy.md
