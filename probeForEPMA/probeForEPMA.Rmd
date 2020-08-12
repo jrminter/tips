@@ -1,7 +1,7 @@
 ---
 title: "Probe For EPMA"
 author: "John Minter"
-date: "Started: 2017-05-27, Last modified: 2020-05-10"
+date: "Started: 2017-05-27, Last modified: 2020-08-12"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -84,6 +84,46 @@ to a 7zip archive. I then store the z-zip archive and copies of the most useful
 files (e.g. SiO2.mat, SiO2.mat.bat, SiO2.mat.in, penepma.dat, peintens01.dat, 
 and pe-spec-01.dat). I have `gnuplot` scripts to plot the intensity and spectra
 files.
+
+# Penepma12 low kV simulation best practices
+
+**2020-08-12**
+
+First, I have an R project
+
+I have been running `penepma12` simulations at low voltages.
+This is a challenge because the GUI in `Standard` does not
+"like" low voltages. I ended up writing and editing the `*.in`
+file manually.
+
+I run the simulations in the default
+`C:\Userdata\Penepma12\Penepma` directory.
+
+I run them with a batch file `sim_name.bat` which looks like
+this:
+
+```
+C:
+cd "C:\Userdata\Penepma12\Penepma"
+Penepma < "sio2.in"
+```
+Note that the `sio2.in` input file, the geometry file `bulk.geo`,
+and the `sio2.mat` material file must all be in the
+`C:\Userdata\Penepma12\Penepma` directory.
+
+For these low voltage simulations I will often run a short
+simulation for 1 or two hours (3600 or 7200 sec.) I have typically
+run a `final simulation` for 8 hours (28800 sec).
+
+**Note:** When running a new simulation from the
+`C:\Userdata\Penepma12\Penepma` folder, I typically remove all
+files with from the last simulation. 
+
+**To Do:** Write a script do delete the `dispoable` files
+from previous simulations.
+
+
+
 
 # John Donovan's note 2020-05-10
 

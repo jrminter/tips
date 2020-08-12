@@ -1,0 +1,50 @@
+---
+title: "Complex K-ratios"
+author: "John Minter"
+date: "Started: 2020-08-12, Last modified: 2020-08-12"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+[Back to Index](../README.html)
+
+# Introduction
+
+I understand the computation of `k-ratios` from simple
+materials using **pure element standards**.
+
+However, I struggle to understand the computation of K-ratios
+using complex standards and how to convert those to the
+**pure element equivalent**.
+
+Paul Carpenter walked through an example of this at the 2017
+Lehigh Quantitative Microanalysis Course. Here I want to make
+an extended explanation.
+
+# The standards
+
+1. The **primary standard** is $MgO$.
+
+2. The **secondary standard** is $Mg_2 SiO_4$.
+
+# Example calculation
+
+Compute $Mg K_{\alpha}$ in $Mg_{2} SiO_{4}$ and compare via $\frac{K_{meas}}{K_{calc}}$.
+
+
+1. Measured: $Mg K_{\alpha}$ in $Mg_2SiO_4$
+   At **15 kV**, $K_{meas} = 0.5470$ (this is $K_{raw}$ ).
+
+2. Calculated using **CalcZAF**:
+
+   Calc. $K_{raw} = \frac{K Mg_2 SiO_4}{K MgO}$
+   
+   $K_{pureI, sec std} K_{pure_i,pri_std} = 0.25967 /  0.54782  = 0.9985$
+   
+3. $\frac{K_{meas}}{K_{calc}}$ = $\frac{0.5470}{0.54782}$ = $0.9985$
+
+
+[Back to Index](../README.html)

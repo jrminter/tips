@@ -340,6 +340,8 @@ format.
 
 [Color](./color/color.html)
 
+[Complex K-ratios](./complex-kratios/complex-kratios.html)
+
 [Conductive Epoxies](./ConductiveEpoxy/ConductiveEpoxy.html)
 
 [DataScience-linux64](./DataScience-linux64/DataScience-linux64.html)
