@@ -74,7 +74,7 @@ convert -density 150 $1.pdf $1.png
 
 
 
-On Windows I am currently using `gnuplot 5.2 patchlevel 8` 64 bit.
+On Windows I am currently using `gnuplot 5.4 patchlevel rc1` 64 bit.
 
 1. The gray bar on the Windows GUI has icons that send common commands
    to the terminal.
@@ -84,7 +84,18 @@ On Windows I am currently using `gnuplot 5.2 patchlevel 8` 64 bit.
     - The first icon - a circular arrow - will run `replot`.
    
     - The second icon - an open folder - will let you easily navigate
-      to the desired directory.
+      to the desired directory. Navigation is amore complicated noe.
+      
+      One can always use commands from the gnuplot prompt, e.g.:
+      
+      ```
+      gnuplot> pwd
+      C:\Users\johnr\Documents
+      gnuplot> cd 'C:\Users\johnr\Documents\gnuplot'
+      gnuplot> load 'amC-on-Cu-7kV.plt'
+      gnuplot> 
+      
+      ```
       
     - The third icon - that looks like a floppy disk - will let you navigate to
       where you want to save the plot.
