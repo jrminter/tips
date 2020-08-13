@@ -17,6 +17,14 @@ output:
 
 # Introduction
 
+## Quick explanation of the `generated` and `emitted` electrons
+
+Nomenclature is important. This simulation, first suggested by
+Paul Carpenter (Lehigh 2017) is reproduced in color from a
+screenshot in the application...
+
+![Note the "non-absorbed" electrons are the `generated` electrons and the "absorbed" electrons are `emitted` electrons](./img/TiO2-Casino.png)
+
 ## What is Casino?
 
 Adapted from [here](https://www.gel.usherbrooke.ca/casino/tutorial/tutorial_frames.html) to

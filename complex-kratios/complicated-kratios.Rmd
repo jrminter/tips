@@ -1,0 +1,37 @@
+Example calculation of Kcalc for Mg in M82Si04
+And comparison Via Kmeas / Kcalc
+
+- Primary standard is MgO
+  Secondary standard is Mg2SiO4
+
+- Measured: Mg Ka in Mg2SiO4
+  At 15 kV, Kmeas = 0.5470 (this is Kraw)
+
+- Calculated using CalcZAF:
+  Calc. Kraw = K Mg2SiO4 / K MgO
+  Kpurei, Sec Std / KpureI, Pri Std
+  = 0.25967/0.47401 = 0.54782
+
+- Kmeas / Kca|c = 0.5470 / 0.54782 = 0.9985
+
+
+MgO 15KV
+ELEMENT   K-RAW K-VALUE ELEMWT% OXIDWT% ATOMIC% FORMULA KILOVOL                                        
+   Mg ka  .00000  .47401  60.303   -----  50.000   1.000   15.00                                        
+   O  ka  .00000  .23370  39.697   -----  50.000   1.000   15.00                                        
+   TOTAL:                100.000   ----- 100.000   2.000
+
+Mg2SiO4 15kV
+ ELEMENT   K-RAW K-VALUE ELEMWT% OXIDWT% ATOMIC% FORMULA KILOVOL                                        
+   Si ka  .00000  .14211  19.962   -----  14.286    .333   15.00                                        
+   Mg ka  .00000  .25973  34.550   -----  28.571    .667   15.00                                        
+   O  ka  .00000  .24922  45.488   -----  57.143   1.333   15.00                                        
+   TOTAL:                100.000   ----- 100.000   2.333
+
+
+0.25973/0.47401 = 0.547942
+
+Kmeas  / Kpure-pri-sts
+0.5470 / 0.47401 = 
+
+0.5470 / 0.547942 = 0.9983
