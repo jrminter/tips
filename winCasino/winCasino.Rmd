@@ -21,7 +21,7 @@ output:
 
 Nomenclature is important. This simulation, first suggested by
 Paul Carpenter (Lehigh 2017) is reproduced in color from a
-screenshot in the application...
+screenshot in the application... This was from the Thursday Notebook tab  p. 4.
 
 ![Note the "non-absorbed" electrons are the `generated` electrons and the "absorbed" electrons are `emitted` electrons](./img/TiO2-Casino.png)
 
