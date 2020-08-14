@@ -54,6 +54,26 @@ And here is a recreation of Paul Carpenter's accompanying diagram:
 
 ![](./img/geometry-eds.png)
 
+## Spatial vs. Analytical View of Light Element Analysis
+
+1. Light Element analysis requires low kv to minimize x-ray absorption. The emitted x-ray volume small compared to the
+generated volume.
+ 
+2. There are spatial considerations at low kV:
+
+  - There is a small scattering volume.
+  - One needs to watch for polishing and cleanliness issues.
+  - High spatial resolution of analysis is often required.
+
+3. There are several helpful analytical tools for light
+element analysis.
+
+  - **Spatial analysis, X-ray volumes**: `Casino`, `DTSA-II` and the
+`Kanaya-Okayama` and `Anderson-Hasler` equations.
+
+  - **Data processing, ZAF factors, $f(\chi)$, macs**:  `CalcZAF`.
+
+  - **Spectral generation** (bulk, film, particle): `DTSA-II`.
 
 ## What is Casino?
 
