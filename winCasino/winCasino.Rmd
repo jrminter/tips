@@ -75,6 +75,39 @@ element analysis.
 
   - **Spectral generation** (bulk, film, particle): `DTSA-II`.
 
+4. Light Elements: Low generated Intensity
+  
+  - We must be concerned with the Fluorescent yield, $\omega$ ,
+    vs. Z. $\omega$ is the fraction of ionizations resulting in
+    characteristic x-ray emission **relative to** the
+    total number of ionizations, and $(1 - \omega)$ is the fraction
+    of auger electrons. Light elements produce **auger electrons**
+    **_in preference_** to **x-rays**.
+
+  - Low $\omega$ region of light element and/or low energy
+    analysis: There is a high overvoltage but the generation
+    of x-rays is limited by Auger production.
+
+5.  Surface Characteristics and Light Element Analysis
+
+  - Sensitivity to surface roughness from assumed instrument
+    take-off angke results in errors in the X-ray absorption
+    correction.
+    
+  - Contamination and variations in thickness of carbon
+    coating or differences in carbon coat thickness on
+    sample vs. standard produce errors.
+    
+  - All microanalysis is really thin-film analysis and the
+    surface layer becomes dimensionally significant for
+    light element / low energy analysis.
+    
+  - Light element analysis warrants use of thin-film correction
+    such as the `GMR`, `BadgerFilm` open source thin film software,
+    or the commercial products `Strategem` or `XFilm`. For example,
+    corrections can be made for differential carbon thickness,
+    contamination layer(s), etc.
+
 ## What is Casino?
 
 Adapted from [here](https://www.gel.usherbrooke.ca/casino/tutorial/tutorial_frames.html) to
