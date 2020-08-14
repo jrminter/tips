@@ -76,6 +76,8 @@ element analysis.
   - **Spectral generation** (bulk, film, particle): `DTSA-II`.
 
 4. Light Elements: Low generated Intensity
+
+   ![](img/plot-by-z.png)
   
   - We must be concerned with the Fluorescent yield, $\omega$ ,
     vs. Z. $\omega$ is the fraction of ionizations resulting in
