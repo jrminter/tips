@@ -17,13 +17,43 @@ output:
 
 # Introduction
 
-## Quick explanation of the `generated` and `emitted` electrons
+## Quick explanation of the `generated` and `emitted` electrons and light element absorption.
+
+The key equation is:
+
+$\frac{I}{I_0} = exp[ - \frac{\mu}{\rho} \rho s]$
+
+Absorption depends on the mass absorption coefficient
+$\frac{\mu}{\rho}$, and the path length $s$. The take-off
+angle $\Psi$ determines the path length.
+
+The mac are large and we want to minimize the path
+length by reducing kV and avoiding rough surfaces.
+ 
+$$f(\chi) = \frac{emitted}{generated}$$
+
+$$ A = \frac{f(\chi)^{standard}}{f(\chi)^{sample}} $$
+
+
+We use $f(\chi)$ to evaluate the degree of absorption in a material. For the sample we want:
+
+$f(\chi)$  > 0.75 (i.e., < 25% absorption)
+
+The absorption correction is simply the ratio of $f(\chi)$ 
+for standard (referenced to pure element) and sample.
+
+
 
 Nomenclature is important. This simulation, first suggested by
 Paul Carpenter (Lehigh 2017) is reproduced in color from a
 screenshot in the application... This was from the Thursday Notebook tab  p. 4.
 
 ![Note the "non-absorbed" electrons are the `generated` electrons and the "absorbed" electrons are `emitted` electrons](./img/TiO2-Casino.png)
+
+And here is a recreation of Paul Carpenter's accompanying diagram:
+
+![](./img/geometry-eds.png)
+
 
 ## What is Casino?
 
