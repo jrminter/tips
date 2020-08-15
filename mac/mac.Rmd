@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-07-28"
+date: "Started: 2013-07-16, Last modified: 2020-08-14"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -16,6 +16,14 @@ output:
 There are **lot** of keyboard shortcuts...
 
 [A handy PDF](pdf/mac-keyboard-shortcuts.pdf) ...
+
+# Clear Preview Cache
+
+> File, 
+>
+> Open Recent, 
+> 
+> Clear Menu 
 
 # Homebrew
 
