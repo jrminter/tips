@@ -1,7 +1,7 @@
 ---
 title: "Gnuplot Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-20, Last modified: 2020-07-04"
+date: "Started: 2013-07-20, Last modified: 2020-08-05"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -19,6 +19,63 @@ library(knitr)
 [Back to Index](../README.html)
 
 # My quick tips
+
+**2020-08-15**
+
+Although there are graphical interfaces for gnuplot,
+it is also has a command line
+
+A useful way to check the terminal type is
+
+```
+gnuplot <<<'show terminal'
+```
+
+[stackoverflow](https://stackoverflow.com/questions/60820836/cant-find-qt-or-x11-terminal-gnuplot-with-catalina)
+had a great tip:
+
+1. Install gnuplot with qt on mac
+
+```
+# Remove existing stuff to be sure my technique really works!
+brew rm qt gnuplot
+
+# Install qt and gnuplot afresh
+brew install qt gnuplot
+```
+
+On mac add
+
+```
+export GNUTERM=qt
+```
+To both `.profile` and `.zshrc` add `export GNUTERM=qt`
+
+For special cases you can reset the terminal from the
+gnuplot command line.
+
+```
+gnuplot> set terminal
+```
+
+will give the complete list...
+
+My favorite terminals
+
+```
+epslatex
+gif
+pdfcairo
+pngcairo
+postscript
+png
+pslatex
+pstricks
+qt
+svg
+```
+
+
 
 **2020-07-18**
 
