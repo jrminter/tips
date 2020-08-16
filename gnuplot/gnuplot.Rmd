@@ -1,7 +1,7 @@
 ---
 title: "Gnuplot Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-20, Last modified: 2020-08-05"
+date: "Started: 2013-07-20, Last modified: 2020-08-16"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -19,6 +19,38 @@ library(knitr)
 [Back to Index](../README.html)
 
 # My quick tips
+
+
+
+## Reasonable gnuplot colors
+
+**2020-08-16**
+
+Getting a reasonable color pallete is a challenge. This is about
+as good as I have seen...
+
+From [here](http://www.evangelistalab.org/2014/04/color-palette/).
+
+```
+# Canonical colors - full line
+set style line 1 lc rgb '#000000' lt 1 lw 3.0 ps 0.5 pt 7 # black
+set style line 2 lc rgb '#16469D' lt 1 lw 3.0 ps 0.5 pt 7 # dark blue
+set style line 3 lc rgb '#BD202D' lt 1 lw 3.0 ps 0.5 pt 7 # red
+set style line 4 lc rgb '#00A14B' lt 1 lw 3.0 ps 0.5 pt 7 # green
+set style line 5 lc rgb '#4B96D1' lt 1 lw 3.0 ps 0.5 pt 7 # light blue
+set style line 6 lc rgb '#F16521' lt 1 lw 3.0 ps 0.5 pt 7 # orange
+set style line 7 lc rgb '#9F6EAF' lt 1 lw 3.0 ps 0.5 pt 7 # light purple
+# Canonical colors - dashed line
+set style line 11 lc rgb '#000000' lt 2 lw 3.0 ps 0.5 pt 7 # black
+set style line 12 lc rgb '#16469D' lt 2 lw 3.0 ps 0.5 pt 7 # dark blue
+set style line 13 lc rgb '#BD202D' lt 2 lw 3.0 ps 0.5 pt 7 # red
+set style line 14 lc rgb '#00A14B' lt 2 lw 3.0 ps 0.5 pt 7 # green
+set style line 15 lc rgb '#4B96D1' lt 2 lw 3.0 ps 0.5 pt 7 # light blue
+set style line 16 lc rgb '#F16521' lt 2 lw 3.0 ps 0.5 pt 7 # orange
+set style line 17 lc rgb '#9F6EAF' lt 2 lw 3.0 ps 0.5 pt 7 # light purple
+```
+
+
 
 **2020-08-15**
 
