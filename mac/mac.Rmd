@@ -15,7 +15,82 @@ output:
 
 There are **lot** of keyboard shortcuts...
 
-[A handy PDF](pdf/mac-keyboard-shortcuts.pdf) ...
+[A handy PDF](pdf/mac-keyboard-shortcuts.pdf) from Apple...
+
+Here is a list of the best shortcuts from
+[Snazzy Labs](https://www.youtube.com/watch?v=HPQobUOx17o).
+
+The list is below:
+
+1. Spotlight does an excellent job in finding files. Once you found it,
+you can press `Enter` to open. You can also hold down the `Command` key
+and it will show you the path to the file. Press the `R` key and it will
+open the file inside if finder.
+
+2. In any browser you can press `Cmd L` and it will highlight the URL in
+the address bar that you can copy and paste into another application. 
+So the sequence is `Cmd-L` `Cmd-C` `Cmd-V` See the Apple website
+[here](https://support.apple.com/en-us/HT201361)
+
+`Cmd-shift-3` does a screen shot.
+
+`Cmd-shift-4` gives a cross-hair to capture a portion of the screen.
+
+3. In any text document you can make a hyperlink by
+`pressing and highlighting the region` and pressing `Cmd-K`,
+paste the link (`Cmd V`), and then `OK`.
+
+4. Hold mouse over the window's `radio button`. Hold the mouse there
+and you get a menu. Adjust the window position. You can also send to the
+`iPad` via `Sidecar`.
+
+5. `Hot corners` - specify an action when you mouse to corner. It is
+**easily** accidentally triggered on small displays. You can configure
+to have 2 keys to trigger an action....
+
+6. `Cmd H` hides currently active App. `Cmd Option H` does the inverse.
+This is a great way to cleanup your workspace.
+
+7. `Cmd tab` cycle through Apps cmd "`" (grave) will cycle through
+windows in an app that has more widows. `Reverse` the order by holding
+down `Shift`.
+
+8 `CMD` on hidden menu lets you move it **w/o moving active window.**
+
+9. `CMD D` Make a duplicate of a file.  `CMD I` and click stationary pad.
+Great for forms. Word knows about it... It is an old relic...
+
+10. Want to do an upload but it is in the wrong folder,
+**Drag to the upload window** and it creates a **duplicate**...
+
+11. Hold down the `Option` key and click `Wifi` icon in the menu bar and
+it gives you more info on your connection. You can also disconnect from
+wifi w/o turning wifi off. Lets you use Airpad up but get off a coffee
+shop network.
+
+12. `Option Command D` toggles a document `on` and `off`.
+**This is my friend!!!88
+
+13, When I forget to use tabs in finder I can fix it by clicking
+`Window > Merge All Windows`. I like this too!!!
+
+14. Move to trash `CMD-Delete` (Backspace).
+
+15. `Shift-Cmd-A` takes you directly to `Applications folder`,
+`shift-cmd-D` takes you to the `Desktop`. Only works when the finder
+is **active**.
+
+16. Go to dock. Click an App **hold down the cmd key**.
+
+17. **Notification center**. Author **hates** this too...
+Hold doen `Option` key as you click on `Notification Center`.  This will
+toggle it on and off.
+
+18. Lock screen, `Ctl-Cmd-q`.
+
+
+
+
 
 # Clear Preview Cache
 
