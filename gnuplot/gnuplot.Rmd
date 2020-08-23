@@ -1,7 +1,7 @@
 ---
 title: "Gnuplot Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-20, Last modified: 2020-08-16"
+date: "Started: 2013-07-20, Last modified: 2020-08-23"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -20,6 +20,21 @@ library(knitr)
 
 # My quick tips
 
+## Direct output to png
+
+On Windows, I usually set gnuplot output to print to a Windows terminal.
+I sometimes write to post script, but recently I have been writing png
+output directly. An example output lines is:
+
+
+```
+# set terminal png size 1024,768 font "Arial,12"
+# set output "DTSA-MoS2-Pb-Mo-FeS2-15kV-lin.png"
+```
+
+An example of the output:
+
+![$DTSA-II \ simulation \ of \ Pb, \ Mo, and \ FeS_{2} \ at \ 15 \ kV$ ](png/DTSA-MoS2-Pb-Mo-FeS2-15kV-lin.png)
 
 
 ## Reasonable gnuplot colors
