@@ -14,6 +14,16 @@ output:
 This repository contains the John Minter's useful tips in Rmarkdown
 format.
 
+
+- **LaTeX Symbols to remember**
+
+  `\geq`  $\geq$ 
+
+  `leq`  $\leq$
+
+  The PDF is [**here**](tex/pdf/TeXRefCard-v1.5.pdf).
+
+
 - **USB drives**
 
   Note to self: Only buy **USB-3.1** thumb drives, They are **a _lot_ faster**
