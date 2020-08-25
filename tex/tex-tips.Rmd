@@ -1,7 +1,7 @@
 ---
 title: "TeXLive Hints"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-07-29"
+date: "Started: 2013-07-16, Last modified: 2020-08-25"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -12,8 +12,18 @@ output:
 
 [Back to Index](../README.html)
 
-These are John Minter's tips for a workflow using TeXlive.
-They were compiled from several web sources.
+These are John Minter's tips for a workflow using TinyTeX or
+in Rmarkdown. They were compiled from several web sources.
+
+**LaTeX Symbols to remember**
+
+
+`\geq`  $\geq$ 
+
+`leq`  $\leq$
+
+The PDF is [**here**](pdf/TeXRefCard-v1.5.pdf).
+
 
 # Simple tricks
 
