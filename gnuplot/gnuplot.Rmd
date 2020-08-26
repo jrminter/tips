@@ -161,7 +161,7 @@ and use
  gnuplot cOnSi5kV-all.plt > plt.png
 ```
 
-Thsi is `proc-gnuplot` on the mac
+This is `proc-gnuplot` on the mac
 
 ```
 #!/bin/bash
@@ -221,7 +221,7 @@ On Windows I am currently using `gnuplot 5.4 patchlevel rc1` 64 bit.
     
     Defaults:    
     GraphOrigin=208 208    
-    GraphSize=1424 765   I changed to 1024 758    
+    GraphSize=1424 765   I changed to 1024 768    
     
     
 
