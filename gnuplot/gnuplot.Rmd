@@ -52,6 +52,40 @@ D2d: Unable to resize swap chain. hr = 887a0001
 This seems to be associated with resizing a widget. However, I get the error
 even if I do not resize the window...
 
+## Some helpful links
+
+1. Help on [terminals](http://www.gnuplotting.org/output-terminals/).
+It is a bit dated (2010-04-17).
+
+2. The current gnuplot help documentation recommends the `windows` terminal
+for Microsoft Windows. They also note that the cross platform terminals
+`wxt` and `qt` terminals for Windows.
+
+```
+    set term wxt {<n>}
+                 {size <width>,<height>} {position <x>,<y>}
+                 {background <rgb_color> | nobackground}
+                 {{no}enhanced}
+                 {font <font>} {fontscale <scale>}
+                 {title "title"}
+                 {linewidth <lw>} {butt|rounded|square}
+                 {dashlength <dl>}
+                 {{no}persist}
+                 {{no}raise}
+                 {{no}ctrl}
+                 {close}
+             
+    set term qt {<n>}
+                {size <width>,<height>}
+                {position <x>,<y>}
+                {title "title"}
+                {font <font>} {{no}enhanced}
+                {linewidth <lw>} {dashlength <dl>}
+                {{no}persist} {{no}raise} {{no}ctrl}
+                {close}
+                {widget <id>}
+
+```
 
 ## Direct output to png
 
