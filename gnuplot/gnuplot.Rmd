@@ -20,11 +20,38 @@ library(knitr)
 
 # My quick tips
 
-## Update 2020-08-26
+## Update 2020-08-27
 
-I am having terrible problems with Gnuplot on Windows 10. The windows
-application crashes on both my  desktop and VM on mac. I have no idea
-why...
+I was having terrible problems with Gnuplot on Windows 10. The windows
+application crashed on both my desktop and on the VM on mac. I have no idea
+why... I **did** however, find a solution, thanks to
+[stackoverflow](https://stackoverflow.com/questions/55088900/saving-pdf-output-in-gnuplot-via-qt)
+
+put:
+
+```
+reset
+```
+
+as the first line of every script. This ensures a **clean environment**!
+
+It appears more complicated... Even with `reset` at the top of each script,
+I could get a problem. Happily, running from the windows gnuplot prompt
+
+```
+`gnuplot > load 'C-peak-shape-Lehigh17-p51.plt'`
+```
+
+produced this error:
+
+```
+D2d: Unable to resize swap chain. hr = 887a0001
+
+```
+
+This seems to be associated with resizing a widget. However, I get the error
+even if I do not resize the window...
+
 
 ## Direct output to png
 
