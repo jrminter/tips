@@ -29,14 +29,26 @@ why...
 ## Direct output to png
 
 On Windows, I usually set gnuplot output to print to a Windows terminal.
-I sometimes write to postscript, but recently I have been writing png
-output directly. Given my recent problems on Windows, this exampleAn
-example is timely...:
+I sometimes write to post script, but recently I have been writing png
+output directly. Note the `s` on the `windows` terminal... It took me a
+while to find the problem... I sounded like this guy...
+
+<center>
+![](png/mumbly.png)
+</center>
+
+
+An example of output lines is:
 
 
 ```
-# set terminal png size 1024,768 font "Arial,12"
-# set output "DTSA-MoS2-Pb-Mo-FeS2-15kV-lin.png"
+# set terminal postscript enhanced "Times-Roman" 12
+# set terminal png enhanced large size 1024,768
+# set output "K227-overlap.png" 
+# set terminal qt size 1024,768
+# set terminal svg size 1024,768
+# set output "K227-overlap.svg"
+set terminal windows size 1024,768
 ```
 
 An example of the output:
@@ -168,7 +180,7 @@ and use
  gnuplot cOnSi5kV-all.plt > plt.png
 ```
 
-Thsi is `proc-gnuplot` on the mac
+This is `proc-gnuplot` on the mac
 
 ```
 #!/bin/bash
@@ -228,7 +240,7 @@ On Windows I am currently using `gnuplot 5.4 patchlevel rc1` 64 bit.
     
     Defaults:    
     GraphOrigin=208 208    
-    GraphSize=1424 765   I changed to 1024 758    
+    GraphSize=1424 765   I changed to 1024 768    
     
     
 
