@@ -25,7 +25,14 @@ library(knitr)
 On Windows, I usually set gnuplot output to print to a Windows terminal.
 I sometimes write to post script, but recently I have been writing png
 output directly. Note the `s` on the `windows` terminal... It took me a
-while to find the problem... An example of output lines is:
+while to find the problem... I sounded like this guy...
+
+<center>
+![](png/mumbly.png)
+</center>
+
+
+An example of output lines is:
 
 
 ```
