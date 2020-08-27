@@ -168,6 +168,8 @@ qt
 svg
 ```
 
+A full 
+
 
 
 **2020-07-18**
@@ -1138,6 +1140,144 @@ Note that the current app has these demo files in:
 - From: [alvinalexander.com](https://alvinalexander.com/technology/gnuplot-charts-graphs-examples#sample-data-files)
 
 - From [https://courses.physics.illinois.edu/](https://courses.physics.illinois.edu/phys466/sp2013/comp_info/gnuplot.html)
+
+from [here](http://www.bersch.net/gnuplot-doc/complete-list-of-terminals.html)
+
+
+# A full list of gnuplot terminals and their parameters
+
+```
+# Macos
+set terminal aqua {<n>} {title "<wintitle>"} {size <x> <y>}
+                  {font "<fontname>{,<fontsize>}"}
+                  {linewidth <lw>}"}
+                  {{no}enhanced} {solid|dashed} {dl <dashlength>}}
+
+set terminal emf {color | monochrome}
+                 {enhanced {noproportional}}
+                 {rounded | butt}
+                 {linewidth <LW>} {dashlength <DL>}
+                 {size XX,YY} {background <rgb_color>}
+                 {font "<fontname>{,<fontsize>}"}
+                 {fontscale <scale>}
+
+set term gif font "arial,11"
+set terminal gif 
+       {{no}enhanced}
+       {{no}transparent} {rounded|butt}
+       {linewidth <lw>} {dashlength <dl>}
+       {tiny | small | medium | large | giant}
+       {font "<face> {,<pointsize>}"} {fontscale <scale>}
+       {size <x>,<y>} {{no}crop}
+       {animate {delay <d>} {loop <n>} {{no}optimize}}
+       {background <rgb_color>}
+
+set terminal jpeg 
+       {{no}enhanced}
+       {{no}interlace}
+       {linewidth <lw>} {dashlength <dl>} {rounded|butt}
+       {tiny | small | medium | large | giant}
+       {font "<face> {,<pointsize>}"} {fontscale <scale>}
+       {size <x>,<y>} {{no}crop}
+       {background <rgb_color>}
+
+Latex
+set terminal {latex | emtex} {default | {courier|roman} {<fontsize>}}
+             {size <XX>{unit}, <YY>{unit}} {rotate | norotate}
+
+Deprecated...
+set terminal pdf {monochrome|color|colour}
+                 {{no}enhanced}
+                 {fname "<font>"} {fsize <fontsize>}
+                 {font "<fontname>{,<fontsize>}"} {fontscale <scale>}
+                 {linewidth <lw>} {rounded|butt}
+                 {dl <dashlength>}}
+                 {size <XX>{unit},<YY>{unit}}
+
+set term pdfcairo
+             {{no}enhanced} {mono|color}
+             {font <font>} {fontscale <scale>}
+             {linewidth <lw>} {rounded|butt|square} {dashlength <dl>}
+             {background <rgbcolor>}
+             {size <XX>{unit},<YY>{unit}}
+
+
+set terminal png 
+       {{no}enhanced}
+       {{no}transparent} {{no}interlace}
+       {{no}truecolor} {rounded|butt}
+       {linewidth <lw>} {dashlength <dl>}
+       {tiny | small | medium | large | giant}
+       {font "<face> {,<pointsize>}"} {fontscale <scale>}
+       {size <x>,<y>} {{no}crop}
+       {background <rgb_color>}
+
+set term pngcairo
+             {{no}enhanced} {mono|color}
+             {{no}transparent} {{no}crop} {background <rgbcolor>
+             {font <font>} {fontscale <scale>}
+             {linewidth <lw>} {rounded|butt|square} {dashlength <dl>}
+             {pointscale <ps>}
+             {size <XX>{unit},<YY>{unit}}
+
+
+set terminal postscript {default}
+set terminal postscript {landscape | portrait | eps}
+                        {enhanced | noenhanced}
+                        {defaultplex | simplex | duplex}
+                        {fontfile [add | delete] "<filename>"
+                         | nofontfiles} {{no}adobeglyphnames}
+                        {level1 | leveldefault | level3}
+                        {color | colour | monochrome}
+                        {background <rgbcolor> | nobackground}
+                        {dashlength | dl <DL>}
+                        {linewidth | lw <LW>} {pointscale | ps <PS>}
+                        {rounded | butt}
+                        {clip | noclip}
+                        {palfuncparam <samples>{,<maxdeviation>}}
+                        {size <XX>{unit},<YY>{unit}}
+                        {blacktext | colortext | colourtext}
+                        {{font} "fontname{,fontsize}" {<fontsize>}}
+                        {fontscale <scale>}
+
+set term qt {<n>}
+            {size <width>,<height>}
+            {position <x>,<y>}
+            {title "title"}
+            {font <font>} {{no}enhanced}
+            {linewidth <lw>} {dashlength <dl>}
+            {{no}persist} {{no}raise} {{no}ctrl}
+            {close}
+            {widget <id>}
+		  
+
+set terminal svg {size <x>,<y> {|fixed|dynamic}}
+                 {mouse} {standalone | jsdir <dirname>}
+                 {name <plotname>}
+                 {font "<fontname>{,<fontsize>}"} {{no}enhanced}
+                 {fontscale <multiplier>}
+                 {rounded|butt|square} {solid|dashed} {linewidth <lw>}
+                 {background <rgb_color>}
+			  
+
+set terminal windows {<n>}
+                     {color | monochrome}
+                     {solid | dashed}
+                     {rounded | butt}
+                     {enhanced | noenhanced}
+                     {font <fontspec>}
+                     {fontscale <scale>}
+                     {linewdith <scale>}
+                     {pointscale <scale>}
+                     {background <rgb color>}
+                     {title "Plot Window Title"}
+                     {{size | wsize} <width>,<height>}
+                     {position <x>,<y>}
+                     {docked {layout <rows>,<cols>} | standalone}
+                     {close}
+				 
+```
+
 
 
 [Back to Index](../README.html)
