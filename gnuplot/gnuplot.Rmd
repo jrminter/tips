@@ -1,7 +1,7 @@
 ---
 title: "Gnuplot Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-20, Last modified: 2020-08-23"
+date: "Started: 2013-07-20, Last modified: 2020-08-26"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -20,11 +20,18 @@ library(knitr)
 
 # My quick tips
 
+## Update 2020-08-26
+
+I am having terrible problems with Gnuplot on Windows 10. The windows
+application crashes on both my  desktop and VM on mac. I have no idea
+why...
+
 ## Direct output to png
 
 On Windows, I usually set gnuplot output to print to a Windows terminal.
-I sometimes write to post script, but recently I have been writing png
-output directly. An example output lines is:
+I sometimes write to postscript, but recently I have been writing png
+output directly. Given my recent problems on Windows, this exampleAn
+example is timely...:
 
 
 ```
@@ -916,6 +923,170 @@ set tmargin at screen 0.95
 ```
 
 # Some examples from the web...
+
+## Examples from Michael Zimmerman
+
+
+These came from [here](http://triclinic.org/2015/04/publication-quality-plots-with-gnuplot/).
+
+```
+set terminal postscript eps enhanced size 3in,3in
+set output 'file.eps'
+```
+
+To generate a Postscript file (best for images around 6″-6.5″ square):
+
+```
+set terminal postscript enhanced size 6in,6in
+set output 'file.ps'
+```
+
+
+To generate an SVG file (best for images around 4″-6″ square):
+
+```
+set terminal svg enhanced size 500,500
+set output 'file.svg'
+```
+
+The **enhanced** option to the svg terminal is important. It allows more sophisticated titles to be set:
+
+```
+set encoding iso_8859_1
+set title 'This is the title of the graph'
+set xlabel 'Molecular weight (kDa)'
+set ylabel 'Solvent-inaccessible surface area x 1000 ({\305}^2)'
+
+```
+
+The ‘enhanced’ option to the svg terminal is important. It allows more sophisticated titles to be set:
+
+```
+set encoding iso_8859_1
+set title 'This is the title of the graph'
+set xlabel 'Molecular weight (kDa)'
+set ylabel 'Solvent-inaccessible surface area x 1000 ({\305}^2)'
+```
+
+‘^’ allows superscripting and ‘_’ subscripting as in LaTeX. Non-ASCII characters may be included as well:
+
+```
+{\305}  Angstroms
+```
+
+Controlling the legend (key):
+
+```
+  set nokey          # turn off the legend
+  set key top left
+```
+Controlling the axis ranges:
+
+```
+  set xrange [0:10]
+  set xtics 0,2,10   # set an increment of 2
+  set yrange [0:1000]
+```
+
+Adding a function to print, such as a regression curve:
+
+```
+  f(x) = 0.039440 * x + 0.678467
+```
+Now that we have all of the parameters set, we use the plot function to actually generate the graph data:
+
+```
+
+plot 'data1.dat' using 1:2 w p, \
+     'data2.dat' using ($2/1000):($3/1000) w lp pt 13 ps 1.5 lt 1 lc -1 lw 1,
+     f(x)
+```
+
+‘w’ stands for ‘with’. The first argument is the style, which is how the data should be plotted. Some possible arguments are:
+
+```
+points(p)       - unconnected points
+linespoints(lp) - points connected by lines
+```
+
+Some of the other arguments are:
+
+```
+pointtype(pt)  - controls the appearance of points
+pointsize(ps)  - controls the size of points
+linetype(lt)   - controls the appearance of lines (solid, dashed, etc.)
+linecolor(lc)  - controls the line (and point) color
+linewidth(lw)  - controls the width of lines
+```
+
+Unfortunately, the arguments for these options are specified as arbitrary numbers, which are defined by the specific driver. For the SVG driver, these are the pointtypes:
+
+```
+0   dot
+1   +
+2   x
+3   *
+4   open square
+5   closed square
+6   open circle
+7   closed circle
+8   open upward-pointing triangle
+9   closed upward-pointing triangle
+10  open downward-pointing triangle
+11  closed downward-pointing triangle
+12  open diamond
+13  closed diamond
+```
+
+
+The SVG linecolors:
+
+```
+-1  black
+0   gray
+1   red
+2   green
+3   blue
+4   cyan
+5   dark green
+6   dark blue
+7   orange
+8   teal?
+9   light green
+10  purple
+11  light orange
+12  magenta
+13  yet another green
+```
+
+There do not appear to be different linetypes other than solid for the SVG driver (though that can be corrected in Inkscape). If that is an issue, the postscript terminal does have many kinds of dashed lines. An easy way to see the capabilities of a terminal is to issue the ‘test’ command.
+
+The images can then be exported with Inkscape at arbitrary resolution to a lossless PNG file. This can also be done at the command line:
+
+```
+  $ inkscape --export-area-drawing --export-png=file.png \
+             --export-dpi=300 file.svg
+```
+
+Using the open-source program ‘convert’ from the ImageMagick suite of tools, this can be converted to TIFF or another format, optionally removing the transparency and adding a border:
+
+```
+  $ convert -background "#ffffff00" -flatten -bordercolor "#ffffff00" \
+            -border 50x50 input.png output.tiff
+```
+‘convert’ may also be used to convert an EPS image to a raster format:
+
+```
+  $ convert -density 300 input.eps -geometry 900x900 output.tiff
+```
+
+It can also convert SVG to raster formats, but I find its output inferior to that of Inkscape.
+
+
+
+## Examples from Source Forge
+
+
 
 - From: [gnuplot on sourceforge](http://gnuplot.sourceforge.net/demo_5.2/).
 Note that the current app has these demo files in:
