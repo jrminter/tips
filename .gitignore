@@ -201,6 +201,7 @@ gnuplot/gnuplot.md
 gnuplot/gnuplot.html
 gnuplot/figure/
 gnuplot/eg1.*
+gnuplot/*.html
 
 # hacklev directory
 hacklev/.DS_Store
