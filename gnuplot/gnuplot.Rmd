@@ -57,6 +57,8 @@ if(Sys.info()[1] == 'Mac'){
 
 ```
 
+![Example from a gnuplot pipe](./eg1.png)
+
 
 ## Update 2020-08-27
 
