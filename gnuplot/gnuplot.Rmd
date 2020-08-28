@@ -37,13 +37,24 @@ close(gp)
 ```
 Note that this works on mac...
 ```{r testPipe}
-gp <- pipe('/usr/local/bin/gnuplot','w')
-setwd("./")
-cat('set terminal png
+
+if (Sys.info()[1] == 'Windows'){
+  print("windows")
+  gp <- pipe('gnuplot','w')
+  cat('set terminal png; set output "eg1.png"; plot [-3.14:3.14] sin(x)', file=gp)
+}
+
+if(Sys.info()[1] == 'Mac'){
+  print("mac")
+  gp <- pipe('/usr/local/bin/gnuplot','w')
+  # gp <- pipe('gnuplot', 'w')
+  setwd("./")
+  cat('set terminal png
      set output "eg1.png"
-     plot [-3.14:3.14] sin(x)',
-    file=gp)
-close(gp)
+     plot [-3.14:3.14] sin(x)', file=gp)
+  close(gp)
+}
+
 ```
 
 
