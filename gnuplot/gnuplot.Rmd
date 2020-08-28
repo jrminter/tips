@@ -20,6 +20,33 @@ library(knitr)
 
 # My quick tips
 
+## Try a pipe
+
+An idea from [stackoverflow](https://stackoverflow.com/questions/31173774/how-can-i-use-pipe-function-in-r-to-command-gnuplot)
+
+```
+# set up pipe for writing 
+gp <- pipe('gnuplot','w')
+
+# send some data to it
+cat('set terminal latex; set output "eg1.tex"; plot [-3.14:3.14] sin(x)',
+    file=gp)
+
+# close the connection
+close(gp)
+```
+Note that this works on mac...
+```{r testPipe}
+gp <- pipe('/usr/local/bin/gnuplot','w')
+setwd("./")
+cat('set terminal png
+     set output "eg1.png"
+     plot [-3.14:3.14] sin(x)',
+    file=gp)
+close(gp)
+```
+
+
 ## Update 2020-08-27
 
 I was having terrible problems with Gnuplot on Windows 10. The windows
