@@ -34,7 +34,7 @@ library(knitr)
 
 ## A suggestion from  Shigeharu Takeno
 
-He was able to verify the crashe
+He was able to verify the crash
 
 > Well, I built a windows binary from gnuplot source version 5.4.0 by
 > msys2-mingw64, and I ran it with wxt terminal as 
