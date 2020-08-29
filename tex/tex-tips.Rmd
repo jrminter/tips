@@ -22,11 +22,8 @@ in Rmarkdown. They were compiled from several web sources.
 
 `leq`  $\leq$
 
-<<<<<<< HEAD
 `\circ` $\circ$
-=======
-\circ` $\circ$ (a text "degree" symbol...)
->>>>>>> 90c2b764172aaa9003dbeb324e0b41cc4126a132
+
 
 The PDF is [**here**](pdf/TeXRefCard-v1.5.pdf).
 
