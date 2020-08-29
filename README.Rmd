@@ -19,7 +19,9 @@ format.
 
   `\geq`  $\geq$ 
 
-  `leq`  $\leq$
+  `\leq`  $\leq$
+  
+  `\circ` $\circ$
 
   The PDF is [**here**](tex/pdf/TeXRefCard-v1.5.pdf).
 
