@@ -20,6 +20,8 @@ format.
   `\geq`  $\geq$ 
 
   `leq`  $\leq$
+  
+  `\circ` $\circ$ (a text "degree" symbol...)
 
   The PDF is [**here**](tex/pdf/TeXRefCard-v1.5.pdf).
 
