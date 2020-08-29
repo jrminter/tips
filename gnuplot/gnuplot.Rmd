@@ -20,6 +20,18 @@ library(knitr)
 
 # My quick tips
 
+## Key sources
+
+1. [Testing distributions](https://sourceforge.net/projects/gnuplot/files/gnuplot/testing/)
+
+2. [Vanderbilt physics](https://my.vanderbilt.edu/physicslabs/gnuplot-tutorial/) tutorial
+
+3. [Raymii.org](https://raymii.org/s/tutorials/GNUplot_tips_for_nice_looking_charts_from_a_CSV_file.html)
+
+4. [Clark University tutorial](http://physics.clarku.edu/sip/tutorials/gnuplot/)
+
+5. [SMU Physics](http://www.physics.smu.edu/fattarus/GnuplotTutorial.html)
+
 ## Try a pipe
 
 An idea from [stackoverflow](https://stackoverflow.com/questions/31173774/how-can-i-use-pipe-function-in-r-to-command-gnuplot)
@@ -63,17 +75,13 @@ if(Sys.info()[1] == 'Mac'){
 ## Update 2020-08-27
 
 I was having terrible problems with Gnuplot on Windows 10. The windows
-application crashed on both my desktop and on the VM on mac. I have no idea
-why... I **did** however, find a solution, thanks to
+application crashed on both my desktop and on the VM on mac.
+I have no idea why... I **did** however, find a solution, thanks to
 [stackoverflow](https://stackoverflow.com/questions/55088900/saving-pdf-output-in-gnuplot-via-qt)
 
-put:
+1. Use the `qt` terminal instead of the `windows` terminal.
 
-```
-reset
-```
-
-as the first line of every script. This ensures a **clean environment**!
+2. Put `reset` at the top of the script. This ensures a **clean environment**!
 
 It appears more complicated... Even with `reset` at the top of each script,
 I could get a problem. Happily, running from the windows gnuplot prompt

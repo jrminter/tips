@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-08-05"
+date: "Started: 2013-07-16, Last modified: 2020-08-29"
 output:
   html_document:
     keep_md: true
@@ -19,9 +19,15 @@ format.
 
   `\geq`  $\geq$ 
 
+<<<<<<< HEAD
   `\leq`  $\leq$
   
   `\circ` $\circ$
+=======
+  `leq`  $\leq$
+  
+  `\circ` $\circ$ (a text "degree" symbol...)
+>>>>>>> 90c2b764172aaa9003dbeb324e0b41cc4126a132
 
   The PDF is [**here**](tex/pdf/TeXRefCard-v1.5.pdf).
 
