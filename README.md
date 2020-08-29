@@ -18,16 +18,10 @@ format.
 - **LaTeX Symbols to remember**
 
   `\geq`  $\geq$ 
-
-<<<<<<< HEAD
-  `\leq`  $\leq$
   
-  `\circ` $\circ$
-=======
   `leq`  $\leq$
   
   `\circ` $\circ$ (a text "degree" symbol...)
->>>>>>> 90c2b764172aaa9003dbeb324e0b41cc4126a132
 
   The PDF is [**here**](tex/pdf/TeXRefCard-v1.5.pdf).
 
