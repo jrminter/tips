@@ -56,6 +56,15 @@ ren *.txt *.msa
 
 1. `%AppData% ` - a folder with useful config files
 
+   This is how [PC World](https://www.pcworld.com/article/2690709/whats-in-the-hidden-windows-appdata-folder-and-how-to-find-it-if-you-need-it.html)
+   describes it:
+   
+   > The Application Data—or AppData—folder contains data created by programs. Almost every program you install creates its own folder in AppData and stores information there. At least in theory, users don’t have to worry about these files.
+
+   > But in reality, you probably do. For instance, Firefox and Thunderbird profiles reside inside AppData and can be transferred from there between PCs. If you’re using an older version of Outlook, that program’s data is probably in AppData as well.
+
+   > Finding this folder is easy if you know the tricks. The AppData folder resides in your user folder—the same location that contains Documents, Music, and other library folders (unless you’ve moved them elsewhere). Normally this is something such as `C:\Users\[username]\AppData`, but unlike those other folders, AppData is hidden, which means you can’t normally see it.
+
 ## See who is logged on
 
 1. Press the `Windows logo key + R` simultaneously to open the Run box.
