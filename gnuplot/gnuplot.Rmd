@@ -1,7 +1,7 @@
 ---
 title: "Gnuplot Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-20, Last modified: 2020-08-28"
+date: "Started: 2013-07-20, Last modified: 2020-08-29"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
