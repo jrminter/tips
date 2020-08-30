@@ -58,7 +58,7 @@ He is correct. This works on my Win10 box.
 
 Note: This seems to work from the Windows gui:
 
-> set term windows size 1024,768
+> set terminal windows enhanced size 1024,768 font "Arial,14"
 
 
 I have been exploring command lines like
