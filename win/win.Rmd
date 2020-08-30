@@ -1,7 +1,7 @@
 ---
 title: "Windows Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-07-21"
+date: "Started: 2013-07-16, Last modified: 2020-08-29"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -52,7 +52,9 @@ spectra. Use the Windows `ren` command from a command prompt:
 ```
 ren *.txt *.msa
 ```
+## Key Windows System Directories
 
+1. `%AppData% ` - a folder with useful config files
 
 ## See who is logged on
 
