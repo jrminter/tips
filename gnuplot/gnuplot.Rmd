@@ -1,7 +1,7 @@
 ---
 title: "Gnuplot Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-20, Last modified: 2020-08-29"
+date: "Started: 2013-07-20, Last modified: 2020-08-30"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -68,7 +68,19 @@ gnuplot.exe -e "set term win size 1024,768; cd 'C:/Users/johnr/Documents/gnuplot
 gnuplot.exe -e "set term qt size 1024,768; cd 'C:/Users/johnr/Documents/gnuplot'; load 'sinx-qt.plt'; pause
 ```
 
+
+[sites.google.com ](https://sites.google.com/site/scientificsimulation/other-software/gnuplot)
+
+recommends for the mac suggests adding to `.zshrc` and `.bashrc`
+
+```
+export GDFONTPATH=$HOME/Library/Fonts:/Library/Fonts:/System/Library/Fonts
+```
+
+
 They work well. The command line is my friend!
+
+
 
 
 
