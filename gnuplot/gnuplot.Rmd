@@ -58,7 +58,7 @@ He is correct. This works on my Win10 box.
 
 Note: This seems to work from the Windows gui:
 
-> set terminal windows enhanced size 1024,768 font "Arial,14"
+> set term win enhanced size 1024,768 font "Arial,14"
 
 
 I have been exploring command lines like
@@ -68,6 +68,8 @@ gnuplot.exe -e "set term win size 1024,768; cd 'C:/Users/johnr/Documents/gnuplot
 
 gnuplot.exe -e "set term qt size 1024,768; cd 'C:/Users/johnr/Documents/gnuplot'; load 'sinx-qt.plt'; pause
 ```
+
+
 
 They work well. The command line is my friend!
 
@@ -155,6 +157,17 @@ produced this error:
 D2d: Unable to resize swap chain. hr = 887a0001
 
 ```
+
+I also periodically get:
+
+```
+D2d: Unable to resize swap chain.
+```
+
+One can see the source of the error
+[here](https://fossies.org/linux/gnuplot/src/win/wd2d.cpp)
+
+Sadly, the error message is not helpful...
 
 This seems to be associated with resizing a widget. However, I get the error
 even if I do not resize the window...
