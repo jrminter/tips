@@ -55,6 +55,11 @@ He was able to verify the crashe
 
 He is correct. This works on my Win10 box.
 
+Note: This seems to work from the Windows gui:
+
+> set term windows size 1024,768
+
+
 I have been exploring command lines like
 
 ```
