@@ -57,7 +57,7 @@ library(knitr)
        plot(sin(x))
     ```
     
-    ![](./png/plot.png)
+    ![Plot of sin(x)](./png/plot.png)
     
 
 ## A suggestion from  Shigeharu Takeno
