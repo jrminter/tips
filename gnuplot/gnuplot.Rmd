@@ -32,6 +32,34 @@ library(knitr)
 
 5. [SMU Physics](http://www.physics.smu.edu/fattarus/GnuplotTutorial.html)
 
+## Key gnuplot windows tips that work consistently
+
+1. Setting terminals
+
+    a. Setting the `qt` terminal:
+
+    ```
+       set term qt size 1024,768 font "Arial,14" enhanced
+    ```
+
+    b. Setting for the `win` terminal
+
+    ```
+       set term win size 1024,768 font "Arial,14" enhanced
+    ```
+    
+    c. Setting a `png` terminal for output
+
+    ```
+       reset
+       set term png size 1024,768 font "Arial,14" enhanced
+       set output "C:/Users/my_user_id/Documents/plot.png"
+       plot(sin(x))
+    ```
+    
+    ![](./png/plot.png)
+    
+
 ## A suggestion from  Shigeharu Takeno
 
 He was able to verify the crash
