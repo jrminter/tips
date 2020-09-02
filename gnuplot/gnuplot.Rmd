@@ -1,7 +1,7 @@
 ---
 title: "Gnuplot Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-20, Last modified: 2020-08-30"
+date: "Started: 2013-07-20, Last modified: 2020-09-02"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -48,7 +48,13 @@ library(knitr)
        set term win size 1024,768 font "Arial,14" enhanced
     ```
     
-    c. Setting a `png` terminal for output
+    c. Setting the `wxt` terminal. This works on many operating systems
+    
+    ```
+       set terminal wxt size 1024,768 color enhanced "Arial,14"
+    ```
+    
+    d. Setting a `png` terminal for output
 
     ```
        reset
