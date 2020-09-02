@@ -48,7 +48,7 @@ library(knitr)
        set term win size 1024,768 font "Arial,14" enhanced
     ```
     
-    c. Setting the `wxt` terminal. This works on many operating systems
+    c. Setting the `wxt` terminal. This works on many operating systems, but not macos
     
     ```
        set terminal wxt size 1024,768 color enhanced "Arial,14"
