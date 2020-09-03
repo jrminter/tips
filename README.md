@@ -136,7 +136,7 @@ format.
       - Right click on a **Desktop** RStudio icon and choose `Run as Administrator`
        - Right click on the tool-bar RStudio Icon, **pull up**, and choose `Run as Administrator`.
    
-      ![How to run RStudio as admnin from toolbar](./R/inc/R-as-admin-toolbar.png)
+      ![How to run RStudio as admin from toolbar](./R/inc/R-as-admin-toolbar.png)
    
         This **really annoying** since my profile is an administrator...
 
