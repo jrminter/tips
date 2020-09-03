@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-08-29"
+date: "Started: 2013-07-16, Last modified: 2020-09-03"
 output:
   html_document:
     keep_md: true
@@ -46,7 +46,7 @@ format.
   > Use the gifts God has given you. - Douglas Wilson
 
   > The greatest value of a picture is when it forces us to notice what we never
-  > expected to see. - J.Tukey
+  > expected to see. - J. Tukey
 
   > All models are wrong, but some are useful. - G. Box
 
@@ -173,7 +173,7 @@ format.
       Mac: `%>%` - CMD + Shift + M   
       ```
 
-  6. Fix a `recurring guthub credential problem` - run:
+  6. Fix a `recurring github credential problem` - run:
    
       ```
       Sys.unsetenv("GITHUB_PAT")
@@ -222,7 +222,7 @@ format.
   12. Reset a Fitbit Ionic watch
 
       Press and hold the left and bottom right buttons at the same time until you
-       see the Fitbit logo. Let go of the buttons, and your tracker will restart.
+      see the Fitbit logo. Let go of the buttons, and your tracker will restart.
 
   13. Regex for youtube time stamps. Useful in SublimeText3!
 
