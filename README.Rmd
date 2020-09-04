@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-08-29"
+date: "Started: 2013-07-16, Last modified: 2020-09-04"
 output:
   html_document:
     keep_md: true
@@ -296,6 +296,15 @@ format.
       ```
       ffmpeg -i vid.mkv -c copy vid.mp4
       ```
+      
+      for conversion of vid.mov to vid.mp4
+      
+      ```
+      ffmpeg -i vid.mov -vcodec h264 -acodec mp2 vid.mp4
+      ```
+      
+      Note: this converts frame-by-frame and can be slow.
+      I downloaded ffmpeg on macos via homebrew.
 
   22. HTML Syntax
 
