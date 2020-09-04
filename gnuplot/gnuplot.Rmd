@@ -1,7 +1,7 @@
 ---
 title: "Gnuplot Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-20, Last modified: 2020-08-30"
+date: "Started: 2013-07-20, Last modified: 2020-09-02"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -32,6 +32,40 @@ library(knitr)
 
 5. [SMU Physics](http://www.physics.smu.edu/fattarus/GnuplotTutorial.html)
 
+## Key gnuplot windows tips that work consistently
+
+1. Setting terminals
+
+    a. Setting the `qt` terminal:
+
+    ```
+       set term qt size 1024,768 font "Arial,14" enhanced
+    ```
+
+    b. Setting for the `win` terminal
+
+    ```
+       set term win size 1024,768 font "Arial,14" enhanced
+    ```
+    
+    c. Setting the `wxt` terminal. This works on many operating systems, but not macos
+    
+    ```
+       set terminal wxt size 1024,768 color enhanced "Arial,14"
+    ```
+    
+    d. Setting a `png` terminal for output
+
+    ```
+       reset
+       set term png size 1024,768 font "Arial,14" enhanced
+       set output "C:/Users/my_user_id/Documents/plot.png"
+       plot(sin(x))
+    ```
+    
+    ![Plot of sin(x)](./png/plot.png)
+    
+
 ## A suggestion from  Shigeharu Takeno
 
 He was able to verify the crash
@@ -55,9 +89,10 @@ He was able to verify the crash
 
 He is correct. This works on my Win10 box.
 
+
 Note: This seems to work from the Windows gui:
 
-> set term windows size 1024,768
+> set term win enhanced size 1024,768 font "Arial,14"
 
 
 I have been exploring command lines like
@@ -67,6 +102,8 @@ gnuplot.exe -e "set term win size 1024,768; cd 'C:/Users/johnr/Documents/gnuplot
 
 gnuplot.exe -e "set term qt size 1024,768; cd 'C:/Users/johnr/Documents/gnuplot'; load 'sinx-qt.plt'; pause
 ```
+
+
 
 They work well. The command line is my friend!
 
@@ -79,8 +116,14 @@ recommends for the mac suggests adding to `.zshrc` and `.bashrc`
 export GDFONTPATH=$HOME/Library/Fonts:/Library/Fonts:/System/Library/Fonts
 ```
 
+They also recommended starting the Windows gnuplot gui from the command line
+by typing
 
+```
+wgnuplot
+```
 
+It seems to work...
 
 
 
@@ -148,6 +191,17 @@ produced this error:
 D2d: Unable to resize swap chain. hr = 887a0001
 
 ```
+
+I also periodically get:
+
+```
+D2d: Unable to resize swap chain.
+```
+
+One can see the source of the error
+[here](https://fossies.org/linux/gnuplot/src/win/wd2d.cpp)
+
+Sadly, the error message is not helpful...
 
 This seems to be associated with resizing a widget. However, I get the error
 even if I do not resize the window...

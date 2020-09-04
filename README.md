@@ -46,7 +46,7 @@ format.
   > Use the gifts God has given you. - Douglas Wilson
 
   > The greatest value of a picture is when it forces us to notice what we never
-  > expected to see. - J.Tukey
+  > expected to see. - J. Tukey
 
   > All models are wrong, but some are useful. - G. Box
 
@@ -136,7 +136,7 @@ format.
       - Right click on a **Desktop** RStudio icon and choose `Run as Administrator`
        - Right click on the tool-bar RStudio Icon, **pull up**, and choose `Run as Administrator`.
    
-      ![How to run RStudio as admnin from toolbar](./R/inc/R-as-admin-toolbar.png)
+      ![How to run RStudio as admin from toolbar](./R/inc/R-as-admin-toolbar.png)
    
         This **really annoying** since my profile is an administrator...
 
@@ -173,7 +173,7 @@ format.
       Mac: `%>%` - CMD + Shift + M   
       ```
 
-  6. Fix a `recurring guthub credential problem` - run:
+  6. Fix a `recurring github credential problem` - run:
    
       ```
       Sys.unsetenv("GITHUB_PAT")
@@ -222,7 +222,7 @@ format.
   12. Reset a Fitbit Ionic watch
 
       Press and hold the left and bottom right buttons at the same time until you
-       see the Fitbit logo. Let go of the buttons, and your tracker will restart.
+      see the Fitbit logo. Let go of the buttons, and your tracker will restart.
 
   13. Regex for youtube time stamps. Useful in SublimeText3!
 
