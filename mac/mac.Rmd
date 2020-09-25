@@ -88,7 +88,40 @@ toggle it on and off.
 
 18. Lock screen, `Ctl-Cmd-q`.
 
+19. reset mac pw
 
+From [here](https://www.hellotech.com/guide/for/how-to-reset-admin-password-on-mac)
+
+> https://www.hellotech.com/guide/for/how-to-reset-admin-password-on-mac
+> How to Reset Admin Password on Mac
+> The easiest way to reset your admin password is to enter recovery mode.
+> Here’s how to do that:
+> 
+> Restart your Mac. You can only access the recovery mode while the
+> laptop is booting up, which is why you need to restart it.
+>
+> While it is restarting, press and hold the Command + R keys until you
+> see the Apple logo. If you see the login screen, you will have to
+> restart and repeat this step again until you get to Recovery Mode.
+>
+> How to Reset Admin Password on Mac
+> The easiest way to reset your admin password is to enter recovery mode.
+> Here’s how to do that:
+>
+> Type “resetpassword” in the terminal window. Don’t use any space in
+> between the words.
+>
+> Then hit Enter. This will open the Reset Password Assistant screen.
+> 
+> Note: If you have several user accounts or an older Mac, you will have
+> to select “forgot all passwords,” then select the user account you
+> want to reset the password for. Finally, you will have to click the
+> Apple icon in the upper-left corner and select Restart from the
+> drop-down menu.
+>
+> Finally, click Restart. Once you get to the Login screen, select the
+> admin user you just reset the password for and type your new password.
+> Click Enter. 
 
 
 
