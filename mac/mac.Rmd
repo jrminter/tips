@@ -11,6 +11,17 @@ output:
 ---
 [Back to Index](../README.html)
 
+# Make path visible in Finder window
+
+```
+defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES; killall Finder
+```
+
+From [here](http://www.snazzylabs.com/five-advanced-tricks-for-mac-users/)
+
+
+
+
 # Mac keyboard shortcuts
 
 There are **lot** of keyboard shortcuts...
