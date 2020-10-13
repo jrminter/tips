@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-08-14"
+date: "Started: 2013-07-16, Last modified: 2020-10-13"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -19,6 +19,11 @@ defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES; killall Finde
 
 From [here](http://www.snazzylabs.com/five-advanced-tricks-for-mac-users/)
 
+# R Library Path on macos
+
+```
+/Library/Frameworks/R.framework/Resources/library
+```
 
 
 
