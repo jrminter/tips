@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-09-04"
+date: "Started: 2013-07-16, Last modified: 2020-11-16"
 output:
   html_document:
     keep_md: true
@@ -13,6 +13,12 @@ output:
 
 This repository contains the John Minter's useful tips in Rmarkdown
 format.
+
+- Timely links
+
+1. [Big Sur update bricks my MBP model](https://apple.slashdot.org/story/20/11/16/0137234/macos-big-sur-update-reportedly-bricks-some-older-macbook-pros)
+
+2. [RStudio 1.4 preview citations](https://www.r-bloggers.com/2020/11/rstudio-1-4-preview-citations)
 
 
 - **LaTeX Symbols to remember**
