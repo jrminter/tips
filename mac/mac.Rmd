@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-10-13"
+date: "Started: 2013-07-16, Last modified: 2021-01-16"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -10,6 +10,12 @@ output:
     toc_depth: 3
 ---
 [Back to Index](../README.html)
+
+# Notifications
+
+I find that notifications close before I have read them.
+To see previous notifications, click on the **upper right hand corner**
+of the **screen** for a pull left menu with the notifications.
 
 # Make path visible in Finder window
 
