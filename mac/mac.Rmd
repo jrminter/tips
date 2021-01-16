@@ -31,7 +31,9 @@ From [here](http://www.snazzylabs.com/five-advanced-tricks-for-mac-users/)
 /Library/Frameworks/R.framework/Resources/library
 ```
 
+# Setting up SublimeText3
 
+> ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 
 # Mac keyboard shortcuts
 
