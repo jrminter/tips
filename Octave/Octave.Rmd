@@ -277,22 +277,22 @@ Package Name  | Version | Installation directory
 1. element by element operators are the operator with a preceding `.`.
 For example:
 
-    ```{octave ebe, engine.path=octaveExe}
+```{octave ebe, engine.path=octaveExe}
     A = [1,2,3,4];
     B = [2,4,6,8];
 
     A .* B
     A .+ B
     A .^ B
-    ```
+```
 
 2. We can set row and column vectors and matrices
 
-    ```{octave row_col_vec_mat, engine.path=octaveExe}
+```{octave row_col_vec_mat, engine.path=octaveExe}
     A = [1 2 3 4]
     B = [2;4;6;8]
     C = [1 2 3 4;5 6 7 8;9 10 11 12]
-    ```
+```
 
 
 

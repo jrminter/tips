@@ -74,7 +74,7 @@ Cu data
 
 ```{r read_cu_data}
 
-path <- here("/R-data-cleaning/dat/casino-guilding-Cu-25kV.dat")
+path <- here("./R-data-cleaning/dat/casino-guilding-Cu-25kV.dat")
 
 df <- read.table(path, header = TRUE, sep="\t", skip=4)
 print(head(df))
@@ -91,7 +91,7 @@ Now, we will repeat the process for the Zn data
 
 ```{r read_zn_data}
 
-path <- here("/R-data-cleaning/dat/casino-guilding-Zn-25kV.dat")
+path <- here("./R-data-cleaning/dat/casino-guilding-Zn-25kV.dat")
 
 df <- read.table(path, header = TRUE, sep="\t", skip=4)
 clean_zn <- df %>%

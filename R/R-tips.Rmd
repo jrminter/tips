@@ -1207,7 +1207,8 @@ workaround is to use the `option` command. Try this solution that will
 write a tex file in the `$TEMP` directory. *Note:* one must manuall
 close the `dviout` window for the script to continue.
 
-```{r, message=FALSE}
+```
+{r, message=FALSE}
 library(Hmisc)
 wd <- getwd()
 tmp <- Sys.getenv("TEMP")

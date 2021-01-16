@@ -57,7 +57,7 @@ df
  8     1     8  384.   29.5 1284.           1309.  124.             125.
  9     1     9 1331.   29.7 1344.           1361.  124.             128.
 10     1    10  559.   33.7 1321.           1365.  130.             130.
-# ... with 1,073 more rows, and 18 more variables: Feret <dbl>,
+# … with 1,073 more rows, and 18 more variables: Feret <dbl>,
 #   Min..Feret <dbl>, Maximum.inscriped.circle.diameter <int>,
 #   Area.equivalent.circle.diameter <dbl>, Long.Side.Length.MBR <dbl>,
 #   Short.Side.Length.MBR <dbl>, Aspect.Ratio <dbl>, Area.Peri. <dbl>,
