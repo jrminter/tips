@@ -1,7 +1,7 @@
 ---
 title: "Git Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-05-16"
+date: "Started: 2013-07-16, Last modified: 2021-01-21"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -16,6 +16,41 @@ These are John Minter's tips for a workflow using git. They were
 compiled from several web sources.
 
 # Quick tips
+
+## Credentials
+
+Git is phasing out passwords in favor of credentials.
+
+Details are from [here](https://docs.github.com/en/github/using-git/caching-your-github-credentials-in-git).
+
+To set up for MacOS, use:
+
+```
+Install Git and the osxkeychain helper and tell Git to use it.
+
+Find out if Git and the osxkeychain helper are already installed:
+
+$ git credential-osxkeychain
+# Test for the cred helper
+> Usage: git credential-osxkeychain <get|store|erase>
+If the osxkeychain helper isn't installed and you're running OS X version 10.9 or above, your computer will prompt you to download it as a part of the Xcode Command Line Tools:
+
+$ git credential-osxkeychain
+ > xcode-select: note: no developer tools were found at '/Applications/Xcode.app',
+ > requesting install. Choose an option in the dialog to download the command line de
+```
+
+To set up for Windows, use:
+
+```
+You can also install a native Git shell, such as Git for Windows. With Git for Windows, running the following in the command line will store your credentials:
+
+$ git config --global credential.helper wincred
+
+```
+
+
+
 
 ## How to undo
 
