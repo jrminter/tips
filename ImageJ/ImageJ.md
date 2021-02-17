@@ -1,7 +1,7 @@
 ---
 title: "Image-J Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-07-19"
+date: "Started: 2013-07-16, Last modified: 2021-02-17"
 output:
   html_document:
     keep_md: yes
@@ -14,6 +14,21 @@ output:
 [Back to Index](../README.html)
 
 # Recent tips
+
+## My current sites (2021-02-17)
+
+- ImageJ
+- Fiji
+- Java-8
+- BioFormats
+- FFMPEG
+- HDF5
+- IJPB-plugins
+- LOCI
+- Mosaic ToolSuite
+- Stowers
+
+## Wayne Rasband config
 
 On 2020-07-18,  Wayne Rasband wrote in response to this question:
 
