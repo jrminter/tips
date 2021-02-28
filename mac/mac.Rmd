@@ -21,6 +21,10 @@ My 2020 MacBook Pro does default to iCloud. On 2021-02-28, I created
 a `Local-Docs` folder to store them locally... We will see how this
 works out.
 
+Note: one can use `cd /users` to get to the file system... Note that
+from the command line `cd Docunments` goes to the iCloud drive;
+`cd Local-Docs` goes to the right directory.
+
 
 # Old MacBook Pro Charging Adapter
 
