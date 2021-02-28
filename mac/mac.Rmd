@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-01-16"
+date: "Started: 2013-07-16, Last modified: 2021-02-28"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -10,6 +10,17 @@ output:
     toc_depth: 3
 ---
 [Back to Index](../README.html)
+
+# Dealing with iCloud
+
+I am a bit annoyed with Apple trying to move content to iCloud.
+I want easy manual control. There is a nice explanation on how to do that 
+[here](https://discussions.apple.com/thread/7823435)
+My Late 2013 Macbook Pro (running Big Sur) does not store in iCloud.
+My 2020 MacBook Pro does default to iCloud. On 2021-02-28, I created
+a `Local-Docs` folder to store them locally... We will see how this
+works out.
+
 
 # Old MacBook Pro Charging Adapter
 
