@@ -15,7 +15,7 @@ output:
 
 # Recent tips
 
-## My current sites (2021-02-17)
+## My current sites (2021-02-28)
 
 - ImageJ
 - Fiji
@@ -23,7 +23,7 @@ output:
 - BioFormats
 - FFMPEG
 - HDF5
-- IJPB-plugins
+- IJPB-CNRS
 - LOCI
 - Mosaic ToolSuite
 - Stowers
