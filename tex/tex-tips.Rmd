@@ -1,7 +1,7 @@
 ---
 title: "TeXLive Hints"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-08-29"
+date: "Started: 2013-07-16, Last modified: 2021-02-27"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -41,6 +41,9 @@ tinytex:::install_prebuilt()
 
 ## A bare install of TinyTeX
 
+
+See [here](https://yihui.org/tinytex/) for details.
+
 This morning an update of TexLive 2020` borked my installation.
 The big distribution is a bemhouth with lots of packages I don't use.
 I used this as an opportunity to switch to Yihui Xie's `TinyTex`.
@@ -51,6 +54,8 @@ I saved the contents of the TinyTeX folder and the contents of the
 .texlive2020 (looks like old sagetex preferences?) from my user folder.
 I had issues with sagetex... What I really needed was `a basic working
 LaTeX installation`!
+
+
 
 
 
