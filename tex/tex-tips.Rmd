@@ -1,7 +1,7 @@
 ---
 title: "TeXLive Hints"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-02-27"
+date: "Started: 2013-07-16, Last modified: 2021-03-02"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -15,7 +15,26 @@ output:
 These are John Minter's tips for a workflow using TinyTeX or
 in Rmarkdown. They were compiled from several web sources.
 
-**LaTeX Symbols to remember**
+# A simple install of TinyTeX
+
+From the R Command prompt (`>`) type
+
+```
+tinytex:::install_prebuilt()
+```
+
+
+The full install of TexLive or MacTex are huge. Most packages
+are not needed. Yihui Xie's `TinyTex` is a good solution. One
+can start with the command below. One can add additional packages
+using `tlmgr install package_name`.
+
+The full commands are available
+[here](https://www.tug.org/texlive/doc/tlmgr.html).
+
+
+
+# LaTeX Symbols to remember
 
 
 `\geq`  $\geq$ 
