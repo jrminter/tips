@@ -49,6 +49,15 @@ The PDF is [**here**](pdf/TeXRefCard-v1.5.pdf).
 
 # Simple tricks
 
+## A simple install of TinyTeX
+
+From the R Command prompt (`>`) type
+
+```
+tinytex:::install_prebuilt()
+```
+
+
 ## A bare install of TinyTeX
 
 
