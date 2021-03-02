@@ -32,6 +32,10 @@ using `tlmgr install package_name`.
 The full commands are available
 [here](https://www.tug.org/texlive/doc/tlmgr.html).
 
+Looks like Windows works well with TexWorks and Mac works wit TexShop...
+
+
+
 
 
 # LaTeX Symbols to remember
