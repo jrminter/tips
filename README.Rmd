@@ -14,13 +14,19 @@ output:
 This repository contains the John Minter's useful tips in Rmarkdown
 format.
 
-- Timely links
+**Timely links**
 
-1. Clean windshield wiper blades using WD-40 and a clean rag.
+1. Convert foo.mkv to foo.mp4
 
-2. [Big Sur update bricks my MBP model](https://apple.slashdot.org/story/20/11/16/0137234/macos-big-sur-update-reportedly-bricks-some-older-macbook-pros)
+   ```
+ffmpeg -i title.mkv -c copy title.mp4
+   ```
 
-3. [RStudio 1.4 preview citations](https://www.r-bloggers.com/2020/11/rstudio-1-4-preview-citations)
+2. Clean windshield wiper blades using WD-40 and a clean rag.
+
+3. [Big Sur update bricks my MBP model](https://apple.slashdot.org/story/20/11/16/0137234/macos-big-sur-update-reportedly-bricks-some-older-macbook-pros)
+
+4. [RStudio 1.4 preview citations](https://www.r-bloggers.com/2020/11/rstudio-1-4-preview-citations)
 
 
 - **LaTeX Symbols to remember**
