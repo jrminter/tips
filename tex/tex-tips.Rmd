@@ -34,6 +34,25 @@ The full commands are available
 
 Looks like Windows works well with TexWorks and Mac works wit TexShop...
 
+Use these commands to install packages...
+
+```
+tlmgr install a4wide ae algorithms appendix babel-english bbm-macros
+tlmgr install beamer breakurl catoptions charter cite cleveref colortbl
+tlmgr install comment courier dvips eepic enumitem eso-pic eurosym
+tlmgr install extsizes fancyhdr float floatrow fontaxes hardwrap helvetic
+tlmgr install inconsolata koma-script lastpage lettrine libertine lipsum
+tlmgr install listings ltxkeys ly1 mathalfa mathpazo mathtools mdframed
+tlmgr install mdwtools microtype morefloats ms multirow mweights ncntrsbk
+tlmgr install needspace newtx ntgclass palatino parskip pbox pdfpages pgf
+tlmgr install picinpar preprint preview psnfss roboto sectsty setspace siunitx
+tlmgr install srcltx standalone stmaryrd sttools subfig subfigure symbol
+tlmgr install tabu tex textcase threeparttable thumbpdf times titlesec
+tlmgr install tufte-latex ucs ulem units varwidth vmargin wallpaper
+tlmgr install wrapfig xargs xcolor xstring xwatermark
+# found these later to work with TexWorks...
+tlmgr install tocloft tocloft
+```
 
 
 
