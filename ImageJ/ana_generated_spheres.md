@@ -23,7 +23,7 @@ class using the script `test_lognormal_distribution.py`.
 
 
 ```
-## [1] "/Users/jrminter/Documents/git/tips/ImageJ/csv/test_gen_lognormal_particles.csv"
+## [1] "/Users/jrminter/Local-Docs/tips/ImageJ/csv/test_gen_lognormal_particles.csv"
 ```
 
 ```
