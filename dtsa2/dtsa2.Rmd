@@ -1,7 +1,7 @@
 ---
 title: "Tips on Using DTSA-II"
 author: "J. R. Minter"
-date: "Started: 2015-05-19, Last modified: 2020-07-27"
+date: "Started: 2015-05-19, Last modified: 2021-03-03"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -17,7 +17,35 @@ Note that Nicholas Ritchie has released some helpful videos on
 He tries to put out a new release yearly and bug-fix releases as
 needed.
 
-# Key tricks
+# Key tricks 
+
+## Tricks with `tabulate`
+
+From Nicholas Ritchie on the Probe Software Forum
+
+> DTSA II / Re: Quant results as tables for large batches of samples    
+> 2021-03-03   
+> Phil,    
+> I'm glad to hear that DTSA-II is working for you.    
+> There is function on the scripting side that might do what you want    
+> `tabulate(...)`
+> 
+> First, you need to know that the spectra currently being displayed can
+> be accessed using the `selected()` function.  Then
+> tabulate(selected())    
+> will tabulate the *measured composition* as mass fractions for the
+> selected spectra.  To display, the normalized mass, fraction,    
+> 
+> `tabulate(selected(), normalize=True)`    
+> 
+> To display, the atom fractions    
+> `tabulate(selected(), massFracs=False)`    
+>
+> If you need more sophisticated output or a different format, you can
+> use the the Python code for tabulate as a template to develop your own
+> output function.
+
+
 
 ## Making Reports portable
 
