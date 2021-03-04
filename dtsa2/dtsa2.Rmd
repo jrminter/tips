@@ -1,7 +1,7 @@
 ---
 title: "Tips on Using DTSA-II"
 author: "J. R. Minter"
-date: "Started: 2015-05-19, Last modified: 2021-03-03"
+date: "Started: 2015-05-19, Last modified: 2021-03-04"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -45,7 +45,18 @@ From Nicholas Ritchie on the Probe Software Forum
 > use the the Python code for tabulate as a template to develop your own
 > output function.
 
+**Ways to track problems (2021-03-04)**
 
+One needs:
+
+- The standard spectra - as bundles if that is what you are using
+- An unknown or two
+- The detector
+
+> The detector definition can be exported from the
+> "File" => "Preferences" menu item.  Select the detector in the
+> tree view and scroll to the bottom of the detector definition page.
+> There is an "Export detector" button that will export an .xdet file.
 
 ## Making Reports portable
 
