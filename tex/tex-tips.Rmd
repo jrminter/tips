@@ -54,6 +54,27 @@ tlmgr install wrapfig xargs xcolor xstring xwatermark
 tlmgr install tocloft tocloft
 ```
 
+# For TexWorks
+
+As per the TeXworks manual, the procedure to install spell checking
+dictionaries in TeXworks is as follows.
+
+1. Download the dictionary corresponding to your desired language from
+the OpenOffice.org extensions site.
+
+2. Change the file extension of the downloaded file from .oxt to .zip
+and extract the files with your archive utility of choice.
+
+3. Open TeXworks and select Settings and Resources from the Help menu.
+A dialog window will open with a link to the TeXworks resources folder.
+
+4. Click the link to open the resources folder. If there is no
+dictionaries subfolder there yet, then create it now. Open the (possibly
+newly created) dictionaries subfolder.
+
+5. Copy the .dic and .aff files from the downloaded .zip file to the
+dictionaries subfolder. Close and reopen TeXworks. The dictionaries
+should be listed under the Spelling item in the Edit menu.
 
 
 
