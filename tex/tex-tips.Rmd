@@ -101,7 +101,9 @@ I saved the contents of the TinyTeX folder and the contents of the
 I had issues with sagetex... What I really needed was `a basic working
 LaTeX installation`!
 
+## Add a spell-checker to TexWorks
 
+[Add a spell-checker to TexWorks](https://tex.stackexchange.com/questions/235313/how-to-add-spell-checker-to-texworks)
 
 
 
