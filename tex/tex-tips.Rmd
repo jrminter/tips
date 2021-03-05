@@ -1,7 +1,7 @@
 ---
 title: "TeXLive Hints"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-03-03"
+date: "Started: 2013-07-16, Last modified: 2021-03-05"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -14,6 +14,10 @@ output:
 
 These are John Minter's tips for a workflow using TinyTeX or
 in Rmarkdown. They were compiled from several web sources.
+
+# Texworks on mac
+
+Use TexWorks 0.6.3 on MacOS BigSur
 
 # A simple install of TinyTeX
 
