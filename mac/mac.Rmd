@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-02-28"
+date: "Started: 2013-07-16, Last modified: 2021-03-07"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -23,7 +23,9 @@ works out.
 
 Note: one can use `cd /users` to get to the file system... Note that
 from the command line `cd Docunments` goes to the iCloud drive;
-`cd Local-Docs` goes to the right directory.
+`cd Local-Docs` goes to the my `Local Docs` directory.
+
+Apple explains the system [here](https://support.apple.com/en-us/HT206985) 
 
 
 # Old MacBook Pro Charging Adapter
