@@ -191,7 +191,8 @@ We need to set the path to the Octave executable to run Octave chunks
 in Rmarkdown. **_N.B._ Octave code chunks must be _self-contained_**
 **unlike** R code chunks.
 
-```{r setup, include=TRUE}
+```
+{r setup, include=TRUE}
 knitr::opts_chunk$set(echo = TRUE)
 # This needs to be set in .Renviron NOT .Rprofile...
 octaveExe <- Sys.getenv("OCTAVE_EXECUTABLE")
@@ -278,7 +279,8 @@ Package Name  | Version | Installation directory
 1. element by element operators are the operator with a preceding `.`.
 For example:
 
-```{octave ebe, engine.path=octaveExe}
+```
+{octave ebe, engine.path=octaveExe}
     A = [1,2,3,4];
     B = [2,4,6,8];
 
@@ -289,7 +291,8 @@ For example:
 
 2. We can set row and column vectors and matrices
 
-```{octave row_col_vec_mat, engine.path=octaveExe}
+```
+{octave row_col_vec_mat, engine.path=octaveExe}
     A = [1 2 3 4]
     B = [2;4;6;8]
     C = [1 2 3 4;5 6 7 8;9 10 11 12]
@@ -333,7 +336,8 @@ from 2014. Decent...
 
 4. `rand(n,m)` Generates a matrix `n x m` of randomly distributed elements
 
-    ```{octave ones_mat, engine.path=octaveExe}
+    ```
+    {octave ones_mat, engine.path=octaveExe}
     ones(3,5)
     
     rand(3,5)
@@ -343,17 +347,20 @@ from 2014. Decent...
 ## The colon operator
 
 
-    ```{octave colon_op, engine.path=octaveExe}
+    ```
+    {octave colon_op, engine.path=octaveExe}
     S1 = 1:5
     ```
     
-    ```{octave colon_op_step, engine.path=octaveExe}
+    ```
+    {octave colon_op_step, engine.path=octaveExe}
     S2 = 2:2:10
     ```
 
 ## Indexing
 
-    ```{octave indexing, engine.path=octaveExe}
+    ```
+    {octave indexing, engine.path=octaveExe}
     S = [1 2; 3 4]
     
     S(1,1)
@@ -364,7 +371,8 @@ from 2014. Decent...
 
 ## Other functions
 
-    ```{octave other_funcs, engine.path=octaveExe}
+    ```
+    {octave other_funcs, engine.path=octaveExe}
     x = sprintf("Pi to 8 decimals: %0.8f", pi)
     
     vec = [pi, 2*pi]
@@ -414,7 +422,8 @@ save f <variable>
 load f
 ```
 
-```{octave load_dat, engine.path=octaveExe}
+```
+{octave load_dat, engine.path=octaveExe}
 m = load("./dat/single.dat");
 length(m)
 
@@ -444,7 +453,8 @@ length(a)
 
 Note that we can merge (concatenate) data
 
-```{octave concat, engine.path=octaveExe}
+```
+{octave concat, engine.path=octaveExe}
 
 A = [1;2;3];
 B = [4;5;6];
@@ -459,7 +469,8 @@ D = [A;B]
 - length(m) - returns the longest dimension
 
 
-```{octave sz_len, engine.path=octaveExe}
+```
+{octave sz_len, engine.path=octaveExe}
 
 A = [1;2;3];
 B = [4;5;6];
@@ -610,7 +621,8 @@ The two control statements in Octave are `if` statements and `repetitions`
 ### `if` statement and `for` and `while`  loops
 
 
-```{octave simple_if, engine.path=octaveExe}
+```
+{octave simple_if, engine.path=octaveExe}
 % simple if
 x = 6;
 if x >= 5,
@@ -618,7 +630,8 @@ if x >= 5,
 end;
 ```
 
-```{octave if_elseif_else, engine.path=octaveExe}
+```
+{octave if_elseif_else, engine.path=octaveExe}
 % if-elseif-else
 x = 6;
 if x > 10,
@@ -630,14 +643,16 @@ else
 end;
 ```
 
-```{octave for_loop, engine.path=octaveExe}
+```
+{octave for_loop, engine.path=octaveExe}
 % for loop
 for i=1:10,
     disp(sprintf("%ith index",i));
 end;
 ```
 
-```{octave while_loop, engine.path=octaveExe}
+```
+{octave while_loop, engine.path=octaveExe}
 % while loop
 i = 1;
 while i < 10,
@@ -646,7 +661,8 @@ while i < 10,
 end;
 ```
 
-```{octave break_statement, engine.path=octaveExe}
+```
+{octave break_statement, engine.path=octaveExe}
 % break statements
 n = 1;
 v = 0;
@@ -672,7 +688,8 @@ Then type the function...
 
 ### Examples
 
-```{octave minimum_func, engine.path=octaveExe}
+```
+{octave minimum_func, engine.path=octaveExe}
 function ret = minimum(x)
   ret = x(1);
   for i = 2:length(x),
@@ -687,7 +704,8 @@ minimum(y)
 
 ```
 
-```{octave minmax_func, engine.path=octaveExe}
+```
+{octave minmax_func, engine.path=octaveExe}
 function [low,high] = minmax(x)
   low = x(1);
   high = x(1);
@@ -706,7 +724,8 @@ minmax(y)
 
 Add error checking
 
-```{octave minmax_err_func, engine.path=octaveExe, error=TRUE}
+```
+{octave minmax_err_func, engine.path=octaveExe, error=TRUE}
 %
 % Note: knitr chunk option error=TRUE to permit the error message to print out
 %
