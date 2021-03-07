@@ -22,7 +22,9 @@ There is a version that runs from the command line and a GUI version.
 
 As of 2021-03-06, the current release is `Octave 6.2.0` which was
 released on 2021-02-20.
-See [here](https://www.gnu.org/software/octave/news.html).
+See [here](https://www.gnu.org/software/octave/news.html). 
+It runs on Windows as a GUI. The mac version runs as a
+command line version.
 
 One **_major advantage_** of the Windows installer is that it comes
 bundled with many (all key anyway...) packages from Octave Forge.
