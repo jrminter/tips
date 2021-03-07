@@ -8,70 +8,72 @@ output:
     number_sections: yes
     toc: yes
     toc_depth: 3
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
 [Back to Index](../README.html)
 
 # Introduction
 
-`wxMaxima` is a gui version of the `maxima` computer algebra system. It has a
-nice notebook interface. There is a nice set of YouTube videos by
-[Andrew Norman](https://www.youtube.com/playlist?list=PLEDEE2F7C6750729F)
+`wxMaxima` is a gui version of the `maxima` computer algebra system. It
+has a nice notebook interface. There is a nice set of YouTube videos by
+[Andrew
+Norman](https://www.youtube.com/playlist?list=PLEDEE2F7C6750729F)
 outlining its use. The source code for `wxMaxima` is on
-[github](https://github.com/andrejv/wxmaxima). There is also a
-helpful [website](http://andrejv.github.io/wxmaxima/index.html). 
+[github](https://github.com/andrejv/wxmaxima). There is also a helpful
+[website](http://andrejv.github.io/wxmaxima/index.html).
+
 
 # Key Info
 
-1. Use `Shift + Return` to enter a command into a cell.
+1.  Use `Shift + Return` to enter a command into a cell.
 
-2. Different types of cells are in the `Cell` menu. Key shortuts:
+2.  Different types of cells are in the `Cell` menu. Key shortuts:
 
-    - Mac `CMD+0`, PC `CTL+0` creates an input cell
-    - Mac `CMD+1`, PC `CTL+1` creates a text cell
+    -   Mac `CMD+0`, PC `CTL+0` creates an input cell
+    -   Mac `CMD+1`, PC `CTL+1` creates a text cell
 
     Other types are best chosen from the menu...
-
 
 # Installation
 
 Note that one can install this on MacOSX by
 
-```
-brew tap homebrew/science
-brew install maxima wxmaxima
-```
+    brew tap homebrew/science
+    brew install maxima wxmaxima
 
-One can also download `Maxima-5.42.2-VTK-macOS.dmg` from
-[Source Forge](https://sourceforge.net/projects/maxima/files/Maxima-MacOS/5.42.2-MacOSX/).
+One can also download `Maxima-5.42.2-VTK-macOS.dmg` from [Source
+Forge](https://sourceforge.net/projects/maxima/files/Maxima-MacOS/5.42.2-MacOSX/).
 This was released `2019-02-05`.
 
-I use the wxMaxima App included in the package (look inside `Maxima.app`).
-I configured gnuplot in the `.maxima` folder and zipped up the folder
-and put it in Dropbox. This fixed my inital problem when `wxMaxima` got stuck
-in full sceen mode. Sometimes it does not like to shut down...
-
+I use the wxMaxima App included in the package (look inside
+`Maxima.app`). I configured gnuplot in the `.maxima` folder and zipped
+up the folder and put it in Dropbox. This fixed my inital problem when
+`wxMaxima` got stuck in full sceen mode. Sometimes it does not like to
+shut down...
 
 # Issues
 
-1. I had problems with gnuplot (2018-05-21). There is a bug that has not
-made it to homebrew. The fix was to add to **~/.maxima/wxmaxima-init**.
-This was from: [github](https://github.com/andrejv/wxmaxima/issues/973)
+1.  I had problems with gnuplot (2018-05-21). There is a bug that has
+    not made it to homebrew. The fix was to add to
+    **\~/.maxima/wxmaxima-init**. This was from:
+    [github](https://github.com/andrejv/wxmaxima/issues/973)
 
-    ```
-    wxplot_old_gnuplot:false$
-    ```
-2. I have had problems on MacOS with the app getting stuck in full screen
-mode if I enter something other than `CMD + Return`. The solution is to
-remove the `wxMaxima Preferences` file from
-`/Users/jrminter/Library/Preferences`. I saved a good one in my 
-`Desktop/shortcuts/Maxima` folder.
+        wxplot_old_gnuplot:false$
+
+2.  I have had problems on MacOS with the app getting stuck in full
+    screen mode if I enter something other than `CMD + Return`. The
+    solution is to remove the `wxMaxima Preferences` file from
+    `/Users/jrminter/Library/Preferences`. I saved a good one in my
+    `Desktop/shortcuts/Maxima` folder.
 
 # File formats
 
-wxMaxima has two storage formats. `.wxmx` files contains results and plot
-images. `.wxm` files just contain the input / script.
-- From [here](http://maxima-discuss.narkive.com/RulbH7UD/how-do-i-use-file-wxmx).
+wxMaxima has two storage formats. `.wxmx` files contains results and
+plot images. `.wxm` files just contain the input / script. - From
+[here](http://maxima-discuss.narkive.com/RulbH7UD/how-do-i-use-file-wxmx).
 
 # Exporting $\LaTeX$ output
 
@@ -79,33 +81,29 @@ I discovered that when one exports the notebook to html, the $\LaTeX$
 output has a lot of errors when used in a `.tex` document. The best way
 to export the output is to generate a cell like:
 
-```
-(%i6) solve(x^3−3*x+1,x);
-```
+    (%i6) solve(x^3−3*x+1,x);
 
 and then generate the $\LaTeX$ by
 
-```
-(%i7) tex(''%i6);
-```
-then copy the output and paste into the $\LaTeX$ document as shown below.
+    (%i7) tex(''%i6);
 
+then copy the output and paste into the $\LaTeX$ document as shown
+below.
 
-```
-$$\left[ x=\left({{\sqrt{3}\,i}\over{2}}-{{1}\over{2}}\right)^{{{2
- }\over{3}}}+\left({{-1}\over{2}}-{{\sqrt{3}\,i}\over{2}}\right)\,
- \left({{\sqrt{3}\,i}\over{2}}-{{1}\over{2}}\right)^{{{1}\over{3}}}
-  , x=\left({{\sqrt{3}\,i}\over{2}}-{{1}\over{2}}\right)^{{{4}\over{3
- }}}+{{{{-1}\over{2}}-{{\sqrt{3}\,i}\over{2}}}\over{\left({{\sqrt{3}
- \,i}\over{2}}-{{1}\over{2}}\right)^{{{1}\over{3}}}}} , x=\left({{
- \sqrt{3}\,i}\over{2}}-{{1}\over{2}}\right)^{{{1}\over{3}}}+{{1
- }\over{\left({{\sqrt{3}\,i}\over{2}}-{{1}\over{2}}\right)^{{{1
- }\over{3}}}}} \right] $$
-```
+    $$\left[ x=\left({{\sqrt{3}\,i}\over{2}}-{{1}\over{2}}\right)^{{{2
+     }\over{3}}}+\left({{-1}\over{2}}-{{\sqrt{3}\,i}\over{2}}\right)\,
+     \left({{\sqrt{3}\,i}\over{2}}-{{1}\over{2}}\right)^{{{1}\over{3}}}
+      , x=\left({{\sqrt{3}\,i}\over{2}}-{{1}\over{2}}\right)^{{{4}\over{3
+     }}}+{{{{-1}\over{2}}-{{\sqrt{3}\,i}\over{2}}}\over{\left({{\sqrt{3}
+     \,i}\over{2}}-{{1}\over{2}}\right)^{{{1}\over{3}}}}} , x=\left({{
+     \sqrt{3}\,i}\over{2}}-{{1}\over{2}}\right)^{{{1}\over{3}}}+{{1
+     }\over{\left({{\sqrt{3}\,i}\over{2}}-{{1}\over{2}}\right)^{{{1
+     }\over{3}}}}} \right] $$
 
 # wxMaxima and version control
 
-From [sourceforge.net](https://sourceforge.net/p/maxima/mailman/message/35493359/)
+From
+[sourceforge.net](https://sourceforge.net/p/maxima/mailman/message/35493359/)
 
 From: Gunter Königsmann - 2016-11-15 18:35:52
 
@@ -116,73 +114,74 @@ On 15.11.2016 13:48, Stephan Lanser wrote:
 
 A fine choice.
 
-> I've managed to tell git that
-> *.wxmx is not a random binary-format, but I'm still not able to find
-> config the right encoding.
+> I've managed to tell git that \*.wxmx is not a random binary-format,
+> but I'm still not able to find config the right encoding.
 
 Technically the .wxmx file is a .zip file containing
 
- - one file (content.xml) with the user input and maxima's output. This
-file is utf-8 encoded so I think the answer for your question is "UTF-8".
+-   one file (content.xml) with the user input and maxima's output. This
+    file is utf-8 encoded so I think the answer for your question is
+    "UTF-8".
 
- - one file containing the text "The reason why part of a .wxmx file
-still might seem to make sense..." just to inform a casual reader with a
-text editor that the file is a .zip file. Don't know if I formulated
-this portion in a way that makes sense. If not: Complain and I will try
-to improve this pieve of text.
+-   one file containing the text "The reason why part of a .wxmx file
+    still might seem to make sense..." just to inform a casual reader
+    with a text editor that the file is a .zip file. Don't know if I
+    formulated this portion in a way that makes sense. If not: Complain
+    and I will try to improve this pieve of text.
 
- - a file named "mimetype" and whose contents tells that this is a .wxmx
-file: Many applications using zip+xml do so.
+-   a file named "mimetype" and whose contents tells that this is a
+    .wxmx file: Many applications using zip+xml do so.
 
- - and a file for every bitmap that was generated by the plot function
-or drag-and-dropped into the worksheet.
+-   and a file for every bitmap that was generated by the plot function
+    or drag-and-dropped into the worksheet.
 
 If git is convinced that the .wxmx file is a binary file it will be
-quite efficient in finding out what has changed and in storing the changes:
+quite efficient in finding out what has changed and in storing the
+changes:
 
- - In the text portion it is obvious what has changed and git will find
-out about that.
- - and if any plot has changed due to the .png compression this plot is
-likely to be stored as a whole. ...but nearly no worksheet format
-provides a way around this as the only alternative would be storing all
-images entirely uncompressed. ...but the .wxmx format will only alter
-the information for plots that actually have changed.
+-   In the text portion it is obvious what has changed and git will find
+    out about that.
+-   and if any plot has changed due to the .png compression this plot is
+    likely to be stored as a whole. ...but nearly no worksheet format
+    provides a way around this as the only alternative would be storing
+    all images entirely uncompressed. ...but the .wxmx format will only
+    alter the information for plots that actually have changed.
 
 If git is tricked into believing that this file is utf8-encoded text it
 will handle the file just as efficient as it would if it would believe
 that it were a binary file:
 
- - in the text portions git will know which lines have changed.
- 
- - and the images will be handled as extra-long lines - which is no
-problem: Git will still store them and the images still will be likely
-to change as a whole if their contents ever changes.
+-   in the text portions git will know which lines have changed.
+
+-   and the images will be handled as extra-long lines - which is no
+    problem: Git will still store them and the images still will be
+    likely to change as a whole if their contents ever changes.
 
 The only thing that is to be avoided is telling git that it should alter
 the line endings from CR to CRLF or similar.
 
-=> My guess would be that "UTF8 encoded text" would be a reasonable
+=\> My guess would be that "UTF8 encoded text" would be a reasonable
 choice for the encoding setting as it will allow to diff the text
 portion of the file just fine - and won't harm the compression of the
 version control data for the rest of the file.
 
 Kind regards,
 
-   Gunter.
+Gunter.
 
 He later added
 
 About 2 years ago I have changed wxMaxima to by default not use
-compression for the text part of the .wxmx files:
-Compression normally has the side effect that if you change only a few
-words within the file the whole structure of the file might change
-making version control hideously inefficient.
+compression for the text part of the .wxmx files: Compression normally
+has the side effect that if you change only a few words within the file
+the whole structure of the file might change making version control
+hideously inefficient.
 
 After this change the only things that alter if you change a wxMaxima
 session are your actual changes, the header (that contains the info
 about the length of the file) and the checksum at the end of the .wxmx
 file. Also the text portion and the equations are kept within the file
-as one piece information per text line =>  Any version control system
+as one piece information per text line =\> Any version control system
 you might already have installed should be able to see which portions of
 the file have changed and to efficiently discern what has changed and
 what hasn't - and this should even work if you version control system
@@ -199,7 +198,5 @@ files. A text diff kind of works, though.
 The second option would be: In the current nightly build of wxMaxima a
 few features have been backported from the .wxmx to the .wxm format...
 ...and .wxm files can be diff'ed using TortoiseDiff or Meld.
-
-
 
 [Back to Index](../README.html)
