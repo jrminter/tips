@@ -18,6 +18,9 @@ library(knitr)
 
 [Back to Index](../README.html)
 
+To the best of my knowledge, I think the latest `gnuplot` Windows binary
+is `gp540-win64-mingw.exe`.
+
 # My quick tips
 
 ## Key sources
