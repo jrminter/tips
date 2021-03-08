@@ -25,6 +25,12 @@ library(knitr)
 1. To the best of my knowledge, I think the latest `gnuplot` Windows
    binary is `gp541-win64-mingw.exe`. One can get this from
    [Sourceforge](https://sourceforge.net/projects/gnuplot/files/gnuplot/testing/).
+   
+   Mac binaries are available via Homebrew  with
+   
+   ```
+   brew install gnuplot
+   ```
 
 2. [Vanderbilt physics](https://my.vanderbilt.edu/physicslabs/gnuplot-tutorial/) tutorial
 
