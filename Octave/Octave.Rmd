@@ -27,7 +27,7 @@ on MacOS
 /usr/local/bin/octave
 ```
 
-
+[This](https://stackoverflow.com/questions/38593663/how-can-i-start-octave-from-the-command-line-and-not-the-gui) site helped set up paths...
 
 # Introduction
 
