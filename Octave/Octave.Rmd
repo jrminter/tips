@@ -24,6 +24,7 @@ C:\Program Files\GNU Octave\Octave-6.2.0\mingw64\bin\octave-cli.exe
 on MacOS
 
 ```
+/usr/local/bin/octave
 ```
 
 
