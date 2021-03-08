@@ -13,6 +13,21 @@ output:
 
 [Back to Index](../README.html)
 
+# Quick tips
+
+On my Win10 box the path to Octave is
+
+```
+C:\Program Files\GNU Octave\Octave-6.2.0\mingw64\bin\octave-cli.exe
+```
+
+on MacOS
+
+```
+```
+
+
+
 # Introduction
 
 Gnu Octave is an Open Source program similar to Matlab.
