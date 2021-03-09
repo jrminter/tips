@@ -1,0 +1,45 @@
+---
+title: "Java Tips"
+author: "J. R. Minter"
+date: "Started: 2021-03-09, Last modified: 2021-03-09"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(knitr)
+```
+
+
+[Back to Index](../README.html)
+
+# Java on MacOS
+
+Notes from Homebrew: 2021-03-09
+
+> openjdk is keg-only, which means it was not symlinked into
+> `/usr/local`, because macOS provides similar software and installing
+> this software in parallel can cause all kinds of trouble.
+> 
+> If you need to have openjdk first in your PATH, run:
+>
+> ```
+> echo 'export PATH="/usr/local/opt/openjdk/bin:$PATH"' >> ~/.zshrc
+> ```
+>
+> For compilers to find openjdk you may need to set:
+> 
+> ```
+>  export CPPFLAGS="-I/usr/local/opt/openjdk/include"
+> ```
+
+
+
+
+
+[Back to Index](../README.html)
