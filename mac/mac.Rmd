@@ -35,6 +35,12 @@ From [here](https://stackoverflow.com/questions/52522565/git-is-not-working-afte
 sudo xcode-select -switch /Library/Developer/CommandLineTools
 ```
 
+# Updating 1Password from the App Store
+
+Took me a bit to figure this out. Before you try to update 1Password,
+first look at the top menu bar. Iirst, quit OnePassword from the top menu
+bar (it looks like a bullseye). Then go to the App Store and update
+1Password.
 
 # Old MacBook Pro Charging Adapter
 
