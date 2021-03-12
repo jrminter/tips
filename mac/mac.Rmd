@@ -27,6 +27,14 @@ from the command line `cd Docunments` goes to the iCloud drive;
 
 Apple explains the system [here](https://support.apple.com/en-us/HT206985) 
 
+# Setting up for Command Line Tools
+
+From [here](https://stackoverflow.com/questions/52522565/git-is-not-working-after-macos-update-xcrun-error-invalid-active-developer-pa)
+
+```
+sudo xcode-select -switch /Library/Developer/CommandLineTools
+```
+
 
 # Old MacBook Pro Charging Adapter
 
