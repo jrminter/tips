@@ -30,8 +30,38 @@ been in the "Documents" folder. Both Mac and Windows have a nasty habit
 of making these folders in a networked folder. That may not be a bad
 choice for many, but it is easy to fill up cloud storage. I am not
 sure what to do... Generally, one likes to backup these folders
-on a regular basis. There can be issues with prelimanry data ending up
+on a regular basis. There can be issues with preliminary data ending up
 in the cloud. Lots to think about...
+
+## Some help from Jon Fournelle
+
+Jon Fournelle offered this Windows Powershell function for
+dealing with eV/channel.
+
+```
+function Select-Folder($message='Select a folder', $path = 0) {
+$object = New-Object -comObject Shell.Application
+$folder = $object.BrowseForFolder(0, $message, 0, $path) 
+if ($folder -ne $null) {   
+	$folder.self.Path
+	}
+}
+
+$folderPath = Select-Folder 'Select the folder with the EMSA files to be corrected'
+
+Write-host "The selected folder path is $folderPath"
+
+$files = Get-ChildItem -Path $folderPath -Recurse -Include *.EMSA
+
+foreach ($f in $files){
+    $outfile = $f.FullName + "_out.EMSA"
+    (Get-Content $f.FullName) -replace '#XPERCHAN    : 0.01', '#XPERCHAN    : 10' | Set-Content $outfile
+}
+
+If ($folderPath) { Write-Host 'Processing files' }
+Else { Write-Host 'No folder selected' }
+```
+
 
 ## Tricks with `tabulate`
 
