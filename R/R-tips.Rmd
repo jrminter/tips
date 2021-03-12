@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-06-26"
+date: "Started: 2013-07-16, Last modified: 2021-03-11"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -21,6 +21,48 @@ suppressPackageStartupMessages(library("tidyverse"))
 [Back to Index](../README.html)
 
 # Don't forget...
+
+## gfortran for R on macOS
+
+See [here](https://mac.r-project.org/tools/)
+
+The key point is:
+
+> [here](https://mac.r-project.org/tools/)
+>
+> In order to compile R for macOS, you will need the following tools:
+> Xcode developer tools from Apple
+> Xcode can be obtained from Apple AppStore and the Xcode developer page.
+> Older versions are available in the "more" section of the Developer
+> pages (Apple developer account necessary).
+>
+> **GNU Fortran compiler**    
+> 
+> Unfortunately Xcode doesn't contain a Fortran compiler, therefore you
+> will have to install one. We recommend official GNU Fortran binaries
+> from F.X.Coudert. CRAN High-Sierra builds currently use GNU Gortran
+> 8.2 from that page (note that even though compiled for Mojave it is
+> compatible with High Sierra).
+>
+> gfortran-8.2-Mojave.dmg (ca. 87MB, GNU Fortran 8.2 from F.X.Coudert)    
+> 
+> SHA256 hash: 81d379231ba5671a5ef1b7832531f53be5a1c651701a61d87e1d877c4f06d369
+>
+> This is a copy of GNU Fortran 8.2 build from
+> [here](https://github.com/fxcoudert/gfortran-for-macOS/releases)
+>
+> Make sure you add `/usr/local/gfortran/bin` to your PATH in order to
+> use this compiler. This can be done, e.g. by
+> 
+> `export PATH=$PATH:/usr/local/gfortran/bin`
+>
+> NOTE: In order to retain compatibility with native R we recommend using
+> above tools. Although it is possible to compile R using tools from
+> other package managers such as Homebrew, MacPorts or Fink, such binaries
+> are by definition incompatible with macOS native libraries and applications.
+> If you choose one of those package managers, make sure you compile
+> everything using those tools including R and all packages and libraries
+> you intend to use.
 
 ## In RStudio
 
