@@ -73,6 +73,29 @@ library(knitr)
     
     ![Plot of sin(x)](./png/plot.png)
     
+## An example from my Win10 system
+
+1. I used the following path
+
+```
+C:/Users/johnr/Dropbox/gnuploy/gnuplot-penepma16
+```
+
+2. I used the data file `pe-spect-01.dat`
+
+3. I used a script in
+
+```
+C:/Apps/local/path
+```
+
+  named
+
+```
+proc-gnuplot.sh
+```
+
+
 
 ## A suggestion from  Shigeharu Takeno
 
