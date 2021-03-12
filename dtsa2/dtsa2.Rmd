@@ -1,7 +1,7 @@
 ---
 title: "Tips on Using DTSA-II"
 author: "J. R. Minter"
-date: "Started: 2015-05-19, Last modified: 2021-03-04"
+date: "Started: 2015-05-19, Last modified: 2021-03-10"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -18,6 +18,20 @@ He tries to put out a new release yearly and bug-fix releases as
 needed.
 
 # Key tricks 
+
+## Recent install issues...
+
+Nicholas Ritchie has posted a "pre-release" version of DTSA.
+Evidently, releasing software has a process at NIST.
+
+One observation I have noticed is that DTSA_II normally generates
+the folder for results and the folder for the database has historically
+been in the "Documents" folder. Both Mac and Windows have a nasty habit
+of making these folders in a networked folder. That may not be a bad
+choice for many, but it is easy to fill up cloud storage. I am not
+sure what to do... Generally, one likes to backup these folders
+on a regular basis. There can be issues with prelimanry data ending up
+in the cloud. Lots to think about...
 
 ## Tricks with `tabulate`
 

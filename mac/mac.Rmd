@@ -38,9 +38,9 @@ sudo xcode-select -switch /Library/Developer/CommandLineTools
 
 # Old MacBook Pro Charging Adapter
 
-from Apple on Amazon
-
-https://www.amazon.com/Apple-MagSafe-Adapter-MacBook-display/dp/B008ALAAV0
+From [Amazon](https://www.amazon.com/Apple-MagSafe-Adapter-MacBook-display/dp/B008ALAAV0).
+I recently (2021-03-06) received two for Beth's macbook (one for home,
+one for school...)
 
 
 # Notifications
