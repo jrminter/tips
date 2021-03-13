@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-02-11"
+date: "Started: 2013-07-16, Last modified: 2021-03-13"
 output:
   html_document:
     keep_md: true
@@ -16,130 +16,133 @@ format.
 
 **Timely links**
 
-1. Convert foo.mkv to foo.mp4
+1. Reset a [Fitbit Ionic Waatch](fitness/fitness.html)
+
+2. Convert foo.mkv to foo.mp4
 
    ```
 ffmpeg -i title.mkv -c copy title.mp4
    ```
 
-2. Clean windshield wiper blades using WD-40 and a clean rag.
+3. Clean windshield wiper blades using WD-40 and a clean rag.
 
-3. [Big Sur update bricks my MBP model](https://apple.slashdot.org/story/20/11/16/0137234/macos-big-sur-update-reportedly-bricks-some-older-macbook-pros)
+4. [Big Sur update bricks my MBP model](https://apple.slashdot.org/story/20/11/16/0137234/macos-big-sur-update-reportedly-bricks-some-older-macbook-pros)
 
-4. [RStudio 1.4 preview citations](https://www.r-bloggers.com/2020/11/rstudio-1-4-preview-citations)
+5. [RStudio 1.4 preview citations](https://www.r-bloggers.com/2020/11/rstudio-1-4-preview-citations)
 
 
-- **LaTeX Symbols to remember**
+6. **LaTeX Symbols to remember**
 
-  `\geq`  $\geq$ 
+    `\geq`  $\geq$ 
   
-  `leq`  $\leq$
+    `leq`  $\leq$
   
-  `\circ` $\circ$ (a text "degree" symbol...)
+    `\circ` $\circ$ (a text "degree" symbol...)
 
-  The PDF is [**here**](tex/pdf/TeXRefCard-v1.5.pdf).
-
-
-- **USB drives**
-
-  Note to self: Only buy **USB-3.1** thumb drives, They are **a _lot_ faster**
-  than USB 3.0...
-
-  see [Amazon](https://www.amazon.com/gp/product/B07D7PDLXC/ref=ppx_yo_dt_b_asin_title_o00_s00) for a nice drive...
+    The PDF is [**here**](tex/pdf/TeXRefCard-v1.5.pdf).
 
 
-- **Fix for annoying git message:**
+7. **USB drives**
 
-  ```
-  git config --global pull.rebase false
-  ```
+    Note to self: Only buy **USB-3.1** thumb drives, They are **a _lot_ faster**
+    than USB 3.0...
 
-- **Quotes I Like**
+    see [Amazon](https://www.amazon.com/gp/product/B07D7PDLXC/ref=ppx_yo_dt_b_asin_title_o00_s00)
+    for a nice drive...
 
-  > Plod. don't sprint. Be fruitful like a tree, not efficient like a machine.
-  > Use the gifts God has given you. - Douglas Wilson
 
-  > The greatest value of a picture is when it forces us to notice what we never
-  > expected to see. - J. Tukey
+8. **Fix for annoying git message:**
 
-  > All models are wrong, but some are useful. - G. Box
+    ```
+    git config --global pull.rebase false
+    ```
 
-  > Make everything as simple as possible but not simpler. - A. Einstein
+9. **Quotes I Like**
 
-  > Your closest collaborator is you, six months from now. You do not
-  > respond to email.    
-  > - Karl Browman
+    > Plod. don't sprint. Be fruitful like a tree, not efficient like a machine.
+    > Use the gifts God has given you. - Douglas Wilson
 
-- From [DataArtisan](https://twitter.com/dataartisan1/status/1263784688432398338):
+    > The greatest value of a picture is when it forces us to notice what we never
+    > expected to see. - J. Tukey
 
-  Skills that make you stand out in #DataScience    
+    > All models are wrong, but some are useful. - G. Box
+
+    > Make everything as simple as possible but not simpler. - A. Einstein
+
+    > Your closest collaborator is you, six months from now. You do not
+    > respond to email.    
+    > - Karl Browman
+
+10. From [DataArtisan](https://twitter.com/dataartisan1/status/1263784688432398338):
+
+    Skills that make you stand out in #DataScience    
   
-  Being good at     
-  - making presentations    
-  - public speaking    
-  - explaining complex concepts    
-  - listening     
-  - changing plans on short notice    
-  - receiving feedback    
+    Being good at     
+    - making presentations    
+    - public speaking    
+    - explaining complex concepts    
+    - listening     
+    - changing plans on short notice    
+    - receiving feedback    
 
 
-**First**, some quickies:
 
-1. Checking Author/date properties in a PDF
+11. Checking Author/date properties in a PDF
 
-  > **Q: How do I find out when a PDF doc was originally created there is nothing under `File/Properties`? **
+    > **Q: How do I find out when a PDF doc was originally created there
+    > is nothing under `File/Properties`? **
 
-  > Answer by **RahulTyagi (Adobe Employee)**
+    > Answer by **RahulTyagi (Adobe Employee)**
 
-  > Generally, it is shown under the document properties window in
-  > Acrobat (As shown in the following snapshot).
+    > Generally, it is shown under the document properties window in
+    > Acrobat (As shown in the following snapshot).
 
-  > ![](img/acrobat-properties.png)
+    > ![](img/acrobat-properties.png)
 
-  > However, if the sender/Author has removed metadata from the pdf then there
-  > are chances that original file creation date is not displayed.
+    > However, if the sender/Author has removed metadata from the pdf then there
+    > are chances that original file creation date is not displayed.
 
   
-2. Key greek and other characters
+12. Key greek and other characters
 
-  ```
-  Φ(ρ𝑧)
-  𝑧  script z   
-  ```
-  Happily, Rmarkdown handles these well in html documents. 
-  Haven't been able to use them in LaTeX.  Need to try XeLaTeX...
+    ```
+    Φ(ρ𝑧)
+    𝑧  script z   
+   ```
+    Happily, Rmarkdown handles these well in html documents. 
+    Haven't been able to use them in LaTeX.  Need to try XeLaTeX...
 
-  ```
-  UC LC Name
-  -- -- ----
-  Α	 α	Alpha	
-  Β	 β	Beta
-  Γ	 γ	Gamma
-  Δ	 δ	Delta
-  Ε	 ε	Epsilon
-  Ζ	 ζ	Zeta
-  Η	 η	Eta
-  Θ	 θ	Theta
-  Ι	 ι	Iota
-  Κ	 κ	Kappa
-  Λ	 λ	Lambda
-  Μ	 μ	Mu
-  Ν	 ν	Nu
-  Ξ	 ξ	Xi
-  Ο	 ο	Omicron
-  Π	 π	Pi
-  Ρ	 ρ	Rho
-  Σ	 σ,ς  Sigma
-  Τ	 τ	Tau
-  Υ	 υ  Upsilon	
-  Φ	 φ	Phi
-  Χ	 χ	Chi
-  Ψ	 ψ	Psi
-  Ω	 ω	Omega
-  ```
+    ```
+    UC LC Name
+    -- -- ----
+    Α	 α	Alpha	
+    Β	 β	Beta
+    Γ	 γ	Gamma
+    Δ	 δ	Delta
+    Ε	 ε	Epsilon
+    Ζ	 ζ	Zeta
+    Η	 η	Eta
+    Θ	 θ	Theta
+    Ι	 ι	Iota
+    Κ	 κ	Kappa
+    Λ	 λ	Lambda
+    Μ	 μ	Mu
+    Ν	 ν	Nu
+    Ξ	 ξ	Xi
+    Ο	 ο	Omicron
+    Π	 π	Pi
+    Ρ	 ρ	Rho
+    Σ	 σ,ς  Sigma
+    Τ	 τ	Tau
+    Υ	 υ  Upsilon	
+    Φ	 φ	Phi
+    Χ	 χ	Chi
+    Ψ	 ψ	Psi
+    Ω	 ω	Omega
+    ```
 
 
-  3. Today I learned (TIL)
+13. Today I learned (TIL)
 
       2020-05-25:    
       It appears that now I need to run RStudio as an **administrator** on
@@ -169,7 +172,7 @@ ffmpeg -i title.mkv -c copy title.mp4
         - Under Product Information, click on `Update Options` next to `Office Updates`.    
         - From the list of options, click on `Update Now`.
 
-  4. Chrome Bookmarks - How to move a folder...
+14. Chrome Bookmarks - How to move a folder...
 
         From [here](https://support.google.com/chrome/thread/3479132?hl=en).
    
@@ -180,24 +183,24 @@ ffmpeg -i title.mkv -c copy title.mp4
         > little 'folder' icon-- it will not work.
 
 
-  5. Keyboard shortcut for the `dplyr` pipe operator
+15. Keyboard shortcut for the `dplyr` pipe operator
 
       ```
       Win: `%>%` - Ctl + Shift + M    
       Mac: `%>%` - CMD + Shift + M   
       ```
 
-  6. Fix a `recurring github credential problem` - run:
+16. Fix a `recurring github credential problem` - run:
    
       ```
       Sys.unsetenv("GITHUB_PAT")
       Sys.getenv("GITHUB_PAT")
       ```
 
-  7. The R `janitor` package is your friend. It cleans up
+17. The R `janitor` package is your friend. It cleans up
      non-standard column names .
 
-  8. CDC Corona Virus Recommendations
+18. CDC Corona Virus Recommendations
 
       > The CDC recommends washing with soap and water for at least 20 seconds after
       > using the bathroom, before eating and after blowing your nose or sneezing. It
@@ -207,7 +210,7 @@ ffmpeg -i title.mkv -c copy title.mp4
       > “These are all things you can do to prevent the spread of pretty much any
       > respiratory virus,” Brewer said.
 
-  9. Closed captions in CBS All access
+19. Closed captions in CBS All access
 
       > Go to www.cbs.com. Find a full episode of a series that you're
       > interested in and click on it. To turn the captions on, bring your
@@ -216,7 +219,7 @@ ffmpeg -i title.mkv -c copy title.mp4
       > side, click again on "CC captions" just once.
 
 
-  10. The Feynman technique of learning:
+20. The Feynman technique of learning:
 
       - Step 1: Pick and study a topic
 
@@ -229,27 +232,25 @@ ffmpeg -i title.mkv -c copy title.mp4
     
       More [here](./Feynman_technique/Feynman_technique.html)...
     
-  11. Install command line tools on MacOS
+21. Install command line tools on MacOS
 
       `xcode-select --install`
 
-  12. Reset a Fitbit Ionic watch
+22. Reset a Fitbit Ionic watch
 
-      Press and hold the left and bottom right buttons at the same time until you
-      see the Fitbit logo. Let go of the buttons, and your tracker will restart.
+      **See the instructions in the _fitness_ link.
 
-  13. Regex for youtube time stamps. Useful in SublimeText3!
+23. Regex for youtube time stamps. Useful in SublimeText3!
 
       `\d\d:\d\d`
-
-  14. Symbolic links. I always get this backwards...
+24. Symbolic links. I always get this backwards...
 
       ```
       file     link
       ln -s source destination
       ```
 
-  15. Fun snippets
+25. Fun snippets
 
       > Your closest colaborator is you, six months from now    
       > ... and you don't respond to email     
@@ -259,17 +260,17 @@ ffmpeg -i title.mkv -c copy title.mp4
       > styles    
       > - Peter Baker (UseR 2018)
 
-  16. Getting started with data science
+26. Getting started with data science
 
       - A very helpful article from
           [Datacamp](https://www.datacamp.com/community/tutorials/setup-data-science-environment).
 
-  17. Clear the Chrome Cache
+27. Clear the Chrome Cache
 
       - Press "CTRL" + "Shift" + "Delete" keys in Windows or Linux
       - Press "Command" + "Shift" + "Delete"" keys on MacOS.
 
-  18. Delete Specific Cookies in Chrome for Mac OS X
+28. Delete Specific Cookies in Chrome for Mac OS X
 
       From [osxdaily.com](http://osxdaily.com/2016/07/02/delete-cookies-chrome-browser/)
       You can remove a specific website cookie from Chrome by doing the following
@@ -287,7 +288,7 @@ ffmpeg -i title.mkv -c copy title.mp4
       - Avoid cookie placement and cache generation in the first place by using
       the Chrome `Incognito Mode` private browsing feature.
   
-  19. Automatically download all files in a directory
+29. Automatically download all files in a directory
 
       Let's also exclude all the `index.html` files... 
       
@@ -295,7 +296,7 @@ ffmpeg -i title.mkv -c copy title.mp4
       wget -r --no-parent --reject "index.html*" http://my/url
       ```
         
-  20. How to block someone on Facebook
+30. How to block someone on Facebook
 
       - Click at the top right of Facebook and choose `Settings`.
       - Click `Blocking` in the left side menu.
@@ -305,7 +306,7 @@ ffmpeg -i title.mkv -c copy title.mp4
       `Block > Block [name]`
 
 
-  21. Convert `.mkv` to `.mp4` from the command line
+31. Convert `.mkv` to `.mp4` from the command line
 
       ```
       ffmpeg -i vid.mkv -c copy vid.mp4
@@ -320,7 +321,7 @@ ffmpeg -i title.mkv -c copy title.mp4
       Note: this converts frame-by-frame and can be slow.
       I downloaded ffmpeg on macos via homebrew.
 
-  22. HTML Syntax
+32. HTML Syntax
 
   - A link
     
