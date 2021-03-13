@@ -16,7 +16,7 @@ format.
 
 **Timely links**
 
-1. Reset a [Fitbit Ionic Waatch](fitness/fitness.html)
+1. Reset a [Fitbit Ionic Watch](fitness/fitness.html)
 
 2. Convert foo.mkv to foo.mp4
 
