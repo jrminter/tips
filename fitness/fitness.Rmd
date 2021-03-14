@@ -1,7 +1,7 @@
 ---
 title: "Fitness tips"
 author: "J. R. Minter"
-date: "Started: 2015-05-10, Last modified: 2020-05-12"
+date: "Started: 2015-05-10, Last modified: 2021-03-14"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -50,7 +50,7 @@ Your watch was now reset – you should have no problems using it!
 
 **Note** To get the FitBit watch to sync with you iPhone, open the
 fitbit app on the iPhone. **pull down** om the screen in the FitBit
-app. A nessage will appear: **synching your ionic**.
+app. A nessage will appear: **synching your ionic**Y.
 
 
 
