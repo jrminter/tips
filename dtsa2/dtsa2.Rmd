@@ -1,7 +1,7 @@
 ---
 title: "Tips on Using DTSA-II"
 author: "J. R. Minter"
-date: "Started: 2015-05-19, Last modified: 2021-03-10"
+date: "Started: 2015-05-19, Last modified: 2021-03-20"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -19,10 +19,31 @@ needed.
 
 # Key tricks 
 
+## DTSA-II Prerelase
+
+Nicholas Ritchie wrote on the Probe Software Forum (2021-03-07):
+
+> DTSA II / Pre-Release Versions of DTSA-II    
+> Last post by NicholasRitchie on March 07, 2021, 06:21:30 AM    
+>
+> I'm often making small improvements to DTSA-II but it is quite a
+> bureaucratic hassle to get the updates to the NIST website :-\.
+> If you are a little adventurous and want to have access to the
+> latest pre-release version, you can download it from
+> 
+> [here](https://drive.google.com/file/d/17YAXRYkQ9vAQ509AwP5eZagdGfShX-dE/view?usp=sharing)
+>
+> It won't be as extensively tested as the release version but it will
+> often have bug fixes that haven't yet made it to release.  You win
+> some, you lose some...
+
+One observation: without some kind of version numbering, one may need
+to find a scheme for saving the DTSA `.jar` file with at least a
+download date.
+
 ## Recent install issues...
 
-Nicholas Ritchie has posted a "pre-release" version of DTSA.
-Evidently, releasing software has a process at NIST.
+
 
 One observation I have noticed is that DTSA_II normally generates
 the folder for results and the folder for the database has historically
