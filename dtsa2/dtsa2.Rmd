@@ -41,9 +41,11 @@ One observation: without some kind of version numbering, one may need
 to find a scheme for saving the DTSA `.jar` file with at least a
 download date.
 
+I will note that Dr. Ritchie released this to included changes to the
+`SpectrumBundler` (He wrote this: DTSA II / Re: Element specified to quantify missing from final results (F in apatite)
+« Last post by NicholasRitchie on March 07, 2021, 04:59:03 AM »)
+
 ## Recent install issues...
-
-
 
 One observation I have noticed is that DTSA_II normally generates
 the folder for results and the folder for the database has historically
