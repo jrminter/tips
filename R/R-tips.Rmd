@@ -24,6 +24,8 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 Currently running RStudio 1.4.1626 on my systems.
 
+Choose Primary CRAN repository as "Global (CDN) - RStudio". 
+
 ## gfortran for R on macOS
 
 See [here](https://mac.r-project.org/tools/)
@@ -1415,7 +1417,8 @@ and was accessed 2015-07-07.
 One needs to remember to escape the `"\"` character, that is write `"\\"`
 instead of `"\"`.
 
-```{r, fig.width=7.5, fig.height=7.5}
+```
+{r, fig.width=7.5, fig.height=7.5}
 library(latex2exp)
 x <- seq(-4, 4, len = 101)
 y <- cbind(sin(x), cos(x))
