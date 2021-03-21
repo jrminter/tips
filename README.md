@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-03-15"
+date: "Started: 2013-07-16, Last modified: 2021-03-21"
 output:
   html_document:
     keep_md: true
@@ -16,26 +16,38 @@ format.
 
 **Timely links**
 
-1. Reset a [Fitbit Ionic Watch](fitness/fitness.html)
+1. Turn on **Do Not Disturb** on the Mac
 
-2. Convert foo.mkv to foo.mp4
+    - click on the icon just to the left of the `Siri` Prompt.
+
+    - This gives you a menu'
+
+    - click on the "Do Not Disturb" tab
+
+    - pick an option...
+
+
+
+2. Reset a [Fitbit Ionic Watch](fitness/fitness.html)
+
+3. Convert foo.mkv to foo.mp4
 
    ```
 ffmpeg -i title.mkv -c copy title.mp4
    ```
 
-3. Delete VLC play list
+4. Delete VLC play list
 
     Select the entry to delete and press clear.
 
-4. Clean windshield wiper blades using WD-40 and a clean rag.
+5. Clean windshield wiper blades using WD-40 and a clean rag.
 
-5. [Big Sur update bricks my MBP model](https://apple.slashdot.org/story/20/11/16/0137234/macos-big-sur-update-reportedly-bricks-some-older-macbook-pros)
+6. [Big Sur update bricks my MBP model](https://apple.slashdot.org/story/20/11/16/0137234/macos-big-sur-update-reportedly-bricks-some-older-macbook-pros)
 
-6. [RStudio 1.4 preview citations](https://www.r-bloggers.com/2020/11/rstudio-1-4-preview-citations)
+7. [RStudio 1.4 preview citations](https://www.r-bloggers.com/2020/11/rstudio-1-4-preview-citations)
 
 
-7. **LaTeX Symbols to remember**
+8. **LaTeX Symbols to remember**
 
     `\geq`  $\geq$ 
   
@@ -46,7 +58,7 @@ ffmpeg -i title.mkv -c copy title.mp4
     The PDF is [**here**](tex/pdf/TeXRefCard-v1.5.pdf).
 
 
-8. **USB drives**
+9. **USB drives**
 
     Note to self: Only buy **USB-3.1** thumb drives, They are **a _lot_ faster**
     than USB 3.0...
@@ -55,13 +67,13 @@ ffmpeg -i title.mkv -c copy title.mp4
     for a nice drive...
 
 
-9. **Fix for annoying git message:**
+10. **Fix for annoying git message:**
 
     ```
     git config --global pull.rebase false
     ```
 
-10. **Quotes I Like**
+11. **Quotes I Like**
 
     > Plod. don't sprint. Be fruitful like a tree, not efficient like a machine.
     > Use the gifts God has given you. - Douglas Wilson
@@ -77,7 +89,7 @@ ffmpeg -i title.mkv -c copy title.mp4
     > respond to email.    
     > - Karl Browman
 
-11. From [DataArtisan](https://twitter.com/dataartisan1/status/1263784688432398338):
+12. From [DataArtisan](https://twitter.com/dataartisan1/status/1263784688432398338):
 
     Skills that make you stand out in #DataScience    
   
@@ -91,7 +103,7 @@ ffmpeg -i title.mkv -c copy title.mp4
 
 
 
-12. Checking Author/date properties in a PDF
+13. Checking Author/date properties in a PDF
 
     > **Q: How do I find out when a PDF doc was originally created there
     > is nothing under `File/Properties`? **
@@ -107,7 +119,7 @@ ffmpeg -i title.mkv -c copy title.mp4
     > are chances that original file creation date is not displayed.
 
   
-13. Key greek and other characters
+14. Key greek and other characters
 
     ```
     Φ(ρ𝑧)
@@ -146,7 +158,7 @@ ffmpeg -i title.mkv -c copy title.mp4
     ```
 
 
-14. Today I learned (TIL)
+15. Today I learned (TIL)
 
       2020-05-25:    
       It appears that now I need to run RStudio as an **administrator** on
@@ -176,7 +188,7 @@ ffmpeg -i title.mkv -c copy title.mp4
         - Under Product Information, click on `Update Options` next to `Office Updates`.    
         - From the list of options, click on `Update Now`.
 
-15. Chrome Bookmarks - How to move a folder...
+16. Chrome Bookmarks - How to move a folder...
 
         From [here](https://support.google.com/chrome/thread/3479132?hl=en).
    
@@ -187,24 +199,24 @@ ffmpeg -i title.mkv -c copy title.mp4
         > little 'folder' icon-- it will not work.
 
 
-16. Keyboard shortcut for the `dplyr` pipe operator
+17. Keyboard shortcut for the `dplyr` pipe operator
 
       ```
       Win: `%>%` - Ctl + Shift + M    
       Mac: `%>%` - CMD + Shift + M   
       ```
 
-17. Fix a `recurring github credential problem` - run:
+18. Fix a `recurring github credential problem` - run:
    
       ```
       Sys.unsetenv("GITHUB_PAT")
       Sys.getenv("GITHUB_PAT")
       ```
 
-18. The R `janitor` package is your friend. It cleans up
+19. The R `janitor` package is your friend. It cleans up
      non-standard column names .
 
-19. CDC Corona Virus Recommendations
+20. CDC Corona Virus Recommendations
 
       > The CDC recommends washing with soap and water for at least 20 seconds after
       > using the bathroom, before eating and after blowing your nose or sneezing. It
@@ -214,7 +226,7 @@ ffmpeg -i title.mkv -c copy title.mp4
       > “These are all things you can do to prevent the spread of pretty much any
       > respiratory virus,” Brewer said.
 
-20. Closed captions in CBS All access
+21. Closed captions in CBS All access
 
       > Go to www.cbs.com. Find a full episode of a series that you're
       > interested in and click on it. To turn the captions on, bring your
@@ -223,7 +235,7 @@ ffmpeg -i title.mkv -c copy title.mp4
       > side, click again on "CC captions" just once.
 
 
-21. The Feynman technique of learning:
+22. The Feynman technique of learning:
 
       - Step 1: Pick and study a topic
 
@@ -236,25 +248,26 @@ ffmpeg -i title.mkv -c copy title.mp4
     
       More [here](./Feynman_technique/Feynman_technique.html)...
     
-22. Install command line tools on MacOS
+23. Install command line tools on MacOS
 
       `xcode-select --install`
 
-23. Reset a Fitbit Ionic watch
+24. Reset a Fitbit Ionic watch
 
       **See the instructions in the _fitness_ link.
 
-24. Regex for youtube time stamps. Useful in SublimeText3!
+25. Regex for youtube time stamps. Useful in SublimeText3!
 
       `\d\d:\d\d`
-25. Symbolic links. I always get this backwards...
+
+26. Symbolic links. I always get this backwards...
 
       ```
       file     link
       ln -s source destination
       ```
 
-26. Fun snippets
+27. Fun snippets
 
       > Your closest colaborator is you, six months from now    
       > ... and you don't respond to email     
@@ -264,17 +277,17 @@ ffmpeg -i title.mkv -c copy title.mp4
       > styles    
       > - Peter Baker (UseR 2018)
 
-27. Getting started with data science
+28. Getting started with data science
 
       - A very helpful article from
           [Datacamp](https://www.datacamp.com/community/tutorials/setup-data-science-environment).
 
-28. Clear the Chrome Cache
+29. Clear the Chrome Cache
 
       - Press "CTRL" + "Shift" + "Delete" keys in Windows or Linux
       - Press "Command" + "Shift" + "Delete"" keys on MacOS.
 
-29. Delete Specific Cookies in Chrome for Mac OS X
+30. Delete Specific Cookies in Chrome for Mac OS X
 
       From [osxdaily.com](http://osxdaily.com/2016/07/02/delete-cookies-chrome-browser/)
       You can remove a specific website cookie from Chrome by doing the following
@@ -292,7 +305,7 @@ ffmpeg -i title.mkv -c copy title.mp4
       - Avoid cookie placement and cache generation in the first place by using
       the Chrome `Incognito Mode` private browsing feature.
   
-30. Automatically download all files in a directory
+31. Automatically download all files in a directory
 
       Let's also exclude all the `index.html` files... 
       
@@ -300,7 +313,7 @@ ffmpeg -i title.mkv -c copy title.mp4
       wget -r --no-parent --reject "index.html*" http://my/url
       ```
         
-31. How to block someone on Facebook
+32. How to block someone on Facebook
 
       - Click at the top right of Facebook and choose `Settings`.
       - Click `Blocking` in the left side menu.
@@ -310,7 +323,7 @@ ffmpeg -i title.mkv -c copy title.mp4
       `Block > Block [name]`
 
 
-32. Convert `.mkv` to `.mp4` from the command line
+33. Convert `.mkv` to `.mp4` from the command line
 
       ```
       ffmpeg -i vid.mkv -c copy vid.mp4
@@ -325,7 +338,7 @@ ffmpeg -i title.mkv -c copy title.mp4
       Note: this converts frame-by-frame and can be slow.
       I downloaded ffmpeg on macos via homebrew.
 
-33. HTML Syntax
+34. HTML Syntax
 
   - A link
     
