@@ -1,7 +1,7 @@
 ---
 title: "TV"
 author: "J. R. Minter"
-date: "Started: 2018-10-01, Last modified: 2021-03-21"
+date: "Started: 2018-10-01, Last modified: 2021-03-22"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -12,6 +12,15 @@ output:
 
 [Back to Index](../README.html)
 
+```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F, comment=NA}
+library(knitr)
+options(width = 72)
+
+suppressPackageStartupMessages(library("tidyverse"))
+```
+
+
+
 # My Bedroom TV with Samsung Remote
 
 I was confused with the HMDI interfaces.
@@ -20,6 +29,75 @@ Use the Samsung remote `Source` button to select the required interface:
 
 - `HDMI/DVI` is TV from Cable Box,
 - `HDMI3` - uses Apple TV
+
+To use the Cable remote, point the remote for the Spectrum Box at the
+the Spectrum Box and press the numbers for the desired channel.
+I made a PDF of the channels we get.
+
+```{r getPath}
+library(here)
+library(knitr)
+library(ggplot2)
+library(png)
+library(jpeg)
+bVerbose <- FALSE
+
+base_path <- here::here()
+loc_path_jpg <- 'TV/dat/Spectrum-TV-Channels.jpg'
+loc_path_png <- 'TV/dat/Spectrum-TV-Channels.png'
+
+
+if (bVerbose){
+  print(base_path)
+  print(loc_path_jpg)
+  print(loc_path_png)
+}
+
+fin_jpg <- paste0(base_path, "/", loc_path_jpg, collapse = "")
+print(fin_jpg)
+
+
+```
+
+```{r DispResJpg}
+
+
+jj <- readJPEG(fin, native=TRUE)
+plot(0:1,0:1,type="n",ann=FALSE,axes=FALSE)
+rasterImage(jj,0,0,1,1)
+
+```
+
+```{r readPng}
+
+fin_png <- paste0(base_path, "/", loc_path_png, collapse = "")
+print(fin_png)
+
+
+pp <- readPNG("fin_png.png", native=FALSE, info= FALSE)
+plot.new() 
+rasterImage(pp,0,0,1,1)
+```
+
+
+
+# emoty here() returns "/Users/jrminter/Documents/git/tips"
+# img_pa <- base_pa + "/"
+# print(img_pa)
+```
+
+```{r test}
+
+library(here)
+# library(png)
+
+pa <- here::here("TV/Spectrum-TV-Channels.jpg")
+print(pa)
+
+# img1 <- readPNG(pa)
+#battr(img1, "info")
+# The png is available ![here]"TV/dat/Spectrum-TV-Channels.png")
+```
 
 
 
