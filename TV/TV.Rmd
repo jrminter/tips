@@ -62,41 +62,23 @@ print(fin_jpg)
 ```{r DispResJpg}
 
 
-jj <- readJPEG(fin, native=TRUE)
+jj <- readJPEG(fin_jpg, native=TRUE)
 plot(0:1,0:1,type="n",ann=FALSE,axes=FALSE)
 rasterImage(jj,0,0,1,1)
 
 ```
 
-```{r readPng}
+```{r makePngPath}
 
 fin_png <- paste0(base_path, "/", loc_path_png, collapse = "")
 print(fin_png)
 
+```
 
-pp <- readPNG("fin_png.png", native=FALSE, info= FALSE)
+```{r readPngFi}
+pp <- readPNG(fin_png, TRUE)
 plot.new() 
 rasterImage(pp,0,0,1,1)
-```
-
-
-
-# emoty here() returns "/Users/jrminter/Documents/git/tips"
-# img_pa <- base_pa + "/"
-# print(img_pa)
-```
-
-```{r test}
-
-library(here)
-# library(png)
-
-pa <- here::here("TV/Spectrum-TV-Channels.jpg")
-print(pa)
-
-# img1 <- readPNG(pa)
-#battr(img1, "info")
-# The png is available ![here]"TV/dat/Spectrum-TV-Channels.png")
 ```
 
 
