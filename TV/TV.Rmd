@@ -1,7 +1,7 @@
 ---
 title: "TV"
 author: "J. R. Minter"
-date: "Started: 2018-10-01, Last modified: 2021-03-06"
+date: "Started: 2018-10-01, Last modified: 2021-03-21"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -11,6 +11,16 @@ output:
 ---
 
 [Back to Index](../README.html)
+
+# My Bedroom TV with Samsung Remote
+
+I was confused with the HMDI interfaces.
+
+Use the Samsung remote `Source` button to select the required interface:
+
+- `HDMI/DVI` is TV from Cable Box,
+- `HDMI3` - uses Apple TV
+
 
 
 # Programs I like
