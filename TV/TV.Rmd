@@ -1,11 +1,7 @@
 ---
 title: "TV"
 author: "J. R. Minter"
-<<<<<<< HEAD
-date: 'Started: 2018-10-01, Last modified: 2021-03-21'
-=======
 date: "Started: 2018-10-01, Last modified: 2021-03-22"
->>>>>>> 806d0c2e164e2b6645882c46917acdd28bec790a
 output:
   pdf_document:
     toc: yes
