@@ -48,6 +48,10 @@ From [Amazon](https://www.amazon.com/Apple-MagSafe-Adapter-MacBook-display/dp/B0
 I recently (2021-03-06) received two for Beth's macbook (one for home,
 one for school...)
 
+# Some speed-up ideas
+
+ - [A nice video from Payette Forward](https://www.youtube.com/watch?v=nSbAn2ZLPI8).
+It is a bit dated (2019-11-20).
 
 # Notifications
 
