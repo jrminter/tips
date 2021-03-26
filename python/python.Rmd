@@ -36,6 +36,9 @@ This assumes anaconda python...
 
 In `.bash_profile` add `alias python=3.9`
 
+start with `python3`
+
+
 
 ## Managing channels
 
