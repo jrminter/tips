@@ -261,6 +261,8 @@ iOS/figure/
 
 jekyll-github/*.html
 
+java/java.html
+
 # json tips directory
 json/.DS_Store
 json/json.md
