@@ -1,7 +1,7 @@
 ---
 title: "Python Tips"
 author: "J. R. Minter"
-date: 'Started: 2013-07-16, Last modified: 2021-03-11'
+date: 'Started: 2013-07-16, Last modified: 2021-03-26'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -29,6 +29,12 @@ I did not try a Windows installation.
 import os
 print(os.getcwd())
 ```
+
+## Starting Python3 on Mac
+
+This assumes anaconda python...
+
+In `.bash_profile` add `alias python=3.9`
 
 
 ## Managing channels
