@@ -23,6 +23,18 @@ I did not try a Windows installation.
 
 # conda
 
+## Keeping Spyder in the dock
+
+From [here](https://www.youtube.com/watch?v=rQNYNRoFacA)
+
+We need to permit applications from all developers. 
+We do this from the command line:
+
+```
+sudo spctl --master-disable
+```
+
+
 ## Finding where you are...
 
 ```
