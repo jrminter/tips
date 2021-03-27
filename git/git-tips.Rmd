@@ -51,6 +51,32 @@ $ git config --global credential.helper wincred
 
 ```
 
+## Checking SSH keys
+
+### Checking for existing SSH keys
+
+> Before you generate an SSH key, you can check to see if you have any
+> existing SSH keys.
+>
+> Note: DSA keys (SSH-DSS) are no longer supported. Existing keys will
+> continue to function, but you cannot add new DSA keys to your GitHub
+> account.
+
+1. Open Terminal.
+
+2. Enter `ls -al ~/.ssh` to see if existing SSH keys are present:
+
+  This Lists the files in your .ssh directory, if they exist.
+  Check the directory listing to see if you already have a public
+  SSH key. By default, the filenames of the public keys are one of
+  the following:
+  
+  ```
+
+id_rsa.pub
+id_ecdsa.pub
+id_ed25519.pub
+   ```
 
 
 
