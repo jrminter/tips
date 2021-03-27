@@ -122,6 +122,23 @@ Nicholas Ritchie reported on the
 > model any time soon.  However, the full model can compute uncertainties due
 > to other sources like surface quality.
 
+John Donovan [replied](https://probesoftware.com/smf/index.php?topic=1362.msg9792#msg9792):
+
+> Nicholas is of course exactly correct.
+> 
+> I tend to think of uncertainty as consisting of sources of random uncertainty
+> (which as he says can be improved by simply making further measurements), and
+> systematic uncertainties, which require more thoughtful efforts to correct for.
+>
+> The rub is that the same source can contribute to one type of uncertainty or
+> the other, or even contribute both types of uncertainty in our measurements.
+> For example, stage reproducibility issues can produce random uncertainties in
+> moving back to the standard calibration position Z position. But the stage could
+> also produce systematic uncertainties if the stage is drifting mechanically in
+> one direction.
+
+Hey, if it was easy, anyone could do it! 
+
 ## Tricks with `tabulate`
 
 From Nicholas Ritchie on the Probe Software Forum
