@@ -1,7 +1,7 @@
 ---
 title: "Git Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-01-21"
+date: "Started: 2013-07-16, Last modified: 2021-03-27"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -39,6 +39,8 @@ $ git credential-osxkeychain
  > xcode-select: note: no developer tools were found at '/Applications/Xcode.app',
  > requesting install. Choose an option in the dialog to download the command line de
 ```
+
+But this did not work for me. Trying to stick with RSA...
 
 To set up for Windows, use:
 
