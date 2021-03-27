@@ -1,7 +1,7 @@
 ---
 title: "Tips on Using DTSA-II"
 author: "J. R. Minter"
-date: "Started: 2015-05-19, Last modified: 2021-03-20"
+date: "Started: 2015-05-19, Last modified: 2021-03-27"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -85,6 +85,42 @@ If ($folderPath) { Write-Host 'Processing files' }
 Else { Write-Host 'No folder selected' }
 ```
 
+## Uncertainty in measurement 
+
+Nicholas Ritchie reported on the
+[Probe Software Forum](https://probesoftware.com/smf/index.php?topic=1362.msg9792#msg9792)  **2021-03-27)** :
+
+> It is worth remembering there are two kinds of uncertainty.
+> Type A: The kind that is improved by making more or longer measurements -
+> can be thought of like `precision` or `reproducibility`. 
+>
+> - This is what count statistics calculations and t-tests can illuminate
+> Type B: The kind that results from inaccuracies in the measurement model
+> (ie matrix correction) - can be thought of like`accuracy`.
+>
+> - This is harder to understand as it can only be evaluated by comparing
+> measurements with the correct value established through other means.  You can
+> estimate a range of values into which the true value is likely to fall but
+> **no amount of repeating measurements will help** (although you could imagine
+> ways to use multi-keV measurements to estimate the influence of the MAC since
+> MACs become less significant at lower overvoltages.)
+> 
+> As are learning from studies of the transition metal L-lines,  the concept
+> that we can always compute material MACs from elemental MACs is flawed - a
+> model failure.  File under: "All models are wrong, some models are useful."
+>
+> It is a very useful model for almost all K-lines and many L- and M-lines but
+> not all. This means that estimates of the uncertainty in a material MAC must
+> go beyond simply asking how elemental MACs vary between tabulations.  We need
+> to develop an understanding of where material MACs are simply weighed sums and 
+> where this model fails.  This remains a subject of study.
+> 
+> The uncertainty calculation in DTSA-II is based on a less sophisticated model
+> than discussed in my recent Embracing Uncertainty - Part I & II articles.
+> I continue to believe the DTSA-II model (from a 2012 M&M article) gives
+> answers that are basically correct and I don't expect to update to the full
+> model any time soon.  However, the full model can compute uncertainties due
+> to other sources like surface quality.
 
 ## Tricks with `tabulate`
 
