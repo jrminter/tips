@@ -1,7 +1,7 @@
 ---
 title: "TV"
 author: "J. R. Minter"
-date: "Started: 2018-10-01, Last modified: 2021-03-22"
+date: "Started: 2018-10-01, Last modified: 2021-03-27"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -22,6 +22,10 @@ options(width = 72)
 suppressPackageStartupMessages(library("tidyverse"))
 ```
 
+# Using my DVD Player
+
+On MacOS I can use my DVD player for movies. To see the menu bar, move the
+mouse to the **top** of the screen.
 
 
 # My Bedroom TV with Samsung Remote
