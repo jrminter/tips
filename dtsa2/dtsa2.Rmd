@@ -136,8 +136,8 @@ John Donovan [replied](https://probesoftware.com/smf/index.php?topic=1362.msg979
 > moving back to the standard calibration position Z position. But the stage could
 > also produce systematic uncertainties if the stage is drifting mechanically in
 > one direction.
-
-Hey, if it was easy, anyone could do it! 
+> 
+> Hey, if it was easy, anyone could do it! 
 
 ## Tricks with `tabulate`
 
