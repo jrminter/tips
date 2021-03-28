@@ -21,6 +21,10 @@ would bork the installation. I am not sure why...
 
 I did not try a Windows installation.
 
+**Note** I wanted to install **python 3.9** on my mac on 2021-03-27. 
+I cannot seem to get above version **3.8**. My web seaches suggest
+that I am not alone...
+
 # conda
 
 ## Miniconda
