@@ -1,7 +1,7 @@
 ---
 title: "SQL Tips"
 author: "J. R. Minter"
-date: "Started: 2017-10-28, Last modified: 2018-10-11"
+date: "Started: 2017-10-28, Last modified: 2021-03-28"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -60,7 +60,19 @@ implementation of SQL. It is not really fast but it is small.
 Modern smart phones use it to store music play lists and contacts.
 It can still handle hundreds or thousands of operations per second
 and you can move databases from one machine to another by moving a
-single file rather than a complicated export process. 
+single file rather than a complicated export process.    
+    
+**Note** To call sqlite on MacOS:
+
+1. install sqlite (brew install sqlite)     
+
+2. start with `sqlite3`.    
+   Type your commands...    
+   Type `ctl z` to quit sqlite.
+   Type `ps` to get a list of processes. Note the PID for sqlite.
+   Type `kill the_pid`   
+   You should get a terminal prompt.
+   
 
 All five systems use a **relational model**. Technically they are
 **Relational Database Management Systems** (RDBMS). All of these
