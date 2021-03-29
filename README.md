@@ -417,6 +417,8 @@ ffmpeg -i title.mkv -c copy title.mp4
 
 [Excel](./Excel/Excel.html)
 
+[Excelsior Pass](./Excelsior-Pass/Excelsior-Pass.html)
+
 [Feynman Technique](./Feynman_technique/Feynman_technique.html)
 
 [Fiji plugin development](./fiji-plugin-development/fiji-plugin-development.html)

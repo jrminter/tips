@@ -1,7 +1,12 @@
 ---
 title: "**Excelsior Pass**"
 date: "2021-03-29"
-output: html_document
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
 ---
 
 # John's introduction
