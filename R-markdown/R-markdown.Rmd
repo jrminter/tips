@@ -25,6 +25,9 @@ author to generate attractive documents that are stored in plain text files
 that are compatible with version control. This works very well in the
 **RStudio** environment.
 
+
+Alison Hill has a nice Youtube video [here](https://www.youtube.com/watch?v=sxYE0BY1mdc).
+
 ## Some key tips
 
 1. For PDF documents
