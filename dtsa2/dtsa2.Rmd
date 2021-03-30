@@ -19,6 +19,112 @@ needed.
 
 # Key tricks 
 
+## A recent exchange on the Probe Software Forum (2020-03-10)
+
+### DTSA II / Re: How to sum up few spectra
+« Last post by orlandin on Today at 03:08:21 PM »
+Hi sem-geologist - your last point about the size of the results window and how often one might want to go back in the workflow to tinker with a setting/standard (cough carbon thickness) is something I have solved by cutting and pasting the whole results output into a pre-formatted Excel spreadsheet that extracts the wt% and uncertainty into different rows. Then moving back and forth through the steps and seeing if you made a difference is very quick and easy without committing to the 'finish' - although I am learning that the Report file saved automatically after hitting 'finish' is VERY USEFUL for remembering what the heck you did.
+ReplyQuoteNotify
+
+### DTSA II / Re: How to sum up few spectra
+« Last post by sem-geologist on Today at 10:04:17 AM »
+actually O is not a problem, I calculate it stochiometrically.
+So That was that: I had to setup standard bundle files prior trying doing quanti alien. And it went all well. I am impressed – The result is quite remarkable (there is some minor deficiencies, but that probably can be solved with better calibrations, i.e. Lanthanium and Si got quite significantly (La2O3 8 % instead of 10%; and SiO2 17.3 instead of 18%) undercalculated; in case of La i can't see there problem lies, but for Si I think SiO2 is not good standard, I normally use diopside on EPMA. Anyway, other elements are just close to what I get on EPMA for same mineral. It is even more mind-blowing if comparing the conditions: on EPMA that takes (well, measured more trace elements) tens of minutes, while this is just 1minute EDS spectra. on EPMA I had to resolve more than 30 peak-overlaps calibration of those all stuff took few weeks to get close to what it is supposed to be from structural analysis. And these EDS calibrations are just 1 minute calibrations. I just wonder how far this can go.
+
+Now some things which gets in the way and is annoying at DTSA: wizard window is not resizable. When final result for quantification is displayed in the wizard I can't see a thing as there is so many elements and that automatically narrows columns in the result table so I can see only zeroes. The only way to see the result is to finish the wizard and look into Report, and then If I want to change something in quantification process I need to do all things from the beginning in quantification alien, instead stepping back in the wizard. I get that my application is a bit niche (it is no secret, that I am getting into similar issues (which are alien for most of normal people) with OEM software on EPMA), but if window can't be resized, it would be nice if result table could be scroll-able.
+ReplyQuoteNotify
+
+### DTSA II / Re: How to sum up few spectra
+« Last post by NicholasRitchie on Today at 09:22:40 AM »
+With respect to the low energy lines, you can specify which elements are visible on a detector using the "Calibration Alien".  This creates a new calibration that can then be applied to the unknown spectrum using the "Spectrum Properties" dialog.  I often set the first visible K line to Sc, the first L to La, first M to La and first N to Am.  This is ok at high beam energies but isn't suitable at low beam energies at which the relative visibility of these lines increases.
+
+What you have is a very challenging problem.  To fit O, you need to account for the interfering peaks due to Ti L and the REE Ms.  When peaks interfere, you can't just fit some of the peaks.  You have to fit them all.
+
+### DTSA II / Re: How to sum up few spectra
+« Last post by sem-geologist on Today at 09:21:00 AM »
+Oh I see, So I need to go through "Bundle" option and at tab "references" click Auto for REE's and Y files when making standard bundles. so basically there are few ways, and they differ a bit. I was importing spectras as standards at Quanti alien wizard, thats probably a problem. If I will prepare bundles for every element I need, maybe this will progress.
+ReplyQuoteNotify
+
+### DTSA II / Re: How to sum up few spectra
+
+« Last post by NicholasRitchie on Today at 08:53:38 AM »
+You are right that it is possible to fit Gaussians (and a continuum model) to the X-ray peaks.  In fact, the "Spectrum Bundler" can do this for you when a reference simply isn't available.  (Use the "Auto" button on the "References" tab) However, the true peak shape is only approximately Gaussian.  Additional subtleties like incomplete charge collection introduce non-Gaussian characteristics to the shape.  The results is that modeled peaks shape references won't work as well as measured ones.  This becomes a particular issue when trying to resolve peak interferences.
+
+Unfortunately, both YPO4 and YAG require a Y reference.  Al is too close to the Y L2-M3 and P covers the Y L3-M5.  It is true that some materials that are suitable for WDS are not suitable for references for EDS.  In the meanwhile, I'd be tempted to use the "Auto" reference button on the YAG spectrum.  It might work reasonably well.
+
+### DTSA II / Re: How to sum up few spectra
+« Last post by sem-geologist on Today at 08:33:58 AM »
+I start to fear that DTSA-II will not cut through my case at the moment, as that would require investment in additional standards. I.e. on EPMA I use two Yttrium standards YPO4 and YAG (Y-alumina garnet), both of them looks poor for DTSA-II, while are perfectly OK on EPMA; I probably should use YF3 to succeed, but what about LREE.... This shape reference thing makes me scratch my head – is not EDS spectrum broadening a result of pure natural distribution/or Gaussian which is just gain noise from multi-channel processing unit? I mean why we need the peak shapes if it is just sum of Gaussian convoluted spectra. Why not just do deconvolution on spectra with dynamic sigma Gaussian? On the other hand, doing similar method on WDS scans - this real shape approach would be the only working approach as on WDS shape is riddled with artifacts and is nearly impossible to correctly be modeled. I am probably missing something from big picture again.
+
+### DTSA II / Re: How to sum up few spectra
+« Last post by sem-geologist on Today at 08:03:09 AM »
+Thanks a lot,
+Simple summing of spectras through jython (no comparison) is much more practical for my 2 second unknown spectras (due to very short time it is natural that they will be significantly different), and bundle button looks more practical for standards. When I sum the spectra through command line it will sum live time automatically?
+
+But I had bumped into another problem (See attachement):
+Why Quanti alien is asking me for those lines, It is unobtainable at 20kV, even in pure form of those elements the lines would be poor (and getting new metal REE standards just for this would be quite an overkill). I probably again had missed something. I am stuck at that point (well the final mineral which I need to determine composition is not chevkinite, but gagarinite - that is Na(Ca,REE)F6, but to convince colleagues that EDS result of gagarinite is good I need to show-off that chevkinite can be done with exactly same method (which has near 40 elements). Well, this is quite complicated...
+ReplyQuoteNotify
+
+### DTSA II / Re: How to sum up few spectra
+« Last post by NicholasRitchie on Today at 06:38:45 AM »
+Advanced users:
+There is also another method to sum spectra from the command line.
+Part 1: Select some spectra
+Mode A: Select the currently displayed spectra
+```
+1> ss = selected()
+Mode B: Select from all loaded spectra.  First list spectra and then use the alias to create a list.
+1> ls()
+Name   Spectrum
+s21   Mn 1
+s22   Mn 2
+s23   Mn 3
+s24   Mn 4
+s25   Mn 5
+s26   Mn std
+2> ss = [ s21, s22, s24 ]
+Part 2:  Sum the spectra and display it
+3> s = sum(ss)
+4> display(s)
+
+or in short:
+1> display(sum(selected()))
+or
+1> display(sum( [ s21, s22, s24 ]))
+```
+
+### DTSA II / Re: How to sum up few spectra
+
+« Last post by NicholasRitchie on Today at 06:28:16 AM »
+I think I can help you.
+The tool you want is the "Standard Bundler."  The "Standard Bundler" performs a number of tasks and I've been working on enhancing it recently to make it much more efficient to use.
+I'll describe the process in the most recent "pre-release" version of DTSA-II available here: DTSA-II Pre-Release
+First, select all the spectra you wish to combine in the "Spectrum list" on the "Spectrum" tab
+1. Right click the spectrum list and select "Make "Spectrum Bundle"" menu item to initiate the "Spectrum Bundler" dialog
+2. You can now enter probe current and live time data here in the first panel of the "Spectrum Bundler".  Select the spectra to update and then enter the "probe current" and "live time" as necessary.
+3. In the next panel, enter the material and other meta data
+4. In the next panel, the spectra are compared one to another.  The score tells you how similar the spectra are.  ~1 is excellent but is realized only for the most homogeneous samples and careful measurements.  Spectra that are more than a factor of two above the mean score should probably be removed.
+5. In the "Special Options" panel, specify special options.  (Probably none to start...)
+6. In the "References" panel, any required references are listed and can be provided.
+When the "Finish" button is selected, you will be asked for a directory into which to place the "Standard Bundle" with a "zstd" extension containing the standard and any provided references and an "msa" file with the sum standard spectrum.   You may use either as a standard although if references are required, the "zstd" will be simpler and quicker to use.
+
+This should help you to construct a standard database which you can reuse over time.
+
+### DTSA II / How to sum up few spectra
+« Last post by sem-geologist on Today at 06:01:57 AM »
+Hello,
+Recently I got into trying to use DTSA-II, I watched the videos and had read few papers about DTSA-II. It is mentioned that it is good practice to get few measurements of standards instead of single but very long measurement of the standard. The problem is that I can't find how to sum such separate spectra into a single entity.
+
+For standards it is not such a huge problem as those are pretty stable, but I need that for my unknown mineral from some experiments. It is losing sodium like crazy, so I made 30 separate measurements of 2 seconds length and want to sum this batch into a single spectra. My files are bruker spx.
+
+I appreciate the working examples how to do Quanti alien, but I feel I am missing the step-by-step understanding how to build my standard database. Maybe I am understanding the workflow wrongly?
+
+On EPMA (I am used to Cameca microprobes) we can have these huge standard databases built, as temperature stability in the room and WDS position repeatability and forced geometry, also gas-flow proportional counters (constant gas properties) allows to get the same measurements of standards in few months, and even years. We don't need to do every-day re-calibration, just QC checks to be sure that there is no changes.
+
+I don't see this in DTSA-II, we need to keep standards as separate files? and with every quantification attempt we need those to be imported, and missing fields filled in (spx, or Bruker system has no idea about probe current, coating, and DTSA-II is not reading some fileds which are in spx like WD). This looks a bit inefficient and I hate doing the same things again and again (who does not hate it), I probably am missing something very obvious. Or this is just forced feature as I know lots of laboratories don't run stable air conditioning and does not keep track of other microscope parameters, so is it to force to do new standard analyses per sample?
+
+
+
 ## DTSA-II Prerelase
 
 Nicholas Ritchie wrote on the Probe Software Forum (2021-03-07):
