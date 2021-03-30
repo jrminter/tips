@@ -1,6 +1,6 @@
 ---
-title: "**Imessage**"
-date: "2021-03-29"
+title: "iMessage"
+date: "Started: 2021-03-28, Last modified: 2021-03-28"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -9,6 +9,15 @@ output:
     toc_depth: 3
 ---
 
-# Emojis in iMessage
 
-![Add an emoji](iMessage/emmoji-in-message.png)
+[Back to Index](../README.html)
+
+Add emojis in iMessage: Note the smiley by the arrow.
+**Select an emoji there**.
+
+
+![Add an emoji](./inc/emoji-in-message.png)
+
+
+[Back to Index](../README.html)
+
