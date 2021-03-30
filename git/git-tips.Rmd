@@ -1,7 +1,7 @@
 ---
 title: "Git Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-03-27"
+date: "Started: 2013-07-16, Last modified: 2021-03-30"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -16,6 +16,27 @@ These are John Minter's tips for a workflow using git. They were
 compiled from several web sources.
 
 # Quick tips
+
+## Getting rid of files you don't want to track any more
+
+`.gitignore` will prevent un-tracked files from being added (without an
+add -f) to the set of files tracked by git, however git will continue
+to track any files that are already being tracked.
+
+To stop tracking a file you need to remove it from the index. This can be achieved with this command.
+
+```
+git rm --cached <file>
+```
+
+If you want to remove a whole folder, you need to remove all files in it
+recursively.
+
+```
+git rm -r --cached <folder>
+```
+
+The removal of the file from the head revision will happen on the next commit.
 
 ## Credentials
 
