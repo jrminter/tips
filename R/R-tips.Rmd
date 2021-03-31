@@ -336,6 +336,20 @@ head_tails = c("H", "T")
 cat(sample(head_tails, 20, replace = TRUE))
 ```
 
+## Use the `glue` package to process strings
+
+```{r glue, comment=NA}
+library(glue)
+
+name <- "Fred"
+age <- 50
+anniversary <- as.Date("1991-10-12")
+glue('My name is {name},',
+     ' my age next year is {age + 1},',
+     ' my anniversary is {format(anniversary, "%A, %B %d, %Y")}.')
+```
+
+
 ## Pimp my Rmd
 
 Find it [here](https://holtzy.github.io/Pimp-my-rmd/).
