@@ -338,6 +338,9 @@ cat(sample(head_tails, 20, replace = TRUE))
 
 ## Use the `glue` package to process strings
 
+
+From [here](https://github.com/tidyverse/glue)
+
 ```{r glue, comment=NA}
 library(glue)
 
