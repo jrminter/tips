@@ -19,15 +19,58 @@ needed.
 
 # Key tricks 
 
-## A recent exchange on the Probe Software Forum (2020-03-10)
+## An exchange on the Probe Software Forum (2020-03-31)
+
+### 1 DTSA II / Re: DTSA-II for geological materials - 1 month of results
+« Last post by NicholasRitchie on 2021-03-31 at 04:32:01 AM »
+Orlandin: Thanks for sharing your results.
+
+
+Probeman: WRT zero strobe - I don't know how to use the zero strobe to normalize changes in beam current.  As I understand, the zero strobe is a stream of "0 V" pulses inserted into the pulse processor as though they were x-ray events.  This can be used 1) to stabilize the "offset" (so only the "gain" needs to be otherwise calibrated) and 2) to measure the electronic noise component of the resolution function.  In this model, the number of zero strobe pulses is just a function of the frequency with which they are inserted.  (My mental model could be wrong.)
+
+
+### 2 DTSA II / Re: How to sum up few spectra
+« Last post by NicholasRitchie on 2021-03-31 at 04:03:16 AM »
+DTSA-II uses an extension of the "Fiori model" to estimate the resolution of an EDS detector as a function of energy. (See Goldstein) The "Calibration Alien" fits a high energy peak and a low energy peak and uses this to estimate the "noise" term in the resolution model. The standard is to report the resolution at Mn Ka but this doesn't mean I can't compute it at other energies.
+
+The artifacts at low energies result from two classes of effects - first, the continuum has real edge structure at low energies.  Second, there are numerous small "chemical" or "solid state" effects that lead to changes in X-ray energy, X-ray weights-of-lines, mass absorption coefficient, fluorescence yield, Coster-Kronig and other factors.  These factors lead to the structure seen in the residual under low energy peaks.  It is physics not a shortcoming of the fitting process.
+
+Finally, I assume that the image is in focus and the focal distance is the working distance.  I suggest setting the focal distance once (I always use 17 mm in my instrument) and then using the Z-axis of the stage to keep the sample in focus.  This maintains the constant working distance as the optical microscope does for WDS.  If you don't maintain the same working distance, your quant will not work out correctly just as in WDS.
+
+I'd love help.  If you contribute a useful, novel algorithm in Python, I'd be happy to rewrite it in Java.
+
+### 3 DTSA II / Re: How to sum up few spectra
+« Last post by sem-geologist on 2021-03-31 at 03:17:16 AM »
+sorry for post after post...
+But maybe this could benefit from my ideas. I see that calibration alien uses only single element for calibration. How then DTSA-II would know what peak broadening factor at given energy is? it is not only characteristic peaks which are broadened by pulse counter gain noise, but all continuum (that includes absorption edges). And most EDS by different vendors have non-linear broadening (as other noise gets more important at low energies). This could be measured and calibrated (as vendors does not give the factor how broadening changes) from 3 peaks instead of single (Mn Ka) - in example C, F (from CaF2) and Mn. This could then help in better auto reference fitting. The same is applicable for absorption edges, with better assessed broadening factor for given energy there should be less of artifacts at residual spectra at lower energies. It looks for me that they are resulting not only from peak shifts, but by too sharp absorption edge models applied.
+
+P.S. I would contribute some code if this would be in python (maybe You are aware - I was doing some work on HyperSpy), unfortunately my brain is not Java friendly  ;) .
+
+Getting back to my complaint for not reading/loading working distance from spx - that is rather correct behaviour. SEM often uses beam focus with physical working distance interchangeably. There is no problem if beam is fully focused, but in case if dealing with the beam-sensitive material, with defocused beam WD is reported incorrectly. It is better to fill this by hand.
+
+
+### 4 DTSA II / Re: How to sum up few spectra
+« Last post by sem-geologist on 2021-03-31 at 02:13:51 AM »
+Gagarinite by EDS looks nearly impossible, that is due to La M lines overlapping on the F (major peak), and I can't find any metal La standards to buy (available LaF3 and La2O3, or what we have in lab: La-glass, LaPO4, or LaP4O12 (or something like that)) - none of those has La M lines without nearby other element peaks or overlaps. I am not giving up, I think I could try removing Oxygen peak from my LaPO4 spectra and feed that artificially Oxygen-less spectra as a reference, as it needs only the shape of those lines. I probably should do the same for all LREE references as I see the DTSA-II auto reference for those lines does not work satisfactory (see attachement), getting those right is important also for correct overlap correction of Na. I should say that on WDS (PC0 XTAL for F, and TAP for Na) the situation is similarly over complicated and background is impossible to be measured accurately for this set of elements on WDS (maybe MAN of ProbeSoftware would cut through this problem, but I have none to try it out). Oh, but that is not the worst case - we also have some phases with this set of elements + Ba (with its M lines... and oxygen).
+
+I am wondering why is this like that:
+maybe detector is not well imported into DTSA-II (it would overestimate the absorption properties of window (wrong type?) it looks correct for me.
+maybe DTSA is applying spectra broadening in linear fashion, while Bruker detectors have non-linear peak resolution
+maybe relative theoretical intensity of M lines for REE are a bit too far from correct in the database of DTSA; In particular If You will check the height of La M3-N1 line marker (in the attachement) is quite strongly undershot; and maybe due to to little intensity it is modeled to be completely absorbed.
+
+I understand that this is really hard, and now I very clearly see why we need to rely on the reference peaks.
+
+
+
+## An exchange on the Probe Software Forum (2020-03-30)
 
 ### DTSA II / Re: How to sum up few spectra
-« Last post by orlandin on Today at 03:08:21 PM »
+« Last post by orlandin on 2020-03-30 at 03:08:21 PM »
 Hi sem-geologist - your last point about the size of the results window and how often one might want to go back in the workflow to tinker with a setting/standard (cough carbon thickness) is something I have solved by cutting and pasting the whole results output into a pre-formatted Excel spreadsheet that extracts the wt% and uncertainty into different rows. Then moving back and forth through the steps and seeing if you made a difference is very quick and easy without committing to the 'finish' - although I am learning that the Report file saved automatically after hitting 'finish' is VERY USEFUL for remembering what the heck you did.
 ReplyQuoteNotify
 
 ### DTSA II / Re: How to sum up few spectra
-« Last post by sem-geologist on Today at 10:04:17 AM »
+« Last post by sem-geologist on 2020-03-30 at 10:04:17 AM »
 actually O is not a problem, I calculate it stochiometrically.
 So That was that: I had to setup standard bundle files prior trying doing quanti alien. And it went all well. I am impressed – The result is quite remarkable (there is some minor deficiencies, but that probably can be solved with better calibrations, i.e. Lanthanium and Si got quite significantly (La2O3 8 % instead of 10%; and SiO2 17.3 instead of 18%) undercalculated; in case of La i can't see there problem lies, but for Si I think SiO2 is not good standard, I normally use diopside on EPMA. Anyway, other elements are just close to what I get on EPMA for same mineral. It is even more mind-blowing if comparing the conditions: on EPMA that takes (well, measured more trace elements) tens of minutes, while this is just 1minute EDS spectra. on EPMA I had to resolve more than 30 peak-overlaps calibration of those all stuff took few weeks to get close to what it is supposed to be from structural analysis. And these EDS calibrations are just 1 minute calibrations. I just wonder how far this can go.
 
@@ -35,13 +78,13 @@ Now some things which gets in the way and is annoying at DTSA: wizard window is 
 ReplyQuoteNotify
 
 ### DTSA II / Re: How to sum up few spectra
-« Last post by NicholasRitchie on Today at 09:22:40 AM »
+« Last post by NicholasRitchie on 2020-03-30 at 09:22:40 AM »
 With respect to the low energy lines, you can specify which elements are visible on a detector using the "Calibration Alien".  This creates a new calibration that can then be applied to the unknown spectrum using the "Spectrum Properties" dialog.  I often set the first visible K line to Sc, the first L to La, first M to La and first N to Am.  This is ok at high beam energies but isn't suitable at low beam energies at which the relative visibility of these lines increases.
 
 What you have is a very challenging problem.  To fit O, you need to account for the interfering peaks due to Ti L and the REE Ms.  When peaks interfere, you can't just fit some of the peaks.  You have to fit them all.
 
 ### DTSA II / Re: How to sum up few spectra
-« Last post by sem-geologist on Today at 09:21:00 AM »
+« Last post by sem-geologist on 2020-03-30 at 09:21:00 AM »
 Oh I see, So I need to go through "Bundle" option and at tab "references" click Auto for REE's and Y files when making standard bundles. so basically there are few ways, and they differ a bit. I was importing spectras as standards at Quanti alien wizard, thats probably a problem. If I will prepare bundles for every element I need, maybe this will progress.
 ReplyQuoteNotify
 
@@ -57,7 +100,7 @@ Unfortunately, both YPO4 and YAG require a Y reference.  Al is too close to the 
 I start to fear that DTSA-II will not cut through my case at the moment, as that would require investment in additional standards. I.e. on EPMA I use two Yttrium standards YPO4 and YAG (Y-alumina garnet), both of them looks poor for DTSA-II, while are perfectly OK on EPMA; I probably should use YF3 to succeed, but what about LREE.... This shape reference thing makes me scratch my head – is not EDS spectrum broadening a result of pure natural distribution/or Gaussian which is just gain noise from multi-channel processing unit? I mean why we need the peak shapes if it is just sum of Gaussian convoluted spectra. Why not just do deconvolution on spectra with dynamic sigma Gaussian? On the other hand, doing similar method on WDS scans - this real shape approach would be the only working approach as on WDS shape is riddled with artifacts and is nearly impossible to correctly be modeled. I am probably missing something from big picture again.
 
 ### DTSA II / Re: How to sum up few spectra
-« Last post by sem-geologist on Today at 08:03:09 AM »
+« Last post by sem-geologist on 2021-03-30 at 08:03:09 AM »
 Thanks a lot,
 Simple summing of spectras through jython (no comparison) is much more practical for my 2 second unknown spectras (due to very short time it is natural that they will be significantly different), and bundle button looks more practical for standards. When I sum the spectra through command line it will sum live time automatically?
 
@@ -66,7 +109,7 @@ Why Quanti alien is asking me for those lines, It is unobtainable at 20kV, even 
 ReplyQuoteNotify
 
 ### DTSA II / Re: How to sum up few spectra
-« Last post by NicholasRitchie on Today at 06:38:45 AM »
+« Last post by NicholasRitchie on 2021-03-30  at 06:38:45 AM »
 Advanced users:
 There is also another method to sum spectra from the command line.
 Part 1: Select some spectra
@@ -95,7 +138,7 @@ or
 
 ### DTSA II / Re: How to sum up few spectra
 
-« Last post by NicholasRitchie on Today at 06:28:16 AM »
+« Last post by NicholasRitchie on 2021-03-30 at 06:28:16 AM »
 I think I can help you.
 The tool you want is the "Standard Bundler."  The "Standard Bundler" performs a number of tasks and I've been working on enhancing it recently to make it much more efficient to use.
 I'll describe the process in the most recent "pre-release" version of DTSA-II available here: DTSA-II Pre-Release
@@ -111,7 +154,7 @@ When the "Finish" button is selected, you will be asked for a directory into whi
 This should help you to construct a standard database which you can reuse over time.
 
 ### DTSA II / How to sum up few spectra
-« Last post by sem-geologist on Today at 06:01:57 AM »
+« Last post by sem-geologist on 2021-03-30  at 06:01:57 AM »
 Hello,
 Recently I got into trying to use DTSA-II, I watched the videos and had read few papers about DTSA-II. It is mentioned that it is good practice to get few measurements of standards instead of single but very long measurement of the standard. The problem is that I can't find how to sum such separate spectra into a single entity.
 
