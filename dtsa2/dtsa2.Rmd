@@ -17,7 +17,20 @@ Note that Nicholas Ritchie has released some helpful videos on
 He tries to put out a new release yearly and bug-fix releases as
 needed.
 
-# Key tricks 
+# Key tricks
+
+## Setting up DTSA-II Microcopium on MacOS
+
+This worked on my MacBook Pro with macOS Big Sur v. 11.2.3
+
+1. Install the desired DTSA installer into `Applications` folder.
+It will have a name like `NIST DTSA-II Microscopium 2021-03-16`.
+Open the appropriate `NIST DTSA-II Microscopium` folder for the
+particular release date.
+
+2. In the folder for the desired release, navigate to the `dtsa2.jar`
+file and create an alias. I suggest a name like `Micro-03-16`. Drag that
+to your desktop. Clicking on the alias will start the program.
 
 ## An exchange on the Probe Software Forum (2020-03-31)
 
