@@ -1,6 +1,6 @@
 ---
 title: "**Excelsior Pass**"
-date: "2021-03-29"
+date: "Started: 2021-03-29 Modified: 2021-04-01"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -16,6 +16,27 @@ things easier for users. I am concerned about the short validity of
 the pass.
 
 This information was copied from [here](https://covid19vaccine.health.ny.gov/excelsior-pass-frequently-asked-questions).
+
+# Key info
+
+## HOW DO I GET A PASS
+
+To get a pass, visit [epass.ny.gov](https://epass.ny.gov/home)
+and click “Get Started”.
+
+You will need to provide basic personal information, including your first and last name, date of birth, and zip code. You will also need to verify your identity with three “challenge questions” whose answers are unique to you. You’ll need to enter this information every time you retrieve a pass.
+
+Once you receive a pass from the website, you can print a paper pass, take a screen shot of your pass, or save your pass to the Excelsior Pass Wallet mobile app.
+For more information and frequently asked questions about the pass, click here.
+
+## Updating a pass
+
+These expire so one needs to renew periodically because the CDC and
+State Dept of Health are not sure how long immunity lasts.  My pass,
+with information originally 2021-03-03 will first expire on 2021-04-28.
+That is really short. A recent article suggests these can be extended
+based upon later information regarding the updated understanding of the
+length of immunity from the shot.
 
 # What is Excelsior Pass?
 

@@ -21,7 +21,12 @@ needed.
 
 ## Setting up DTSA-II Microcopium on MacOS
 
-This worked on my MacBook Pro with macOS Big Sur v. 11.2.3
+This worked on my MacBook Pro with macOS Big Sur v. 11.2.3.
+I currently have Micro-03-07 and Micro-03-16 on the MacBook Pro.
+
+I currently have the following JVMs on the MacBook Pro:
+`adoptopenjdk-11.jdk`, `amazon-corretto-11.jdk`, `jdk1.8.0_251.jdk`
+`adoptopenjdk-8.jdk`,	`jdk-10.0.2.jdk`, and `openjdk-11.0.1.jdk`.
 
 1. Install the desired DTSA installer into `Applications` folder.
 It will have a name like `NIST DTSA-II Microscopium 2021-03-16`.
