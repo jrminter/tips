@@ -31,6 +31,8 @@ library(knitr)
    ```
    brew install gnuplot
    ```
+   
+   There is also a binary package of [gnuplot-5.4.1.pkg](https://ariadne.ms.northwestern.edu/Download/Gnuplot/gnuplot-5.4.1.pkg) here.
 
 2. [Vanderbilt physics](https://my.vanderbilt.edu/physicslabs/gnuplot-tutorial/) tutorial
 
