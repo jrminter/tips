@@ -17,6 +17,8 @@ output:
 
 They are [here](https://drive.google.com/file/d/17YAXRYkQ9vAQ509AwP5eZagdGfShX-dE/view?usp=sharing).
 
+I have many installers in `D:\_installers\dtsa2-installers`.
+
 # Helpful DTSA-II Videos
 
 Note that Nicholas Ritchie has released some helpful videos on
