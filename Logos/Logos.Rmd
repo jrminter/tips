@@ -16,7 +16,8 @@ output:
 Customer support asked:
 
 1. Operating System?    
-   I am running BigSur 11.2.4.
+   I am running BigSur 11.2.4.    
+   I am Running Windows 10 Pro 20H2     
 
 2. Logos Version?    
    Today I updated to Logos 9.3.0.0052.
@@ -26,7 +27,9 @@ Customer support asked:
    as shown [here](https://support.logos.com/hc/en-us/articles/360015926432-Program-Settings)    
    I set "Content Scaling" and "Program Scaling" to 100%.    
    I then restarted.    
-   That seemed to work. I thanked the Customer Support Agent
+   That seemed to work. I thanked the Customer Support Agent.
+   
+   Also seemed to work on my 10 10 System.
 
 
 
