@@ -1,7 +1,7 @@
 ---
 title: "Logos Tips"
 author: "J. R. Minter"
-date: "Started: 2017-01-21, Last modified: 2018-10-11"
+date: "Started: 2017-01-21, Last modified: 2021-04-03"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -10,6 +10,25 @@ output:
     toc_depth: 3
 ---
 [Back to Index](../README.html)
+
+# Fix a strange problem with large fonts (2021-04-03)
+
+Customer support asked:
+
+1. Operating System?    
+   I am running BigSur 11.2.4.
+
+2. Logos Version?    
+   Today I updated to Logos 9.3.0.0052.
+   
+3. What happens if you make the scaling on the resource as well as on
+   the program settings to default 100%?    
+   as shown [here](https://support.logos.com/hc/en-us/articles/360015926432-Program-Settings)    
+   I set "Content Scaling" and "Program Scaling" to 100%.    
+   I then restarted.    
+   That seemed to work. I thanked the Customer Support Agent
+
+
 
 # Read ESV
 
