@@ -175,13 +175,18 @@ cat('set terminal latex; set output "eg1.tex"; plot [-3.14:3.14] sin(x)',
 # close the connection
 close(gp)
 ```
-Note that this works on mac...
+
+Note that this works on Mac and Windows10. Note the path to the  `gnuplot`
+program...
+
+
 ```{r testPipe}
 
 if (Sys.info()[1] == 'Windows'){
   print("windows")
-  gp <- pipe('gnuplot','w')
+  gp <- pipe('C:/Apps/gnuplot/bin/gnuplot','w')
   cat('set terminal png; set output "eg1.png"; plot [-3.14:3.14] sin(x)', file=gp)
+  close(gp)
 }
 
 if(Sys.info()[1] == 'Mac'){
