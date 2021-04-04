@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-03-26"
+date: "Started: 2013-07-16, Last modified: 2021-04-04"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -34,6 +34,11 @@ From [here](https://stackoverflow.com/questions/52522565/git-is-not-working-afte
 ```
 sudo xcode-select -switch /Library/Developer/CommandLineTools
 ```
+
+# Updating R for Mac
+
+I do many analyses in R. Most of what one needs is
+[here](https://mac.r-project.org/).
 
 # Updating 1Password from the App Store
 
