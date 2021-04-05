@@ -17,6 +17,12 @@ output:
 
 They are [here](https://drive.google.com/file/d/17YAXRYkQ9vAQ509AwP5eZagdGfShX-dE/view?usp=sharing).
 
+Current full path is shown below:
+
+```
+https://drive.google.com/file/d/17YAXRYkQ9vAQ509AwP5eZagdGfShX-dE/view?usp=sharing
+```
+
 I have many installers in `D:\_installers\dtsa2-installers`.
 These tend to be named `dtsa2-prerelease`. One can obtain the date of
 production by running the following code in a terminal
