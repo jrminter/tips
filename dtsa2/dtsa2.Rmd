@@ -25,6 +25,8 @@ production by running the following code in a terminal
 java -jar dtsa2-prerelease.jar
 ```
 
+As of 2021-04-05, it seems like the latest installer is 2021-03-19.
+
 A window will open for the install and it will have a date. One can
 quit the installer and append the date to the `*.jar` file. I store
 these on my Win10 box...
