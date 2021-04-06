@@ -409,6 +409,7 @@ qqplotr/*.html
 qqplotr/*.pdf
 
 Readme.html
+Readme.md
 
 # R tips directory
 R/.DS_Store

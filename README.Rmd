@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-03-21"
+date: "Started: 2013-07-16, Last modified: 2021-04-06"
 output:
   html_document:
     keep_md: true
@@ -16,7 +16,9 @@ format.
 
 **Timely links**
 
-1. Turn on **Do Not Disturb** on the Mac
+1. Use ESV from Kindle for easier copy/paste
+
+2. Turn on **Do Not Disturb** on the Mac
 
     - click on the icon just to the left of the `Siri` Prompt.
 
@@ -28,19 +30,18 @@ format.
 
 
 
-2. Reset a [Fitbit Ionic Watch](fitness/fitness.html)
+3. Reset a [Fitbit Ionic Watch](fitness/fitness.html)
 
-3. Convert foo.mkv to foo.mp4
+4. Convert foo.mkv to foo.mp4
 
    ```
 ffmpeg -i title.mkv -c copy title.mp4
    ```
 
-4. Delete VLC play list
+5. Delete VLC play list
 
     Select the entry to delete and press clear.
 
-5. Clean windshield wiper blades using WD-40 and a clean rag.
 
 6. [Big Sur update bricks my MBP model](https://apple.slashdot.org/story/20/11/16/0137234/macos-big-sur-update-reportedly-bricks-some-older-macbook-pros)
 
