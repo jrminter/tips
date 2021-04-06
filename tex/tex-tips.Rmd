@@ -1,7 +1,7 @@
 ---
 title: "TeXLive Hints"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-04-05"
+date: "Started: 2013-07-16, Last modified: 2021-04-06"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -26,6 +26,13 @@ From the R Command prompt (`>`) type
 ```
 tinytex:::install_prebuilt()
 ```
+
+can also try
+
+```
+tinytex::install_tinytex(version = "2021.04")
+```
+
 
 
 The full install of TexLive or MacTex are huge. Most packages
