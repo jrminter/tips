@@ -1,7 +1,7 @@
 ---
 title: "TeXLive Hints"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-04-06"
+date: 'Started: 2013-07-16, Last modified: 2021-04-06'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -14,6 +14,31 @@ output:
 
 These are John Minter's tips for a workflow using TinyTeX or
 in Rmarkdown. They were compiled from several web sources.
+
+
+
+# Fun with TinyTeX
+
+Note that in early April TexLive (and TinyTex) make their yearly
+switch. Sometimes it pays to be patient... This is a work in progress...
+
+Some commands:
+
+```
+tinytex::install_tinytex(version = 'latest')
+```
+
+```
+tinytex::uninstall_tinytex(force = FALSE, dir = tinytex_root()
+```
+
+```
+reinstall_tinytex(packages = TRUE, dir = tinytex_root(), ...)
+```
+
+```
+tinytex_root(error = TRUE)
+```
 
 # Texworks on mac
 
@@ -31,6 +56,11 @@ can also try
 
 ```
 tinytex::install_tinytex(version = "2021.04")
+```
+
+Find a package
+
+```
 ```
 
 
