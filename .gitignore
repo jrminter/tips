@@ -638,6 +638,8 @@ tex/tex-tips.md
 tex/tex-tips.html
 tex/figure/
 
+tex/TinyTex-info.html
+
 # tidyData directory
 tidyData/*.html
 
