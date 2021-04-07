@@ -1,0 +1,8 @@
+Note that the texlive.iso released on 2021-03-25 was 4446390272 bytes.
+This is a big download with many packages that I never use, This is why
+TinyTex is so important. 
+
+Note that TinyTeX-1-v2021.04.tgz was 86.9 MB, significantly smaller.
+
+Note that TinyTex is [here](https://yihui.org/tinytex/).
+The github issues [here](https://github.com/yihui/tinytex/issues/293)

@@ -22,6 +22,8 @@ in Rmarkdown. They were compiled from several web sources.
 Note that in early April TexLive (and TinyTex) make their yearly
 switch. Sometimes it pays to be patient... This is a work in progress...
 
+A full installation of TexLive 
+
 Some commands:
 
 ```
