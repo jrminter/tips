@@ -60,6 +60,18 @@ can also try
 tinytex::install_tinytex(version = "2021.04")
 ```
 
+For my needs to get TeXworks running, I needed to add the following
+packages with `tlmgr install pkgname` without the `.sty` extension.
+
+On Windows-10 I used the Powershell as an administrator.
+
+I needed these packages:
+
+```
+texworks, paralist, subfig, caption, fancyhdr, secsty, tocbibind,
+tocloft, grfext
+```
+
 Find a package
 
 ```
@@ -75,7 +87,7 @@ using `tlmgr install package_name`.
 The full commands are available
 [here](https://www.tug.org/texlive/doc/tlmgr.html).
 
-Looks like Windows works well with TexWorks and Mac works wit TexShop...
+Looks like Windows works well with TexWorks and Mac works with TexShop...
 
 Use these commands to install packages...
 
@@ -160,6 +172,30 @@ I saved the contents of the TinyTeX folder and the contents of the
 .texlive2020 (looks like old sagetex preferences?) from my user folder.
 I had issues with sagetex... What I really needed was `a basic working
 LaTeX installation`!
+
+
+## Adding packages
+
+Do it in batch...
+
+```
+
+tlmgr install a4wide ae algorithms appendix babel-english bbm-macros beamer breakurl catoptions charter cite cleveref colortbl comment courier dvips eepic enumitem eso-pic eurosym
+
+tlmgr install extsizes fancyhdr float floatrow fontaxes hardwrap helvetic inconsolata koma-script lastpage lettrine libertine lipsum listings ltxkeys ly1 mathalfa mathpazo mathtools mdframed mdwtools microtype morefloats ms multirow mweights ncntrsbk
+
+tlmgr install needspace newtx ntgclass palatino
+
+
+tlmgr install parskip pbox pdfpages pgf picinpar preprint preview psnfss roboto sectsty setspace
+
+tlmgr install siunitx srcltx standalone stmaryrd sttools subfig subfigure symbol tabu tex textcase threeparttable thumbpdf times titlesec
+
+tlmgr install tufte-latex ucs ulem units varwidth vmargin wallpaper wrapfig xargs xcolor xstring xwatermark tocloft
+
+```
+
+
 
 ## Add a spell-checker to TexWorks
 
