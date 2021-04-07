@@ -1,7 +1,7 @@
 ---
 title: "TinyTex Hints"
 author: "J. R. Minter"
-date: 'Started: 2021-04-06, Last modified: 2021-04-06'
+date: 'Started: 2021-04-06, Last modified: 2021-04-07'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -19,3 +19,13 @@ Note that TinyTeX-1-v2021.04.tgz was 86.9 MB, significantly smaller.
 
 Note that TinyTex is [here](https://yihui.org/tinytex/).
 The github issues [here](https://github.com/yihui/tinytex/issues/293).
+
+I used this repository
+
+```
+https://ctan.math.illinois.edu/texlive/tlnet
+```
+
+```
+tinytex::install_tinytex(version = 'latest')
+```
