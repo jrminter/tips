@@ -1,7 +1,7 @@
 ---
 title: "TeXLive Hints"
 author: "J. R. Minter"
-date: 'Started: 2013-07-16, Last modified: 2021-04-06'
+date: 'Started: 2013-07-16, Last modified: 2021-04-07'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -22,9 +22,15 @@ in Rmarkdown. They were compiled from several web sources.
 Note that in early April TexLive (and TinyTex) make their yearly
 switch. Sometimes it pays to be patient... This is a work in progress...
 
-A full installation of TexLive 
+## Repository
 
-Some commands:
+```
+https://ctan.math.illinois.edu/texlive/tlnet
+```
+
+I used TinyTeX
+
+## Some commands
 
 ```
 tinytex::install_tinytex(version = 'latest')
@@ -256,7 +262,7 @@ It means it is time for you to upgrade (re-install) TinyTeX manually:
 ```
 tinytex::reinstall_tinytex()
 ```
-If you see a message like below, don’t panic. Just wait for a couple o
+If you see a message like below, don't panic. Just wait for a couple o
 months and prepare for reinstalling TinyTeX.
 
 ```
