@@ -20,6 +20,8 @@ Current odd behavior:
 macBook Pro - TexWorks 0.7 "travis-ci" runs on macOS Big Sur 11.2.3
 macBook Pro 2020 - TexShop 4.62 runs 11.2.3. Texworks has an error.
 
+I do not know why...
+
 
 
 
