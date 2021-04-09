@@ -1,7 +1,7 @@
 ---
 title: "TinyTex Hints"
 author: "J. R. Minter"
-date: 'Started: 2021-04-06, Last modified: 2021-04-07'
+date: 'Started: 2021-04-06, Last modified: 2021-04-09'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -9,6 +9,9 @@ output:
     toc: yes
     toc_depth: 3
 ---
+
+**Update**: had issues with TinyTeX. Decided to use MacTeX 2021 on Apple and
+TexLive on Windows. Did this on 2021-04-08. A **long** day.
 
 
 Note that the texlive.iso released on 2021-03-25 was 4446390272 bytes.
