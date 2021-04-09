@@ -1,7 +1,7 @@
 ---
 title: "Windows Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2020-08-29"
+date: "Started: 2013-07-16, Last modified: 2021-04-09"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -13,6 +13,11 @@ output:
 [Back to Index](../README.html)
 
 # Some useful qick tips for Windows 10
+
+## Moving icons on the Desktop
+
+I had a problem (2021-04-09) where I could not move icons on the desktop.
+Restarting fixed it.
 
 ## Patch Tuesday
 
