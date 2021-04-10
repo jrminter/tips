@@ -26,8 +26,10 @@ macBook Pro 2020 - TexShop 4.62 runs 11.2.3. Texworks has an error.
 I do not know why...
 
 # Location of LaTeX examples
-
 `/Users/jrminter/Dropbox/Tex` on my MacBook
+
+There are some examples on my old macbook at
+`/Users/jrminter/Documents/tex/`
 
 
 # Fun with TinyTeX
