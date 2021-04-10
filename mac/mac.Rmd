@@ -16,6 +16,16 @@ output:
 The default movie/audio player is `QuickTime`. I prefer `VLC` that works
 on all the systems I have.
 
+# Time Machine
+
+This evening (2021-04-09) I had the TimeMachine backup stall for
+about an hour. I did find some help
+[here](https://www.cnet.com/how-to/fix-a-stalled-time-machine-backup-in-os-x/)
+from 2014. What I ended up doing was re-fomatting the TimeMachine
+SSD drive for my new macbook and doing a clean backup. This was much
+faster than anything I could think of. I really only need the current
+information from the disk. I need to watc this...
+
 # Dealing with iCloud
 
 I am a bit annoyed with Apple trying to move content to iCloud.
