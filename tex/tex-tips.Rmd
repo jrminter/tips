@@ -1,7 +1,7 @@
 ---
 title: "TeXLive Hints"
 author: "J. R. Minter"
-date: 'Started: 2013-07-16, Last modified: 2021-04-10'
+date: 'Started: 2013-07-16, Last modified: 2021-04-11'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -30,6 +30,12 @@ I do not know why...
 
 There are some examples on my old macbook at
 `/Users/jrminter/Documents/tex/`
+
+# My favorite mirror
+
+```
+tlmgr option repository https://ctan.math.illinois.edu/systems/texlive/tlnet
+```
 
 
 # Fun with TinyTeX
