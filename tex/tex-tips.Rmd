@@ -1,7 +1,7 @@
 ---
 title: "TeXLive Hints"
 author: "J. R. Minter"
-date: 'Started: 2013-07-16, Last modified: 2021-04-10'
+date: 'Started: 2013-07-16, Last modified: 2021-04-11'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -18,7 +18,15 @@ TexLive on Windows. Did this on 2021-04-08. A **long** day.
 These are John Minter's tips for a workflow using TinyTeX or
 in Rmarkdown. They were compiled from several web sources.
 
-Current odd behavior:
+# Keep current installation updated
+
+This works on Windows and Mac
+
+1. `sudo tlmgr update --self`
+2. `sudo tlmgr update --all`
+
+
+# Current odd behavior:
 
 macBook Pro - TexWorks 0.7 "travis-ci" runs on macOS Big Sur 11.2.3
 macBook Pro 2020 - TexShop 4.62 runs 11.2.3. Texworks has an error.
