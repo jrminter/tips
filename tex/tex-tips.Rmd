@@ -44,7 +44,7 @@ There are some examples on my old macbook at
 ```
 tlmgr option repository https://ctan.math.illinois.edu/systems/texlive/tlnet
 ```
-
+All three of my installations use this.
 
 # Fun with TinyTeX
 
