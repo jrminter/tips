@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-04-09"
+date: "Started: 2013-07-16, Last modified: 2021-04-11"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -10,6 +10,15 @@ output:
     toc_depth: 3
 ---
 [Back to Index](../README.html)
+
+# Use a bluetooth mouse
+
+1. Turn the mouse on, and make sure it's within range of your Mac.
+2. Click the Apple icon in the top-left corner of the screen.
+3. Select "System Preferences..."
+4. Click the "Bluetooth" icon.
+5. If it's not already on, select "Turn Bluetooth On."
+6. Wait for your mouse to appear on the list.
 
 # Favorite Apps
 
