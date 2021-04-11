@@ -1,7 +1,7 @@
 ---
 title: "Gnuplot Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-20, Last modified: 2021-04-04"
+date: "Started: 2013-07-20, Last modified: 2021-04-11"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -22,7 +22,9 @@ library(knitr)
 
 ## Key sources
 
-1. To the best of my knowledge, I think the latest `gnuplot` Windows
+1. I found new gnuplot binaries [here](http://ctan.ijs.si/mirror/w32tex/w32/). Worth checking out...
+
+2. To the best of my knowledge, I think the latest `gnuplot` Windows
    binary is `gp541-win64-mingw.exe`. One can get this from
    [Sourceforge](https://sourceforge.net/projects/gnuplot/files/gnuplot/testing/).
    
@@ -36,11 +38,11 @@ library(knitr)
 
 2. [Vanderbilt physics](https://my.vanderbilt.edu/physicslabs/gnuplot-tutorial/) tutorial
 
-3. [Raymii.org](https://raymii.org/s/tutorials/GNUplot_tips_for_nice_looking_charts_from_a_CSV_file.html)
+4. [Raymii.org](https://raymii.org/s/tutorials/GNUplot_tips_for_nice_looking_charts_from_a_CSV_file.html)
 
-4. [Clark University tutorial](http://physics.clarku.edu/sip/tutorials/gnuplot/)
+5. [Clark University tutorial](http://physics.clarku.edu/sip/tutorials/gnuplot/)
 
-5. [SMU Physics](http://www.physics.smu.edu/fattarus/GnuplotTutorial.html)
+6. [SMU Physics](http://www.physics.smu.edu/fattarus/GnuplotTutorial.html)
 
 ## Key gnuplot windows tips that work consistently
 
