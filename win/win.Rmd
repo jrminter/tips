@@ -1,7 +1,7 @@
 ---
 title: "Windows Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-04-09"
+date: "Started: 2013-07-16, Last modified: 2021-04-11"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -13,6 +13,30 @@ output:
 [Back to Index](../README.html)
 
 # Some useful qick tips for Windows 10
+
+## Key locations
+
+```
+Win10 box
+
+
+C:\Users\johnr\Documents\git
+
+C:\Users\johnr\Documents\local-scans
+
+C:\Users\johnr\Documents\ppt
+
+C:\Users\johnr\Documents\EpsonScanner
+
+C:\Users\johnr\Documents\DTSA-II Reports
+
+C:\Users\johnr\Documents\gnuplot
+
+C:\Users\johnr\Documents\TeX
+
+```
+
+
 
 ## Moving icons on the Desktop
 
