@@ -20,7 +20,7 @@ in Rmarkdown. They were compiled from several web sources.
 
 # Keep current installation updated
 
-This works on Windows and Mac
+This works on Windows and Mac (don't use sudo on Windows...)
 
 1. `sudo tlmgr update --self`
 2. `sudo tlmgr update --all`
