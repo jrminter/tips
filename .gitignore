@@ -149,6 +149,11 @@ fitness/*.html
 french-press-instructions/french-press-instructions.html
 french-press-instructions/french-press-instructions.pdf
 
+
+# gas
+gas/*.html
+gas/*.pdf
+
 # generator
 generator/generator.html
 
