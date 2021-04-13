@@ -439,6 +439,8 @@ ffmpeg -i title.mkv -c copy title.mp4
 
 [French Press Instructions](./french-press-instructions/french-press-instructions.html)
 
+[gas](./gas/secrets-to-gas-control.html)
+
 [generator](./generator/generator.html)
 
 [gfortran](./gfortran/gfortran.html)
