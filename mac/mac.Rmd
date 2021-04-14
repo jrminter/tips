@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-04-11"
+date: "Started: 2013-07-16, Last modified: 2021-04-13"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -19,6 +19,31 @@ output:
 4. Click the "Bluetooth" icon.
 5. If it's not already on, select "Turn Bluetooth On."
 6. Wait for your mouse to appear on the list.
+
+# Exclude Parallels VMs from backups
+
+I think it is better to make timely manual backups of Parallels
+Virtual Machines and exclude similar really large files
+from backups.
+
+On my 2012 MacBook I exclude thes items from TimeMachine
+
+```
+/Users/Shared/adi
+~/Documents/git
+~/Dropbox
+~/Parallels
+```
+
+On my 2020 13 inch MBP I should exclude these items
+
+```
+~/Local-Docs
+```
+
+
+
+
 
 # Favorite Apps
 
