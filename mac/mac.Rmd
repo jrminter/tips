@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-04-13"
+date: "Started: 2013-07-16, Last modified: 2021-04-14"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -19,6 +19,14 @@ output:
 4. Click the "Bluetooth" icon.
 5. If it's not already on, select "Turn Bluetooth On."
 6. Wait for your mouse to appear on the list.
+
+# To clear recents
+
+1. Click the File menu.
+2. Choose “Open recent.”
+3. Select Clear Menu
+
+
 
 # Exclude Parallels VMs from backups
 
