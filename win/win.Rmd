@@ -1,7 +1,7 @@
 ---
 title: "Windows Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-04-11"
+date: "Started: 2013-07-16, Last modified: 2021-04-17"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -16,25 +16,37 @@ output:
 
 ## Key locations
 
-```
-Win10 box
+1. Note that Windows 10 maps `Onedrive\\Documents` to    
+   ```
+   C:\Users\userid\OneDrive\Documents
+   
+   ```
+   
+2. I prefer    
+   ```
+   C:\Users\userid\Documents\`
+   ```
+   on my win10 Win10 box for **local storage**!.
+   
+   I also use:
 
 
-C:\Users\johnr\Documents\git
+   ```
+   C:\Users\userid\Documents\git
 
-C:\Users\johnr\Documents\local-scans
+   C:\Users\userid\Documents\local-scans
 
-C:\Users\johnr\Documents\ppt
+   C:\Users\userid\Documents\ppt
 
-C:\Users\johnr\Documents\EpsonScanner
+   C:\Users\userid\Documents\EpsonScanner
 
-C:\Users\johnr\Documents\DTSA-II Reports
+   C:\Users\userid\Documents\DTSA-II Reports
 
-C:\Users\johnr\Documents\gnuplot
+   C:\Users\userid\Documents\gnuplot
 
-C:\Users\johnr\Documents\TeX
+   C:\Users\userid\Documents\TeX
 
-```
+   ```
 
 
 
