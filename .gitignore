@@ -644,6 +644,7 @@ tex/tex-tips.html
 tex/figure/
 
 tex/TinyTex-info.html
+tex/TinyTex-info.pdf
 
 # tidyData directory
 tidyData/*.html

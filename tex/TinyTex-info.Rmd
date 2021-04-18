@@ -8,10 +8,16 @@ output:
     number_sections: yes
     toc: yes
     toc_depth: 3
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
 ---
 
 **Update**: had issues with TinyTeX. Decided to use MacTeX 2021 on Apple and
 TexLive on Windows. Did this on 2021-04-08. A **long** day.
+
+N.B. On 2021-04-17 I removed MacTeX 2021 on Mac and replaced with TinyTeX.
+Updates worked again without sudo!
 
 
 Note that the texlive.iso released on 2021-03-25 was 4446390272 bytes.
