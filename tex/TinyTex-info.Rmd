@@ -3,6 +3,9 @@ title: "TinyTex Hints"
 author: "J. R. Minter"
 date: 'Started: 2021-04-06, Last modified: 2021-04-09'
 output:
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
   html_document:
     css: ../theme/jm-gray-vignette.css
     number_sections: yes
