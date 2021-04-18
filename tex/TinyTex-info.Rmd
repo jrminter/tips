@@ -32,3 +32,14 @@ https://ctan.math.illinois.edu/texlive/tlnet
 ```
 tinytex::install_tinytex(version = 'latest')
 ```
+
+Today I went back to TinyTeX on all my systems. Everything installs,
+but some packages are broken and not supported.
+
+# Known problems
+
+1. TikZ is broken
+
+See [here](https://tex.stackexchange.com/search?q=texlive+tikz+example).
+
+There are many complaints.
