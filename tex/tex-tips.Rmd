@@ -59,6 +59,15 @@ https://ctan.math.illinois.edu/texlive/tlnet
 
 I used TinyTeX
 
+Note: I tried adding koma-script:
+
+> The KOMA-Script bundle provides replacements for the article, 
+> report, and book classes with emphasis on typography and versatility.
+
+```
+tlmgr install koma-script
+```
+
 ## Some commands
 
 ```

@@ -1,7 +1,7 @@
 ---
 title: "TinyTex Hints"
 author: "J. R. Minter"
-date: 'Started: 2021-04-06, Last modified: 2021-04-09'
+date: 'Started: 2021-04-06, Last modified: 2021-04-18'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -18,6 +18,8 @@ TexLive on Windows. Did this on 2021-04-08. A **long** day.
 
 N.B. On 2021-04-17 I removed MacTeX 2021 on Mac and replaced with TinyTeX.
 Updates worked again without sudo!
+
+Also note: `tlmgr info` lists installed packages.
 
 
 Note that the texlive.iso released on 2021-03-25 was 4446390272 bytes.
