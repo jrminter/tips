@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-04-16"
+date: "Started: 2013-07-16, Last modified: 2021-04-19"
 output:
   html_document:
     keep_md: true
@@ -14,7 +14,13 @@ output:
 This repository contains the John Minter's useful tips in Rmarkdown
 format.
 
-1. Block a number on iPhone
+1. An odd get error with synch. This worked to fix. Moved to top!
+
+   ```
+   git config pull.rebase false
+   ```
+
+2. Block a number on iPhone
 
    - Start by accessing your list of recent callers,
      so open the Phone app.
@@ -27,9 +33,9 @@ format.
   
    - Confirm your decision.
 
-2. Use ESV from Kindle for easier copy/paste
+3. Use ESV from Kindle for easier copy/paste
 
-3. Turn on **Do Not Disturb** on the Mac
+4. Turn on **Do Not Disturb** on the Mac
 
     - click on the icon just to the left of the `Siri` Prompt.
 
@@ -41,15 +47,15 @@ format.
 
 
 
-4. Reset a [Fitbit Ionic Watch](fitness/fitness.html)
+5. Reset a [Fitbit Ionic Watch](fitness/fitness.html)
 
-5. Convert foo.mkv to foo.mp4
+6. Convert foo.mkv to foo.mp4
 
    ```
 ffmpeg -i title.mkv -c copy title.mp4
    ```
    
-6. Change Zoom ID
+7. Change Zoom ID
 
     > To change your name after entering a Zoom meeting, click on the 
     > “Participants” button at the top of the Zoom window. Next, hover
@@ -57,17 +63,17 @@ ffmpeg -i title.mkv -c copy title.mp4
     > side of the Zoom window. Click on “Rename”. Enter the name you'd
     > like to appear in the Zoom meeting and click on “OK”.
 
-7. Delete VLC play list
+8. Delete VLC play list
 
     Select the entry to delete and press clear.
 
 
-8. [Big Sur update bricks my MBP model](https://apple.slashdot.org/story/20/11/16/0137234/macos-big-sur-update-reportedly-bricks-some-older-macbook-pros)
+9. [Big Sur update bricks my MBP model](https://apple.slashdot.org/story/20/11/16/0137234/macos-big-sur-update-reportedly-bricks-some-older-macbook-pros)
 
-9. [RStudio 1.4 preview citations](https://www.r-bloggers.com/2020/11/rstudio-1-4-preview-citations)
+10. [RStudio 1.4 preview citations](https://www.r-bloggers.com/2020/11/rstudio-1-4-preview-citations)
 
 
-10. **LaTeX Symbols to remember**
+11. **LaTeX Symbols to remember**
 
     `\geq`  $\geq$ 
   
@@ -78,20 +84,13 @@ ffmpeg -i title.mkv -c copy title.mp4
     The PDF is [**here**](tex/pdf/TeXRefCard-v1.5.pdf).
 
 
-11. **USB drives**
+12. **USB drives**
 
     Note to self: Only buy **USB-3.1** thumb drives, They are **a _lot_ faster**
     than USB 3.0...
 
     see [Amazon](https://www.amazon.com/gp/product/B07D7PDLXC/ref=ppx_yo_dt_b_asin_title_o00_s00)
     for a nice drive...
-
-
-12. **Fix for annoying git message:**
-
-    ```
-    git config --global pull.rebase false
-    ```
 
 13. **Quotes I Like**
 
