@@ -1,7 +1,7 @@
 ---
 title: "TeXLive Hints"
 author: "J. R. Minter"
-date: 'Started: 2013-07-16, Last modified: 2021-04-11'
+date: 'Started: 2013-07-16, Last modified: 2021-04-19'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -45,6 +45,28 @@ There are some examples on my old macbook at
 tlmgr option repository https://ctan.math.illinois.edu/systems/texlive/tlnet
 ```
 All three of my installations use this.
+
+# Tips from Yihui Xie
+
+Now I only have one last wish for TeX Live: I wish it could install
+missing packages on-the-fly like MiKTeX when compiling documents. I
+do not know how MiKTeX implemented it. I'm primarily an R @R-base
+package developer. I do not know much about the TeX language or Perl.
+**I know how to search for the package that contains a certain style**
+**or class file and install it, e.g.**,
+
+```
+$ tlmgr search --global --file "/times.sty"
+psnfss:
+      texmf-dist/tex/latex/psnfss/times.sty
+```
+
+Followed by:
+
+```
+$ tlmgr install psnfss
+```
+
 
 # Fun with TinyTeX
 
