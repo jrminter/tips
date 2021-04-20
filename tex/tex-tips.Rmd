@@ -1,7 +1,7 @@
 ---
 title: "TeXLive Hints"
 author: "J. R. Minter"
-date: 'Started: 2013-07-16, Last modified: 2021-04-19'
+date: 'Started: 2013-07-16, Last modified: 2021-04-20'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -24,6 +24,13 @@ This works on Windows and Mac (don't use `sudo` on Windows...)
 
 1. `sudo tlmgr update --self`
 2. `sudo tlmgr update --all`
+
+To use the R package `tikzDevice` install (thanks, Yihui ):
+
+```
+tlmgr install pgf preview xcolor
+```
+
 
 
 # Current odd behavior:
