@@ -120,6 +120,12 @@ reinstall_tinytex(packages = TRUE, dir = tinytex_root(), ...)
 tinytex_root(error = TRUE)
 ```
 
+A one time need:
+
+```
+tlmgr --repository http://www.texlive.info/tlgpg/ install tlgpg
+```
+
 # Texworks on mac
 
 Use TexWorks 0.6.3 on MacOS BigSur
