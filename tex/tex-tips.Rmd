@@ -260,6 +260,16 @@ LaTeX installation`!
 
 ## Adding packages
 
+For Texshop I needed to install
+
+```
+xltxtra
+metalogo
+realscripts
+```
+
+
+
 Do it in batch...
 
 ```
