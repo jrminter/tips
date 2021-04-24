@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-04-14"
+date: "Started: 2013-07-16, Last modified: 2021-04-24"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -10,6 +10,17 @@ output:
     toc_depth: 3
 ---
 [Back to Index](../README.html)
+
+# Restarting my 2012 MacBook Pro
+
+I have an issue when I restart my 2012 MacBook Pro. The screen and dock
+seem to flash. What seems to work is:
+
+1. Before restarting, place the mouse cursor (arrow) to the top left
+corner of the screen.
+
+2. Restart. The screen will flash a few times and then stop.
+**Be patient!** (not my default...)
 
 # Use a bluetooth mouse
 
