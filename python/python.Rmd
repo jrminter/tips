@@ -30,6 +30,9 @@ It looks like (2021-04-24) that I could update with
 I am cautious about doing this because the last time I borked the
 installation.
 
+I also noted that clicking on the `refresh` button seems to update 
+`Anaconda-Navigator`.
+
 # conda
 
 ## Miniconda
