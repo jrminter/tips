@@ -22,6 +22,14 @@ and install if desired. There seems to be no way to update using `conda`.
 The installation would work when I started it. If I ran updates, it
 would bork the installation. I am not sure why...
 
+It looks like (2021-04-24) that I could update with
+
+1. `conda update conda`
+2. `conda update --all`
+
+I am cautious about doing this because the last time I borked the
+installation.
+
 # conda
 
 ## Miniconda
