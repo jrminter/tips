@@ -1,7 +1,7 @@
 ---
 title: "Python Tips"
 author: "J. R. Minter"
-date: 'Started: 2013-07-16, Last modified: 2021-03-27'
+date: 'Started: 2013-07-16, Last modified: 2021-04-24'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -15,22 +15,20 @@ output:
 
 # Current status
 
-I installed `Anaconda3-2020.11-MacOSX-x86_64.pkg` on my two macbooks.
+I installed `Anaconda-Navigator` on my two Macbooks (BigSur) and Windows 10.
+The documentation claims that  `Anaconda-Navigator` will alert to updates.
+and install if desired. There seems to be no way to update using `conda`.
+
 The installation would work when I started it. If I ran updates, it
 would bork the installation. I am not sure why...
-
-I did not try a Windows installation.
-
-**Note** I wanted to install **python 3.9** on my mac on 2021-03-27. 
-I cannot seem to get above version **3.8**. My web seaches suggest
-that I am not alone...
 
 # conda
 
 ## Miniconda
 
 See [here](https://docs.conda.io/en/latest/miniconda.html) for the latest
-miniconda release. **Note** I have had issues on macos if I update the install...
+miniconda release. **Note** I have had issues on macos if I update the
+install. **I no longer (2020-04-24) use miniconda**.
 
 ## Keeping Spyder in the dock
 
