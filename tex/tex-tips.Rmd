@@ -31,7 +31,9 @@ To use the R package `tikzDevice` install (thanks, Yihui ):
 tlmgr install pgf preview xcolor
 ```
 
+# Latex poster
 
+See [here](https://www.seehuhn.de/pages/poster.html#sec:3.0.0).
 
 # Current odd behavior:
 
