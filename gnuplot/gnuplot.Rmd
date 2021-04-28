@@ -84,7 +84,7 @@ library(knitr)
 1. I used the following path
 
 ```
-C:/Users/johnr/Dropbox/gnuploy/gnuplot-penepma16
+C:/Users/johnr/Dropbox/gnuplot/gnuplot-penepma16
 ```
 
 2. I used the data file `pe-spect-01.dat`
