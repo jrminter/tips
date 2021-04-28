@@ -1,7 +1,7 @@
 ---
 title: "Gnuplot Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-20, Last modified: 2021-04-11"
+date: "Started: 2013-07-20, Last modified: 2021-04-28"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -43,6 +43,8 @@ library(knitr)
 5. [Clark University tutorial](http://physics.clarku.edu/sip/tutorials/gnuplot/)
 
 6. [SMU Physics](http://www.physics.smu.edu/fattarus/GnuplotTutorial.html)
+
+7. [gnuplotting.org](http://www.gnuplotting.org/output-terminals/) Not `https`...
 
 ## Key gnuplot windows tips that work consistently
 
