@@ -1,7 +1,7 @@
 ---
 title: "Gnuplot Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-20, Last modified: 2021-04-28"
+date: "Started: 2013-07-20, Last modified: 2021-05-02"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -22,10 +22,10 @@ library(knitr)
 
 ## Key sources
 
-1. I found new gnuplot binaries [here](http://ctan.ijs.si/mirror/w32tex/w32/). Worth checking out...
+1. I found new gnuplot binaries [here](http://ctan.ijs.si/mirror/w32tex/w32/). Worth checking out... 
 
 2. To the best of my knowledge, I think the latest `gnuplot` Windows
-   binary is `gp541-win64-mingw.exe`. One can get this from
+   binary is `gp542-win64-mingw.exe`. One can get this from
    [Sourceforge](https://sourceforge.net/projects/gnuplot/files/gnuplot/testing/).
    
    Mac binaries are available via Homebrew  with
