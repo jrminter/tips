@@ -50,7 +50,7 @@ Your watch was now reset – you should have no problems using it!
 
 **Note** To get the FitBit watch to sync with you iPhone, open the
 fitbit app on the iPhone. **pull down** om the screen in the FitBit
-app. A nessage will appear: **synching your ionic**Y.
+app. A nessage will appear: **synching your ionic**.
 
 
 
