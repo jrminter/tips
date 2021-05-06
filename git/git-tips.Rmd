@@ -1,7 +1,7 @@
 ---
 title: "Git Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-04-02"
+date: "Started: 2013-07-16, Last modified: 2021-05-05"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -16,6 +16,24 @@ These are John Minter's tips for a workflow using git. They were
 compiled from several web sources.
 
 # Quick tips
+
+## Issues with `.DS_Store`
+
+From [here](https://github.com/2DegreesInvesting/resources/issues/115)
+
+> Luckily, you can add files of this kind to their global gitignore
+> file to never commit these to their git projects:
+>
+>
+> On terminal execute:
+
+```
+echo .DS_Store >> ~/.gitignore_global
+git config --global core.excludesfile ~/.gitignore_global
+```
+
+
+
 
 ## Cloning a Private Repository
 
