@@ -1,7 +1,7 @@
 ---
 title: "TeXLive Hints"
 author: "J. R. Minter"
-date: 'Started: 2013-07-16, Last modified: 2021-04-20'
+date: 'Started: 2013-07-16, Last modified: 2021-05-04'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -11,6 +11,44 @@ output:
 ---
 
 [Back to Index](../README.html)
+
+# Quick tips
+
+1. On my win 10 box latex documents are in
+
+    ```
+    C:/Users/my-user-id/OneDrive/Documents/writing/
+    ```
+
+2. A nice help on page margins from [overleaf ](https://www.overleaf.com/learn/latex/page_size_and_margins).
+
+3. Helpful Koma examples
+
+    [koma-script-scrlttr2](https://tex.stackexchange.com/questions/403077/what-are-the-miminal-required-environments-for-a-koma-script-scrlttr2)
+
+
+4. A couple of good hints for problems
+
+    **From Dikinwah Books: Top Five Mistakes Made by New Users**
+
+    > I first started teaching LaTeX in 1998, and these are the most common errors
+    > I've seen when people start learning LaTeX:
+
+    1. Missing out the backslash `\` at the start of one or more of the commands.
+
+    2. Using a forward slash `/` instead of a backslash `\`.
+
+    3. Forgetting `\end{document}`.
+
+    4. Misspelling “document” (in `\begin{document}` and `\end{document}`).
+
+    5. Missing a closing brace `}`.
+
+    If you encounter any problems when you start out, go through that check
+    list first.
+
+
+# Current installation
 
 **Update**: had issues with TinyTeX. Decided to use MacTeX 2021 on Apple and
 TexLive on Windows. Did this on 2021-04-08. A **long** day.
