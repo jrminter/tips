@@ -1,7 +1,7 @@
 ---
 title: "Python Tips"
 author: "J. R. Minter"
-date: 'Started: 2013-07-16, Last modified: 2021-04-27'
+date: 'Started: 2013-07-16, Last modified: 2021-05-06'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -31,6 +31,28 @@ installation.
 I also noted that clicking on the `refresh` button seems to update 
 `Anaconda-Navigator`.
 
+Note that on macOS one can install python from HomeBrew.
+I am running python3.9 on my 2012 MacBook Pro. Homebrew
+offers this helpful hint:
+
+```
+Python has been installed as
+  /usr/local/bin/python3
+
+Unversioned symlinks `python`, `python-config`, `pip` etc. pointing to
+`python3`, `python3-config`, `pip3` etc., respectively, have been installed into
+  /usr/local/opt/python@3.9/libexec/bin
+
+You can install Python packages with
+  pip3 install <package>
+They will install into the site-package directory
+  /usr/local/lib/python3.9/site-packages
+
+tkinter is no longer included with this formula, but it is available separately:
+  brew install python-tk@3.9
+
+See: https://docs.brew.sh/Homebrew-and-Python
+```
 
 
 ## Keeping Spyder in the dock
