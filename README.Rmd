@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-04-19"
+date: "Started: 2013-07-16, Last modified: 2021-05-08"
 output:
   html_document:
     keep_md: true
@@ -14,13 +14,20 @@ output:
 This repository contains the John Minter's useful tips in Rmarkdown
 format.
 
-1. An odd get error with synch. This worked to fix. Moved to top!
+1. Block an email address on Gmail
+   - On your computer, go to Gmail.
+   - Open the message.
+   - In the top right, click More.
+   - Click Block [sender].
+
+
+2. An odd get error with synch. This worked to fix. Moved to top!
 
    ```
    git config pull.rebase false
    ```
 
-2. Block a number on iPhone
+3. Block a number on iPhone
 
    - Start by accessing your list of recent callers,
      so open the Phone app.
@@ -33,9 +40,9 @@ format.
   
    - Confirm your decision.
 
-3. Use ESV from Kindle for easier copy/paste
+4. Use ESV from Kindle for easier copy/paste
 
-4. Turn on **Do Not Disturb** on the Mac
+5. Turn on **Do Not Disturb** on the Mac
 
     - click on the icon just to the left of the `Siri` Prompt.
 
@@ -47,15 +54,15 @@ format.
 
 
 
-5. Reset a [Fitbit Ionic Watch](fitness/fitness.html)
+6. Reset a [Fitbit Ionic Watch](fitness/fitness.html)
 
-6. Convert foo.mkv to foo.mp4
+7. Convert foo.mkv to foo.mp4
 
    ```
 ffmpeg -i title.mkv -c copy title.mp4
    ```
    
-7. Change Zoom ID
+8. Change Zoom ID
 
     > To change your name after entering a Zoom meeting, click on the 
     > “Participants” button at the top of the Zoom window. Next, hover
@@ -63,17 +70,17 @@ ffmpeg -i title.mkv -c copy title.mp4
     > side of the Zoom window. Click on “Rename”. Enter the name you'd
     > like to appear in the Zoom meeting and click on “OK”.
 
-8. Delete VLC play list
+9. Delete VLC play list
 
     Select the entry to delete and press clear.
 
 
-9. [Big Sur update bricks my MBP model](https://apple.slashdot.org/story/20/11/16/0137234/macos-big-sur-update-reportedly-bricks-some-older-macbook-pros)
+10. [Big Sur update bricks my MBP model](https://apple.slashdot.org/story/20/11/16/0137234/macos-big-sur-update-reportedly-bricks-some-older-macbook-pros)
 
-10. [RStudio 1.4 preview citations](https://www.r-bloggers.com/2020/11/rstudio-1-4-preview-citations)
+11. [RStudio 1.4 preview citations](https://www.r-bloggers.com/2020/11/rstudio-1-4-preview-citations)
 
 
-11. **LaTeX Symbols to remember**
+12. **LaTeX Symbols to remember**
 
     `\geq`  $\geq$ 
   
@@ -84,7 +91,7 @@ ffmpeg -i title.mkv -c copy title.mp4
     The PDF is [**here**](tex/pdf/TeXRefCard-v1.5.pdf).
 
 
-12. **USB drives**
+13. **USB drives**
 
     Note to self: Only buy **USB-3.1** thumb drives, They are **a _lot_ faster**
     than USB 3.0...
@@ -92,7 +99,7 @@ ffmpeg -i title.mkv -c copy title.mp4
     see [Amazon](https://www.amazon.com/gp/product/B07D7PDLXC/ref=ppx_yo_dt_b_asin_title_o00_s00)
     for a nice drive...
 
-13. **Quotes I Like**
+14. **Quotes I Like**
 
     > Plod. don't sprint. Be fruitful like a tree, not efficient like a machine.
     > Use the gifts God has given you. - Douglas Wilson
@@ -108,7 +115,7 @@ ffmpeg -i title.mkv -c copy title.mp4
     > respond to email.    
     > - Karl Browman
 
-14. From [DataArtisan](https://twitter.com/dataartisan1/status/1263784688432398338):
+15. From [DataArtisan](https://twitter.com/dataartisan1/status/1263784688432398338):
 
     Skills that make you stand out in #DataScience    
   
@@ -122,7 +129,7 @@ ffmpeg -i title.mkv -c copy title.mp4
 
 
 
-15. Checking Author/date properties in a PDF
+16. Checking Author/date properties in a PDF
 
     > **Q: How do I find out when a PDF doc was originally created there
     > is nothing under `File/Properties`? **
@@ -138,7 +145,7 @@ ffmpeg -i title.mkv -c copy title.mp4
     > are chances that original file creation date is not displayed.
 
   
-16. Key greek and other characters
+17. Key greek and other characters
 
     ```
     Φ(ρ𝑧)
@@ -177,7 +184,7 @@ ffmpeg -i title.mkv -c copy title.mp4
     ```
 
 
-17. Today I learned (TIL)
+18. Today I learned (TIL)
 
     2020-05-25:    
    
@@ -205,7 +212,7 @@ ffmpeg -i title.mkv -c copy title.mp4
         - Under Product Information, click on `Update Options` next to `Office Updates`.    
         - From the list of options, click on `Update Now`.
 
-18. Chrome Bookmarks - How to move a folder...
+19. Chrome Bookmarks - How to move a folder...
 
     From [here](https://support.google.com/chrome/thread/3479132?hl=en).
    
@@ -216,24 +223,24 @@ ffmpeg -i title.mkv -c copy title.mp4
     > little 'folder' icon-- it will not work.
 
 
-19. Keyboard shortcut for the `dplyr` pipe operator
+20. Keyboard shortcut for the `dplyr` pipe operator
 
       ```
       Win: `%>%` - Ctl + Shift + M    
       Mac: `%>%` - CMD + Shift + M   
       ```
 
-20. Fix a `recurring github credential problem` - run:
+21. Fix a `recurring github credential problem` - run:
    
       ```
       Sys.unsetenv("GITHUB_PAT")
       Sys.getenv("GITHUB_PAT")
       ```
 
-21. The R `janitor` package is your friend. It cleans up
+22. The R `janitor` package is your friend. It cleans up
      non-standard column names .
 
-22. CDC Corona Virus Recommendations
+23. CDC Corona Virus Recommendations
 
       > The CDC recommends washing with soap and water for at least 20 seconds after
       > using the bathroom, before eating and after blowing your nose or sneezing. It
@@ -243,7 +250,7 @@ ffmpeg -i title.mkv -c copy title.mp4
       > “These are all things you can do to prevent the spread of pretty much any
       > respiratory virus,” Brewer said.
 
-23. Closed captions in CBS All access
+24. Closed captions in CBS All access
 
       > Go to www.cbs.com. Find a full episode of a series that you're
       > interested in and click on it. To turn the captions on, bring your
@@ -252,7 +259,7 @@ ffmpeg -i title.mkv -c copy title.mp4
       > side, click again on "CC captions" just once.
 
 
-24. The Feynman technique of learning:
+25. The Feynman technique of learning:
 
       - Step 1: Pick and study a topic
 
@@ -265,26 +272,26 @@ ffmpeg -i title.mkv -c copy title.mp4
     
       More [here](./Feynman_technique/Feynman_technique.html)...
     
-25. Install command line tools on MacOS
+26. Install command line tools on MacOS
 
       `xcode-select --install`
 
-26. Reset a Fitbit Ionic watch
+27. Reset a Fitbit Ionic watch
 
     **See the instructions in the _fitness_ link.**
 
-27. Regex for youtube time stamps. Useful in SublimeText3!
+28. Regex for youtube time stamps. Useful in SublimeText3!
 
       `\d\d:\d\d`
 
-28. Symbolic links. I always get this backwards...
+29. Symbolic links. I always get this backwards...
 
       ```
       file     link
       ln -s source destination
       ```
 
-29. Fun snippets
+30. Fun snippets
 
       > Your closest colaborator is you, six months from now    
       > ... and you don't respond to email     
@@ -294,17 +301,17 @@ ffmpeg -i title.mkv -c copy title.mp4
       > styles    
       > - Peter Baker (UseR 2018)
 
-30. Getting started with data science
+31. Getting started with data science
 
       - A very helpful article from
           [Datacamp](https://www.datacamp.com/community/tutorials/setup-data-science-environment).
 
-31. Clear the Chrome Cache
+32. Clear the Chrome Cache
 
       - Press "CTRL" + "Shift" + "Delete" keys in Windows or Linux
       - Press "Command" + "Shift" + "Delete"" keys on MacOS.
 
-32. Delete Specific Cookies in Chrome for Mac OS X
+33. Delete Specific Cookies in Chrome for Mac OS X
 
       From [osxdaily.com](http://osxdaily.com/2016/07/02/delete-cookies-chrome-browser/)
       You can remove a specific website cookie from Chrome by doing the following
@@ -322,7 +329,7 @@ ffmpeg -i title.mkv -c copy title.mp4
       - Avoid cookie placement and cache generation in the first place by using
       the Chrome `Incognito Mode` private browsing feature.
   
-33. Automatically download all files in a directory
+34. Automatically download all files in a directory
 
       Let's also exclude all the `index.html` files... 
       
@@ -330,7 +337,7 @@ ffmpeg -i title.mkv -c copy title.mp4
       wget -r --no-parent --reject "index.html*" http://my/url
       ```
         
-34. How to block someone on Facebook
+35. How to block someone on Facebook
 
       - Click at the top right of Facebook and choose `Settings`.
       - Click `Blocking` in the left side menu.
@@ -340,7 +347,7 @@ ffmpeg -i title.mkv -c copy title.mp4
       `Block > Block [name]`
 
 
-35. Convert `.mkv` to `.mp4` from the command line
+36. Convert `.mkv` to `.mp4` from the command line
 
       ```
       ffmpeg -i vid.mkv -c copy vid.mp4
@@ -355,7 +362,7 @@ ffmpeg -i title.mkv -c copy title.mp4
       Note: this converts frame-by-frame and can be slow.
       I downloaded ffmpeg on macos via homebrew.
 
-36. HTML Syntax
+37. HTML Syntax
 
   - A link
     
