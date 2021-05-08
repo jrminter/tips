@@ -10,6 +10,9 @@ no_ad_blocker.html
 # Don't track these types of directories...
 */*_files
 
+# 2012-Honda-Civic
+2012-Honda-Civic/2012-Honda-Civic.html
+
 # AccessToSqlite directory
 AccessToSqlite/.DS_Store
 AccessToSqlite/AccessToSqlite.html
