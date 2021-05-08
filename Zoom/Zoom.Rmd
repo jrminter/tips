@@ -1,0 +1,36 @@
+---
+title: "Zoom Tips"
+author: "J. R. Minter"
+date: "Started: 2018-03-23, Last modified: 2019-03-13"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+[Back to Index](../README.html)
+
+# Introduction
+
+Zoom is a very helpful tool for online meetings
+
+
+# Always Turn Video Off
+
+Unless video is a necessity, we have found that turning it off can help
+increase the clarity of the call.
+
+This particular setting allows you to turn it off when entering a call
+(you can always turn it on later) — which is another helpful way to
+reduce sudden interruptions.
+
+**You can access Video Settings directly from a Zoom call by clicking**
+**the arrow next to the camera**.
+
+
+[Back to Index](../README.html)
+
