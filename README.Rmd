@@ -497,6 +497,8 @@ ffmpeg -i title.mkv -c copy title.mp4
 
 [json](./json/json.html)
 
+[Leadership](./leadership/Solitude-and-Leadership-William-Deresiewicz.html)
+
 [LaTeX for Rmarkdown](./latex-eqns-for-rmarkdown/latex-eqns-for-rmarkdown.html)
 
 [legacy equipment](./legacy/Legacy.html)
