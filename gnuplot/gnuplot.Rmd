@@ -1,7 +1,7 @@
 ---
 title: "Gnuplot Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-20, Last modified: 2021-05-02"
+date: "Started: 2013-07-20, Last modified: 2021-05-09"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -22,7 +22,9 @@ library(knitr)
 
 ## Key sources
 
-1. I found new gnuplot binaries [here](http://ctan.ijs.si/mirror/w32tex/w32/). Worth checking out... 
+1. I found new gnuplot binaries [here](http://ctan.ijs.si/mirror/w32tex/w32/).
+Worth checking out... This is hosted by the Josef Stefan Institute in Slovenia.
+They provide win32 and win64 binaries.
 
 2. To the best of my knowledge, I think the latest `gnuplot` Windows
    binary is `gp542-win64-mingw.exe`. One can get this from
