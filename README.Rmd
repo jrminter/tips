@@ -14,6 +14,8 @@ output:
 This repository contains the John Minter's useful tips in Rmarkdown
 format.
 
+[Greece NY Traffic](https://www.localconditions.com/weather-greece-new-york/ny0446/traffic.php)
+
 1. Block an email address on Gmail
    - On your computer, go to Gmail.
    - Open the message.
