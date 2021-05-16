@@ -1,7 +1,7 @@
 ---
-title: "TeXLive Hints"
+title: "LaTeX Hints"
 author: "J. R. Minter"
-date: 'Started: 2013-07-16, Last modified: 2021-05-04'
+date: 'Started: 2013-07-16, Last modified: 2021-05-16'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -19,15 +19,17 @@ output:
     ```
     C:/Users/my-user-id/OneDrive/Documents/writing/
     ```
+    
+2. A **great place to start** from [Andy Roberts tips](https://www.andy-roberts.net/writing/latex)
 
-2. A nice help on page margins from [overleaf ](https://www.overleaf.com/learn/latex/page_size_and_margins).
+3. A nice help on page margins from [overleaf ](https://www.overleaf.com/learn/latex/page_size_and_margins).
 
-3. Helpful Koma examples
+4. Helpful Koma examples
 
     [koma-script-scrlttr2](https://tex.stackexchange.com/questions/403077/what-are-the-miminal-required-environments-for-a-koma-script-scrlttr2)
 
 
-4. A couple of good hints for problems
+5. A couple of good hints for problems
 
     **From Dikinwah Books: Top Five Mistakes Made by New Users**
 
@@ -49,9 +51,6 @@ output:
 
 
 # Current installation
-
-**Update**: had issues with TinyTeX. Decided to use MacTeX 2021 on Apple and
-TexLive on Windows. Did this on 2021-04-08. A **long** day.
 
 These are John Minter's tips for a workflow using TinyTeX or
 in Rmarkdown. They were compiled from several web sources.
