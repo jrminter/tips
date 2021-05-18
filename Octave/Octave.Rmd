@@ -1,7 +1,7 @@
 ---
 title: "Octave Tips"
 author: "J. R. Minter"
-date: 'Started: 2019-03-21, Last modified: 2021-03-06'
+date: 'Started: 2019-03-21, Last modified: 2021-05-18'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -33,11 +33,16 @@ I can start an Octave GUI from the command line:
 /usr/local/bin/octave --gui
 ```
 
+- Try [this](https://wiki.octave.org/wiki/index.php?title=Tips_and_tricks)
+
 
 - [This site](https://stackoverflow.com/questions/38593663/how-can-i-start-octave-from-the-command-line-and-not-the-gui) helped set up paths...
 
 
 - [Octave Packages from SourceForge](https://octave.sourceforge.io/packages.php)
+
+
+- Start Octave from the  [command line](https://stackoverflow.com/questions/38593663/how-can-i-start-octave-from-the-command-line-and-not-the-gui) and not the GUI. Site helped set up paths...
 
 # Introduction
 
