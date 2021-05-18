@@ -30,11 +30,16 @@ on MacOS
 I can start an Octave GUI from the command line:
 
 ```
-/usr/local/bin/octave --gui
+/usr/l
+ocal/bin/octave --gui
 ```
+Try [this](https://wiki.octave.org/wiki/index.php?title=Tips_and_tricks)
 
 
-[This](https://stackoverflow.com/questions/38593663/how-can-i-start-octave-from-the-command-line-and-not-the-gui) site helped set up paths...
+
+
+
+Start Octave from the  [command line](https://stackoverflow.com/questions/38593663/how-can-i-start-octave-from-the-command-line-and-not-the-gui) and not the GUI. Site helped set up paths...
 
 # Introduction
 
