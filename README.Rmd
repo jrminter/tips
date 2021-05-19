@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-05-12"
+date: "Started: 2013-07-16, Last modified: 2021-05-19"
 output:
   html_document:
     keep_md: true
@@ -16,20 +16,22 @@ format.
 
 [Greece NY Traffic](https://www.localconditions.com/weather-greece-new-york/ny0446/traffic.php)
 
-1. Block an email address on Gmail
+1. [Physical Science Open Textbooks](https://www.oercommons.org/curated-collections/811?__hub_id=19)
+
+2. Block an email address on Gmail
    - On your computer, go to Gmail.
    - Open the message.
    - In the top right, click More.
    - Click Block [sender].
 
 
-2. An odd get error with synch. This worked to fix. Moved to top!
+3. An odd get error with synch. This worked to fix. Moved to top!
 
    ```
    git config pull.rebase false
    ```
 
-3. Block a number on iPhone
+4. Block a number on iPhone
 
    - Start by accessing your list of recent callers,
      so open the Phone app.
@@ -42,9 +44,9 @@ format.
   
    - Confirm your decision.
 
-4. Use ESV from Kindle for easier copy/paste
+5. Use ESV from Kindle for easier copy/paste
 
-5. Turn on **Do Not Disturb** on the Mac
+6. Turn on **Do Not Disturb** on the Mac
 
     - click on the icon just to the left of the `Siri` Prompt.
 
@@ -56,15 +58,15 @@ format.
 
 
 
-6. Reset a [Fitbit Ionic Watch](fitness/fitness.html)
+7. Reset a [Fitbit Ionic Watch](fitness/fitness.html)
 
-7. Convert foo.mkv to foo.mp4
+8. Convert foo.mkv to foo.mp4
 
    ```
 ffmpeg -i title.mkv -c copy title.mp4
    ```
    
-8. Change Zoom ID
+9. Change Zoom ID
 
     > To change your name after entering a Zoom meeting, click on the 
     > “Participants” button at the top of the Zoom window. Next, hover
@@ -72,12 +74,10 @@ ffmpeg -i title.mkv -c copy title.mp4
     > side of the Zoom window. Click on “Rename”. Enter the name you'd
     > like to appear in the Zoom meeting and click on “OK”.
 
-9. Delete VLC play list
+10. Delete VLC play list
 
     Select the entry to delete and press clear.
 
-
-10. [Big Sur update bricks my MBP model](https://apple.slashdot.org/story/20/11/16/0137234/macos-big-sur-update-reportedly-bricks-some-older-macbook-pros)
 
 11. [RStudio 1.4 preview citations](https://www.r-bloggers.com/2020/11/rstudio-1-4-preview-citations)
 
