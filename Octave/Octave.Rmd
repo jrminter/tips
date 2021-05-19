@@ -44,6 +44,20 @@ I can start an Octave GUI from the command line:
 
 - Start Octave from the  [command line](https://stackoverflow.com/questions/38593663/how-can-i-start-octave-from-the-command-line-and-not-the-gui) and not the GUI. Site helped set up paths...
 
+- Install the packages below:
+
+```
+   pkg install -forge image
+   pkg install -forge io
+
+   pkg install -forge struct
+   pkg install -forge statistics
+   pkg install -forge optim
+   pkg install -forge data-smoothing
+```
+
+
+
 # Introduction
 
 Gnu Octave is an Open Source program similar to Matlab.
