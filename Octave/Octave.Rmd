@@ -1,7 +1,7 @@
 ---
 title: "Octave Tips"
 author: "J. R. Minter"
-date: 'Started: 2019-03-21, Last modified: 2021-05-18'
+date: 'Started: 2019-03-21, Last modified: 2021-05-21'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -32,6 +32,12 @@ I can start an Octave GUI from the command line:
 ```
 /usr/local/bin/octave --gui
 ```
+
+The current version of Gnu Octave is 6.2.0 (as pf 2021-05-07)
+
+1. [Part 1](https://www.youtube.com/watch?v=5MLuYGdEYzg&list=PLCq1Hx5o5Rk0UH6Bnxx7OednyhVPOEgyj)
+
+- A great [Octave playlist](https://www.youtube.com/playlist?list=PLCq1Hx5o5Rk0UH6Bnxx7OednyhVPOEgyj) by Nicholas N.
 
 - Try [this](https://wiki.octave.org/wiki/index.php?title=Tips_and_tricks)
 
