@@ -632,6 +632,9 @@ SQL/SQL.md
 SQL/SQL.html
 SQL/figure/
 
+ST4/ST4.md
+ST4/*.html
+
 # testMakefileBeamerSlideHandouts dir
 testMakefileBeamerSlideHandouts/.DS_Store
 testMakefileBeamerSlideHandouts/*.pdf
