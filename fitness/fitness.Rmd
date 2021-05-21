@@ -1,7 +1,7 @@
 ---
 title: "Fitness tips"
 author: "J. R. Minter"
-date: "Started: 2015-05-10, Last modified: 2021-05-02"
+date: "Started: 2015-05-10, Last modified: 2021-05-21"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -67,10 +67,16 @@ Tap or click Add Network and follow the on-screen instructions to connect your w
 > 2. Tap Wi-Fi Settings. Wait a moment for the list of networks to appear.
 > 3. Tap the network name, then tap Connect.
 
+
+
+# FitBit Tracking
+
+[R-Bloggers](https://www.r-bloggers.com/2021/05/fitbit-visualizations-using-the-fitbitviz-r-package/) had some helpful ideas.
+
 # How to Fall Asleep
 
 From FitBit video dated 2020-05-03
-
+ 
 1. Relaxed openness
 
 2. Pretend you are falling asleep.
