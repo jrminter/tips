@@ -1,7 +1,7 @@
 ---
-title: "Sublime Text 3 Tips"
+title: "Sublime Text 4 Tips"
 author: "J. R. Minter"
-date: "Started: 2015-02-13, Last modified: 2020-01-01"
+date: "Started: 2015-02-13, Last modified: 2021-05-21"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -12,12 +12,23 @@ output:
 
 [Back to Index](../README.html)
 
-These are John Minter's tips for using the editor ``Sublime Text 3``.
+These are John Minter's tips for using the editor ``Sublime Text 4``.
+
+**Note** ST4 was released and I purchased on `2021-05-21`. This file needs
+more updates.
 
 
 # Key info
 
 A. Documentation 
+
+   - [Main Page](https://www.sublimetext.com/blog/articles/sublime-text-4)
+   
+   - [Documentation](https://www.sublimetext.com/docs/index.html)
+   
+   - [docs.sublimetext.io](https://docs.sublimetext.io/)
+   
+   - [The Book](https://sublimetextbook.com/)
 
    - [Official](http://www.sublimetext.com/docs/3/)
       Documentation
