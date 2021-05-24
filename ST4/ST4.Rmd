@@ -17,6 +17,28 @@ These are John Minter's tips for using the editor ``Sublime Text 4``.
 **Note** ST4 was released and I purchased on `2021-05-21`. This file needs
 more updates.
 
+This is the info:
+
+
+**Download**
+
+Sublime Text 4 is the current version of Sublime Text. For bleeding-edge
+releases, see the dev builds.
+
+```
+Version: Build 4107
+
+macOS (10.9 or later is required)
+Windows - also available as a portable version
+Linux repos - also available as a x86-64 or ARM64 tarball
+```
+
+Sublime Text may be downloaded and evaluated for free, however a license
+must be purchased for continued use. There is currently no enforced time
+limit for the evaluation.
+
+
+
 
 macOS setup
 
