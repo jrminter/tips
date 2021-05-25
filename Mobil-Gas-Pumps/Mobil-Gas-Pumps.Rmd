@@ -1,0 +1,27 @@
+---
+title: "Mobil Gas Pumps"
+author: "J. R. Minter"
+date: "Started 2020-05-25, Last modified: 2020-05-25"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+
+[Back to Index](../README.html)
+
+I had issues with new gas pumps at the Mobil station
+
+1. Select **credit** (or debit)  **outside**.
+
+2. Enter card
+
+3. Select Grade (89 Octane)
+
+4. Pump Gas
+
+5. Replace Nozzle
+
+[Back to Index](../README.html)
