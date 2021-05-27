@@ -30,7 +30,8 @@ Everyone knows that AirPods work with iPhones, iPads, and Macs, but we
 tend to overlook the fact that they also work wonderfully with Apple TV
 (4th generation or 4K). With the audio beaming wirelessly across your
 living room to your AirPods, you can enjoy late-night or early-morning
-TV without disturbing everyone else in your house. Here’s how you make it happen.
+TV without disturbing everyone else in your house. Here’s how you make
+it happen.
 
 # Pairing with Apple TV
 
