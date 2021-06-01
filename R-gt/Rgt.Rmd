@@ -644,7 +644,8 @@ We can also target the summary cells and grand summary cells with the location h
 
 Here is an example that uses multiple calls of `tab_options()` and `tab_footnote()`. The cell background color for both types of summary cells is modified and two footnotes are added.
 
-```{r exibble_i}
+```
+{r exibble_itst}
 # Using the gt table of `exibble_h` as a
 # starting point, style summary cells with
 # `tab_options()` and add two footnotes
