@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-04-03"
+date: "Started: 2013-07-16, Last modified: 2021-05-31"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -22,8 +22,11 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 # Don't forget...
 
-Currently running RStudio 1.4.1114 on all my systems. This is a
+Currently running RStudio 1.4.1717 on all my systems. This is a
 "Preview Release". It seams pretty stable...
+
+There is a helpful article [here](https://support.rstudio.com/hc/en-us/articles/200534577-Resetting-RStudio-Desktop-s-State)
+on resetting RStudio's State.
 
 Choose Primary CRAN repository as "Global (CDN) - RStudio". 
 
