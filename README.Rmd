@@ -407,7 +407,9 @@ ffmpeg -i title.mkv -c copy title.mp4
         
     </blockquote>
     ```
-        
+
+38. [Getting started with VisualStudio Code](https://yushulx.medium.com/building-libtiff-with-libjpeg-on-windows-dbf544ef603e)
+
 
 
 **Topics**
