@@ -1,7 +1,7 @@
 ---
-title: "TeXLive Hints"
+title: "LaTeX Hints"
 author: "J. R. Minter"
-date: 'Started: 2013-07-16, Last modified: 2021-04-07'
+date: 'Started: 2013-07-16, Last modified: 2021-05-16'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -12,9 +12,111 @@ output:
 
 [Back to Index](../README.html)
 
+# Quick tips
+
+1. On my win 10 box latex documents are in
+
+    ```
+    C:/Users/my-user-id/OneDrive/Documents/writing/
+    ```
+    
+2. A **great place to start** from [Andy Roberts tips](https://www.andy-roberts.net/writing/latex)
+
+3. A nice help on page margins from [overleaf ](https://www.overleaf.com/learn/latex/page_size_and_margins).
+
+4. Helpful Koma examples
+
+    [koma-script-scrlttr2](https://tex.stackexchange.com/questions/403077/what-are-the-miminal-required-environments-for-a-koma-script-scrlttr2)
+
+
+5. A couple of good hints for problems
+
+    **From Dikinwah Books: Top Five Mistakes Made by New Users**
+
+    > I first started teaching LaTeX in 1998, and these are the most common errors
+    > I've seen when people start learning LaTeX:
+
+    1. Missing out the backslash `\` at the start of one or more of the commands.
+
+    2. Using a forward slash `/` instead of a backslash `\`.
+
+    3. Forgetting `\end{document}`.
+
+    4. Misspelling “document” (in `\begin{document}` and `\end{document}`).
+
+    5. Missing a closing brace `}`.
+
+    If you encounter any problems when you start out, go through that check
+    list first.
+
+
+# Current installation
+
 These are John Minter's tips for a workflow using TinyTeX or
 in Rmarkdown. They were compiled from several web sources.
 
+# Keep current installation updated
+
+This works on Windows and Mac (don't use `sudo` on Windows...)
+
+1. `sudo tlmgr update --self`
+2. `sudo tlmgr update --all`
+
+To use the R package `tikzDevice` install (thanks, Yihui ):
+
+```
+tlmgr install pgf preview xcolor
+```
+
+# Latex poster
+
+See [here](https://www.seehuhn.de/pages/poster.html#sec:3.0.0).
+
+# Current odd behavior:
+
+macBook Pro - TexWorks 0.7 "travis-ci" runs on macOS Big Sur 11.2.3
+macBook Pro 2020 - TexShop 4.62 runs 11.2.3. Texworks has an error.
+
+I do not know why...
+
+# Location of LaTeX examples
+
+There are examples on my MacBook at     
+`/Users/myuserid/Dropbox/Tex` 
+
+There are some examples on my old MacBook at    
+`/Users/myuserid/Documents/tex/`
+
+There on my Windows 10 box are at    
+`/C:/Users/myuserid/Documents/TeX`
+
+# My favorite mirror
+
+```
+tlmgr option repository https://ctan.math.illinois.edu/systems/texlive/tlnet
+```
+All three of my installations use this.
+
+# Tips from Yihui Xie
+
+Now I only have one last wish for TeX Live: I wish it could install
+missing packages on-the-fly like MiKTeX when compiling documents. I
+do not know how MiKTeX implemented it. I'm primarily an R @R-base
+package developer. I do not know much about the TeX language or Perl.
+**I know how to search for the package that contains a certain style**
+**or class file and install it, e.g.**,
+
+```
+$ tlmgr search --global --file "/times.sty"
+psnfss:
+      texmf-dist/tex/latex/psnfss/times.sty
+```
+
+Followed by:
+
+```
+$ tlmgr install psnfss
+```
 
 
 # Fun with TinyTeX
@@ -29,6 +131,15 @@ https://ctan.math.illinois.edu/texlive/tlnet
 ```
 
 I used TinyTeX
+
+Note: I tried adding koma-script:
+
+> The KOMA-Script bundle provides replacements for the article, 
+> report, and book classes with emphasis on typography and versatility.
+
+```
+tlmgr install koma-script
+```
 
 ## Some commands
 
@@ -46,6 +157,12 @@ reinstall_tinytex(packages = TRUE, dir = tinytex_root(), ...)
 
 ```
 tinytex_root(error = TRUE)
+```
+
+A one time need:
+
+```
+tlmgr --repository http://www.texlive.info/tlgpg/ install tlgpg
 ```
 
 # Texworks on mac
@@ -66,6 +183,18 @@ can also try
 tinytex::install_tinytex(version = "2021.04")
 ```
 
+For my needs to get TeXworks running, I needed to add the following
+packages with `tlmgr install pkgname` without the `.sty` extension.
+
+On Windows-10 I used the Powershell as an administrator.
+
+I needed these packages:
+
+```
+texworks, paralist, subfig, caption, fancyhdr, secsty, tocbibind,
+tocloft, grfext
+```
+
 Find a package
 
 ```
@@ -81,7 +210,7 @@ using `tlmgr install package_name`.
 The full commands are available
 [here](https://www.tug.org/texlive/doc/tlmgr.html).
 
-Looks like Windows works well with TexWorks and Mac works wit TexShop...
+Looks like Windows works well with TexWorks and Mac works with TexShop...
 
 Use these commands to install packages...
 
@@ -166,6 +295,40 @@ I saved the contents of the TinyTeX folder and the contents of the
 .texlive2020 (looks like old sagetex preferences?) from my user folder.
 I had issues with sagetex... What I really needed was `a basic working
 LaTeX installation`!
+
+
+## Adding packages
+
+For Texshop I needed to install
+
+```
+xltxtra
+metalogo
+realscripts
+```
+
+
+
+Do it in batch...
+
+```
+
+tlmgr install a4wide ae algorithms appendix babel-english bbm-macros beamer breakurl catoptions charter cite cleveref colortbl comment courier dvips eepic enumitem eso-pic eurosym
+
+tlmgr install extsizes fancyhdr float floatrow fontaxes hardwrap helvetic inconsolata koma-script lastpage lettrine libertine lipsum listings ltxkeys ly1 mathalfa mathpazo mathtools mdframed mdwtools microtype morefloats ms multirow mweights ncntrsbk
+
+tlmgr install needspace newtx ntgclass palatino
+
+
+tlmgr install parskip pbox pdfpages pgf picinpar preprint preview psnfss roboto sectsty setspace
+
+tlmgr install siunitx srcltx standalone stmaryrd sttools subfig subfigure symbol tabu tex textcase threeparttable thumbpdf times titlesec
+
+tlmgr install tufte-latex ucs ulem units varwidth vmargin wallpaper wrapfig xargs xcolor xstring xwatermark tocloft
+
+```
+
+
 
 ## Add a spell-checker to TexWorks
 

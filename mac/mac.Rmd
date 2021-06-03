@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-04-05"
+date: "Started: 2013-07-16, Last modified: 2021-04-24"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -10,6 +10,74 @@ output:
     toc_depth: 3
 ---
 [Back to Index](../README.html)
+
+# Restarting my 2012 MacBook Pro
+
+I have an issue when I restart my 2012 MacBook Pro. The screen and dock
+seem to flash. What seems to work is:
+
+1. Before restarting, place the mouse cursor (arrow) to the top left
+corner of the screen.
+
+2. Restart. The screen will flash a few times and then stop.
+**Be patient!** (not my default...)
+
+# Use a bluetooth mouse
+
+1. Turn the mouse on, and make sure it's within range of your Mac.
+2. Click the Apple icon in the top-left corner of the screen.
+3. Select "System Preferences..."
+4. Click the "Bluetooth" icon.
+5. If it's not already on, select "Turn Bluetooth On."
+6. Wait for your mouse to appear on the list.
+
+# To clear recents
+
+1. Click the File menu.
+2. Choose “Open recent.”
+3. Select Clear Menu
+
+
+
+# Exclude Parallels VMs from backups
+
+I think it is better to make timely manual backups of Parallels
+Virtual Machines and exclude similar really large files
+from backups.
+
+On my 2012 MacBook I exclude thes items from TimeMachine
+
+```
+/Users/Shared/adi
+~/Documents/git
+~/Dropbox
+~/Parallels
+```
+
+On my 2020 13 inch MBP I should exclude these items
+
+```
+~/Local-Docs
+```
+
+
+
+
+
+# Favorite Apps
+
+The default movie/audio player is `QuickTime`. I prefer `VLC` that works
+on all the systems I have.
+
+# Time Machine
+
+This evening (2021-04-09) I had the TimeMachine backup stall for
+about an hour. I did find some help
+[here](https://www.cnet.com/how-to/fix-a-stalled-time-machine-backup-in-os-x/)
+from 2014. What I ended up doing was re-fomatting the TimeMachine
+SSD drive for my new macbook and doing a clean backup. This was much
+faster than anything I could think of. I really only need the current
+information from the disk. I need to watc this...
 
 # Dealing with iCloud
 

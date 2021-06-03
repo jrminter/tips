@@ -1,7 +1,7 @@
 ---
 title: "Python Tips"
 author: "J. R. Minter"
-date: 'Started: 2013-07-16, Last modified: 2021-03-27'
+date: 'Started: 2013-07-16, Last modified: 2021-05-06'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -15,22 +15,45 @@ output:
 
 # Current status
 
-I installed `Anaconda3-2020.11-MacOSX-x86_64.pkg` on my two macbooks.
-The installation would work when I started it. If I ran updates, it
-would bork the installation. I am not sure why...
+I installed `Miniconda3-py39_4.9.2` on my two Macbooks (BigSur) and Windows 10.
 
-I did not try a Windows installation.
 
-**Note** I wanted to install **python 3.9** on my mac on 2021-03-27. 
-I cannot seem to get above version **3.8**. My web seaches suggest
-that I am not alone...
+It looks like (2021-04-24) that I could update with
 
-# conda
+On Windows use the `Anaconda PowerShell` prompt from the menu.
 
-## Miniconda
+1. `conda update conda`
+2. `conda update --all`
 
-See [here](https://docs.conda.io/en/latest/miniconda.html) for the latest
-miniconda release. **Note** I have had issues on macos if I update the install...
+I am cautious about doing this because the last time I borked the
+installation.
+
+I also noted that clicking on the `refresh` button seems to update 
+`Anaconda-Navigator`.
+
+Note that on macOS one can install python from HomeBrew.
+I am running python3.9 on my 2012 MacBook Pro. Homebrew
+offers this helpful hint:
+
+```
+Python has been installed as
+  /usr/local/bin/python3
+
+Unversioned symlinks `python`, `python-config`, `pip` etc. pointing to
+`python3`, `python3-config`, `pip3` etc., respectively, have been installed into
+  /usr/local/opt/python@3.9/libexec/bin
+
+You can install Python packages with
+  pip3 install <package>
+They will install into the site-package directory
+  /usr/local/lib/python3.9/site-packages
+
+tkinter is no longer included with this formula, but it is available separately:
+  brew install python-tk@3.9
+
+See: https://docs.brew.sh/Homebrew-and-Python
+```
+
 
 ## Keeping Spyder in the dock
 

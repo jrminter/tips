@@ -10,6 +10,11 @@ no_ad_blocker.html
 # Don't track these types of directories...
 */*_files
 
+# 2012-Honda-Civic
+2012-Honda-Civic/2012-Honda-Civic.html
+
+AirPods/Use-AirPods-with-Apple-TV.html
+
 # AccessToSqlite directory
 AccessToSqlite/.DS_Store
 AccessToSqlite/AccessToSqlite.html
@@ -149,6 +154,11 @@ fitness/*.html
 french-press-instructions/french-press-instructions.html
 french-press-instructions/french-press-instructions.pdf
 
+
+# gas
+gas/*.html
+gas/*.pdf
+
 # generator
 generator/generator.html
 
@@ -276,6 +286,8 @@ json/figure/
 
 latex-eqns-for-rmarkdown/*.html
 
+leadership/Solitude-and-Leadership-William-Deresiewicz.html
+
 # legacy directory
 legacy/.DS_Store
 legacy/Legacy.md
@@ -354,6 +366,8 @@ Octave/f
 Octave/dat/mydata.dat
 
 OnePassword/*.html
+
+Mobil-Gas-Pumps/*.html
 
 # oracle Virtual Box
 Oracle-Virtual-Box/*.html
@@ -599,9 +613,9 @@ Slidify/Slidify.html
 Slidify/figure/
 
 # ST3 directory
-ST3/.DS_Store
-ST3/ST3.md
-ST3/ST3.html
+ST4/.DS_Store
+ST4/ST4.md
+ST4/ST4.html
 
 Stratagem/Stratagem.html
 
@@ -622,6 +636,9 @@ SQL/SQL.md
 SQL/SQL.html
 SQL/figure/
 
+ST4/ST4.md
+ST4/ST4.html
+
 # testMakefileBeamerSlideHandouts dir
 testMakefileBeamerSlideHandouts/.DS_Store
 testMakefileBeamerSlideHandouts/*.pdf
@@ -639,6 +656,7 @@ tex/tex-tips.html
 tex/figure/
 
 tex/TinyTex-info.html
+tex/TinyTex-info.pdf
 
 # tidyData directory
 tidyData/*.html
@@ -695,3 +713,5 @@ write_usefully/write_usefully.html
 
 wxMaxima/*.html
 .Rproj.user
+
+zoom/Zoom.html

@@ -12,6 +12,61 @@ output:
 
 [Back to Index](../README.html)
 
+# Good advice from Micro List on Connection to LAN
+
+**2021-05-25**
+
+> Email: miketoalson@gmail.com    
+> Name: Mike Toalson    
+> 
+> Title-Subject: Connect to LAN or not?    
+>
+> Message: Obviously anyone doing microscopy work needs some manner of moving acquired data and images to other computers for analysis, reporting, and such. In the old days, that meant using "Sneaker Net" (the process of walking a floppy disk down the hall). Thankfully, we are long past that with Thumb Drives storing terabytes, cloud storage and LANs.
+>
+>The Pandemic has forced even the most ardent to adopt web meetings whose numbers have exploded for doing things like microscope demonstrations and remote training. Growing further towards remote support for diagnosis of possible problems or tweaking settings to improve a customers use of their microscope or EDS.
+>
+> At the same time, corporations and the government entities have been implementing stricter "traffic cops". We have recently even seen USB drivers getting blocked. Then comes TCP/IP traffic and IT roadblock police restricting Administrator rights to a local PC that make it feel like George Orwell is running things. Everyone pointing fingers at the source of the problem. Chaos and frustration ensue.
+>
+> Software and hardware for Microscopes or for this matter, any lab instrument is rarely justified to be put through some costly Microsoft certification process to be on some approved list for easy "TSA like" clearance.
+>
+> 1) Microscope Users need LAN access to move files to their office PC.
+>
+> 2) Internet access is need for microscope User/Supplier support.
+>
+> **QUESTION**: What do you find is the best solution to achieve these needs when their is suffocating IT overhead that the system is unable to tolerate?
+>
+> Should labs implement wireless access use for temporary access to the web? (for remote service)
+>
+> **A response:**    
+> 
+> Mike, I can relate to the experience especially for remote troubleshooting
+>
+> 1. Microscope Users need LAN access to move files to their office PC.
+>
+> A data server-based system will work well and still be quite secure. Let me explain a simple setup
+>
+> The main system connected to the instrument has one LAN card to connect to a data server. The data server which has two LAN cards has one of it used to connect to the main system and another to connect to internet. The data server  has a shared folder to which the main system can read or write. The data server however cannot access the main system.
+>
+> In both systems, all unused ports are blocked and a basic antivirus and firewall are enabled. The users with appropriate access can SSH to the data server and transfer data to their private computer for analysis.
+>
+> This way the main system connected to the instrument doesn't connect to the internet, LAN, or USB lowering the chance of virus or windows update-based issues. The system however needs manual system updates(both windows and antivirus ). This setup allows aged instruments running older versions of windows to still be operational and off-network.
+> 
+> Sometimes **Internet access is needed for microscope User/Supplier support.**
+> 
+> Generally IT admins don't like anyone else having admin access even temporarily so software or hardware-based remote access in the presence of IT admin may be ok if it is for rare occasions and a short duration.
+> 
+> Thanks,
+> 
+> Rooban Venkatesh K.G. Thirumalai    
+> Assistant Research Professor    
+> Institute of Imaging and Analytical Technologies    
+> Mississippi State University, MS 39762    
+> Ph No: (662) 325-7998    
+> Email: rthirumalai@i2at.msstate.edu    
+
+
+
+
 # Good advice from Henry Baker
 
 One of the first documents Ned Thomas gave me was an excerpt from Henry Baker's book "[The Microscope Made Easy](https://books.google.com/books?id=__QLAAAAMAAJ&dq=%22Cautions+in+viewing+Objects%22)" (1743). The quote below comes from pages 62 and 63. I changed the case of some words for modern English usage.
