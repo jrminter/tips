@@ -1,35 +1,23 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-04-07"
+date: 'Started: 2013-07-16, Last modified: 2021-04-07'
 output:
   html_document:
-    keep_md: true
+    keep_md: yes
     css: ./theme/jm-gray-vignette.css
     number_sections: yes
     toc: yes
     toc_depth: 3
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
 ---
 
 This repository contains the John Minter's useful tips in Rmarkdown
 format.
 
 **Timely links**
-
-*Countdown to expected appointment*
-
-```
-Sun  Mon  Tue  Wed  Thu  Fri  Sat
----  ---  ---  ---  ---  ---  ---
- 28   29   30   31    1    2    3
-          ap1    1    2    3        
-
-  4    5    6    7    8    9   10
- ES  EM?                         
-            4    5    6    7     
-       8    9   10
-
-```
 
 
 1. Use ESV from Kindle for easier copy/paste
