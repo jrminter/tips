@@ -1,7 +1,7 @@
 ---
 title: "ggplot2 Examples"
 author: "J. R. Minter"
-date: "Started: 2016-01-20, Last modified: 2020-06-24"
+date: "Started: 2016-01-20, Last modified: 2021-06-03"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -16,6 +16,8 @@ bibliography: ../inc/tips.bib
 
 This is a work in progress. it also requires
 **ggplot2 version 3.0**.
+
+**Note: all the rEDS calls have been removed (2021-06-03*)**
 
 # Capture thoughts for enhancements at the top...
 
@@ -846,7 +848,8 @@ contains a wrapper function (**prepDataframeDtsaPhiRhoZ**) that cleans
 the data up and generates a dataframe from which we can choose the 
 features that we really want to plot.
 
-```{r, doRead,message=FALSE}
+```
+{r, doRead,message=FALSE}
 library(rEDS)
 panderOptions('round', 3)
 inDir <- './dat/csv/'
@@ -861,7 +864,8 @@ While we are at it, let's change the dataframe headers to make
 it easier to make the plots... We are plotting the generated
 and emitted X-rays. Let's make simple mnemonics... 
 
-```{r makeVecs}
+```
+{r makeVecs}
                      
 z <- df[,1]
 okgen <- df[,8]
@@ -881,7 +885,8 @@ In this case we also want to remove the first line because it is the thin
 C coating that creates a discontinuity. If we remove this first line,
 the smooth works better...
 
-```{r removeStep, message=FALSE}
+```
+{r removeStep, message=FALSE}
 df3 <- df2[-1, ]
 rownames(df3) <- NULL
 
@@ -893,7 +898,8 @@ pander(head(df3))
 Note the use of the Unicode in the **xlab** string to create the mu...
 
 
-```{r plotSi, message=FALSE, warning=FALSE}
+```
+{r plotSi, message=FALSE, warning=FALSE}
 library(ggplot2)
 
 span <- 0.25
@@ -921,7 +927,8 @@ print(plt)
 ## Step 4: Plot the O data.
 
 
-```{r plotO, message=FALSE, warning=FALSE}
+```
+{r plotO, message=FALSE, warning=FALSE}
 
 span <- 0.25
 df3 <- df2[-1, ]
