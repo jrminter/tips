@@ -5,6 +5,8 @@
 .Rproj.user/**
 tab.tex
 
+*.md
+
 no_ad_blocker.html
 
 # Don't track these types of directories...
