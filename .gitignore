@@ -195,6 +195,7 @@ ggplot2Examples/dat/png/*.png
 ggplot2Examples/dat/pdf/*.pdf
 ggplot2Examples/figure/
 ggplot2Examples/dat/csv/PhiRhoZ-final.csv
+ggplot2Examples/dat/pdf/c-ctd-si-series-plt-5kV.pdf
 ggplot2Examples/.DS_Store
 ggplot2Examples/ggplot2Examples_fi*
 
