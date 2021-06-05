@@ -26,7 +26,7 @@ Sublime Text 4 is the current version of Sublime Text. For bleeding-edge
 releases, see the dev builds.
 
 ```
-Version: Build 4107
+Version: Build 4107 (I installed this version)
 
 macOS (10.9 or later is required)
 Windows - also available as a portable version
