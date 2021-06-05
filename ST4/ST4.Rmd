@@ -23,7 +23,9 @@ This is the info:
 **Download**
 
 Sublime Text 4 is the current version of Sublime Text. For bleeding-edge
-releases, see the dev builds.
+releases, see the dev builds. 
+
+The changelog is [here](https://www.sublimetext.com/download).
 
 ```
 Version: Build 4107 (I installed this version)
