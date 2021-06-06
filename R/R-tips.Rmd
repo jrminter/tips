@@ -22,6 +22,9 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 # Don't forget...
 
+An **interesting** [rmarkdown](https://goessner.github.io/mdmath/publication.html) site.
+Check it out...
+
 Currently running RStudio 1.4.1717 on all my systems. This is a
 "Preview Release". It seams pretty stable...
 
