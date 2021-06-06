@@ -1,7 +1,7 @@
 ---
 title: "ggplot2 Examples"
 author: "J. R. Minter"
-date: "Started: 2016-01-20, Last modified: 2021-06-03"
+date: "Started: 2016-01-20, Last modified: 2021-06-06"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -17,7 +17,7 @@ bibliography: ../inc/tips.bib
 This is a work in progress. it also requires
 **ggplot2 version 3.0**.
 
-**Note: all the rEDS calls have been removed (2021-06-03*)**
+**Note: all the rEDS calls have been removed (2021-06-03)**
 
 # Capture thoughts for enhancements at the top...
 
