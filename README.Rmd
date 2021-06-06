@@ -17,6 +17,11 @@ output:
 This repository contains the John Minter's useful tips in Rmarkdown
 format.
 
+**Fleets Enema procedure** For 2021-06-15 at 1:30 pm for 3:30 pm
+appointment at **Highland Hospital**.
+
+See [here](https://www.fleetlabs.com/how-to-use-fleet).
+
 I had issues with new gas pumps at the Mobil station
 
 1. Select **credit** (or debit)  **outside**.
