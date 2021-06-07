@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-06-06"
+date: "Started: 2013-07-16, Last modified: 2021-06-07"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -32,6 +32,9 @@ There is a helpful article [here](https://support.rstudio.com/hc/en-us/articles/
 on resetting RStudio's State.
 
 Choose Primary CRAN repository as "Global (CDN) - RStudio". 
+
+Some new developments are
+[here](https://towardsdatascience.com/ten-awesome-recent-developments-in-r-6bfad46299a0).
 
 ## gfortran for R on macOS
 
