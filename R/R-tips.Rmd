@@ -26,6 +26,14 @@ Configuring RStudio v1.4 Update
 
 See [here](https://www.r-bloggers.com/2021/06/rstudio-v1-4-update-whats-new/)
 
+```
+.Renviron - Goes in Documents
+
+WIN: PATH="${RTOOLS40_HOME}\usr\bin;${PATH}"
+
+
+```
+
 An **interesting** [rmarkdown](https://goessner.github.io/mdmath/publication.html) site.
 Check it out...
 
