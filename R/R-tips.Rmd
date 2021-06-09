@@ -22,6 +22,16 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 # Don't forget...
 
+```
+.Renviron - Goes in Documents
+
+WIN: PATH="${RTOOLS40_HOME}\usr\bin;${PATH}"
+
+
+```
+
+
+
 An **interesting** [rmarkdown](https://goessner.github.io/mdmath/publication.html) site.
 Check it out...
 
