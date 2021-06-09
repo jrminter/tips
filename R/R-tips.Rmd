@@ -34,6 +34,8 @@ WIN: PATH="${RTOOLS40_HOME}\usr\bin;${PATH}"
 
 ```
 
+[raster data in R](https://www.neonscience.org/resources/learning-hub/tutorials/raster-data-r)
+
 An **interesting** [rmarkdown](https://goessner.github.io/mdmath/publication.html) site.
 Check it out...
 
