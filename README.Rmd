@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-06-06"
+date: "Started: 2013-07-16, Last modified: 2021-06-11"
 output:
   html_document:
     keep_md: yes
@@ -16,6 +16,9 @@ output:
 
 This repository contains the John Minter's useful tips in Rmarkdown
 format.
+
+I had issues with Anaconda Powershell in a Win10 VM window. Try 
+`Run as Adminstrator`. It is easier to read!
 
 **Fleets Enema procedure** For 2021-06-15 at 1:30 pm for 3:30 pm
 appointment at **Highland Hospital**.
