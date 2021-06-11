@@ -131,5 +131,23 @@ My experience with Faraday cups of all creeds and colors has been good.  I find 
 
 I do believe there is merit to using the X-ray signal directly to calibrate probe current as you describe and as Bruker and Oxford do.  This method also accounts for geometric differences so long as the calibration material and unknowns are at the same working distance.  Gold would be a good choice.
 
+# More from the mystery...
+
+General EDS Issues / Re: SEM-EDS stage-mounted Faraday Cup issues (by sem-geologist)
+
+Thank You Nicholas,
+
+However I fooled myself. I found out that I got myself into anecdotal situation, albeit I had lost whole day.
+I had found out today that I was terribly trolled. Well there were many signs which I had ignored as I had not took that into possibility.
+The thing is that that Zeiss SEM has oxymoron config: Variable Pressure capability (environmental) and Schottky field emission cathode. Because of VP with FEG it is equipped with two ion pumps (not single, when no VP) and naturally (that important info is missing in booklets and specifications) in such configuration that secondary ion pump becomes expendable part - VP mode shortens its lifetime to something max 2-3 years. So naturally it burned-out about ~5 years ago. I can't remember why it could not be replaced/repaired then (zeiss service thing), but later every time we had a reemerging discussion (people are so restless to try to do stupid things again and again) if to buy and replace it with a new - I was insisting to do not, as FEG + VP is a complete nonsense in my opinion, and we have environmental tungsten tip equipped Jeol SEM (no ion pumps) for that kind of wankerry. Secondary ion pump being "out of order" was a guarantee that that instrument time will be not wasted to kind of complete rubbish analysis. EDS gathered at variable pressure had spread so much of bad impression among many professors and they think of EDS as very extremely uncertain method. It is so hard to undo the damage - much harder to change the opinion of professor than to teach right thing the students.
+... and so two weeks ago that pump was replaced, and I had no idea about that.
+
+So I had ignored many clear signs screaming into my face that I am on VP mode.
+1. at first I saw previous project opened with one of those rubbish studies, and though "Oh dear, even this lunatic started to use this SEM; Had someone (How possibly?) at last convinced him of benefits of coating those rubbish samples?" (Well there is long very weird story from times I was explicitly working on SEM and I could not convince him. Unfortunately there is whole army of these weirdos. When I had to chose my position if to stay to work on SEM or move to EPMA, one of the factors to chose EPMA position was just to distance myself away from these never-ending nonsense stuff). The moral is that some people never change, while machines do.
+2. I got 0.37 nA when measured in FC, and a month ago I was getting 0.6 nA at the same WD and aperture. I could not believe that FEG had so terribly aged in such a short time. So had checked it independently on 4 FC - while it was getting similar readings at center it was weirdly getting higher reading near the edge of FC. Taking VP into account now it makes perfect sense. But that looked for me like FC contamination + tip aging at that moment.
+3. While checking for polishing-debris inside the FC, I was trying to use in-lense detector, but could not get a good picture. Again I thought that something is bad going with in-lense detector.
+4. I noticed that FC reading differs from position on the stage. FC are different and probably has different depths, so different beam distances and different absorption by gas had caused different current readings.
+5. I had reduced HV so in-lense picture would get better. It was not at all, and I was getting less current inside FC than outside of FC. With VP in mind that observation now makes perfect sense.
+And I guess the absorbed stage current also was influenced by VP as part of charge is taken by gas.
 
 [Back to Index](../README.html)
