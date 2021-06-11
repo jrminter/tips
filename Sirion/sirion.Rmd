@@ -97,7 +97,7 @@ the Gray items are for additional information to the user.
 
 #  SEM-EDS stage-mounted Faraday Cup issues
 
-From the Probe Software Forum by `sem-geologist` on 2021-06-11
+## From the Probe Software Forum by `sem-geologist` on 2021-06-11
 
 Dear Collective Knowledge,
 
@@ -120,6 +120,16 @@ Would buying separate FC (stand alone, not mounted with standards) would solve m
 SEM: Zeiss Sigma (FE) 
 
 PS.: I start to understand the idea, why Bruker does not use the FC reading, but calibrates intensities to specified and measured X-ray intensity of material dedicated for that - in that way this problem with variations in FC measurements can be overcome. I think Au piece would perfectly fit for that porpoise as it is the most inactive metal; copper would oxidize, and would influence the counts at low voltages. The trouble is if I want to use DTSA-II which needs the beam current; hmmm... maybe I could simply define the ratio between Au and fictional beam current, and recalculate such net intensities into fictious current equivalent. If I would do standards and unknown with same fictitiously acquired beam current the quantification should work, I guess...
+
+# Nicholas Ritchie responds
+
+There is something really weird going on if your probe current measurements vary by 5 % over the range of stage positions and your out-of-cup is higher than your in cup.  It suggests to me that maybe the stage isn't isolated correctly, the path to ground (BNC) is poor or the faraday cup isn't well designed.
+
+Also most of the picoammeters built into SEMs are not as good as those in microprobes.   This is usually not an issue if you maintain the probe current to within 10% but can be an issue if you vary the probe current by an order-of-magnitude between measurements in a measurement set.  (But I don't know why you'd do this.)
+
+My experience with Faraday cups of all creeds and colors has been good.  I find the reproducibility to be excellent. I've never seen a Faraday cup go bad except when the hole gets plugged with Ag paint or some such.   I've used my primary Faraday cup for a decade or more but I often use cups integrated into standard blocks.  So long as the beam raster is fully enclosed in the darkness of the cup, the measurements are comparable between Faraday cups.  Having said this, I usually use the same cup for all measurements if possible (belt-and-suspenders).
+
+I do believe there is merit to using the X-ray signal directly to calibrate probe current as you describe and as Bruker and Oxford do.  This method also accounts for geometric differences so long as the calibration material and unknowns are at the same working distance.  Gold would be a good choice.
 
 
 [Back to Index](../README.html)
