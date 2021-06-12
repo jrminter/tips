@@ -23,10 +23,10 @@ output:
 - BioFormats
 - FFMPEG
 - HDF5
-- IJ-Plugins
-- IJPB-CNRS
+- IJPB-plugins
 - LOCI
 - Mosaic ToolSuite
+- ParticleSizer
 - Stowers
 
 ## Wayne Rasband config
