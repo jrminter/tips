@@ -1,0 +1,118 @@
+---
+title: "Writing Well"
+author: "Dickie Bush @dickiebush (from Twitter)"
+date: "Started 2021-06-15, Last modified: 2021-06-15"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+
+# Read the Roman-Raphelson book on writing. Read it three times. 
+
+Every company on Earth would be a better place if this book was required reading before email permissions were given.
+
+If you are still sending emails with Walls of Text, order this.
+Writing That Works; How to Communicate Effectively In Business
+
+# Write the way you talk. Naturally. 
+
+"Finding your writing voice" is a waste of time. 
+
+You already have your voice - the one you use every day.
+
+How to start using it in your writing?
+
+- Choose a topic
+
+- Record yourself talking about it
+
+Then, transcribe it and start there.
+
+# Use short words, short sentences, and short paragraphs.
+
+This one takes practice. 
+
+But the easiest way to find when you're being too wordy? 
+
+Read everything aloud before you publish it. 
+
+When you find yourself getting caught up, it's a sign you need to simplify.
+
+# Never use jargon words
+
+Examples: "reconceptualizes, demassification, attitudinally, judgmentally." 
+
+Here's how to think about jargon;
+
+When you see someone using it, they're hiding their lack of understanding. 
+
+An easy solution: pretend you are writing to an 8th grader.
+
+# Never write more than two pages on any subject. 
+
+99% of books should be blog posts. And 99% of blog posts should be tweets. 
+
+I would preface this by saying: never *publish* more than two pages on any subject. 
+
+If it can't fit in two pages, it should be simpler.
+
+# Check your quotations.
+
+This one is simple enough. Misquotes are unforced errors.
+
+# Never send a letter or memo on the day you write it. Read it aloud the next morning, then edit it.
+
+This is the number one piece of writing advice I can give people.
+
+If you are publishing something important, always, always, give it room to breathe.
+
+And always read it aloud.
+
+# If it something important, get a colleague to improve it.
+
+This pairs nicely with point number 7. If it's something really important, write it, give it a day, edit it, then send it to a colleague.
+
+The best edits come from others.
+
+@tferriss - asks the following:
+
+- Highlight anything that is confusing.
+
+- Highlight any points where your mind starts to wander.
+
+- Indicate the 10% of the piece that I need to keep no matter what.
+
+
+# Getting feedback
+
+The best edits come from others.
+
+When getting feedback, @tferriss asks the following:
+
+- Highlight anything that is confusing.
+
+- Highlight any points where your mind starts to wander.
+
+- Indicate the 10% of the piece that I need to keep no matter what.
+
+#  Before you send your letter or memo, make sure it is crystal clear
+   what you want the recipient to do.
+
+- So simple, but easy to forget.
+
+- Put yourself in the reader's shoes and identify exactly the next step they should take after reading.
+
+- Then, articulate those steps for them.
+
+# If you want **action**, don't write. Go and tell the guy what you want. 
+
+# Last and most importantly, writing is never a replacement for a targeted conversation. 
+
+- In fact, most emails and messages should be direct conversations, especially ones that require action.
+
+- The best writers will shape the future.
+
+- And the companies that create a culture of writing will shape the future as well.
