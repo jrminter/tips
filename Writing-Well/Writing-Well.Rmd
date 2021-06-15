@@ -10,6 +10,8 @@ output:
     toc_depth: 3
 ---
 
+[Back to Index](../README.html)
+
 # Read the Roman-Raphelson book on writing. Read it three times. 
 
 Every company on Earth would be a better place if this book was required reading before email permissions were given.
@@ -116,3 +118,5 @@ When getting feedback, @tferriss asks the following:
 - The best writers will shape the future.
 
 - And the companies that create a culture of writing will shape the future as well.
+
+[Back to Index](../README.html)

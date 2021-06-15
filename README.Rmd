@@ -670,6 +670,8 @@ ffmpeg -i title.mkv -c copy title.mp4
 
 [Write Usefully (by Paul Graham)](./write_usefully/write_usefully.html)
 
+[Writing Well](./Writing-Well/Writing-Well.html)
+
 [WxMaxima](./WxMaxima/WxMaxima.html)
 
 [X-ray EDS Issues](./X-Ray-EDS-Issues/X-Ray-EDS-Issues.html)
