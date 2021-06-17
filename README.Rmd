@@ -17,8 +17,9 @@ output:
 This repository contains the John Minter's useful tips in Rmarkdown
 format.
 
-I had issues with Anaconda Powershell in a Win10 VM window. Try 
-`Run as Adminstrator`. It is easier to read!
+I had issues with Anaconda Powershell in a Win 10 VM window. Try 
+`Run as Adminstrator`. It is easier to read! Better yet, click on the
+4-box icon in the lower left and open Powershell. The font will be OK.
 
 **Fleets Enema procedure** For 2021-06-15 at 1:30 pm for 3:30 pm
 appointment at **Highland Hospital**.
@@ -668,6 +669,8 @@ ffmpeg -i title.mkv -c copy title.mp4
 [Workflow](./workflow/workflow.html)
 
 [Write Usefully (by Paul Graham)](./write_usefully/write_usefully.html)
+
+[Writing Well](./Writing-Well/Writing-Well.html)
 
 [WxMaxima](./WxMaxima/WxMaxima.html)
 
