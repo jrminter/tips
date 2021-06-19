@@ -1,6 +1,6 @@
 ---
 title: "**Excelsior Pass**"
-date: "Started: 2021-03-29 Modified: 2021-04-01"
+date: "Started: 2021-03-29 Modified: 2021-06-19"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -37,6 +37,8 @@ with information originally 2021-03-03 will first expire on 2021-04-28.
 That is really short. A recent article suggests these can be extended
 based upon later information regarding the updated understanding of the
 length of immunity from the shot.
+
+Note: **2021-06-18** - I renewed my pass!
 
 # What is Excelsior Pass?
 
