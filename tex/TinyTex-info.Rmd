@@ -19,6 +19,13 @@ TexLive on Windows. Did this on 2021-04-08. A **long** day.
 N.B. On 2021-04-17 I removed MacTeX 2021 on Mac and replaced with TinyTeX.
 Updates worked again without sudo!
 
+Note that on Windows 10, TinyTex is installed in
+
+```
+C:\Users\userid\AppData\Roaming\TinyTeX
+```
+
+
 Also note: `tlmgr info` lists installed packages.
 
 
