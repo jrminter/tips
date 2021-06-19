@@ -22,6 +22,13 @@ corner of the screen.
 2. Restart. The screen will flash a few times and then stop.
 **Be patient!** (not my default...)
 
+# Show hidden files
+
+In Finder, you can click your computer's hard drive under Locations,
+then open your Macintosh HD folder. Press `Command + Shift + .`
+(period) to make the hidden files appear. You can also do the same
+from inside the Documents, Applications, and Desktop folders.
+
 # Use a bluetooth mouse
 
 1. Turn the mouse on, and make sure it's within range of your Mac.

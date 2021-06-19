@@ -1,7 +1,7 @@
 ---
 title: "R-Markdown Tips"
 author: "J. R. Minter"
-date: "Started: 2016-12-08, Last modified: 2021-06-09"
+date: "Started: 2016-12-08, Last modified: 2021-06-19"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -141,16 +141,22 @@ repository on github.
 8. A nice article on R/RStudio in
 [Ubuntu](https://cran.r-project.org/bin/linux/ubuntu/README.html) Linux.
 
+9. Find the version of `pandoc` used by RStudio:
+
+
+    ```{r findRstudioPandoc, include=TRUE}
+    rmarkdown::find_pandoc()
+    ```
 
 
 ## Helpful template examples
 
 - A helpful idea from [Sean Kross](https://twitter.com/seankross/status/1176026465403408385):
 
-```
+    ```
     library(lubridate)
     backtick r stamp("Updated Monday September 23, 2019 at 8:55")(now()) backtick
-```
+   ```
 
 which produces when knit:
 
