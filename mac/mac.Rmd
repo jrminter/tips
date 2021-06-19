@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-04-24"
+date: "Started: 2013-07-16, Last modified: 2021-06-19"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -10,6 +10,15 @@ output:
     toc_depth: 3
 ---
 [Back to Index](../README.html)
+
+# User documents on my MacBook Pro 2020 13 inch
+
+I noticed that my  MacBook Pro 2020 seemed to put my user files in the 
+Cloud. I purposely bought a system with sufficient disk space to save
+my work (typically under version control with git).
+
+I ended up creating a folder `/Users/my_user_id/Local-Docs`. This seemed to
+work well. We will see how this works in the long term...
 
 # Restarting my 2012 MacBook Pro
 
