@@ -233,7 +233,8 @@ package.
 Sometime I need to migrate this function to ggplot2...
 
 
-```{r linearDistPanelPlot, message=FALSE}
+```
+{r linearDistPanelPlot, message=FALSE}
 library(rAnaLab)
 
 linear.distn.panel.plot(particles$ecd, n.brks = 25,
