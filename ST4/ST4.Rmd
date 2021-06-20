@@ -12,7 +12,9 @@ output:
 
 [Back to Index](../README.html)
 
-To setup Sublime Text 4 on Mac:
+# Setup Sublime Text 4 on Mac
+
+This helpful information came from [sourabhbajaj.com](https://sourabhbajaj.com/mac-setup/SublimeText/README.html) :
 
 Create a shortcut so we can launch Sublime Text from the command-line:
 
@@ -20,13 +22,13 @@ Create a shortcut so we can launch Sublime Text from the command-line:
 $ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 ```
 
+# John Minter's tips for ST4
 These are John Minter's tips for using the editor ``Sublime Text 4``.
 
 **Note** ST4 was released and I purchased on `2021-05-21`. This file needs
 more updates.
 
 This is the info:
-
 
 **Download**
 
@@ -46,18 +48,6 @@ Linux repos - also available as a x86-64 or ARM64 tarball
 Sublime Text may be downloaded and evaluated for free, however a license
 must be purchased for continued use. There is currently no enforced time
 limit for the evaluation.
-
-
-
-
-
-
-
-```
-rm -rf /usr/local/bin/subl 
-ln -s "/Applications/SublimeText4.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
-```
-
 
 
 # Key info
