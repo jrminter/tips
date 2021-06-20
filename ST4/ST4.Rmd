@@ -13,11 +13,11 @@ output:
 [Back to Index](../README.html)
 
 
-I ended up doing this om macOS
+I ended up doing this on macOS
 
-macOS setup
+macOS setup (MacBook Pro 2012 - still need to do the new mac...)
 
-I ended up with this
+I ended up with this. Note I took the space out of the name...
 
 ```
 alias sub='/Applications/SublimeText.app/Contents/SharedSupport/bin/subl'
