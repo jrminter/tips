@@ -23,6 +23,7 @@ $ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/loc
 ```
 
 # John Minter's tips for ST4
+
 These are John Minter's tips for using the editor ``Sublime Text 4``.
 
 **Note** ST4 was released and I purchased on `2021-05-21`. This file needs
