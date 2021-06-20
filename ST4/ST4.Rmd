@@ -1,7 +1,7 @@
 ---
 title: "Sublime Text 4 Tips"
 author: "J. R. Minter"
-date: "Started: 2015-02-13, Last modified: 2021-06-19"
+date: "Started: 2015-02-13, Last modified: 2021-06-20"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -12,15 +12,12 @@ output:
 
 [Back to Index](../README.html)
 
+To setup Sublime Text 4 on Mac:
 
-I ended up doing this on macOS
-
-macOS setup (MacBook Pro 2012 - still need to do the new mac...)
-
-I ended up with this. Note I took the space out of the name...
+Create a shortcut so we can launch Sublime Text from the command-line:
 
 ```
-alias sub='/Applications/SublimeText.app/Contents/SharedSupport/bin/subl'
+$ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
 ```
 
 These are John Minter's tips for using the editor ``Sublime Text 4``.
