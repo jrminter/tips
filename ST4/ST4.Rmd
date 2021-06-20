@@ -1,7 +1,7 @@
 ---
 title: "Sublime Text 4 Tips"
 author: "J. R. Minter"
-date: "Started: 2015-02-13, Last modified: 2021-06-05"
+date: "Started: 2015-02-13, Last modified: 2021-06-19"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -11,6 +11,17 @@ output:
 ---
 
 [Back to Index](../README.html)
+
+
+I ended up doing this om macOS
+
+macOS setup
+
+I ended up with this
+
+```
+alias sub='/Applications/SublimeText.app/Contents/SharedSupport/bin/subl'
+```
 
 These are John Minter's tips for using the editor ``Sublime Text 4``.
 
@@ -42,7 +53,8 @@ limit for the evaluation.
 
 
 
-macOS setup
+
+
 
 ```
 rm -rf /usr/local/bin/subl 
