@@ -1,7 +1,7 @@
 ---
 title: "Python Tips"
 author: "J. R. Minter"
-date: 'Started: 2013-07-16, Last modified: 2021-05-06'
+date: 'Started: 2013-07-16, Last modified: 2021-06-21'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -16,6 +16,10 @@ output:
 # Current status
 
 I installed `Miniconda3-py39_4.9.2` on my two Macbooks (BigSur) and Windows 10.
+
+I have had problems with my newest Macbook Pro running macOS 11.4. For some
+reason I cannot get Miniconda 3.9 64 bit to run without error, Miniconda 3.8
+runs well enought to get work done. I have no idea how to fix this.
 
 
 It looks like (2021-04-24) that I could update with
