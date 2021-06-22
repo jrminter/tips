@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-06-19"
+date: "Started: 2013-07-16, Last modified: 2021-06-22"
 output:
   html_document:
     keep_md: yes
@@ -17,12 +17,15 @@ output:
 This repository contains the John Minter's useful tips in Rmarkdown
 format.
 
+
+
+[This](https://ropensci.org/blog/2021/06/22/setup-runiverse/)
+
 I had issues with Anaconda Powershell in a Win 10 VM window. Try 
 `Run as Adminstrator`. It is easier to read! Better yet, click on the
 4-box icon in the lower left and open Powershell. The font will be OK.
 
-**Fleets Enema procedure** For 2021-06-15 at 1:30 pm for 3:30 pm
-appointment at **Highland Hospital**.
+**Fleets Enema procedure** For 2021-06-25 at **Unity Hospital**.
 
 See [here](https://www.fleetlabs.com/how-to-use-fleet).
 
