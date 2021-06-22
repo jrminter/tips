@@ -1,7 +1,7 @@
 ---
 title: "Logos Tips"
 author: "J. R. Minter"
-date: "Started: 2017-01-21, Last modified: 2021-04-03"
+date: "Started: 2017-01-21, Last modified: 2021-06-22"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -10,6 +10,17 @@ output:
     toc_depth: 3
 ---
 [Back to Index](../README.html)
+
+# Switching to different modes or sessions
+
+1. Open Program Settings
+
+- It starts with **General**
+
+- Note the second selection box (At Startup Open To) - The default is
+  `Most recent layout-any`. There is a **pull-down**. One can pull down
+  that menu to any of your saved layouts and some others to help you
+  set up what you want.
 
 # Fix a strange problem with large fonts (2021-04-03)
 
