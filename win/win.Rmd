@@ -1,7 +1,7 @@
 ---
 title: "Windows Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-04-17"
+date: "Started: 2013-07-16, Last modified: 2021-06-22"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -47,13 +47,70 @@ output:
    C:\Users\userid\Documents\TeX
 
    ```
+   
+## Backing up my Win 10 Desktop
 
+I was noting that my backup was getting full and I do not need the
+old backups. 
 
 
 ## Moving icons on the Desktop
 
 I had a problem (2021-04-09) where I could not move icons on the desktop.
 Restarting fixed it.
+
+Microsoft explained the fix
+[here](https://answers.microsoft.com/en-us/windows/forum/windows_10-update/backup-drive-is-running-out-of-space/8a61f9a3-9a)
+
+I kept the last couple of months of backup and deleted the previous
+backups.
+
+### Instructions
+
+> In Windows 10, you can either use File History in Settings or Backup
+> and Restore (Windows 7) in Control Panel to back up your files or the
+> image of your Windows 10. Just to clarify, what tool did you use
+> to back up your files or image? 
+>
+> If you used Back and Restore (Windows 7) and you set up a back up
+> schedule, the drive that you're using for the back up will surely
+> consume a large amount of space. To free up disk space, you can either
+> delete an old back up or you can set up Backup and Restore (Windows 7)
+> to only save the latest backup file. To do this, follow these steps:
+> 
+> **Delete an old backup file:**
+>
+> - Open Control Panel and access Backup and Restore (Windows 7).
+> - Click Manage space.
+> - Select View backups....
+> - Choose the backup the you want to delete, and then press Delete.
+> - Keep the latest system image:
+> 
+> **Open Control Panel and access Backup and Restore (Windows 7).**
+>
+> - Click Manage space.
+> - Select Change settings....
+> - Choose Keep only the latest system image and minimize space
+>   used by backup, and then press OK.
+> 
+> If you do not want to use the current location of your backup anymore
+> and you want to change it to your external drive, you can do so by
+> following these steps:
+> 
+> - Open Backup and Restore (Windows 7) in Control Panel.
+> - Press Change settings.
+> - Choose the drive you want to save your backup file, and then click Next.
+> - Choose your backup settings.
+> - Press Save settings and run backup.
+>
+> If you want to create a bootable media or an installation media of
+> Windows 10, you can do so by using the Media Creation Tool.
+> Please take note that you need a USB flash drive with at least 8 GB
+> of space so that you can create a bootable media. You can download
+> the Media Creation Tool here. The link also has the steps on how
+> to create and use the bootable media.
+
+
 
 ## Patch Tuesday
 
