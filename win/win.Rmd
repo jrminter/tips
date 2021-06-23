@@ -50,6 +50,8 @@ output:
    
 ## Backing up my Win 10 Desktop
 
+From [here](https://answers.microsoft.com/en-us/windows/forum/windows_10-update/backup-drive-is-running-out-of-space/8a61f9a3-9a44-40c4-8b56-84b3e046ad63)
+
 I was noting that my backup was getting full and I do not need the
 old backups. 
 
