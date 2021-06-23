@@ -65,7 +65,7 @@ Microsoft explained the fix
 I kept the last couple of months of backup and deleted the previous
 backups.
 
-### Instructions
+## Helpful backup instruction for Win-10
 
 > In Windows 10, you can either use File History in Settings or Backup
 > and Restore (Windows 7) in Control Panel to back up your files or the
