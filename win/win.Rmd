@@ -53,19 +53,8 @@ output:
 I was noting that my backup was getting full and I do not need the
 old backups. 
 
-
-## Moving icons on the Desktop
-
-I had a problem (2021-04-09) where I could not move icons on the desktop.
-Restarting fixed it.
-
-Microsoft explained the fix
-[here](https://answers.microsoft.com/en-us/windows/forum/windows_10-update/backup-drive-is-running-out-of-space/8a61f9a3-9a)
-
 I kept the last couple of months of backup and deleted the previous
 backups.
-
-## Helpful backup instruction for Win-10
 
 > In Windows 10, you can either use File History in Settings or Backup
 > and Restore (Windows 7) in Control Panel to back up your files or the
@@ -110,7 +99,10 @@ backups.
 > the Media Creation Tool here. The link also has the steps on how
 > to create and use the bootable media.
 
+## Moving icons on the Desktop
 
+I had a problem (2021-04-09) where I could not move icons on the desktop.
+Restarting fixed it.
 
 ## Patch Tuesday
 
