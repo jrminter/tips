@@ -11,11 +11,18 @@ output:
 ---
 [Back to Index](../README.html)
 
-# Notifications
+# Notifications for MacOS and iPhoneOS (iPhone12)
 
-To view Notifications on MacOS use the mouse to click on the **date**
+To view Notifications on **MacOS** use the mouse to click on the **date**
 in the right hand corner. That will open Notifications, pulling
-them on to the right hand edge..
+them on to the right hand edge...
+
+For **iPhone 12**: With iOS 12, users can access the notification
+settings directly from the **lock screen notification center**.
+Users can **swipe left** on the notification and tap on '**Manage**' or
+tap on the '**View**' button and click on the **ellipsis** that appears
+on the top-right corner to configure their notification settings.
+**Swipe Up** brings them back...
 
 # User documents on my MacBook Pro 2020 13 inch
 
