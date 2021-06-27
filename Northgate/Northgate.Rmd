@@ -1,0 +1,60 @@
+---
+title: "Northgate Information"
+author: "J. R. Minter"
+date: "Started: 2021-06-19, Last modified: 2021-06-27"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+[Back to Index](../README.html)
+
+
+
+# From the Elders
+
+
+Dear NBC Family - 
+
+Lord willing, we will be transitioning into the auditorium for our meetings,
+starting tomorrow. We are so thankful for the Lord's provision of the gym
+for our meetings for almost a year. As we transition into the auditorium, 
+few items to keep in mind:
+
+We will continue with the same meeting schedule
+
+Lord's Supper: 10 am - 10.50 am    
+Break        : 10:50 am - 11 am     
+Singing/announcements & FBH: 11 - 11.45 am    
+
+There are no designated seatings. Saints are free to choose wherever you would
+like to sit. However, there may be Saints who are sensitive to spacing/masks
+and we encourage you to ask one another, when in doubt.
+
+Nursery will be open. For the interim, we ask that one of the parents also be
+with your child/children using the nursery. In the upcoming weeks, based on
+usage of the nursery, we will look for opportunities to make this more organized.
+
+Emblems will still continue to be the same pre-filled ones that you pick up from
+the table outside the auditorium, near the door.
+
+The offering box will also be on the same table.
+
+We will continue to have zoom for the near term & video recordings of the FBH
+messages posted to the chapel Youtube page. 
+
+We have seen the gentle hand of the Lord guiding and supplying our every need
+this last year and we can wholeheartedly resound the words of the hymn writer:
+
+Great is Thy Faithfulness, Great is Thy Faithfulness     
+Morning by morning new mercies I see    
+All I have needed Thy hand hath provided    
+Great is Thy faithfulness, Lord, unto me    
+
+In our Savior's love,     
+Rich, Abyee 
+
+
+[Back to Index](../README.html)

@@ -358,6 +358,10 @@ mysql/mysql.md
 mysql/mysql.html
 mysql/figure/
 
+# Northgate
+Northgate/Northgate.md
+Northgate/Northgate.html
+
 # osPkgs directory
 osPkgs/.DS_Store
 osPkgs/osPkgs.md
