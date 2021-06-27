@@ -50,6 +50,31 @@ Sublime Text may be downloaded and evaluated for free, however a license
 must be purchased for continued use. There is currently no enforced time
 limit for the evaluation.
 
+# ST4 Installation on Windows 10
+
+1. Open the Start Menu and type `environ``
+
+2. Select the item Edit the system environment variables
+
+3. Click the button Environment Variables at the bottom of the
+   System Properties dialog
+   
+4. Select, or create, the Path environment variable in the appropriate section:
+
+   - For all users, select Path in the System variables section
+
+   - Click the New button and add an entry with the Sublime Text installation
+     directory
+
+   - 64 bit installs are typically in `C:\Program Files\Sublime Text\`
+
+   - 32 bit installs on a 64bit version of Windows will be in    
+     `C:\Program Files (x86)\Sublime Text\`
+     
+   - 32 bit installs on a 32bit version of Windows will be in    
+     `C:\Program Files\Sublime Text\`
+
+
 
 # Key info
 
