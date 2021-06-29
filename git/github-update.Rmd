@@ -17,7 +17,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# JRM Notes 202-06-29
+# JRM Notes 2021-06-29
 
 I created rsa keys for both macs, both win 10 virtual machines on the macs, and
 my desktop PC (Win10). I **think** I got them all...
