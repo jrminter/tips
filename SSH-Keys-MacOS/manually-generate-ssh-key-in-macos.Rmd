@@ -1,0 +1,123 @@
+---
+title: "Manually generating your SSH key in macOS"
+author: "Joyent"
+date: "2021-01-05 04:46 UTC"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+
+[Back to Index](../README.html)
+
+You generate an SSH key through macOS by using the Terminal application. Once you upload a valid public SSH key, the Triton Compute Service uses SmartLogin to copy the public key to any new SmartMachine you provision.
+
+Joyent recommends RSA keys because the node-manta CLI programs work with RSA keys both locally and with the ssh agent. DSA keys will work only if the private key is on the same system as the CLI, and not password-protected.
+
+# About Terminal
+
+Terminal is the terminal emulator which provides a text-based command line interface to the Unix shell of macOS.
+
+To open the macOS Terminal, follow these steps:
+
+1. In Finder, choose Utilities from the Applications folder.
+2. Find Terminal in the Utilities list.
+3. Open Terminal.
+
+The Terminal window opens with the commandline prompt displaying the name of your machine and your username.
+
+# Generating an SSH key
+
+An SSH key consists of a pair of files. One is the private key, which should never be shared with anyone. The other is the public key. The other file is a public key which allows you to log into the containers and VMs you provision. When you generate the keys, you will use ssh-keygen to store the keys in a safe location so you can bypass the login prompt when connecting to your instances.
+
+To generate SSH keys in macOS, follow these steps:
+
+1. Enter the following command in the Terminal window.
+
+```
+   ssh-keygen -t rsa
+```
+This starts the key generation process. When you execute this command,
+the ssh-keygen utility prompts you to indicate where to store the key.
+
+Press the ENTER key to accept the default location. The ssh-keygen
+utility prompts you for a passphrase.
+
+Type in a passphrase. You can also hit the ENTER key to accept the default (no passphrase). However, this is not recommended.
+
+Warning! You will need to enter the passphrase a second time to continue.
+
+After you confirm the passphrase, the system generates the key pair.
+
+Your identification has been saved in `/Users/myname/.ssh/id_rsa`.
+
+Your public key has been saved in `/Users/myname/.ssh/id_rsa.pub`.
+
+The key fingerprint is:
+
+```
+ae:89:72:0b:85:da:5a:f4:7c:1f:c2:43:fd:c6:44:38 myname@mymac.local
+The key's randomart image is:
++--[ RSA 2048]----+
+|                 |
+|         .       |
+|        E .      |
+|   .   . o       |
+|  o . . S .      |
+| + + o . +       |
+|. + o = o +      |
+| o...o * o       |
+|.  oo.o .        |
++-----------------+
+```
+
+Your private key is saved to the `id_rsa` file in the `.ssh` directory
+and is used to verify the public key you use belongs to the same account.
+
+
+# Never share your private key with anyone!
+
+Your public key is saved to the `id_rsa.pub` file and is the key you
+upload to your Triton Compute Service account. You can save this key
+to the clipboard by running this:
+
+```
+pbcopy < ~/.ssh/id_rsa.pub
+```
+
+# Importing your SSH key
+
+Now you must import the copied SSH key to the portal.
+
+- After you copy the SSH key to the clipboard, return to your account page.
+
+- Choose to Import Public Key and paste your SSH key into the Public Key field.
+
+- In the Key Name field, provide a name for the key. Note: although
+  providing a key name is optional, it is a best practice for ease
+  of managing multiple SSH keys.
+
+- Add the key. It will now appear in your table of keys under SSH.
+
+# The SSH Keys table
+
+**Troubleshooting**
+
+You may see a password prompt like this:
+
+```
+$ ssh root@198.51.100.27
+root@198.51.100.27's password:
+```
+
+This is because:
+
+You did not enter the correct passphrase.
+The private key on your Macintosh (id_rsa) does not match the public key
+stored with your account.
+
+The public key was not entered correctly in your Triton account.
+
+[Back to Index](../README.html)

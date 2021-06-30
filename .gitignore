@@ -635,6 +635,7 @@ Sweave/figure/
 # scripts dir
 scripts/.RData
 
+SSH-Keys-MacOS/*.html
 
 software-dev/*.html
 # SQL dir
