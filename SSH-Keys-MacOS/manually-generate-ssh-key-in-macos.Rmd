@@ -26,7 +26,7 @@ To open the macOS Terminal, follow these steps:
 2. Find Terminal in the Utilities list.
 3. Open Terminal.
 
-The Terminal window opens with the commandline prompt displaying the name of your machine and your username.
+The Terminal window opens with the command line prompt displaying the name of your machine and your username.
 
 # Generating an SSH key
 
@@ -118,6 +118,6 @@ You did not enter the correct passphrase.
 The private key on your Macintosh (id_rsa) does not match the public key
 stored with your account.
 
-The public key was not entered correctly in your Triton account.
+The public key was not entered correctly in your account.
 
 [Back to Index](../README.html)
