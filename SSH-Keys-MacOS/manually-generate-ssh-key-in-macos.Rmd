@@ -12,13 +12,18 @@ output:
 
 [Back to Index](../README.html)
 
-You generate an SSH key through macOS by using the Terminal application. Once you upload a valid public SSH key, the Triton Compute Service uses SmartLogin to copy the public key to any new SmartMachine you provision.
+You generate an SSH key through macOS by using the Terminal application. Once
+you upload a valid public SSH key, the Triton Compute Service uses SmartLogin to
+copy the public key to any new SmartMachine you provision.
 
-Joyent recommends RSA keys because the node-manta CLI programs work with RSA keys both locally and with the ssh agent. DSA keys will work only if the private key is on the same system as the CLI, and not password-protected.
+Joyent recommends RSA keys because the node-manta CLI programs work with RSA keys
+both locally and with the ssh agent. DSA keys will work only if the private key
+is on the same system as the CLI, and not password-protected.
 
 # About Terminal
 
-Terminal is the terminal emulator which provides a text-based command line interface to the Unix shell of macOS.
+Terminal is the terminal emulator which provides a text-based command line
+interface to the Unix shell of macOS.
 
 To open the macOS Terminal, follow these steps:
 
@@ -26,11 +31,16 @@ To open the macOS Terminal, follow these steps:
 2. Find Terminal in the Utilities list.
 3. Open Terminal.
 
-The Terminal window opens with the command line prompt displaying the name of your machine and your username.
+The Terminal window opens with the command line prompt displaying the name of
+your machine and your username.
 
 # Generating an SSH key
 
-An SSH key consists of a pair of files. One is the private key, which should never be shared with anyone. The other is the public key. The other file is a public key which allows you to log into the containers and VMs you provision. When you generate the keys, you will use ssh-keygen to store the keys in a safe location so you can bypass the login prompt when connecting to your instances.
+An SSH key consists of a pair of files. One is the private key, which should
+never be shared with anyone. The other is the public key. The other file is a
+public key which allows you to log into the containers and VMs you provision.
+When you generate the keys, you will use ssh-keygen to store the keys in a safe
+location so you can bypass the login prompt when connecting to your instances.
 
 To generate SSH keys in macOS, follow these steps:
 
