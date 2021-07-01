@@ -24,6 +24,17 @@ I do not recall doing so. I will watch for it...
 I think I will need to push the brightness to use the iPhone-12
 in the mount in my 2012 Civic.  First world problems...
 
+# How to invert colors
+
+I want to make sure I need this prior to trying...
+
+From [here](https://mcmw.abilitynet.org.uk/invert-colours-iphoneipadipod-touch-ios-12)
+
+
+1. Open the 'Accessibility Settings': Settings > General > Accessibility.
+2. Under the 'Vision' section, tap on 'Display Accommodations'.
+3. Tap on 'Invert Colours'.
+4. Tap on the toggle switch for the 'Invert Colours' mode you would like to use:
 
 
 # Turn off emojis
