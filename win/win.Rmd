@@ -56,6 +56,8 @@ piece of crap on your box.
 
 You're welcome...
 
+(This was easy to follow...)
+
 
 ## Fixing conda cleanup
 
