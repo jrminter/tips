@@ -1,7 +1,7 @@
 ---
 title: "iOS Tips"
 author: "J. R. Minter"
-date: "Started: 2014-09-07, Last modified: 2019-12-14"
+date: "Started: 2014-09-07, Last modified: 2021-07-01"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -11,6 +11,17 @@ output:
 ---
 
 [Back to Index](../README.html)
+
+# Stuck in Dark Mode
+
+Our whole family worked to find this answer:
+
+Happily, the [Apple Discussion](https://discussions.apple.com/thread/250656701)
+provided a fix: **triple-click** the **side-button** to switch the `old`
+dark mode **off**. Tim thought I might have set up **invert colors**.
+I do not recall doing so. I will watch for it...
+
+
 
 # Turn off emojis
 
