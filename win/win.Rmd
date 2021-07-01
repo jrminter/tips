@@ -14,6 +14,49 @@ output:
 
 # Some useful quick tips for Windows 10
 
+## Denninger on Device Security
+
+Note to Those Running Windows 10
+
+From: [here](https://market-ticker.org/akcs-www?post=242828).
+
+Go into "Windows Security Settings" and type "Security".
+
+Click "Windows Security Settings" (top item) then from
+there click "Open Windows Security".
+
+![You'll get this](png/device-security.png)
+
+ImageSelect the first one, "Core isolation details".
+
+If you have a reasonably recent processor that can do
+virtualization there will be an entry called
+"Memory Integrity" as the only entry. If it is off,
+turn it on.
+
+It may fail. If it does it will give you a clickable list of reasons.
+
+The reason(s) are usually old device drivers and similar.
+
+Those may or may not be hidden time bombs that are siphoning off
+data; every one of them has privileges and thus can interdict
+anything it wants and exfiltrate it off your machine.
+
+If you do not know what they are, find out and, if possible remove them.
+Getting rid of them can be a bit complex.but it can be done.
+
+Reboot.
+
+Then get an elevated command prompt (click the windows, type "CMD",
+right click BEFORE you hit enter and select "Run as Administrator"
+and in the command window type "SFC/SCANNOW".)
+
+If there is anything found and repaired you almost certainly had some
+piece of crap on your box.
+
+You're welcome...
+
+
 ## Fixing conda cleanup
 
 fixing-conda-issues.txt
