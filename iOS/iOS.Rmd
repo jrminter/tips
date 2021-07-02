@@ -1,7 +1,7 @@
 ---
 title: "iOS Tips"
 author: "J. R. Minter"
-date: "Started: 2014-09-07, Last modified: 2021-07-01"
+date: "Started: 2014-09-07, Last modified: 2021-07-02"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -11,6 +11,17 @@ output:
 ---
 
 [Back to Index](../README.html)
+
+# Changing Brightness on ios12
+
+Open
+
+```
+Settings > Display and Brightness 
+```
+
+Then manually increase brightness **with the slider**.
+
 
 # Stuck in Dark Mode
 
