@@ -4,11 +4,15 @@ author: "John Minter"
 date: 'Original: 2021-05-02, Last Modified: 2021-07-02'
 output:
   html_document:
-    css: ../theme/jm-gray-vignette.css
-    number_sections: yes
-    toc: yes
-    toc_depth: 3
+    df_print: paged
+  pdf_document:
+    latex_engine: xelatex
+geometry: margin=0.75in
 ---
+\fontsize{17}{19.2}
+\fontseries{r}
+\selectfont
+
 [Back to Index](../README.html)
 
 Steps for using the Garmin 55 GPS
