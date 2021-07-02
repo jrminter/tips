@@ -489,6 +489,8 @@ ffmpeg -i title.mkv -c copy title.mp4
 
 [gas](./gas/secrets-to-gas-control.html)
 
+[Garmin 55](./Garmin-55/Garmin-55.html)
+
 [generator](./generator/generator.html)
 
 [gfortran](./gfortran/gfortran.html)

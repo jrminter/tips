@@ -1,0 +1,32 @@
+---
+title: "Garmin 55 GPS"
+author: "John Minter"
+date: 'Original: 2021-05-02, Last Modified: 2021-07-02'
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+[Back to Index](../README.html)
+
+Steps for using the Garmin 55 GPS
+
+1. Turn Garmin on
+
+2. Agree (to license...)
+
+3. Get a screen **Where To**
+
+4. Can choose **Home** or **Address**.
+
+5. For address enter **just** the **house number** i.e. 1770
+
+6. Select **Done**
+
+7. Enter the **Street** - i.e. **Long Pond Road**
+
+8. Make sure it is right, then press **Go**
+
+[Back to Index](../README.html)
