@@ -161,6 +161,10 @@ french-press-instructions/french-press-instructions.pdf
 gas/*.html
 gas/*.pdf
 
+# Garmin
+Garmin-55/*.pdf
+Garmin-55/*.html
+
 # generator
 generator/generator.html
 
