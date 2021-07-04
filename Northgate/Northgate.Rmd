@@ -3,14 +3,14 @@ title: "Northgate Information"
 author: "J. R. Minter"
 date: 'Started: 2021-06-19, Last modified: 2021-07-04'
 output:
+  pdf_document:
+    toc: no
+    toc_depth: '3'
   html_document:
     css: ../theme/jm-gray-vignette.css
     number_sections: yes
     toc: no
     toc_depth: 3
-  pdf_document:
-    toc: no
-    toc_depth: '3'
 ---
 [Back to Index](../README.html)
 
