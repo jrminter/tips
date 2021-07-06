@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-06-27"
+date: "Started: 2013-07-16, Last modified: 2021-07-06"
 output:
   html_document:
     keep_md: yes
@@ -16,6 +16,12 @@ output:
 
 This repository contains the John Minter's useful tips in Rmarkdown
 format.
+
+To check internet outage try to ping Google:
+
+```
+ping 8.8.8.8
+```
 
 
 
