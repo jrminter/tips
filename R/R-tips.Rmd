@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-06-07"
+date: "Started: 2013-07-16, Last modified: 2021-07-07"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -22,7 +22,15 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 # Don't forget...
 
-Configuring RStudio v1.4 Update
+## R Patched Builds
+
+- R Patched **Nightly Builds** for
+  [Windows](https://cran.r-project.org/bin/windows/base/rpatched.html).
+
+- R Patched **Nightly Builds** for
+  [macOS](https://mac.r-project.org/).
+
+## Configuring RStudio v1.4 Update
 
 See [here](https://www.r-bloggers.com/2021/06/rstudio-v1-4-update-whats-new/)
 
@@ -33,6 +41,8 @@ WIN: PATH="${RTOOLS40_HOME}\usr\bin;${PATH}"
 
 
 ```
+
+
 
 [raster data in R](https://www.neonscience.org/resources/learning-hub/tutorials/raster-data-r)
 
