@@ -30,6 +30,8 @@ suppressPackageStartupMessages(library("tidyverse"))
 - R Patched **Nightly Builds** for
   [macOS](https://mac.r-project.org/).
 
+- RStudio [**Daily Builds**](https://dailies.rstudio.com/).
+
 ## Configuring RStudio v1.4 Update
 
 See [here](https://www.r-bloggers.com/2021/06/rstudio-v1-4-update-whats-new/)
