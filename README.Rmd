@@ -673,6 +673,8 @@ ffmpeg -i title.mkv -c copy title.mp4
 
 [vacuum systems](./vacuum/vacuum.html)
 
+[Videos](./videos/videos.html)
+
 [Win](./win/win.html)
 
 [winCasino](./winCasino/winCasino.html)
