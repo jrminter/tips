@@ -37,6 +37,25 @@ A window will open for the install and it will have a date. One can
 quit the installer and append the date to the `*.jar` file. I store
 these on my Win10 box...
 
+# Helpful conversion of an image to SVG
+
+On 2021-07-08 Oldrich wrote on the Probe Software Forum:
+
+> Suddenly I cannot save the spectra in SVG. Now, there are only options
+> to save them in bitmap format (TIFF, JPEG, PNG, BMP). No possibility
+> to save the spectrum in the vector graphic 
+> (Debian Buster 5.10.0-0.bpo.5-amd64, DTSAII,
+> Microscopium 2021-01-06 revision). The same on the old box running
+> Win7 and the identical version of DTSAII.
+
+
+There is an online conversion program at:
+
+[picsvg.com](https://picsvg.com/)
+
+I'm not sure how well it will work...
+
+[Here](https://picsvg.com/).
 
 # Helpful DTSA-II Videos
 
