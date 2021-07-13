@@ -46,6 +46,9 @@ WIN: PATH="${RTOOLS40_HOME}\usr\bin;${PATH}"
 
 ```
 
+`usethis::use_blank_slate()`  sets your @rstudio preference to NEVER
+save/restore `.RData` on exit/startup, which is a lifestyle endorsed by
+many #rstats folks (including Jenny Bryan). I think it makes sense...
 
 
 [raster data in R](https://www.neonscience.org/resources/learning-hub/tutorials/raster-data-r)
