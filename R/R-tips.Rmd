@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-07-07"
+date: "Started: 2013-07-16, Last modified: 2021-07-13"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -31,6 +31,8 @@ suppressPackageStartupMessages(library("tidyverse"))
   [macOS](https://mac.r-project.org/).
 
 - RStudio [**Daily Builds**](https://dailies.rstudio.com/).
+
+- Rstudio [**Preview**](https://www.rstudio.com/products/rstudio/download/preview/) Release. For testing purposes...
 
 ## Configuring RStudio v1.4 Update
 
