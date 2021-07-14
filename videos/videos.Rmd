@@ -1,0 +1,72 @@
+---
+title: "Video Info"
+author: "J. R. Minter"
+date: "Started: 2021-07-08, Last modified: 2021-07-08"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+[Back to Index](../README.html)
+
+These are movies I like. 
+
+1. **The Horse Soldiers** 
+    (from [Wikipedia](https://en.wikipedia.org/wiki/Battle_of_Newton%27s_Station))
+
+   > Battle of Newton's Station (Missisippi) - April 24, 1963
+   >
+   > Location: 	Newton's Station, Mississippi
+   > Result:	Union victory
+   >
+   > Belligerents
+   >
+   > - United States United States (Union)
+   > - Confederate States of America CSA (Confederacy)
+   >
+   > Commanders and leaders:
+   >
+   > Benjamin H. Grierson	Unknown Strength    
+   > 2 Regiments	34 Soldiers
+   > 
+   > Casualties and losses
+   > 4	25
+   >
+   > Union cavalry raiders under the command of Col. Benjamin Grierson,
+   > in an effort to disrupt Confederate communications, probed deep in
+   > enemy territory and entered the town of Newton's Station (now Newton).
+   > They succeeded in securing the town without any serious fighting,
+   > and captured two Confederate trains.
+   >
+   > The raiders also destroyed several miles of railroad track and
+   > telegraph wires in the vicinity, severing communications between
+   > Confederate-held Vicksburg and the Eastern Theatre commanders.
+
+   > The two trains (one a freight and the second a mixed freight and
+   > passenger) were actually captured by Lt-Colonel William Blackburn,
+   > who had ridden ahead in darkness to scout the town. His men set fire
+   > to the trains, and exploding ammunition led the nearby Grierson to
+   > assume the worst, that a major battle had started. He arrived with
+   > the main force to find Blackburn's men helping themselves to
+   > confiscated whiskey.
+
+   > Over the next few hours Union forces destroyed trackage and equipment,
+   > east to the Chunky River and west as far as possible. A large building
+   > in the town with uniforms and arms was burned, and the railroad
+   > depot was burned (not before local hospital staff were allowed to
+   > remove medicine and food). Assembling his forces Grierson departed
+   > the area around 2 pm, leaving ruin and wreckage.
+   >
+   > The Battle of Newton's Station and Grierson's cavalry exploit
+   > starting in La Grange, Tennessee were the basis of the 1959 movie
+   > **The Horse Soldiers**, directed by John Ford, starring John Wayne
+   > and William Holden.
+
+
+[Back to Index](../README.html)
+
