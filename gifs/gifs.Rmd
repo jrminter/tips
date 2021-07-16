@@ -29,5 +29,9 @@ I also enjoyed  this image from Penn State.
 There is a YouTube tutorial on making an animated GIF using Fiji to
 make an animated GIF [here](https://www.youtube.com/watch?v=bW1A1ZrktWw).
 
+From Dan Killiam on #Rstats:
+![Rename columns in a dataframe](gifs/rename-columns-of-a-data-frame.gif)
+
+
 
 [Back to Index](../README.html)
