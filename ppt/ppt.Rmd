@@ -1,0 +1,17 @@
+---
+title: "Power Point Tips "
+author: "J. R. Minter"
+date: "Started: 2021-07-16, Last modified: 2021-07-16"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+[Back to Index](../README.html)
+
+# Microsoft PowerPoint
+
+
+[Back to Index](../README.html)

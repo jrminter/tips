@@ -585,6 +585,8 @@ ffmpeg -i title.mkv -c copy title.mp4
 
 [portable makefiles](./portableMakefiles/portableMakefiles.html)
 
+[PowerPoint](./ppt/ppt.html)
+
 [Preparation of samples for EDS](./prepForEDS/prepForEDS.html)
 
 [Probe for EPMA](./probeForEPMA/probeForEPMA.html)
