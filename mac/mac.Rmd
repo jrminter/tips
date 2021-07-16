@@ -32,6 +32,24 @@ tap on the '**View**' button and click on the **ellipsis** that appears
 on the top-right corner to configure their notification settings.
 **Swipe Up** brings them back...
 
+# Font installation
+
+**From @latavin243 2021-01-27**
+
+As of Jan 27, 2021 brew cask install is disabled, use `brew install --cask`
+instead as shown below:
+
+```
+brew tap homebrew/cask-fonts
+
+brew install --cask \
+  font-fira-code \
+  font-fira-mono \
+  font-fira-mono-for-powerline \
+  font-fira-sans
+```
+
+
 # User documents on my MacBook Pro 2020 13 inch
 
 I noticed that my  MacBook Pro 2020 seemed to put my user files in the 
