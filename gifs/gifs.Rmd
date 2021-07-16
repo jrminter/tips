@@ -15,9 +15,19 @@ output:
 These are John Minter's tips for a workflow using gifs.
 
 
-There is a great **MP4-to-GIF** converter [here](https://cloudconvert.com/mp4-to-gif)
+There is a great **MP4-to-GIF** converter [here](https://cloudconvert.com/mp4-to-gif).
 
-I used it to create [a Scooby-Doo](./gifs/Scooby-Doo.gif).
+I used it to create this image of
+
+![Scooby-Doo](./gifs/Scooby-Doo.gif)
+
+I also enjoyed  this image from Penn State.
+
+![Radiation from a dipole source](./gifs/sound-field-simple-acoustic-psu.gif)
+
+
+There is a YouTube tutorial on making an animated GIF using Fiji to
+make an animated GIF [here](https://www.youtube.com/watch?v=bW1A1ZrktWw)
 
 
 [Back to Index](../README.html)
