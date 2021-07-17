@@ -192,10 +192,10 @@ I needed these packages:
 
 ```
 texworks, paralist, subfig, caption, fancyhdr, secsty, tocbibind,
-tocloft, grfext
+tocloft, grfext, cochineal
 ```
 
-Find a package
+N.B. -`cochineal` is required to use the `lecturenotes` package.
 
 ```
 ```
