@@ -1,0 +1,35 @@
+---
+title: "R `here` pkg"
+author: "Jenny Richmond"
+date: "Started: 2018-10-18, JRM Last modified: 2021-07-19"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
+---
+[Back to Index](../README.html)
+
+
+# Info from Jenny Richmond
+
+
+From [the `here` package](http://jenrichmond.rbind.io/post/how-to-use-the-here-package/)
+
+
+hi #rstats friends, how do YOU use the `here` package? I thought I had my head around it but I'm doing something wrong. Here my markdown lives within the "markdown" folder, so I set here to the "data" folder, call read_csv(here("datafile.csv") and it doesn't work... help
+
+![](richmond-1.png)
+
+
+TFW you figure you have broken something so decide that now seems like a good time to learn `reprex`, you delete everything irrelevant to the problem out of the script and folders and then it decides to work. I should threaten my code with `reprex` more often #rstats
+
+
+![](richmond-2.png)
+
+
+[Back to Index](../README.html)
