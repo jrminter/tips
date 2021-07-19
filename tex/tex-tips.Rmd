@@ -49,6 +49,15 @@ output:
     If you encounter any problems when you start out, go through that check
     list first.
 
+# Lecture Notes Package & Fonts
+
+```
+remotes::install_github("grantmcdermott/lecturenotes")
+
+File > New File > R Markdown > From Template > Lecture Notes (lecturenotes)
+```
+
+It takes some work to install these fonts...
 
 # Current installation
 
