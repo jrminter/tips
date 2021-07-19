@@ -533,6 +533,8 @@ ffmpeg -i title.mkv -c copy title.mp4
 
 [iOS](./iOS/iOS.html)
 
+[JabRef](./JabRef/JabRef.html)
+
 [Jekyll on github.io](./jekyll-github/jekyll-github.html)
 
 [json](./json/json.html)

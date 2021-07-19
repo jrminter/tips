@@ -1,0 +1,27 @@
+---
+title: "JabRef Tips"
+author: "J. R. Minter"
+date: "Started: 2021-07-18, Last modified: 2021-07-18"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+
+[Back to Index](../README.html)
+
+I use **JabRef** as a bibliography manager.
+
+One can download JabRef [here](https://www.jabref.org/).
+
+User Documentation is available online [here](https://docs.jabref.org/)
+
+
+Currently, I have a bibliography for X-Ray Microanalysis that resides
+on both macbooks.
+
+
+
+[Back to Index](../README.html)
