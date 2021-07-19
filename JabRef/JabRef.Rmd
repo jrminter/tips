@@ -20,7 +20,7 @@ User Documentation is available online [here](https://docs.jabref.org/)
 
 
 Currently, I have a bibliography for X-Ray Microanalysis that resides
-on both macbooks.
+on both MacBooks and on Windows-10.
 
 
 
