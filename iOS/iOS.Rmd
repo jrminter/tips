@@ -12,7 +12,7 @@ output:
 
 [Back to Index](../README.html)
 
-# Changing Brightness on ios12
+# Changing Brightness on iOs12
 
 Open
 
