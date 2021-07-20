@@ -1,7 +1,7 @@
 ---
 title: "iOS Tips"
 author: "J. R. Minter"
-date: "Started: 2014-09-07, Last modified: 2021-07-02"
+date: "Started: 2014-09-07, Last modified: 2021-07-20"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -22,6 +22,9 @@ Settings > Display and Brightness
 
 Then manually increase brightness **with the slider**.
 
+# Music settings for iPhone12
+
+Leave your music playlist on the `Library` tab.
 
 # Stuck in Dark Mode
 
