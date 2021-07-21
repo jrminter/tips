@@ -45,6 +45,8 @@ bibtex/*.md
 bibtex/*.html
 bibtex/figure/
 
+Books/*.html
+
 # C++11 directory
 C++11/.DS_Store
 C++11/C++11-Tips.md
