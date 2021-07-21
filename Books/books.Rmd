@@ -1,0 +1,29 @@
+---
+title: "Books to Read"
+author: "J. R. Minter"
+date: "Started: 2021-07-20, Last modified: 2021-07-20"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+[Back to Index](../README.html)
+
+# Introduction
+
+I like to keep track of books to read at night.
+
+# Jack Ryan Novels (in order)
+
+- The Hunt for Red October (1984)    
+- Patriot Games (1987)    
+- The Cardinal of the Kremlin (1988)    
+- Clear and Present Danger (1989)    
+- The Sum of All Fears (1991)    
+- Without Remorse (1993)    
+- Debt of Honor (1994)    
+- Executive Orders (1996)    
+
+[Back to Index](../README.html)
