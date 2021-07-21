@@ -21,41 +21,120 @@ output:
 From [the `here` package](http://jenrichmond.rbind.io/post/how-to-use-the-here-package/)
 
 
-hi #rstats friends, how do YOU use the `here` package? I thought I had my head around it but I'm doing something wrong. Here my markdown lives within the "markdown" folder, so I set here to the "data" folder, call read_csv(here("datafile.csv") and it doesn't work... help
+Hi #rstats friends, how do YOU use the `here` package? I thought I had my head
+around it but I'm doing something wrong. Here my markdown lives within the
+"markdown" folder, so I set here to the "data" folder, call 
+`read_csv(here("datafile.csv")` and it doesn't work... help
 
 ![](richmond-1.png)
 
 
-TFW you figure you have broken something so decide that now seems like a good time to learn `reprex`, you delete everything irrelevant to the problem out of the script and folders and then it decides to work. I should threaten my code with `reprex` more often #rstats
+TFW you figure you have broken something so decide that now seems like a good
+time to learn `reprex`, you delete everything irrelevant to the problem out of
+the script and folders and then it decides to work. I should threaten my code
+with `reprex` more often #rstats
 
 
 ![](richmond-2.png)
 
 I found two other posts on `http://jenrichmond.rbind.io`
 
-# HOW TO USE THE `HERE` PACKAGE
+# How to use the `here` package
 
-I’m still working on getting my head around where R thinks we work and how to tell it where my stuff lives (aka working directories). On twitter yesterday Alison Hill, Adam Gruer, Zoe Meers and Irene Steves helped me sort out my issues with here. hi #rstats friends, how do YOU use the `here` package? I thought I had my head around it but I'm doing something wrong. Here my markdown lives within the "markdown" folder, so I set here to the "data" folder, call read_csv(here("datafile.
+I’m still working on getting my head around where R thinks we work and how to
+tell it where my stuff lives (aka working directories). On twitter yesterday
+Alison Hill, Adam Gruer, Zoe Meers and Irene Steves helped me sort out my
+issues with here. hi #rstats friends, how do YOU use the `here` package?
 
-# WHERE IS HERE?
+I thought I had my head around it but I'm doing something wrong. Here my
+markdown lives within the "markdown" folder, so I set here to the "data"
+folder, call read_csv(here("datafile/
 
-As I add new projects to my rstats portfolio and work collaboratively on projects with students the issue of working directories is becoming more and more complicated. Not really understanding how working directories and file paths actually work, I have been relying on the beginner logic… Everything will be just fine as long as you keep your datafiles in the same folder as your .rmd file via GIPHY
+# Where is `here`?
+
+As I add new projects to my rstats portfolio and work collaboratively on
+projects with students the issue of working directories is becoming more and
+more complicated. Not really understanding how working directories and file
+paths actually work, I have been relying on the beginner logic… Everything
+will be just fine as long as you keep your datafiles in the same folder as
+your .Rmd file.
 
 # This post from Twitter
 
-I am an academic @ UNSW Sydney, mother, and juggler. Learning new things and writing about it. Thoughts probably not suitable for public consumption. I'm still working on getting my head around where R thinks we work and where my stuff lives (AKA working directories.
+I am an academic @ UNSW Sydney, mother, and juggler. Learning new things and
+writing about it. Thoughts probably not suitable for public consumption. I'm
+still working on getting my head around where R thinks we work and where my
+stuff lives (AKA working directories).
 
-On twitter yesterday Alison Hill (@apresshill), Adam Grues (@AdamGruer), Zoe Meers (@zoe_meers) and Irene Steves (@i_steves) helped me sort out my issues with `here`.
+On twitter yesterday Alison Hill (@apresshill), Adam Grues (@AdamGruer),
+Zoe Meers (@zoe_meers) and Irene Steves (@i_steves) helped me sort out my
+issues with `here`.
 
 A/Prof Jenny Richmond @JenRichmond wrote:
 
-> Hi #rstats friends. How do you use the `here` package? I thought I head around it, but 
-> I'm doing something wrong. Here my markdown lives within the "markdown" folder, so I
-> set `here` to the "data" folder, called `read_csv(here("datafile.csv")) and it doesn't
-> work... Help!
+> Hi #rstats friends. How do you use the `here` package? I thought I head around
+> it, but  I'm doing something wrong. Here my markdown lives within the "markdown"
+> folder, so I set `here` to the "data" folder, called 
+> `read_csv(here("datafile.csv")) and it doesn't work... Help!
 
 Relative paths **work differently** in `.R` files compared to `.Rmd`
 
+# How to work out where you are
+
+My analysis scripts (.Rmd files) live in a folder called markdown. So when you
+ask R what the working directory is, it defaults to that folder. This makes it
+difficult to tell R where your data files live.
+
+You can use the R `getwd()` function where you are.
+
+It will return something like 
+
+```
+[1] "/Users/your_id/path_to-rest"
+```
+
+# Use `here` to tell R where your data is
+
+The here package allows you to set the top level of your project folder as `here`
+and to specify where things live relative to that location. I was under the
+misconception that here set the directory, but it simply builds a path to the
+top level of your project file every time you use it.
+
+```
+here::here()
+```
+It will return something like this:
+
+[1] “/Users/jenny/Desktop/project”
+
+You can use `here` when reading data that live within a “data” folder.
+
+```
+data <- read_csv(here("datafolder", "datafile.csv"))
+```
+
+If your data lives in the depths of several folders, you just string the folder
+references together.
+
+```
+data <- read_csv(here("datafolder", "subfolder", "datafile.csv"))
+```
+
+I like this “folder”, “subfolder”, “datafile.csv” method to call the path,
+because I am still fuzzy on how many . and / are needed in filepaths,
+but alternatively you can combine a more traditional file path with here.
+
+```
+data <- read_csv(here("./datafolder/datafile.csv"))
+```
+
+You can also use here to make a filepath, and then use that file path to load
+lots of .csv's at once using `map(read_csv)`. Check out my post about that use
+case [here](http://jenrichmond.rbind.io/post/where-is-here/).
+
+Note: most of yesterday’s problem stemmed from a clash between `lubridate`
+and `here`. If you have used `lubridate` it is best to be specific that you
+want `here::here()` [with 2 colons].
 
 
 [Back to Index](../README.html)
