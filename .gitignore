@@ -238,6 +238,8 @@ hacklev/figure/
 hearing-aids/.DS_Store
 hearing-aids/*.html
 
+here/here.html
+
 # homebrew directory
 homebrew/.DS_Store
 homebrew/homebrew.md
