@@ -24,7 +24,7 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 ## Key packages
 
-install.packages("ggplot2", "data.table", "tidyverse", "tidyr", "shiny", "plotly", "knitr", "mlr3", "xgboost", "caret")
+install.packages("ggplot2", "tidyverse", "tidyr", "shiny", "plotly", "knitr", "mlr3", "xgboost", "caret")
 
 ## R Patched Builds
 
