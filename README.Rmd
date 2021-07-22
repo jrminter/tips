@@ -37,6 +37,7 @@ Some helpful information from @CMSeeberger:
 
 
 [Set up R universe](https://ropensci.org/blog/2021/06/22/setup-runiverse/)
+(from ROpenScience).
 
 I had issues with Anaconda Powershell in a Win 10 VM window. Try 
 `Run as Adminstrator`. It is easier to read! Better yet, click on the
