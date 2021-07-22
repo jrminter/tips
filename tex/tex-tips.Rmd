@@ -1,7 +1,7 @@
 ---
 title: "LaTeX Hints"
 author: "J. R. Minter"
-date: 'Started: 2013-07-16, Last modified: 2021-07-17'
+date: 'Started: 2013-07-16, Last modified: 2021-07-22'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -28,8 +28,11 @@ output:
 
     [koma-script-scrlttr2](https://tex.stackexchange.com/questions/403077/what-are-the-miminal-required-environments-for-a-koma-script-scrlttr2)
 
+5. From `TeX and Typography` `@TeXtip`    
 
-5. A couple of good hints for problems
+   You cannot use `\\` to produce a backslash. Use $\backslash$ instead.
+
+6. A couple of good hints for problems
 
     **From Dikinwah Books: Top Five Mistakes Made by New Users**
 
