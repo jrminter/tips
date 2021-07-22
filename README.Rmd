@@ -1,7 +1,7 @@
 ---
 title: "John Minter's Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-07-10"
+date: "Started: 2013-07-16, Last modified: 2021-07-22"
 output:
   html_document:
     keep_md: yes
@@ -23,9 +23,20 @@ To check internet outage try to ping Google:
 ping 8.8.8.8
 ```
 
+Some helpful information from @CMSeeberger:
+
+> Colin Seeberger    
+> NEW in @NEJM:    
+> 
+> **2 doses of the Pfizer vaccine offer 88% protection** against
+> symptomatic disease caused by the **delta variant**. Just slightly
+> down from 94% against the alpha variant (B.1.1.7) that was first
+> discovered in Britain & became dominant across the globe earlier this
+> year.
 
 
-[This](https://ropensci.org/blog/2021/06/22/setup-runiverse/)
+
+[Set up R universe](https://ropensci.org/blog/2021/06/22/setup-runiverse/)
 
 I had issues with Anaconda Powershell in a Win 10 VM window. Try 
 `Run as Adminstrator`. It is easier to read! Better yet, click on the
