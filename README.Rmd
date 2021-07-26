@@ -17,6 +17,19 @@ output:
 This repository contains the John Minter's useful tips in Rmarkdown
 format.
 
+A great quote from Doug Wilson:
+
+> Always **act**, _not_ **react**!
+
+A great quote from Tom Clancy:
+
+> Sasha taught the boy that preparation, knowledge, and discipline can
+> deal with any form of danger; that danger confronted properly is not
+> something a man must fear.    
+>
+> Tom Clancy, The Hunt for Red October, page 28
+ 
+
 To check internet outage try to ping Google:
 
 ```
