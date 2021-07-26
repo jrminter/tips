@@ -26,6 +26,13 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 install.packages("ggplot2", "tidyverse", "tidyr", "shiny", "plotly", "knitr", "mlr3", "xgboost", "caret")
 
+also `paged reports`
+
+```
+remotes::install_github("rfortherestofus/pagedreport", ref = "main")
+```
+
+
 ## R Patched Builds
 
 - R Patched **Nightly Builds** for
