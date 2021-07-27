@@ -26,7 +26,7 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 install.packages("ggplot2", "tidyverse", "tidyr", "shiny", "plotly", "knitr", "mlr3", "xgboost", "caret")
 
-also `paged reports`
+also `pagedreport`
 
 ```
 remotes::install_github("rfortherestofus/pagedreport", ref = "main")
