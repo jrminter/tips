@@ -12,6 +12,12 @@ output:
 
 [Back to Index](../README.html)
 
+JRM addition **2021-07-29**:
+
+check out [this](https://docs.github.com/en/enterprise-server@3.0/github/authenticating-to-github/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) site. 
+
+I may need to see which systems have problems...
+
 You generate an SSH key through macOS by using the Terminal application. Once
 you upload a valid public SSH key, the Triton Compute Service uses SmartLogin to
 copy the public key to any new SmartMachine you provision.
