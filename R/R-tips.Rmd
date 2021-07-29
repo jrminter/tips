@@ -22,6 +22,11 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 # Don't forget...
 
+[R-Project](https://www.r-project.org/)
+
+> R version 4.1.1 (Kick Things) prerelease versions will appear starting
+> Saturday 2021-07-31. Final release is scheduled for Tuesday 2021-08-10.
+
 ## Key packages
 
 install.packages("ggplot2", "tidyverse", "tidyr", "shiny", "plotly", "knitr", "mlr3", "xgboost", "caret")
