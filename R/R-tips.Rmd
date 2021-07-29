@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-07-22"
+date: "Started: 2013-07-16, Last modified: 2021-07-29"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -31,7 +31,11 @@ also `pagedreport`
 ```
 remotes::install_github("rfortherestofus/pagedreport", ref = "main")
 ```
+## From Peter Dalgard (2021-07-29)
 
+> #rstats reminder: The countdown to 4.1.1 is imminent. (Beta versions Saturday,
+> release candidates Tuesday, release Tue 10th.) So now rather than the 11th is
+> a good time to check for remaining bugs.
 
 ## R Patched Builds
 
