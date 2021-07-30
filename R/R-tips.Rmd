@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-07-22"
+date: "Started: 2013-07-16, Last modified: 2021-07-29"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -22,15 +22,21 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 # Don't forget...
 
+[R-Project](https://www.r-project.org/)
+
+> R version 4.1.1 (Kick Things) prerelease versions will appear starting
+> Saturday 2021-07-31. Final release is scheduled for Tuesday 2021-08-10.
+
 ## Key packages
 
 install.packages("ggplot2", "tidyverse", "tidyr", "shiny", "plotly", "knitr", "mlr3", "xgboost", "caret")
 
-also `paged reports`
+also `pagedreport`
 
 ```
 remotes::install_github("rfortherestofus/pagedreport", ref = "main")
 ```
+## From Peter Dalgard (2021-07-29)
 
 ## R-4.1.1 Release
 
@@ -38,6 +44,9 @@ remotes::install_github("rfortherestofus/pagedreport", ref = "main")
 > Release candidate tarballs will be made available during the week up to
 > the release.
 
+> #rstats reminder: The countdown to 4.1.1 is imminent. (Beta versions Saturday,
+> release candidates Tuesday, release Tue 10th.) So now rather than the 11th is
+> a good time to check for remaining bugs.
 
 ## R Patched Builds
 
