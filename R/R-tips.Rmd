@@ -32,6 +32,12 @@ also `paged reports`
 remotes::install_github("rfortherestofus/pagedreport", ref = "main")
 ```
 
+## R-4.1.1 Release
+
+> The release of 4.1.1 ("Kick Things") is scheduled for Tuesday 2021-08-10.
+> Release candidate tarballs will be made available during the week up to
+> the release.
+
 
 ## R Patched Builds
 
