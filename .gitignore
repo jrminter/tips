@@ -13,6 +13,7 @@ no_ad_blocker.html
 */*_files
 
 # 2012-Honda-Civic
+2012-Honda/.20*
 2012-Honda-Civic/2012-Honda-Civic.html
 
 AirPods/Use-AirPods-with-Apple-TV.html
@@ -21,6 +22,7 @@ AirPods/Use-AirPods-with-Apple-TV.html
 AccessToSqlite/.DS_Store
 AccessToSqlite/AccessToSqlite.html
 AccessToSqlite/AccessToSqlite_fi*
+AccessToSqlite/._A*
 
 # automater directory
 automater/.DS_Store
@@ -145,6 +147,8 @@ Feynman_technique/.DS_Store
 Feynman_technique/Feynman_technique.md
 Feynman_technique/Feynman_technique.html
 Feynman_technique/figure/
+
+Feynman*/*.html
 
 # fiji-plugin-development dir
 fiji-plugin-development/.DS_Store
@@ -347,6 +351,8 @@ micro-sample-prep/micro-sample-prep.html
 micro-sample-prep/figure/
 
 midb/*.html
+
+Mobile-Gas-Pumps/*.html
 
 # monteCarlo directory
 monteCarlo/.DS_Store
