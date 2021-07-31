@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-07-29"
+date: "Started: 2013-07-16, Last modified: 2021-07-31"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -20,14 +20,17 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 [Back to Index](../README.html)
 
-# Don't forget...
+# Key links for R.
 
-[R-Project](https://www.r-project.org/)
+1. [R-Project](https://www.r-project.org/)
+
+2. [R for macOS Developers](https://mac.r-project.org/)
 
 > R version 4.1.1 (Kick Things) prerelease versions will appear starting
-> Saturday 2021-07-31. Final release is scheduled for Tuesday 2021-08-10.
+> Saturday 2021-07-31. Final release is scheduled for 
+> **Tuesday 2021-08-10**.
 
-## Key Rmarkdown resources
+# Key Rmarkdown resources
 
 - [Getting Started with Rmarkdown](https://ourcodingclub.github.io/tutorials/rmarkdown/)
 
