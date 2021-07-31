@@ -27,6 +27,15 @@ suppressPackageStartupMessages(library("tidyverse"))
 > R version 4.1.1 (Kick Things) prerelease versions will appear starting
 > Saturday 2021-07-31. Final release is scheduled for Tuesday 2021-08-10.
 
+## Key Rmarkdown resources
+
+- [Getting Started with Rmarkdown](https://ourcodingclub.github.io/tutorials/rmarkdown/)
+
+- [Griffiths Lab Rmarkdowm](https://genviz.org/module-07-appendix/0007/03/01/introToRmarkdown/)
+
+- [earthdatascience.org Intro to Rmd](https://www.earthdatascience.org/courses/earth-analytics/document-your-science/about-open-science-and-why-open-science-is-important/)
+
+
 ## Key packages
 
 install.packages("ggplot2", "tidyverse", "tidyr", "shiny", "plotly", "knitr", "mlr3", "xgboost", "caret")
