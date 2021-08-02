@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-07-31"
+date: "Started: 2013-07-16, Last modified: 2021-08-02"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -24,7 +24,8 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 1. [R-Project](https://www.r-project.org/)
 
-2. [R for macOS Developers](https://mac.r-project.org/)
+2. [R-4.1.1 macOS beta build](https://mac.r-project.org/)         
+   [R-4.1.1 win beta build](https://cran.r-project.org/bin/windows/base/rtest.html)    
 
 > R version 4.1.1 (Kick Things) prerelease versions will appear starting
 > Saturday 2021-07-31. Final release is scheduled for 
