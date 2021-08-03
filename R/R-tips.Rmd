@@ -24,7 +24,9 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 1. [R-Project](https://www.r-project.org/)
 
-2. [R-4.1.1 macOS beta build](https://mac.r-project.org/)         
+2. [R-4.1.1 macOS beta build](https://mac.r-project.org/)        
+   [Nightly builds for macOS](https://mac.r-project.org/#nightly)    
+       
    [R-4.1.1 win beta build](https://cran.r-project.org/bin/windows/base/rtest.html)    
 
 > R version 4.1.1 (Kick Things) prerelease versions will appear starting
