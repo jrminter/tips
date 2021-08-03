@@ -37,7 +37,7 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 - [Getting Started with Rmarkdown](https://ourcodingclub.github.io/tutorials/rmarkdown/)
 
-- [Griffiths Lab Rmarkdowm](https://genviz.org/module-07-appendix/0007/03/01/introToRmarkdown/)
+- [Griffiths Lab Rmarkdown](https://genviz.org/module-07-appendix/0007/03/01/introToRmarkdown/)
 
 - [earthdatascience.org Intro to Rmd](https://www.earthdatascience.org/courses/earth-analytics/document-your-science/about-open-science-and-why-open-science-is-important/)
 
