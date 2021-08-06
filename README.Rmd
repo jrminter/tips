@@ -628,6 +628,8 @@ ffmpeg -i title.mkv -c copy title.mp4
 
 [qqplotr](./qqplotr/qqplotr.html)
 
+[quotes](./quotes/quotes.html)
+
 [R](./R/R-tips.html)
 
 [R-Anova](./R-Anova/R-Anova.html)
