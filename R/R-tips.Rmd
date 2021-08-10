@@ -26,6 +26,21 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 2. [R-4.1.1 macOS beta build](https://mac.r-project.org/)        
    [Nightly builds for macOS](https://mac.r-project.org/#nightly)    
+   
+   **Note**: I was surprised this morning when no binaries were released
+   for the R-4.1.1 were released this morning. Then I saw this tweet from
+   Peter Dalgaard:
+   
+   > Peter Dalgaard @pdalgd (Tue Aug 10)   
+   > #rstats 4.1.1 "Kick Things" (source version) has been released.
+   > Binaries will follow in due course.
+   
+   This will be a good way to set my expectations for binary releases.
+   The developers do not charge for their work and I am thankful for
+   what they do.
+   
+   
+   
        
    [R-4.1.1 win beta build](https://cran.r-project.org/bin/windows/base/rtest.html)    
 
