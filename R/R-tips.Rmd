@@ -37,7 +37,7 @@ suppressPackageStartupMessages(library("tidyverse"))
    
    This will be a good way to set my expectations for binary releases.
    The developers do not charge for their work and I am thankful for
-   what they do.
+   what they do. I want to follow this...
    
    
    
