@@ -17,11 +17,31 @@ output:
 This repository contains the John Minter's useful tips in Rmarkdown
 format.
 
-A great quote from Doug Wilson:
+# A funny Academic Translator
+
+I found this on Twitter...
+
+| What they say               | What they mean           |
+|-----------------------------|--------------------------|
+Various sources | I forgot the nameand author of one paper |
+We are grateful to the two anonymous peer reviewers for their constructive comments | God help them if I ever find out who they are |
+| A promising area for an initial study | I have to do this to get funding |
+| Widely discussed in the academic community | I accidentally ended up in the middle of a heated Twitter argument |
+| The notes were meticulously transcribed | I was drunk and missed out at least seven pages |                  
+| An extensive literature search | A quick Google search |
+| A complex phenomenon | I don't understand |
+| It is impossible to summarize simply | I still don't understand |
+| Approaching the traditonal threshold for statistical significance | Not significant |
+| More research is required   | I need funding           |
+
+I thought this was funny in a Ph.D. Comics mode...
+
+
+# A great quote from Doug Wilson:
 
 > Always **act**, _not_ **react**!
 
-A great quote from Tom Clancy:
+# A great quote from Tom Clancy:
 
 > Sasha taught the boy that preparation, knowledge, and discipline can
 > deal with any form of danger; that danger confronted properly is not
