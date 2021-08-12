@@ -1,7 +1,7 @@
 ---
 title: "Gnuplot Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-20, Last modified: 2021-05-09"
+date: "Started: 2013-07-20, Last modified: 2021-08-12"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -46,7 +46,8 @@ They provide win32 and win64 binaries.
 
 6. [SMU Physics](http://www.physics.smu.edu/fattarus/GnuplotTutorial.html)
 
-7. [gnuplotting.org](http://www.gnuplotting.org/output-terminals/) Not `https`...
+7. [gnuplotting.org](http://www.gnuplotting.org/output-terminals/)    
+   Not `https`...
 
 ## Key gnuplot windows tips that work consistently
 
