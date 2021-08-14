@@ -43,6 +43,4 @@ the system and make your vehicle inoperable.
 The security alarm continues for a maximum of two minutes until the
 security system deactivates.
 
-Let's add a line.
-
 [Back to Index](../README.html)
