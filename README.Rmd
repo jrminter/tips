@@ -19,7 +19,7 @@ format.
 
 # A funny Academic Translator
 
-I found this on Twitter...
+I found this on Twitter... It is funny!
 
 | What they say               | What they mean           |
 |-----------------------------|--------------------------|
