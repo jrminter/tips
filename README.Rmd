@@ -48,9 +48,22 @@ I thought this was funny in a Ph.D. Comics mode...
 > something a man must fear.    
 >
 > Tom Clancy, The Hunt for Red October, page 28
+
+# A helpful quote from Adam Grant
+
+> Anger is often seen as an irrational emotion. But it’s not due
+> to the absence of logic — it’s due to the presence of threat or harm.
+> 
+> Getting mad is a sign that something important to you is at risk.
+> 
+> Understanding what makes you angry is a prism for understanding
+> what you value.
  
 
-To check internet outage try to ping Google:
+# Testing internet connections
+
+> To check internet outage try to ping Google:
+> 
 
 ```
 ping 8.8.8.8
