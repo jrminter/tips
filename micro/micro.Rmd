@@ -1,7 +1,7 @@
 ---
 title: "Microscopy Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2019-07-12"
+date: "Started: 2013-07-16, Last modified: 2021-09-10"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -11,6 +11,31 @@ output:
 ---
 
 [Back to Index](../README.html)
+
+# High Resolution Imaging
+
+## From Antonio Carlos Joaquim
+
+2021-09-10
+
+> Hi Stephane, In addition to the Gold standard used to measure the
+resolution I used real samples such as metallic PVD nanolayers.
+Three factors needed to be improved to get 1,000,000X image:
+Faraday cage coil system to minimize magnetic interference;
+Anti-vibration shoe system to minimize floor chattering effect;
+Plasma Cleaning System to eliminate carbohydrate contamination.
+>
+> Good luck!
+> Antonio
+
+## From Chris Jones
+
+2021-09-10
+
+> Hi Stephane,
+> 
+> Along with all the excellent input and advice already posted, I'd also recommend cleaning your Au on C standard too. The surface will inevitably become contaminated over time, adding to surface contamination and resolution problems during high res imaging. Plasma or ozone cleaning both work well, plus try storing the standard in a clean cabinet, even under vacuum.
+
 
 # Good advice from Micro List on Connection to LAN
 
