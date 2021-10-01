@@ -1,7 +1,7 @@
 ---
-title: "John Minter's Helpful Tips"
+title: "Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-09-14"
+date: "Started: 2013-07-16, Last modified: 2021-10-01"
 output:
   html_document:
     keep_md: yes
@@ -21,9 +21,9 @@ format.
 My favorite path
 
 ```
-C:\Users\user_name\Documents\git\tips
-                                \jrmsolutions
-                                \jrmsermoms
+C:\Users\user_id\Documents\git\tips
+                              \jrmsolutions
+                              \jrmsermoms
 ```
 
 
