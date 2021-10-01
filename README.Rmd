@@ -17,12 +17,20 @@ output:
 This repository contains the John Minter's useful tips in Rmarkdown
 format.
 
+
+My favorite path
+
+```
+C:\Users\user_name\Documents\git\tips
+                                \jrmsolutions
+                                \jrmsermoms
+```
+
+
 See **Notifications**    
 
   1. Click on the **upper right corner of your screen** or    
   2. **swipe left _with 2 fingers_ from the** _right edge of your trackpad_.
-
-
 
 # A funny Academic Translator
 
