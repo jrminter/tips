@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-07-16"
+date: "Started: 2013-07-16, Last modified: 2021-10-03"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -10,6 +10,15 @@ output:
     toc_depth: 3
 ---
 [Back to Index](../README.html)
+
+# macOS Notification Center
+
+**Open Notification Center**: Click the date and time in the menu bar, or
+**swipe left with two fingers from the right edge of the trackpad.**
+
+**Close Notification Center**: Click anywhere on the desktop,
+click the date and time in the menu bar, or **swipe right** with
+two fingers toward the right edge of the trackpad.
 
 # Clean my Mac
 
