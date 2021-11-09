@@ -1,7 +1,7 @@
 ---
 title: "Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-10-01"
+date: "Started: 2013-07-16, Last modified: 2021-11-09"
 output:
   html_document:
     keep_md: yes
@@ -25,6 +25,11 @@ C:\Users\user_id\Documents\git\tips
                               \jrmsolutions
                               \jrmsermoms
 ```
+
+**Cleaning Stainless-Steel Coffee Mugs**  Use this link...  
+```https://www.youtube.com/watch?v=FQttuPcSyG8```
+
+Seems to be an adds problem...
 
 
 See **Notifications**    
