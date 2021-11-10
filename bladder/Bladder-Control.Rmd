@@ -1,0 +1,76 @@
+---
+title: "Bladder Control"
+author: "Gina Shaw"
+date: "2013-07-11"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+[Back to Index](../README.html)
+
+# Putting an Overactive Bladder to Bed
+
+[**From Web MD**](https://www.webmd.com/urinary-incontinence-oab/features/putting-an-overactive-bladder)
+
+After a long day, you’ve settled down for a comfortable night’s sleep. You’re just drifting off when suddenly you feel a warm wetness between your legs -- something you haven’t felt since you were about 5 years old. You’ve wet the bed.
+
+For the approximately 16% of people over the age of 18 who have an overactive bladder (OAB), this kind of upsetting incident can become a regular occurrence. Even if they make it to the bathroom in time, they wake up so often to urinate that they aren’t getting a good night’s sleep.
+
+Generally, the amount of urine in our bodies decreases and becomes more concentrated at night, so we can sleep six or eight hours without having to get up to use the bathroom more than once. But many people with OAB have nocturia, the need to urinate several times a night, which interrupts their sleep cycles.
+
+“It can disrupt sleep completely, and people can be extremely overtired,” says Luis Sanz, MD, director of urogynecology and pelvic surgery at Virginia Hospital Center in Arlington, VA.
+
+Even worse, those who are particularly sound sleepers or can’t get out of bed fast enough can wind up with wet sheets.
+
+# Getting a Good Night’s Sleep with OAB
+
+“Preparation is everything,” says Melody Denson, MD, a board-certified urologist with the Urology Team in Austin, TX. You might consider sleeping on a towel and keeping a box of baby wipes near the bed in case of accidents, but you can also take these steps to prevent accidents from happening:
+
+Limit your fluid intake before bedtime. Try not to drink any liquids after 5 p.m. or 6 p.m.
+Avoid foods and beverages that can irritate your bladder. If you can’t cut them out entirely, skip them in the hours before bedtime to help prevent nocturia. That includes:
+
+- Caffeine, which is a diuretic, which increases urine output
+
+- Alcohol
+
+- Citrus juices
+
+- Cranberry juice -- though it is touted as great for bladder health, it is actually an irritant if you have OAB
+
+- Spicy foods, like curries
+
+- Acidic foods, such as tomatoes and tomato sauces
+
+- Chocolate
+
+- Artificial sweeteners
+
+**Double-void before bed**. Denson advises that you double-void, or urinate twice, right before bed. “Go to the bathroom, then brush your teeth and go through the rest of your bedtime routine,” she says. “Then, just before you’re about to lie down -- even if you don’t feel like you have to go -- try to urinate and see if you can squeeze out another tablespoon or so.”
+
+**Do Kegel exercises**. Done regularly, they help control an overactive bladder. “They will trigger a reflex mechanism to relax the bladder,” Denson says. “If you feel a tremendous urge to urinate, doing a Kegel before you run to the bathroom will help settle down the bladder spasm and help you hold it until you get there.”
+
+Kegels simply involve contracting and releasing the muscles around the opening of your urethra, just as you do when going to the bathroom. You can learn what a Kegel exercise feels like by starting, then stopping, your urine stream. Start with three sets of 8-12 contractions. Hold them for 6 to 10 seconds each, and perform these three to four times per week.
+
+# OAB and Your Sex Life
+
+OAB can interfere with that other bed activity, too. There’s nothing that can shut down an intimate moment faster than realizing you’ve lost control of your bladder -- something that happens for many people with OAB. “Sexual activity itself is irritating to the bladder, and you can lose urine during intercourse,” Sanz says. “About 15% of my patients report having incontinence during sex.”
+
+“When you’re being intimate, you’re used to secretions and moistness, but the thought that it’s actually urine leakage is really upsetting and uncomfortable,” Denson says. “Usually it’s the female patient who has the leakage, and it’s actually more bothersome for her than for her partner.”
+
+# Tips for Getting Your Groove Back
+
+There are some things you can do to ward off discomfort or embarrassment during sex.
+
+**Talk about it**. First, know that your partner will probably be a lot more understanding than you expect. Then bring it up before you have intercourse. “Don’t wait until it happens and say, ’Oh, guess what?’” Denson says. “It’s better to be upfront and honest ahead of time.”
+
+**Plan**. Prepare for sex, just as you do for bedtime. Double-void, cut back on fluids, and avoid foods and beverages that are likely to irritate your bladder. (This means it’s probably a good idea to skip that romantic glass of wine.)
+
+**Keep up the Kegels**. Doing these several times a day -- and even during intercourse -- will help prevent urine leakage during sex.
+
+All of these approaches can help you manage your overactive bladder at night, letting you get a better night’s sleep and have a more active and satisfying sex life. But Sanz adds that if your overactive bladder is really causing you problems, there’s no reason you need to live with it.
+
+“There is hope. There is treatment,” he says. You need to be evaluated by a urogynecologist, who will talk to you about three types of treatment: behavioral modification, medication, and surgical procedures are available, he says. “You don’t have to let an overactive bladder interfere with your life.”
+
+[Back to Index](../README.html)

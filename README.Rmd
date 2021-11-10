@@ -517,6 +517,8 @@ ffmpeg -i title.mkv -c copy title.mp4
 
 [AccessToSqlite](./AccessToSqlite/AccessToSqlite.html)
 
+[Bladder Control](./bladder/Bladder-Control.html)
+
 [Books](./Books/books.html)
 
 [EkAutomater](./automater/automater.html)
