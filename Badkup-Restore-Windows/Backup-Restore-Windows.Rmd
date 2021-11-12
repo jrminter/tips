@@ -1,0 +1,62 @@
+---
+title: "Backup and Restore Files on Windows"
+author: "MiniTool"
+date: "Started: 2020-11-25, Last JRM Updated: 2021-11-12"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+[Back to Index](../README.html)
+
+# Introduction
+
+**Backup and restore Windows 7**
+
+This tutorial provides a detailed guide on how to use the Windows built-in free
+backup software – `Backup and Restore (Windows 7)` – to make backup and restore
+for your Windows 11/10/8/7 computer. If you are looking for a stellar all-around
+Windows backup and restore software, MiniTool ShadowMaker from MiniTool software
+is the top choice.
+
+Windows computer has a built-in **free** backup software named
+**Backup and Restore (Windows 7)** which helps users to back up and restore PC
+when needed. This tool is inclu`ded in Windows 7/11. So you can utilize
+`Backup and Restore (Windows 7)` to back up and restore Windows 10 or 11 in the
+same way you create backups and restore from backups on Windows 7.
+
+Check below how to use this best free Windows backup and recovery software to
+back up and restore Windows 10 or Windows 7 computer.
+
+# Where Is Backup and Restore (Windows 7) Utility?
+
+You can access Backup and Restore (Windows 7) utility by following the
+instructions below.
+
+- **Step 1.** Click Start or the Search box at the toolbar, type control panel,
+and you should see the Control Panel app is listed at the top. Click it to open
+Control Panel in Windows 10 or 7.
+
+- **Step 2.** In the `Control Panel` window, you can select `System & Security`,
+and click Backup and Restore (Windows 7) to open Back up or restore your files window.
+
+# How to Restore Files from Backup with `Backup and Restore (Windows 7)`
+
+- **Step 1.** Enter into Backup and Restore (Windows 7) Center
+
+Follow the guide above to open Windows Backup and Restore center.
+Click `Restore my files` button under Restore.
+
+- **Step 2.** Search backup for files/folders to restore
+
+Next you can click Search, Browse for files, or Browse for folders to search
+the most recent backup for a file of folder you lost.
+
+Tip: To recover lost files on Windows 10 or 7 computer, you can also use a top
+free data recovery program like MiniTool Power Data Recovery to easily realize
+it. Check the detailed guide in the article below.
+
+
+[Back to Index](../README.html)
