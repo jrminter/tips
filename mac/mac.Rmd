@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-10-03"
+date: "Started: 2013-07-16, Last modified: 2021-11-20"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -10,6 +10,14 @@ output:
     toc_depth: 3
 ---
 [Back to Index](../README.html)
+
+# How to take a screenshot on your Mac
+
+To take a screenshot, press and hold these three keys together:    
+`Shift, Command, and 3.`
+
+If you see a thumbnail in the corner of your screen, click it to edit the
+screenshot. Or wait for the screenshot to save to your desktop.
 
 # macOS Notification Center
 
