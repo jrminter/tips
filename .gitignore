@@ -24,6 +24,9 @@ AccessToSqlite/AccessToSqlite.html
 AccessToSqlite/AccessToSqlite_fi*
 AccessToSqlite/._A*
 
+# Apple Watch
+AppleWatch/AppleWatch.html
+
 # automater directory
 automater/.DS_Store
 automater/automater.md

@@ -1,7 +1,7 @@
 ---
 title: "Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-11-09"
+date: "Started: 2013-07-16, Last modified: 2021-12-04"
 output:
   html_document:
     keep_md: yes
@@ -516,6 +516,8 @@ ffmpeg -i title.mkv -c copy title.mp4
 [2012 Honda Civic](./2012-Honda-Civic/2012-Honda-Civic.html)
 
 [AccessToSqlite](./AccessToSqlite/AccessToSqlite.html)
+
+[Apple Watch](./AppleWatch/AppleWatch.html)
 
 [Bladder Control](./bladder/Bladder-Control.html)
 
