@@ -146,7 +146,8 @@ for that activity. For example, when you’re running indoors, it also uses the
 accelerometer. Find out more about how your Apple Watch uses GPS and the heart
 rate sensor when you’re using the Workout app. 
 
-Published Date: October 01, 2021
+Published Date: October 01, 2021    
+JRM added  2021-12-05
 
 
 
