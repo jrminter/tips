@@ -1,7 +1,7 @@
 ---
 title: "Apple Watch Tips"
 author: "J. R. Minter"
-date: "Started 2021-12-04, Last modified: 2021-12-05"
+date: "Started 2021-12-04, Last modified: 2021-12-06"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -10,6 +10,15 @@ output:
     toc_depth: 3
 ---
 [Back to Index](../README.html)
+
+# Apple watch ring colors
+
+The Activity app displays three rings. The **red Move** ring shows how many active
+calories you've burned. The **green Exercise** ring shows how many minutes of
+brisk activity you've done. The **blue Stand** ring shows how many times in the
+day you've stood and moved for at least one minute per hour.
+
+
 
 From `https://support.apple.com/en-us/HT207941`
 
