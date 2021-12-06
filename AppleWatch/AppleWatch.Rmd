@@ -1,7 +1,7 @@
 ---
 title: "Apple Watch Tips"
 author: "J. R. Minter"
-date: "Started 2021-12-04, Last modified: 2021-12-04"
+date: "Started 2021-12-04, Last modified: 2021-12-05"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -19,7 +19,7 @@ Your Apple Watch uses the personal information that you provide to help
 calculate metrics for your daily activity. You can further improve its
 accuracy by using these tips.
 
-1. Keep your personal information up to date
+# Keep your personal information up to date
 
 Your Apple Watch uses your personal information — such as your height, weight,
 gender and age — to calculate how many calories you burn and other daily
@@ -31,7 +31,7 @@ Tap `Edit`, then tap the item that you want to change.
 
 Health Profile on iPhone showing Date of Birth, Height and more.
 
-2. Make sure that you earn Move and Exercise credit
+# Make sure that you earn Move and Exercise credit
 
 Every full minute of movement that equals or exceeds the intensity of a brisk
 walk counts towards your daily Exercise and Move goals. With Apple Watch Series
@@ -49,9 +49,8 @@ Watch and tap Outdoor Walk. The Activity app relies on arm motion and an
 accelerometer to track movement but the Workout app can use the accelerometer,
 the heart rate sensor and GPS.
 
- 
 
-3. Make sure that Wrist Detection is turned on
+# Make sure that Wrist Detection is turned on
 
 If Wrist Detection is turned off, you won’t get Stand notifications and your
 Apple Watch can’t track your Stand progress. Background heart rate readings
@@ -65,7 +64,7 @@ Resting and walking rates are only available on Apple Watch Series 1 or later.
 
 Passcode settings on iPhone
 
-4. Check the fit
+# Check the fit
 
 Wearing Apple Watch with the right fit — not too tight, not too loose and with
 room for your skin to breathe — keeps you comfortable and lets the sensors do
@@ -77,7 +76,7 @@ Apple Watch on the top of your wrist.
 
  
 
-5. Get the most accurate heart rate measurement
+# Get the most accurate heart rate measurement
 
 To get the most accurate heart rate measurement when you’re using Workout, make
 sure that your Apple Watch fits snugly on top of your wrist. The heart rate sensor
@@ -98,7 +97,8 @@ measurement. To see if Heart Rate is turned on or off, open the Apple Watch app
 on your iPhone, then tap Privacy.  
 
 
-6. Choose the best workout
+# Choose the best workout
+
 When you use the Workout app, choose the option that best matches what you’re
 doing. For example, if you’re running on a treadmill, choose Indoor Run. If
 you’re doing a workout that isn’t listed, such as strength training, choose
@@ -108,17 +108,17 @@ Find out about each workout.
 
 Indoor Run workout
 
-Calibrate your Apple Watch
+# Calibrate your Apple Watch
 
 Calibrate your Apple Watch to improve the accuracy of your distance, pace and
 calorie measurements. Calibrating your watch can also help it learn your
 fitness level and stride.
 
-Find out how to calibrate your Apple Watch. 
+# Find out how to calibrate your Apple Watch. 
 
  
 
-What else can affect your heart rate reading?
+# What else can affect your heart rate reading?
 
 Many factors can affect the performance of the Apple Watch heart rate sensor.
 Skin perfusion (or how much blood flows through your skin) is one factor.
