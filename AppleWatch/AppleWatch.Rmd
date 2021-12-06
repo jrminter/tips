@@ -19,10 +19,9 @@ brisk activity you've done. The **blue Stand** ring shows how many times in the
 day you've stood and moved for at least one minute per hour.
 
 
+# Get the most accurate measurements using your Apple Watch
 
 From `https://support.apple.com/en-us/HT207941`
-
-# Get the most accurate measurements using your Apple Watch
 
 Your Apple Watch uses the personal information that you provide to help
 calculate metrics for your daily activity. You can further improve its
