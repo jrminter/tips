@@ -15,11 +15,11 @@ output:
 
 1. Open stop watch
 
-[Open Stop Watch](1-open-stopwatch.png)
+    [Open Stop Watch](1-open-stopwatch.png)
 
 2. start/stop/record lap times
 
-[Start/stop/record-lap-times](2-start-stop-record-lap-times.png)
+    [Start/stop/record-lap-times](2-start-stop-record-lap-times.png)
 
 # Apple watch ring colors
 
