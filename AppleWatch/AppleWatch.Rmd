@@ -13,9 +13,9 @@ output:
 
 # Apple watch ring colors
 
-The Activity app displays three rings. The **red Move** ring shows how many active
-calories you've burned. The **green Exercise** ring shows how many minutes of
-brisk activity you've done. The **blue Stand** ring shows how many times in the
+The Activity app displays three rings. The **Red Move** ring shows how many active
+calories you've burned. The **Green Exercise** ring shows how many minutes of
+brisk activity you've done. The **Blue Stand** ring shows how many times in the
 day you've stood and moved for at least one minute per hour.
 
 
