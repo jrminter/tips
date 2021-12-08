@@ -11,6 +11,16 @@ output:
 ---
 [Back to Index](../README.html)
 
+# Using the watch
+
+1. Open stop watch
+
+[Open Stop Watch](1-open-stopwatch.png)
+
+2. start/stop/record lap times
+
+[Start/stop/record-lap-times](2-start-stop-record-lap-times.png)
+
 # Apple watch ring colors
 
 The Activity app displays three rings. The **Red Move** ring shows how many active
