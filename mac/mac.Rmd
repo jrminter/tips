@@ -13,14 +13,14 @@ output:
 
 # How to take a screenshot on your Mac
 
-To take a screenshot of the whole screen, press and hold these three keys
+## To take a screenshot of the whole screen, press and hold these three keys
 together:    
 `Shift, Command, and 3.`
 
 If you see a thumbnail in the corner of your screen, click it to edit the
 screenshot. Or wait for the screenshot to save to your desktop.
 
-How to capture a portion of the screen on MacOS
+## How to capture a portion of the screen on MacOS
 
 1. Press and hold these three keys together: Shift, Command, and 4.
 2. Drag the crosshair to select the area of the screen to capture. ...
