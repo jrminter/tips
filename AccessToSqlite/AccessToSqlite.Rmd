@@ -10,7 +10,6 @@ output:
     toc_depth: 3
 ---
 
-[Back to Index](../README.html)
 
 Old Access databases are a real pain. One idea is to convert them to
 sqlite. Below is an example from

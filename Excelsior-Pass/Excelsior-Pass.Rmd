@@ -3,6 +3,10 @@ title: "Excelsior Pass"
 author: "Ryan Miller (Rochester Democrat and Chronicle)"
 date: "Started: 2021-12-14, Last modified: 2021-12-14"
 output:
+  pdf_document:
+    number_sections: no
+    toc: yes
+    toc_depth: 3
   html_document:
     number_sections: no
     toc: yes
