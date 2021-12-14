@@ -1,366 +1,140 @@
 ---
-title: "**Excelsior Pass**"
-date: "Started: 2021-03-29 Modified: 2021-06-19"
+title: "Excelsior Pass"
+author: "Ryan Miller (Rochester Democrat and Chronicle)"
+date: "Started: 2021-12-14, Last modified: 2021-12-14"
 output:
   html_document:
-    css: ../theme/jm-gray-vignette.css
-    number_sections: yes
+    number_sections: no
     toc: yes
     toc_depth: 3
 ---
 
-# John's introduction
+[Back to Index](../README.html)
 
-New York State introduced the **Excelsior Pass**, presumably to make
-things easier for users. I am concerned about the short validity of
-the pass.
+Here's now to update Excelsior pass to verify your COVID vaccine status
+A new indoor mask mandate went into effect in New York Dec. 13.
 
-This information was copied from [here](https://covid19vaccine.health.ny.gov/excelsior-pass-frequently-asked-questions).
+Masks will be required in all indoor public places in New York unless
+a business or venue opts to implement a vaccine requirement for entry,
+Gov. Kathy Hochul announced Friday.
 
-# Key info
+The mask requirement follows news that more than 500,000 COVID-19
+vaccine booster shots were administered in the state last week.
+The Food and Drug Administration has also authorized booster shots for
+16-and 17-year-olds. The policy runs through Jan. 15, 2022, when the
+state will reevaluate.
 
-## HOW DO I GET A PASS
+Here’s how those newly vaccinated or boosted individuals can verify
+their vaccine status for entry into buildings and venues.
 
-To get a pass, visit [epass.ny.gov](https://epass.ny.gov/home)
-and click “Get Started”.
+# What is the Excelsior Pass?
 
-You will need to provide basic personal information, including your first and last name, date of birth, and zip code. You will also need to verify your identity with three “challenge questions” whose answers are unique to you. You’ll need to enter this information every time you retrieve a pass.
+The Excelsior Pass launched in March and allows people to verify their
+COVID-19 vaccination status on their phones when attending events in
+lieu of carrying their paper vaccination card.
 
-Once you receive a pass from the website, you can print a paper pass, take a screen shot of your pass, or save your pass to the Excelsior Pass Wallet mobile app.
-For more information and frequently asked questions about the pass, click here.
+The pass provides a scannable QR code. The service can be used by
+arenas, universities, stadiums and businesses to prove vaccination
+of attendees. It can also be used to show a recent negative COVID-19
+test.
 
-## Updating a pass
+# How do I get the Excelsior Pass?
 
-These expire so one needs to renew periodically because the CDC and
-State Dept of Health are not sure how long immunity lasts.  My pass,
-with information originally 2021-03-03 will first expire on 2021-04-28.
-That is really short. A recent article suggests these can be extended
-based upon later information regarding the updated understanding of the
-length of immunity from the shot.
+Visit epass.ny.gov if you want to start the process.
+What’s the process like to obtain an Excelsior Pass?
 
-Note: **2021-06-18** - I renewed my pass!
+Users provide their name, date of birth, zip code and phone number.
+The site then asks for the type of vaccine received and the date of
+the doses. The system cross-checks the information with a state-run
+immunization database and sends a verification code or voicemail to
+your phone.
 
-# What is Excelsior Pass?
+The pass is displayed upon confirmation and includes a QR code, name
+and birthday. Your can choose to print your  pass and/or save it to
+your Excelsior Pass Wallet.
 
-Excelsior Pass provides secure, digital proof of COVID-19 vaccination or negative test results. There are currently three types of Passes:
+# How does the Excelsior Pass Wallet work?
 
-COVID-19 Vaccination Pass (valid for 30 days after the Pass is retrieved, at which time a new Pass may be retrieved)
-COVID-19 PCR Test Pass (valid until midnight on the third day after a test)
-COVID-19 Antigen Test Pass (valid for 6 hours from the time of a test)
-Similar to a mobile airline boarding pass, New Yorkers can store Passes digitally on their smartphones or print them out to present at participating businesses and venues. Businesses and venues can use Excelsior Pass to aid their compliance with State reopening guidelines.
+Users download the New York State Excelsior Pass Wallet on the Apple App
+Store or Google Play store.
 
-# How do I use Excelsior Pass?
+Open the app and add a photo of your pass or scan the QR code to upload
+your pass. Or you can choose to start the entire process with the New
+York State Excelsior Pass Wallet app first and then get a pass through
+the app.
 
-Participation in Excelsior Pass is voluntary. If you choose to participate, you can download the Excelsior Pass Wallet app from the Apple App Store or Google Play Store and follow the instructions to retrieve your Pass after you have been fully vaccinated or tested negative for COVID-19 in the state of New York.
+# Do I need a smartphone to obtain a pass?
 
-Alternatively, you may retrieve your Pass from the Excelsior Pass website at https://epass.ny.gov. From the website, you can print a paper Pass, take a screen shot of your Pass, or save it to the Excelsior Pass Wallet mobile app. More details about retrieving a Pass are available in the Retrieving a Pass section of the FAQs.
+No. The Excelsior passes can be printed and presented at venues and
+businesses.
 
-Participating businesses and venues will use the Excelsior Pass Scanner app to prove that your Pass is valid. They will also ask you to present a photo ID that contains your name and your birth date to ensure that you are using a Pass belongs to you.
+# How do venues check the pass?
 
-Adults can hold Passes for accompanying minors.
+Restaurants, theaters, arenas and other businesses can download the NYS
+Excelsior Pass Scanner app to the QR codes on the passes. The scanner
+app validates the QR code and displays if if s valid, expired or not
+found. Businesses are supposed to confirm the name on someone’s pass
+matches their state photo identification.
 
-# Why do I need Excelsior Pass?
+# How to Excelsior Pass different from Excelsior Pass Plus?
 
-Excelsior Pass is part of New York's effort to support the safe reopening of businesses and return to public places.
+The Excelsior Pass holds digital proof of your COVID-19 vaccination
+status or negative tests results but does not include vaccination
+dates and dosage information.
 
-Excelsior Pass is a free, fast and secure way to show proof of COVID-19 vaccination or negative test results and is one of many precautions, such as mask-wearing and capacity restrictions, set in place to accelerate the return to pre-pandemic activities.
+Excelsior Pass Plus is like Excelsior Pass 2.0. It provides a digital
+copy of your vaccination record, including vaccine type, site and dates,
+just like your paper Centers for Disease Control and Prevention card.
 
-# Am I required to use Excelsior Pass?
+> The inclusion of this health information enables interested New Yorkers
+> to have a verifiable record of their COVID-19 vaccination history or
+> negative COVID-19 test at their fingertips, for record-keeping and/or
+> usage outside of New York state, the state says.
+> You can print your pass or add it to your smartphone wallet on either
+> pass portal.
 
-No. Participation in Excelsior Pass is voluntary. However, Excelsior Pass is a free, fast and secure way to present proof of your COVID-19 vaccination or negative test results to businesses that may require it as part of State reopening guidelines or for other purposes.
+# Will the Excelsior Pass automatically update when you get a booster?
 
-# How much does it cost to use Excelsior Pass?
+No.
 
-Excelsior Pass is free.
+Excelsior Pass only includes a person's initial vaccination series.
+To add a booster or additional dose to your pass you will need the
+Excelsior Pass Plus.
 
-How can New Yorkers without a smartphone or internet access provide proof of vaccination or negative test results?
+# What if I can’t get the app to log my booster?
 
-Participation in Excelsior Pass is voluntary and designed to be inclusive of all New Yorkers, regardless of access to a smartphone. You can easily print a paper Pass via the Excelsior Pass website at https://epass.ny.gov.
+If you already have an Excelsior Pass Plus and are unable to add your
+booster, the state recommends visiting epass.ny.gov to retrieve a new
+pass. Users can expect their booster dose to be available 3 to 4 days
+after they received the dose.
 
-New Yorkers can also show alternate proof of COVID-19 vaccination or negative test results, like another mobile application or paper form, directly at a business or venue.
+# Can I get a pass as soon as I get my shot?
 
-# What can I expect when using Excelsior Pass at a participating business?
+Excelsior Pass Plus is available 15 days after the final dose of the
+vaccine was administered. Booster shots are available 3 to 4 days
+after they were administered.
 
-When you visit a business or venue that accepts Excelsior Pass, the QR Code on your Pass will be scanned using the Excelsior Pass Scanner app to ensure that your Pass is valid. For adults aged 18+, a matching photo ID with name and birth date is required to be presented alongside each unique Pass. Adults can hold Passes for accompanying minors.
+# Do Excelsior passes expire?
 
-Once you and your party enter an establishment, please remember to follow State and CDC guidance regarding social distancing, face coverings and hand hygiene.
+Excelsior Pass verifications retrieved after Dec. 11 will expire on
+March 31, 2022, according to the state. Excelsior Pass Plus does
+not expire.
 
-# How do I present my Pass?
+If used as a negative test verification, PCR passes are valid until
+midnight on the third day after a test. Antigen passes are valid for
+six hours from the time of the test.
 
-You can present your Pass on your smartphone via a screenshot or the Excelsior Pass Wallet application. You can print a paper Pass from the Excelsior Pass website and present the printed version.
+# What if I’m from out of state?
 
-# Can I use one Pass in multiple places?
+New York state updated its scanner app to scan and validate SMART Health
+Cards from other states.
 
-Yes. Your Pass can be used for as long as it remains active, at as many places as you would like. Once a Pass expires, however, it will no longer be accepted at participating businesses or venues.
+# What is the vaccination rate in New York?
 
-After a Pass expires, you will need to follow the requirements for retrieving a new Pass, which may include additional testing.
+More than 80% of New Yorkers have at least one vaccine dose as of
+Dec. 12, according to the state health department dashboard. Nearly
+500,000 booster doses were distributed in the state last week,
+Gov. Kathy Hochul said.
 
-# Why would I use a Pass in the Excelsior Pass Wallet instead of a paper Pass?
 
-Adding a Pass to your Excelsior Pass Wallet allows you to quickly and easily retrieve it on your smartphone at the time of entering a business or venue. However, you can also screenshot your Pass or print it from the Excelsior Pass website and show that physical copy at the business or venue.
-
-# Can I show Passes for more than one individual on the same device?
-
-Yes, multiple Passes for adults and accompanying minors can be stored on the same device. For adults aged 18+, a matching photo ID with name and birth date is required to be presented alongside each unique Pass. Adults can hold Passes for accompanying minors.
-
-# Can I show more than one type of Pass on the same device?
-
-Yes. You may store or show any of the following Pass types on the same device:
-
-
-# How long will I have to use my Pass? Will it expire?
-
-There are three types of Passes that have varying lengths of validity.
-
-- The COVID-19 Vaccination Pass is currently valid for 30 days after the Pass is retrieved. After the pass expires, you can retrieve a new Pass from the Excelsior Pass website at https://epass.ny.gov.
-
-- The COVID-19 PCR Test Pass is valid until midnight on the third day after your test. After your COVID-19 PCR Test Pass expires, a new test is required to retrieve a new Pass.
-
-- The COVID-19 Antigen Test Pass is valid for 6 hours after your test. After your COVID-19 Antigen Test Pass expires, a new test is required to retrieve a new Pass.
-
-# My Pass expired. Can I get another one?
-
-COVID-19 is a highly infectious disease. Given the ongoing presence of COVID-19 transmission in New York, Passes are only temporarily valid to protect everyone’s health. After a Pass expires, you will need to follow the requirements for retrieving a new Pass.
-
-The COVID-19 Vaccination Pass is currently valid for 30 days after the Pass is retrieved. After the pass expires, you can retrieve a new Pass from the Excelsior Pass website at https://epass.ny.gov.
-
-The COVID-19 PCR Test Pass is valid until midnight on the third day after your test. After your COVID-19 PCR Test Pass expires, a new test is required to retrieve a new Pass.
-
-The COVID-19 Antigen Test Pass is valid for 6 hours after your test. After your COVID-19 Antigen Test Pass expires, a new test is required to retrieve a new Pass.
-
-# Do I need to have a smartphone to display my Pass?
-
-No. You can print a paper Pass from the Excelsior Pass website at https://epass.ny.gov.
-
-# Can I use Excelsior Pass in states other than New York?
-
-At present, Excelsior Pass is only accepted in New York.
-
-
-# Retrieving a Pass
-
-What information do I need to provide to retrieve my Pass?
-
-To retrieve your Pass, you will need to provide basic personal information, including your first and last name, date of birth and zip code. You will also need to verify your identity with three "challenge questions" whose answers are unique to you. You'll need to enter this information every time you retrieve a Pass.
-
-# I have minor children. Do they need a Pass? How can they get a Pass?
-
-Anyone who has received a COVID-19 vaccine or negative test result in the state of New York is eligible for a Pass, including children. Parents may retrieve and store Passes on behalf of their children if desired.
-
-# Do I need to install a smartphone app to get a Pass?
-
-Participation in Excelsior Pass is voluntary. While a smartphone app is available, it is not required to retrieve and use your Pass.
-
-If you choose to participate, you may retrieve your Pass from the Excelsior Pass website at https://epass.ny.gov. From the website, you can print a paper Pass, take a screen shot of your Pass, or save your Pass to the Excelsior Pass Wallet mobile app.
-
-# Can I access and retrieve a Pass if I am not a New York resident?
-
-You do not have to be a New York resident to retrieve a Pass, however, you must have received a COVID-19 vaccine or negative test result in the state of New York.
-
-# Can I retrieve a Pass if I am tested or fully vaccinated somewhere other than New York?
-
-At present, you must have received a COVID-19 vaccine or negative test result in the state of New York to be eligible to retrieve a Pass.
-
-# Can I have multiple Passes?
-
-If you hold a COVID-19 Vaccination Pass and also receive a negative COVID-19 test result, it is possible for you to have two active Passes, one to represent your vaccination and the other to represent your test. It is also possible to have multiple active Passes if you receive negative test results several times in a 3-day time period.
-
-# What are the testing and/or vaccination requirements for retrieving a Pass?
-
-You may retrieve a Pass if you have not tested positive for COVID-19 in the last 10 days and,
-
-- You have been fully vaccinated in the State of New York and it has been 14 days or longer since your final shot, OR
-
-- You had a PCR test administered in the State of New York in the last 3 days and the result was negative, OR
-
-- You had an antigen test administered in the State of New York in the last 6 hours and the result was negative.
-
-To retrieve a COVID-19 Vaccination Pass, the vaccine you received must be authorized by the FDA, which include those from Pfizer-BioNTech, Moderna, and Johnson & Johnson/Janssen. COVID-19 Vaccination Passes may be retrieved 14 days after the final dose of the vaccine was administered. Two doses 3-4 weeks apart are necessary for the Pfizer-BioNTech and Moderna vaccines, and one dose is required for the Johnson & Johnson/Janssen vaccine. If you are not able to retrieve your COVID-19 Vaccination Pass 14 days after your final vaccine dose, please ensure that the information you are entering matches the data on your vaccine documentation and try again later. 
-
-COVID-19 PCR Test Passes and COVID-19 Antigen Test Passes are typically available within a few hours of receiving your negative test results from your provider or lab. If you are not able to retrieve your COVID-19 PCR Test Pass or your COVID-19 Antigen Test Pass after receiving your test results, please ensure that the information you are entering matches the data on your results documentation and try again later. 
-
-# Can I retrieve a Pass if I have taken a PCR test?
-
-Yes, if your PCR test was conducted in New York, administered within 3 days of attempting to retrieve your Pass and your results came back negative.
-
-Passes are typically available within a few hours of receiving your negative test results from your provider or lab. If you are not able to retrieve your COVID-19 PCR Test Pass immediately after receiving your test results, please ensure that the information you are entering matches the data on your results documentation and try again later. 
-
-# Can I retrieve a Pass if I have taken an Antigen test?
-
-Yes, if your Antigen test was conducted in New York, administered within 6 hours of attempting to retrieve your Pass and your results came back negative.
-
-Passes are typically available within a few hours of receiving your negative test results from your provider or lab. If you are not able to retrieve your COVID-19 Antigen Test Pass after receiving your test results, please ensure that the information you are entering matches the data on your results documentation and try again later. 
-
-# Can I retrieve a Pass if I have received a COVID-19 vaccine?
-
-Yes, if you have received all required doses of the COVID-19 vaccine and your vaccination is completed in the state of New York.
-
-Your COVID-19 Vaccination Pass will be available to you 14 days after your final dose and is valid for 30 days after the Pass is retrieved. After the pass expires, you can retrieve a new Pass from the Excelsior Pass website at https://epass.ny.gov.
-
-If you are not able to retrieve your COVID-19 Vaccination Pass 14 days after your final vaccine dose, please ensure that the information you are entering matches the data on your vaccine documentation and try again later. 
-
-
-# Policies
-
-What is the difference between a PCR test and an antigen test?
-
-According to the Food & Drug Administration (FDA), PCR tests are molecular tests that detect the virus’s genetic materials, and antigen tests detect specific proteins from the virus. Read more about testing in the FDA’s Coronavirus Disease 2019 Testing Basics.
-
-What kind of test do I need to take?
-
-Passes can be retrieved for both COVID-19 PCR tests and COVID-19 Antigen tests; however, vaccination and/or testing requirements may vary based on the business or venue you plan to visit.
-
-It is recommended that you check with the business or venue you plan to visit to understand its specific entry requirements. General, industry-based reopening guidelines are available at https://forward.ny.gov/.
-
-# Where can I get tested?
-
-You can find a test site near you by visiting https://coronavirus.health.ny.gov/find-test-site-near-you. If you have questions regarding eligibility or access for testing, you should call the New York State COVID-19 Hotline at 1-888-364-3065 or visit https://covid19screening.health.ny.gov.
-
-# Can I transfer my Pass to someone else?
-
-No. Your Pass is specific to your testing or vaccine history and cannot be transferred to someone else. When you use a Pass, you are required to show photo ID that contains your name and birth date to verify that you are the owner of the Pass.
-
-# Can I print out the results of my test instead of using the Pass?
-
-Yes. If you prefer, you may use a lab report as a form of proof of negative test results.
-
-# Can I get a refund if I bought a ticket to an event, but my Pass is not valid?
-
-Refund policies are unique to the business or venue you are visiting. It is recommended that you consult with the business or venue directly as to their refund policies.
-
-
-# Security and Privacy
-
-Is my data private and secure?
-
-Your data is private, secure and only used to retrieve your Passes. Your personal data will not be used for sales or marketing purposes or shared with a third party, other than for the sole purpose of validating COVID-19 vaccination or test results.
-
-Excelsior Pass gives you the ability to maintain control of your personal data and share it in a manner that is secure, verifiable and trusted. Your Pass contains cryptographic signatures that ensure that it is genuine and that no data-tampering has occurred.
-
-If you choose to use the Excelsior Pass Wallet app, only the Passes you save will be stored on your mobile device. You may delete Passes at any time.
-
-Will my personal health information be stored on my phone or in the Excelsior Pass Wallet app?
-
-If you choose to use the Excelsior Pass Wallet app, no personal health information is stored on your device. The only personal identification information saved on your Pass is your first name, last name and birth date. You may delete Passes at any time.
-
-Answers to the “challenge questions” used to verify your identity will not be stored, which is why you need to verify your identity every time you retrieve a new Pass.
-
-When your Pass is scanned, the Excelsior Pass Scanner app collects analytics about the type of Pass and the result of the scan. No personal information from Passes is collected or stored.
-
-# What health information can Excelsior Pass access?
-
-When you receive a COVID-19 vaccination or test in the State of New York, the Department of Health receives a copy of your records from your vaccine administrator, provider or lab. Using the information you provide, Excelsior Pass searches the Department of Health’s records for your COVID-19 vaccination or negative COVID-19 test results and then provides you a Pass showing your name, date of birth, Pass type and Pass expiration. No other information is accessed or stored
-
-# What data does Excelsior Pass collect or store?
-
-If you choose to use the Excelsior Pass Wallet app, only the Passes you save will be stored on your mobile device. Stored Passes contain your name, birth date, Pass type and Pass expiration date. You may delete Passes at any time.
-
-Answers to the "challenge questions” used to verify your identity will not be stored, which is why you need to verify your identity every time you retrieve a new Pass.
-
-When your Pass is scanned, the Excelsior Pass Scanner app collects analytics about the type of Pass and the result of the scan. No personal information from Passes is collected or stored.
-
-# Does Excelsior Pass track my location?
-
-No. Excelsior Pass does not track your location.
-
-# What personal information can businesses see when they scan my Pass?
-
-The only information the business or venue can see when they scan your Pass is your name, birth date, Pass type and Pass expiration date. Additionally, the Excelsior Pass Scanner app lets a business or venue know if your Pass is valid.
-
-A valid Pass indicates that you have either been fully vaccinated against COVID-19 or that you had a recent negative COVID-19 test. An invalid or expired Pass is not an indication that you have COVID-19.
-
-# Will those who scan my pass be able to save or store my personal information?
-
-No. The Excelsior Pass Scanner app does not download or store your information, which is why your Pass must be scanned again if you leave and return to a participating business or venue.
-
-# How can I make sure that nobody else uses my Pass?
-
-Your Pass can only be retrieved by knowing your name, date of birth, zip code, phone number and accurate answers to your unique “challenge questions.” The business or venue will verify the identity of each Pass holder by matching the name and birth date on the Pass with a photo ID.
-
-# Will the State or local businesses be notified if I attempt to retrieve a Pass after a positive test result?
-
-No. Excelsior Pass does not share your data with anyone, and a Pass cannot be retrieved if you receive a positive test result.
-
-# Can I use this app to see if someone else has been fully vaccinated or tested negative?
-
-No. Excelsior Pass is intended for personal use only.
-
-# Where can I read the Excelsior Pass Privacy Policy?
-
-You can view the Excelsior Pass Privacy Policy at https://epass.ny.gov/privacy.  
-
-# Technical Support
-
-What are the basic requirements for using Excelsior Pass applications?
-
-The Excelsior Pass Scanner is compatible with smartphones running iOS 13.0+ or Android 7.0+. Support for tablets will be added in future versions.
-
-If preferred, New Yorkers may also access their Pass via the Excelsior Pass website and print a paper copy.
-
-Is Excelsior Pass available in multiple languages, or for those who may have hearing or vision impairments?
-
-After the initial launch in English and Spanish, the apps will be available in multiple languages including traditional Chinese, Russian, Haitian-Creole, Korean and Bengali. The application has also gone through thorough accessibility testing to ensure it is easy to use for those who may have hearing or vision impairments.
-
-If you are having trouble, please consult one of our helpful, step-by-step instructional guides:
-
-If you are still unable to solve your problem, you can always use an alternate form of proof of your COVID-19 vaccination or negative test results.
-
-# How do I access and download Excelsior Pass?
-
-Passes can be accessed through the Excelsior Pass Wallet app, or through the Excelsior Pass website at https://epass.ny.gov. The Excelsior Pass Wallet app can be downloaded at no cost from the Apple App Store and Google Play Store.
-
-Participating businesses can download the Excelsior Pass Scanner app for free from the Apple App Store or Google Play Store.
-
-# What do I do if my PCR or antigen test result is not found?
-
-Passes are only available for those who test negative. Passes are typically available within a few hours of receiving your negative test results from your provider or lab. 
-
-If you are not able to retrieve your COVID-19 PCR Test Pass after receiving your test results, please ensure that the information you are entering matches the data on your results documentation and try again later. If you are unable to retrieve a Pass after multiple attempts, you may use an alternate form of proof of your negative test, like another mobile application or paper form.
-
-# What do I do if the app says my COVID-19 PCR Test Pass or COVID-19 Antigen Test Pass has expired?
-
-You will need to take another test if the Pass for your most recent test has expired. If you completed a PCR test in the last 3 days or an Antigen test in the last 6 hours and you are unable to retrieve a Pass after multiple attempts, you may use an alternate form of proof of your negative test, like another mobile application or paper form. Expired Passes will not be accepted at business or venues.
-
-# What do I do if I can’t verify my identity when retrieving my Pass?
-
-First, ensure that the data you are using matches the data from your vaccination record or lab report. If you are unable to retrieve a Pass after multiple attempts, you may use an alternate form of proof of your COVID-19 vaccination or negative test results, like another mobile application or paper form.
-
-# What do I do if my vaccine record is not found?
-
-You can retrieve a COVID-19 Vaccination Pass if:
-
-- You have not tested positive for COVID-19 in the last 10 days, and
-
-- You have been fully vaccinated in the State of New York, and
-
-- It has been 14 days or longer since your final shot
-
-The vaccine you received must be authorized by the FDA. Currently vaccines authorized by the FDA include those from Pfizer-BioNTech, Moderna, and Johnson & Johnson/Janssen. COVID-19 Vaccination. Two doses 3-4 weeks apart are necessary for the Pfizer-BioNTech and Moderna vaccines, and one dose is required for the Johnson & Johnson/Janssen vaccine.
-
-If you meet the requirements, ensure that the information you are entering matches the data from your vaccination record. If you are unable to retrieve a Pass after multiple attempts, you may use an alternate form of proof of your COVID-19 vaccination, like another mobile application or paper form.
-
-# What do I do if my Pass has expired?
-
-There are three types of Passes that have varying lengths of validity.
-
-- **The COVID-19 Vaccination Pass is currently valid for 30 days after the Pass is retrieved. After the pass expires, you can retrieve a new Pass from the Excelsior Pass website at https://epass.ny.gov.**
-
-- The COVID-19 PCR Test Pass is valid until midnight on the third day after a test. After your COVID-19 PCR Test Pass expires, a new test is required to retrieve a new Pass.
-
-- The COVID-19 Antigen Test Pass is valid for 6 hours from the time of a test. After your COVID-19 Antigen Test Pass expires, a new test is required to retrieve a new Pass.
-
-# How do I remove a Pass from the Excelsior Pass Wallet app?
-
-Please review how to remove a Pass in the step-by-step instructional guide that is most relevant for you:
-
-- Excelsior Pass Wallet for iOS
-
-- Excelsior Pass Wallet for Android
-
-# What do I do if something goes wrong or I have more questions?
-
-If you are still having trouble, you can fill out the Excelsior Pass support form or reach out to the Excelsior Help Desk at 844-699-7277 from 7 a.m. to 10 p.m. daily. Note that the support team does not have access to any personal health records and therefore will not be able to provide specific details about personal eligibility for a Pass.
-
-How do I submit feedback about the app or pass?
-
-# If you have feedback about Excelsior Pass, please share it via our support form.
+[Back to Index](../README.html)
