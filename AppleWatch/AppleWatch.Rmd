@@ -3,13 +3,13 @@ title: "Apple Watch Info"
 author: "John Minter"
 date: '2021-12-13'
 output:
-  word_document:
-    toc: no
-    toc_depth: '3'
   html_document:
     toc: no
     toc_depth: '3'
     df_print: paged
+  word_document:
+    toc: no
+    toc_depth: '3'
   pdf_document:
     number_sections: yes
     toc: no
@@ -45,6 +45,8 @@ you've done.
 
 3. The **Blue Stand** ring shows how many times in the
 day you've stood and moved for at least one minute per hour.
+
+![Apple Watch Rings](./Apple-watch-rings.png)
 
 
 # Get the most accurate measurements using your Apple Watch
@@ -110,7 +112,6 @@ You may want to tighten your Apple Watch band for workouts, then loosen it when
 you’ve finished. In addition, the sensors will only work if you’re wearing your
 Apple Watch on the top of your wrist.
 
- 
 
 # Get the most accurate heart rate measurement
 
@@ -245,7 +246,7 @@ or later.
 
 - Passcode settings on iPhone
 
-# heck the fit
+# Check the fit
 
 Wearing Apple Watch with the right fit — not too tight, not too loose,
 and with room for your skin to breathe — keeps you comfortable and
