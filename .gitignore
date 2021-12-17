@@ -50,6 +50,11 @@ bibtex/*.md
 bibtex/*.html
 bibtex/figure/
 
+
+# Bluetooth
+Bluetooth/*.html
+
+# Books
 Books/*.html
 
 # C++11 directory
