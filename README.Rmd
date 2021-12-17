@@ -521,9 +521,9 @@ ffmpeg -i title.mkv -c copy title.mp4
 
 [Bladder Control](./bladder/Bladder-Control.html)
 
-[Books](./Books/books.html)
-
 [Bluetooth](./Bluetooth/Bluetooth.html)
+
+[Books](./Books/books.html)
 
 [EkAutomater](./automater/automater.html)
 
