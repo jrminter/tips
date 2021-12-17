@@ -1,7 +1,7 @@
 ---
 title: "Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-12-04"
+date: "Started: 2013-07-16, Last modified: 2021-12-17"
 output:
   html_document:
     keep_md: yes
@@ -522,6 +522,8 @@ ffmpeg -i title.mkv -c copy title.mp4
 [Bladder Control](./bladder/Bladder-Control.html)
 
 [Books](./Books/books.html)
+
+[Bluetooth](./Bluetooth/Bluetooth.html)
 
 [EkAutomater](./automater/automater.html)
 
