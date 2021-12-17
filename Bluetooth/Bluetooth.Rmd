@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 1. Setting (on phone?)
 
-2. Look at bluetooth  on speaker
+2. Look at bluetooth on speaker
 
 3. If it is **not connected**, press and hold the bluetooth button on Bose. It 
 should connect.
