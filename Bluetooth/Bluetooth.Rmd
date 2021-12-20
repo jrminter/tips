@@ -1,5 +1,5 @@
 ---
-title: "Bluetooth Tips"
+title: "Bluetooth Tips for Bose"
 author: "John Minter"
 date: "2021-12-17"
 output: html_document
@@ -12,11 +12,24 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Using Blutooth on Bose speaker
 
-1. Setting (on phone?)
+1. On Phone, go into "Settings" (a grey gear)
 
-2. Look at bluetooth on speaker
+2. 3rd from left is **Bluetooth**. Click on **Bluetooth**.
 
-3. If it is **not connected**, press and hold the bluetooth button on Bose. It 
+3. Look for "Bose Revolve Sound" on the list.
+
+4. If it is **not connected**, press and hold the Bluetooth button on Bose. It 
 should connect.
+
+# Disconnecting
+
+1. Go to **Settings**
+
+2. Look for **Bluetooth**
+
+3, Click on circular **i** (for information) for Bose
+
+4. Click **disconnect**
+
 
 [Back to Index](../README.html)
