@@ -3,17 +3,17 @@ title: "Bluetooth Tips for Bose"
 author: "John Minter"
 date: "2021-12-17"
 output:
-  word_document:
-    toc: no
-    toc_depth: '3'
-  html_document:
-    toc: no
-    toc_depth: '3'
-    df_print: paged
   pdf_document:
     number_sections: yes
     toc: no
     toc_depth: 3
+  html_document:
+    toc: no
+    toc_depth: '3'
+    df_print: paged
+  word_document:
+    toc: no
+    toc_depth: '3'
 editor_options:
   markdown:
     wrap: 72
