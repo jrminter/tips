@@ -1,8 +1,11 @@
 ---
 title: "Apple Watch Info"
 author: "John Minter"
-date: 'Started: 2021-12-13, Last Update: 2021-12-15'
+date: 'Started: 2021-12-13, Last Update: 2021-12-29'
 output:
+  word_document:
+    toc: no
+    toc_depth: '3'
   html_document:
     toc: no
     toc_depth: '3'
@@ -11,9 +14,6 @@ output:
     number_sections: yes
     toc: no
     toc_depth: 3
-  word_document:
-    toc: no
-    toc_depth: '3'
 editor_options:
   markdown:
     wrap: 72
