@@ -33,6 +33,8 @@ editor_options:
 2. start/stop/record lap times
 
     ![Start/stop/record-lap-times](2-start-stop-record-lap-times.png)
+    
+    ![Apple Watch](Apple-watch-stop-workout.png)
 
 # Apple watch ring colors
 
