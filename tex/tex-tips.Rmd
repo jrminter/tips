@@ -19,6 +19,13 @@ output:
     ```
     C:/Users/my-user-id/OneDrive/Documents/writing/
     ```
+    ```
+    Update texlive with from the command promopt with:
+    
+    tlmgr update --self --all
+    
+    ```
+    
     
 2. A **great place to start** from [Andy Roberts tips](https://www.andy-roberts.net/writing/latex)
 
