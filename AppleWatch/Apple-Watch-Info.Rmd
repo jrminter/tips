@@ -1,16 +1,19 @@
 ---
 title: "Apple Watch Info"
 author: "John Minter"
-date: 'Original: 2021-12-13 Updated: 2022-01-02'
+date: 'Original: 2021-12-13 Updated: 2022-01-04'
 output:
-  pdf_document:
-    number_sections: yes
+  word_document:
     toc: no
-    toc_depth: 3
+    toc_depth: '3'
   html_document:
     toc: no
     toc_depth: '3'
     df_print: paged
+  pdf_document:
+    number_sections: yes
+    toc: no
+    toc_depth: 3
 editor_options:
   markdown:
     wrap: 72
@@ -19,9 +22,13 @@ editor_options:
 \fontseries{r}
 \selectfont
 
-From here: https://support.apple.com/en-us/HT207941
+# Apple Care on the Watch
+
+Apple Care is billed **monthly**
 
 # Apple Watch Rings
+
+From here: https://support.apple.com/en-us/HT207941
 
 ![Apple watch Rings](./Apple-watch-rings.png)
 **Three rings**: Move, Exercise, Stand.
