@@ -1,7 +1,7 @@
 ---
 title: "LaTeX Hints"
 author: "J. R. Minter"
-date: 'Started: 2013-07-16, Last modified: 2022-01-09'
+date: 'Started: 2013-07-16, Last modified: 2022-01-10'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -20,7 +20,7 @@ output:
     C:/Users/my-user-id/OneDrive/Documents/writing/
     ```
     ```
-    Update texlive with from the command promopt with:
+    Update texlive with from the command prompt with:
     
     tlmgr update --self --all
     
