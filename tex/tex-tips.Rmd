@@ -1,7 +1,7 @@
 ---
 title: "LaTeX Hints"
 author: "J. R. Minter"
-date: 'Started: 2013-07-16, Last modified: 2021-08-07'
+date: 'Started: 2013-07-16, Last modified: 2022-01-09'
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -34,6 +34,14 @@ output:
 4. Helpful Koma examples
 
     [koma-script-scrlttr2](https://tex.stackexchange.com/questions/403077/what-are-the-miminal-required-environments-for-a-koma-script-scrlttr2)
+    
+    How to install koma-script
+    
+    ```
+    tlmgr install koma-script
+    texhash
+    
+    ```
 
 5. From `TeX and Typography` `@TeXtip`    
 
