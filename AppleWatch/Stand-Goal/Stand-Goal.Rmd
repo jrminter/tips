@@ -1,0 +1,22 @@
+---
+title: "Stand Goal"
+author: "John Minter"
+date: "2022-01-14"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+![Stand Example 1](./Stand-Example.png)
+
+![Delete a Health App Workout 2](./Delete_a_Health_App_Workout.png)
+
+![Change Stand Goal 3](./Change_Stand_Goal.png)
+
+![Stand Goal Cheater 4](./Stand_Goal_Cheater_in_Action.png)
+
+![Delete a health App Workout](./Delete_a_Health_App_Workout.png)
+
+
