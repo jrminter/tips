@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-12-08"
+date: "Started: 2013-07-16, Last modified: 2022-01-14"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -10,6 +10,16 @@ output:
     toc_depth: 3
 ---
 [Back to Index](../README.html)
+
+# Software Update on mac
+
+Use the command line:
+
+```
+softwareupdate -l
+```
+
+
 
 # How to take a screenshot on your Mac
 
