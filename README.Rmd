@@ -1,7 +1,7 @@
 ---
 title: "Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-12-26"
+date: "Started: 2013-07-16, Last modified: 2022-01-16"
 output:
   html_document:
     keep_md: yes
@@ -113,6 +113,8 @@ I had issues with Anaconda Powershell in a Win 10 VM window. Try
 
 See [here](https://www.fleetlabs.com/how-to-use-fleet).
 
+
+
 I had issues with new gas pumps at the Mobil station
 
 1. Select **credit** (or debit)  **outside**.
@@ -170,15 +172,13 @@ I had issues with new gas pumps at the Mobil station
 
 
 
-7. Reset a [Fitbit Ionic Watch](fitness/fitness.html)
-
-8. Convert foo.mkv to foo.mp4
+7. Convert foo.mkv to foo.mp4
 
    ```
 ffmpeg -i title.mkv -c copy title.mp4
    ```
    
-9. Change Zoom ID
+8. Change Zoom ID
 
     > To change your name after entering a Zoom meeting, click on the 
     > “Participants” button at the top of the Zoom window. Next, hover
@@ -186,15 +186,15 @@ ffmpeg -i title.mkv -c copy title.mp4
     > side of the Zoom window. Click on “Rename”. Enter the name you'd
     > like to appear in the Zoom meeting and click on “OK”.
 
-10. Delete VLC play list
+9. Delete VLC play list
 
     Select the entry to delete and press clear.
 
 
-11. [RStudio 1.4 preview citations](https://www.r-bloggers.com/2020/11/rstudio-1-4-preview-citations)
+10. [RStudio 1.4 preview citations](https://www.r-bloggers.com/2020/11/rstudio-1-4-preview-citations)
 
 
-12. **LaTeX Symbols to remember**
+11. **LaTeX Symbols to remember**
 
     `\geq`  $\geq$ 
   
@@ -390,22 +390,18 @@ ffmpeg -i title.mkv -c copy title.mp4
 
       `xcode-select --install`
 
-27. Reset a Fitbit Ionic watch
-
-    **See the instructions in the _fitness_ link.**
-
-28. Regex for youtube time stamps. Useful in SublimeText3!
+27. Regex for youtube time stamps. Useful in SublimeText3!
 
       `\d\d:\d\d`
 
-29. Symbolic links. I always get this backwards...
+28. Symbolic links. I always get this backwards...
 
       ```
       file     link
       ln -s source destination
       ```
 
-30. Fun snippets
+29. Fun snippets
 
       > Your closest colaborator is you, six months from now    
       > ... and you don't respond to email     
@@ -415,17 +411,17 @@ ffmpeg -i title.mkv -c copy title.mp4
       > styles    
       > - Peter Baker (UseR 2018)
 
-31. Getting started with data science
+30. Getting started with data science
 
       - A very helpful article from
           [Datacamp](https://www.datacamp.com/community/tutorials/setup-data-science-environment).
 
-32. Clear the Chrome Cache
+31. Clear the Chrome Cache
 
       - Press "CTRL" + "Shift" + "Delete" keys in Windows or Linux
       - Press "Command" + "Shift" + "Delete"" keys on MacOS.
 
-33. Delete Specific Cookies in Chrome for Mac OS X
+32. Delete Specific Cookies in Chrome for Mac OS X
 
       From [osxdaily.com](http://osxdaily.com/2016/07/02/delete-cookies-chrome-browser/)
       You can remove a specific website cookie from Chrome by doing the following
@@ -443,7 +439,7 @@ ffmpeg -i title.mkv -c copy title.mp4
       - Avoid cookie placement and cache generation in the first place by using
       the Chrome `Incognito Mode` private browsing feature.
   
-34. Automatically download all files in a directory
+33. Automatically download all files in a directory
 
       Let's also exclude all the `index.html` files... 
       
@@ -451,7 +447,7 @@ ffmpeg -i title.mkv -c copy title.mp4
       wget -r --no-parent --reject "index.html*" http://my/url
       ```
         
-35. How to block someone on Facebook
+34. How to block someone on Facebook
 
       - Click at the top right of Facebook and choose `Settings`.
       - Click `Blocking` in the left side menu.
@@ -461,7 +457,7 @@ ffmpeg -i title.mkv -c copy title.mp4
       `Block > Block [name]`
 
 
-36. Convert `.mkv` to `.mp4` from the command line
+35. Convert `.mkv` to `.mp4` from the command line
 
       ```
       ffmpeg -i vid.mkv -c copy vid.mp4
@@ -476,7 +472,7 @@ ffmpeg -i title.mkv -c copy title.mp4
       Note: this converts frame-by-frame and can be slow.
       I downloaded ffmpeg on macos via homebrew.
 
-37. HTML Syntax
+36. HTML Syntax
 
   - A link
     
@@ -507,13 +503,11 @@ ffmpeg -i title.mkv -c copy title.mp4
     </blockquote>
     ```
 
-38. [Getting started with VisualStudio Code](https://yushulx.medium.com/building-libtiff-with-libjpeg-on-windows-dbf544ef603e)
+37. [Getting started with VisualStudio Code](https://yushulx.medium.com/building-libtiff-with-libjpeg-on-windows-dbf544ef603e)
 
 
 
 **Topics**
-
-[2012 Honda Civic](./2012-Honda-Civic/2012-Honda-Civic.html)
 
 [AccessToSqlite](./AccessToSqlite/AccessToSqlite.html)
 
@@ -581,11 +575,11 @@ ffmpeg -i title.mkv -c copy title.mp4
 
 [gas](./gas/secrets-to-gas-control.html)
 
-[Garmin-55](./Garmin-55/Garmin-55.html)
-
 [generator](./generator/generator.html)
 
 [gfortran](./gfortran/gfortran.html)
+
+[gifs](./gifs/gifs.html)
 
 [ggplot2 workshop](./ggplot2_workshop/ggplot2_workshop.html)
 
@@ -747,7 +741,7 @@ ffmpeg -i title.mkv -c copy title.mp4
 
 [SQL](./SQL/SQL.html)
 
-[Sublime Text 3](./ST3/ST3.html)
+[Sublime Text 4](./ST4/ST4.html)
 
 [Stratagem](./Stratagem/Stratagem.html)
 
@@ -765,7 +759,7 @@ ffmpeg -i title.mkv -c copy title.mp4
 
 [Ubuntu](./ubuntu/ubuntu.html)
 
-[vacuum systems](./vacuum/vacuum.html)
+[Vacuum systems](./vacuum/vacuum.html)
 
 [Videos](./videos/videos.html)
 
