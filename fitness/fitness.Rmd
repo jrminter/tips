@@ -1,7 +1,7 @@
 ---
 title: "Fitness tips"
 author: "J. R. Minter"
-date: "Started: 2015-05-10, Last modified: 2021-09-06"
+date: "Started: 2015-05-10, Last modified: 2022-01-16"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -29,50 +29,6 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 
 [Back to Index](../README.html)
-
-# Hard reset or Fitbit Ionic
-
-1. Start by turning your FITBIT Ionic watch off. To do that, hold the
-**left-hand** and the **lower right-hand** side buttons together.
-The watch should turn off after 10 seconds.
-
-2. Now, to hard reset your watch, you have to
-**press and hold all three FITBIT Ionic buttons at the same time**.
-**_Wait_** till the watch logo appears for the second time.
-**N.B.** this should be all that is needed.
-
-3. Immediately stop holding the **lower right-hand side button**,
-while still holding the other buttons.
-
-4. Wait for about 10 seconds, the watch should start to vibrate.
-**Stop holding the buttons then**.
-
-Your watch was now reset – you should have no problems using it!
-
-**Note** To get the FitBit watch to sync with you iPhone, open the
-fitbit app on the iPhone. **pull down** on the screen in the FitBit
-app. A nessage will appear: **synching your ionic**.
-
-
-
-# Connect Fitbit to WiFi
-
-> How To Connect Fitbit Ionic To Wi-Fi    
-> From the Fitbit app dashboard, tap or click the Account icon – your watch tile.
-Tap or click Wi-Fi Settings.
-Tap or click Add Network and follow the on-screen instructions to connect your watch.
-
-> How do I change the Wi-Fi network my Fitbit watch is connected to?    
-> 
-> 1. In the Fitbit app, tap the Today tab > your profile picture > your watch tile.
-> 2. Tap Wi-Fi Settings. Wait a moment for the list of networks to appear.
-> 3. Tap the network name, then tap Connect.
-
-
-
-# FitBit Tracking
-
-[R-Bloggers](https://www.r-bloggers.com/2021/05/fitbit-visualizations-using-the-fitbitviz-r-package/) had some helpful ideas.
 
 # How to Fall Asleep
 
