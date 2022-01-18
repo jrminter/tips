@@ -26,35 +26,13 @@ C:\Users\user_id\Documents\git\tips
                               \jrmsermoms
 ```
 
-**Cleaning Stainless-Steel Coffee Mugs**  Use this link...  
-```https://www.youtube.com/watch?v=FQttuPcSyG8```
-
-Seems to be an adds problem...
-
 
 See **Notifications**    
 
   1. Click on the **upper right corner of your screen** or    
   2. **swipe left _with 2 fingers_ from the** _right edge of your trackpad_.
 
-# A funny Academic Translator
 
-I found this on Twitter... It is funny!
-
-| What they say               | What they mean           |
-|-----------------------------|--------------------------|
-Various sources | I forgot the name and author of one paper |
-We are grateful to the two anonymous peer reviewers for their constructive comments | God help them if I ever find out who they are |
-| A promising area for an initial study | I have to do this to get funding |
-| Widely discussed in the academic community | I accidentally ended up in the middle of a heated Twitter argument |
-| The notes were meticulously transcribed | I was drunk and missed out at least seven pages |                  
-| An extensive literature search | A quick Google search |
-| A complex phenomenon | I don't understand |
-| It is impossible to summarize simply | I still don't understand |
-| Approaching the traditonal threshold for statistical significance | Not significant |
-| More research is required   | I need funding           |
-
-I thought this was funny in a Ph.D. Comics mode...
 
 
 # A great quote from Doug Wilson:
@@ -102,8 +80,7 @@ Some helpful information from @CMSeeberger:
 
 
 
-[Set up R universe](https://ropensci.org/blog/2021/06/22/setup-runiverse/)
-(from ROpenScience).
+[Set up R universe from ROpenScience](https://ropensci.org/blog/2021/06/22/setup-runiverse/)
 
 I had issues with Anaconda Powershell in a Win 10 VM window. Try 
 `Run as Adminstrator`. It is easier to read! Better yet, click on the
