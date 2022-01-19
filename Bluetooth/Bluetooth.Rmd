@@ -1,7 +1,7 @@
 ---
-title: "Bluetooth Tips for Bose"
+title: "Bluetooth Tips"
 author: "John Minter"
-date: "2021-12-17"
+date: "2021-12-17  modified  2021-01-19"
 output:
   pdf_document:
     number_sections: yes
@@ -29,6 +29,8 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Using Blutooth on Bose speaker
 
+## Connecting
+
 1. On Phone, go into "Settings" (a grey gear)
 
 2. 3rd from left is **Bluetooth**. Click on **Bluetooth**.
@@ -38,7 +40,7 @@ knitr::opts_chunk$set(echo = TRUE)
 4. If it is **not connected**, press and hold the Bluetooth button on Bose. It 
 should connect.
 
-# Disconnecting
+## Disconnecting
 
 1. Go to **Settings**
 
@@ -47,6 +49,74 @@ should connect.
 3, Click on circular **i** (for information) for Bose
 
 4. Click **disconnect**
+
+# Anker Bluetooth Headphones
+
+## Charging 
+
+1. Fully dry off the USB port before charging
+
+2. Use the provided USB-C charging cable and charger to prevent damage.
+
+3. **Do Not** power on your headphones **while charging**.
+
+## Bluetooth pairing
+
+1. When powered off, press and holdthe power button for 5 sec LED stops.
+
+2. Select "Soundcore Life Q30" on your Bluetooth list to connect.
+
+3. Light notifications
+
+   - Flashing red once every 60 sec : Low battery
+   
+   - Steady red: Being charged
+   
+   - light odd: Fully charged
+   
+   - flashing red: Bluetooth Pairing
+   
+4. Powering On/Off - Press and hold for 3 sec to power off
+
+5. You can connect to two devices
+
+   - First is with Bluetooth
+   
+   - Second press the button twice to pair with a second device.
+   
+   - Steady blue means Bluetooth connected.
+   
+   
+6. Bluetooth for music
+
+   - play/pause press the button
+   
+   - next track (+)  Press and hold 1 sec
+   
+   - Previous track  Press and hold 1 sec
+   
+   - Volume up/down Press
+   
+   - Answer / end call - press
+   
+   - Activate Siri press and hold 1 sec
+   
+7. Noise candellation
+
+   To reduce ambient noise, turn on the active noise cancellation mode    
+   by pressing the **NC button** press the **NC button** again to turn off
+   
+
+8. AuX mode
+
+   Play audio on an external device by plugging in a 3.5 mm AUX cable.
+  
+9. Reset
+
+   You might need to reset your headphone if you have problems.
+   Press and hold the power button and volume up button simultaneously
+   for 5 sec until the LED indicator flashes blue and red alternately
+   twice.
 
 
 [Back to Index](../README.html)
