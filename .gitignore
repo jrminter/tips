@@ -53,6 +53,7 @@ bibtex/figure/
 
 # Bluetooth
 Bluetooth/*.html
+Bluetooth/*.pdf
 
 # Books
 Books/*.html
