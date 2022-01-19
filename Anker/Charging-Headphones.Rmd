@@ -1,0 +1,23 @@
+---
+title: "Charging Anker Bluetooth Headphones"
+author: "J. R. Minter"
+date: "Started 2022-01-19, Last modified:  2022-01-19"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+[Back to Index](../README.html)
+
+![Anker](./Charging-Anker.png)
+
+![Anker](./Charging-Anker.png)
+
+[Back to Index](../README.html)
+
