@@ -46,7 +46,7 @@ should connect.
 
 2. Look for **Bluetooth**
 
-3, Click on circular **i** (for information) for Bose
+3. Click on circular **i** (for information) for Bose
 
 4. Click **disconnect**
 
@@ -101,7 +101,7 @@ should connect.
    
    - Activate Siri press and hold 1 sec
    
-7. Noise candellation
+7. Noise cancellation
 
    To reduce ambient noise, turn on the active noise cancellation mode    
    by pressing the **NC button** press the **NC button** again to turn off
