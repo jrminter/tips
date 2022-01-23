@@ -1,16 +1,16 @@
 ---
 title: "Bluetooth Tips"
 author: "John Minter"
-date: "2021-12-17  modified  2021-01-19"
+date: "2021-12-17  modified  2021-01-22"
 output:
-  pdf_document:
-    number_sections: yes
-    toc: no
-    toc_depth: 3
   html_document:
     toc: no
     toc_depth: '3'
     df_print: paged
+  pdf_document:
+    number_sections: yes
+    toc: no
+    toc_depth: 3
   word_document:
     toc: no
     toc_depth: '3'
@@ -26,6 +26,55 @@ editor_options:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 [Back to Index](../README.html)
+
+# Connecting a Bluetooth Mouse on MacOS
+
+1. Turn the mouse on, and make sure it's within range of your Mac.
+
+2. Click the Apple icon in the top-left corner of the screen.
+
+3. Select "System Preferences..."
+
+4. Click the "Bluetooth" icon.
+
+5. If it's not already on, select "Turn Bluetooth On."
+
+6. Wait for your mouse to appear on the list.
+
+# Pair a Bluetooth device on Windows 11
+
+Before you start, make sure that your Windows 11 PC supports Bluetooth. For more info on how to check, see Fix Bluetooth problems in Windows. If you need help adding a device without Bluetooth capabilities, see Add a device to a Windows PC.
+
+## Turn on Bluetooth
+
+After you've checked that your Windows 11 PC supports Bluetooth, you'll need to turn it on. Here's how:
+
+- In Settings    
+Select Start > Settings > Bluetooth & devices, and then turn on Bluetooth.
+
+- In quick settings    
+To find the quick setting for Bluetooth, select the Network icon next to the time and date on the right side of your taskbar. Select Bluetooth to turn it on. If it's turned on without any Bluetooth devices connected, it might appear as Not connected.
+
+If you don't see Bluetooth in quick settings, you might need to add it. For more info, see Change notifications and quick settings in Windows 11.
+
+## To pair a Bluetooth device
+
+1. Turn on your Bluetooth device and make it discoverable. The way you make it discoverable depends on the device. Check the device or visit the manufacturer's website to learn how.
+
+2. On your PC, select `Start > Settings > Bluetooth & devices > Add device > Bluetooth`.
+
+3. Choose the Bluetooth device, follow additional instructions if they appear, then select `Done`.
+
+Your Bluetooth device and PC will usually automatically connect anytime the two devices are in range of each other with Bluetooth turned on.
+
+## To pair a Bluetooth printer or scanner
+
+1. Turn on your Bluetooth printer or scanner and make it discoverable. The way you make it discoverable depends on the device. Check the device or visit the manufacturer's website to learn how.
+
+2. Select `Start > Settings > Bluetooth & devices > Printers & scanners > Add device`. Wait for it to find nearby printers, choose the one you want to use, then select Add device.
+
+If you’re having problems installing your printer or scanner, see either Fix printer problems or Install and use a scanner in Windows.
+
 
 # Using Blutooth on Bose speaker
 

@@ -28,6 +28,8 @@ C:\Users\user_id\Documents\git\tips
 
 [Anker](./Anker/Charging-Anker-Headphones.html)
 
+[Pair Bluetooth on Windows](./Bluetooth/Bluetooth.html)
+
 
 See **Notifications**    
 
