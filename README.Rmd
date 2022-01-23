@@ -18,111 +18,101 @@ This repository contains the John Minter's useful tips in Rmarkdown
 format.
 
 
-My favorite path
+1. My favorite path
 
-```
-C:\Users\user_id\Documents\git\tips
+   ```
+   C:\Users\user_id\Documents\git\tips
                               \jrmsolutions
                               \jrmsermoms
-```
+   ```
 
 
-See **Notifications**    
+2. See **Notifications**    
 
-  1. Click on the **upper right corner of your screen** or    
-  2. **swipe left _with 2 fingers_ from the** _right edge of your trackpad_.
+   1. Click on the **upper right corner of your screen** or 
+   
+   2. **swipe left _with 2 fingers_ from the** _right edge of your trackpad_.
 
 
 
 
-# A great quote from Doug Wilson:
+3.  A great quote from Doug Wilson:
 
-> Always **act**, _not_ **react**!
+    > Always **act**, _not_ **react**!
 
-# A great quote from Tom Clancy:
+4. A great quote from Tom Clancy:
 
-> Sasha taught the boy that preparation, knowledge, and discipline can
-> deal with any form of danger; that danger confronted properly is not
-> something a man must fear.    
->
-> Tom Clancy, The Hunt for Red October, page 28
+   > Sasha taught the boy that preparation, knowledge, and discipline can
+   > deal with any form of danger; that danger confronted properly is not
+   > something a man must fear.    
+   >
+   > Tom Clancy, The Hunt for Red October, page 28
 
-# A helpful quote from Adam Grant
 
-> Anger is often seen as an irrational emotion. But it’s not due
-> to the absence of logic — it’s due to the presence of threat or harm.
-> 
-> Getting mad is a sign that something important to you is at risk.
-> 
-> Understanding what makes you angry is a prism for understanding
-> what you value.
+5. A helpful quote from Adam Grant
+
+   > Anger is often seen as an irrational emotion. But it’s not due
+   > to the absence of logic — it’s due to the presence of threat or harm.
+   > 
+   > Getting mad is a sign that something important to you is at risk.
+   > 
+   > Understanding what makes you angry is a prism for understanding
+   > what you value.
  
 
-# Testing internet connections
+6. Testing internet connections
 
-> To check internet outage try to ping Google:
-> 
+   > To check internet outage try to ping Google:
+   > 
 
-```
-ping 8.8.8.8
-```
-
-Some helpful information from @CMSeeberger:
-
-> Colin Seeberger    
-> NEW in @NEJM:    
-> 
-> **2 doses of the Pfizer vaccine offer 88% protection** against
-> symptomatic disease caused by the **delta variant**. Just slightly
-> down from 94% against the alpha variant (B.1.1.7) that was first
-> discovered in Britain & became dominant across the globe earlier this
-> year.
+   ```
+   ping 8.8.8.8
+   ```
 
 
+7. [Set up R universe from ROpenScience](https://ropensci.org/blog/2021/06/22/setup-runiverse/)
 
-[Set up R universe from ROpenScience](https://ropensci.org/blog/2021/06/22/setup-runiverse/)
-
-I had issues with Anaconda Powershell in a Win 10 VM window. Try 
+8. I had issues with Anaconda Powershell in a Win 10 VM window. Try 
 `Run as Adminstrator`. It is easier to read! Better yet, click on the
 4-box icon in the lower left and open Powershell. The font will be OK.
 
-**Fleets Enema procedure** For 2021-06-25 at **Unity Hospital**.
+9. Fleets Enema procedure.
 
-See [here](https://www.fleetlabs.com/how-to-use-fleet).
+   See [here](https://www.fleetlabs.com/how-to-use-fleet).
+
+10.  Gas at Mobil Station
+
+     I had issues with new gas pumps at the Mobil station
+
+     - Select **credit** (or debit)  **outside**.
+
+     - Enter card
+
+     - Select Grade (89 Octane)
+
+     - Pump Gas
+
+     - Replace Nozzle
 
 
+11. [Greece NY Traffic](https://www.localconditions.com/weather-greece-new-york/ny0446/traffic.php)
 
-I had issues with new gas pumps at the Mobil station
+12. [Physical Science Open Textbooks](https://www.oercommons.org/curated-collections/811?__hub_id=19)
 
-1. Select **credit** (or debit)  **outside**.
-
-2. Enter card
-
-3. Select Grade (89 Octane)
-
-4. Pump Gas
-
-5. Replace Nozzle
-
-
-[Greece NY Traffic](https://www.localconditions.com/weather-greece-new-york/ny0446/traffic.php)
-
-1. [Physical Science Open Textbooks](https://www.oercommons.org/curated-collections/811?__hub_id=19)
-
-2. Block an email address on Gmail
+13. Block an email address on Gmail
    - On your computer, go to Gmail.
    - Open the message.
    - In the top right, click More.
    - Click Block [sender].
 
 
-3. An odd get error with synch. This worked to fix. Moved to top!
+14 . An odd get error with synch. This worked to fix. Moved to top!
 
    ```
    git config pull.rebase false
    ```
 
-4. Block a number on iPhone
+15. Block a number on iPhone
 
    - Start by accessing your list of recent callers,
      so open the Phone app.
@@ -135,9 +125,9 @@ I had issues with new gas pumps at the Mobil station
   
    - Confirm your decision.
 
-5. Use ESV from Kindle for easier copy/paste
+16. Use ESV from Kindle for easier copy/paste
 
-6. Turn on **Do Not Disturb** on the Mac
+17. Turn on **Do Not Disturb** on the Mac
 
     - click on the icon just to the left of the `Siri` Prompt.
 
@@ -149,13 +139,13 @@ I had issues with new gas pumps at the Mobil station
 
 
 
-7. Convert foo.mkv to foo.mp4
+18. Convert `foo.mkv` to `foo.mp4`
 
-   ```
-ffmpeg -i title.mkv -c copy title.mp4
-   ```
+    ```
+    ffmpeg -i title.mkv -c copy title.mp4
+    ```
    
-8. Change Zoom ID
+19. Change Zoom ID
 
     > To change your name after entering a Zoom meeting, click on the 
     > “Participants” button at the top of the Zoom window. Next, hover
@@ -163,15 +153,15 @@ ffmpeg -i title.mkv -c copy title.mp4
     > side of the Zoom window. Click on “Rename”. Enter the name you'd
     > like to appear in the Zoom meeting and click on “OK”.
 
-9. Delete VLC play list
+20. Delete VLC play list
 
     Select the entry to delete and press clear.
 
 
-10. [RStudio 1.4 preview citations](https://www.r-bloggers.com/2020/11/rstudio-1-4-preview-citations)
+21. [RStudio 1.4 preview citations](https://www.r-bloggers.com/2020/11/rstudio-1-4-preview-citations)
 
 
-11. **LaTeX Symbols to remember**
+22. **LaTeX Symbols to remember**
 
     `\geq`  $\geq$ 
   
@@ -182,7 +172,7 @@ ffmpeg -i title.mkv -c copy title.mp4
     The PDF is [**here**](tex/pdf/TeXRefCard-v1.5.pdf).
 
 
-13. **USB drives**
+23. **USB drives**
 
     Note to self: Only buy **USB-3.1** thumb drives, They are **a _lot_ faster**
     than USB 3.0...
@@ -190,7 +180,7 @@ ffmpeg -i title.mkv -c copy title.mp4
     see [Amazon](https://www.amazon.com/gp/product/B07D7PDLXC/ref=ppx_yo_dt_b_asin_title_o00_s00)
     for a nice drive...
 
-14. **Quotes I Like**
+24. **Quotes I Like**
 
     > Plod. don't sprint. Be fruitful like a tree, not efficient like a machine.
     > Use the gifts God has given you. - Douglas Wilson
@@ -206,7 +196,7 @@ ffmpeg -i title.mkv -c copy title.mp4
     > respond to email.    
     > - Karl Browman
 
-15. From [DataArtisan](https://twitter.com/dataartisan1/status/1263784688432398338):
+25. From [DataArtisan](https://twitter.com/dataartisan1/status/1263784688432398338):
 
     Skills that make you stand out in #DataScience    
   
@@ -220,7 +210,7 @@ ffmpeg -i title.mkv -c copy title.mp4
 
 
 
-16. Checking Author/date properties in a PDF
+26. Checking Author/date properties in a PDF
 
     > **Q: How do I find out when a PDF doc was originally created there
     > is nothing under `File/Properties`? **
@@ -236,7 +226,7 @@ ffmpeg -i title.mkv -c copy title.mp4
     > are chances that original file creation date is not displayed.
 
   
-17. Key greek and other characters
+27. Key greek and other characters
 
     ```
     Φ(ρ𝑧)
@@ -275,7 +265,7 @@ ffmpeg -i title.mkv -c copy title.mp4
     ```
 
 
-18. Today I learned (TIL)
+28. Today I learned (TIL)
 
     2020-05-25:    
    
@@ -303,7 +293,7 @@ ffmpeg -i title.mkv -c copy title.mp4
         - Under Product Information, click on `Update Options` next to `Office Updates`.    
         - From the list of options, click on `Update Now`.
 
-19. Chrome Bookmarks - How to move a folder...
+29. Chrome Bookmarks - How to move a folder...
 
     From [here](https://support.google.com/chrome/thread/3479132?hl=en).
    
@@ -314,24 +304,24 @@ ffmpeg -i title.mkv -c copy title.mp4
     > little 'folder' icon-- it will not work.
 
 
-20. Keyboard shortcut for the `dplyr` pipe operator
+30. Keyboard shortcut for the `dplyr` pipe operator
 
       ```
       Win: `%>%` - Ctl + Shift + M    
       Mac: `%>%` - CMD + Shift + M   
       ```
 
-21. Fix a `recurring github credential problem` - run:
+31. Fix a `recurring github credential problem` - run:
    
       ```
       Sys.unsetenv("GITHUB_PAT")
       Sys.getenv("GITHUB_PAT")
       ```
 
-22. The R `janitor` package is your friend. It cleans up
+32. The R `janitor` package is your friend. It cleans up
      non-standard column names .
 
-23. CDC Corona Virus Recommendations
+33. CDC Corona Virus Recommendations
 
       > The CDC recommends washing with soap and water for at least 20 seconds after
       > using the bathroom, before eating and after blowing your nose or sneezing. It
@@ -341,7 +331,7 @@ ffmpeg -i title.mkv -c copy title.mp4
       > “These are all things you can do to prevent the spread of pretty much any
       > respiratory virus,” Brewer said.
 
-24. Closed captions in CBS All access
+34. Closed captions in CBS All access
 
       > Go to www.cbs.com. Find a full episode of a series that you're
       > interested in and click on it. To turn the captions on, bring your
@@ -350,7 +340,7 @@ ffmpeg -i title.mkv -c copy title.mp4
       > side, click again on "CC captions" just once.
 
 
-25. The Feynman technique of learning:
+35. The Feynman technique of learning:
 
       - Step 1: Pick and study a topic
 
@@ -363,22 +353,22 @@ ffmpeg -i title.mkv -c copy title.mp4
     
       More [here](./Feynman_technique/Feynman_technique.html)...
     
-26. Install command line tools on MacOS
+36. Install command line tools on MacOS
 
       `xcode-select --install`
 
-27. Regex for youtube time stamps. Useful in SublimeText3!
+37. Regex for youtube time stamps. Useful in SublimeText3!
 
       `\d\d:\d\d`
 
-28. Symbolic links. I always get this backwards...
+38. Symbolic links. I always get this backwards...
 
       ```
       file     link
       ln -s source destination
       ```
 
-29. Fun snippets
+39. Fun snippets
 
       > Your closest colaborator is you, six months from now    
       > ... and you don't respond to email     
@@ -388,17 +378,17 @@ ffmpeg -i title.mkv -c copy title.mp4
       > styles    
       > - Peter Baker (UseR 2018)
 
-30. Getting started with data science
+40. Getting started with data science
 
       - A very helpful article from
           [Datacamp](https://www.datacamp.com/community/tutorials/setup-data-science-environment).
 
-31. Clear the Chrome Cache
+41. Clear the Chrome Cache
 
       - Press "CTRL" + "Shift" + "Delete" keys in Windows or Linux
       - Press "Command" + "Shift" + "Delete"" keys on MacOS.
 
-32. Delete Specific Cookies in Chrome for Mac OS X
+42. Delete Specific Cookies in Chrome for Mac OS X
 
       From [osxdaily.com](http://osxdaily.com/2016/07/02/delete-cookies-chrome-browser/)
       You can remove a specific website cookie from Chrome by doing the following
@@ -416,7 +406,7 @@ ffmpeg -i title.mkv -c copy title.mp4
       - Avoid cookie placement and cache generation in the first place by using
       the Chrome `Incognito Mode` private browsing feature.
   
-33. Automatically download all files in a directory
+43. Automatically download all files in a directory
 
       Let's also exclude all the `index.html` files... 
       
@@ -424,7 +414,7 @@ ffmpeg -i title.mkv -c copy title.mp4
       wget -r --no-parent --reject "index.html*" http://my/url
       ```
         
-34. How to block someone on Facebook
+44. How to block someone on Facebook
 
       - Click at the top right of Facebook and choose `Settings`.
       - Click `Blocking` in the left side menu.
@@ -434,7 +424,7 @@ ffmpeg -i title.mkv -c copy title.mp4
       `Block > Block [name]`
 
 
-35. Convert `.mkv` to `.mp4` from the command line
+45. Convert `.mkv` to `.mp4` from the command line
 
       ```
       ffmpeg -i vid.mkv -c copy vid.mp4
@@ -449,7 +439,7 @@ ffmpeg -i title.mkv -c copy title.mp4
       Note: this converts frame-by-frame and can be slow.
       I downloaded ffmpeg on macos via homebrew.
 
-36. HTML Syntax
+46. HTML Syntax
 
   - A link
     
@@ -480,289 +470,285 @@ ffmpeg -i title.mkv -c copy title.mp4
     </blockquote>
     ```
 
-37. [Getting started with VisualStudio Code](https://yushulx.medium.com/building-libtiff-with-libjpeg-on-windows-dbf544ef603e)
+47. [Getting started with VisualStudio Code](https://yushulx.medium.com/building-libtiff-with-libjpeg-on-windows-dbf544ef603e)
 
+48. [Pair Bluetooth on Windows](./Bluetooth/Bluetooth.html)
 
+49. [Anker](./Anker/Anker.html)
 
-**Topics**
+50. [AccessToSqlite](./AccessToSqlite/AccessToSqlite.html)
 
 
-[Pair Bluetooth on Windows](./Bluetooth/Bluetooth.html)
+51. [Apple Watch](./AppleWatch/AppleWatch.html)
 
-[Anker](./Anker/Anker.html)
 
+52. [Bladder Control](./bladder/Bladder-Control.html)
 
-[AccessToSqlite](./AccessToSqlite/AccessToSqlite.html)
+53. [Bluetooth](./Bluetooth/Bluetooth.html)
 
-[Apple Watch](./AppleWatch/AppleWatch.html)
+54. [Books](./Books/books.html)
 
-[Bladder Control](./bladder/Bladder-Control.html)
+55. [Charging Anker Bluetooth Headphones](./Anker-Headphones/Charging-Anker-Headphones.html)
 
-[Bluetooth](./Bluetooth/Bluetooth.html)
+56. [EkAutomater](./automater/automater.html)
 
-[Books](./Books/books.html)
+57. [Oxford AZtec](./AZtec/AZtec.html)
 
-[Charging Anker Bluetooth Headphones](./Anker-Headphones/Charging-Anker-Headphones.html)
+58. [Badger Film](./BadgerFilm/BadgerFilm.html)
 
-[EkAutomater](./automater/automater.html)
+59. [bibtex](./bibtex/bibtex.html)
 
-[Oxford AZtec](./AZtec/AZtec.html)
+60. [C++11](./C++11/C++11-Tips.html)
 
-[Badger Film](./BadgerFilm/BadgerFilm.html)
+61. [Carbon Film Thickness](./carbonFilmThickness/carbonFilmThickness.html)
 
-[bibtex](./bibtex/bibtex.html)
+62. [chemStructures](./chemStructures/chemStructures.html)
 
-[C++11](./C++11/C++11-Tips.html)
+63. [chntpw](./chntpw/chntpw.html)
 
-[Carbon Film Thickness](./carbonFilmThickness/carbonFilmThickness.html)
+64. [Color](./color/color.html)
 
-[chemStructures](./chemStructures/chemStructures.html)
+65. [Complex K-ratios](./complex-kratios/complex-kratios.html)
 
-[chntpw](./chntpw/chntpw.html)
+66. [Conductive Epoxies](./ConductiveEpoxy/ConductiveEpoxy.html)
 
-[Color](./color/color.html)
+67. [DataScience-linux64](./DataScience-linux64/DataScience-linux64.html)
 
-[Complex K-ratios](./complex-kratios/complex-kratios.html)
+68. [Debian](./Debian/Debian.html)
 
-[Conductive Epoxies](./ConductiveEpoxy/ConductiveEpoxy.html)
+69. [Denton Coaters](./Denton/Denton.html)
 
-[DataScience-linux64](./DataScience-linux64/DataScience-linux64.html)
+70. [Diffraction Limit](./DiffractionLimit/DiffractionLimit.html)
 
-[Debian](./Debian/Debian.html)
+71. [DTSA-II](./dtsa2/dtsa2.html)
 
-[Denton Coaters](./Denton/Denton.html)
+72. [DTSA-II Scripting](./dtsa2-scripting/dtsa2-scripting.html)
 
-[Diffraction Limit](./DiffractionLimit/DiffractionLimit.html)
+73. [Earth Science](./earth-sci/earth-sci.html)
 
-[DTSA-II](./dtsa2/dtsa2.html)
+74. [EDAX](./EDAX/EDAX.html)
 
-[DTSA-II Scripting](./dtsa2-scripting/dtsa2-scripting.html)
+75. [EPMA Matrix Correction](./epma-matrix-corr/epma-matrix-corr.html)
 
-[Earth Science](./earth-sci/earth-sci.html)
+76. [Excel](./Excel/Excel.html)
 
-[EDAX](./EDAX/EDAX.html)
+77. [Excelsior Pass](./Excelsior-Pass/Excelsior-Pass.html)
 
-[EPMA Matrix Correction](./epma-matrix-corr/epma-matrix-corr.html)
+78. [Feynman Technique](./Feynman_technique/Feynman_technique.html)
 
-[Excel](./Excel/Excel.html)
+79. [Fiji plugin development](./fiji-plugin-development/fiji-plugin-development.html)
 
-[Excelsior Pass](./Excelsior-Pass/Excelsior-Pass.html)
+80. [Fitness](./fitness/fitness.html)
 
-[Feynman Technique](./Feynman_technique/Feynman_technique.html)
+81. [Font Test](./font-test/font-test.html)
 
-[Fiji plugin development](./fiji-plugin-development/fiji-plugin-development.html)
+82. [French Press Instructions](./french-press-instructions/french-press-instructions.html)
 
-[Fitness](./fitness/fitness.html)
+83. [Gas](./gas/secrets-to-gas-control.html)
 
-[Font Test](./font-test/font-test.html)
+84. [generator](./generator/generator.html)
 
-[French Press Instructions](./french-press-instructions/french-press-instructions.html)
+85. [gfortran](./gfortran/gfortran.html)
 
-[gas](./gas/secrets-to-gas-control.html)
+86. [gifs](./gifs/gifs.html)
 
-[generator](./generator/generator.html)
+87. [ggplot2 workshop](./ggplot2_workshop/ggplot2_workshop.html)
 
-[gfortran](./gfortran/gfortran.html)
+88. [Building up a ggplot2 figure](./ggplot2figure/ggplot2-figure.html)
 
-[gifs](./gifs/gifs.html)
+89. [ggplot2Examples](./ggplot2Examples/ggplot2Examples.html)
 
-[ggplot2 workshop](./ggplot2_workshop/ggplot2_workshop.html)
+90. [ggplot2Intro](./ggplot2Intro/ggplot2Intro.html)
 
-[Building up a ggplot2 figure](./ggplot2figure/ggplot2-figure.html)
+91. [ggvisIntro](./ggvisIntro/ggvisIntro.html)
 
-[ggplot2Examples](./ggplot2Examples/ggplot2Examples.html)
+92. [git](./git/git-tips.html)
 
-[ggplot2Intro](./ggplot2Intro/ggplot2Intro.html)
+93. [gnuplot](./gnuplot/gnuplot.html)
 
-[ggvisIntro](./ggvisIntro/ggvisIntro.html)
+94. [Haklev's tips on data wrangling with R](./hacklev/hacklev.html)
 
-[git](./git/git-tips.html)
+95. [hearing aids](hearing-aids/hearing-aids.html)
 
-[gnuplot](./gnuplot/gnuplot.html)
+96. [here](here/here.html)
 
-[Haklev's tips on data wrangling with R](./hacklev/hacklev.html)
+97. [homebrew](./homebrew/homebrew.html)
 
-[hearing aids](hearing-aids/hearing-aids.html)
+98. [html](./html/html.html)
 
-[here](here/here.html)
+99. [hyperspy](./hyperspy/hyperspy.html)
 
-[homebrew](./homebrew/homebrew.html)
+100. [Image-J](./ImageJ/ImageJ.html)
 
-[html](./html/html.html)
+101. [iMessage](./iMessage/iMessage.html)
 
-[hyperspy](./hyperspy/hyperspy.html)
+102. [Inkscape](./inkscape/inkscape.html)
 
-[Image-J](./ImageJ/ImageJ.html)
+103. [iOS](./iOS/iOS.html)
 
-[iMessage](./iMessage/iMessage.html)
+104. [JabRef](./JabRef/JabRef.html)
 
-[Inkscape](./inkscape/inkscape.html)
+105. [Jekyll on github.io](./jekyll-github/jekyll-github.html)
 
-[iOS](./iOS/iOS.html)
+106. [json](./json/json.html)
 
-[JabRef](./JabRef/JabRef.html)
+107. [Leadership](./leadership/Solitude-and-Leadership-William-Deresiewicz.html)
 
-[Jekyll on github.io](./jekyll-github/jekyll-github.html)
+108. [LaTeX for Rmarkdown](./latex-eqns-for-rmarkdown/latex-eqns-for-rmarkdown.html)
 
-[json](./json/json.html)
+109. [legacy equipment](./legacy/Legacy.html)
 
-[Leadership](./leadership/Solitude-and-Leadership-William-Deresiewicz.html)
+110. [Logos Library System](./Logos/Logos.html)
 
-[LaTeX for Rmarkdown](./latex-eqns-for-rmarkdown/latex-eqns-for-rmarkdown.html)
+111. [Low Carb Diet (Denninger)](./Low-Carb-Diet/Low-Carb-Diet.html)
 
-[legacy equipment](./legacy/Legacy.html)
+112. [Lubuntu](./Lubuntu/Lubuntu.html)
 
-[Logos Library System](./Logos/Logos.html)
+113. [mac](./mac/mac.html)
 
-[Low Carb Diet (Denninger)](./Low-Carb-Diet/Low-Carb-Diet.html)
+114. [mac-for-data-science](./mac-for-data-science/mac-for-data-science.html)
 
-[Lubuntu](./Lubuntu/Lubuntu.html)
+115. [microscopy](./micro/micro.html)
 
-[mac](./mac/mac.html)
+116. [microscopy sample prep](./micro-sample-prep/micro-sample-prep.html)
 
-[mac-for-data-science](./mac-for-data-science/mac-for-data-science.html)
+117. [midb](./midb/midb.html)
 
-[microscopy](./micro/micro.html)
+118. [Monte Carlo methods in R](./monteCarlo/monteCarlo.html)
 
-[microscopy sample prep](./micro-sample-prep/micro-sample-prep.html)
+119. [MS Office](./msOffice/msOffice.html)
 
-[midb](./midb/midb.html)
+120. [MySQL](./mysql/mysql.html)
 
-[Monte Carlo methods in R](./monteCarlo/monteCarlo.html)
+121. [Northgate](./Northgate/Northgate.html)
 
-[MS Office](./msOffice/msOffice.html)
+122. [Octave](./Octave/Octave.html)
 
-[MySQL](./mysql/mysql.html)
+123. [OnePassword](./OnePassword/OnePassword.html)
 
-[Northgate](./Northgate/Northgate.html)
+124. [Oracle Virtual Box](./Oracle-Virtual-Box/Oracle-Virtual-Box.html)
 
-[Octave](./Octave/Octave.html)
+125. [OS Package Links](./osPkgs/osPkgs.html)
 
-[OnePassword](./OnePassword/OnePassword.html)
+126. [pandoc](./pandoc/pandoc.html)
 
-[Oracle Virtual Box](./Oracle-Virtual-Box/Oracle-Virtual-Box.html)
+127. [phi-rho-z](./phi-rho-z/phi-rho-z.html)
 
-[OS Package Links](./osPkgs/osPkgs.html)
+121. [plagiarism](./plagiarism/plagiarism.html)
 
-[pandoc](./pandoc/pandoc.html)
+122. [pool](./pool/pool.html)
 
-[phi-rho-z](./phi-rho-z/phi-rho-z.html)
+123. [portable makefiles](./portableMakefiles/portableMakefiles.html)
 
-[plagiarism](./plagiarism/plagiarism.html)
+124. [PowerPoint](./ppt/ppt.html)
 
-[pool](./pool/pool.html)
+125. [Preparation of samples for EDS](./prepForEDS/prepForEDS.html)
 
-[portable makefiles](./portableMakefiles/portableMakefiles.html)
+126. [Probe for EPMA](./probeForEPMA/probeForEPMA.html)
 
-[PowerPoint](./ppt/ppt.html)
+127. [python](./python/python.html)
 
-[Preparation of samples for EDS](./prepForEDS/prepForEDS.html)
+128. [python image processing with skimage](./skimage/skimage.html)
 
-[Probe for EPMA](./probeForEPMA/probeForEPMA.html)
+129. [qqplotr](./qqplotr/qqplotr.html)
 
-[python](./python/python.html)
+130. [quotes](./quotes/quotes.html)
 
-[python image processing with skimage](./skimage/skimage.html)
+131. [R](./R/R-tips.html)
 
-[qqplotr](./qqplotr/qqplotr.html)
+132. [R-Anova](./R-Anova/R-Anova.html)
 
-[quotes](./quotes/quotes.html)
+133. [R-bar-plots](./R-bar-plots/R-bar-plots.html)
 
-[R](./R/R-tips.html)
+134. [R-boxplots](./R-boxplots/R-boxplots.html)
 
-[R-Anova](./R-Anova/R-Anova.html)
+135. [R-data-cleaning](./R-data-cleaning/R-data-cleaning.html)
 
-[R-bar-plots](./R-bar-plots/R-bar-plots.html)
+136. [R-data-pipeline](./R-data-pipeline/R-data-pipeline.html)
 
-[R-boxplots](./R-boxplots/R-boxplots.html)
+137. [R-Excel](./R-Excel/R-Excel.html)
 
-[R-data-cleaning](./R-data-cleaning/R-data-cleaning.html)
+138. [R-foreach](./R-foreach/R-foreach.html)
 
-[R-data-pipeline](./R-data-pipeline/R-data-pipeline.html)
+139. [R-gt (great tables)](./R-gt/Rgt.html)
 
-[R-Excel](./R-Excel/R-Excel.html)
+140. [R-knitrBootstrap](./R-knitrBootstrap/R-knitrBootstrap.html)
 
-[R-foreach](./R-foreach/R-foreach.html)
+141. [R-lm](./R-lm/R-lm.html)
 
-[R-gt (great tables)](./R-gt/Rgt.html)
+142. [R-loess](./R-loess/R-loess.html)
 
-[R-knitrBootstrap](./R-knitrBootstrap/R-knitrBootstrap.html)
+143. [R-markdown](./R-markdown/R-markdown.html)
 
-[R-lm](./R-lm/R-lm.html)
+144. [R-matrix-algebra](./R-matrix-algebra/R-matrix-algebra.html)
 
-[R-loess](./R-loess/R-loess.html)
+145. [R-memes](./R-memes/R-memes.html)
 
-[R-markdown](./R-markdown/R-markdown.html)
+146. [R-model-predict](./R-model-predict/R-model-predict.html)
 
-[R-matrix-algebra](./R-matrix-algebra/R-matrix-algebra.html)
+147. [R-Packages](./R-packages/R-packages.html)
 
-[R-memes](./R-memes/R-memes.html)
+148. [R-sys-admin](./R-sys-admin/R-sys-admin.html)
 
-[R-model-predict](./R-model-predict/R-model-predict.html)
+149. [Reproducible Research](./ReproducibleResearch/ReproducibleResearch.html)
 
-[R-Packages](./R-packages/R-packages.html)
+150. [Research](./research/research.html)
 
-[R-sys-admin](./R-sys-admin/R-sys-admin.html)
+151. [Sage](./sage/sage.html)
 
-[Reproducible Research](./ReproducibleResearch/ReproducibleResearch.html)
+152. [Screen Cast](./screencast/screencast.html)
 
-[Research](./research/research.html)
+153. [SEM](./SEM/SEM.html)
 
-[Sage](./sage/sage.html)
+154. [shell](./shell/shell-tips.html)
 
-[Screen Cast](./screencast/screencast.html)
+155. [Sirion](./Sirion/Sirion.html)
 
-[SEM](./SEM/SEM.html)
+156. [skills](./skills/skills.html)
 
-[shell](./shell/shell-tips.html)
+157. [skimage](./skimage/skimage.html)
 
-[Sirion](./Sirion/Sirion.html)
+158. [Software Development](./software-dev/software-dev.html)
 
-[skills](./skills/skills.html)
+159. [SQL](./SQL/SQL.html)
 
-[skimage](./skimage/skimage.html)
+160. [Sublime Text 4](./ST4/ST4.html)
 
-[Software Development](./software-dev/software-dev.html)
+161. [Stratagem](./Stratagem/Stratagem.html)
 
-[SQL](./SQL/SQL.html)
+162. [Sweave](./Sweave/Sweave.html)
 
-[Sublime Text 4](./ST4/ST4.html)
+163. [TEM](./TEM/TEM.html)
 
-[Stratagem](./Stratagem/Stratagem.html)
+164. [TeX](./tex/tex-tips.html)
 
-[Sweave](./Sweave/Sweave.html)
+165. [Tidy Data](./tidyData/tidyData.html)
 
-[TEM](./TEM/TEM.html)
+166. [Tidy Models](./tidyModels/tidyModels.html)
 
-[TeX](./tex/tex-tips.html)
+167. [TV](./TV/Tv.html)
 
-[Tidy Data](./tidyData/tidyData.html)
+168. [Ubuntu](./ubuntu/ubuntu.html)
 
-[Tidy Models](./tidyModels/tidyModels.html)
+169. [Vacuum systems](./vacuum/vacuum.html)
 
-[TV](./TV/Tv.html)
+170. [Videos](./videos/videos.html)
 
-[Ubuntu](./ubuntu/ubuntu.html)
+171. [Win](./win/win.html)
 
-[Vacuum systems](./vacuum/vacuum.html)
+172. [winCasino](./winCasino/winCasino.html)
 
-[Videos](./videos/videos.html)
+173. [winXray](./winXray/winXray.html)
 
-[Win](./win/win.html)
+174. [Workflow](./workflow/workflow.html)
 
-[winCasino](./winCasino/winCasino.html)
+175. [Write Usefully (by Paul Graham)](./write_usefully/write_usefully.html)
 
-[winXray](./winXray/winXray.html)
+176. [Writing Well](./Writing-Well/Writing-Well.html)
 
-[Workflow](./workflow/workflow.html)
+177. [WxMaxima](./WxMaxima/WxMaxima.html)
 
-[Write Usefully (by Paul Graham)](./write_usefully/write_usefully.html)
+178. [X-ray EDS Issues](./X-Ray-EDS-Issues/X-Ray-EDS-Issues.html)
 
-[Writing Well](./Writing-Well/Writing-Well.html)
-
-[WxMaxima](./WxMaxima/WxMaxima.html)
-
-[X-ray EDS Issues](./X-Ray-EDS-Issues/X-Ray-EDS-Issues.html)
-
-[Zoom](./Zoom/Zoom.html)
+179. [Zoom](./Zoom/Zoom.html)
 
