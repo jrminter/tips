@@ -108,22 +108,22 @@ format.
 
 14 . An odd get error with synch. This worked to fix. Moved to top!
 
-   ```
-   git config pull.rebase false
-   ```
+     
+      git config pull.rebase false
+     
 
 15. Block a number on iPhone
 
-   - Start by accessing your list of recent callers,
-     so open the Phone app.
+    - Start by accessing your list of recent callers,
+      so open the Phone app.
      
-   - Tap on the Recents tab at the bottom of the screen.
+    - Tap on the Recents tab at the bottom of the screen.
   
-   - Click the 'i' symbol next to the unwanted number.
+    - Click the 'i' symbol next to the unwanted number.
   
-   - Scroll down and tap Block this Caller.
+    - Scroll down and tap Block this Caller.
   
-   - Confirm your decision.
+    - Confirm your decision.
 
 16. Use ESV from Kindle for easier copy/paste
 
@@ -422,6 +422,8 @@ format.
       block and click `Block`.
       - Select the specific person you want to block ans click
       `Block > Block [name]`
+      ```
+      ```
 
 
 45. Convert `.mkv` to `.mp4` from the command line
