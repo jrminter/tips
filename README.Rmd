@@ -26,10 +26,6 @@ C:\Users\user_id\Documents\git\tips
                               \jrmsermoms
 ```
 
-[Anker](./Anker/Charging-Anker-Headphones.html)
-
-[Pair Bluetooth on Windows](./Bluetooth/Bluetooth.html)
-
 
 See **Notifications**    
 
@@ -490,6 +486,10 @@ ffmpeg -i title.mkv -c copy title.mp4
 
 **Topics**
 
+
+[Pair Bluetooth on Windows](./Bluetooth/Bluetooth.html)
+
+[Anker](./Anker/Anker.html)
 
 
 [AccessToSqlite](./AccessToSqlite/AccessToSqlite.html)

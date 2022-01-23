@@ -1,0 +1,63 @@
+---
+title: "Anker"
+author: "John R. Minter"
+date: 'Started: 2022-01-21,  Last Update: 2022-01-22'
+output:
+  html_document:
+    keep_md: yes
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
+---
+
+[Back to Index](../README.html)
+
+Before you start, **make sure that your Windows 11 PC supports Bluetooth.**
+For more info on how to check, see Fix Bluetooth problems in Windows.
+If you need help adding a device without Bluetooth capabilities,
+see Add a device to a Windows PC.
+
+# Turn on Bluetooth
+
+After you've checked that your Windows 11 PC supports Bluetooth, you'll need to turn it on. Here's how:
+
+- In Settings    
+Select Start > Settings > Bluetooth & devices, and then turn on Bluetooth.
+
+- In quick settings    
+To find the quick setting for Bluetooth, select the Network icon next to the time and date on the right side of your taskbar. Select Bluetooth to turn it on. If it's turned on without any Bluetooth devices connected, it might appear as Not connected.
+
+If you don't see **Bluetooth in quick settings**, you might need to add it. For more info, see Change notifications and quick settings in Windows 11.
+
+# To pair a Bluetooth device
+
+1. Turn on your Bluetooth device and make it discoverable. The way you make it discoverable depends on the device. Check the device or visit the manufacturer's website to learn how.
+
+2. On your PC, select `Start > Settings > Bluetooth &devices > Add device > Bluetooth`.
+
+3. Choose the Bluetooth device, follow additional instructions if they appear, then select Done.
+
+Your Bluetooth device and PC will usually automatically connect anytime the two devices are in range of each other with Bluetooth turned on.
+
+# To pair a Bluetooth printer or scanner
+
+Turn on your Bluetooth printer or scanner and make it discoverable. The way you make it discoverable depends on the device. Check the device or visit the manufacturer's website to learn how.
+
+Select `Start > Settings > Bluetooth & devices > Printers & scanners > Add device.` Wait for it to find nearby printers, choose the one you want to use, then select Add device.
+
+If you’re having problems installing your printer or scanner, see either Fix printer problems or Install and use a scanner in Windows.
+
+# To pair a Bluetooth device using Swift Pair
+
+Swift Pair in Windows 11 lets you quickly pair a supported Bluetooth device with your PC. If the Bluetooth device supports Swift Pair, you’ll receive a notification when it's nearby and you put it into pairing mode to make it discoverable.
+
+1. Turn on a Bluetooth device that supports Swift Pair and make it discoverable. The way you make it discoverable depends on the device. Check the device or visit the manufacturer’s website to learn more.
+
+2. If this is your first time using Swift Pair, select Yes when asked if you want to get notifications and use Swift Pair.
+
+3. When a notification appears that a new Bluetooth device was found, select Connect.
+
+[Back to Index](../README.html)
