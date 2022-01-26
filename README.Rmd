@@ -1,7 +1,7 @@
 ---
 title: "Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2022-01-16"
+date: "Started: 2013-07-16, Last modified: 2022-01-25"
 output:
   html_document:
     keep_md: yes
@@ -33,7 +33,23 @@ format.
    
    2. **swipe left _with 2 fingers_ from the** _right edge of your trackpad_.
 
+3. Isaac Furnace and AC Tips
 
+   We have service contracts on these appliances and parts:
+   
+   - Furnace (Fall)
+   
+   - Furnace Filter (Fall) - Isaac supplies one
+   
+   - Techs will install a filter we purchase during the spring service visit.
+     
+   - Hot water heater (Fall)
+   
+   - Air conditioner (Spring)
+   
+   - Generator (Spring)
+   
+   - We usually E-sign the bill
 
 
 3.  A great quote from Doug Wilson:
