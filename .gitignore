@@ -80,6 +80,11 @@ chntpw/chntpw.md
 chntpw/chntpw.html
 chntpw/figure/
 
+Chuck-Episodes/*.html
+Chuck-Episodes/*.pdf
+Chuck-Episodes/.DS_Store
+
+
 # color directory
 color/.DS_Store
 color/color.md
