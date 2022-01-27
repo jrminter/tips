@@ -30,6 +30,92 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 [Back to Index](../README.html)
 
+
+# Sole F63 Treadmill
+
+From [Sole](https://www.soletreadmills.com/treadmills/f63-sole-treadmill)
+
+## Specs
+
+-   3.0 HP motor provides a range of speeds including the challenging 12 mph top speed
+
+-   Cushion Flex Whisper Deck reduces impact to joints by 40%
+
+-   15 levels of incline provide the right challenge for runners and walkers of all abilities
+
+-   Flywheels create a smoother, vibration free surface
+
+-   Heavy-duty steel construction guaranteed for life
+
+
+## Overview
+
+-   Named “Best in its Price Range” by Fit Rated, Run Reviews, Treadmill Reviews,
+    and many others
+-   Easy Assist Folding Deck Design makes storing your treadmill easy and
+    convenient
+-   High-end rollers create a static free motion leading to a long lifespan
+
+-   Smoothest treadmill when making adjustments mid-workout
+
+-   LCD screen provides real-time statistics to monitor progress towards goals
+
+## Technology
+
+-   Bluetooth Audio Speakers - listen to music from your smart devices through
+    the speakers on the console.
+    
+-   USB Port - Charge your smart devices while working out
+
+-   Integrated tablet holder - gives you the freedom to use your smart devices
+    to watch shows or follow your workout routines
+    
+-   Unmatched convenience with handlebar adjustment technology
+
+-   Integrated entertainment systems make time fly during workouts
+
+## More
+
+### Machine Dimensions
+
+- Height(in.): 66"
+- Item Weight(lbs.): 254 lbs.
+- Length(in.): 82"
+- Weight Capacity(lbs.): 325 lbs.
+- Width(in.): 35"
+- Running Surface: 20" X 60"
+- Rollers: 2.5"
+- Step Up Height: 8"
+- Box Dimensions: 86"X36"X17"
+- Controls & Features
+- Bluetooth Speaker Compatible: Yes
+- Tablet/Phone: Yes
+- USB Device Charging: Yes
+- Bluetooth Compatible: Yes
+- Standard Programs: 6
+- Custom Programs: 2
+- Heart Programs: 2
+- Heart Rate Monitoring: Pulse Grips & Chest Strap Compatible
+- Chest Strap Included: Yes
+- Cooling Fans: Yes
+- Sound System: Yes
+- Workout Display: 6.5" LCD
+- Display Color: White Back-lit
+- Motor : 3.0 HP, DC Type
+- Speed : .5 - 12 mph
+- Incline: 0 - 15 Levels
+- Easy Assist Folding: Yes
+
+## Warranty
+
+- Frame: Lifetime
+- Motor: Lifetime
+- Deck: 3 Years
+- Electronics: 3 Years
+- Parts: 3 Years
+- Labor: 1 Years
+
+
 # Dealing with Joint Pain
 
 From [here](https://orthopedicassociates.org/when-is-joint-popping-a-problem/).

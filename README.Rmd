@@ -728,45 +728,47 @@ format.
 
 158. [Software Development](./software-dev/software-dev.html)
 
-159. [SQL](./SQL/SQL.html)
+159. [Sole Treadmill](./Sole-Treadmill/Sole-Treadmill.html)
 
-160. [Sublime Text 4](./ST4/ST4.html)
+160. [SQL](./SQL/SQL.html)
 
-161. [Stratagem](./Stratagem/Stratagem.html)
+161. [Sublime Text 4](./ST4/ST4.html)
 
-162. [Sweave](./Sweave/Sweave.html)
+162. [Stratagem](./Stratagem/Stratagem.html)
 
-163. [TEM](./TEM/TEM.html)
+163. [Sweave](./Sweave/Sweave.html)
 
-164. [TeX](./tex/tex-tips.html)
+164. [TEM](./TEM/TEM.html)
 
-165. [Tidy Data](./tidyData/tidyData.html)
+165. [TeX](./tex/tex-tips.html)
 
-166. [Tidy Models](./tidyModels/tidyModels.html)
+166. [Tidy Data](./tidyData/tidyData.html)
 
-167. [TV](./TV/Tv.html)
+167. [Tidy Models](./tidyModels/tidyModels.html)
 
-168. [Ubuntu](./ubuntu/ubuntu.html)
+168. [TV](./TV/Tv.html)
 
-169. [Vacuum systems](./vacuum/vacuum.html)
+169. [Ubuntu](./ubuntu/ubuntu.html)
 
-170. [Videos](./videos/videos.html)
+170. [Vacuum systems](./vacuum/vacuum.html)
 
-171. [Win](./win/win.html)
+171. [Videos](./videos/videos.html)
 
-172. [winCasino](./winCasino/winCasino.html)
+172. [Win](./win/win.html)
 
-173. [winXray](./winXray/winXray.html)
+173. [winCasino](./winCasino/winCasino.html)
 
-174. [Workflow](./workflow/workflow.html)
+174. [winXray](./winXray/winXray.html)
 
-175. [Write Usefully (by Paul Graham)](./write_usefully/write_usefully.html)
+175. [Workflow](./workflow/workflow.html)
 
-176. [Writing Well](./Writing-Well/Writing-Well.html)
+176. [Write Usefully (by Paul Graham)](./write_usefully/write_usefully.html)
 
-177. [WxMaxima](./WxMaxima/WxMaxima.html)
+177. [Writing Well](./Writing-Well/Writing-Well.html)
 
-178. [X-ray EDS Issues](./X-Ray-EDS-Issues/X-Ray-EDS-Issues.html)
+178. [WxMaxima](./WxMaxima/WxMaxima.html)
 
-179. [Zoom](./Zoom/Zoom.html)
+179. [X-ray EDS Issues](./X-Ray-EDS-Issues/X-Ray-EDS-Issues.html)
+
+180. [Zoom](./Zoom/Zoom.html)
 

@@ -1,8 +1,13 @@
 ---
 title: "Chuck Info"
 author: "John Minter"
-date: "2022-01-13"
-output: html_document
+date: "Started: 2022-01-24, Last modified: 2022-01-25"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
 ---
 
 ```{r setup, include=FALSE}
