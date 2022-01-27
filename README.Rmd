@@ -50,6 +50,7 @@ format.
    - Generator (Spring)
    
    - We usually E-sign the bill
+   
 
 
 3.  A great quote from Doug Wilson:
@@ -507,6 +508,8 @@ format.
 54. [Books](./Books/books.html)
 
 55. [Charging Anker Bluetooth Headphones](./Anker-Headphones/Charging-Anker-Headphones.html)
+
+56. [Chuck Episodes](./Chuck-Episodes/Chuck-Episodes.html)
 
 56. [EkAutomater](./automater/automater.html)
 

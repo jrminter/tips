@@ -7,9 +7,29 @@ output:
   pdf_document: default
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+
+```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
+# make this an external chunk that can be included in any file
+
+library(knitr)
+options(width = 72)
+opts_chunk$set(message = F, error = F, warning = F, comment = NA, fig.align = 'center', dpi = 100, tidy = F, cache.path = '.cache/', fig.path = 'figure/')
+
+options(xtable.type = 'html')
+knit_hooks$set(inline = function(x) {
+  if(is.numeric(x)) {
+    round(x, getOption('digits'))
+  } else {
+    paste(as.character(x), collapse = ', ')
+  }
+})
+knit_hooks$set(plot = knitr:::hook_plot_html)
 ```
+
+
+[Back to Index](../README.html)
+
+[Back to Index](../README.html)
 
 # Season 1
 
@@ -244,4 +264,7 @@ https://www.amazon.com/gp/video/detail/B0081MYBYU
 
 Chuck vs the goodbye (the Season 5 finale)    
 https://www.amazon.com/gp/video/detail/B0081IDN7A
+
+[Back to Index](../README.html)
+
 
