@@ -26,6 +26,8 @@ AccessToSqlite/._A*
 
 # Apple Watch
 AppleWatch/AppleWatch.html
+AppleWatch/AppleWatch.pdf
+AppleWatch/AppleWatch.docx
 
 # automater directory
 automater/.DS_Store
@@ -677,16 +679,26 @@ Sweave/figure/
 scripts/.RData
 
 SSH-Keys-MacOS/*.html
+SSH-Keys-MacOS/*.pdf
+SSH-Keys-MacOS/*.docx
 
 software-dev/*.html
+software-dev/*.pdf
+software-dev/*.docx
+
 
 Sole-Treadmill/*.html
+Sole-Treadmill/*.pdf
+Sole-Treadmill/*.docx
+
+
 # SQL dir
 SQL/.DS_Store
 SQL/SQL.md
 SQL/SQL.html
 SQL/figure/
 
+ST4/.DS_Store
 ST4/ST4.md
 ST4/ST4.html
 

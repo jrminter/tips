@@ -3,13 +3,13 @@ title: "Apple Watch Info"
 author: "John Minter"
 date: 'Original: 2021-12-13 Updated: 2022-01-04'
 output:
-  word_document:
-    toc: no
-    toc_depth: '3'
   html_document:
     toc: no
     toc_depth: '3'
     df_print: paged
+  word_document:
+    toc: no
+    toc_depth: '3'
   pdf_document:
     number_sections: yes
     toc: no
