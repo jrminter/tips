@@ -679,6 +679,8 @@ scripts/.RData
 SSH-Keys-MacOS/*.html
 
 software-dev/*.html
+
+Sole-Treadmill.html
 # SQL dir
 SQL/.DS_Store
 SQL/SQL.md
