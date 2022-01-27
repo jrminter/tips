@@ -29,8 +29,6 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 [Back to Index](../README.html)
 
-[Back to Index](../README.html)
-
 # Season 1
 
 Pilot    
