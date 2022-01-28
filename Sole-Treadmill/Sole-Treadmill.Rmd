@@ -28,7 +28,7 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 ```
 
 
-[Back to Index](../README.html)
+[Back to Index](./README.html)
 
 
 # Sole F63 Treadmill
@@ -116,4 +116,4 @@ From [Sole](https://www.soletreadmills.com/treadmills/f63-sole-treadmill)
 - Labor: 1 Years
 
 
-[Back to Index](../README.html)
+[Back to Index](./README.html)
