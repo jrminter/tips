@@ -514,7 +514,7 @@ Sarah that their kids will "have little capes"
     > are chances that original file creation date is not displayed.
 
   
-27. Key greek and other characters
+27. Key Greek and other characters
 
     ```
     Φ(ρ𝑧)
@@ -574,7 +574,8 @@ Sarah that their kids will "have little capes"
         **appeared** to be done, but my music was skipping for about
         20 min. Guess there was processing in the background.
    
-    2020-05-18:    
+    2020-05-18:   
+    
         **Update Microsoft Office**    
         - Open an Office application, such as Word, Excel, or PowerPoint. ...    
         - Click on `Account` or `Office Account` on the list.    
@@ -762,51 +763,47 @@ Sarah that their kids will "have little capes"
 
 47. [Getting started with VisualStudio Code](https://yushulx.medium.com/building-libtiff-with-libjpeg-on-windows-dbf544ef603e)
 
-48. [Pair Bluetooth on Windows](./Bluetooth/Bluetooth.html)
+48. [Pair Bluetooth on Windows](https://support.microsoft.com/en-us/windows/pair-a-bluetooth-device-in-windows-2be7b51f-6ae9-b757-a3b9-95ee40c3e242#:~:text=Select%20Start%20%3E%20type%20Bluetooth%20%3E%20select,you're%20done%20and%20connected.)
 
-49. [Anker](./Anker/Anker.html)
+49. [Anker](https://manuals.plus/anker/anker-soundcore-2-a3105-user-manual)
 
 50. [AccessToSqlite](./AccessToSqlite/AccessToSqlite.html)
 
+51. [Apple Watch](./AppleWatch/Apple-Watch-Info/Apple-Watch-Info.html)
 
-51. [Apple Watch](./AppleWatch/AppleWatch.html)
+52. [Apple Watch Stand Goal](./AppleWatch/Stand-Goal/Stand-Goal.html)
 
+53. [Bladder Control](./bladder/Bladder-Control.html)
 
-52. [Bladder Control](./bladder/Bladder-Control.html)
+54. [Bluetooth](./Bluetooth/Bluetooth.html)
 
-53. [Bluetooth](./Bluetooth/Bluetooth.html)
+55. [Books](./Books/books.html)
 
-54. [Books](./Books/books.html)
+56. [Charging Anker Bluetooth Headphones](./Anker-Headphones/Charging-Anker-Headphones.html)
 
-55. [Charging Anker Bluetooth Headphones](./Anker-Headphones/Charging-Anker-Headphones.html)
+57. [Chuck Episodes](./Chuck-Episodes/Chuck-Episodes.html)
 
-56. [Chuck Episodes](./Chuck-Episodes/Chuck-Episodes.html)
+58. [EkAutomater](./automater/automater.html)
 
-56. [EkAutomater](./automater/automater.html)
+59. [Oxford AZtec](./AZtec/AZtec.html)
 
-57. [Oxford AZtec](./AZtec/AZtec.html)
+60. [Badger Film](./BadgerFilm/BadgerFilm.html)
 
-58. [Badger Film](./BadgerFilm/BadgerFilm.html)
+61. [bibtex](./bibtex/bibtex.html)
 
-59. [bibtex](./bibtex/bibtex.html)
+62. [C++11](./C++11/C++11-Tips.html)
 
-60. [C++11](./C++11/C++11-Tips.html)
+63. [Carbon Film Thickness](./carbonFilmThickness/carbonFilmThickness.html)
 
-61. [Carbon Film Thickness](./carbonFilmThickness/carbonFilmThickness.html)
+64. [chemStructures](./chemStructures/chemStructures.html)
 
-62. [chemStructures](./chemStructures/chemStructures.html)
+65. [chntpw](./chntpw/chntpw.html)
 
-63. [chntpw](./chntpw/chntpw.html)
+66. [Color](./color/color.html)
 
-64. [Color](./color/color.html)
+67. [Complex K-ratios](./complex-kratios/complex-kratios.html)
 
-65. [Complex K-ratios](./complex-kratios/complex-kratios.html)
-
-66. [Conductive Epoxies](./ConductiveEpoxy/ConductiveEpoxy.html)
-
-67. [DataScience-linux64](./DataScience-linux64/DataScience-linux64.html)
-
-68. [Debian](./Debian/Debian.html)
+68. [Conductive Epoxies](./ConductiveEpoxy/ConductiveEpoxy.html)
 
 69. [Denton Coaters](./Denton/Denton.html)
 

@@ -4,14 +4,14 @@ author: "J. R. Minter"
 date: "Started: 2015-05-10, Last modified: 2022-01-25"
 output:
   html_document:
-    css: ../theme/jm-gray-vignette.css
     number_sections: yes
     toc: yes
     toc_depth: 3
 ---
+[Back to Index](./README.html)
+
 ```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
 # make this an external chunk that can be included in any file
-
 library(knitr)
 options(width = 72)
 opts_chunk$set(message = F, error = F, warning = F, comment = NA, fig.align = 'center', dpi = 100, tidy = F, cache.path = '.cache/', fig.path = 'figure/')
@@ -28,7 +28,7 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 ```
 
 
-[Back to Index](./README.html)
+
 
 
 # Sole F63 Treadmill
