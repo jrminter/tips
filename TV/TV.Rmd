@@ -22,6 +22,13 @@ options(width = 72)
 suppressPackageStartupMessages(library("tidyverse"))
 ```
 
+# Viewing TV on Paramount+
+
+I tried watching Blue Bloods on **Paramount+** on my Mac Book using the
+**Chrome** browser and the Ad Block Plus Browser. It would not play the program
+no matter what our family tried. I switch switched to the **Safari** Browser and
+it worked as expected.
+
 # Using my DVD Player
 
 On MacOS I can use my DVD player for movies. To see the menu bar, move the
