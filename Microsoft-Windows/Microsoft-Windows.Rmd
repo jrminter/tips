@@ -1,0 +1,30 @@
+---
+title: "Microsoft Windows"
+author: "J. R. Minter"
+date: "Started: 2022-02-08, Last modified: 2022-02-08"
+output:
+  html_document:
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+
+[Back to Index](../README.html)
+
+
+# Microsft Windows 11
+
+- To shutdown Windows 11, type the command:    
+
+  ```
+  Alt + F4
+  ```
+
+
+# Microsoft Windows 10
+
+
+
+
+[Back to Index](../README.html)
