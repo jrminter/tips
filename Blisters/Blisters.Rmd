@@ -1,0 +1,40 @@
+---
+title: "Blisters - First Aid"
+author: "The Mayo Clinic"
+date: '2018-02-13'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+[Back to Index](../README.html)
+
+From [The Mayo Clinic](https://www.mayoclinic.org/first-aid/first-aid-blisters/basics/art-20056691)
+
+
+If a blister isn't too painful, try to keep it intact. Unbroken skin over a blister may provide a natural barrier to bacteria and decreases the risk of infection. Cover it with an adhesive bandage or moleskin. Cut a piece of moleskin into a doughnut shape and place the pad so that it encircles and protects the blister. Then cover the blister and moleskin with gauze.
+
+Seek medical care if the blister looks infected. If you have diabetes or poor circulation, call your doctor before treating the blister yourself.
+
+# How to drain a blister
+
+To relieve blister-related pain, drain the fluid while leaving the overlying skin intact. Here's how:
+
+- Wash your hands and the blister with soap and warm water.
+
+- Swab the blister with iodine.
+
+- Sterilize a clean, sharp needle by wiping it with rubbing alcohol.
+
+- Use the needle to puncture the blister. Aim for several spots near the blister's edge. Let the fluid drain, but leave the overlying skin in place.
+
+- Apply an ointment such as petroleum jelly to the blister and cover it with a nonstick gauze bandage. If a rash appears, stop using the ointment.
+
+- Follow-up care. Check the area every day for infection. After several days, cut away all the dead skin, using a tweezers and scissors sterilized with rubbing alcohol. Apply more ointment and a bandage.
+
+# Blister prevention
+
+To prevent friction blisters on your feet, wear shoes that fit well. It also helps to use moisture-wicking socks. Try the various socks, shoes and insoles that are designed specifically to help reduce blistering. You might also try attaching moleskin to the inside of your shoe where it might rub or dusting the inside of your socks with talcum powder. Gloves help prevent blisters on your hands.
+
+[Back to Index](../README.html)

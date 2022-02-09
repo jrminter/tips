@@ -506,13 +506,15 @@ format.
 
 54. [Bladder Control](./bladder/Bladder-Control.html)
 
-55. [Bluetooth](./Bluetooth/Bluetooth.html)
+55. [Blisters](./Blisters/Blisters.html)
 
-56. [Books](./Books/books.html)
+56. [Bluetooth](./Bluetooth/Bluetooth.html)
 
-57. [Charging Anker Bluetooth Headphones](./Anker-Headphones/Charging-Anker-Headphones.html)
+57. [Books](./Books/books.html)
 
-57. [Chuck Episodes](./Chuck-Episodes/Chuck-Episodes.html)
+58. [Charging Anker Bluetooth Headphones](./Anker-Headphones/Charging-Anker-Headphones.html)
+
+59. [Chuck Episodes](./Chuck-Episodes/Chuck-Episodes.html)
 
 60. [EkAutomater](./automater/automater.html)
 
@@ -769,4 +771,5 @@ format.
 185. [X-ray EDS Issues](./X-Ray-EDS-Issues/X-Ray-EDS-Issues.html)
 
 186. [Zoom](./Zoom/Zoom.html)
+
 
