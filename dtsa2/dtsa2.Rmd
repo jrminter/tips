@@ -1,14 +1,20 @@
 ---
 title: "Tips on Using DTSA-II"
 author: "J. R. Minter"
-date: "Started: 2015-05-19, Last modified: 2021-04-05"
+date: 'Started: 2015-05-19, Last modified: 2021-04-05'
 output:
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
   html_document:
     css: ../theme/jm-gray-vignette.css
     number_sections: yes
     toc: yes
     toc_depth: 3
 ---
+\fontsize{18}{19.2}
+\fontseries{r}
+\selectfont
 
 [Back to Index](../README.html)
 
@@ -48,7 +54,6 @@ On 2021-07-08 Oldrich wrote on the Probe Software Forum:
 > Microscopium 2021-01-06 revision). The same on the old box running
 > Win7 and the identical version of DTSAII.
 
-
 There is an online conversion program at:
 
 [picsvg.com](https://picsvg.com/)
@@ -63,7 +68,6 @@ Note that Nicholas Ritchie has released some helpful videos on
 [YouTube](https://www.youtube.com/channel/UCt4nKyhfFQ8xecHyuTnCvIA).
 He tries to put out a new release yearly and bug-fix releases as
 needed.
-
 # Key tricks
 
 ## Setting up DTSA-II Microcopium on MacOS
@@ -87,7 +91,7 @@ to your desktop. Clicking on the alias will start the program.
 ## An exchange on the Probe Software Forum (2020-03-31)
 
 ### 1 DTSA II / Re: DTSA-II for geological materials - 1 month of results
-« Last post by NicholasRitchie on 2021-03-31 at 04:32:01 AM »
+ Last post by NicholasRitchie on 2021-03-31 at 04:32:01 AM 
 Orlandin: Thanks for sharing your results.
 
 
@@ -95,7 +99,8 @@ Probeman: WRT zero strobe - I don't know how to use the zero strobe to normalize
 
 
 ### 2 DTSA II / Re: How to sum up few spectra
-« Last post by NicholasRitchie on 2021-03-31 at 04:03:16 AM »
+
+ Last post by NicholasRitchie on 2021-03-31 at 04:03:16 AM 
 DTSA-II uses an extension of the "Fiori model" to estimate the resolution of an EDS detector as a function of energy. (See Goldstein) The "Calibration Alien" fits a high energy peak and a low energy peak and uses this to estimate the "noise" term in the resolution model. The standard is to report the resolution at Mn Ka but this doesn't mean I can't compute it at other energies.
 
 The artifacts at low energies result from two classes of effects - first, the continuum has real edge structure at low energies.  Second, there are numerous small "chemical" or "solid state" effects that lead to changes in X-ray energy, X-ray weights-of-lines, mass absorption coefficient, fluorescence yield, Coster-Kronig and other factors.  These factors lead to the structure seen in the residual under low energy peaks.  It is physics not a shortcoming of the fitting process.
@@ -104,8 +109,10 @@ Finally, I assume that the image is in focus and the focal distance is the worki
 
 I'd love help.  If you contribute a useful, novel algorithm in Python, I'd be happy to rewrite it in Java.
 
+
 ### 3 DTSA II / Re: How to sum up few spectra
-« Last post by sem-geologist on 2021-03-31 at 03:17:16 AM »
+
+ Last post by sem-geologist on 2021-03-31 at 03:17:16 AM 
 sorry for post after post...
 But maybe this could benefit from my ideas. I see that calibration alien uses only single element for calibration. How then DTSA-II would know what peak broadening factor at given energy is? it is not only characteristic peaks which are broadened by pulse counter gain noise, but all continuum (that includes absorption edges). And most EDS by different vendors have non-linear broadening (as other noise gets more important at low energies). This could be measured and calibrated (as vendors does not give the factor how broadening changes) from 3 peaks instead of single (Mn Ka) - in example C, F (from CaF2) and Mn. This could then help in better auto reference fitting. The same is applicable for absorption edges, with better assessed broadening factor for given energy there should be less of artifacts at residual spectra at lower energies. It looks for me that they are resulting not only from peak shifts, but by too sharp absorption edge models applied.
 
@@ -115,13 +122,13 @@ Getting back to my complaint for not reading/loading working distance from spx -
 
 
 ### 4 DTSA II / Re: How to sum up few spectra
-« Last post by sem-geologist on 2021-03-31 at 02:13:51 AM »
+ Last post by sem-geologist on 2021-03-31 at 02:13:51 AM 
 Gagarinite by EDS looks nearly impossible, that is due to La M lines overlapping on the F (major peak), and I can't find any metal La standards to buy (available LaF3 and La2O3, or what we have in lab: La-glass, LaPO4, or LaP4O12 (or something like that)) - none of those has La M lines without nearby other element peaks or overlaps. I am not giving up, I think I could try removing Oxygen peak from my LaPO4 spectra and feed that artificially Oxygen-less spectra as a reference, as it needs only the shape of those lines. I probably should do the same for all LREE references as I see the DTSA-II auto reference for those lines does not work satisfactory (see attachement), getting those right is important also for correct overlap correction of Na. I should say that on WDS (PC0 XTAL for F, and TAP for Na) the situation is similarly over complicated and background is impossible to be measured accurately for this set of elements on WDS (maybe MAN of ProbeSoftware would cut through this problem, but I have none to try it out). Oh, but that is not the worst case - we also have some phases with this set of elements + Ba (with its M lines... and oxygen).
 
 I am wondering why is this like that:
 maybe detector is not well imported into DTSA-II (it would overestimate the absorption properties of window (wrong type?) it looks correct for me.
 maybe DTSA is applying spectra broadening in linear fashion, while Bruker detectors have non-linear peak resolution
-maybe relative theoretical intensity of M lines for REE are a bit too far from correct in the database of DTSA; In particular If You will check the height of La M3-N1 line marker (in the attachement) is quite strongly undershot; and maybe due to to little intensity it is modeled to be completely absorbed.
+maybe relative theoretical intensity of M lines for REE are a bit too far from correct in the database of DTSA; In particular If You will check the height of La M3-N1 line marker (in the attachment) is quite strongly undershot; and maybe due to to little intensity it is modeled to be completely absorbed.
 
 I understand that this is really hard, and now I very clearly see why we need to rely on the reference peaks.
 
@@ -130,55 +137,71 @@ I understand that this is really hard, and now I very clearly see why we need to
 ## An exchange on the Probe Software Forum (2020-03-30)
 
 ### DTSA II / Re: How to sum up few spectra
-« Last post by orlandin on 2020-03-30 at 03:08:21 PM »
+ Last post by orlandin on 2020-03-30 at 03:08:21 PM 
 Hi sem-geologist - your last point about the size of the results window and how often one might want to go back in the workflow to tinker with a setting/standard (cough carbon thickness) is something I have solved by cutting and pasting the whole results output into a pre-formatted Excel spreadsheet that extracts the wt% and uncertainty into different rows. Then moving back and forth through the steps and seeing if you made a difference is very quick and easy without committing to the 'finish' - although I am learning that the Report file saved automatically after hitting 'finish' is VERY USEFUL for remembering what the heck you did.
 ReplyQuoteNotify
 
 ### DTSA II / Re: How to sum up few spectra
-« Last post by sem-geologist on 2020-03-30 at 10:04:17 AM »
+Last post by sem-geologist on 2020-03-30 at 10:04:17 AM
+ 
 actually O is not a problem, I calculate it stochiometrically.
 So That was that: I had to setup standard bundle files prior trying doing quanti alien. And it went all well. I am impressed – The result is quite remarkable (there is some minor deficiencies, but that probably can be solved with better calibrations, i.e. Lanthanium and Si got quite significantly (La2O3 8 % instead of 10%; and SiO2 17.3 instead of 18%) undercalculated; in case of La i can't see there problem lies, but for Si I think SiO2 is not good standard, I normally use diopside on EPMA. Anyway, other elements are just close to what I get on EPMA for same mineral. It is even more mind-blowing if comparing the conditions: on EPMA that takes (well, measured more trace elements) tens of minutes, while this is just 1minute EDS spectra. on EPMA I had to resolve more than 30 peak-overlaps calibration of those all stuff took few weeks to get close to what it is supposed to be from structural analysis. And these EDS calibrations are just 1 minute calibrations. I just wonder how far this can go.
+
+
 
 Now some things which gets in the way and is annoying at DTSA: wizard window is not resizable. When final result for quantification is displayed in the wizard I can't see a thing as there is so many elements and that automatically narrows columns in the result table so I can see only zeroes. The only way to see the result is to finish the wizard and look into Report, and then If I want to change something in quantification process I need to do all things from the beginning in quantification alien, instead stepping back in the wizard. I get that my application is a bit niche (it is no secret, that I am getting into similar issues (which are alien for most of normal people) with OEM software on EPMA), but if window can't be resized, it would be nice if result table could be scroll-able.
 ReplyQuoteNotify
 
 ### DTSA II / Re: How to sum up few spectra
-« Last post by NicholasRitchie on 2020-03-30 at 09:22:40 AM »
+
+Last post by NicholasRitchie on 2020-03-30 at 09:22:40 AM
+
 With respect to the low energy lines, you can specify which elements are visible on a detector using the "Calibration Alien".  This creates a new calibration that can then be applied to the unknown spectrum using the "Spectrum Properties" dialog.  I often set the first visible K line to Sc, the first L to La, first M to La and first N to Am.  This is ok at high beam energies but isn't suitable at low beam energies at which the relative visibility of these lines increases.
 
 What you have is a very challenging problem.  To fit O, you need to account for the interfering peaks due to Ti L and the REE Ms.  When peaks interfere, you can't just fit some of the peaks.  You have to fit them all.
 
 ### DTSA II / Re: How to sum up few spectra
-« Last post by sem-geologist on 2020-03-30 at 09:21:00 AM »
+
+
+
+Last post by sem-geologist on 2020-03-30 at 09:21:00 AM
+
 Oh I see, So I need to go through "Bundle" option and at tab "references" click Auto for REE's and Y files when making standard bundles. so basically there are few ways, and they differ a bit. I was importing spectras as standards at Quanti alien wizard, thats probably a problem. If I will prepare bundles for every element I need, maybe this will progress.
-ReplyQuoteNotify
 
 ### DTSA II / Re: How to sum up few spectra
 
-« Last post by NicholasRitchie on Today at 08:53:38 AM »
+ Last post by NicholasRitchie on Today at 08:53:38 AM 
 You are right that it is possible to fit Gaussians (and a continuum model) to the X-ray peaks.  In fact, the "Spectrum Bundler" can do this for you when a reference simply isn't available.  (Use the "Auto" button on the "References" tab) However, the true peak shape is only approximately Gaussian.  Additional subtleties like incomplete charge collection introduce non-Gaussian characteristics to the shape.  The results is that modeled peaks shape references won't work as well as measured ones.  This becomes a particular issue when trying to resolve peak interferences.
 
 Unfortunately, both YPO4 and YAG require a Y reference.  Al is too close to the Y L2-M3 and P covers the Y L3-M5.  It is true that some materials that are suitable for WDS are not suitable for references for EDS.  In the meanwhile, I'd be tempted to use the "Auto" reference button on the YAG spectrum.  It might work reasonably well.
 
 ### DTSA II / Re: How to sum up few spectra
-« Last post by sem-geologist on Today at 08:33:58 AM »
+
+Last post by sem-geologist on Today at 08:33:58 AM
+
 I start to fear that DTSA-II will not cut through my case at the moment, as that would require investment in additional standards. I.e. on EPMA I use two Yttrium standards YPO4 and YAG (Y-alumina garnet), both of them looks poor for DTSA-II, while are perfectly OK on EPMA; I probably should use YF3 to succeed, but what about LREE.... This shape reference thing makes me scratch my head – is not EDS spectrum broadening a result of pure natural distribution/or Gaussian which is just gain noise from multi-channel processing unit? I mean why we need the peak shapes if it is just sum of Gaussian convoluted spectra. Why not just do deconvolution on spectra with dynamic sigma Gaussian? On the other hand, doing similar method on WDS scans - this real shape approach would be the only working approach as on WDS shape is riddled with artifacts and is nearly impossible to correctly be modeled. I am probably missing something from big picture again.
 
 ### DTSA II / Re: How to sum up few spectra
-« Last post by sem-geologist on 2021-03-30 at 08:03:09 AM »
+
+Last post by sem-geologist on 2021-03-30 at 08:03:09 AM 
+
 Thanks a lot,
+
 Simple summing of spectras through jython (no comparison) is much more practical for my 2 second unknown spectras (due to very short time it is natural that they will be significantly different), and bundle button looks more practical for standards. When I sum the spectra through command line it will sum live time automatically?
 
 But I had bumped into another problem (See attachement):
 Why Quanti alien is asking me for those lines, It is unobtainable at 20kV, even in pure form of those elements the lines would be poor (and getting new metal REE standards just for this would be quite an overkill). I probably again had missed something. I am stuck at that point (well the final mineral which I need to determine composition is not chevkinite, but gagarinite - that is Na(Ca,REE)F6, but to convince colleagues that EDS result of gagarinite is good I need to show-off that chevkinite can be done with exactly same method (which has near 40 elements). Well, this is quite complicated...
-ReplyQuoteNotify
+
+
 
 ### DTSA II / Re: How to sum up few spectra
-« Last post by NicholasRitchie on 2021-03-30  at 06:38:45 AM »
+Last post by NicholasRitchie on 2021-03-30  at 06:38:45 AM
+
 Advanced users:
 There is also another method to sum spectra from the command line.
 Part 1: Select some spectra
 Mode A: Select the currently displayed spectra
+
 ```
 1> ss = selected()
 Mode B: Select from all loaded spectra.  First list spectra and then use the alias to create a list.
@@ -203,8 +226,10 @@ or
 
 ### DTSA II / Re: How to sum up few spectra
 
-« Last post by NicholasRitchie on 2021-03-30 at 06:28:16 AM »
+Last post by NicholasRitchie on 2021-03-30 at 06:28:16 AM 
+
 I think I can help you.
+
 The tool you want is the "Standard Bundler."  The "Standard Bundler" performs a number of tasks and I've been working on enhancing it recently to make it much more efficient to use.
 I'll describe the process in the most recent "pre-release" version of DTSA-II available here: DTSA-II Pre-Release
 First, select all the spectra you wish to combine in the "Spectrum list" on the "Spectrum" tab
@@ -218,8 +243,11 @@ When the "Finish" button is selected, you will be asked for a directory into whi
 
 This should help you to construct a standard database which you can reuse over time.
 
+
+
 ### DTSA II / How to sum up few spectra
-« Last post by sem-geologist on 2021-03-30  at 06:01:57 AM »
+
+Last post by sem-geologist on 2021-03-30  at 06:01:57 AM
 Hello,
 Recently I got into trying to use DTSA-II, I watched the videos and had read few papers about DTSA-II. It is mentioned that it is good practice to get few measurements of standards instead of single but very long measurement of the standard. The problem is that I can't find how to sum such separate spectra into a single entity.
 
@@ -234,7 +262,6 @@ I don't see this in DTSA-II, we need to keep standards as separate files? and wi
 
 
 ## DTSA-II Prerelase
-
 Nicholas Ritchie wrote on the Probe Software Forum (2021-03-07):
 
 > DTSA II / Pre-Release Versions of DTSA-II    
@@ -257,7 +284,7 @@ download date.
 
 I will note that Dr. Ritchie released this to included changes to the
 `SpectrumBundler` (He wrote this: DTSA II / Re: Element specified to quantify missing from final results (F in apatite)
-« Last post by NicholasRitchie on March 07, 2021, 04:59:03 AM »)
+ Last post by NicholasRitchie on March 07, 2021, 04:59:03 AM )
 
 ## Recent install issues...
 
@@ -300,7 +327,6 @@ Else { Write-Host 'No folder selected' }
 ```
 
 ## Uncertainty in measurement 
-
 Nicholas Ritchie reported on the
 [Probe Software Forum](https://probesoftware.com/smf/index.php?topic=1362.msg9792#msg9792)  **2021-03-27)** :
 
@@ -357,6 +383,8 @@ John Donovan [replied](https://probesoftware.com/smf/index.php?topic=1362.msg979
 
 From Nicholas Ritchie on the Probe Software Forum
 
+
+
 > DTSA II / Re: Quant results as tables for large batches of samples    
 > 2021-03-03   
 > Phil,    
@@ -394,6 +422,8 @@ One needs:
 
 ## Making Reports portable
 
+
+
 DTSA-II writes reports into the users working directory.
 
 On my MacBook it is in a directory like this.
@@ -423,6 +453,7 @@ strategies that help. I edit the html files to use **relative paths**.
 to `report1.html`.
 
 An example would be a long string like:
+
 
 ```
 file:/Users/jrminter/NIST%20DTSA-II%20Reports/2020/July/12-Jul-2020/my_spectra.msa
@@ -458,6 +489,26 @@ file:./
 
 ```
 
+
+
+I also tend to make an archive of each report and the date.
+
+One issue is that I typically keep the jython scripts in github 
+repositories. The best solution is to keep a zipped report with the
+jython script.
+
+I find it helpful to keep a text file with the path options
+in a separate window. I typically keep something like this
+as a hint on the search and replace:
+
+```
+
+file:/Users/jrminter/NIST%20DTSA-II%20Reports/2020/July/12-Jul-2020/
+
+file:./
+
+```
+
 ## Oxides used for glasses
 
 To model and simulate spectra, one needs to know the composition of the
@@ -467,6 +518,8 @@ composition. The NIST Glass database is especially helpful. Below is a list
 of oxides and densities in ascending order of density.
 
 ![K309 from NIST Glass database](png/K309-NIST-glass-database.png)
+
+
 
 ### Common oxides for glass and their densities
 
@@ -662,7 +715,6 @@ saveAs("Tiff", "C:\\Users\\johnr\\Documents\\stitch\\stitched.tif");
 
 ```
 
-
 ### DTSA's two "Composition" values
 
 **There are two "Composition" values**. There is the accepted or
@@ -697,6 +749,8 @@ spelling.
 **The command line** is useful for repetitive tasks.
 
 **Generic Python Utility Methods**
+
+
 
 - `dir()` Displays a list of global functions, classes and variables
 - `dir(obj)` Displays a list of methods and properties of the object obj
@@ -767,8 +821,6 @@ import java.nio.charset as cs
 import dtsa2.mcSimulate3 as mc3
 import java.lang as jl
     ```
-
-
 
 
 - **Spectrum Math:** Given spectrum `s1` = Fe, `s2` = Cr and `s3` = Ni,
@@ -860,7 +912,7 @@ noise...
 
 ### Detector Parameters
 
-**Entering the detector parameters** permits us to simulate
+*Entering the detector parameters** permits us to simulate
 **dose-correct** spectra. One can also tune the parameters by
 running a series of simulations. The manufacturer's values may
 not be correct. I discovered this with the Oxford detector on the
@@ -925,6 +977,8 @@ see [webmineral.com](http://webmineral.com/data/Benitoite.shtml#.W7Pw2BNKg_V).
 We start with this dialog
     
 ![](./png/build-std-bundle-standard.png)
+
+
     
 When we set reference spectrum, we need to **list all the elements** in
 the spectrum. Only the specified element will be highlighted when we
@@ -975,6 +1029,7 @@ spc = spectrumFromXML("/Users/jrminter/Desktop/simulated-EagleXG.xml")
 spc.display()
 ```
 
+
 ## X-ray transitions from the command line
 
 1. Define a transition using the IUPAC name
@@ -989,10 +1044,15 @@ spc.display()
 
     ```
     print(tra.getSiegbahnName())
-    Si Kα1
+    Si Ka1
     ```
     Compare to IUPAC name
     
+    ```
+    print(tra.getIUPACName())
+    Si K-L3
+    ```
+
     ```
     print(tra.getIUPACName())
     Si K-L3
@@ -1018,9 +1078,8 @@ spc.display()
     tra.getWeight(0)
     0.505
     print(tra.getSiegbahnName())
-    Si Kα2
+    Si Ka2
     ```
-    
     Now specify explicitly. This gives us granular control.
     The class defines many strings...
     
@@ -1098,10 +1157,6 @@ These are from Bearden (1967).
 | \$THICK\$ | thickness | 
 | \$POS\$ | position | 
 | \$PREV\$ | previous | 
-
-
-
-
 
 ## Database
 
@@ -1430,3 +1485,5 @@ f.visible = True
 ```
 
 [Back to Index](../README.html)
+
+

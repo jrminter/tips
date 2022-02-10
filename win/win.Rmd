@@ -12,6 +12,10 @@ output:
 
 [Back to Index](../README.html)
 
+# Some Tips from Windows 11
+
+This is currently a placeholder...
+
 # Some useful quick tips for Windows 10
 
 ## Denninger on Device Security

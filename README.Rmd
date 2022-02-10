@@ -710,9 +710,7 @@ format.
 
 152. [R-matrix-algebra](./R-matrix-algebra/R-matrix-algebra.html)
 
-153. [R-memes](./R-memes/R-memes.html)
-
-152. [R-model-predict](./R-model-predict/R-model-predict.html)
+153. [R-model-predict](./R-model-predict/R-model-predict.html)
 
 154. [R-Packages](./R-packages/R-packages.html)
 

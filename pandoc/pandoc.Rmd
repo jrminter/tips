@@ -13,7 +13,7 @@ output:
 
 # Basics
 
-- [pandoc releases](http://pandoc.org/releases.html#pandoc-2.7.1-14-march-2019)
+- [binary releases](https://github.com/jgm/pandoc/releases).
 
 - [Pandoc Extras](https://github.com/jgm/pandoc/wiki/Pandoc-Extras)
 
