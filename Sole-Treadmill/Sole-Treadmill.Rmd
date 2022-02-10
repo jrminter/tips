@@ -35,6 +35,16 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 
 From [Sole](https://www.soletreadmills.com/treadmills/f63-sole-treadmill)
 
+## How to use the treadmill
+
+1. Stand on Treadmill
+
+2. Use **either program** Up/Down
+
+3. When it cycles to **User1** hit the button.
+
+4. When ready press **Start**
+
 ## Specs
 
 -   3.0 HP motor provides a range of speeds including the challenging 12 mph top speed
