@@ -1,7 +1,7 @@
 ---
 title: "Sample Prep for Microscopy"
 author: "J. R. Minter"
-date: "Started: 2018-01-29, Last modified: 2018-10-11"
+date: "Started: 2018-01-29, Last modified: 2022-02-10"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -13,6 +13,42 @@ output:
 [Back to Index](../README.html)
 
 # SEM/FIB
+
+From Jim Quinn to Stephane Nizet on 2022-02-10
+
+
+Stephane -
+
+If Si/silicon or Al/aluminum does not work for you as substrates,
+then I next suggest Ni alloy 200 straight from the McMaster catalog
+or equivalent vendor in your neck of the woods.
+
+I have used it before.  It usually comes with a reasonable surface
+brush finish, polishes nicely to mirror surface, does not tarnish,
+and less than 0.4% impurities.  The rigidity and hardness are a plus.
+
+To me, nickel is the next metal in line after rejecting aluminum
+or silicon for flat, conductive, pure, and smooth substrates.
+
+kind regards,
+- Jim
+
+
+On Thu, Feb 10, 2022 at 3:02 AM Stephane Nizet <nizets2@yahoo.com> wrote:
+
+> Thank you Jim!
+> It may work for many applications but in my case I am analyzing
+> alumosilicate powder so I prefer to avoid material containing Al and/or Si
+> (which is also why I don't use alu stubs).
+> But this information is anyway very interesting for other applications and
+> I'll give it a try.
+>
+> Have a nice day!
+>
+> Best regards,
+> Stephane
+>
+>
 
 ## Cu
 From John Mardinly 2013-06-10

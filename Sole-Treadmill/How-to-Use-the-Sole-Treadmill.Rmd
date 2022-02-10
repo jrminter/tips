@@ -1,0 +1,45 @@
+---
+title: "How to use the Sole Treadmill"
+author: "J. R. Minter"
+date: 'Started: 2022-01-25, Last modified: 2022-01-25'
+output:
+  pdf_document:
+    toc: no
+    toc_depth: '3'
+  html_document:
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+
+```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
+# make this an external chunk that can be included in any file
+library(knitr)
+options(width = 72)
+opts_chunk$set(message = F, error = F, warning = F, comment = NA, fig.align = 'center', dpi = 100, tidy = F, cache.path = '.cache/', fig.path = 'figure/')
+
+options(xtable.type = 'html')
+knit_hooks$set(inline = function(x) {
+  if(is.numeric(x)) {
+    round(x, getOption('digits'))
+  } else {
+    paste(as.character(x), collapse = ', ')
+  }
+})
+knit_hooks$set(plot = knitr:::hook_plot_html)
+```
+\fontsize{18}{19.2}
+\fontseries{r}
+\selectfont
+
+From [Sole](https://www.soletreadmills.com/treadmills/f63-sole-treadmill)
+
+# How to use the treadmill
+
+1. Stand on Treadmill
+
+2. Use **either program** Up/Down
+
+3. When it cycles to **User1** hit the button.
+
+4. When ready press **Start**
