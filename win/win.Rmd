@@ -12,7 +12,18 @@ output:
 
 [Back to Index](../README.html)
 
-# Some Tips from Windows 11
+# How to back up Windows 11
+
+I do this alot. I want it easipy visible...
+
+1. Go to Control Panel, select Backup and Restore (Windows 7),
+   then click Create a system image. ...
+   
+2. In the next window, choose the location you want the image backup to be
+   sent to, then click **Next.**.
+    
+3. **Select any drives you wish to back up**, then click **Next** to begin
+   the backup process.
 
 This is currently a placeholder...
 
