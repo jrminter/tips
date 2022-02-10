@@ -18,14 +18,22 @@ This repository contains the John Minter's useful tips in Rmarkdown
 format.
 
 
-1. My favorite path
+1. My favorite path and a hack for PDF
 
    ```
    C:\Users\user_id\Documents\git\tips
                               \jrmsolutions
                               \jrmsermoms
    ```
-
+   and add the line below right after Rmarkdown YAML
+   
+   ```
+   ---
+   \fontsize{18}{19.2}
+   \fontseries{r}
+   \selectfont
+   
+   ```
 
 2. See **Notifications**    
 
