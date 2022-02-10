@@ -25,7 +25,7 @@ format.
                               \jrmsolutions
                               \jrmsermoms
    ```
-   and add the line below right after Rmarkdown YAML
+   and add the line below right after Rmarkdown YAML and control font size
    
    ```
    ---
