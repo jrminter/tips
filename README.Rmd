@@ -244,17 +244,15 @@ On a lighter tone here is fun from the Hitch Hikers Guide to the Galaxy:
     > respond to email.    
     > - Karl Browman
 
-26. From [DataArtisan](https://twitter.com/dataartisan1/status/1263784688432398338):
+26. **How to Backup Windows 11**
 
-    Skills that make you stand out in #DataScience    
-  
-    Being good at     
-    - making presentations    
-    - public speaking    
-    - explaining complex concepts    
-    - listening     
-    - changing plans on short notice    
-    - receiving feedback    
+    1. Go to Control Panel, select Backup and Restore (Windows 7),
+    2. Then click Create a system image. ...
+    3. In the next window, choose the location you want the image backup to be
+       sent to, then click Next.
+    4. Select any drives you wish to back up, then click Next to begin the
+       backup process. (From Nov 16, 2021)
+
 
 
 
@@ -314,8 +312,6 @@ On a lighter tone here is fun from the Hitch Hikers Guide to the Galaxy:
 
 
 29. Today I learned (TIL)
-
-    2020-05-25:    
    
     It appears that now I need to run RStudio as an administrator on
     Windows 10 to install packages.
