@@ -186,7 +186,6 @@ On a lighter tone here is fun from the Hitch Hikers Guide to the Galaxy:
     - pick an option...
 
 
-
 19. Convert `foo.mkv` to `foo.mp4`
 
     ```
@@ -253,9 +252,6 @@ On a lighter tone here is fun from the Hitch Hikers Guide to the Galaxy:
     4. Select any drives you wish to back up, then click Next to begin the
        backup process. (From Nov 16, 2021)
 
-
-
-
 27. Checking Author/date properties in a PDF
 
     > **Q: How do I find out when a PDF doc was originally created there
@@ -271,7 +267,6 @@ On a lighter tone here is fun from the Hitch Hikers Guide to the Galaxy:
     > However, if the sender/Author has removed metadata from the pdf then there
     > are chances that original file creation date is not displayed.
 
-  
 28. Key Greek and other characters
 
     ```
@@ -310,7 +305,6 @@ On a lighter tone here is fun from the Hitch Hikers Guide to the Galaxy:
     Ω	 ω	Omega
     ```
 
-
 29. Today I learned (TIL)
    
     It appears that now I need to run RStudio as an administrator on
@@ -348,14 +342,12 @@ On a lighter tone here is fun from the Hitch Hikers Guide to the Galaxy:
     > folder you want to move in the right side window. DO NOT click on the
     > little 'folder' icon-- it will not work.
 
-
 31. Keyboard shortcut for the `dplyr` pipe operator
 
       ```
       Win: `%>%` - Ctl + Shift + M    
       Mac: `%>%` - CMD + Shift + M   
       ```
-
 32. Fix a `recurring github credential problem` - run:
    
       ```
