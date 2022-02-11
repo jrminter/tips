@@ -28,6 +28,7 @@ Some fun from the Hitch Hikers Guide to the Galaxy
 > “Just when you think life can't possibly get any worse it suddenly does.” ...    
 > There are few things in the universe worse than bad poetry.    
 
+![The Hitchiker's Guide to the Galaxy](img/HHG.png)
 
 
 1. My favorite path and a hack for PDF
