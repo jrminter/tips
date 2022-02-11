@@ -17,7 +17,12 @@ output:
 This repository contains the John Minter's useful tips in Rmarkdown
 format.
 
-Some fun from the Hitch Hikers Guide to the Galaxy
+First - a quick reminder. I discovered that git repositories do not play well
+when there are multiple `name.Rproj` files. Things work best when a git
+repository has a single `name.Rproj` file. So this `tips` project only
+has the single `tips.Rproj` file. I got burned by this in another repository.
+
+On a lighter tone here is fun from the Hitch Hikers Guide to the Galaxy:
 
 > **What We Learned From the 'Hitchhiker's Guide'**    
 >
