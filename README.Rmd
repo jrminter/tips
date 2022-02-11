@@ -154,7 +154,7 @@ On a lighter tone here is fun from the Hitch Hikers Guide to the Galaxy:
     - Click Block [sender].
 
 
-15. An odd get error with synch. This worked to fix. Moved to top!
+15. An odd get error with sync. This worked to fix. Moved to top!
 
   
     - git config pull.rebase false
