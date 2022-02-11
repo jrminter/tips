@@ -17,6 +17,18 @@ output:
 This repository contains the John Minter's useful tips in Rmarkdown
 format.
 
+Some fun from the Hitch Hikers Guide to the Galaxy
+
+> **What We Learned From the 'Hitchhiker's Guide'**    
+>
+> Always Carry a Towel. ...    
+> Don't Panic! ...    
+> Two heads aren't necessarily better than one. ...    
+> Improbable does not mean impossible. ...    
+> “Just when you think life can't possibly get any worse it suddenly does.” ...    
+> There are few things in the universe worse than bad poetry.    
+
+
 
 1. My favorite path and a hack for PDF
 
