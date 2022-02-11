@@ -29,7 +29,7 @@ This is currently a placeholder...
 
 # Some useful quick tips for Windows 10/11
 
-**Alt-F4** promppts for a **restart**
+**Alt-F4** prompts for a **restart**
 
 **Scans** are in `C:\Users\my-login\Dropbox\scans`
 
