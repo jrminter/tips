@@ -120,9 +120,12 @@ On a lighter tone here is fun from the Hitch Hikers Guide to the Galaxy:
 `Run as Adminstrator`. It is easier to read! Better yet, click on the
 4-box icon in the lower left and open Powershell. The font will be OK.
 
-10. Fleets Enema procedure.
+10. **How long does it take for caffeine to metabolize?** 
 
-    See [here](https://www.fleetlabs.com/how-to-use-fleet).
+    > How long does it take to metabolize caffeine? Caffeine may have a greater
+    > effect on people who are sensitive to it. Caffeine has a half-life of about
+    > 5 hours. Someone who consumes 40 milligrams (mg) of caffeine will have
+    > 20 mg remaining in their system after 5 hours. (Pinterest May 13, 2018)
 
 11. Gas at Mobil Station
 
