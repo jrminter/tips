@@ -1,0 +1,29 @@
+---
+title: "Bose Speaker"
+author: "John Minter"
+date: '2022-02-10'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+[Back to Index](../README.html)
+
+
+# Using the Bose Speaker
+
+1. On your iPhone go into settings (grey gear)
+
+2. The third from the top icon is Blue-Tooth. Click on that.
+
+3. Choose **Bose Bluetooth II **. If it **does not connect**,
+   press the **Bluetooth button** on speaker and try again.
+   
+4. **To disconnect**:
+   Settings...    
+   Bluetooth...    
+   Click on **circle i** (information) for Bose.    
+   Click **disconnect**    
+
+[Back to Index](../README.html)

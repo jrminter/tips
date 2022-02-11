@@ -516,266 +516,268 @@ format.
 
 55. [Blisters](./Blisters/Blisters.html)
 
-56. [Bluetooth](./Bluetooth/Bluetooth.html)
+56. [Bose Speaker](./Bose-Speaker/Bose-Speaker.html)
 
-57. [Books](./Books/books.html)
+57. [Bluetooth](./Bluetooth/Bluetooth.html)
 
-58. [Charging Anker Bluetooth Headphones](./Anker-Headphones/Charging-Anker-Headphones.html)
+58. [Books](./Books/books.html)
 
-59. [Chuck Episodes](./Chuck-Episodes/Chuck-Episodes.html)
+59. [Charging Anker Bluetooth Headphones](./Anker-Headphones/Charging-Anker-Headphones.html)
 
-60. [EkAutomater](./automater/automater.html)
+60. [Chuck Episodes](./Chuck-Episodes/Chuck-Episodes.html)
 
-61. [Oxford AZtec](./AZtec/AZtec.html)
+61. [EkAutomater](./automater/automater.html)
 
-62. [Badger Film](./BadgerFilm/BadgerFilm.html)
+62. [Oxford AZtec](./AZtec/AZtec.html)
 
-63. [bibtex](./bibtex/bibtex.html)
+63. [Badger Film](./BadgerFilm/BadgerFilm.html)
 
-64. [C++11](./C++11/C++11-Tips.html)
+64. [bibtex](./bibtex/bibtex.html)
 
-65. [Carbon Film Thickness](./carbonFilmThickness/carbonFilmThickness.html)
+65. [C++11](./C++11/C++11-Tips.html)
 
-66. [chemStructures](./chemStructures/chemStructures.html)
+66. [Carbon Film Thickness](./carbonFilmThickness/carbonFilmThickness.html)
 
-67. [chntpw](./chntpw/chntpw.html)
+67. [chemStructures](./chemStructures/chemStructures.html)
 
-68. [Color](./color/color.html)
+68. [chntpw](./chntpw/chntpw.html)
 
-69. [Complex K-ratios](./complex-kratios/complex-kratios.html)
+69. [Color](./color/color.html)
 
-70. [Conductive Epoxies](./ConductiveEpoxy/ConductiveEpoxy.html)
+70. [Complex K-ratios](./complex-kratios/complex-kratios.html)
 
-71. [Denton Coaters](./Denton/Denton.html)
+71. [Conductive Epoxies](./ConductiveEpoxy/ConductiveEpoxy.html)
 
-72. [Diffraction Limit](./DiffractionLimit/DiffractionLimit.html)
+72. [Denton Coaters](./Denton/Denton.html)
 
-73. [DTSA-II](./dtsa2/dtsa2.html)
+73. [Diffraction Limit](./DiffractionLimit/DiffractionLimit.html)
 
-74. [DTSA-II Scripting](./dtsa2-scripting/dtsa2-scripting.html)
+74. [DTSA-II](./dtsa2/dtsa2.html)
 
-75. [Earth Science](./earth-sci/earth-sci.html)
+75. [DTSA-II Scripting](./dtsa2-scripting/dtsa2-scripting.html)
 
-76. [EDAX](./EDAX/EDAX.html)
+76. [Earth Science](./earth-sci/earth-sci.html)
 
-77. [EPMA Matrix Correction](./epma-matrix-corr/epma-matrix-corr.html)
+77. [EDAX](./EDAX/EDAX.html)
 
-78. [Excel](./Excel/Excel.html)
+78. [EPMA Matrix Correction](./epma-matrix-corr/epma-matrix-corr.html)
 
-79. [Excelsior Pass](./Excelsior-Pass/Excelsior-Pass.html)
+79. [Excel](./Excel/Excel.html)
 
-80. [Feynman Technique](./Feynman_technique/Feynman_technique.html)
+80. [Excelsior Pass](./Excelsior-Pass/Excelsior-Pass.html)
 
-81. [Fiji plugin development](./fiji-plugin-development/fiji-plugin-development.html)
+81. [Feynman Technique](./Feynman_technique/Feynman_technique.html)
 
-82. [Fitness](./fitness/fitness.html)
+82. [Fiji plugin development](./fiji-plugin-development/fiji-plugin-development.html)
 
-83. [Font Test](./font-test/font-test.html)
+83. [Fitness](./fitness/fitness.html)
 
-84. [French Press Instructions](./french-press-instructions/french-press-instructions.html)
+84. [Font Test](./font-test/font-test.html)
 
-85. [Gas](./gas/secrets-to-gas-control.html)
+85. [French Press Instructions](./french-press-instructions/french-press-instructions.html)
 
-86. [generator](./generator/generator.html)
+86. [Gas](./gas/secrets-to-gas-control.html)
 
-87. [gfortran](./gfortran/gfortran.html)
+87. [generator](./generator/generator.html)
 
-88. [gifs](./gifs/gifs.html)
+88. [gfortran](./gfortran/gfortran.html)
 
-89. [ggplot2 workshop](./ggplot2_workshop/ggplot2_workshop.html)
+89. [gifs](./gifs/gifs.html)
 
-90. [Building up a ggplot2 figure](./ggplot2figure/ggplot2-figure.html)
+90. [ggplot2 workshop](./ggplot2_workshop/ggplot2_workshop.html)
 
-91. [ggplot2Examples](./ggplot2Examples/ggplot2Examples.html)
+91. [Building up a ggplot2 figure](./ggplot2figure/ggplot2-figure.html)
 
-92. [ggplot2Intro](./ggplot2Intro/ggplot2Intro.html)
+92. [ggplot2Examples](./ggplot2Examples/ggplot2Examples.html)
 
-93. [ggvisIntro](./ggvisIntro/ggvisIntro.html)
+93. [ggplot2Intro](./ggplot2Intro/ggplot2Intro.html)
 
-94. [git](./git/git-tips.html)
+94. [ggvisIntro](./ggvisIntro/ggvisIntro.html)
 
-95. [gnuplot](./gnuplot/gnuplot.html)
+95. [git](./git/git-tips.html)
 
-96. [Haklev's tips on data wrangling with R](./hacklev/hacklev.html)
+96. [gnuplot](./gnuplot/gnuplot.html)
 
-97. [hearing aids](hearing-aids/hearing-aids.html)
+97. [Haklev's tips on data wrangling with R](./hacklev/hacklev.html)
 
-98. [here](here/here.html)
+98. [hearing aids](hearing-aids/hearing-aids.html)
 
-99. [homebrew](./homebrew/homebrew.html)
+99. [here](here/here.html)
 
-100. [html](./html/html.html)
+100. [homebrew](./homebrew/homebrew.html)
 
-101. [hyperspy](./hyperspy/hyperspy.html)
+101. [html](./html/html.html)
 
-102. [Image-J](./ImageJ/ImageJ.html)
+102. [hyperspy](./hyperspy/hyperspy.html)
 
-103. [iMessage](./iMessage/iMessage.html)
+103. [Image-J](./ImageJ/ImageJ.html)
 
-104. [Inkscape](./inkscape/inkscape.html)
+104. [iMessage](./iMessage/iMessage.html)
 
-105. [iOS](./iOS/iOS.html)
+105. [Inkscape](./inkscape/inkscape.html)
 
-106. [JabRef](./JabRef/JabRef.html)
+106. [iOS](./iOS/iOS.html)
 
-107. [Jekyll on github.io](./jekyll-github/jekyll-github.html)
+107. [JabRef](./JabRef/JabRef.html)
 
-108. [json](./json/json.html)
+108. [Jekyll on github.io](./jekyll-github/jekyll-github.html)
 
-109. [Leadership](./leadership/Solitude-and-Leadership-William-Deresiewicz.html)
+109. [json](./json/json.html)
 
-110. [LaTeX for Rmarkdown](./latex-eqns-for-rmarkdown/latex-eqns-for-rmarkdown.html)
+110. [Leadership](./leadership/Solitude-and-Leadership-William-Deresiewicz.html)
 
-111. [legacy equipment](./legacy/Legacy.html)
+111. [LaTeX for Rmarkdown](./latex-eqns-for-rmarkdown/latex-eqns-for-rmarkdown.html)
 
-112. [Logos Library System](./Logos/Logos.html)
+112. [legacy equipment](./legacy/Legacy.html)
 
-113. [Low Carb Diet (Denninger)](./Low-Carb-Diet/Low-Carb-Diet.html)
+113. [Logos Library System](./Logos/Logos.html)
 
-114. [mac](./mac/mac.html)
+114. [Low Carb Diet (Denninger)](./Low-Carb-Diet/Low-Carb-Diet.html)
 
-115. [mac-for-data-science](./mac-for-data-science/mac-for-data-science.html)
+115. [mac](./mac/mac.html)
 
-116. [microscopy](./micro/micro.html)
+116. [mac-for-data-science](./mac-for-data-science/mac-for-data-science.html)
 
-117. [microscopy sample prep](./micro-sample-prep/micro-sample-prep.html)
+117. [microscopy](./micro/micro.html)
 
-118. [midb](./midb/midb.html)
+118. [microscopy sample prep](./micro-sample-prep/micro-sample-prep.html)
 
-119. [Monte Carlo methods in R](./monteCarlo/monteCarlo.html)
+119. [midb](./midb/midb.html)
 
-120. [MS Office](./msOffice/msOffice.html)
+120. [Monte Carlo methods in R](./monteCarlo/monteCarlo.html)
 
-121. [MySQL](./mysql/mysql.html)
+121. [MS Office](./msOffice/msOffice.html)
 
-122. [Northgate](./Northgate/Northgate.html)
+122. [MySQL](./mysql/mysql.html)
 
-123. [Octave](./Octave/Octave.html)
+123. [Northgate](./Northgate/Northgate.html)
 
-124. [OnePassword](./OnePassword/OnePassword.html)
+124. [Octave](./Octave/Octave.html)
 
-125. [Oracle Virtual Box](./Oracle-Virtual-Box/Oracle-Virtual-Box.html)
+125. [OnePassword](./OnePassword/OnePassword.html)
 
-126. [OS Package Links](./osPkgs/osPkgs.html)
+126. [Oracle Virtual Box](./Oracle-Virtual-Box/Oracle-Virtual-Box.html)
 
-127. [pandoc](./pandoc/pandoc.html)
+127. [OS Package Links](./osPkgs/osPkgs.html)
 
-128. [phi-rho-z](./phi-rho-z/phi-rho-z.html)
+128. [pandoc](./pandoc/pandoc.html)
 
-129. [plagiarism](./plagiarism/plagiarism.html)
+129. [phi-rho-z](./phi-rho-z/phi-rho-z.html)
 
-130. [pool](./pool/pool.html)
+130. [plagiarism](./plagiarism/plagiarism.html)
 
-131. [portable makefiles](./portableMakefiles/portableMakefiles.html)
+131. [pool](./pool/pool.html)
+
+132. [portable makefiles](./portableMakefiles/portableMakefiles.html)
 
 132. [PowerPoint](./ppt/ppt.html)
 
-133. [Preparation of samples for EDS](./prepForEDS/prepForEDS.html)
+134. [Preparation of samples for EDS](./prepForEDS/prepForEDS.html)
 
-134. [Probe for EPMA](./probeForEPMA/probeForEPMA.html)
+135. [Probe for EPMA](./probeForEPMA/probeForEPMA.html)
 
-135. [python](./python/python.html)
+136. [python](./python/python.html)
 
-136. [python image processing with skimage](./skimage/skimage.html)
+137. [python image processing with skimage](./skimage/skimage.html)
 
-137. [qqplotr](./qqplotr/qqplotr.html)
+138. [qqplotr](./qqplotr/qqplotr.html)
 
-138. [quotes](./quotes/quotes.html)
+139. [quotes](./quotes/quotes.html)
 
-139. [R](./R/R-tips.html)
+140. [R](./R/R-tips.html)
 
-140. [R-Anova](./R-Anova/R-Anova.html)
+141. [R-Anova](./R-Anova/R-Anova.html)
 
-141. [R-bar-plots](./R-bar-plots/R-bar-plots.html)
+142. [R-bar-plots](./R-bar-plots/R-bar-plots.html)
 
-142. [R-boxplots](./R-boxplots/R-boxplots.html)
+143. [R-boxplots](./R-boxplots/R-boxplots.html)
 
-143. [R-data-cleaning](./R-data-cleaning/R-data-cleaning.html)
+144. [R-data-cleaning](./R-data-cleaning/R-data-cleaning.html)
 
-144. [R-data-pipeline](./R-data-pipeline/R-data-pipeline.html)
+145. [R-data-pipeline](./R-data-pipeline/R-data-pipeline.html)
 
-145. [R-Excel](./R-Excel/R-Excel.html)
+146. [R-Excel](./R-Excel/R-Excel.html)
 
-146. [R-foreach](./R-foreach/R-foreach.html)
+147. [R-foreach](./R-foreach/R-foreach.html)
 
-147. [R-gt (great tables)](./R-gt/Rgt.html)
+148. [R-gt (great tables)](./R-gt/Rgt.html)
 
-148. [R-knitrBootstrap](./R-knitrBootstrap/R-knitrBootstrap.html)
+149. [R-knitrBootstrap](./R-knitrBootstrap/R-knitrBootstrap.html)
 
-149. [R-lm](./R-lm/R-lm.html)
+150. [R-lm](./R-lm/R-lm.html)
 
-150. [R-loess](./R-loess/R-loess.html)
+151. [R-loess](./R-loess/R-loess.html)
 
-151. [R-markdown](./R-markdown/R-markdown.html)
+152. [R-markdown](./R-markdown/R-markdown.html)
 
-152. [R-matrix-algebra](./R-matrix-algebra/R-matrix-algebra.html)
+153. [R-matrix-algebra](./R-matrix-algebra/R-matrix-algebra.html)
 
-153. [R-model-predict](./R-model-predict/R-model-predict.html)
+154. [R-model-predict](./R-model-predict/R-model-predict.html)
 
-154. [R-Packages](./R-packages/R-packages.html)
+155. [R-Packages](./R-packages/R-packages.html)
 
-155. [R-sys-admin](./R-sys-admin/R-sys-admin.html)
+156. [R-sys-admin](./R-sys-admin/R-sys-admin.html)
 
-156. [Reproducible Research](./ReproducibleResearch/ReproducibleResearch.html)
+157. [Reproducible Research](./ReproducibleResearch/ReproducibleResearch.html)
 
-157. [Research](./research/research.html)
+158. [Research](./research/research.html)
 
-158. [Sage](./sage/sage.html)
+159. [Sage](./sage/sage.html)
 
-159. [Screen Cast](./screencast/screencast.html)
+160. [Screen Cast](./screencast/screencast.html)
 
-160. [SEM](./SEM/SEM.html)
+161. [SEM](./SEM/SEM.html)
 
-161. [shell](./shell/shell-tips.html)
+162. [shell](./shell/shell-tips.html)
 
-162. [Sirion](./Sirion/Sirion.html)
+163. [Sirion](./Sirion/Sirion.html)
 
-163. [skills](./skills/skills.html)
+164. [skills](./skills/skills.html)
 
-164. [skimage](./skimage/skimage.html)
+165. [skimage](./skimage/skimage.html)
 
-165. [Software Development](./software-dev/software-dev.html)
+166. [Software Development](./software-dev/software-dev.html)
 
-166. [Sole Treadmill](./Sole-Treadmill/Sole-Treadmill.html)
+167. [Sole Treadmill](./Sole-Treadmill/Sole-Treadmill.html)
 
-167. [SQL](./SQL/SQL.html)
+168. [SQL](./SQL/SQL.html)
 
-168. [Sublime Text 4](./ST4/ST4.html)
+169. [Sublime Text 4](./ST4/ST4.html)
 
-169. [Stratagem](./Stratagem/Stratagem.html)
+170. [Stratagem](./Stratagem/Stratagem.html)
 
-170. [Sweave](./Sweave/Sweave.html)
+171. [Sweave](./Sweave/Sweave.html)
 
-171. [TEM](./TEM/TEM.html)
+172. [TEM](./TEM/TEM.html)
 
-172. [TeX](./tex/tex-tips.html)
+173. [TeX](./tex/tex-tips.html)
 
-173. [Tidy Data](./tidyData/tidyData.html)
+174. [Tidy Data](./tidyData/tidyData.html)
 
-174. [Tidy Models](./tidyModels/tidyModels.html)
+175. [Tidy Models](./tidyModels/tidyModels.html)
 
-175. [TV](./TV/Tv.html)
+176. [TV](./TV/Tv.html)
 
-176. [Vacuum systems](./vacuum/vacuum.html)
+177. [Vacuum systems](./vacuum/vacuum.html)
 
-177. [Videos](./videos/videos.html)
+178. [Videos](./videos/videos.html)
 
-178. [Win](./win/win.html)
+179. [Win](./win/win.html)
 
-179. [winCasino](./winCasino/winCasino.html)
+180. [winCasino](./winCasino/winCasino.html)
 
-180. [winXray](./winXray/winXray.html)
+181. [winXray](./winXray/winXray.html)
 
-181. [Workflow](./workflow/workflow.html)
+182. [Workflow](./workflow/workflow.html)
 
-182. [Write Usefully (by Paul Graham)](./write_usefully/write_usefully.html)
+183. [Write Usefully (by Paul Graham)](./write_usefully/write_usefully.html)
 
-183. [Writing Well](./Writing-Well/Writing-Well.html)
+184. [Writing Well](./Writing-Well/Writing-Well.html)
 
-184. [WxMaxima](./WxMaxima/WxMaxima.html)
+185. [WxMaxima](./WxMaxima/WxMaxima.html)
 
-185. [X-ray EDS Issues](./X-Ray-EDS-Issues/X-Ray-EDS-Issues.html)
+186. [X-ray EDS Issues](./X-Ray-EDS-Issues/X-Ray-EDS-Issues.html)
 
-186. [Zoom](./Zoom/Zoom.html)
+187. [Zoom](./Zoom/Zoom.html)
 
 
