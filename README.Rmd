@@ -388,7 +388,7 @@ On a lighter tone here is fun from the Hitch Hikers Guide to the Galaxy:
 
       - Step 4: Review and Simplify!
     
-      More [here](./Feynman_technique/Feynman_technique.html)...
+      More [here](./Feynman_technique/Feynman_technique.html)
     
 37. Install command line tools on MacOS
 
