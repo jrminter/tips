@@ -27,7 +27,11 @@ I do this a lot. I want it **easily visible**...
 
 This is currently a placeholder...
 
-# Some useful quick tips for Windows 10
+# Some useful quick tips for Windows 10/11
+
+**Alt-F4** promppts for a **restart**
+
+**Scans** are in `C:\Users\my-login\Dropbox\scans`
 
 ## Denninger on Device Security
 
