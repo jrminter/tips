@@ -517,9 +517,9 @@ On a lighter tone here is fun from the Hitch Hikers Guide to the Galaxy:
 
 51. [AccessToSqlite](./AccessToSqlite/AccessToSqlite.html)
 
-52. [Apple Watch](./AppleWatch/Apple-Watch-Info/Apple-Watch-Info.html)
+52. [Apple Watch](./Apple-Watch/Apple-Watch-Info.html)
 
-52. [Apple Watch Stand Goal](./AppleWatch/Stand-Goal/Stand-Goal.html)
+53. [Apple Watch Stand Goal](./Apple-Watch-Stand-Goal/Stand-Goal.html)
 
 54. [Bladder Control](./bladder/Bladder-Control.html)
 
@@ -533,7 +533,7 @@ On a lighter tone here is fun from the Hitch Hikers Guide to the Galaxy:
 
 59. [Charging Anker Bluetooth Headphones](./Anker-Headphones/Charging-Anker-Headphones.html)
 
-60. [Chuck Episodes](./Chuck-Episodes/Chuck-Episodes.html)
+60. [Chuck Episodes](./Chuck/Chuck-Episodes.html)
 
 61. [EkAutomater](./automater/automater.html)
 
