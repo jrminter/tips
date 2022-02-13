@@ -22,6 +22,21 @@ when there are multiple `name.Rproj` files. Things work best when a git
 repository has a single `name.Rproj` file. So this `tips` project only
 has the single `tips.Rproj` file. I got burned by this in another repository.
 
+and...
+
+Before we start, a quick Gmail tip:
+
+> Frome Varun Gautam
+> works at Infosys
+
+> There is an alternate way to send the files through Gmail. You can right click
+> on your zip file and click on **Properties**. Change the extension of the zip
+> file from .zip or .7zp or any other that you may have there and change it to
+> “.txt”. Then attach this to Gmail as a normal attachment and send the file.
+>
+> Now on the receiving end after downloading this file rechange the .txt back to
+> .zip and you have your zip file back.
+
 On a lighter tone here is fun from the Hitch Hikers Guide to the Galaxy:
 
 > **What We Learned From the 'Hitchhiker's Guide'**    
@@ -34,6 +49,7 @@ On a lighter tone here is fun from the Hitch Hikers Guide to the Galaxy:
 > There are few things in the universe worse than bad poetry.    
 
 ![The Hitchiker's Guide to the Galaxy](img/HHG.png)
+
 
 
 1. My favorite path and a hack for PDF
@@ -119,6 +135,7 @@ On a lighter tone here is fun from the Hitch Hikers Guide to the Galaxy:
 9. I had issues with Anaconda Powershell in a Win 10 VM window. Try 
 `Run as Adminstrator`. It is easier to read! Better yet, click on the
 4-box icon in the lower left and open Powershell. The font will be OK.
+
 
 10. **How long does it take for caffeine to metabolize?** 
 
