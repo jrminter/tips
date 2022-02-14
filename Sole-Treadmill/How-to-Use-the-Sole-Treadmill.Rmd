@@ -1,7 +1,7 @@
 ---
 title: "How to use the Sole Treadmill"
 author: "J. R. Minter"
-date: 'Started: 2022-01-25, Last modified: 2022-01-25'
+date: 'Started: 2022-01-25, Last modified: 2022-02-14'
 output:
   pdf_document:
     toc: no
@@ -35,12 +35,15 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 From [Sole](https://www.soletreadmills.com/treadmills/f63-sole-treadmill) and
 adapted by John and Beth Minter,
 
+The F63 Treadmill has **10** built-in programs: 1 **Manual Program**, 5 preset
+profiles (**P1-P5**), two user defined programs (**U1** and **U2**)
+
 # How to use the treadmill
 
 1. Stand on Treadmill
 
 2. Use **either program** Up/Down
 
-3. When it cycles to **User1** hit the button.
+3. When it cycles to **Manual** hit the button.
 
 4. When ready press **Start**
