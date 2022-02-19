@@ -1,7 +1,7 @@
 ---
 title: "Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2022-02-10"
+date: "Started: 2013-07-16, Last modified: 2022-02-18"
 output:
   html_document:
     keep_md: yes
@@ -23,6 +23,7 @@ repository has a single `name.Rproj` file. So this `tips` project only
 has the single `tips.Rproj` file. I got burned by this in another repository.
 
 and...
+
 
 Before we start, a quick Gmail tip:
 
@@ -47,6 +48,18 @@ On a lighter tone here is fun from the Hitch Hikers Guide to the Galaxy:
 > Improbable does not mean impossible. ...    
 > “Just when you think life can't possibly get any worse it suddenly does.” ...    
 > There are few things in the universe worse than bad poetry.    
+
+
+
+**Repeating Reminders on iPhone:**
+
+You need to click **Open in Browser** ...
+
+
+[Youtube Link](https://www.youtube.com/watch?v=Ri74xn3OUrI)
+
+[Macmost Link](https://www.youtube.com/watch?v=tHMxafMputM)
+
 
 ![The Hitchiker's Guide to the Galaxy](img/HHG.png)
 
@@ -375,6 +388,7 @@ On a lighter tone here is fun from the Hitch Hikers Guide to the Galaxy:
 33. The R `janitor` package is your friend. It cleans up
      non-standard column names .
 
+
 34. CDC Corona Virus Recommendations
 
       > The CDC recommends washing with soap and water for at least 20 seconds after
@@ -696,7 +710,7 @@ On a lighter tone here is fun from the Hitch Hikers Guide to the Galaxy:
 
 132. [portable makefiles](./portableMakefiles/portableMakefiles.html)
 
-132. [PowerPoint](./ppt/ppt.html)
+133. [PowerPoint](./ppt/ppt.html)
 
 134. [Preparation of samples for EDS](./prepForEDS/prepForEDS.html)
 

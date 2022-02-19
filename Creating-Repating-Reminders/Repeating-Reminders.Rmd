@@ -1,0 +1,25 @@
+---
+title: "Create Regular Repeating Reminders"
+author: "John Minter"
+date: '2021-12-01'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+[Back to Index](../README.html)
+
+
+# Links
+
+You might need to click `Open in Browser`
+
+
+[Youtube Link](https://www.youtube.com/watch?v=Ri74xn3OUrI)
+
+[Macmost Link](https://www.youtube.com/watch?v=tHMxafMputM)
+
+
+[Back to Index](../README.html)

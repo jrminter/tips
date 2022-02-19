@@ -12,7 +12,7 @@ output:
 
 [Back to Index](../README.html)
 
-We frequently neeed conductive epoxies for SEM and EDS. Here are some choices.
+We frequently need conductive epoxies for SEM and EDS. Here are some choices.
 
 # Epic Resin's S7076
 
