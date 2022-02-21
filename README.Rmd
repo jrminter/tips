@@ -24,6 +24,16 @@ has the single `tips.Rproj` file. I got burned by this in another repository.
 
 and...
 
+# HBO-MAX Favorites
+
+## Chuck
+
+## Aquaman
+
+
+# Helpful Hints
+
+
 
 Before we start, a quick Gmail tip:
 
