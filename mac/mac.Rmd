@@ -1,7 +1,7 @@
 ---
 title: "MacOS Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2022-01-18"
+date: "Started: 2013-07-16, Last modified: 2022-02-22"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -31,7 +31,9 @@ softwareupdate -l
 
 ## To take a screenshot of the whole screen, press and hold these three keys
 together:    
-`Shift, Command, and 3.`
+`Shift, Command, and 3.`    
+
+Note that `Shift + Command + 4` turns your mac into a camera.
 
 If you see a thumbnail in the corner of your screen, click it to edit the
 screenshot. Or wait for the screenshot to save to your desktop.
@@ -39,8 +41,8 @@ screenshot. Or wait for the screenshot to save to your desktop.
 ## How to capture a portion of the screen on MacOS
 
 1. Press and hold these three keys together: Shift, Command, and 4.
-2. Drag the crosshair to select the area of the screen to capture. ...
-3. To take the screenshot, release your mouse or trackpad button.
+2. Drag the cross-hair to select the area of the screen to capture. ...
+3. To take the screenshot, release your mouse or track-pad button.
 4. If you see a thumbnail in the corner of your screen, click it to edit 
 the screenshot.
 

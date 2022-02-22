@@ -12,6 +12,23 @@ output:
 
 [Back to Index](../README.html)
 
+# How to take Screenshots in Widows 11
+
+1. Use **Fn PrtSc (Print Screen)** - under the **Insert** key and **Paste**.
+   Since well before Windows 11 you have been able to snap a screenshot with the
+   press of a single key: **PrtSc**.
+   
+2. Use the **PrtSc** Key with OneDrive.
+
+   
+3. Use the **Windows Key** - **PrtSc Keyboard Shortcut**. ...
+
+4. Use the **Snipping Tool**
+
+5. Use the **GameBar** (I do not have the GameBar on my Keyboard...)
+
+
+
 # How to back up Windows 11
 
 I do this a lot. I want it **easily visible**...

@@ -1,0 +1,349 @@
+---
+title: "Favorite Movies and Episodes of shows I like"
+author: "John Minter"
+date: "2022-01-01 updated 2022-02-21"
+output:
+  html_document: default
+  word_documnent: default
+  pdf_document: default
+---
+
+[Back to Index](../README.html)
+
+```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F}
+# make this an external chunk that can be included in any file
+
+library(knitr)
+options(width = 72)
+opts_chunk$set(message = F, error = F, warning = F, comment = NA, fig.align = 'center', dpi = 100, tidy = F, cache.path = '.cache/', fig.path = 'figure/')
+
+options(xtable.type = 'html')
+knit_hooks$set(inline = function(x) {
+  if(is.numeric(x)) {
+    round(x, getOption('digits'))
+  } else {
+    paste(as.character(x), collapse = ', ')
+  }
+})
+knit_hooks$set(plot = knitr:::hook_plot_html)
+```
+
+
+
+# How to Change the Episode on HBO Max
+
+If you're wondering how to change an episode in HBO Max, look no further.
+This article will show you how to do it across several platforms. In addition,
+we'll offer tips to enhance your experience with this relatively new streaming
+platform.
+
+# How to Change the Episode in HBO Max on an Apple TV
+
+HBO Max is available on Apple TV, too. If you're watching your TV show on Apple
+TV, but you find one of the episodes boring or you've already seen it, you can
+easily change to a different one.
+
+Follow these steps to switch episodes in HBO Max on Apple TV:
+
+1. While watching an episode, tap the **menu button** on your Apple TV remote.
+
+2. Switch between seasons and select the episode you want to watch.
+
+
+# How to Change the Episode in HBO Max on a PC
+
+If you're using a PC, but you're not sure how to change the episode in HBO Max,
+don't worry. With only one click, you can return to the menu and choose the
+episode you want to watch.
+
+Go to **Continue Watching**, click the **title of the season**, then 
+**click the title again right above the episode name**.
+
+
+
+# Season 1
+
+`urn:hbo:page:GYczwRQMU95rCFgEAAAK-:type:episode`
+
+Use `Open Link in Browser`...
+
+[S1 E1 Chuck Vs. The Intersect](https://play.hbomax.com/episode/urn:hbo:episode:GYczwRQMU95rCFgEAAAK-?747rzxjkto5am7d7jm2v75wbf4=pztywnhzprah5gy4uqsglwlj3y%5D)
+
+[S1 E2 Chuck vs the Helicopter](https://play.hbomax.com/episode/urn:hbo:episode:GYcy7rQ8NRmqtggEAAAJ0)
+
+[S1 E3 Chuck vs the Tango](https://play.hbomax.com/episode/urn:hbo:episode:GYcy79wJ71HconAEAAAJ6)
+
+[S1 E4 Chuck vs the Wookie](https://play.hbomax.com/episode/urn:hbo:episode:GYcy77Q4n8QKgsgEAAAJf)
+
+[S1 E5 Chuck vs. the Sizzling Shrimp](https://play.hbomax.com/episode/urn:hbo:episode:GYcy7-QdOKcPDwwEAAAKN)
+
+[S1 E6 Chuck vs the Sandworm](https://play.hbomax.com/page/urn:hbo:page:GYcy77A8raMJZsQEAAAJL:type:episode?c=buy_flow_complete&pid=hbomax&af_channel=Owned)
+
+[S1 E7 Chuck vs the Alma Matter](https://play.hbomax.com/page/urn:hbo:page:GYcy7xAExF5KxggEAAAJh:type:episode)
+
+[S1 E8 Chuck vs the Truth](https://play.hbomax.com/episode/urn:hbo:episode:GYcy77QvnX8JUngEAAAI9::type:episode)
+
+[S1 E8 Chuck vs the Truth](https://play.hbomax.com/page/urn:hbo:page:GYcy77gTIlY-qwgEAAAKH:type:episode)
+
+[S1 E9 Chuck vs the Imported Hard Salami](https://play.hbomax.com/episode/urn:hbo:episode:GYcy7ugJXD4NPrQEAAAIz)
+
+[S1 E10 Chuck vs the Nemsis](https://play.hbomax.com/episode/urn:hbo:episode:GYcy77QvnX8JUngEAAAI9)
+
+[S1 E11 Chuck vs the Crown Vic](https://play.hbomax.com/episode/urn:hbo:episode:GYcy7sQ69j4EIswEAAAJ6)
+
+[S1 E12 Chuck vs The Undercover Lover]()
+
+[S1 E13 Chuck vs the Marlin]()
+
+
+
+# Aquaman
+
+[Aqua Man](https://play.hbomax.com/page/urn:hbo:page:GX_Z4kAgTsrqkwgEAAAAC:type:feature?c=buy_flow_complete&pid=hbomax&af_channel=Owned)
+
+# Shazam!
+
+[Shazam!](https://play.hbomax.com/page/urn:hbo:page:GYJB-UAPXG4rDKgEAAAAC:type:feature?c=buy_flow_complete&pid=hbomax&af_channel=Owned)
+
+# The Hobbit
+
+[The Hobbit: An Unexpected Journey](https://play.hbomax.com/page/urn:hbo:page:GYWxDNwOY8omvwgEAAAEf:type:feature?utm_id=sa%7c71700000067030777%7c58700006926526610%7cp62287911527&gclid=Cj0KCQiAjc2QBhDgARIsAMc3SqT4Ldd6YCsFqZrekhVO8ShTkT-RTTdWG-y5pCiVAn0i8GQDeME0B0EaAmFrEALw_wcB&gclsrc=aw.ds)
+
+[The Hobbit - The desolation of Smaug](urn:hbo:page:GXrHpPQvjhomBSgEAAAAZ:type:feature)
+
+[Oblivion](https://play.hbomax.com/page/urn:hbo:page:GYKbsUwLEKIiVwgEAAAAD:type:feature?utm_id=sa%7c71700000067030777%7c58700006926526610%7cp62287911527&gclid=Cj0KCQiAjc2QBhDgARIsAMc3SqT4Ldd6YCsFqZrekhVO8ShTkT-RTTdWG-y5pCiVAn0i8GQDeME0B0EaAmFrEALw_wcB&gclsrc=aw.ds)
+
+
+
+
+# Season 2   
+
+## Chuck vs the Seduction
+
+Season 2 Episode 2    
+Chuck has to seduce a mark and needs to save Sarah's life    
+
+https://www.amazon.com/gp/video/detail/B001HNGLMA
+
+
+## Episode 4 **Chuck vs. the Cougars**   
+
+Sarah has concerns because an old classmate recognized her.
+season 2 episode 4     
+
+https://www.amazon.com/gp/video/detail/B001IWWV7O
+
+
+## Season 2 Episode 9: Chuck vs the Sensai
+
+Casey's old Mentor went rogue
+
+https://www.amazon.com/gp/video/detail/B001G0OEI2
+
+
+## Season 2 Episode 10: Chuck Versus the DeLorean
+
+Chuck meets Sarah's father and they pull off a con job...    
+https://www.amazon.com/gp/video/detail/B001NEKJZI
+
+
+## Chuck Versus the Suburbs
+
+Season 2 Episode 13    
+
+Chuck and Sarah go under cover to the suburbs and
+it turns out to be a den of Fulcrum agents.
+
+https://www.amazon.com/gp/video/detail/B001TCWIKI
+
+## Chuck Versus the Broken Heart
+
+Season 2 Episode 18    
+https://www.amazon.com/gp/video/detail/B0023L98JS
+
+Beckman replaces Sarah with Alex Forrest (Trisha Helfer) who makes a big
+mess that Sarah needs to fix. Beckman recants...
+
+## Chuck Verses the Colonel
+
+Episode 21    
+https://www.amazon.com/gp/video/detail/B00274FFXY
+
+Chuck and Sarah go on the run in an effort to locate Chuck's father. 
+
+## Chuck Verses the Dream Job
+
+Chuck gets a job with Ted Roark (Chevy Chase) and it ends badly
+
+https://www.amazon.com/gp/video/detail/B0025WYV24
+
+
+# Season 3
+
+Episode 2 - Chuck vs. the 3 Words    
+https://www.amazon.com/gp/video/detail/B00389XV42
+
+Carina gives Sarah a tape where Chuck tells Sarah why he acted as
+he did and that he loves her.
+
+Episode 10 - Chuck vs. the Tic Tac
+
+Casey unknowingly commits treason in order to save his old fiancée
+from the Ring, and Chuck and Sarah must break him out of jail to
+clear his name. 
+
+Episode 11 - Chuck vs. the Final Exam    
+
+Chuck's fate as a spy rests on a single mission. He learns that his
+latest solo mission will be a final test to see if he is ready to be a
+spy and needs to put everything he has learned into action to avoid
+going back to his old life, while Sarah and Shaw observe his every move.
+Chuck is unaware of the impact that this mission may have on his
+relationship with Sarah, when he is assigned to kill an agency mole as
+the final part of his mission.  Casey kills the mole because Chuck
+couldn't.
+
+Episode 12 - **Chuck vs. the American Hero**    
+Chuck has his pick of the best agents for an undercover operation, but he only has one girl in mind for the job: Sarah. Casey, Morgan and Awesome try to help Chuck win her back.
+
+Episode 13 - **Chuck vs. the Other Guy **    
+Chuck saves Sarah from Shaw who tries (unsuccessfully) to kill Sarah.    
+https://www.amazon.com/gp/video/detail/B003FM8EPS
+
+Episode 14 - **Chuck vs. the Honeymooners**     
+Chuck and Sarah go on their Honeymoon    
+Beckman wants them back and enlists Casey and Morgan to find them...    
+https://www.amazon.com/gp/video/detail/B00C139XYI
+
+Episode 15 - **Chuck vs. the Role Models**    
+The Turners have their issues...    
+
+Episode 17 - **Chuck vs the Living Dead**    
+Chuck's Dad returns...
+
+Episode 18 - **Chuck vs the Subway and the Ring**
+The Ring kills Chuck's dad...
+
+# Season 4
+
+Episode 4 - **Chuck vs. the Coup d'Etat**    
+Casey saves a tin-pot dictator...
+
+Episode 6 - **Chuck vs. the Aisle of Terror**    
+Chuck deals with his mom and a nasty medicine
+
+Episode 9 - **Chuck vs Phase Three**    
+Chuck is kidnapped by A Belgian terrorist and Sarah goes
+ballistic in her attempt to save Chuck.
+
+Episode 13 - **Chuck vs. the Push Mix**    
+Chuck takes down Alexi Volcoff just in time to see Ellie's
+newborn baby (Clara). Jeffster does a live concert in the 
+maternity wing... Really funny!
+https://www.amazon.com/gp/video/detail/B00442OHNG    
+
+Episode 21 - **Chuck vs. the Wedding Planner**    
+
+Chuck and Sarah a swindled by their wedding planner. The recruit
+Sarah's dad to help the pull off a low budget con job to get even.
+One of my favorite episodes...
+https://www.amazon.com/gp/video/detail/B004X4PLEO     
+https://www.amazon.com/Chuck-Versus-the-Wedding-Planner/dp/B00442OI1C
+
+
+Episode 22 - **Chuck vs. Agent X**    
+
+Chuck, Sarah, and Casey track down **Agent X** who happens to be
+Hartley Winterbottom who had used Steven Bartowski's original
+intersect and became Alexi Volkoff. The team fixes the damage...    
+https://www.amazon.com/gp/video/detail/B004YZKKXE
+
+Episode 23 - **Chuck vs. the Last Details**    
+
+Chuck and Sarah's wedding prep includes one final detail: ensuring that
+the mother-of-the-groom makes it to the ceremony alive. Meanwhile,
+Morgan's responsibilities as Best Man include his most dangerous
+mission yet, as he faces Vivian Volkoff. Elsewhere, Ellie tends to the
+last details of the rehearsal dinner and seeks help from an unlikely
+source.    
+https://www.amazon.com/gp/video/detail/B004YZKKXE
+
+Episode 24 - **Chuck vs the Last Details** - Vivian Volcoff targets
+Sarah with the "Norseman Device". Chuck puts everything into a last
+ditch effort to save Sarah.
+
+
+Chuck vs the Sensai    
+https://www.amazon.com/gp/video/detail/B001MT4CUC
+
+Chuck vs the Delorean    
+https://www.amazon.com/gp/video/detail/B00C14LK4I  
+
+
+
+season 4 13 - Chuck vs the Push Mix.    
+https://www.amazon.com/gp/video/detail/B00C14LK4I1    
+
+
+Season 4 24 Chuck Vs the cliffhanger    
+https://www.amazon.com/gp/video/detail/B00442OHNG
+
+Season 5 episode 8    
+chuck vs the baby (w/ Cheryl Ladd)    
+https://www.amazon.com/gp/video/detail/B0081LTPME
+
+Season 5 episode 12    
+Chuck vs Sarah    
+https://www.amazon.com/gp/video/detail/B0081MYBYU
+
+Season 5 episode 13    
+chuck vs the goodbye (the season 5 finale)    
+https://www.amazon.com/gp/video/detail/B0081IDN7A    
+
+
+chuck vs the cougars
+
+https://www.amazon.com/gp/video/detail/B00C14NGHC/ref=atv_hm_hom_1_c_myhimm_2_1
+
+
+chuck vs the cougars
+season 2 episode 4
+https://www.amazon.com/gp/video/detail/B001IWWV7O
+
+chuck vs the sensai
+https://www.amazon.com/gp/video/detail/B001MT4CUC
+
+chuck vs the delorean
+https://www.amazon.com/gp/video/detail/B00C14LK4I    
+
+season 4 13 - Chuck vs the Push Mix.    
+https://www.amazon.com/gp/video/detail/B00C14LK4I   
+
+Season 4 episode 21    
+chuck vs the wedding planner    
+https://www.amazon.com/gp/video/detail/B004X4PLEO/    
+https://www.amazon.com/gp/video/detail/B00C139JD/I    
+
+Season 4 episode 22
+https://www.amazon.com/gp/video/detail/B00442OHNG/    
+
+Season 4 24 Chuck vs the cliffhanger     
+https://www.amazon.com/gp/video/detail/B00517ESFK  
+
+# Season 5
+
+I only liked a few. Having Morgan with the Intersect was annoying...
+
+Season 5 episode 8    
+chuck vs the baby (w/ Cheryl Ladd)    
+https://www.amazon.com/gp/video/detail/B0081LTPME
+
+Season 5 Episode 12    
+Chuck vs Sarah    
+https://www.amazon.com/gp/video/detail/B0081MYBYU    
+
+Chuck vs the goodbye (the Season 5 finale)    
+https://www.amazon.com/gp/video/detail/B0081IDN7A
+
+[Back to Index](../README.html)
+

@@ -1,6 +1,7 @@
 ---
-title: "Favorite Chuck Episodes"
-date: "2022-01-01 updated 2022-01-26"
+title: "Favorite Movies and Episodes of shows I like"
+author: "John Minter"
+date: "2022-01-01 updated 2022-02-21"
 output:
   html_document: default
   word_documnent: default
@@ -27,12 +28,70 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
 ```
 
 
-[Back to Index](../README.html)
+
+# How to Change the Episode on HBO Max
+
+If you're wondering how to change an episode in HBO Max, look no further.
+This article will show you how to do it across several platforms. In addition,
+we'll offer tips to enhance your experience with this relatively new streaming
+platform.
+
+# How to Change the Episode in HBO Max on an Apple TV
+
+HBO Max is available on Apple TV, too. If you're watching your TV show on Apple
+TV, but you find one of the episodes boring or you've already seen it, you can
+easily change to a different one.
+
+Follow these steps to switch episodes in HBO Max on Apple TV:
+
+1. While watching an episode, tap the **menu button** on your Apple TV remote.
+
+2. Switch between seasons and select the episode you want to watch.
+
+
+# How to Change the Episode in HBO Max on a PC
+
+If you're using a PC, but you're not sure how to change the episode in HBO Max,
+don't worry. With only one click, you can return to the menu and choose the
+episode you want to watch.
+
+Go to **Continue Watching**, click the **title of the season**, then 
+**click the title again right above the episode name**.
+
+
 
 # Season 1
 
-Pilot    
-https://www.amazon.com/gp/video/detail/B000VU2SW2/    
+`urn:hbo:page:GYczwRQMU95rCFgEAAAK-:type:episode`
+
+[S1 E1 Chuck Vs. The Intersect](https://play.hbomax.com/episode/urn:hbo:episode:GYczwRQMU95rCFgEAAAK-?747rzxjkto5am7d7jm2v75wbf4=pztywnhzprah5gy4uqsglwlj3y%5D)
+
+[S1 E2 Chuck vs the Helicopter](https://play.hbomax.com/episode/urn:hbo:episode:GYcy7rQ8NRmqtggEAAAJ0)
+
+[S1 E3 Chuck vs the Tango](https://play.hbomax.com/episode/urn:hbo:episode:GYcy79wJ71HconAEAAAJ6)
+
+[S1 E4 Chuck vs the Wookie](https://play.hbomax.com/episode/urn:hbo:episode:GYcy77Q4n8QKgsgEAAAJf)
+
+[S1 E5 Chuck vs. the Sizzling Shrimp]()
+
+# Aquaman
+
+[Aqua Man](https://play.hbomax.com/page/urn:hbo:page:GX_Z4kAgTsrqkwgEAAAAC:type:feature?c=buy_flow_complete&pid=hbomax&af_channel=Owned)
+
+# Shazam!
+
+[Shazam!](https://play.hbomax.com/page/urn:hbo:page:GYJB-UAPXG4rDKgEAAAAC:type:feature?c=buy_flow_complete&pid=hbomax&af_channel=Owned)
+
+# The Hobbit
+
+[The Hobbit: An Unexpected Journey](https://play.hbomax.com/page/urn:hbo:page:GYWxDNwOY8omvwgEAAAEf:type:feature?utm_id=sa%7c71700000067030777%7c58700006926526610%7cp62287911527&gclid=Cj0KCQiAjc2QBhDgARIsAMc3SqT4Ldd6YCsFqZrekhVO8ShTkT-RTTdWG-y5pCiVAn0i8GQDeME0B0EaAmFrEALw_wcB&gclsrc=aw.ds)
+
+[The Hobbit - The desolation of Smaug](urn:hbo:page:GXrHpPQvjhomBSgEAAAAZ:type:feature)
+
+[Oblivion](https://play.hbomax.com/page/urn:hbo:page:GYKbsUwLEKIiVwgEAAAAD:type:feature?utm_id=sa%7c71700000067030777%7c58700006926526610%7cp62287911527&gclid=Cj0KCQiAjc2QBhDgARIsAMc3SqT4Ldd6YCsFqZrekhVO8ShTkT-RTTdWG-y5pCiVAn0i8GQDeME0B0EaAmFrEALw_wcB&gclsrc=aw.ds)
+
+
+
 
 # Season 2   
 
@@ -263,6 +322,5 @@ https://www.amazon.com/gp/video/detail/B0081MYBYU
 Chuck vs the goodbye (the Season 5 finale)    
 https://www.amazon.com/gp/video/detail/B0081IDN7A
 
-[Back to Index](../README.html)
 
 

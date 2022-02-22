@@ -1,7 +1,7 @@
 ---
 title: "Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2022-02-18"
+date: "Started: 2013-07-16, Last modified: 2022-02-21"
 output:
   html_document:
     keep_md: yes
@@ -24,18 +24,47 @@ has the single `tips.Rproj` file. I got burned by this in another repository.
 
 and...
 
-# HBO-MAX Favorites
+# Favorite Movies and Shows I like
 
-## Chuck
 
-## Aquaman
+[Oblivion](https://play.hbomax.com/page/urn:hbo:page:GYKbsUwLEKIiVwgEAAAAD:type:feature?utm_id=sa%7c71700000067030777%7c58700006926526610%7cp62287911527&gclid=Cj0KCQiAjc2QBhDgARIsAMc3SqT4Ldd6YCsFqZrekhVO8ShTkT-RTTdWG-y5pCiVAn0i8GQDeME0B0EaAmFrEALw_wcB&gclsrc=aw.ds)
 
+
+[Chuck]()
 
 # Helpful Hints
 
+## How to Change the Episode on HBO Max
+
+If you're wondering how to change an episode in HBO Max, look no further. This
+article will show you how to do it across several platforms. In addition, we'll
+offer tips to enhance your experience with this relatively new streaming
+platform.
+
+## How to Change the Episode in HBO Max on an Apple TV
+
+HBO Max is available on Apple TV, too. If you're watching your TV show on Apple
+TV, but you find one of the episodes boring or you've already seen it, you can
+easily change to a different one.
+
+Follow these steps to switch episodes in HBO Max on Apple TV:
+
+1. While watching an episode, tap the **menu button** on your Apple TV remote.
+
+2. Switch between seasons and select the episode you want to watch.
+
+## How to Change the Episode in HBO Max on a PC
+
+If you're using a PC, but you're not sure how to change the episode in HBO Max,
+don't worry. With only one click, you can return to the menu and choose the
+episode you want to watch.
+
+Go to **Continue Watching**, click the **title of the season**, then
+**click the title again right above the episode name**.
 
 
-Before we start, a quick Gmail tip:
+
+## A quick Gmail tip:
 
 > Frome Varun Gautam
 > works at Infosys
