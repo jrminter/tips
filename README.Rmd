@@ -588,7 +588,7 @@ You need to click **Open in Browser** ...
 
 51. [AccessToSqlite](./AccessToSqlite/AccessToSqlite.html)
 
-52. [Apple Watch](./Apple-Watch/Apple-Watch-Info.html)
+52. [Apple Watch Info](./Apple-Watch/Apple-Watch-Info.html)
 
 53. [Apple Watch Stand Goal](./Apple-Watch-Stand-Goal/Stand-Goal.html)
 
