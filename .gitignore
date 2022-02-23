@@ -26,13 +26,9 @@ AccessToSqlite/AccessToSqlite_fi*
 AccessToSqlite/._A*
 
 # Apple Watch
-AppleWatch/AppleWatch.html
-AppleWatch/AppleWatch.pdf
-AppleWatch/AppleWatch.docx
-
-AppleWatch/Apple-Watch-info.html
-AppleWatch/Apple-Watch-info.pdf
-AppleWatch/Apple-Watch-info.docx
+Apple-Watch/*.html
+Apple-Watch/*.pdf
+Apple-Watch/*.docx
 
 # automater directory
 automater/.DS_Store
