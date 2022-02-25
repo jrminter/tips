@@ -21,6 +21,17 @@ output:
   Alt + F4
   ```
 
+- Fixing Speechruntime.exe application error
+
+1. Press the Windows key or click start, type in `CMD` right-click and
+   click on "Run as an administrator".
+   
+2. Type in: `sfc /scannow` .
+
+3. Press "Enter". ...
+
+4. Restart your computer and see if that solves the issue.
+
 
 # Microsoft Windows 10
 

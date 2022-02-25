@@ -14,7 +14,9 @@ output:
 # make this an external chunk that can be included in any file
 library(knitr)
 options(width = 72)
-opts_chunk$set(message = F, error = F, warning = F, comment = NA, fig.align = 'center', dpi = 100, tidy = F, cache.path = '.cache/', fig.path = 'figure/')
+opts_chunk$set(message = F, error = F, warning = F, comment = NA,
+               fig.align = 'center', dpi = 100, tidy = F,
+               cache.path = '.cache/', fig.path = 'figure/')
 
 options(xtable.type = 'html')
 knit_hooks$set(inline = function(x) {
