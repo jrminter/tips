@@ -1,7 +1,7 @@
 ---
-title: "iOS Tips"
+title: "iOS/iPhone Tips"
 author: "J. R. Minter"
-date: "Started: 2014-09-07, Last modified: 2021-07-20"
+date: "Started: 2014-09-07, Last modified: 2022-02-25"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -11,6 +11,16 @@ output:
 ---
 
 [Back to Index](../README.html)
+
+# Restart your iPhone
+
+1. Press and hold either volume button and the side button until the power off
+   slider appears.
+
+2. Drag the slider, then wait 30 seconds for your device to turn off.
+
+3. To turn your device back on, press and hold the side button (on the right
+   side of your iPhone) until you see the Apple logo.
 
 # Changing Brightness on iOs12
 
@@ -22,7 +32,7 @@ Settings > Display and Brightness
 
 Then manually increase brightness **with the slider**.
 
-# Music settings for iPhone12
+# Music settings for iPhone-12
 
 Leave your music playlist on the `Library` tab.
 
