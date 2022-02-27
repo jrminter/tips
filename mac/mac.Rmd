@@ -25,6 +25,276 @@ Use the command line:
 softwareupdate -l
 ```
 
+# Install and configure Git on a fresh new macOS 11 Big Sur in 2021 — A complete guide
+
+## Install Git on a fresh macOS 11 Big Sur
+
+1. Install XCode 12 (optional)
+
+Xcode is an IDE for macOS containing a suite of software development tools for developing software for macOS, iOS, watchOS and tvOS. Even if you’re not a full time professional Apple developer, we still recommend to install it on your brand new laptop/iMac. Xcode has some long term benefits that you’ll need in the future.
+Xcode 12 is around 11 GB and downloading it though Apple Store might need some times, depends on how fast your Internet connection is.
+
+2. Install Xcode Command Line Tools (required)
+
+```
+$ xcode-select --install
+```
+
+Xcode CTL will bring Git to you systems, along with other tools to build and compile software packages such as: GCC, Make..
+
+When it’s done, to test that it installed properly you can run:
+
+```
+$ git --version
+```
+
+```
+git version 2.35.1 (Apple Git-130)
+```
+
+```
+which git
+```
+
+It should output `/usr/bin/git` installed by XCode CTL which is owned by
+the macOS system. I get `/usr/local/bin/git`. That is because I am using
+ `git` from Homebrew.
+
+## Git setup at the global level
+
+1. Set global use.name and user.email
+
+```
+$ git config --global user.name "jrminter" 
+$ git config --global user.email "jrminter@gmail.com"
+```
+
+2. Enable Git password caching
+
+Let’s macOS save the Git credentials on its keychain, so that you won’t
+have to type Git passwords many times:
+
+```
+$ git config --global credential.helper osxkeychain
+```
+
+3. Only allow git pull in fast-forward mode
+
+```
+$ git config --global pull.ff only
+```
+
+It’s a good practice and if you’re wondering why, here is the [reason](https://blog.sffc.xyz/post/185195398930/why-you-should-use-git-pull-ff-only-git-is-a)
+
+
+4. macOS globally ignored files
+
+On a Mac, it is important to remember to add .DS_Store (a hidden macOS
+system file that’s put in folders) to your `~/.gitignore files`. If you
+want to never include .DS_Store files in your Git repositories, you can
+configure your Git to globally exclude those files:
+
+```
+# specify a global exclusion list:
+$ git config --global core.excludesfile ~/.gitignore 
+# adding .DS_Store to that list:
+$ echo .DS_Store >> ~/.gitignore
+```
+
+If you would like to use some ready-to-use file, consider Github’s default .gitignore for macOS environment:
+
+```
+curl https://raw.githubusercontent.com/github/gitignore/master/Global/macOS.gitignore -o ~/.gitignore
+```
+
+5. Force Git to use https:// instead of git://, or vice versa
+
+Some package manager, such as NPM has package.json file fixed with SSH protocol
+and you might behind a corporate firewall that does not allow SSH..
+
+```
+"dependencies": {
+    "package_name": "git+ssh://git@git.scm.domain.com:Domain/package_name.git",
+}
+```
+
+The only option is to force Git to change its protocol to HTTPS for you to be
+able to install the package — notice the semicolon in `git@github.com:` must be
+included.
+
+```
+$ git config --global url."https://github.com/".insteadOf git@github.com:
+$ git config --global url."https://".insteadOf git://
+```
+
+If you want to switch it back:
+
+```
+$ git config --global url."git@github.com:".insteadOf https://github.com/
+$ git config --global url."git://".insteadOf https://
+```
+
+6. Global Git config file — final result
+
+Final ~/.gitconfig will be something similar to this:
+
+```
+[user]
+        name = Your Name
+        email = your-email@your-company.com
+[pull]
+        ff = only
+[core]
+        excludesfile = /Users/user1/.gitignore
+[credential]
+        helper = osxkeychain
+[url "https://github.com/"]
+        insteadOf = git@github.com
+[url "https://"]
+        insteadOf = git://
+```
+
+## Starting to work with remote repositories
+
+There are 2 ways to communicate with a GitHub/GitLab/BitBucket server:
+
+1. SSH:
+
+- Pros: you don’t need to supply your username and password each time
+   pull/push your code. And you can use multiple GitHub/GitLab/BitBucket
+   accounts, each account just needs a SSH key pairs.
+
+- Cons: required additional steps to generate SSH key pairs and SSH config file.
+
+2. HTTPS:
+
+- Pros: need to supply your username and password each time, unless you use a
+  credential helper so Git will remember your credentials every time it talks
+  to GitHub or GitLab. It’s a simple and fast way to clone a new repo without
+  any additional setups.
+
+- Cons: could not easily use multiple Git accounts on the same computer, or
+  switching between them.
+
+1. Cloning a repo using HTTPS
+
+This is the quickest way to download from another private repository without
+additional setup:
+
+```
+$ git clone https://github.com/user/repo.git
+```
+
+Updating remote URL for repositories that already cloned to HTTPS:
+
+```
+$ git remote set-url origin https://USERNAME@github.com/USERNAME/PROJECTNAME.git
+```
+
+To ensure that the commits appear as performed by USERNAME, one can setup the
+user.name and user.email locally for this project:
+
+```
+$ git config user.name USERNAME
+$ git config user.email USERNAME@example.com
+```
+
+To view the local Git config file content, use `git config --local --edit`
+
+2. Cloning a repo using SSH
+
+GitLab already documented it well here:` https://docs.gitlab.com/ee/ssh/`.
+
+Basically, you need to generate SSH key pairs so that Git can use them to
+securely communicate with GitHub/GitLab/BitBucket server using SSH protocol
+under the hood. So do you need multiple Git accounts? just create multiple
+SSH key pairs.. simple enough!
+
+Just remember to generate SSH keys using ED25519:
+
+```
+$ ssh-keygen -t ed25519 -C "your-email@your-domain.com"
+```
+
+The book Practical Cryptography With Go suggests that `ED25519` keys are more
+secure and performant than `RSA` keys.
+
+OpenSSH 6.5 introduced ED25519 SSH keys in 2014 and they should be available
+on most operating systems.
+
+```
+# ensure ssh agent is running:
+$ eval $(ssh-agent -s) 
+# add the private key to ssh agent:
+$ ssh-add ~/.ssh/id_ed25519
+```
+
+Edit SSH settings in the ~/.ssh/config file:
+
+```
+# default Git user:
+Host github.com
+  User git
+  IdentityFile ~/.ssh/id_ed25519
+
+```
+
+Head over to github.com/settings/keys or GitLab’s relevant to add your
+new public key id_ed25519.pub and you’re now ready to clone a repo:
+
+```
+$ git clone git@github.com:<username>/<repo-name>.git
+```
+
+# Setup multiple Git accounts on the same computer
+
+As above said, you can only achieve this while using SSH protocol
+when connect with your remote repos.
+
+The sample ~/.ssh/config file for multiple Git accounts will be similar
+to below, with key pairs generated by previous steps for user1 and user2:
+
+```
+# default setting for SSH:
+Host *
+ AddKeysToAgent yes
+ UseKeyChain yes
+ IdentityFile ~/.ssh/id_rsa
+ ForwardAgent yes
+
+# Git user1 account
+Host github.com-user1
+   HostName github.com
+   User git
+   IdentityFile ~/.ssh/id_ed25519_user1
+   IdentitiesOnly yes
+
+# Git user2 account
+Host github.com-user2
+   HostName github.com
+   User git
+   IdentityFile ~/.ssh/id_ed25519_user2
+   IdentitiesOnly yes
+
+```
+git clone your respective user’s repository:
+
+```
+$ git clone git@github.com-user1:user1/your-repo-name.git
+```
+
+In summary
+
+```
+# edit and list global Git config:
+git config --global --edit
+git config --global --list
+# edit and list local Git config
+git config --local --edit
+git config --local --list
+
+```
+More from Tony Lai
 
 
 # How to take a screenshot on your Mac
