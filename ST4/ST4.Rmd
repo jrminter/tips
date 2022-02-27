@@ -1,7 +1,7 @@
 ---
 title: "Sublime Text 4 Tips"
 author: "J. R. Minter"
-date: "Started: 2015-02-13, Last modified: 2021-06-20"
+date: "Started: 2015-02-13, Last modified: 2022-02-27"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -74,7 +74,15 @@ limit for the evaluation.
    - 32 bit installs on a 32bit version of Windows will be in    
      `C:\Program Files\Sublime Text\`
 
+# Spell checking
 
+Today, I found out that SublimeText allows you to check spelling. To enable
+spell-check: click `F6` or go to `View->Spell Check`.
+
+When spell-check is enabled, it displays red squiggles below the misspelled
+words. By right click on misspelled word you can correct the misspellings.
+You can also ignore it for all other occurrences of specific word (useful e.g.
+for Software Projects names).
 
 # Key info
 
