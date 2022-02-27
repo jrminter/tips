@@ -27,12 +27,20 @@ softwareupdate -l
 
 # Install and configure Git on a fresh new macOS 11 Big Sur in 2021 — A complete guide
 
+Tony Lau
+
 ## Install Git on a fresh macOS 11 Big Sur
 
 1. Install XCode 12 (optional)
 
-Xcode is an IDE for macOS containing a suite of software development tools for developing software for macOS, iOS, watchOS and tvOS. Even if you’re not a full time professional Apple developer, we still recommend to install it on your brand new laptop/iMac. Xcode has some long term benefits that you’ll need in the future.
-Xcode 12 is around 11 GB and downloading it though Apple Store might need some times, depends on how fast your Internet connection is.
+Xcode is an IDE for macOS containing a suite of software development tools for
+developing software for macOS, iOS, watchOS and tvOS. Even if you’re not a full
+time professional Apple developer, we still recommend to install it on your
+brand new laptop/iMac. Xcode has some long term benefits that you’ll need in the
+future.
+
+Xcode 12 is around 11 GB and downloading it though Apple Store might need some
+times, depends on how fast your Internet connection is.
 
 2. Install Xcode Command Line Tools (required)
 
@@ -40,7 +48,8 @@ Xcode 12 is around 11 GB and downloading it though Apple Store might need some t
 $ xcode-select --install
 ```
 
-Xcode CTL will bring Git to you systems, along with other tools to build and compile software packages such as: GCC, Make..
+Xcode CTL will bring Git to you systems, along with other tools to build and
+compile software packages such as: GCC, Make..
 
 When it’s done, to test that it installed properly you can run:
 
@@ -294,7 +303,6 @@ git config --local --edit
 git config --local --list
 
 ```
-More from Tony Lai
 
 
 # How to take a screenshot on your Mac
