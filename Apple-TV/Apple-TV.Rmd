@@ -20,6 +20,38 @@ knitr::opts_chunk$set(echo = TRUE)
 
 [Back to Index](../README.html)
 
+# Viewing Programs on Apple TV
+
+1. Turn on TV
+
+2. Turn on Apple TV using the Siri Remote. The button is on the top right
+   of the remote.
+   
+3. Put in my ear buds.
+
+4. Go **_back_** to settings.
+
+5. Choose **video and audio**.
+
+6. Choose **audio output**.
+
+7. Choose **temporary audio outputs**.
+
+8. Add **airpods**
+
+< (Back)    
+<     
+<      
+
+9. Choose desired programs.
+
+- HBO Max
+
+- Prime Video
+
+- Paramount Plus
+
+
 # Rewind or Fast Forward on Apple TV
 
 - Continuously rewind or Fast-Forward
