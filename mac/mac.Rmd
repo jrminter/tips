@@ -27,7 +27,7 @@ softwareupdate -l
 
 # Install and configure Git on a fresh new macOS 11 Big Sur in 2021 — A complete guide
 
-Tony Lau
+Author: **Tony Lau**
 
 ## Install Git on a fresh macOS 11 Big Sur
 
