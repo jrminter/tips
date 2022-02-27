@@ -489,7 +489,7 @@ You need to click **Open in Browser** ...
 
       `xcode-select --install`
 
-38. Regex for youtube time stamps. Useful in SublimeText3!
+38. Regex for youtube time stamps. Useful in SublimeText4!
 
       `\d\d:\d\d`
 
