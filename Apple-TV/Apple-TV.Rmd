@@ -1,7 +1,7 @@
 ---
 title: "Apple-TV"
 author: "John Minter"
-date: "Started 2022-02-25, Last modified: 2022-02-25"
+date: "Started 2022-02-25, Last modified: 2022-02-26"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -13,10 +13,21 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+\fontsize{18}{19.2}
+\fontseries{r}
+\selectfont
+
 
 [Back to Index](../README.html)
 
-# How to Fast Forward on Apple TV
+# Rewind or Fast Forward on Apple TV
+
+- Continuously rewind or Fast-Forward
+
+> **Press and hold** the **left**  or **right** on the **click-pad ring**
+> **(second generation Siri Remote).**
+> **Press `left` or `right` repeatedly to cycle through rewind or**
+> **fast-forward speed options (2x, 3x, 4x).** 
 
 
 While the new Siri Remote that’s included with the 2021 Apple TV 4K has been

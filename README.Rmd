@@ -30,9 +30,33 @@ and...
 [Oblivion](https://play.hbomax.com/page/urn:hbo:page:GYKbsUwLEKIiVwgEAAAAD:type:feature?utm_id=sa%7c71700000067030777%7c58700006926526610%7cp62287911527&gclid=Cj0KCQiAjc2QBhDgARIsAMc3SqT4Ldd6YCsFqZrekhVO8ShTkT-RTTdWG-y5pCiVAn0i8GQDeME0B0EaAmFrEALw_wcB&gclsrc=aw.ds)
 
 
-[Chuck]()
+[Chuck - To Do]()
 
 # Helpful Hints
+
+# How to Fast Forward on Apple TV
+
+While the new Siri Remote that’s included with the 2021 Apple TV 4K has been
+redesigned, it retains some of the better elements offered by the old remote.
+The glass trackpad is still there but has been replaced by a round trackpad
+surrounded by aluminum. This new remote also features raised edges around th
+circumference of the circle, providing some tactility to the trackpad.
+
+So when it comes to actually control your movies and TV shows, Apple has
+included a couple of different options. The first method to know about if you
+want to fast forward on Apple TV is to just skip forwards or backward. This can
+be done by simply clicking back or forward on the aforementioned trackpad. When
+clicking left or right on the trackpad, you’ll be able to skip around in
+10-second increments.
+
+Obviously, skipping in small increments is fine most of the time, but if you
+want to actually scrub through a show or movie in order to get to a certain spot,
+things are a bit different. In order to fast forward on Apple TV continuously,
+you’ll need to press and hold the right button on the trackpad. When you click
+the button, the default speed is 2x, but this can be increased to either 3x or
+4x speeds by continuing to press the button. Once you’ve reached the spot in the
+movie or show that you want, just click the center of the trackpad or the
+Play/Pause button in order to resume the content.
 
 ## How to Change the Episode on HBO Max
 
@@ -580,7 +604,7 @@ You need to click **Open in Browser** ...
     </blockquote>
     ```
 
-48. [Apple TV](./Apple-Tv/Apple-TV.html)
+48. [Apple TV](./Apple-TV/Apple-TV.html)
 
 49. [Pair Bluetooth on Windows](https://support.microsoft.com/en-us/windows/pair-a-bluetooth-device-in-windows-2be7b51f-6ae9-b757-a3b9-95ee40c3e242#:~:text=Select%20Start%20%3E%20type%20Bluetooth%20%3E%20select,you're%20done%20and%20connected.)
 
