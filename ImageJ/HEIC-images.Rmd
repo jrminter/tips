@@ -26,7 +26,21 @@ output:
 
 4. Click the '$0.99' button. ...
 
-5.Click 'Buy. ...
+# How to convert HEIC to JPG or PNG using Preview
+
+One of the easiest ways to convert an HEIC to a JPG is to use the Preview App:
+
+[From backlight blog on the Mac and iPhone](https://backlightblog.com/iPhone-heic-to-jpg).
+
+1. Open the HEIC file in Preview.
+
+2. Click File > Export
+
+3. From the format drop-down menu, select either JPG or Png.
+
+4. Click Save.
+
+5 .Click 'Buy'. ...
 
 6. Confirm the purchase was successful. ...
 
