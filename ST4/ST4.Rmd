@@ -24,6 +24,16 @@ $ ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/loc
 
 # John Minter's tips for ST4
 
+Today, I found out that Sublime Text allows you to check spelling. To enable
+spell-check: click `F6` or go to `View`->`Spell Check`.
+
+When spell-check is enabled, it displays red squiggles below the misspelled
+words. By right click on misspelled word you can correct the misspellings.
+You can also ignore it for all other occurrences of specific word (useful e.g.
+for Software Projects names).
+
+
+
 These are John Minter's tips for using the editor ``Sublime Text 4``.
 
 **Note** ST4 was released and I purchased on `2021-05-21`. This file needs
