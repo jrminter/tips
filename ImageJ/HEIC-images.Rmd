@@ -1,0 +1,37 @@
+---
+title: "HEIC Images"
+author: "J. R. Minter"
+date: "Started: 2019-06-08, Last modified: 2022-02-"
+output:
+  html_document:
+    keep_md: yes
+    css: ../theme/jm-gray-vignette.css
+    number_sections: yes
+    toc: yes
+    toc_depth: 3
+---
+
+[Back to ImageJ](ImageJ.html)
+
+
+# How to open HEIC files on Windows 11
+
+[from Tom's Hardware](https://www.tomshardware.com/how-to/open-heic-files-windows-11)
+
+1. Attempt to open an HEIC file with the Photos app. ...
+
+2. Click 'Download and install it now. ...
+
+3. Confirm that you want to launch the Microsoft Store. ...
+
+4. Click the '$0.99' button. ...
+
+5.Click 'Buy. ...
+
+6. Confirm the purchase was successful. ...
+
+7. Open your HEIC file.
+
+
+
+[Back to ImageJ](ImageJ.html)

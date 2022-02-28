@@ -15,6 +15,19 @@ output:
 
 # Recent tips
 
+# HEIC Images
+
+## How to open HEIC files on Windows 11
+
+1. Attempt to open an HEIC file with the Photos app. ...
+2, Click 'Download and install it now. ...
+3. Confirm that you want to launch the Microsoft Store. ...
+4. Click the '$0.99' button. ...
+5. Click 'Buy. ...
+6. Confirm the purchase was successful. ...
+7. Open your HEIC file.
+
+
 ## My current sites (2021-06-12)
 
 - ImageJ
