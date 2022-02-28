@@ -1,7 +1,7 @@
 ---
 title: "HEIC Images"
 author: "J. R. Minter"
-date: "Started: 2019-06-08, Last modified: 2022-02-"
+date: "Started: 2019-06-08, Last modified: 2022-02-29"
 output:
   html_document:
     keep_md: yes
