@@ -26,9 +26,7 @@ AccessToSqlite/AccessToSqlite_fi*
 AccessToSqlite/._A*
 
 # Apple TV
-Apple-TV/*.html
-Apple-TV/*.pdf
-Apple-TV/*.docx
+Apple-TV/.docx
 
 # Apple Watch
 Apple-Watch/*.html

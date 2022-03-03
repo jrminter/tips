@@ -52,7 +52,28 @@ knitr::opts_chunk$set(echo = TRUE)
 - Paramount Plus
 
 
-# Rewind or Fast Forward on Apple TV
+# How to Change the Episode on HBO Max
+
+If you’re wondering how to change an episode in HBO Max, look no further. This
+article will show you how to do it across several platforms. In addition, we’ll
+offer tips to enhance your experience with this relatively new streaming
+platform.
+
+
+## How to Change the Episode in HBO Max on an Apple TV
+
+HBO Max is available on Apple TV, too. If you’re watching your TV show on Apple
+TV, but you find one of the episodes boring or you’ve already seen it, you can
+easily change to a different one.
+
+Follow these steps to switch episodes in HBO Max on Apple TV:
+
+1. While watching an episode, tap the menu button on your Apple TV remote.
+
+2. Switch between seasons and select the episode you want to watch.
+
+
+## Rewind or Fast Forward on Apple TV
 
 - Continuously rewind or Fast-Forward
 
