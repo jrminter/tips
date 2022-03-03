@@ -19,7 +19,7 @@ compiled from several web sources.
 
 ## Git Rerere
 
-from [here](https://git-scm.com/book/en/v2/Git-Tools-Rerere)
+from [here](https://git-scm.com/book/en/v2/Git-Tools-Rerere) (open link in browser...)
 
 The git rerere functionality is a bit of a hidden feature. The name stands for
 “reuse recorded resolution” and, as the name implies, it allows you to ask Git
