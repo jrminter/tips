@@ -88,7 +88,7 @@ chntpw/figure/
 
 Chuck-Episodes/*.html
 Chuck-Episodes/*.pdf
-Chuck-Episodes/.DS_Store
+Chuck-Episodes/*.DS_Store
 
 
 # color directory
