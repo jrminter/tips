@@ -1,7 +1,7 @@
 ---
 title: "Git Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-05-05"
+date: "Started: 2013-07-16, Last modified: 2022-03-02"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -16,6 +16,82 @@ These are John Minter's tips for a workflow using git. They were
 compiled from several web sources.
 
 # Quick tips
+
+## Git Rerere
+
+The git rerere functionality is a bit of a hidden feature. The name stands for
+“reuse recorded resolution” and, as the name implies, it allows you to ask Git
+to remember how you’ve resolved a hunk conflict so that the next time it sees
+the same conflict, Git can resolve it for you automatically.
+
+There are a number of scenarios in which this functionality might be really
+handy. One of the examples that is mentioned in the documentation is when you
+want to make sure a long-lived topic branch will ultimately merge cleanly, but
+you don’t want to have a bunch of intermediate merge commits cluttering up your
+commit history. With rerere enabled, you can attempt the occasional merge,
+resolve the conflicts, then back out of the merge. If you do this continuously,
+then the final merge should be easy because rerere can just do everything for
+you automatically.
+
+This same tactic can be used if you want to keep a branch rebased so you don’t
+have to deal with the same rebasing conflicts each time you do it. Or if you
+want to take a branch that you merged and fixed a bunch of conflicts and then
+decide to rebase it instead — you likely won’t have to do all the same conflicts
+again.
+
+Another application of rerere is where you merge a bunch of evolving topic
+branches together into a testable head occasionally, as the Git project itself
+often does. If the tests fail, you can rewind the merges and re-do them without
+the topic branch that made the tests fail without having to re-resolve the
+conflicts again.
+
+To enable rerere functionality, you simply have to run this config setting:
+
+```
+$ git config --global rerere.enabled true
+```
+
+You can also turn it on by creating the .git/rr-cache directory in a specific
+repository, but the config setting is clearer and enables that feature globally
+for you.
+
+Now let’s see a simple example, similar to our previous one. Let’s say we have
+a file named hello.rb that looks like this:
+
+```
+#! /usr/bin/env ruby
+
+def hello
+  puts 'hello world'
+end
+```
+
+In one branch we change the word “hello” to “hola”, then in another branch we
+change the “world” to “mundo”, just like before.
+
+```
+git config --global rerere.enabled true
+git config --global rerere.autoUpdate true
+```
+
+While I agree in that Git’s UX is abysmal for the beginner or casual user, no
+one should have to endure resolving the same conflicts over and over again.
+
+In my opinion, the following configuration should have been the default with Git:
+
+```
+    git config --global rerere.enabled true
+    git config --global rerere.autoUpdate true
+```
+
+The `enabled` part means: transparently record all resolutions in a database, 
+and re-apply them whenever bumping into the same conflict with the same pair of 
+files in the future.
+
+The `autoUpdate` part means: every time you finish re-applying a recorded
+resolution, please `git add` the result automatically for me so I don’t have to
+look for a "conflict" that’s actually no longer there.
+
 
 ## Issues with `.DS_Store`
 
