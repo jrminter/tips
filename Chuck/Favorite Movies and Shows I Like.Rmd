@@ -1,5 +1,5 @@
 ---
-title: "Favorite Movies and Episodes of shows I like"
+title: "Favorite Movies and Episodes of Shows I Like"
 author: "John Minter"
 date: "2022-01-01 updated 2022-03-03"
 output:
