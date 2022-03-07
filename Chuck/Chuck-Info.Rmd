@@ -1,7 +1,7 @@
 ---
 title: "Chuck Info"
 author: "John Minter"
-date: "2022-01-13"
+date: "2022-03-07"
 output: html_document
 ---
 
@@ -11,3 +11,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Chuck Info
 
+Currently, I watch **Chuck** on HBO-Max on my Apple TV.
+
+I can find episodes on [Wikipedia](https://en.wikipedia.org/wiki/List_of_Chuck_episodes)
+
+
+[Access HBO Max](https://www.hbomax.com/tv-sign-in) try `Open in Browser`.
+Select `Stream Now`.

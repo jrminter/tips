@@ -22,6 +22,8 @@ when there are multiple `name.Rproj` files. Things work best when a git
 repository has a single `name.Rproj` file. So this `tips` project only
 has the single `tips.Rproj` file. I got burned by this in another repository.
 
+Second - [My Academia Profile](https://johnminter.academia.edu/)
+
 and...
 
 # Favorite Movies and Shows I like
