@@ -14,13 +14,13 @@ output:
 
 # Restart your iPhone
 
-1. Press and hold either volume button and the side button until the power off
-   slider appears.
+To force restart iPhone X, iPhone XS, iPhone XR, iPhone 11, iPhone 12, or
+iPhone 13, do the following:
 
-2. Drag the slider, then wait 30 seconds for your device to turn off.
-
-3. To turn your device back on, press and hold the side button (on the right
-   side of your iPhone) until you see the Apple logo.
+1. **Press and quickly release** the volume up button,
+2. **Press and quickly release** the volume down button.
+3. **Press and hold the side button.**
+4. **Release when the Apple Logo appears.**
 
 # Changing Brightness on iOs12
 
