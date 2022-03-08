@@ -36,7 +36,21 @@ and...
 
 # Helpful Hints
 
-# How to Fast Forward on Apple TV
+## Restart a show or movie
+
+1. Go back to the movie or episode description screen.
+
+2. Choose the Restart icon (arrow looping backwards). The show or movie will 
+Start playing from the beginning.
+
+## How do I switch episodes?
+
+**TV:** Press the Back button on your remote (Menu button for Apple TV), and
+then scroll down to choose a different season or episode. 
+I found this difficult and tie consuming to retart **Chuck** from the beginning
+since there are 5 seasons...
+
+## How to Fast Forward on Apple TV
 
 While the new Siri Remote that’s included with the 2021 Apple TV 4K has been
 redesigned, it retains some of the better elements offered by the old remote.
