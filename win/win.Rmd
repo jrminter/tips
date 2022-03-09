@@ -44,6 +44,18 @@ I do this a lot. I want it **easily visible**...
 
 This is currently a placeholder...
 
+# How to open a command prompt in Windows 11
+
+1. Press the **Windows** + **R** keys from the keyboard to open the **Run** dialog box.
+
+2. In the **Run** box type **CMD** and then press `Ctrl` + `Shift` + `Enter` 
+from the keyboard to run the command prompt as an administrator.
+
+3. You should see a dialog box to enter the command ('CMD`).
+
+4.  If **User Account Control** appears, select the `YES` button.
+the keyboard to  run the command prompt as an  
+
 # Some useful quick tips for Windows 10/11
 
 **Alt-F4** prompts for a **restart**
