@@ -42,7 +42,6 @@ I do this a lot. I want it **easily visible**...
 3. **Select any drives you wish to back up**, then click **Next** to begin
    the backup process.
 
-This is currently a placeholder...
 
 # How to open a command prompt in Windows 11
 
