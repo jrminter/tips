@@ -52,6 +52,12 @@ knitr::opts_chunk$set(echo = TRUE)
 - Paramount Plus
 
 
+# An easy way to reset series that you watch
+
+Unplug the **Apple TV box**. Wait a bit and plug it back in.
+Let it reboot and you are good to go! **Note** - this cleans
+the cache of programs.
+
 # How to Change the Episode on HBO Max
 
 If you’re wondering how to change an episode in HBO Max, look no further. This
