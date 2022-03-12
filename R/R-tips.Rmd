@@ -24,7 +24,7 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 1. [R-Project](https://www.r-project.org/)
 
-2. [R-4.1.1 macOS beta build](https://mac.r-project.org/)        
+2. [R-4.1.3 macOS](https://mac.r-project.org/)        
    [Nightly builds for macOS](https://mac.r-project.org/#nightly)    
    
    **Note**: I was surprised this morning when no binaries were released
@@ -42,11 +42,37 @@ suppressPackageStartupMessages(library("tidyverse"))
    
    
        
-   [R-4.1.1 win beta build](https://cran.r-project.org/bin/windows/base/rtest.html)    
+   [R-4.1.3 win beta build](https://cran.r-project.org/bin/windows/base/rtest.html)    
+   [R-4.1.3.win](https://cran.r-project.org/bin/windows/base/index.html)
 
 > R version 4.1.1 (Kick Things) prerelease versions will appear starting
 > Saturday 2021-07-31. Final release is scheduled for 
 > **Tuesday 2021-08-10**.
+
+# Install Bioconductor
+
+## Install Bioconductor Packages
+
+To install core packages, type the following in an R command window:
+
+```
+if (!require("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+BiocManager::install()
+```
+
+
+## Install specific packages, e.g., “GenomicFeatures” and “AnnotationDbi”, with
+
+```
+BiocManager::install(c("GenomicFeatures", "AnnotationDbi"))
+```
+
+The `install()` function (in the BiocManager package) has arguments that change 
+its default behavior; type `install` for further help.
+
+
+For a more detailed explanation on using BiocManager and its advanced usage, such as version switching, please refer to the BiocManager [vignette](https://cran.r-project.org/web/packages/BiocManager/vignettes/BiocManager.html).
 
 # Key Rmarkdown resources
 
