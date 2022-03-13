@@ -1,7 +1,7 @@
 ---
 title: "Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2022-02-21"
+date: "Started: 2013-07-16, Last modified: 2022-03-13"
 output:
   html_document:
     keep_md: yes
@@ -25,6 +25,15 @@ has the single `tips.Rproj` file. I got burned by this in another repository.
 Second - [My Academia Profile](https://johnminter.academia.edu/)
 
 and...
+
+# Important Presentation Tips
+
+I typically create presentations using either Apple Keynote or Microsoft
+PowerPoint. Note that one can expert a Keynote presentations to PowerPoint.
+This week I spoke at church and discovered that I could not get a Presenters
+view in Keynote. Happily, the Powerpoint export was fine.
+
+
 
 # Favorite Movies and Shows I like
 
