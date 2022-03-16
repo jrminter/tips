@@ -26,8 +26,8 @@ It looks like (2021-04-24) that I could update with
 
 On Windows use the `Anaconda PowerShell` prompt from the menu.
 
-1. Search for "Anaconda PowerShell Prompt"
-2. Select "run as Administrator"
+1. Search for `Anaconda PowerShell Prompt`
+2. Select `run as Administrator`
 3. `conda update conda`
 4. `conda update --all`
 5. `yes, yes`
