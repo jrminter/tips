@@ -19,15 +19,19 @@ I installed `Miniconda3-py39_4.9.2` on my two Macbooks (BigSur) and Windows 10.
 
 I have had problems with my newest Macbook Pro running macOS 11.4. For some
 reason I cannot get Miniconda 3.9 64 bit to run without error, Miniconda 3.8
-runs well enought to get work done. I have no idea how to fix this.
+runs well enough to get work done. I have no idea how to fix this.
 
 
 It looks like (2021-04-24) that I could update with
 
 On Windows use the `Anaconda PowerShell` prompt from the menu.
 
-1. `conda update conda`
-2. `conda update --all`
+1. Search for "Anaconda PowerShell Prompt"
+2. Select "run as Administrator"
+3. `conda update conda`
+4. `conda update --all`
+5. `yes, yes`
+6. `conda clean --all`
 
 I am cautious about doing this because the last time I borked the
 installation.
