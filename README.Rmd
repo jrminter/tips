@@ -1,7 +1,7 @@
 ---
 title: "Helpful Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2022-03-13"
+date: "Started: 2013-07-16, Last modified: 2022-03-24"
 output:
   html_document:
     keep_md: yes
@@ -25,6 +25,19 @@ has the single `tips.Rproj` file. I got burned by this in another repository.
 Second - [My Academia Profile](https://johnminter.academia.edu/)
 
 and...
+
+# How to take a photo on the **iPhone** and *transfer* to **Mac**
+
+1. Take picture you want on the **iPhone**.
+
+2. On the phone press the **square** with the **up arrow** in the **bottom left corner**.
+
+3. Find the person to send the photo.
+
+4. Press their **icon**.
+
+5. Press the **green up arrow** to send the picture to Photos on iPhone and copy to Mac.
+
 
 # Important Presentation Tips
 
