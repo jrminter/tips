@@ -26,6 +26,26 @@ Second - [My Academia Profile](https://johnminter.academia.edu/)
 
 and...
 
+# How to get a PDF out of a RStudio Container
+
+1. Check the box for the PDF in the **right** RStudio pane.
+
+2. Click on the **gear** icon.
+
+3. Click on **Export**
+
+4. Press **Download** button on the "Export Files" dialog and press the 
+   **Download** BOX,
+
+5. This should download the folder to your computer, typically your 
+   **Downloads** folder.
+
+6. You should be able to open the PDF and do what you want.
+
+
+
+
+
 # How to take a photo on the **iPhone** and *transfer* to **Mac**
 
 1. Take picture you want on the **iPhone**.
