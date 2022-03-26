@@ -1,7 +1,7 @@
 ---
 title: "R Tips"
 author: "J. R. Minter"
-date: "Started: 2013-07-16, Last modified: 2021-08-10"
+date: "Started: 2013-07-16, Last modified: 2022-03-26"
 output:
   html_document:
     css: ../theme/jm-gray-vignette.css
@@ -22,10 +22,26 @@ suppressPackageStartupMessages(library("tidyverse"))
 
 # Key links for R.
 
-1. [R-Project](https://www.r-project.org/)
+1. How to get a PDF out of a RStudio Container
 
-2. [R-4.1.3 macOS](https://mac.r-project.org/)        
-   [Nightly builds for macOS](https://mac.r-project.org/#nightly)    
+   - Check the box for the PDF in the **right** RStudio pane.
+
+   - Click on the **gear** icon.
+
+   - Click on **Export**
+
+   - Press **Download** button on the "Export Files" dialog and press the 
+   **Download** Box,
+
+   - This should download the folder to your computer, typically your 
+     **Downloads** folder.
+
+   - You should be able to open the PDF and do what you want.
+
+
+2. [R-Project](https://www.r-project.org/)    
+   [R-4.1.3 macOS](https://mac.r-project.org/)            
+   [Nightly builds for macOS](https://mac.r-project.org/#nightly)        
    
    **Note**: I was surprised this morning when no binaries were released
    for the R-4.1.1 were released this morning. Then I saw this tweet from
@@ -39,15 +55,28 @@ suppressPackageStartupMessages(library("tidyverse"))
    The developers do not charge for their work and I am thankful for
    what they do. I want to follow this...
    
-   
-   
-       
    [R-4.1.3 win beta build](https://cran.r-project.org/bin/windows/base/rtest.html)    
    [R-4.1.3.win](https://cran.r-project.org/bin/windows/base/index.html)
 
-> R version 4.1.1 (Kick Things) prerelease versions will appear starting
-> Saturday 2021-07-31. Final release is scheduled for 
-> **Tuesday 2021-08-10**.
+   > R version 4.1.1 (Kick Things) prerelease versions will appear starting
+   > Saturday 2021-07-31. Final release is scheduled for 
+   > **Tuesday 2021-08-10**.
+   
+3. Getting a PDF Document out of a RStudio Container
+
+   A. Check the box for the PDF in the **right** RStudio Panel.
+   
+   B. Click under the `gear` icon.
+   
+   C. Click on `export`.
+   
+   D. Press Download button on the **Export Files** dialog and press the
+      **Download**  Box.
+      
+   E. This should download the **PDF** to your computer, typically to the
+      **Downloads** folder.
+      
+   F. You should be able to open the PDF and do what you want with it.
 
 # Install Bioconductor
 
