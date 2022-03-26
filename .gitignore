@@ -7,6 +7,8 @@ tab.tex
 
 *.md
 
+README.pdf
+
 no_ad_blocker.html
 
 # Don't track these types of directories...
@@ -56,6 +58,10 @@ bibtex/.DS_Store
 bibtex/*.md
 bibtex/*.html
 bibtex/figure/
+
+# Backup-Restore-Windows
+Backup-Restore-Windows/*.html
+Backup-Restore-Windows/*.pdf
 
 
 # Bluetooth

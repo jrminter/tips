@@ -67,15 +67,6 @@ This week I spoke at church and discovered that I could not get a Presenters
 view in Keynote. Happily, the Powerpoint export was fine.
 
 
-
-# Favorite Movies and Shows I like
-
-
-[Oblivion](https://play.hbomax.com/page/urn:hbo:page:GYKbsUwLEKIiVwgEAAAAD:type:feature?utm_id=sa%7c71700000067030777%7c58700006926526610%7cp62287911527&gclid=Cj0KCQiAjc2QBhDgARIsAMc3SqT4Ldd6YCsFqZrekhVO8ShTkT-RTTdWG-y5pCiVAn0i8GQDeME0B0EaAmFrEALw_wcB&gclsrc=aw.ds)
-
-
-[Chuck - To Do]()
-
 # Helpful Hints
 
 ## Restart a show or movie
@@ -89,8 +80,9 @@ Start playing from the beginning.
 
 **TV:** Press the Back button on your remote (Menu button for Apple TV), and
 then scroll down to choose a different season or episode. 
-I found this difficult and tie consuming to retart **Chuck** from the beginning
+I found this difficult and tie consuming to restart **Chuck** from the beginning
 since there are 5 seasons...
+
 
 ## How to Fast Forward on Apple TV
 
@@ -117,6 +109,7 @@ things are a bit different.
 **4x speeds by continuing to press the button. Once you’ve reached the spot in the**
 **movie or show that you want, just click the center of the trackpad or the**
 **`Play/Pause` button in order to resume the content**.
+
 
 ## How to Change the Episode on HBO Max
 
@@ -150,15 +143,15 @@ Go to **Continue Watching**, click the **title of the season**, then
 
 ## A quick Gmail tip:
 
-> Frome Varun Gautam
+> From Varun Gautam
 > works at Infosys
 
 > There is an alternate way to send the files through Gmail. You can right click
 > on your zip file and click on **Properties**. Change the extension of the zip
 > file from .zip or .7zp or any other that you may have there and change it to
-> “.txt”. Then attach this to Gmail as a normal attachment and send the file.
+> ".txt". Then attach this to Gmail as a normal attachment and send the file.
 >
-> Now on the receiving end after downloading this file rechange the .txt back to
+> Now on the receiving end after downloading this file change the `.txt` back to
 > .zip and you have your zip file back.
 
 On a lighter tone here is fun from the Hitch Hikers Guide to the Galaxy:
@@ -169,7 +162,7 @@ On a lighter tone here is fun from the Hitch Hikers Guide to the Galaxy:
 > Don't Panic! ...    
 > Two heads aren't necessarily better than one. ...    
 > Improbable does not mean impossible. ...    
-> “Just when you think life can't possibly get any worse it suddenly does.” ...    
+> "Just when you think life can't possibly get any worse it suddenly does.”"" ...    
 > There are few things in the universe worse than bad poetry.    
 
 
@@ -186,7 +179,6 @@ You need to click **Open in Browser** ...
 [A nice way to put on a tie](https://twitter.com/TheFigen/status/1495042113607770117)
 
 ![The Hitchiker's Guide to the Galaxy](img/HHG.png)
-
 
 
 1. My favorite path and a hack for PDF
@@ -232,7 +224,6 @@ You need to click **Open in Browser** ...
    - We usually E-sign the bill
    
 
-
 4.  A great quote from Doug Wilson:
 
     > Always **act**, _not_ **react**!
@@ -248,8 +239,8 @@ You need to click **Open in Browser** ...
 
 6. A helpful quote from Adam Grant
 
-   > Anger is often seen as an irrational emotion. But it’s not due
-   > to the absence of logic — it’s due to the presence of threat or harm.
+   > Anger is often seen as an irrational emotion. But it's not due
+   > to the absence of logic — it's due to the presence of threat or harm.
    > 
    > Getting mad is a sign that something important to you is at risk.
    > 
@@ -270,7 +261,7 @@ You need to click **Open in Browser** ...
 8. [Set up R universe from ROpenScience](https://ropensci.org/blog/2021/06/22/setup-runiverse/)
 
 9. I had issues with Anaconda Powershell in a Win 10 VM window. Try 
-`Run as Adminstrator`. It is easier to read! Better yet, click on the
+`Run as Administrator`. It is easier to read! Better yet, click on the
 4-box icon in the lower left and open Powershell. The font will be OK.
 
 
@@ -285,15 +276,15 @@ You need to click **Open in Browser** ...
 
     I had issues with new gas pumps at the Mobil station
 
-      - Select **credit** (or debit)  **outside**.
+    - Select **credit** (or debit)  **outside**.
 
-     - Enter card
+    - Enter card
 
-     - Select Grade (89 Octane)
+    - Select Grade (89 Octane)
 
-     - Pump Gas
+    - Pump Gas
 
-     - Replace Nozzle
+    - Replace Nozzle
 
 
 12. [Greece NY Traffic](https://www.localconditions.com/weather-greece-new-york/ny0446/traffic.php)
@@ -312,14 +303,14 @@ You need to click **Open in Browser** ...
 
   
     - git config pull.rebase false
-  
+    
 
 16. Block a number on iPhone
 
     - Start by accessing your list of recent callers,
       so open the Phone app.
      
-    - Tap on the Recents tab at the bottom of the screen.
+    - Tap on the Resents tab at the bottom of the screen.
   
     - Click the 'i' symbol next to the unwanted number.
   
@@ -350,9 +341,10 @@ You need to click **Open in Browser** ...
 
     > To change your name after entering a Zoom meeting, click on the 
     > “Participants” button at the top of the Zoom window. Next, hover
-    > your mouse over your name in the “Participants” list on the right
-    > side of the Zoom window. Click on “Rename”. Enter the name you'd
-    > like to appear in the Zoom meeting and click on “OK”.
+    > your mouse over your name in the "Participants" list on the right
+    > side of the Zoom window. Click on "Rename". Enter the name you'd
+    > like to appear in the Zoom meeting and click on "OK".
+
 
 21. Delete VLC play list
 
@@ -397,6 +389,7 @@ You need to click **Open in Browser** ...
     > respond to email.    
     > - Karl Browman
 
+
 26. **How to Backup Windows 11**
 
     1. Go to Control Panel, select Backup and Restore (Windows 7),
@@ -421,43 +414,8 @@ You need to click **Open in Browser** ...
     > However, if the sender/Author has removed metadata from the pdf then there
     > are chances that original file creation date is not displayed.
 
-28. Key Greek and other characters
 
-    ```
-    Φ(ρ𝑧)
-    𝑧  script z   
-   ```
-    Happily, Rmarkdown handles these well in html documents. 
-    Haven't been able to use them in LaTeX.  Need to try XeLaTeX...
 
-    ```
-    UC LC Name
-    -- -- ----
-    Α	 α	Alpha	
-    Β	 β	Beta
-    Γ	 γ	Gamma
-    Δ	 δ	Delta
-    Ε	 ε	Epsilon
-    Ζ	 ζ	Zeta
-    Η	 η	Eta
-    Θ	 θ	Theta
-    Ι	 ι	Iota
-    Κ	 κ	Kappa
-    Λ	 λ	Lambda
-    Μ	 μ	Mu
-    Ν	 ν	Nu
-    Ξ	 ξ	Xi
-    Ο	 ο	Omicron
-    Π	 π	Pi
-    Ρ	 ρ	Rho
-    Σ	 σ,ς  Sigma
-    Τ	 τ	Tau
-    Υ	 υ  Upsilon	
-    Φ	 φ	Phi
-    Χ	 χ	Chi
-    Ψ	 ψ	Psi
-    Ω	 ω	Omega
-    ```
 
 29. Today I learned (TIL)
    
@@ -485,6 +443,7 @@ You need to click **Open in Browser** ...
         - Click on `Account` or `Office Account` on the list.    
         - Under Product Information, click on `Update Options` next to `Office Updates`.    
         - From the list of options, click on `Update Now`.
+
 
 30. Chrome Bookmarks - How to move a folder...
 
@@ -562,13 +521,15 @@ You need to click **Open in Browser** ...
 
 40. Fun snippets
 
-      > Your closest colaborator is you, six months from now    
+      > Your closest collaborator is you, six months from now    
       > ... and you don't respond to email     
       > - Karl Broman
 
-      > DRY (do not repeat yourself) vs WET (waste everyones time) coding
+      > DRY (do not repeat yourself) vs WET (waste everyone's time) coding
       > styles    
       > - Peter Baker (UseR 2018)
+      
+
 
 41. Getting started with data science
 
@@ -710,6 +671,7 @@ You need to click **Open in Browser** ...
 
 70. [Complex K-ratios](./complex-kratios/complex-kratios.html)
 
+
 71. [Conductive Epoxies](./ConductiveEpoxy/ConductiveEpoxy.html)
 
 72. [Denton Coaters](./Denton/Denton.html)
@@ -750,6 +712,7 @@ You need to click **Open in Browser** ...
 
 90. [ggplot2 workshop](./ggplot2_workshop/ggplot2_workshop.html)
 
+
 91. [Building up a ggplot2 figure](./ggplot2figure/ggplot2-figure.html)
 
 92. [ggplot2Examples](./ggplot2Examples/ggplot2Examples.html)
@@ -779,6 +742,8 @@ You need to click **Open in Browser** ...
 104. [iMessage](./iMessage/iMessage.html)
 
 105. [Inkscape](./inkscape/inkscape.html)
+
+
 
 106. [iOS](./iOS/iOS.html)
 
@@ -943,5 +908,4 @@ You need to click **Open in Browser** ...
 186. [X-ray EDS Issues](./X-Ray-EDS-Issues/X-Ray-EDS-Issues.html)
 
 187. [Zoom](./Zoom/Zoom.html)
-
 
