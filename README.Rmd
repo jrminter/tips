@@ -28,7 +28,18 @@ and...
 
 
 
+# How to get a PDF out of the RStudio Container
 
+How do I download a PDF from RStudio? or...    
+How can you download files that are saved in Rstudio?
+
+1. Go to right bottom panel and click the Files tab. Your saved file will be listed.
+
+2. Select the checkbox next to the file. See the following screen shot.
+
+3. Select More > Export at the top of the window. ...
+
+4. Click Download to download the file to your local machine
 
 
 # How to take a photo on the **iPhone** and *transfer* to **Mac**

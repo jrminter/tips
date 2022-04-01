@@ -55,6 +55,8 @@ knit_hooks$set(plot = knitr:::hook_plot_html)
    
    ```
    
+   Note: [TinyTex](https:yihui.org/tiny.tex) (Open in Browser)
+   
    **Homebrew**
    
    ```
