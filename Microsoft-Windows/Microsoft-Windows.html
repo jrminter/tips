@@ -252,6 +252,7 @@ if (window.hljs) {
 
 
 
+
 <style type="text/css">
 body {
 background-color: #fff;
@@ -537,6 +538,9 @@ button.code-folding-btn:focus {
 summary {
   display: list-item;
 }
+details > summary > p:only-child {
+  display: inline;
+}
 pre code {
   padding: 0;
 }
@@ -639,7 +643,15 @@ pre code {
 <ul>
 <li><p>To shutdown Windows 11, type the command:</p>
 <pre><code>Alt + F4</code></pre></li>
+<li><p>Fixing Speechruntime.exe application error</p></li>
 </ul>
+<ol style="list-style-type: decimal">
+<li><p>Press the Windows key or click start, type in <code>CMD</code>
+right-click and click on “Run as an administrator”.</p></li>
+<li><p>Type in: <code>sfc /scannow</code> .</p></li>
+<li><p>Press “Enter”. …</p></li>
+<li><p>Restart your computer and see if that solves the issue.</p></li>
+</ol>
 </div>
 <div id="microsoft-windows-10" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> Microsoft Windows
