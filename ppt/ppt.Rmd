@@ -32,7 +32,7 @@ slide to a single topic.
 4. To start a slide show 
 
 
-# Info from Jenny Richmomd
+# Info from Jenny Richmond
 
 
 From [the `here` package](http://jenrichmond.rbind.io/post/how-to-use-the-here-package/)

@@ -3,14 +3,14 @@ title: "winCasino Instructions"
 author: "Raynald Gauvin et. al., adapted by J. R. Minter"
 date: 'Started: 2020-06-27, Last modified: 2020-08-13'
 output:
+  pdf_document:
+    toc: yes
+    toc_depth: '3'
   html_document:
     css: ../theme/jm-gray-vignette.css
     number_sections: yes
     toc: yes
     toc_depth: 3
-  pdf_document:
-    toc: yes
-    toc_depth: '3'
 ---
 
 [Back to Index](../README.html)
